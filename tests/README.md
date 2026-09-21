@@ -23,3 +23,5 @@
 - `node tests/audio-startup.cjs`：全新页面首次点猫／直接进入节奏舞台，不依赖故事 BGM；媒体播放通道设置顺序、真实合成音信号、音频中断／重试、静音、后台和旧 iOS 兼容音频的释放。使用 Chromium 模拟 iOS 状态，不能替代 iPhone 真机验证。
 
 - `node tests/chapter-five-six.cjs`：六章顺序解锁、第五章音乐节与第六章《拾光》分支、黄奕兴 UR 卡、羁绊继承、独立章节 HE 计数、旧存档导入、重玩奖励幂等与手机布局。第六章《热烈》原始音频的播放、连续性和演出暂停由 `story-bgm.cjs` 验证。
+
+- `node tests/ending-overview.cjs`：按章 HE/TE/BE 分类、前期 HE 来源、重复结局去重、当前存档与历次收藏、共用 BE 章节归属、旧存档补全、跨章返回与手机结局面板。
