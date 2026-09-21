@@ -1,0 +1,67 @@
+// Requires Playwright. Set PLAYWRIGHT_CHROMIUM_EXECUTABLE to use an existing Chromium.
+const { chromium } = require('playwright');
+const { pathToFileURL } = require('node:url');
+const path = require('node:path');
+const assert = require('node:assert/strict');
+(async () => {
+ const browser = await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE ? {executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE} : {})});
+ try {
+  const page=await browser.newPage({viewport:{width:1280,height:900},reducedMotion:'reduce'}),errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(pathToFileURL(path.resolve(__dirname,'../index.html')).href);
+  const checks=await page.evaluate(async()=>{
+   const checks=[];const check=(name,ok)=>{if(!ok)throw Error(name+'; encountered: '+state.cards.encounters);checks.push(name);};
+   const reset=()=>{state=freshState();save();closeModal(false);route('home');};
+   const exact=ids=>[...state.cards.encounters].sort().join()===ids.sort().join();
+   const click=async selector=>{await new Promise(r=>setTimeout(r,220));const b=document.querySelector(selector);if(!b)throw Error('Missing '+selector);b.click();};
+   const choice=i=>click(`[data-cp-choice="${i}"]`);
+   const enroll=async()=>{reset();route('chronicle');$('cpName').value='测试';$('cpInstrument').value='小提琴';await click('[data-cp-action="enroll"]');};
+   reset();check('New game has no cards or team',availableCardPool().length===0&&state.cards.team.length===0);
+   route('cards');check('Eighteen locked placeholders',document.querySelectorAll('.chapter-locked').length===18);
+   const budget=JSON.stringify([state.coins,state.cards.tickets]);recruitCards(5);check('Empty pool costs nothing',budget===JSON.stringify([state.coins,state.cards.tickets]));closeModal(false);
+   await enroll();check('First dialogue unlocks only its speaker',state.chronicle.run.scene==='s_door'&&exact(['lala']));
+   check('Unselected choices and sidebars do not unlock characters',!cardOwned('shiyuan')&&!cardOwned('tim')&&!cardOwned('kongge'));
+   await choice(0);check('Mention in dialogue unlocks immediately before chapter ends',state.chronicle.run.scene==='s_room'&&exact(['lala','shiyuan'])&&state.chronicle.endings.length===0);
+   await choice(1);check('Optional look scene unlocks all three mentioned people',state.chronicle.run.scene==='s_look'&&exact(['lala','shiyuan','azhe','dijie','tang']));
+   await choice(0);await choice(0);check('Kongge unlocks on his first dialogue',state.chronicle.run.scene==='s_first'&&cardOwned('kongge'));
+   await choice(0);check('Partner menu does not unlock its unchosen people',state.chronicle.run.scene==='practice_partner'&&!cardOwned('tim')&&!cardOwned('yeshiyang')&&!cardOwned('feihong'));
+   await click('[data-cp-action="partner"][data-cp-person="tim"]');check('Chosen partner unlocks before battle finishes',state.chronicle.run.scene==='practice_turn'&&cardOwned('tim'));
+   const copies=state.cards.collection.tim.copies;save();save();check('Revisiting does not duplicate cards',copies===state.cards.collection.tim.copies);
+   const eligible=[...state.cards.encounters];const draws=Array.from({length:300},drawOneCard);check('All 300 draws respect encountered pool',draws.every(r=>eligible.includes(r.id)));
+   state.cards.pity=9;const guaranteed=drawOneCard();check('SSR pity still works',CARD_DEFS.find(c=>c.id===guaranteed.id).rarity==='SSR');
+   goCard('tim');check('TIM spoiler absent from DOM',!$('view-card').innerHTML.includes('女朋友')&&!$('view-card').innerHTML.includes('普通朋友'));
+   CardUI.tab='bond';renderCardPage();check('TIM bond spoiler absent',!$('view-card').innerHTML.includes('渐行渐远'));
+   showTimArchive(true);check('Old preview entry is guarded',$('modalBackdrop').hidden);
+   state.memories.push('tim_archive');renderAlbum();check('Old secret memory is gated',!$('albumGrid').innerHTML.includes('把边界说清楚'));
+   trio().tim.performance=100;goCard('tim');check('Ready skill stays collapsed',!!$('view-card').querySelector('details:not([open])')&&!$('view-card').innerText.includes('女朋友'));
+   showTimArchive();check('Archive opens after condition',$('modalContent').textContent.includes('女朋友'));closeModal(false);
+   goCard('kongge');check('Kongge clue absent',!$('view-card').innerHTML.includes('HE 需要')&&!$('view-card').innerHTML.includes('技术与光同在'));
+   CardUI.tab='bond';renderCardPage();check('Kongge bond clue absent',!$('view-card').innerHTML.includes('空格与十元同队'));
+   goCard('azhe');check('Azhe skill locked',!$('view-card').innerHTML.includes('华彩安可'));
+   expansion().azhe.tickets=1;renderCardPage();check('Azhe unlocked skill stays collapsed',$('view-card').innerHTML.includes('华彩安可')&&!$('view-card').innerText.includes('华彩安可'));
+   await enroll();await choice(0);await choice(0);await choice(0);check('Skipping look scene keeps optional people locked',exact(['lala','shiyuan','kongge']));
+   await choice(0);await click('[data-cp-action="partner"][data-cp-person="yeshiyang"]');check('A different chosen partner unlocks only that partner',cardOwned('yeshiyang')&&!cardOwned('tim')&&!cardOwned('azhe'));
+   reset();route('chronicle');await click('[data-cp-action="switch-chapter"][data-cp-chapter="2"]');$('cpQuickName').value='测试';await click('[data-cp-action="start-second"][data-cp-mode="quick"]');
+   check('Chapter two quick start unlocks narrator but not seeded affinity',state.chronicle.run.scene==='c2_intro'&&exact(['lala']));
+   await choice(0);check('Chapter two bar scene unlocks everyone mentioned together',exact(['lala','shiyuan','azhe','dijie','tim','tang']));
+   await choice(0);await choice(2);await choice(0);await choice(0);await choice(1);check('Pop branch unlocks its speaker without unreached string branch',state.chronicle.run.scene==='c2_pop_end'&&cardOwned('feihong')&&!cardOwned('kongge'));
+   const old=freshState();delete old.cards.encounterVersion;delete old.cards.encounters;for(const v of Object.values(old.cards.collection)){v.owned=true;v.xp=120;v.copies=3;}old.cards.team=['tang','azhe','shiyuan'];old.cards.selected='tang';old.cards.prepared={id:'tang',amount:8,token:1};Object.assign(old.chronicle.run,{name:'旧玩家',scene:'s_room'});state=cleanState(old);
+   check('Legacy progress recovers only reached characters',exact(['lala','shiyuan']));
+   check('Legacy team and prepared skill gated',state.cards.team.join()==='shiyuan'&&state.cards.prepared===null&&!cardOwned('tang'));
+   check('Legacy growth retained',state.cards.collection.tang.xp===120);
+   old.chronicle.run.scene='menu';old.chronicle.run.flags.look=1;state=cleanState(old);check('Legacy optional path recovered from its flag',cardOwned('azhe')&&cardOwned('dijie')&&cardOwned('tang')&&!cardOwned('tim')&&!cardOwned('yeshiyang'));
+   delete old.cards;old.chronicle.run.scene='s_room';old.chronicle.run.flags={};state=cleanState(old);check('Legacy save without card data recovers reached people',exact(['lala','shiyuan']));
+   const journal=freshState();journal.chronicle.run.journal=[{scene:'chat',who:'tim',text:'晚上一起练琴。',week:1}];state=cleanState(journal);check('Read journal restores speaker encounters',cardOwned('tim'));
+   state.chronicle.run.journal=[];state.chronicle.run=Chronicle.fresh().run;save();state=cleanState(JSON.parse(JSON.stringify(state)));check('Restart and journal trimming preserve permanent encounter',cardOwned('tim'));
+   check('Aliases recognize Tim and 格老',mentionedStoryCards('格老和 tim 在排练','tangshao').sort().join()===['kongge','tang','tim'].sort().join());
+   save();route('cards');return checks;
+  });
+  await page.reload();assert(await page.evaluate(()=>cardOwned('tim')),'Actual reload retains encounters');
+  await page.evaluate(()=>route('cards'));
+  await page.setViewportSize({width:390,height:844});
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile card overflow');
+  await page.evaluate(()=>goCard('tim'));
+  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Mobile detail overflow');
+  assert.deepEqual(errors,[]);console.log(`PASS: ${checks.length} progression checks, 300 draws, reload, mobile layouts, no runtime errors.`);
+ } finally {await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});
