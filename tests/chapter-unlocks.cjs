@@ -17,7 +17,7 @@ const assert = require('node:assert/strict');
    const choice=i=>click(`[data-cp-choice="${i}"]`);
    const enroll=async()=>{reset();route('chronicle');$('cpName').value='测试';$('cpInstrument').value='小提琴';await click('[data-cp-action="enroll"]');};
    reset();check('New game has no cards or team',availableCardPool().length===0&&state.cards.team.length===0);
-   route('cards');check('Nineteen locked placeholders',document.querySelectorAll('.chapter-locked').length===19);
+   route('cards');check('Twenty locked placeholders',document.querySelectorAll('.chapter-locked').length===20);
    const budget=JSON.stringify([state.coins,state.cards.tickets]);recruitCards(5);check('Empty pool costs nothing',budget===JSON.stringify([state.coins,state.cards.tickets]));closeModal(false);
    await enroll();check('First dialogue unlocks only its speaker',state.chronicle.run.scene==='s_door'&&exact(['lala']));
    check('Unselected choices and sidebars do not unlock characters',!cardOwned('shiyuan')&&!cardOwned('tim')&&!cardOwned('kongge'));

@@ -36,10 +36,16 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
  await page.evaluate(()=>StoryBgm.sync({view:'chronicle',sound:true,chapter:3,scene:'c3_prep'}));await playing();assert((await player()).src.endsWith('lakeside.mp3'));
  await page.evaluate(()=>StoryBgm.sync({view:'chronicle',sound:true,chapter:1,scene:'zhu_offer'}));await playing();assert((await player()).src.endsWith('fish-in-the-pool.mp3'));
  await page.evaluate(()=>StoryBgm.sync({view:'story',sound:true,character:'lala'}));await playing();assert((await player()).src.endsWith('distant-memories.mp3'));
+ await page.evaluate(()=>StoryBgm.sync({view:'chronicle',sound:true,chapter:6,scene:'c6_intro'}));await playing();assert((await player()).src.endsWith('re-lie.mp3'),'Musical uses user supplied BGM');
+ assert(Math.abs((await player()).duration-205.896)<1,'Original 320 kbps musical MP3 decodes');
+ await page.waitForFunction(()=>{const a=new Float32Array(bgmAnalyser.fftSize);bgmAnalyser.getFloatTimeDomainData(a);return a.some(v=>Math.abs(v)>.00001);},{},{timeout:5000});
+ await page.evaluate(()=>{document.querySelector('#storyBgmAudio').currentTime=35;StoryBgm.sync({view:'chronicle',sound:true,chapter:6,scene:'c6_warn'});});assert((await player()).time>=35,'Musical dialogue does not restart song');
+ await page.evaluate(()=>StoryBgm.sync({view:'chronicle',sound:true,chapter:6,scene:'live_play'}));assert((await player()).paused,'Musical pauses for timed performance');
+ await page.evaluate(()=>StoryBgm.sync({view:'chronicle',sound:true,chapter:6,scene:'c6_he',ending:'c6_he'}));await playing();assert((await player()).src.endsWith('re-lie.mp3'),'Musical finale retains Heat');
  await page.evaluate(()=>StoryBgm.sync({view:'chronicle',sound:true,chapter:4,scene:'title5',ending:'c4_fail'}));await playing();assert((await player()).src.endsWith('the-truth-that-you-leave.mp3'),'Ending screen retains its mood');
  // Rapid scene switches keep a single player and settle on the final requested track.
  await page.evaluate(()=>{route('chronicle');for(const chapter of [1,2,3,4]){Object.assign(state.chronicle.run,{chapter,scene:'menu'});renderGlobal();}});await playing();assert((await player()).src.endsWith('breath-and-life.mp3'));assert.equal(await page.locator('audio').count(),1);
  await page.setViewportSize({width:390,height:844});for(const view of ['story','chronicle']){await page.evaluate(view=>route(view),view);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),view+' mobile overflow');}
  await page.locator('#view-chronicle [data-story-music]').screenshot({path:'/tmp/hjm-story-bgm-mobile.png'});
- assert.deepEqual(errors,[]);console.log('PASS: real MP3 playback, seven tracks, rerender continuity, independent/master mute, persisted volume, scene/route/visibility changes, autoplay/decode recovery, rapid switching and mobile.');
+ assert.deepEqual(errors,[]);console.log('PASS: real MP3 playback, eight tracks, rerender continuity, independent/master mute, persisted volume, scene/route/visibility changes, autoplay/decode recovery, rapid switching and mobile.');
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}})().catch(e=>{console.error(e);process.exitCode=1;});

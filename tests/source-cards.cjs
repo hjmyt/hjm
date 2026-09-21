@@ -1,7 +1,7 @@
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),path=require('node:path'),{pathToFileURL}=require('node:url');
 (async()=>{const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});try{const p=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(pathToFileURL(path.resolve(__dirname,'../index.html')).href);const results=await p.evaluate(()=>{
  const checks=[],check=(name,ok)=>{if(!ok)throw Error(name);checks.push(name);};state=freshState();state.sound=false;
- check('Nineteen unique cards',CARD_DEFS.length===19&&new Set(CARD_DEFS.map(c=>c.id)).size===19);
+ check('Twenty unique cards',CARD_DEFS.length===20&&new Set(CARD_DEFS.map(c=>c.id)).size===20);
  check('No duplicate memory records',new Set(MEMORIES.map(m=>m.id)).size===MEMORIES.length);
  check('Unmentioned Dayang and Baoshi remain locked',!cardOwned('dayang')&&!cardOwned('baoshi')&&!availableCardPool().some(c=>['dayang','baoshi'].includes(c.id)));
  state.cards.encounters=CARD_DEFS.map(c=>c.id);save();

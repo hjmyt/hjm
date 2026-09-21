@@ -13,7 +13,7 @@ const assert=require('node:assert/strict');
   const choose=n=>click(`[data-cp-choice="${n}"]`);
   const reset=()=>{closeModal(false);state=freshState();state.sound=false;save();route('home');};
   const scene=(ch,id,flags={},aff={})=>{reset();state.chronicle.completedChapters=Array.from({length:ch-1},(_,i)=>i+1);Object.assign(state.chronicle.run,{chapter:ch,ch,name:'测试',inst:'小提琴',scene:id,flags:{...(ch===3?{c3Met:1}:{}),...flags},aff:{...state.chronicle.run.aff,...aff}});save();route('chronicle');};
-  reset();route('chronicle');check('Four chapter entrances',document.querySelectorAll('.cp-chapter-tile').length===4);
+  reset();route('chronicle');check('Six chapter entrances',document.querySelectorAll('.cp-chapter-tile').length===6);
   Object.assign(state.chronicle.run,{name:'新伙伴',inst:'小提琴'});state.chronicle.completedChapters=[1,2];state.chronicle.slots[2]={...Chronicle.fresh().run,chapter:2,ch:3,name:'新伙伴',inst:'小提琴',scene:'title3',ending:'c2_retry',tech:12,level:3,gold:50};state.chronicle.run.rev++;save();renderGlobal();await click('[data-cp-action="switch-chapter"][data-cp-chapter="3"]');await choose(4);await choose(0);
   check('Third chapter inherits completed second chapter stats',state.chronicle.run.chapter===3&&state.chronicle.run.scene==='c3_intro'&&state.chronicle.run.tech===12&&state.chronicle.run.level===3&&state.chronicle.run.gold===50);
   check('Qiqi follows the owner at introduction',state.cards.encounters.filter(id=>['zhu','qiqi'].includes(id)).join()==='zhu,qiqi');

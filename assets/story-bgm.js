@@ -2,6 +2,7 @@
 window.StoryBgm = (() => {
   'use strict';
   const tracks = {
+    musical: {title: '热烈', src: 'assets/bgm/re-lie.mp3'},
     lounge: {title: 'fish in the pool', src: 'assets/bgm/fish-in-the-pool.mp3'},
     starlight: {title: '湖滨初晴', src: 'assets/bgm/lakeside.mp3'},
     memories: {title: '想い出は遠くの日々', src: 'assets/bgm/distant-memories.mp3'},
@@ -18,10 +19,11 @@ window.StoryBgm = (() => {
   function trackFor(c) {
     if (!['chronicle', 'story'].includes(c.view)) return null;
     if (c.view === 'story') return c.character ? 'memories' : 'daily';
-    if (c.scene === 'shanqiu_closed' || (c.closed && ['zhu_offer', 'zhu_reply'].includes(c.scene)) || /^be_/.test(c.scene || '') || /_(fail|te)$/.test(c.scene || '') || /_(fail|te)$/.test(c.ending || '') || ['c2_solo','shadow','c3_qiqi','c4_qiqi','c4_lemon','c2_retry'].includes(c.ending)) return 'farewell';
+    if (c.chapter === 6) return 'musical';
+    if (c.scene === 'shanqiu_closed' || (c.closed && ['zhu_offer', 'zhu_reply'].includes(c.scene)) || /^be_/.test(c.scene || '') || /_(fail|te)$/.test(c.scene || '') || /_(fail|te)$/.test(c.ending || '') || ['c5_be','c5_wind','c2_solo','shadow','c3_qiqi','c4_qiqi','c4_lemon','c2_retry'].includes(c.ending)) return 'farewell';
     if (['zhu_offer', 'zhu_reply'].includes(c.scene)) return 'lounge';
     if (/_he$/.test(c.scene || '') || /_he$/.test(c.ending || '')) return 'stage';
-    return ({1: 'daily', 2: 'chapter', 3: 'starlight', 4: 'stage'})[c.chapter] || 'daily';
+    return ({1: 'daily', 2: 'chapter', 3: 'starlight', 4: 'stage', 5: 'starlight', 6: 'musical'})[c.chapter] || 'daily';
   }
   function allowed() {return !!key && enabled && context.sound && !document.hidden && context.scene !== 'live_play';}
   function persist() {try {localStorage.setItem(storageKey, JSON.stringify({enabled, volume}));} catch {}}

@@ -16,7 +16,7 @@ const assert=require('node:assert/strict');
    const render=()=>{state.chronicle.run.rev++;renderGlobal();};
    const scene=(id,flags={},aff={})=>{reset();state.chronicle.completedChapters=[1,2,3];Object.assign(state.chronicle.run,{chapter:4,ch:4,name:'剧场测试',inst:'小提琴',scene:id,tech:15,level:3,gold:60,flags,aff:{...state.chronicle.run.aff,...aff}});save();route('chronicle');};
    const serialize=()=>{state=cleanState(JSON.parse(JSON.stringify(state)));save();route('chronicle');};
-   reset();route('chronicle');check('Four distinct chapter tabs',document.querySelectorAll('.cp-chapter-tile').length===4&&document.querySelector('[data-cp-chapter="3"]').textContent.includes('星光530'));
+   reset();route('chronicle');check('Six distinct chapter tabs',document.querySelectorAll('.cp-chapter-tile').length===6&&document.querySelector('[data-cp-chapter="3"]').textContent.includes('星光530'));
    Object.assign(state.chronicle.run,{name:'剧场新人',inst:'小提琴'});state.chronicle.completedChapters=[1,2,3];state.chronicle.slots[3]={...Chronicle.fresh().run,chapter:3,ch:4,name:'剧场新人',inst:'小提琴',scene:'title4',ending:'c3_te',tech:14,level:3,gold:60,aff:{...state.chronicle.run.aff,shiyuan:12}};state.chronicle.run.rev++;save();renderGlobal();await click('[data-cp-action="switch-chapter"][data-cp-chapter="4"]');
    check('Fourth inherits completed third chapter stats',state.chronicle.run.scene==='c4_intro'&&state.chronicle.run.tech===14&&state.chronicle.run.gold===60&&state.chronicle.run.level===3&&state.chronicle.run.aff.shiyuan===12);
    check('Fourth opens with Yeshiyang and no drink menu',cardOwned('yeshiyang')&&!document.querySelector('.shanqiu-menu'));
