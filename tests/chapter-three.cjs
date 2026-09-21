@@ -13,7 +13,7 @@ const assert=require('node:assert/strict');
   const choose=n=>click(`[data-cp-choice="${n}"]`);
   const reset=()=>{closeModal(false);state=freshState();state.sound=false;save();route('home');};
   const scene=(ch,id,flags={},aff={})=>{reset();Object.assign(state.chronicle.run,{chapter:ch,ch,name:'测试',inst:'小提琴',scene:id,flags:{...(ch===3?{c3Met:1}:{}),...flags},aff:{...state.chronicle.run.aff,...aff}});save();route('chronicle');};
-  reset();route('chronicle');check('Three chapter entrances',document.querySelectorAll('.cp-chapter-tile').length===3);
+  reset();route('chronicle');check('Four chapter entrances',document.querySelectorAll('.cp-chapter-tile').length===4);
   await click('[data-cp-action="switch-chapter"][data-cp-chapter="3"]');$('cpQuickName').value='新伙伴';await click('[data-cp-action="start-third"][data-cp-mode="quick"]');
   check('Third chapter quick start uses supplied stats',state.chronicle.run.chapter===3&&state.chronicle.run.scene==='c3_intro'&&state.chronicle.run.tech===12&&state.chronicle.run.level===3&&state.chronicle.run.gold===50);
   check('Only Qiqi unlocks at introduction',state.cards.encounters.join()==='qiqi');
@@ -50,7 +50,7 @@ const assert=require('node:assert/strict');
   for(const [flags,expected,diff] of [[{taIn:1,stayShi:1},'c3_he',18],[{billWait:1},'c3_te',22],[{qiJealous:1,stayShi:1},'c3_te',20],[{taIn:1,stayShi:1,qiJealous:1,qiSeen:1},'c3_he',18],[{qBack:2},'c3_qiqi',20]]){
    scene(3,'b_live',flags);state.chronicle.run.tech=14;state.chronicle.run.week=6;state.chronicle.run.rev++;renderGlobal();await choose(0);check('Concert difficulty '+expected+' '+JSON.stringify(flags),state.chronicle.run.live.diff===diff);await choose(0);
    Object.assign(state.chronicle.run.live,{scores:[10,10,10,10,10],score:50,phase:'feedback'});state.chronicle.run.rev++;renderGlobal();await click('[data-cp-action="live-next"]');check('Concert ending '+expected,state.chronicle.run.ending===expected&&state.chronicle.endings.includes(expected));
-   check('Ending prose is rendered',!!$('cpStoryText')&&$('cpStoryText').textContent.length>30);const rewards=JSON.stringify([state.coins,state.cards.tickets]);await choose(0);check('Third chapter finale stays at proper chapter',state.chronicle.run.scene==='title4'&&$('cpMain').innerText.includes('音乐剧立项'));
+   check('Ending prose is rendered',!!$('cpStoryText')&&$('cpStoryText').textContent.length>30);const rewards=JSON.stringify([state.coins,state.cards.tickets]);await choose(0);check('Third chapter finale stays at proper chapter',state.chronicle.run.scene==='title4'&&$('cpMain').innerText.includes('第四章 · 剧场之夜'));
    state=cleanState(JSON.parse(JSON.stringify(state)));save();route('chronicle');check('Reload does not duplicate ending rewards',rewards===JSON.stringify([state.coins,state.cards.tickets]));
   }
   scene(3,'live_play');state.chronicle.run.live={scores:[2,2,2,2,2],score:10,diff:20,phase:'feedback',width:28,pos:0,dir:1,finished:false};state.chronicle.run.rev++;renderGlobal();await click('[data-cp-action="live-next"]');check('Low score gets failure ending',state.chronicle.run.ending==='c3_fail');
