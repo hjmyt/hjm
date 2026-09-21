@@ -34,3 +34,10 @@
 ### 空格最终选图
 
 当前使用 [kongge-portrait-selected.webp](kongge-portrait-selected.webp)，直接采用用户提供并选定的插画，仅转为 WebP 格式，未重新生成或修改画面。主页、卡册、详情和剧情共用此图。过于接近真人的 v3 已从项目资源中撤下。
+
+### 朱老师与山丘酒吧
+
+使用内置 `image_gen` 生成，未使用参考图；提示词见 [shanqiu-prompts.json](shanqiu-prompts.json)。通过相对 assets 路径加载，未内嵌 base64。
+
+- `zhu-portrait.webp`：山丘酒吧老板与音乐剧创作者，吧台前递来酒单，周围有乐谱、祖卡笛和调酒器具。
+- `shanqiu-closed.webp`：第四章停业弹窗配图，倒扣的椅子、打包的谱架与暮色中的最后一盏灯。

@@ -216,6 +216,11 @@ body:is([data-view="cards"],[data-view="rhythm"]) .greeting-line{font-size:var(-
 .cp-week-track{list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px;margin:16px 0 0;padding:0}.cp-week-track li{font-size:10px;color:#8b99ad;white-space:nowrap}.cp-week-track li>span{display:block;height:5px;background:#e0e7f2;border-radius:3px;margin-bottom:7px}.cp-week-track li:last-child{text-align:right}.cp-week-track li.done>span{background:#b5c9e9}.cp-week-track li.current{color:#426eb0;font-weight:700}.cp-week-track li.current>span{background:#5889e3}
 .cp-week-advance .cp-week-end{margin-top:16px;padding-top:16px;border-color:#dfe7f3}.cp-week-message>strong{display:flex;align-items:center;gap:6px;font-size:13px;color:#405d87}.cp-week-message .icon{width:16px;height:16px;color:#528a75}.cp-week-message p{margin-top:4px}
 @media(max-width:520px){.cp-week-advance{padding:15px 12px}.cp-week-progress-copy{gap:4px 8px}.cp-week-kicker{width:100%}.cp-week-progress-copy>strong{font-size:13px}.cp-week-count{font-size:11px}.cp-week-track{gap:4px}.cp-week-track li{font-size:9px}.cp-week-advance .cp-week-end{flex-direction:column;gap:12px}.cp-week-advance .cp-week-end .btn{width:100%;min-height:42px}.cp-week-message>strong{font-size:12px}}
+
+.shanqiu-menu-head{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:22px 0 12px;padding-bottom:12px;border-bottom:1px solid #e9dfcc;color:#927348;font-size:11px;letter-spacing:1px}.shanqiu-menu-head b{letter-spacing:0}
+.shanqiu-drinks{display:grid;grid-template-columns:1fr 1fr;gap:12px}.shanqiu-drink{display:flex;align-items:center;gap:12px;padding:20px 16px;text-align:left;border:1px solid #e9e0d0;border-radius:12px;background:linear-gradient(135deg,#fffcf6,#f8f3e9);color:#54473b;min-width:0}.shanqiu-drink:hover{border-color:#bb9a64;background:#fff8e9}.shanqiu-drink-no{font:italic 21px Georgia;color:#b79b70}.shanqiu-drink>span:nth-child(2){flex:1}.shanqiu-drink strong{display:block;font:600 17px var(--serif)}.shanqiu-drink small{display:block;font-size:10px;margin-top:5px;color:#99846b}.shanqiu-drink>b{font:600 19px Georgia;color:#886735;white-space:nowrap}.shanqiu-menu>.btn{margin-top:12px}
+.shanqiu-farewell img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:14px;margin-bottom:20px}.shanqiu-farewell h3{font:700 25px var(--serif);margin:10px 0 15px}.shanqiu-farewell p{line-height:1.9;margin:12px 0;color:#778196}.shanqiu-farewell blockquote{margin:20px 0;padding:14px 20px;border-left:3px solid #c0a174;background:#fbf6ed;font-family:var(--serif);color:#715b41;line-height:1.8}
+@media(max-width:520px){.shanqiu-drinks{grid-template-columns:1fr;gap:9px}.shanqiu-drink{padding:14px}.shanqiu-farewell h3{font-size:22px}}
 </style>
 </head>
 <body>
@@ -1724,6 +1729,9 @@ ASSETS.cardGoose='assets/goose-portrait.webp';
 ASSETS.cardXiaota='assets/xiaota-portrait.webp';
 ASSETS.cardBill='assets/cardBill.svg';
 
+ASSETS.cardZhu='assets/zhu-portrait.webp';
+ASSETS.shanqiuClosed='assets/shanqiu-closed.webp';
+CARD_DEFS.push({"id": "zhu", "name": "朱老师", "rarity": "SSR", "stars": 4, "role": "作曲 / 音乐剧", "group": "幕后", "asset": "cardZhu", "icon": "music", "tag": "山丘酒吧老板", "identity": "山丘酒吧老板 · 音乐剧博士在读 · 项目主导人", "info": [["作曲", "旋律天才 · 写歌从来不理和弦"], ["指挥", "半吊子 · 但没人舍得拆穿他"]], "stats": [["作曲", 92], ["音乐剧编剧", 95], ["指挥", 62], ["调酒", 96]], "statnote": "乐手们看着他的总谱头皮发麻，但旋律一响，又都觉得「好像……也挺好听？」", "quote": "要不要来一杯？", "subtitle": "他写稿写到凌晨的样子，像把整个剧场扛在背上。", "bio": "别人放弃之后，他还在把写下的旋律，一点点变成真正的舞台。", "seat": "项目主导人", "specialty": "作曲 / 音乐剧 / 山丘酒吧", "rival": "未设定", "sourceSet": true, "chronicleOnly": true, "bonus": 4, "active": 8, "activeName": "幽灵项目落地器", "activeText": "所有人都不看好的项目，他能在所有人都放弃之后，一个人默默把它落地。山丘酒吧、音乐剧立项，皆是如此。", "passiveName": "无视和弦", "passiveText": "写歌从来不理会和弦规则。理论家听了皱眉，乐手看了沉默——但成品莫名其妙地好听。规则外的天赋，无法用乐理解释。", "giftTitle": "山丘深夜食堂", "measure": "灵感", "gifts": [["coffee", "冰美式（大杯）", "gift", 5, 6, 18], ["paper", "打印纸", "album", 8, 10, 28], ["candy", "润喉糖", "heart", 0, 3, 8], ["night", "打烊后的一杯「拾光」", "moon", 0, 3, 8]], "thanks": ["“正好，今晚还差最后一场戏。”", "“有纸就能写，剩下的慢慢来。”", "“你也照顾好嗓子，下次排练见。”", "“别急着说。你慢慢喝，我听着。”"]});
 ASSETS.cardDayang='assets/dayang-portrait.webp';
 ASSETS.cardBaoshi='assets/baoshi-portrait.webp';
 CARD_DEFS.push({"id":"qiqi","name":"柒柒","rarity":"SR","role":"电吉他","group":"弦乐","asset":"cardQiqi","icon":"music","tag":"旗袍 · 中式盘发","stars":3,"bonus":2,"active":0,"subtitle":"她回请的速度，永远比你快一步。","quote":"练琴辛苦啦，周末我请大家吃饭。","identity":"银行客户经理 · 温柔知性大姐姐","seat":"电吉他声部","specialty":"电吉他 / 饭局张罗 / 记住每个人的喜好","rival":"未设定","stats":[["音准",73],["节奏",78],["电吉他",85],["温柔知性",99]],"statnote":"团里每个人都收到过她的饼干，每个人都欠她一句没说完的谢谢。","activeName":"饭局张罗","activeText":"订餐厅、订做脸、记住忌口与喜好。到场全员心情 +30，女性成员额外获得「被照顾」状态。她只听，很少说。","passiveName":"旗袍与失真","passiveText":"中式盘发配电吉他的反差登场，观众注意力强制转移。演出开场时全团魅力 +15。","bio":"热爱旗袍与中式盘发，永远记得每个人爱吃什么。抱起电吉他的瞬间，旗袍和失真音墙同框。","gifts":[["pastry","中式手作点心","gift",5,6,18],["cream","护手霜","heart",8,10,28],["ticket","音乐厅门票","ticket",12,14,40],["compliment","夸她的旗袍盘扣","sparkles",0,3,8]],"thanks":["“正好，大家可以一起尝尝。”","“你连这个都想到了，谢谢。”","“这次换我请你吃饭，好不好？”","“你看得真仔细。下次换一件给你看。”"]},{"id":"lemon","name":"柠檬","rarity":"待定","role":"键盘","group":"键盘","asset":"cardLemon","icon":"music","tag":"档案待补充 · 敬请期待","stars":0,"bonus":0,"active":0,"subtitle":"已经在故事里相遇，更多设定敬请期待。","quote":"人物档案，敬请期待。","placeholder":true,"stats":[]},{"id":"xiaozhou","name":"小周","rarity":"待定","role":"角色设定待补充","group":"幕后","asset":"cardXiaozhou","icon":"music","tag":"档案待补充 · 敬请期待","stars":0,"bonus":0,"active":0,"subtitle":"已经在故事里相遇，更多设定敬请期待。","quote":"人物档案，敬请期待。","placeholder":true,"stats":[]},{"id":"goose","name":"大鹅","rarity":"待定","role":"键盘","group":"键盘","asset":"cardGoose","icon":"music","tag":"档案待补充 · 敬请期待","stars":0,"bonus":0,"active":0,"subtitle":"已经在故事里相遇，更多设定敬请期待。","quote":"人物档案，敬请期待。","placeholder":true,"stats":[]},{"id":"xiaota","name":"小塔","rarity":"待定","role":"鼓手","group":"打击乐","asset":"cardXiaota","icon":"music","tag":"档案待补充 · 敬请期待","stars":0,"bonus":0,"active":0,"subtitle":"已经在故事里相遇，更多设定敬请期待。","quote":"人物档案，敬请期待。","placeholder":true,"stats":[]},{"id":"bill","name":"Bill","rarity":"待定","role":"鼓手","group":"打击乐","asset":"cardBill","icon":"music","tag":"档案待补充 · 敬请期待","stars":0,"bonus":0,"active":0,"subtitle":"已经在故事里相遇，更多设定敬请期待。","quote":"人物档案，敬请期待。","placeholder":true,"stats":[]});
@@ -1738,7 +1746,7 @@ const COLLECTION_ORDER=[
  "tang",
  "lala",
  "azhe",
- "shiyuan",
+ "shiyuan", "zhu",
  "tim",
  "yeshiyang",
  "kongge",
@@ -1762,9 +1770,10 @@ function compareCollection(a,b,mode='rarity'){
 }
 function freshExpansion(){return {dijie:{instrument:0,emo:false,mood:0,perfectConcerts:0},azhe:{tickets:0,applauseMs:0,encores:0},shiyuan:{happiness:0},daily:{date:dateKey(),script:false,greet:false}};}
 // Cards follow the narrative that the player has actually reached, not chapter numbers.
-const STORY_CARD_ALIASES={dayang:['大羊'],baoshi:['宝石','宝石姬'],qiqi:['柒柒'],lemon:['柠檬'],xiaozhou:['小周'],goose:['大鹅'],xiaota:['小塔'],bill:['Bill','BILL'],tang:['汤少','汤神'],azhe:['阿喆'],shiyuan:['十元'],feihong:['飞鸿'],lala:['垃垃'],tim:['TIM'],yeshiyang:['叶思阳'],kongge:['空格','格老'],dijie:['笛杰'],orange:['橘猫','橘色团宠']};
+const STORY_CARD_ALIASES={zhu:['朱老师'],dayang:['大羊'],baoshi:['宝石','宝石姬'],qiqi:['柒柒'],lemon:['柠檬'],xiaozhou:['小周'],goose:['大鹅'],xiaota:['小塔'],bill:['Bill','BILL'],tang:['汤少','汤神'],azhe:['阿喆'],shiyuan:['十元'],feihong:['飞鸿'],lala:['垃垃'],tim:['TIM'],yeshiyang:['叶思阳'],kongge:['空格','格老'],dijie:['笛杰'],orange:['橘猫','橘色团宠']};
 function mentionedStoryCards(text='',who=''){
  const speaker=who==='tangshao'?'tang':who;
+ text=text.replaceAll('柠檬气泡水','气泡水'); // Drink names are not character appearances.
  return CARD_DEFS.filter(c=>c.id===speaker||STORY_CARD_ALIASES[c.id].some(name=>name==='TIM'?/\bTIM\b/i.test(text):name.toLowerCase()==='bill'?/\bBill\b/i.test(text):text.includes(name))).map(c=>c.id);
 }
 function cardAvailable(id,source=state){return source.cards.encounters.includes(id);}
@@ -1786,6 +1795,7 @@ function syncStoryCards(source=state,notify=false,recoverLegacy=false){
 function availableCardPool(){return CARD_DEFS.filter(c=>!c.placeholder&&cardAvailable(c.id));}
 function hiddenSkillReady(id,kind='skill'){
  if(!cardOwned(id))return false;
+ if(id==='zhu')return cardBond('zhu')>=20;
  if(id==='baoshi')return cardBond('baoshi')>=20;
  if(id==='lemon')return sourceCast().lemon.ended;
  if(id==='qiqi')return qiqiState().sisters;
@@ -1820,10 +1830,16 @@ function concealCardSkills(html,c){
 
 
 
+function renderZhuSecret(){
+ if(!state.cards.zhuNight)return `<article class="skill-item hidden-skill locked"><div class="skill-heading">${I('lock')}<h4>隐藏技能</h4><span class="skill-tag">${hiddenSkillReady('zhu')?'可解锁':'未解锁'}</span></div><p>灵感达到 20 后，亲自揭开吧台后的故事。</p><button class="btn secondary small" data-zhu-reveal ${hiddenSkillReady('zhu')?'':'disabled'}>${hiddenSkillReady('zhu')?'解锁隐藏技能':'条件未满足'}</button></article>`;
+ return `<details class="skill-item hidden-skill" ${CardUI.zhuOpened?'open':''}><summary>${I('sparkles')}隐藏技能 · 已解锁，点击查看</summary><h4>深夜吧台 · 调酒</h4><p>打烊后的山丘，吧台是他的另一个舞台。shaker 摇出的节奏比他的指挥稳一百倍——招牌「拾光」入口先是苦，回甘却很长。多少乐手的心事与梦想，是在他的吧台前被一杯酒接住的。他不劝，只听。</p><p class="cp-caption">调酒 96 已揭晓；投喂新增「打烊后的一杯拾光」——这杯不收音符。</p></details>`;
+}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-zhu-reveal]');if(!b||b.disabled||!hiddenSkillReady('zhu')||state.cards.zhuNight)return;state.cards.zhuNight=true;CardUI.zhuOpened=true;unlock('zhu_night');save();renderGlobal();toast('深夜吧台已解锁 · 调酒 96',true);});
+
 function freshSourceCast(){return {performances:0,xiaozhou:{confidence:45,solos:0,praised:false,compared:false},lemon:{ended:false,lastChallenge:-1,result:''},dayang:{online:true},baoshi:{purity:0}};}
 function cleanSourceCast(o){const d=freshSourceCast();if(!o||typeof o!=='object')return d;const n=(v,max,f=0)=>Number.isFinite(Number(v))?clamp(Math.floor(Number(v)),0,max):f;d.performances=n(o.performances,999999);d.xiaozhou.confidence=n(o.xiaozhou?.confidence,100,45);d.xiaozhou.solos=n(o.xiaozhou?.solos,3);d.xiaozhou.praised=o.xiaozhou?.praised===true;d.xiaozhou.compared=o.xiaozhou?.compared===true;d.lemon.ended=o.lemon?.ended===true;d.lemon.lastChallenge=Number.isInteger(o.lemon?.lastChallenge)?clamp(o.lemon.lastChallenge,-1,d.performances):-1;d.lemon.result=typeof o.lemon?.result==='string'?o.lemon.result.slice(0,120):'';d.dayang.online=o.dayang?.online!==false;d.baoshi.purity=n(o.baoshi?.purity,100);return d;}
 function sourceCast(){return state.cards.sourceCast||(state.cards.sourceCast=freshSourceCast());}
-function sourceStat(c,k,v){return c.id==='xiaozhou'&&k==='自信'?sourceCast().xiaozhou.confidence:v;}
+function sourceStat(c,k,v){if(c.id==='zhu'&&k==='调酒')return state.cards.zhuNight===true?96:'??';return c.id==='xiaozhou'&&k==='自信'?sourceCast().xiaozhou.confidence:v;}
 function renderSourceInfo(c){return `<section class="profile-panel"><h3 class="panel-title">${I('cards')}基本资料 <span class="tiny">${c.tag}</span></h3><dl class="profile-info"><dt>身份</dt><dd>${c.identity}</dd>${c.info.map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl><p class="info-bio">${c.bio}</p></section>`;}
 function prepareSourceSkill(id){
  const c=cardDef(id);if(!c?.sourceSet||!cardOwned(id))return;
@@ -1838,10 +1854,11 @@ function renderSourceSkills(c){
  const x=sourceCast(),owned=cardOwned(c.id),queued=state.cards.prepared?.id===c.id;
  const amount=sourceSkillAmount(c.id),ended=c.id==='lemon'&&x.lemon.ended;
  const button=ended?'<button class="btn ghost small" data-source-action="lemon-ending">查看人物线结局</button>':`<button class="btn secondary small" data-card-skill="${c.id}" ${!owned?'disabled':''}>${c.id==='lemon'?'选择一位乐手':queued?'取消准备':c.id==='xiaota'?'准备救场 · 本场一次':`准备技能 · +${amount} ♪`}</button>`;
- const rules={xiaozhou:`下场演奏额外 +${amount} 音符。投喂「认真的夸奖」可使本次技能翻倍；被柠檬比较后，本次技能减半。结束一场后恢复。`,lemon:'选择已相遇的乐手与回应方式，每完成一场演奏可再发动一次；不改变他人的节奏判定。',xiaota:'准备后，本场第一次漏拍必定被接成 GOOD；整首有主动命中时，另得 6 音符。',dayang:`本场即兴按${x.dayang.online?'有网 93':'离线 72'}展示，技能额外 +${amount} 音符；曲库状态可在卡片里切换。`,baoshi:'准备后，完成有命中的演奏额外 +8 音符，心灵净化进度 +50%（上限 100%）。',goose:'准备后，下场有命中的演奏额外 +8 音符。新的正传重逢剧情仍待后续章节。'};
- const passiveRules={xiaozhou:`已完成独立演出 ${x.xiaozhou.solos}/3；自信 ${x.xiaozhou.confidence}/100。需完成整首且有主动命中，大鹅不在同队。`,lemon:x.lemon.result||'帽子领域常驻；这份自信不会提高实际音准或节奏。',xiaota:'漏拍时有 70% 概率由鼓点接成 NICE，救场主动技优先；连续接住三拍后可解除队内笛杰的 emo。自动接拍不计为 PERFECT。',dayang:'有网时即兴 93，离线时即兴 72；切换状态后需重新准备技能。',baoshi:`携带宝石完成有命中的演奏，其他同队伙伴好感 +3；净化进度 ${x.baoshi.purity}%。`,goose:'退群是正传中的已发生情节；已收藏的卡片与养成仍然保留。'};
+ const rules={zhu:'准备后，下场有主动命中的演奏额外 +8 音符；每场结算一次。',xiaozhou:`下场演奏额外 +${amount} 音符。投喂「认真的夸奖」可使本次技能翻倍；被柠檬比较后，本次技能减半。结束一场后恢复。`,lemon:'选择已相遇的乐手与回应方式，每完成一场演奏可再发动一次；不改变他人的节奏判定。',xiaota:'准备后，本场第一次漏拍必定被接成 GOOD；整首有主动命中时，另得 6 音符。',dayang:`本场即兴按${x.dayang.online?'有网 93':'离线 72'}展示，技能额外 +${amount} 音符；曲库状态可在卡片里切换。`,baoshi:'准备后，完成有命中的演奏额外 +8 音符，心灵净化进度 +50%（上限 100%）。',goose:'准备后，下场有命中的演奏额外 +8 音符。新的正传重逢剧情仍待后续章节。'};
+ const passiveRules={zhu:'入队基础加成 +4 音符；每升 10 级再 +1。',xiaozhou:`已完成独立演出 ${x.xiaozhou.solos}/3；自信 ${x.xiaozhou.confidence}/100。需完成整首且有主动命中，大鹅不在同队。`,lemon:x.lemon.result||'帽子领域常驻；这份自信不会提高实际音准或节奏。',xiaota:'漏拍时有 70% 概率由鼓点接成 NICE，救场主动技优先；连续接住三拍后可解除队内笛杰的 emo。自动接拍不计为 PERFECT。',dayang:'有网时即兴 93，离线时即兴 72；切换状态后需重新准备技能。',baoshi:`携带宝石完成有命中的演奏，其他同队伙伴好感 +3；净化进度 ${x.baoshi.purity}%。`,goose:'退群是正传中的已发生情节；已收藏的卡片与养成仍然保留。'};
  let html=skillBlock(c.activeName,'主动技',c.activeText,rules[c.id],button,false,c.id==='lemon'?'每次排练':c.id==='xiaota'?'一场演出':c.id==='dayang'?'一首曲子':'无');
  html+=skillBlock(c.passiveName,c.id==='xiaozhou'?'成长技':c.id==='goose'?'剧情技':'被动',c.passiveText,passiveRules[c.id],c.id==='dayang'?`<button class="btn ghost small" data-source-action="cloud">切换为${x.dayang.online?'离线':'有网'}练习</button>`:'');
+ if(c.id==='zhu')html+=skillBlock('祖卡笛小号','救场技','任何缺失的声部，他都能用祖卡笛顶上。音准 surprisingly 全对。乐手们憋笑憋出内伤，但没人能否认那确实救了场。','队中没有管乐角色时，首次漏拍由祖卡笛接成 NICE，每场一次。自动接拍不算主动命中。')+renderZhuSecret();
  if(c.id==='lemon')html+=`<div class="source-warning">亲近警戒线 · ${Math.min(11,cardBond('lemon'))} / 10<br>超过 10 好感会结束这条人物线，请慎重投喂。</div>`+hiddenSkillBlock('lemon','<h4>危险羁绊 · BE 缅北直通车</h4><p>他会热情邀请你「出国挣大钱」，下飞机的地方没有键盘，只有围墙。保持距离，各生欢喜。</p>');
  if(c.id==='baoshi')html+=hiddenSkillBlock('baoshi','<h4>隐藏身份 · 宝石姬</h4><p>柜子的最深处，挂着一个他亲手打理的衣橱。某些夜晚，他会以「宝石姬」的身份站上另一个舞台——台下的人疯狂尖叫，台上的「她」笑得比谁都自在。少年音配裙子，是他藏得最深的秘密，也是最真的自己。</p><button class="btn secondary small" data-source-action="baoshi-memory">收藏这一面的舞台</button>');
  return `<section class="profile-panel"><h3 class="panel-title">${I('sparkles')}技能</h3><div class="skill-list">${html}</div></section>`;
@@ -1853,9 +1870,10 @@ function showLemonChallenge(){if(!cardOwned('lemon')||sourceCast().lemon.ended)r
 function resolveLemonChallenge(id,response){const x=sourceCast();if(!cardOwned('lemon')||x.lemon.ended||x.lemon.lastChallenge===x.performances||!cardOwned(id)||id==='lemon'||cardDef(id).placeholder||!['serious','ignore'].includes(response))return;x.lemon.lastChallenge=x.performances;x.lemon.result=response==='serious'?`${cardDef(id).name}认真弹完，柠檬输了，却又压低了帽檐。`:`${cardDef(id).name}没有理会，柠檬默认自己赢了。`;if(id==='xiaozhou'){x.xiaozhou.compared=true;x.xiaozhou.praised=false;}save();openModal('排练间隙',`<p>${escapeHTML(x.lemon.result)}</p>`);renderGlobal();}
 function onXiaotaBeat(){const r=game.cardRun;if(!r?.sourceSnapshot?.xiaota)return;r.sourceSnapshot.beats++;if(r.sourceSnapshot.beats>=3&&r.ids.includes('dijie')&&expansion().dijie.emo){expansion().dijie.emo=false;expansion().dijie.mood=Math.min(100,expansion().dijie.mood+10);r.sourceSnapshot.beats=0;}}
 function settleLateNote(note,now){
- const r=game.cardRun,x=r?.sourceSnapshot;let label=null;
+ const r=game.cardRun,x=r?.sourceSnapshot;let label=null,rescuer='小塔';
  if(x?.xiaota){if(r.prepared?.id==='xiaota'&&!x.rescued){x.rescued=true;label='GOOD';}else if(Math.random()<.7)label='NICE';}
- if(label){note.hit=true;x.assists++;if(label==='GOOD'){game.good++;game.score+=700;}else{game.nice++;game.score+=400;}game.combo++;game.maxCombo=Math.max(game.maxCombo,game.combo);r.missStreak=0;onXiaotaBeat();game.judgement={text:'小塔 · '+label,at:now,lane:note.lane};}
+ if(!label&&x&&r.ids.includes('zhu')&&!r.ids.some(id=>cardDef(id)?.group==='管乐')&&!x.zhuRescued){x.zhuRescued=true;label='NICE';rescuer='朱老师';}
+ if(label){note.hit=true;x.assists++;if(label==='GOOD'){game.good++;game.score+=700;}else{game.nice++;game.score+=400;}game.combo++;game.maxCombo=Math.max(game.maxCombo,game.combo);r.missStreak=0;onXiaotaBeat();game.judgement={text:rescuer+' · '+label,at:now,lane:note.lane};}
  else{note.missed=true;game.miss++;onExpansionMiss();game.combo=0;if(x)x.beats=0;game.judgement={text:'MISS',at:now,lane:note.lane};}
  updateGameStats();
 }
@@ -1864,7 +1882,7 @@ function onSourcePerformance(run){
  if(run.ids.includes('xiaozhou')&&!run.ids.includes('goose')){const z=x.xiaozhou,before=z.solos;z.solos=Math.min(3,z.solos+1);z.confidence=Math.min(100,z.confidence+10);messages.push('小周独立演出 '+z.solos+'/3 · 自信 +10');if(before<3&&z.solos===3){unlock('xiaozhou_sr');messages.push('小周永久进化 SR');}}
  if(run.ids.includes('xiaozhou')){x.xiaozhou.praised=false;x.xiaozhou.compared=false;}
  if(run.ids.includes('baoshi')){for(const id of run.ids)if(id!=='baoshi')addCardBond(id,3);if(run.prepared?.id==='baoshi')x.baoshi.purity=Math.min(100,x.baoshi.purity+50);messages.push('宝石的天然呆领域 · 队友好感 +3');}
- if(run.sourceSnapshot?.assists)messages.push('小塔接住 '+run.sourceSnapshot.assists+' 次漏拍');
+ if(run.sourceSnapshot?.assists)messages.push('伙伴接住 '+run.sourceSnapshot.assists+' 次漏拍');
  run.sourceReport=messages.join(' · ');
 }
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;const d=b.dataset;if(d.lemonTarget)return resolveLemonChallenge(d.lemonTarget,d.lemonResponse);if(d.sourceAction==='lemon-ending')return showLemonEnding();if(d.sourceAction==='cloud'){sourceCast().dayang.online=!sourceCast().dayang.online;if(state.cards.prepared?.id==='dayang')state.cards.prepared=null;save();renderGlobal();}if(d.sourceAction==='baoshi-memory'&&hiddenSkillReady('baoshi')){unlock('baoshi_secret');save();showMemory('baoshi_secret');}});
@@ -1893,10 +1911,10 @@ function onQiqiPerformance(run){
 }
 document.addEventListener('click',e=>{if(e.target.closest('[data-qiqi-party]'))hostQiqiParty();});
 
-function freshCards(){return {edition:7,sourceCast:freshSourceCast(),qiqi:freshQiqi(),lala:freshLala(),trio:freshTrio(),expansion:freshExpansion(),tickets:3,pulls:0,pity:0,encounterVersion:1,encounters:[],selected:null,team:[],form:'normal',prepared:null,blackUntil:0,collection:Object.fromEntries(CARD_DEFS.map(c=>[c.id,{owned:false,xp:0,copies:0}])),daily:{date:dateKey(),gifts:{},eye:false},history:[]};}
+function freshCards(){return {edition:7,zhuNight:false,sourceCast:freshSourceCast(),qiqi:freshQiqi(),lala:freshLala(),trio:freshTrio(),expansion:freshExpansion(),tickets:3,pulls:0,pity:0,encounterVersion:1,encounters:[],selected:null,team:[],form:'normal',prepared:null,blackUntil:0,collection:Object.fromEntries(CARD_DEFS.map(c=>[c.id,{owned:false,xp:0,copies:0}])),daily:{date:dateKey(),gifts:{},eye:false},history:[]};}
 function cleanCards(input){
  const d=freshCards();if(!input||typeof input!=='object'){d.encounterVersion=0;return d;}
- d.qiqi=cleanQiqi(input.qiqi);d.sourceCast=cleanSourceCast(input.sourceCast);
+ d.zhuNight=input.zhuNight===true;d.qiqi=cleanQiqi(input.qiqi);d.sourceCast=cleanSourceCast(input.sourceCast);
  d.encounterVersion=input.encounterVersion===1?1:0;
  d.encounters=Array.isArray(input.encounters)?[...new Set(input.encounters.filter(id=>CARD_DEFS.some(c=>c.id===id)))]:[];
  const num=(n,max=999999)=>Number.isFinite(Number(n))?clamp(Math.floor(Number(n)),0,max):0;
@@ -1951,6 +1969,7 @@ const Chronicle = (()=>{
   yeshiyang:{name:'叶思阳',tag:'SSR · 副团长 / 一提',card:'yeshiyang',asset:'cardYeshiyang',icon:'violin'},
   kongge:{name:'首席空格',tag:'SSR · 一提首席 / 技术考核',card:'kongge',asset:'cardKongge',icon:'violin'},
   dijie:{name:'笛杰',tag:'SSR · 木管 / INFP',card:'dijie',asset:'cardDijie',icon:'flute'},
+  zhu:{name:'朱老师',tag:'山丘酒吧老板 · 音乐剧项目主导人',card:'zhu',asset:'cardZhu',icon:'music'},
   qiqi:{name:"柒柒",tag:"电吉他 · 银行客户经理",card:'qiqi',asset:'cardQiqi',icon:'music'},
   lemon:{name:"柠檬",tag:"键盘 · 排练新人",card:'lemon',asset:'cardLemon',icon:'music'},
   xiaozhou:{name:"小周",tag:"谱页整理 · 合练搭档",card:'xiaozhou',asset:'cardXiaozhou',icon:'music'},
@@ -1961,7 +1980,7 @@ const Chronicle = (()=>{
   bill:{name:"Bill",tag:"鼓手 · 节奏声部",card:'bill',asset:'cardBill',icon:'music'},
  };
  const PERSON_IDS=Object.keys(PEOPLE);
- const SCENES=["c4_jeal", "c4_jeal_a", "c4_jeal_b", "c4_jeal_c", "c4_intro", "c4_prep", "c4_bao", "c4_qiqi", "c4_menu", "be_mianbei", "be_qiqi4", "c4_he", "c4_te", "c4_fail", "c4_prep_a", "c4_prep_b", "c4_prep_c", "c4_bao_a", "c4_bao_b", "c4_qiqi_a", "c4_qiqi_b", "c4_qiqi_c", "b4_lemon_a", "b4_lemon_b", "b4_zhou_a", "b4_zhou_b", "b4_bao_a", "b4_bao_b", "title5", "c4_band_lemon", "c4_band_zhou", "c4_band_bao","c2_tim_a", "c2_tim_b", "c2_tim_c", "c2_head_a", "c2_head_b", "c2_head_c", "c2_kong_a", "c2_kong_b", "c2_kong_c", "c3_intro", "c3_prep", "c3_ge", "c3_bill", "c3_menu", "c3_jeal", "be_qiqi", "c3_he", "c3_te", "c3_fail", "c3_prep_a", "c3_prep_b", "c3_prep_c", "c3_ge_a", "c3_ge_b", "c3_ge_c", "c3_bill_a", "c3_bill_b", "c3_jeal_a", "c3_jeal_b", "c3_jeal_c", "band_q_a", "band_q_b", "band_zhou_a", "band_zhou_b", "band_bill_a", "band_bill_b", "c3_band_q", "c3_band_zhou", "c3_band_bill", "title4",'c2_intro','c2_bar','c2_tim','c2_night_pre','c2_night','c2_str','c2_pop_end','c2_head','c2_kong','c2_endweek','c2_sponsor','c2_boundary','c2_bill','title3','start','s_door','s_room','s_look','s_shi','s_dream','s_first','after_practice','s_conflict','s_fei1','s_fei2','s_endweek','menu','chat_select','chat','gig','emo','practice_partner','practice_turn','practice_result','b_live','b_live2','live_intro','live_play','live_result','be_shiyuan','title2'];
+ const SCENES=['zhu_offer','zhu_reply','shanqiu_closed',"c4_jeal", "c4_jeal_a", "c4_jeal_b", "c4_jeal_c", "c4_intro", "c4_prep", "c4_bao", "c4_qiqi", "c4_menu", "be_mianbei", "be_qiqi4", "c4_he", "c4_te", "c4_fail", "c4_prep_a", "c4_prep_b", "c4_prep_c", "c4_bao_a", "c4_bao_b", "c4_qiqi_a", "c4_qiqi_b", "c4_qiqi_c", "b4_lemon_a", "b4_lemon_b", "b4_zhou_a", "b4_zhou_b", "b4_bao_a", "b4_bao_b", "title5", "c4_band_lemon", "c4_band_zhou", "c4_band_bao","c2_tim_a", "c2_tim_b", "c2_tim_c", "c2_head_a", "c2_head_b", "c2_head_c", "c2_kong_a", "c2_kong_b", "c2_kong_c", "c3_intro", "c3_prep", "c3_ge", "c3_bill", "c3_menu", "c3_jeal", "be_qiqi", "c3_he", "c3_te", "c3_fail", "c3_prep_a", "c3_prep_b", "c3_prep_c", "c3_ge_a", "c3_ge_b", "c3_ge_c", "c3_bill_a", "c3_bill_b", "c3_jeal_a", "c3_jeal_b", "c3_jeal_c", "band_q_a", "band_q_b", "band_zhou_a", "band_zhou_b", "band_bill_a", "band_bill_b", "c3_band_q", "c3_band_zhou", "c3_band_bill", "title4",'c2_intro','c2_bar','c2_tim','c2_night_pre','c2_night','c2_str','c2_pop_end','c2_head','c2_kong','c2_endweek','c2_sponsor','c2_boundary','c2_bill','title3','start','s_door','s_room','s_look','s_shi','s_dream','s_first','after_practice','s_conflict','s_fei1','s_fei2','s_endweek','menu','chat_select','chat','gig','emo','practice_partner','practice_turn','practice_result','b_live','b_live2','live_intro','live_play','live_result','be_shiyuan','title2'];
  const ENDINGS={
   c4_he:{"chapter": 4, "title": "6.7 满场星光", "code": "HE · CHAPTER IV", "icon": "crown", "memory": "cp4_he", "text": "剧场满场，返场的灯光照见每个一起排练的人。", "coins": 50, "tickets": 2},
   c4_te:{"chapter": 4, "title": "谢幕后", "code": "TE · CHAPTER IV", "icon": "music", "memory": "cp4_te", "text": "演出顺利结束了，还有一些心事留在侧幕。", "coins": 25, "tickets": 1},
@@ -1990,9 +2009,29 @@ const Chronicle = (()=>{
  const person=k=>PEOPLE[k]||{name:k||'旁白',tag:'哈基米乐团编年史',icon:'music'};
  const nInt=(x,def=0,min=0,max=999999)=>Number.isFinite(Number(x))?clamp(Math.floor(Number(x)),min,max):def;
  const str=(v,max=100)=>typeof v==='string'?v.slice(0,max):'';
+ const SHANQIU_DRINKS=[
+  {id:'lemon',name:'柠檬气泡水',price:39,cost:5,bond:3,note:'清爽气泡 · 无酒精',reply:'朱老师把杯子推过来：「清醒一点也好，待会儿还能听清我新写的旋律。」'},
+  {id:'martini',name:'马天尼',price:99,cost:12,bond:1,note:'干爽利落 · 留一点余韵',reply:'「经典。」他点点头，认真擦净杯脚，便回去修改总谱了。'},
+  {id:'mojito',name:'莫吉托',price:59,cost:8,bond:5,note:'青柠与薄荷 · 他调得最开心的一杯',reply:'薄荷的香气散开，他忽然哼出一小段旋律：「这一杯的节奏对了。你听，是不是可以写进第二幕？」'},
+  {id:'long-island',name:'长岛冰茶',price:79,cost:10,bond:2,note:'层次浓郁 · 慢慢喝',reply:'「别着急，一小口一小口来。」他把水也放到你手边，顺便问起了今天的排练。'}
+ ];
+ function beginBarChapter(){const r=R();r.bar={order:null,returnTo:'c'+r.chapter+'_intro',closed:false,closureSeen:false};if(r.chapter===4)r.bar.closed=[1,2,3].every(ch=>M().slots[ch]?.bar?.order==='decline');r.scene=r.bar.closed?'shanqiu_closed':'zhu_offer';}
+ function barDialogue(r){
+  if(r.scene==='shanqiu_closed')return D('zhu','山丘酒吧，停业了。前三章，朱老师递来的酒单都被轻轻推了回来。现在，谱架收进纸箱，椅子倒扣在桌上。朱老师把钥匙放下：「场地没了，戏还得写。剧场见。」');
+  if(r.scene==='zhu_offer')return D('zhu',r.bar.closed?'朱老师在剧院门口拎着最后一箱饮料，还是那句：「要不要来一杯？」\n「这次我请。店关了，朋友还在。」':r.chapter===1?'十元刚打过招呼，吧台后的朱老师就探过头来。\n「我是山丘的老板，这里也是你们的排练场地。要不要来一杯？」\n他擦了擦手，递给你一份酒单。':'章节开始前，朱老师又从吧台后探出头，递来那份熟悉的酒单。\n「新一章了。要不要来一杯？」',
+   ...SHANQIU_DRINKS.map(d=>({...choice(d.name+' · '+(r.bar.closed?'这次我请':d.cost+' 音符'),'zhu_reply',()=>orderDrink(d.id)),disabled:!!r.bar.order||(!r.bar.closed&&(state?.coins??0)<d.cost)})),choice('谢谢，我不渴','zhu_reply',()=>orderDrink('decline')));
+  if(r.scene==='chat'&&r.chat==='zhu')return D('zhu','朱老师把改了又改的谱子摊开：「这里的和弦……先别管。你听这句旋律，是不是还挺好听？」',choice('听他把这一句哼完','menu'));
+  if(r.scene==='zhu_reply'){const d=SHANQIU_DRINKS.find(x=>x.id===r.bar.order);return D('zhu',d?d.reply+'\n\n朱老师正传羁绊 +'+d.bond+'。': '「好，谱架给你留着。」朱老师收回酒单，笑了笑，没有再劝。',choice('收好这次相遇，继续剧情',r.bar.returnTo||(r.chapter===1?'s_first':'c'+r.chapter+'_intro')));}
+  return null;
+ }
+ function orderDrink(id){const r=R();if(r.scene!=='zhu_offer'||r.bar.order)return;const d=SHANQIU_DRINKS.find(x=>x.id===id);if(!d&&id!=='decline'||d&&!r.bar.closed&&state.coins<d.cost)return;r.bar.order=id;if(d){if(!r.bar.closed)state.coins-=d.cost;affUp('zhu',d.bond);log('山丘酒单：'+d.name+' · '+(r.bar.closed?'朱老师请客':d.cost+' 音符')+' · 朱老师正传羁绊 +'+d.bond+'。');}else log('面对朱老师的酒单，你说：「谢谢，我不渴。」');}
+ function barMenuHTML(){const r=R(),d=barDialogue(r);return `<section class="cp-surface shanqiu-menu">${speaker('zhu','每章一次 · 山丘酒单')}<div id="cpStoryText" class="cp-text">${E(d.text)}</div><div class="shanqiu-menu-head"><span>SHANQIU · 一杯，一段合奏</span><b>${r.bar.closed?'今晚，朱老师请客':'可用音符 '+state.coins+' ♪'}</b></div><div class="shanqiu-drinks">${SHANQIU_DRINKS.map((drink,i)=>`<button class="shanqiu-drink" data-cp-choice="${i}" data-cp-rev="${r.rev}" ${r.bar.order||(!r.bar.closed&&state.coins<drink.cost)?'disabled':''}><span class="shanqiu-drink-no">0${i+1}</span><span><strong>${drink.name}</strong><small>${drink.note} · 标价 ¥${drink.price}</small></span><b>${r.bar.closed?'请客':drink.cost+' ♪'}</b></button>`).join('')}</div><p class="cp-caption">${r.bar.closed?'这是停业后留下的一点心意。':'每章可点一杯，花费账户音符，不扣正传团费。音符不足时可先去演奏或读故事，也可以礼貌谢绝。'}口味不同，羁绊也不同；贵的未必更合拍。</p><button class="btn ghost" data-cp-choice="4" data-cp-rev="${r.rev}" ${r.bar.order?'disabled':''}>谢谢，我不渴</button></section>`;}
+ function closedBarHTML(){return `<div class="shanqiu-farewell"><img src="${ASSETS.shanqiuClosed}" alt="山丘酒吧停业后，倒扣的椅子与收起的谱架"><span class="eyebrow">CHAPTER 04 · 山丘的最后一盏灯</span><h3>山丘酒吧，停业了。</h3><p>前三章，朱老师递来的酒单，都被轻轻推了回来。<br>那间替大家留着灯的酒吧，最终没能撑到下一场演出。</p><p>谱架收进纸箱，椅子倒扣在桌上。<br>他擦完最后一个杯子，把钥匙放在吧台。</p><blockquote>「场地没了，戏还得写。<br>走吧，剧场见。」</blockquote></div>`;}
+ function showBarClosure(){openModal('山丘的最后一盏灯',closedBarHTML()+`<button class="btn primary" data-cp-action="bar-continue">收好这段回忆，继续第四章 ${I('arrow')}</button>`);}
+
  function freshRun(){return {chapter:1,sourceMode:'chapter1',events:{sponsor:null,boundary:null,bill:null},name:'',inst:'',ch:1,week:1,tech:5,sta:5,gold:30,level:1,
   aff:Object.fromEntries(PERSON_IDS.map(k=>[k,0])),dark:{feihong:0,dijie:0},
-  flags:{},scene:'start',rev:0,log:[],journal:[],battle:null,live:null,chat:'lala',ending:null,legacyEnded:false};}
+  bar:{order:null,returnTo:null,closed:false,closureSeen:false},flags:{},scene:'start',rev:0,log:[],journal:[],battle:null,live:null,chat:'lala',ending:null,legacyEnded:false};}
  function fresh(){return {version:2,runNo:1,claimed:[],endings:[],slots:{},chapter2Start:null,chapter3Start:null,chapter4Start:null,run:freshRun()};}
  // V6: retire the former relationship-penalty branch. Do not reset valid progress.
  // Old identifiers below are migration-only; unknown history entries are filtered by the catalogs.
@@ -2013,6 +2052,7 @@ const Chronicle = (()=>{
   d.claimed=[...new Set([...d.claimed,...d.endings])];
   const a=obj.run;if(!a||typeof a!=='object')return d;const r=d.run;
   r.chapter=a.chapter===4||/^(c4_|b4_)/.test(String(a.scene||''))||['title5','be_mianbei','be_qiqi4'].includes(a.scene)||String(a.ending||'').startsWith('c4_')?4:a.chapter===3||String(a.scene||'').startsWith('c3_')||String(a.scene||'').startsWith('band_')||a.scene==='title4'||a.scene==='be_qiqi'||String(a.ending||'').startsWith('c3_')?3:a.chapter===2||String(a.scene||'').startsWith('c2_')||a.scene==='title3'||String(a.ending||'').startsWith('c2_')?2:1;
+  r.bar={order:SHANQIU_DRINKS.some(d=>d.id===a.bar?.order)||a.bar?.order==='decline'?a.bar.order:null,returnTo:['s_dream','s_first','c2_intro','c3_intro','c4_intro'].includes(a.bar?.returnTo)?a.bar.returnTo:null,closed:r.chapter===4&&a.bar?.closed===true,closureSeen:a.bar?.closureSeen===true};
   r.sourceMode=['carry','quick','import','chapter1'].includes(a.sourceMode)?a.sourceMode:r.chapter>=2?'import':'chapter1';
   for(const [k,values] of Object.entries({sponsor:['checked','accepted'],boundary:['supported','watched'],bill:['replacement','warning']}))if(values.includes(a.events?.[k]))r.events[k]=a.events[k];
   r.name=str(a.name,10);r.inst=str(a.inst,20);r.ch=nInt(a.ch,r.chapter,1,5);r.week=nInt(a.week,1,1,999);
@@ -2057,6 +2097,7 @@ const Chronicle = (()=>{
   if(r.scene==='live_result'&&!r.live)r.scene='b_live';
   if(r.ending&&!['live_result','be_shiyuan','title2','title3','title4','title5','c2_pop_end','c3_he','c3_te','c3_fail','be_qiqi','c4_he','c4_te','c4_fail','be_qiqi4','be_mianbei'].includes(r.scene))r.scene='title'+(r.chapter+1);
   if(r.chapter>=2&&r.scene==='start'&&r.name.trim())r.scene='c'+r.chapter+'_intro';
+  if(r.scene==='zhu_offer'&&r.bar.order)r.scene='zhu_reply';
   if(r.chapter===3&&r.name.trim())r.flags.c3Met=1;
   if(r.chapter===4&&r.name.trim()&&(r.scene==='c4_bao'||r.scene.startsWith('c4_bao_')))r.flags.c4bao=1;
   if(r.chapter===2&&!r.ending&&r.scene==='menu'&&!r.flags.strGroup&&!r.flags.popGroup)r.scene='c2_intro';
@@ -2102,11 +2143,12 @@ const Chronicle = (()=>{
  const D=(who,text,...choices)=>({who,text,choices});
  function dialogue(run=R()){
   const G=run;
+  const bar=barDialogue(G);if(bar)return bar;
   if(G.chapter===4){const d=chapterFourDialogue(G);if(d)return d;}
   if(G.chapter===3){const d=chapterThreeDialogue(G);if(d)return d;}
   if(G.chapter===2){const d=chapterTwoDialogue(G);if(d)return d;}
   switch(G.scene){
-   case 's_door':return D('lala','哦呀，新人？我是垃垃，乐团的……嗯，历史学家。',
+   case 's_door':return D('lala','山丘酒吧还没到营业高峰，吧台旁已经摆好了谱架。\n\n哦呀，新人？我是垃垃，乐团的……嗯，历史学家。',
     choice('自我介绍：我是'+G.name+'，'+G.inst+'。','s_room',()=>affUp('lala',1)),choice('（拘谨地点头）','s_room'),choice('请问，十元在吗？','s_room',()=>{G.flags.askShi=1;affUp('shiyuan',1);}));
    case 's_room':return D('lala','来得正好，今晚排练。角落那个在拉《小星星》的，就是我们团长——十元。',choice('去跟十元打招呼','s_shi'),choice('先四处看看','s_look',()=>{G.flags.look=1;}));
    case 's_look':return D('lala','眼光不错。那边翻谱比谁都快的是阿喆；谱架后面阴影里那位是笛杰，别盯着他看，会 emo；门口调试相机的是汤少——别被他拍到丑照。',choice('去找十元','s_shi'));
@@ -2209,11 +2251,11 @@ const Chronicle = (()=>{
   recordReadScene(c.text);if(c.effect)c.effect();markDaily('story');
   if(!checkEnding()){
    if(c.next==='s_first')reward('entry');
-   R().scene=c.next;
+   if(R().chapter===1&&R().scene==='s_shi'&&!R().bar.order){R().bar.returnTo=c.next;R().scene='zhu_offer';}else R().scene=c.next;
   }
   changed();
  }
- function startHTML(){return `<div class="cp-surface">${speaker('旁白','CHAPTER 01 · PROLOGUE')}<div class="cp-text">「哈基米乐团」——城市角落里一个成人兴趣乐团。\n今晚，是新人招募的日子。\n\n你就是那个推门而入的人。</div><div class="cp-form"><label for="cpName">写下你的名字</label><input id="cpName" class="text-input" maxlength="10" autocomplete="nickname" placeholder="大家怎么称呼你？" value="${E(R().name|| (state.nickname==='乐团新人'?'':state.nickname).slice(0,10))}"><label>带上你的乐器</label><div class="cp-instruments">${['弦乐','管乐','打击乐','键盘 / 其他'].map(inst=>`<button class="cp-inst ${selectedInstrument===inst?'selected':''}" data-cp-instrument="${inst}" aria-pressed="${selectedInstrument===inst}">${inst}</button>`).join('')}</div><label for="cpInstrument">自定义乐器 <span class="tiny">（可选，填写后优先使用）</span></label><input id="cpInstrument" class="text-input" maxlength="20" placeholder="例如：长笛、小提琴、钢琴" value="${E(R().inst)}"><div class="cp-input-error" id="cpInputError" role="status"></div>${actionButton('enroll','推门，加入乐团','arrow','primary')}<div class="cp-rule-note">${I('album')}正传的琴技、团费、羁绊与卡册分别记录。放心开启新的入团故事，原来的陪伴还在。完成章节里程碑，可获得卡册音符、邀请券和回忆；剧情中提到人物时，会自动获得对应人物卡。</div></div></div>`;}
+ function startHTML(){return `<div class="cp-surface">${speaker('旁白','CHAPTER 01 · PROLOGUE')}<div class="cp-text">「哈基米乐团」——在山丘酒吧排练的成人兴趣乐团。\n今晚，是新人招募的日子。\n\n你就是那个推门而入的人。</div><div class="cp-form"><label for="cpName">写下你的名字</label><input id="cpName" class="text-input" maxlength="10" autocomplete="nickname" placeholder="大家怎么称呼你？" value="${E(R().name|| (state.nickname==='乐团新人'?'':state.nickname).slice(0,10))}"><label>带上你的乐器</label><div class="cp-instruments">${['弦乐','管乐','打击乐','键盘 / 其他'].map(inst=>`<button class="cp-inst ${selectedInstrument===inst?'selected':''}" data-cp-instrument="${inst}" aria-pressed="${selectedInstrument===inst}">${inst}</button>`).join('')}</div><label for="cpInstrument">自定义乐器 <span class="tiny">（可选，填写后优先使用）</span></label><input id="cpInstrument" class="text-input" maxlength="20" placeholder="例如：长笛、小提琴、钢琴" value="${E(R().inst)}"><div class="cp-input-error" id="cpInputError" role="status"></div>${actionButton('enroll','推门，加入乐团','arrow','primary')}<div class="cp-rule-note">${I('album')}正传的琴技、团费、羁绊与卡册分别记录。放心开启新的入团故事，原来的陪伴还在。完成章节里程碑，可获得卡册音符、邀请券和回忆；剧情中提到人物时，会自动获得对应人物卡。</div></div></div>`;}
  function enroll(){
   const name=$('cpName')?.value.trim(),custom=$('cpInstrument')?.value.trim();
   if(!name){$('cpInputError').textContent='先写下一个名字，再推门进去吧。';$('cpName').focus();return;}
@@ -2251,6 +2293,7 @@ const Chronicle = (()=>{
  function socialHTML(){return `<div class="cp-surface">${speaker('lala','周常 · 找人聊天')}<div class="cp-text">今晚，想听听谁的故事？</div><div class="cp-partners">${PERSON_IDS.filter(canChat).map(k=>partnerHTML(k,'chat')).join('')}</div><p class="cp-caption">首席空格专注技术考核，不参加日常聊天。飞鸿的聊天在乐团 Lv.2 开放。</p><div style="margin-top:18px">${actionButton('menu','先回本周安排','back','ghost')}</div></div>`;}
  function partnerHTML(k,action){const p=person(k);return `<button class="cp-partner" data-cp-action="${action}" data-cp-person="${k}" data-cp-rev="${R().rev}">${p.asset?`<img src="${ASSETS[p.asset]}" alt="${p.name}的虚拟插画">`:`<span class="cp-partner-symbol">${I(p.icon)}</span>`}<span><strong>${p.name}</strong><small>${action==='partner'?'搭档':'正传'}羁绊 ${R().aff[k]||0}${action==='chat'?' · 交流 +2':''}</small></span></button>`;}
  function canChat(k){
+  if(k==='zhu')return cardOwned('zhu');
   if(!PEOPLE[k]||k==='kongge'||k==='feihong'&&R().level<2)return false;
   if(isFour()){
    if(['goose','bill'].includes(k))return false;
@@ -2325,6 +2368,8 @@ const Chronicle = (()=>{
  }
  function titleHTML(){if(isFour())return fourthTitleHTML();if(isThree())return thirdTitleHTML();if(isTwo())return secondTitleHTML();const r=R(),e=ENDINGS[r.ending];return `<div class="cp-surface"><div class="cp-ending-hero">${I(e?.icon||'album')}<div class="cp-overline">${e?.code||'CHAPTER ONE · COMPLETE'}</div><h3>${e?.title||'第一章 · 已结束'}</h3><p class="cp-caption">${e?E(e.text):'这份旧版存档停留在结局页，没有保存完整演出结果。可以开启新周目继续体验。'}</p><p class="cp-caption">已相遇 ${state.cards.encounters.length} 位伙伴<br>第 ${r.week} 周 · 琴技 ${r.tech} · 乐团 Lv.${r.level}<br>本存档已收录 ${M().endings.length} / ${Object.keys(ENDINGS).length} 种结局</p></div><div class="cp-choices">${e?`<button class="cp-choice gold" data-memory="${e.memory}"><span class="cp-option-n">01</span><span>去相册，重看这次落幕</span>${I('album')}</button>`:''}${`<button class="cp-choice" data-cp-action="restart" data-cp-rev="${r.rev}"><span class="cp-option-n">${e?'02':'01'}</span><span>再来一周目<small>只重开正传，保留卡牌养成、结局图鉴与已领取奖励记录</small></span>${I('repeat')}</button>`}<button class="cp-choice" data-route="cards"><span class="cp-option-n">${e?'03':'02'}</span><span>回乐团卡册，继续陪伴伙伴</span>${I('cards')}</button></div><div class="cp-teaser"><strong>第二章 · 暗涌 <span class="label-tag">已开放</span></strong>山丘酒吧 / 哈基米之夜 / TIM 与阿喆 / 空格去留 / 独立路演。<br><button class="btn primary" style="margin-top:14px" data-cp-action="switch-chapter" data-cp-chapter="2">${['debut','ordinary'].includes(r.ending)||r.legacyEnded?'带着第一章进度继续':'直接体验第二章'} ${I('arrow')}</button></div></div>`;}
  function mainHTML(){const r=R();
+  if(r.scene==='zhu_offer')return barMenuHTML();
+  if(r.scene==='shanqiu_closed')return `<div class="cp-surface">${closedBarHTML()}${actionButton('bar-continue','带着这段回忆，继续第四章','arrow','primary')}</div>`;
   if(r.scene==='start')return startHTML();
   if(r.scene==='menu')return weeklyHTML();
   if(r.scene==='chat_select')return socialHTML();
@@ -2360,6 +2405,7 @@ const Chronicle = (()=>{
   if(currentView!=='chronicle')return;
   const signature=[M().runNo,r.rev,r.scene,r.live?.phase||'',r.ending||'',LalaUI.recap?1:0].join(':');
   if(signature!==renderSignature||renderedRun!==r||!$('cpMain')){renderSignature=signature;renderedRun=r;renderedScene=r.scene;render();}
+  if(r.scene==='shanqiu_closed'&&!r.bar.closureSeen&&$('modalBackdrop').hidden)showBarClosure();
  }
  function gallery(){openModal('乐团编年史 · 结局图鉴',`<p>四章结局统一收藏，奖励每种仅领取一次；重开章节不会清空相册。各章节的回忆不会互相覆盖。</p>${[1,2,3,4].map(ch=>`<h3 style="margin-top:22px">${chapterName(ch)}</h3><div class="cp-gallery" style="margin-top:12px">${endingKeys(ch).map(id=>{const e=ENDINGS[id],done=M().endings.includes(id);return `<article class="cp-ending-tile ${done?'':'locked'}">${I(done?e.icon:'lock')}<div class="eyebrow">${done?e.code:'NOT YET RECORDED'}</div><h3>${done?e.title:'未解锁结局'}</h3><p>${done?e.text:'还没走到这个故事的结尾。'}</p>${done?`<button class="btn secondary small" style="margin-top:10px" data-memory="${e.memory}">查看回忆</button>`:''}</article>`;}).join('')}</div>`).join('')}<div class="modal-foot">每条结局首次经历后才会公开名称与回忆。</div>`);}
  function help(){if(isFour()){openModal('第四章 · 剧场之夜',fourthHelp());return;}if(isThree()){openModal('第三章 · 星光530',thirdHelp());return;}if(isTwo()){openModal('乐团正传 · 第二章玩法',`<p>根据你提供的《第二章 · 暗涌》HTML 接入。卡牌好感和本周目正传羁绊仍然独立；人物卡牌与原有玩法保留。</p>${chapterTwoHelp()}`);return;}openModal('乐团正传 · 第一章玩法',`<p>本章来自你提供的「第一章·入团试炼」HTML。保留原案人物关系、主要对白、三种合练行动、五段演出判定与三种结局。</p><div class="cp-rule-table"><strong>从哪里开始</strong><span>写名字、选乐器，跟随垃垃入团，见十元与首席空格。剧情进度到达哪位伙伴，哪位伙伴就自动加入卡册；剧情中的搭档不需要预先拥有卡牌。TIM 与叶思阳加入日常聊天及合练搭档。</span><strong>自由周常</strong><span>练琴：琴技 +2 / 体力 −1；休息：体力 +3 / 上限 10；聊天：该角色羁绊 +2；合奏：40% 演出邀约、30% 合练考核、30% 笛杰 emo 事件。</span><strong>推进周数</strong><span><b>本版补全：</b>可在本周重复安排，点击前往下一周才前进一周。第 6 周自动进入快闪准备；琴技不足 12 时可延期加练，实际增加一周及 2 琴技。</span><strong>练习对决</strong><span>初始状态 10 + 琴技，对面压力 14。稳扎稳打 3–5 分；全情投入有一半概率 8–11，否则 1。羁绊不足 3 时合奏得 2，否则得 6 + 羁绊 + 0–2。合奏消耗 1 体力，体力不足不能选择。对方每回合消耗我方 2–5 状态。</span><strong>快闪判定</strong><span>共 5 段。绿区宽 min(40,14 + 琴技)%，中央 35% 是 PERFECT +10，其他绿区 GOOD +6，区外 +2 且阿喆羁绊 +1。难度为 10 + 登台周数，得分达到难度即成功。无倒计时强迫；每段开始、下一段都由你确认。</span><strong>章节与卡册</strong><span>正传羁绊、琴技、体力、团费与卡册养成<strong>互相独立</strong>。正传搭档无需抽卡。首次入团：邀请券 +1；首次考核合格：音符 +15；成功结局：音符 +40 / 邀请券 +2；普通结局：音符 +15。三种结局各有一张回忆。每个奖励只领一次，重开不重置领取记录。</span><strong>保存与重开</strong><span>对决回合、快闪分段、剧情节点均保存。切换页面或打开弹窗会暂停判定。重开本周目不清卡牌或结局；右上角设置可导出整个 V6.3 存档，也可导入 V4 存档或原正传 JSON 存档。</span></div><p class="cp-caption">结局与人物线索会随你的选择自然揭晓。</p><div class="modal-foot">「琴技」「黑化」等数值仅为附件虚构剧情机制，不是现实人物评价。第二章《暗涌》已经开放，可从顶部章节入口继续或直接体验。补充了原案缺失的垃垃日常聊天一句，以及明确的暂停、下一段和周数推进入口。</div>`);}
@@ -2369,6 +2415,7 @@ const Chronicle = (()=>{
   M().run=ch===1?freshRun():safeSnapshot(M()['chapter'+ch+'Start']||quickRun(ch,name,inst));
   R().name=name;R().inst=inst;R().ending=null;R().legacyEnded=false;R().battle=null;R().live=null;
   if(ch>1){R().scene='c'+ch+'_intro';R().week=1;R().journal=[];R().log=[];R().flags=ch===4?{...R().flags}:ch===3?{c3Met:1}:{};R().events={sponsor:null,boundary:null,bill:null};log('回到'+chapterName()+'起点。');}
+  if(ch>1)beginBarChapter();
   closeModal(false);changed();route('chronicle');toast('当前章已重开，其他章节和已相遇的人物都保留。',true);
  }
  function sourceSaveDetected(obj){return !!obj&&typeof obj==='object'&&obj.version===undefined&&typeof obj.scene==='string'&&obj.aff&&Number.isFinite(Number(obj.week))&&Number.isFinite(Number(obj.tech));}
@@ -2393,6 +2440,7 @@ const Chronicle = (()=>{
  }
  function requestLegacy(obj){const converted=legacy(obj);openModal('导入附件原版的正传存档？',`<p>玩家：${E(converted.run.name)}<br>${chapterName(converted.run.chapter)} · 第 ${converted.run.week} 周 · 琴技 ${converted.run.tech} · 团费 ${converted.run.gold}</p><p style="margin-top:12px">只替换对应章节，保留其他章节；不覆盖卡牌、猫咪或节奏进度。原版没有保存的回合和快闪分段，无法恢复到同一拍，会退回该场准备页。</p><div class="settings-actions"><button class="btn ghost" id="cpCancelLegacy">取消</button><button class="btn primary" id="cpConfirmLegacy">导入正传</button></div>`);$('cpCancelLegacy').onclick=()=>closeModal();$('cpConfirmLegacy').onclick=()=>{suspend();state.chronicle=converted;syncStoryCards(state,false,true);if(converted.run.chapter>=2)reward('c'+converted.run.chapter+'_entry');if(converted.run.ending){const id=converted.run.ending;if(!converted.endings.includes(id))converted.endings.push(id);if(!converted.claimed.includes(id))converted.claimed.push(id);unlock(ENDINGS[id].memory,false);}save();renderSignature='';closeModal();route('chronicle');toast('正传存档已导入，卡牌养成未改变。',true);};}
  function dispatch(action,btn){
+  if(action==='bar-continue'){if(R().scene!=='shanqiu_closed')return;R().bar.closureSeen=true;unlock('shanqiu_closed');R().scene='zhu_offer';closeModal(false);changed();return;}
   if(action==='cancel-restart'){closeModal();return;}
   if(action==='confirm-restart'){restart();return;}
   const rev=btn?.dataset.cpRev;if(rev!==undefined&&Number(rev)!==R().rev)return;
@@ -2455,7 +2503,7 @@ const Chronicle = (()=>{
   if(!name){if($('cpQuickError'))$('cpQuickError').textContent='先写下名字，再走进故事。';return;}
   const r=quickRun(ch,name.slice(0,10),inst.slice(0,20));
   if(carry){r.sourceMode='carry';r.tech=prior.tech;r.gold=prior.gold;r.level=prior.level;r.aff={...freshRun().aff,...prior.aff};r.dark={...prior.dark};if(ch===4){r.flags={...prior.flags};delete r.flags.beShiyuan;}}
-  M().slots[R().chapter]=safeSnapshot(R());M().run=r;M()['chapter'+ch+'Start']=safeSnapshot(r);
+  M().slots[R().chapter]=safeSnapshot(R());M().run=r;beginBarChapter();M()['chapter'+ch+'Start']=safeSnapshot(r);
   log(carry?'沿用前章的琴技、团费、等级与羁绊；新一章从第 1 周开始。':'已使用本章基础体验档，其他章节进度仍然保留。');
   reward('c'+ch+'_entry');closeModal(false);changed();route('chronicle');
  }
@@ -2622,6 +2670,7 @@ const Chronicle = (()=>{
  }
  return {fresh,clean,refresh,mount,suspend,sourceSaveDetected,requestLegacy,encounterIds};
 })();
+MEMORIES.push({id:'shanqiu_closed',title:'山丘的最后一盏灯',sub:'第四章 · 山丘停业',asset:'shanqiuClosed',rule:'读过山丘的告别',text:'谱架收进纸箱，椅子倒扣在桌上。朱老师把钥匙放下：场地没了，戏还得写。'},{id:'zhu_night',title:'深夜吧台',sub:'朱老师 · 隐藏技能',asset:'cardZhu',rule:'满足条件后亲自解锁',text:'打烊后的山丘，吧台是他的另一个舞台。他不劝，只听。'});
 // Main-story memories are independent of the character collection.
 MEMORIES.push({"id": "cp4_entry", "title": "鹭湖剧院的温水", "sub": "第四章 · 剧场启程", "asset": "cardYeshiyang", "rule": "进入第四章", "text": "合同放在桌上，温水递到了最边上的座位。第一场剧场演出，就这样开始筹备。"},{"id": "cp4_he", "title": "6.7 满场星光", "sub": "第四章 · HE", "asset": "stage", "rule": "经历第四章这个结局", "text": "剧场满场，返场的灯光照见每个一起排练的人。"},{"id": "cp4_te", "title": "谢幕后", "sub": "第四章 · TE", "asset": "stage", "rule": "经历第四章这个结局", "text": "演出顺利结束了，还有一些心事留在侧幕。"},{"id": "cp4_fail", "title": "空了一半的剧场", "sub": "第四章 · TE", "asset": "stage", "rule": "经历第四章这个结局", "text": "记下这一晚的失误，下次再把合奏带回剧场。"},{"id": "cp4_qiqi", "title": "没等到的观众", "sub": "第四章 · BE", "asset": "cardQiqi", "rule": "经历第四章这个结局", "text": "流言带走了合奏的温度，剧院没有等到开场。"},{"id": "cp4_lemon", "title": "远方的机票", "sub": "第四章 · BE", "asset": "cardLemon", "rule": "经历第四章这个结局", "text": "那张机票的尽头，没有他说的舞台。"});
 MEMORIES.push(
@@ -2652,7 +2701,7 @@ MEMORIES.push(
  {id:'cp2_retry',title:'翻车与重来',sub:'第二章 · TE',asset:'cardAzhe',rule:'完成第二章五段路演，但总分未达当场难度',text:'掌声有些稀疏，十元却攥紧拳头：再来，下次一定行。'}
 );
 
-function freshState(){return {version:1,created:Date.now(),nickname:'乐团新人',catName:'哈基米',coins:30,hearts:0,cat:{aff:0,hunger:76,mood:84,energy:72,pets:0},completed:[],memories:['first'],affinity:Object.fromEntries(CARD_DEFS.map(c=>[c.id,0])),best:{},storyProgress:{},daily:{date:dateKey(),pet:false,story:false,rhythm:false,claimed:false},gift:false,sound:true,cards:freshCards(),chronicle:Chronicle.fresh()};}
+function freshState(){return {version:1,created:Date.now(),nickname:'乐团新人',catName:'哈基米',coins:100,hearts:0,cat:{aff:0,hunger:76,mood:84,energy:72,pets:0},completed:[],memories:['first'],affinity:Object.fromEntries(CARD_DEFS.map(c=>[c.id,0])),best:{},storyProgress:{},daily:{date:dateKey(),pet:false,story:false,rhythm:false,claimed:false},gift:false,sound:true,cards:freshCards(),chronicle:Chronicle.fresh()};}
 function cleanState(obj){
  if(!obj||typeof obj!=='object'||obj.version!==1)throw new Error('存档格式不正确');
  const d=freshState(), number=(x,def,min=0,max=99999999)=>Number.isFinite(Number(x))?clamp(Math.round(Number(x)),min,max):def;
@@ -2901,6 +2950,7 @@ function memoryVisible(id){
  if(!state.memories.includes(id))return false;
  const owner=CARD_DEFS.find(c=>id===c.id||id.startsWith(c.id+'_'));
  if(owner&&!cardOwned(owner.id))return false;
+ if(id==='zhu_night')return state.cards.zhuNight===true;
  if(id==='qiqi_sisters')return hiddenSkillReady('qiqi');
  if(id==='baoshi_secret')return hiddenSkillReady('baoshi');
  if(id==='lemon_be')return sourceCast().lemon.ended;
@@ -3031,7 +3081,7 @@ const cardBond=id=>state.affinity[id]||0;
 const cardName=c=>c.id==='tang'&&state.cards.form==='god'?'汤少 · 汤神':c.name;
 const cardDark=()=>state.cards.blackUntil>Date.now();
 const cardStars=c=>c.placeholder?'设定待补充':'★'.repeat(cardStarCount(c))+((c.newMember||c.sourceSet||c.id==='qiqi')&&cardStarCount(c)<5?'<span style="opacity:.25">'+'★'.repeat(5-cardStarCount(c))+'</span>':'');
-const cardGifts=c=>(c.gifts||DEFAULT_GIFTS).filter(g=>!(c.id==='baoshi'&&g[0]==='dress'&&!hiddenSkillReady('baoshi')));
+const cardGifts=c=>(c.gifts||DEFAULT_GIFTS).filter(g=>!(c.id==='zhu'&&g[0]==='night'&&!state.cards.zhuNight)&&!(c.id==='baoshi'&&g[0]==='dress'&&!hiddenSkillReady('baoshi')));
 function ensureCardDay(){if(state.cards.daily.date!==dateKey())state.cards.daily={date:dateKey(),gifts:{},eye:false};const x=expansion();if(x.daily.date!==dateKey())x.daily={date:dateKey(),script:false,greet:false};}
 function addCardXP(id,amount){const v=state.cards.collection[id];if(!v?.owned)return false;const before=cardLevel(id);v.xp=clamp(v.xp+amount,0,3540);return cardLevel(id)>before;}
 function addCardBond(id,amount){state.affinity[id]=clamp(cardBond(id)+amount,0,id==='lemon'?11:100);if(id==='lemon')checkLemonBond();}
@@ -3104,7 +3154,7 @@ function renderDetailContent(c,own){
  if(c.added)return renderExpansionDetail(c,own);
  const lv=cardLevel(c.id),v=state.cards.collection[c.id],gifts=cardGifts(c),used=state.cards.daily.gifts[c.id]||0,bond=cardBond(c.id),selected=gifts.find(g=>g[0]===CardUI.gift),inTeam=state.cards.team.includes(c.id),queued=state.cards.prepared?.id===c.id;
  const info=c.sourceSet?renderSourceInfo(c):`<section class="profile-panel"><h3 class="panel-title">${I('cards')}基本资料 <span class="tiny">${c.tag}</span></h3><dl class="profile-info"><dt>身份</dt><dd>${c.identity}</dd><dt>位置</dt><dd>${c.seat}</dd><dt>擅长</dt><dd>${c.specialty}</dd>${c.crush?`<dt>暗恋</dt><dd>${c.crush}</dd>`:''}${c.id==='qiqi'?'<dt>外形</dt><dd>旗袍 · 中式盘发</dd><dt>反差</dt><dd>旗袍与失真音墙同框</dd>':`<dt>情敌</dt><dd>${c.rival}</dd>`}${c.id==='tang'&&hiddenSkillReady('tang')?`<dt>当前形态</dt><dd>${state.cards.form==='god'?'汤神 · 隐藏摄影之神':'汤少 · 逗比青年'}</dd>`:''}</dl><p class="info-bio">${c.bio}</p></section>`;
- const attrs=`<section class="profile-panel"><h3 class="panel-title">${I('stats')}${c.id==='tang'?'评级面板':'属性面板'}<span class="tiny">Lv.${lv} · ${own?'已相遇':'等待相遇'}</span></h3>${c.id==='tang'?`<div class="grade-panel">${[['摄影','EX'],['人像','S+'],['出片率','S'],['硬盘储量','数十T']].map(([k,v])=>`<div class="grade-cell"><small>${k}</small><strong>${v}</strong></div>`).join('')}</div>`:`<div class="profile-stats">${c.stats.map(([k,v])=>{const val=c.sourceSet?sourceStat(c,k,v):newStat(c,Math.min(100,v+Math.floor(lv/5)));return `<div class="profile-stat"><div class="profile-stat-head"><span>${k}</span><strong>${val}</strong></div><div class="progress-track"><div class="progress-fill" style="width:${typeof val==='number'?Math.min(100,val):100}%"></div></div></div>`;}).join('')}</div>`}<p class="stat-caption">${c.id==='tang'&&!hiddenSkillReady('tang')?'镜头里记录着每一次合奏。':c.statnote}<small>属性是角色展示数值；演出实际奖励以下方技能为准。</small></p></section>`;
+ const attrs=`<section class="profile-panel"><h3 class="panel-title">${I('stats')}${c.id==='tang'?'评级面板':'属性面板'}<span class="tiny">Lv.${lv} · ${own?'已相遇':'等待相遇'}</span></h3>${c.id==='tang'?`<div class="grade-panel">${[['摄影','EX'],['人像','S+'],['出片率','S'],['硬盘储量','数十T']].map(([k,v])=>`<div class="grade-cell"><small>${k}</small><strong>${v}</strong></div>`).join('')}</div>`:`<div class="profile-stats">${c.stats.map(([k,v])=>{const val=c.sourceSet?sourceStat(c,k,v):newStat(c,Math.min(100,v+Math.floor(lv/5)));return `<div class="profile-stat"><div class="profile-stat-head"><span>${k}</span><strong>${val}</strong></div><div class="progress-track"><div class="progress-fill" style="width:${val==='??'?0:typeof val==='number'?Math.min(100,val):100}%"></div></div></div>`;}).join('')}</div>`}<p class="stat-caption">${c.id==='tang'&&!hiddenSkillReady('tang')?'镜头里记录着每一次合奏。':c.statnote}<small>属性是角色展示数值；演出实际奖励以下方技能为准。</small></p></section>`;
  let skills=`<section class="profile-panel"><h3 class="panel-title">${I('sparkles')}技能<span class="tiny">${inTeam?`入队加成 +${cardBonus(c.id)} ♪`:'加入编队后生效'}</span></h3><div class="skill-list"><article class="skill-item"><div class="skill-heading">${I(c.id==='orange'?'paw':c.icon)}<h4>${c.activeName}</h4><span class="skill-tag">主动技</span>${queued?'<span class="skill-state">已准备</span>':''}</div><p>${c.activeText}</p>${own?`<button class="btn secondary small" ${c.id==='orange'?'data-card-soothe':`data-card-skill="${c.id}"`}>${I(c.id==='orange'?'hand':'bolt')}${c.id==='orange'?'让橘猫蹭蹭':queued?'取消准备':`准备技能 · +${c.active} ♪`}</button>`:''}</article><article class="skill-item"><div class="skill-heading">${I('bolt')}<h4>${c.passiveName}</h4><span class="skill-tag passive">被动</span></div><p>${c.id==='tang'&&!hiddenSkillReady('tang')?'入队基础 +2 音符，每升 10 级再 +1；全队每场另得 5 经验。':c.passiveText}</p></article>`;
  if(c.id==='tang')skills+=`<article class="skill-item"><div class="skill-heading">${I('eye')}<h4>荷鲁斯之眼</h4><span class="skill-tag special">神技</span></div><p>以意念调取影像片段——半神般的存在。汤神形态下，可解锁隐藏回忆「荷鲁斯之眼」，每日一次好感 +3。</p>${own?`<button class="btn secondary small" data-card-eye ${state.cards.form!=='god'||state.cards.daily.eye?'disabled':''}>${I('eye')}${state.cards.daily.eye?'今天的高光已记录':state.cards.form!=='god'?'请先切换为汤神':'开启隐藏镜头'}</button>`:''}</article>`;
  else if(c.id==='feihong')skills+=`<article class="skill-item"><div class="skill-heading">${I('bolt')}<h4>黑化 · 三分钟</h4><span class="skill-tag special">触发技</span></div><p>发现乐手另找主唱时，好好先生暂时下线。试玩中可主动触发 3 分钟黑化；期间开演，入队加成再 +3 音符。橘猫蹭一下就能提前结束。</p>${own?`<div class="skill-controls"><button class="btn secondary small" data-card-dark ${cardDark()?'disabled':''}>${I('bolt')}${cardDark()?'黑化中':'模拟触发黑化'}</button><button class="btn ghost small" data-card-soothe>${I('paw')}橘猫来蹭蹭</button></div><span class="black-clock" data-black-clock>${cardDark()?`好好先生回归倒计时 ${formatTime((state.cards.blackUntil-Date.now())/1000)}`:'橘猫正在旁边监督'}</span>`:''}</article>`;
@@ -3592,7 +3642,7 @@ function lalaRun(ch=state.chronicle.run.chapter){return state.chronicle.run.chap
 function lalaChapterTitle(ch){return ch===4?'第四章 · 剧场之夜':ch===3?'第三章 · 星光530':ch===2?'第二章 · 暗涌':'第一章 · 入团试炼';}
 function lalaSceneLabel(r){
  if(!r)return '等待写下第一句';
- const names={"c4_jeal":"剧场之夜 · 排练片段","c4_jeal_a":"剧场之夜 · 排练片段","c4_jeal_b":"剧场之夜 · 排练片段","c4_jeal_c":"剧场之夜 · 排练片段","c4_intro":"剧场之夜 · 剧院初见","c4_prep":"剧场之夜 · 节目单","c4_bao":"剧场之夜 · 主唱与和声","c4_qiqi":"剧场之夜 · 赞助提案","c4_menu":"剧场之夜 · 冲刺排练","be_mianbei":"剧场之夜 · 排练片段","be_qiqi4":"剧场之夜 · 排练片段","c4_he":"剧场之夜 · 排练片段","c4_te":"剧场之夜 · 排练片段","c4_fail":"剧场之夜 · 排练片段","c4_prep_a":"剧场之夜 · 排练片段","c4_prep_b":"剧场之夜 · 排练片段","c4_prep_c":"剧场之夜 · 排练片段","c4_bao_a":"剧场之夜 · 排练片段","c4_bao_b":"剧场之夜 · 排练片段","c4_qiqi_a":"剧场之夜 · 排练片段","c4_qiqi_b":"剧场之夜 · 排练片段","c4_qiqi_c":"剧场之夜 · 排练片段","b4_lemon_a":"剧场之夜 · 排练片段","b4_lemon_b":"剧场之夜 · 排练片段","b4_zhou_a":"剧场之夜 · 排练片段","b4_zhou_b":"剧场之夜 · 排练片段","b4_bao_a":"剧场之夜 · 排练片段","b4_bao_b":"剧场之夜 · 排练片段","title5":"剧场之夜 · 本章结尾","c4_band_lemon":"剧场之夜 · 排练片段","c4_band_zhou":"剧场之夜 · 排练片段","c4_band_bao":"剧场之夜 · 排练片段","c2_tim_a":"选择后的回应","c2_tim_b":"选择后的回应","c2_tim_c":"选择后的回应","c2_head_a":"选择后的回应","c2_head_b":"选择后的回应","c2_head_c":"选择后的回应","c2_kong_a":"选择后的回应","c2_kong_b":"选择后的回应","c2_kong_c":"选择后的回应","c3_intro":"专场官宣的晚上","c3_prep":"专场筹备","c3_ge":"琴房里的心事","c3_bill":"鼓位的选择","c3_menu":"专场倒计时","c3_jeal":"幕间的邀约","be_qiqi":"星光530 · 幕间片段","c3_he":"星光530 · 幕间片段","c3_te":"星光530 · 幕间片段","c3_fail":"星光530 · 幕间片段","c3_prep_a":"星光530 · 幕间片段","c3_prep_b":"星光530 · 幕间片段","c3_prep_c":"星光530 · 幕间片段","c3_ge_a":"星光530 · 幕间片段","c3_ge_b":"星光530 · 幕间片段","c3_ge_c":"星光530 · 幕间片段","c3_bill_a":"星光530 · 幕间片段","c3_bill_b":"星光530 · 幕间片段","c3_jeal_a":"星光530 · 幕间片段","c3_jeal_b":"星光530 · 幕间片段","c3_jeal_c":"星光530 · 幕间片段","band_q_a":"星光530 · 幕间片段","band_q_b":"星光530 · 幕间片段","band_zhou_a":"星光530 · 幕间片段","band_zhou_b":"星光530 · 幕间片段","band_bill_a":"星光530 · 幕间片段","band_bill_b":"星光530 · 幕间片段","c3_band_q":"排练后的聚餐","c3_band_zhou":"谱页的插曲","c3_band_bill":"鼓位与加练","title4":"第三章结尾",start:'入团登记',s_door:'排练室门口的初见',s_room:'认识排练室',s_look:'先看看大家',s_shi:'和十元打招呼',s_dream:'聊聊乐团的梦想',s_first:'首席的初次见面',after_practice:'排练之后',s_conflict:'散场时的相遇',s_fei1:'听见飞鸿的回应',s_fei2:'排练散场',s_endweek:'这一周的开始',menu:'本周自由安排',chat_select:'选择今晚的聊天伙伴',chat:'排练间隙的聊天',gig:'收到演出邀请',emo:'合奏间隙',practice_partner:'选择合练搭档',practice_turn:'合练第 '+(r.battle?.round||1)+' 回合',practice_result:'本次合练结果',b_live:'演出准备',live_intro:'准备登台',live_play:'路演第 '+Math.min(5,(r.live?.scores?.length||0)+1)+' 段',live_result:'本章演出落幕',be_shiyuan:'本周目已落幕',title2:'第一章结尾',title3:'第二章结尾',c2_intro:'山丘酒吧的灯',c2_bar:'山丘酒吧的排练',c2_tim:'TIM 到场',c2_night_pre:'哈基米之夜',c2_night:'黑板前的选择',c2_str:'加入弦乐组',c2_pop_end:'流行组的故事',c2_head:'排练间隙的头像插曲',c2_kong:'楼梯间的谈话',c2_endweek:'新的本周安排',c2_sponsor:'赞助提议',c2_boundary:'工作时间的消息',c2_bill:'缺席的鼓手'};
+ const names={zhu_offer:"山丘酒单",zhu_reply:"吧台前的回应",shanqiu_closed:"山丘的最后一盏灯","c4_jeal":"剧场之夜 · 排练片段","c4_jeal_a":"剧场之夜 · 排练片段","c4_jeal_b":"剧场之夜 · 排练片段","c4_jeal_c":"剧场之夜 · 排练片段","c4_intro":"剧场之夜 · 剧院初见","c4_prep":"剧场之夜 · 节目单","c4_bao":"剧场之夜 · 主唱与和声","c4_qiqi":"剧场之夜 · 赞助提案","c4_menu":"剧场之夜 · 冲刺排练","be_mianbei":"剧场之夜 · 排练片段","be_qiqi4":"剧场之夜 · 排练片段","c4_he":"剧场之夜 · 排练片段","c4_te":"剧场之夜 · 排练片段","c4_fail":"剧场之夜 · 排练片段","c4_prep_a":"剧场之夜 · 排练片段","c4_prep_b":"剧场之夜 · 排练片段","c4_prep_c":"剧场之夜 · 排练片段","c4_bao_a":"剧场之夜 · 排练片段","c4_bao_b":"剧场之夜 · 排练片段","c4_qiqi_a":"剧场之夜 · 排练片段","c4_qiqi_b":"剧场之夜 · 排练片段","c4_qiqi_c":"剧场之夜 · 排练片段","b4_lemon_a":"剧场之夜 · 排练片段","b4_lemon_b":"剧场之夜 · 排练片段","b4_zhou_a":"剧场之夜 · 排练片段","b4_zhou_b":"剧场之夜 · 排练片段","b4_bao_a":"剧场之夜 · 排练片段","b4_bao_b":"剧场之夜 · 排练片段","title5":"剧场之夜 · 本章结尾","c4_band_lemon":"剧场之夜 · 排练片段","c4_band_zhou":"剧场之夜 · 排练片段","c4_band_bao":"剧场之夜 · 排练片段","c2_tim_a":"选择后的回应","c2_tim_b":"选择后的回应","c2_tim_c":"选择后的回应","c2_head_a":"选择后的回应","c2_head_b":"选择后的回应","c2_head_c":"选择后的回应","c2_kong_a":"选择后的回应","c2_kong_b":"选择后的回应","c2_kong_c":"选择后的回应","c3_intro":"专场官宣的晚上","c3_prep":"专场筹备","c3_ge":"琴房里的心事","c3_bill":"鼓位的选择","c3_menu":"专场倒计时","c3_jeal":"幕间的邀约","be_qiqi":"星光530 · 幕间片段","c3_he":"星光530 · 幕间片段","c3_te":"星光530 · 幕间片段","c3_fail":"星光530 · 幕间片段","c3_prep_a":"星光530 · 幕间片段","c3_prep_b":"星光530 · 幕间片段","c3_prep_c":"星光530 · 幕间片段","c3_ge_a":"星光530 · 幕间片段","c3_ge_b":"星光530 · 幕间片段","c3_ge_c":"星光530 · 幕间片段","c3_bill_a":"星光530 · 幕间片段","c3_bill_b":"星光530 · 幕间片段","c3_jeal_a":"星光530 · 幕间片段","c3_jeal_b":"星光530 · 幕间片段","c3_jeal_c":"星光530 · 幕间片段","band_q_a":"星光530 · 幕间片段","band_q_b":"星光530 · 幕间片段","band_zhou_a":"星光530 · 幕间片段","band_zhou_b":"星光530 · 幕间片段","band_bill_a":"星光530 · 幕间片段","band_bill_b":"星光530 · 幕间片段","c3_band_q":"排练后的聚餐","c3_band_zhou":"谱页的插曲","c3_band_bill":"鼓位与加练","title4":"第三章结尾",start:'入团登记',s_door:'排练室门口的初见',s_room:'认识排练室',s_look:'先看看大家',s_shi:'和十元打招呼',s_dream:'聊聊乐团的梦想',s_first:'首席的初次见面',after_practice:'排练之后',s_conflict:'散场时的相遇',s_fei1:'听见飞鸿的回应',s_fei2:'排练散场',s_endweek:'这一周的开始',menu:'本周自由安排',chat_select:'选择今晚的聊天伙伴',chat:'排练间隙的聊天',gig:'收到演出邀请',emo:'合奏间隙',practice_partner:'选择合练搭档',practice_turn:'合练第 '+(r.battle?.round||1)+' 回合',practice_result:'本次合练结果',b_live:'演出准备',live_intro:'准备登台',live_play:'路演第 '+Math.min(5,(r.live?.scores?.length||0)+1)+' 段',live_result:'本章演出落幕',be_shiyuan:'本周目已落幕',title2:'第一章结尾',title3:'第二章结尾',c2_intro:'山丘酒吧的灯',c2_bar:'山丘酒吧的排练',c2_tim:'TIM 到场',c2_night_pre:'哈基米之夜',c2_night:'黑板前的选择',c2_str:'加入弦乐组',c2_pop_end:'流行组的故事',c2_head:'排练间隙的头像插曲',c2_kong:'楼梯间的谈话',c2_endweek:'新的本周安排',c2_sponsor:'赞助提议',c2_boundary:'工作时间的消息',c2_bill:'缺席的鼓手'};
  return names[r.scene]||'继续这段排练日常';
 }
 function lalaSummary(r){
@@ -3608,6 +3658,7 @@ function lalaSummary(r){
  if(r.battle&&r.scene.startsWith('practice_')){const p=cardDef(r.battle.partner);lines.push(`本次合练${p?'搭档：'+p.name:'尚待选择搭档'}；${r.battle.over?r.battle.win?'已合格。':'这一遍已经完成，下次继续练习。':'回合进度已保留。'}`);}
  if(r.live&&['live_play','live_result','title2','title3','title4','title5','c3_he','c3_te','c3_fail','be_qiqi','c4_he','c4_te','c4_fail','be_qiqi4','be_mianbei'].includes(r.scene))lines.push(`这场演出已完成 ${r.live.scores.length}/5 段，累计 ${r.live.score} 分。`);
  if(r.chapter===4){if(r.flags?.yangSolo)lines.push('节目单：大羊获得十六小节 SOLO。');else if(r.flags?.yangCompromise)lines.push('节目单：大羊与十元商定十二小节 SOLO。');if(r.flags?.baoOK)lines.push('声部安排：宝石与飞鸿已经准备好配合。');if(r.flags?.qiHandled)lines.push('赞助提案已妥善处理。');if(r.flags?.zhouSolo)lines.push('你答应陪小周练好他的剧场独奏。');}
+ if(r.bar?.order){const drinks={lemon:'柠檬气泡水',martini:'马天尼',mojito:'莫吉托','long-island':'长岛冰茶',decline:'谢谢，我不渴'};lines.push('山丘酒单：'+drinks[r.bar.order]+'。');}if(r.bar?.closed)lines.push('这一章，山丘酒吧停业了。');
  const ends={debut:'第一笔合约',ordinary:'下一次一定行',shadow:'团长的影子',c2_street:'街头卖唱',c2_dual:'双核',c2_solo:'独奏者',c2_retry:'翻车与重来',c3_he:'舞台与真心',c3_te:'专场之夜',c3_fail:'安可之前',c3_qiqi:'温柔的刀',c4_he:"6.7 满场星光",c4_te:"谢幕后",c4_fail:"空了一半的剧场",c4_qiqi:"没等到的观众",c4_lemon:"远方的机票"};
  if(ends[r.ending])lines.push('本周目已收录结局：「'+ends[r.ending]+'」。');
  return lines;
