@@ -53,7 +53,7 @@ window.StoryBgm = (() => {
     if (next !== key) {pause();key = next;failed = false;blocked = false;}
     if (!allowed()) {pause();paint();return;}
     if (!unlocked || pending || failed || blocked) {paint();return;}
-    if (loaded !== key) {audio.src = tracks[key].src;loaded = key;}
+    if (loaded !== key) {audio.src = tracks[key].src + '?v=original-128-v2';loaded = key;}
     if (!audio.paused) {level();paint();return;}
     const token = ++serial;pending = true;level(true);paint();
     audio.play().then(() => {if (token !== serial) return;pending = false;paint();}).catch(error => {

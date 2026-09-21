@@ -7,63 +7,84 @@
       "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/A Little Story.MP3",
       "title": "A Little Story",
       "use": "第一章日常相遇、心动故事选角页",
-      "duration_seconds": 120,
-      "processing": "120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
-      "bytes": 1440750
+      "duration_seconds": 204.460408,
+      "processing": "直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 3272246,
+      "bit_rate": 128000,
+      "sample_rate": 44100,
+      "sha256": "918b1b1364a8d454f5f575a764be197db19deb617dda301e72693cc97ccdf13e"
     },
     {
       "file": "refrain.mp3",
       "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/Refrain.mp3",
       "title": "Refrain",
       "use": "第二章与章节推进",
-      "duration_seconds": 120,
-      "processing": "120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
-      "bytes": 1440750
+      "duration_seconds": 532.866667,
+      "processing": "直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 8526829,
+      "bit_rate": 128000,
+      "sample_rate": 44100,
+      "sha256": "7c719b603e6af59608fc34f22a4a04eee418a97f1997c21389d2abf9c41ba00b"
     },
     {
       "file": "the-truth-that-you-leave.mp3",
       "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/The truth that you leave.mp3",
       "title": "The truth that you leave",
       "use": "山丘停业、告别与低落结局",
-      "duration_seconds": 120,
-      "processing": "120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
-      "bytes": 1440750
+      "duration_seconds": 223.490612,
+      "processing": "直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 3576519,
+      "bit_rate": 128000,
+      "sample_rate": 44100,
+      "sha256": "a17ad184286a0d6e21be48773666b61330c8a3ea1e99126a9b09092a7f7edf7a"
     },
     {
       "file": "fish-in-the-pool.mp3",
       "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/fish in the pool ・花屋敷.mp3",
       "title": "fish in the pool ・花屋敷",
       "use": "山丘酒吧点单、温暖的相遇",
-      "duration_seconds": 120,
-      "processing": "最长 120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
-      "bytes": 1440750
+      "duration_seconds": 276.386667,
+      "processing": "直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 4423306,
+      "bit_rate": 128000,
+      "sample_rate": 44100,
+      "sha256": "7f5a78bb70b7613ce72884a46dc2573c15bc8c53ad89e546124f3a8794e57c3a"
     },
     {
       "file": "lakeside.mp3",
       "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/湖滨初晴.mp3",
       "title": "湖滨初晴",
       "use": "第三章专场筹备",
-      "duration_seconds": 120,
-      "processing": "最长 120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
-      "bytes": 1440750
+      "duration_seconds": 239.865896,
+      "processing": "直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 3838893,
+      "bit_rate": 128000,
+      "sample_rate": 48000,
+      "sha256": "f6801cea3ab233fbc8289a27b36b56fed62a5eb4a1c041a3cbfd856067522220"
     },
     {
       "file": "distant-memories.mp3",
       "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/想い出は遠くの日々.mp3",
       "title": "想い出は遠くの日々",
       "use": "心动故事与排练回忆",
-      "duration_seconds": 120,
-      "processing": "最长 120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
-      "bytes": 1440750
+      "duration_seconds": 250.656009,
+      "processing": "直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 4011616,
+      "bit_rate": 128000,
+      "sample_rate": 44100,
+      "sha256": "d243a8253c83354491db1e6ae08efc405551e5f0b0f88962f72ac9bb16e26971"
     },
     {
       "file": "breath-and-life.mp3",
       "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/Breath and Life.mp3",
       "title": "Breath and Life",
       "use": "第四章剧场演出与胜利谢幕",
-      "duration_seconds": 108.2,
-      "processing": "最长 120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
-      "bytes": 1298121
+      "duration_seconds": 108.202667,
+      "processing": "直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 1732269,
+      "bit_rate": 128000,
+      "sample_rate": 48000,
+      "sha256": "02a2d7f660c08fb5b1cb58c211ae1c773083ff9c584df35a36a8625f46bd917a"
     }
   ]
 }

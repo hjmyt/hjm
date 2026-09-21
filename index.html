@@ -291,7 +291,7 @@ body:is([data-view="cards"],[data-view="rhythm"]) .greeting-line{font-size:var(-
 <div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1"><div class="modal-header"><h2 id="modalTitle"></h2><button class="icon-btn" id="closeModal" aria-label="关闭弹窗"><span data-icon="close"></span></button></div><div id="modalContent"></div></section></div>
 <input type="file" id="importInput" accept="application/json,.json" hidden>
 <noscript><div style="padding:30px;text-align:center;color:#95566f">这个小游戏需要开启 JavaScript。请将 HTML 保存到电脑后，用浏览器打开。</div></noscript>
-<script src="assets/story-bgm.js"></script>
+<script src="assets/story-bgm.js?v=original-128-v2"></script>
 <script>
 'use strict';
 /* 乐团卡牌篇 / 无远程依赖。图片通过相对路径引用 assets/；音频由 Web Audio 合成。
@@ -2784,7 +2784,7 @@ function save(){Chronicle.syncBonds();syncStoryCards();try{localStorage.setItem(
 function ensureDaily(){if(state.daily.date!==dateKey())state.daily={date:dateKey(),pet:false,story:false,rhythm:false,claimed:false};}
 function toast(text,good=false){const el=document.createElement('div');el.className='toast'+(good?' good':'');el.textContent=text;$('toastStack').append(el);while($('toastStack').children.length>3)$('toastStack').firstElementChild.remove();setTimeout(()=>{el.style.opacity='0';el.style.transition='opacity .3s';setTimeout(()=>el.remove(),320);},3300);}
 function unlock(id,notify=true){if(state.memories.includes(id))return false;state.memories.push(id);const m=MEMORIES.find(x=>x.id===id);if(notify&&m)toast(`新回忆已收藏：${m.title}`,true);return true;}
-function renderGlobal(){syncStoryCards();ensureDaily();$('coinStat').textContent=state.coins;$('heartStat').textContent=state.hearts;$('albumStat').textContent=`${MEMORIES.filter(m=>memoryVisible(m.id)).length} / ${MEMORIES.length}`;$('homeAlbumText').textContent=`已珍藏 ${MEMORIES.filter(m=>memoryVisible(m.id)).length} 张乐团回忆`;$('greeting').textContent=currentView==='cards'?'让每一段故事，带来一位新的合奏伙伴。':currentView==='rhythm'?'选一首喜欢的曲子，让猫爪落在你的节拍上。':`欢迎回来，${state.nickname}。你的专属座位，一直为你留着。`;$('soundBtn').innerHTML=I(state.sound?'sound':'mute');$('soundBtn').setAttribute('aria-label',state.sound?'声音已开启，点击关闭':'声音已关闭，点击开启');$('soundBtn').title=state.sound?'声音已开启':'声音已关闭';$('audioStatus').textContent=state.sound?'♪ 原创合成音色':'静音中 · 可点右上角开启';$('giftLink').innerHTML=(state.gift?'礼物已收好':'拆开礼物')+I('arrow');renderPet();renderDaily();if(currentView==='story'&&!storySession)renderCharacters();if(currentView==='album')renderAlbum();renderCardGlobals();Chronicle.refresh();syncStoryMusic();}
+function renderGlobal(){syncStoryCards();ensureDaily();$('coinStat').textContent=state.coins;$('heartStat').textContent=state.hearts;$('albumStat').textContent=`${MEMORIES.filter(m=>memoryVisible(m.id)).length} / ${MEMORIES.length}`;$('homeAlbumText').textContent=`已珍藏 ${MEMORIES.filter(m=>memoryVisible(m.id)).length} 张乐团回忆`;$('greeting').textContent=currentView==='cards'?'让每一段故事，带来一位新的合奏伙伴。':currentView==='rhythm'?'选一首喜欢的曲子，让猫爪落在你的节拍上。':`欢迎回来，${state.nickname}。你的专属座位，一直为你留着。`;$('soundBtn').innerHTML=I(state.sound?'sound':'mute');$('soundBtn').setAttribute('aria-label',state.sound?'声音已开启，点击关闭':'声音已关闭，点击开启');$('soundBtn').title=state.sound?'声音已开启':'声音已关闭';renderAudioStatus();$('giftLink').innerHTML=(state.gift?'礼物已收好':'拆开礼物')+I('arrow');renderPet();renderDaily();if(currentView==='story'&&!storySession)renderCharacters();if(currentView==='album')renderAlbum();renderCardGlobals();Chronicle.refresh();syncStoryMusic();}
 function syncStoryMusic(){
  const r=state.chronicle.run;
  if(currentView==='story'&&!$('storyMusicControls').firstChild)$('storyMusicControls').innerHTML=window.StoryBgm?.controls()||'';
@@ -3028,19 +3028,47 @@ async function saveMemoryPhoto(m){
  try{const img=new Image();img.src=ASSETS[m.asset];await img.decode();const w=900,artH=clamp(Math.round(820/(img.width/img.height)),265,760),cv=document.createElement('canvas');cv.width=w;cv.height=artH+246;const cx=cv.getContext('2d');cx.fillStyle='#fffaf4';cx.fillRect(0,0,w,cv.height);cx.fillStyle='#eee1dd';cx.fillRect(39,39,822,artH+2);const scale=Math.max(820/img.width,artH/img.height),sw=820/scale,sh=artH/scale;cx.drawImage(img,(img.width-sw)/2,(img.height-sh)/2,sw,sh,40,40,820,artH);cx.fillStyle='#a56980';cx.font='500 38px "Noto Serif CJK SC","Songti SC",serif';cx.fillText(m.title,54,artH+105);cx.fillStyle='#96818a';cx.font='18px sans-serif';cx.fillText(`${state.nickname} 的排练日记 · ${dateKey()}`,56,artH+145);cx.font='15px Georgia';cx.fillText('LOVE & HAKIMI — A LITTLE MUSIC, A LITTLE LOVE',56,artH+187);cv.toBlob(blob=>{if(!blob){toast('生成纪念图失败，请重试。');return;}downloadBlob(blob,`恋与哈基米_${m.title}.png`);toast('纪念图已生成。',true);},'image/png');}catch(e){toast('这次照片没有洗出来，再试一次吧。');}
 }
 // Rhythm game Web Audio: original synthesized melodies. Story BGM is managed separately.
-let audioCtx=null,audioMaster=null,audioUnavailable=false;
-const songNodes=new Set();
+let audioCtx=null,audioMaster=null,audioUnavailable=false,audioBlocked=false,synthAudioBridge=null,bridgeIdleTimer=0,audioStarts=0;
+const iosAudio=/iPad|iPhone|iPod/.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const songNodes=new Set(),synthNodes=new Set();
+function configureAudioSession(){
+ // WebKit defaults synthesized audio to the ambient/ringer channel.
+ try{if(navigator.audioSession){navigator.audioSession.type='playback';return navigator.audioSession.type==='playback';}}catch{}
+ return false;
+}
+function stopAudioBridge(){clearTimeout(bridgeIdleTimer);synthAudioBridge?.pause();}
+function releaseAudioBridge(){clearTimeout(bridgeIdleTimer);if(!synthNodes.size&&!audioStarts)bridgeIdleTimer=setTimeout(stopAudioBridge,500);}
+function unlockSynthAudio(){
+ if(!state.sound||configureAudioSession()||!iosAudio)return;
+ // Older iOS has no AudioSession API. An unmuted silent media element opens
+ // the same media route as story BGM, without fetching or playing a story track.
+ if(!synthAudioBridge){synthAudioBridge=new Audio('assets/audio/silence.wav');synthAudioBridge.loop=true;synthAudioBridge.preload='none';synthAudioBridge.setAttribute('playsinline','');}
+ clearTimeout(bridgeIdleTimer);
+ synthAudioBridge.play().catch(e=>{if(e.name!=='AbortError'&&state.sound&&!document.hidden)toast('音频未能启动，请再点一次；旧版 iPhone 可先关闭静音模式。');});
+}
+function renderAudioStatus(){
+ $('audioStatus').textContent=!state.sound?'静音中 · 可点右上角开启':audioUnavailable?'浏览器不支持合成音频':audioBlocked?'音频暂停 · 点击开始或继续重试':'♪ 原创合成音色';
+}
 async function ensureAudio(){
  if(audioUnavailable)return null;
- try{if(!audioCtx){const AC=window.AudioContext||window.webkitAudioContext;if(!AC){audioUnavailable=true;return null;}audioCtx=new AC();audioMaster=audioCtx.createGain();audioMaster.gain.value=state.sound ? 0.28 : 0;const compressor=audioCtx.createDynamicsCompressor();audioMaster.connect(compressor);compressor.connect(audioCtx.destination);}
- if(audioCtx.state==='suspended')await audioCtx.resume();return audioCtx;
- }catch(e){audioUnavailable=true;toast('这个浏览器无法播放合成音频，仍可以无声游玩。');return null;}
+ audioStarts++;
+ unlockSynthAudio();
+ try{if(!audioCtx||audioCtx.state==='closed'){const AC=window.AudioContext||window.webkitAudioContext;if(!AC){audioUnavailable=true;renderAudioStatus();toast('这个浏览器无法播放合成音频，仍可以无声游玩。');return null;}audioCtx=new AC();audioMaster=audioCtx.createGain();audioMaster.gain.value=state.sound ? 0.28 : 0;const compressor=audioCtx.createDynamicsCompressor();audioMaster.connect(compressor);compressor.connect(audioCtx.destination);
+ audioCtx.onstatechange=()=>{if(audioCtx.state!=='running'&&['running','countdown'].includes(game.status)){audioBlocked=true;pauseGame();renderAudioStatus();}};}
+ // iOS also reports "interrupted" after calls, backgrounding or route changes.
+ if(audioCtx.state!=='running'){
+  let timer;try{await Promise.race([audioCtx.resume(),new Promise((_,reject)=>{timer=setTimeout(()=>reject(new Error('Audio resume timed out')),4000);})]);}finally{clearTimeout(timer);}
+ }
+ if(audioCtx.state!=='running')throw new Error('Audio is not running');
+ audioBlocked=false;renderAudioStatus();return audioCtx;
+ }catch(e){audioBlocked=true;stopAudioBridge();renderAudioStatus();toast('音频暂未启动，请再点一次重试。');return null;}
+ finally{audioStarts--;releaseAudioBridge();}
 }
 function toneAt(midi,when,duration,volume=.12,group='song',wave='triangle'){
  if(!audioCtx||!audioMaster)return;const t=Math.max(audioCtx.currentTime+.002,when),gain=audioCtx.createGain();gain.gain.setValueAtTime(.0001,t);gain.gain.exponentialRampToValueAtTime(Math.max(.001,volume),t+.016);gain.gain.exponentialRampToValueAtTime(Math.max(.0002,volume*.48),t+.13);gain.gain.exponentialRampToValueAtTime(.0001,t+Math.max(.17,duration)+.22);gain.connect(audioMaster);
- const osc=audioCtx.createOscillator();osc.type=wave;osc.frequency.value=440*Math.pow(2,(midi-69)/12);osc.connect(gain);if(group==='song')songNodes.add(osc);osc.onended=()=>{songNodes.delete(osc);osc.disconnect();gain.disconnect();};osc.start(t);osc.stop(t+Math.max(.18,duration)+.26);
+ const osc=audioCtx.createOscillator();osc.type=wave;osc.frequency.value=440*Math.pow(2,(midi-69)/12);osc.connect(gain);if(group==='song')songNodes.add(osc);synthNodes.add(osc);clearTimeout(bridgeIdleTimer);osc.onended=()=>{songNodes.delete(osc);synthNodes.delete(osc);osc.disconnect();gain.disconnect();releaseAudioBridge();};osc.start(t);osc.stop(t+Math.max(.18,duration)+.26);
 }
-function stopSongAudio(){for(const n of songNodes){try{n.stop();}catch(e){}}songNodes.clear();}
+function stopSongAudio(keepOutput=false){if(!keepOutput&&![...synthNodes].some(n=>!songNodes.has(n)))stopAudioBridge();for(const n of songNodes){try{n.stop();}catch(e){}}songNodes.clear();}
 async function playPetSound(action){if(!state.sound)return;const a=await ensureAudio();if(!a)return;const pitches=action==='rest'?[67,64]:action==='feed'?[76,79,84]:action==='play'?[76,81,84]:[79,83];pitches.forEach((p,i)=>toneAt(p,a.currentTime+i*.095,.14,.065,'fx','sine'));}
 const TRACKS=[
  {name:'晚风排练曲',desc:'写给排练结束后，舍不得说晚安的人。',gentle:88,normal:112,melody:[64,67,69,67,64,62,60,62,65,69,72,69,67,71,69,67,72,71,67,64,69,72,71,69,65,64,62,60,62,67,71,67,64,67,72,71,69,67,64,60,65,69,72,74,71,69,67,62,72,71,67,64,69,67,64,62,65,64,62,67,64,62,60,60],chords:[[48,4],[45,3],[41,4],[43,4],[48,4],[45,3],[41,4],[43,4],[48,4],[45,3],[41,4],[43,4],[48,4],[45,3],[41,4],[48,4]]},
@@ -3065,7 +3093,7 @@ function renderGameOverlay(){
  if(game.status!=='countdown'){e.style.background='';e.style.backdropFilter='';}
 }
 function scheduleSong(){
- if(!audioCtx)return;stopSongAudio();const origin=audioCtx.currentTime+(game.startAt-performance.now())/1000,now=audioCtx.currentTime;
+ if(!audioCtx)return;stopSongAudio(true);const origin=audioCtx.currentTime+(game.startAt-performance.now())/1000,now=audioCtx.currentTime;
  for(const n of game.melodyEvents){if(origin+n.time<now+.004)continue;toneAt(n.pitch,origin+n.time,n.duration,.15,'song','triangle');toneAt(n.pitch+12,origin+n.time,n.duration*.48,.028,'song','sine');}
  const t=TRACKS[game.track],beat=60/t[game.mode];t.chords.forEach(([root,third],bar)=>{const at=origin+1+bar*4*beat;if(at>=now+.004){toneAt(root,at,beat*2.5,.16,'song','sine');[root+12,root+12+third,root+19].forEach((p,j)=>toneAt(p,at+beat*(.5+j*.5),beat*1.3,.058,'song','sine'));}});
  // Soft count-in clicks only for the countdown that has not yet elapsed.
@@ -3073,13 +3101,14 @@ function scheduleSong(){
 }
 async function startGame(){
  if(game.status==='starting')return;if(game.status==='running'||game.status==='countdown'){pauseGame();return;}if(game.status==='paused'){resumeGame();return;}
- stopSongAudio();game.startToken++;const token=game.startToken;game.status='starting';renderGameOverlay();await ensureAudio();if(token!==game.startToken)return;
+ stopSongAudio();game.startToken++;const token=game.startToken;game.status='starting';renderGameOverlay();const a=await ensureAudio();if(token!==game.startToken)return;
+ if(!a&&state.sound&&!audioUnavailable){game.status='idle';renderGameOverlay();return;}
  generateChart();Object.assign(game,{elapsed:-3,score:0,combo:0,maxCombo:0,perfect:0,good:0,nice:0,miss:0,flashes:[0,0,0,0],judgement:null,result:null,status:'countdown',startAt:performance.now()+3000,countdownLabel:3});game.cardRun=captureCardRun();renderRhythmTeam();
  if(audioMaster)audioMaster.gain.setTargetAtTime(state.sound ? 0.28 : 0,audioCtx.currentTime,.02);scheduleSong();renderGameOverlay();updateGameStats();ensureGameLoop();
  if(currentView!=='rhythm'||document.hidden)pauseGame();else if(innerWidth<=720)document.querySelector('.stage-card').scrollIntoView({behavior:'smooth',block:'start'});
 }
 function pauseGame(){if(!['running','countdown'].includes(game.status))return;game.elapsed=(performance.now()-game.startAt)/1000;game.status='paused';stopSongAudio();renderGameOverlay();}
-async function resumeGame(){if(game.status!=='paused')return;const token=++game.startToken;await ensureAudio();if(token!==game.startToken||game.status!=='paused')return;game.startAt=performance.now()-game.elapsed*1000;game.status=game.elapsed<0?'countdown':'running';scheduleSong();renderGameOverlay();ensureGameLoop();if(currentView!=='rhythm'||document.hidden)pauseGame();else if(innerWidth<=720)document.querySelector('.stage-card').scrollIntoView({behavior:'smooth',block:'start'});}
+async function resumeGame(){if(game.status!=='paused')return;const token=++game.startToken;const a=await ensureAudio();if(token!==game.startToken||game.status!=='paused')return;if(!a&&state.sound&&!audioUnavailable)return;game.startAt=performance.now()-game.elapsed*1000;game.status=game.elapsed<0?'countdown':'running';scheduleSong();renderGameOverlay();ensureGameLoop();if(currentView!=='rhythm'||document.hidden)pauseGame();else if(innerWidth<=720)document.querySelector('.stage-card').scrollIntoView({behavior:'smooth',block:'start'});}
 function stopGame(reset=false){game.startToken++;stopSongAudio();game.status='idle';game.elapsed=0;game.cardRun=null;if(reset){game.score=0;game.combo=0;game.maxCombo=0;game.perfect=0;game.good=0;game.nice=0;game.miss=0;game.result=null;game.judgement=null;generateChart();}updateTrackUI();renderGameOverlay();renderRhythmTeam();}
 function finishGame(){if(!['running','countdown'].includes(game.status))return;game.status='finished';game.elapsed=game.duration;stopSongAudio();const hits=game.perfect+game.good+game.nice-(game.cardRun?.sourceSnapshot?.assists||0),raw=game.score/(game.notes.length*1000)*100,accuracy=Math.round(raw),rank=raw>=95?'S':raw>=85?'A':raw>=70?'B':raw>=45?'C':'D',reward=hits>0?5+Math.floor(raw/6):0;const previous=state.best[gameKey()];const newBest=hits>0&&game.score>(previous?.score||0);if(newBest)state.best[gameKey()]={score:game.score,accuracy,rank,combo:game.maxCombo};state.coins+=reward;if(hits>0){state.hearts+=Math.floor(raw/20);markDaily('rhythm');}if(hits>0&&raw>=45)unlock('stage');const cardBonusReward=awardCardPerformance(hits);game.result={accuracy,rank,reward:reward+cardBonusReward,newBest,cardBonus:cardBonusReward};save();renderGlobal();updateBest();updateGameStats();renderGameOverlay();}
 function hitLane(lane){
@@ -3112,7 +3141,7 @@ function ensureGameLoop(){if(!game.raf&&currentView==='rhythm')game.raf=requestA
 document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;if(b.dataset.route){route(b.dataset.route);return;}if(b.dataset.care){care(b.dataset.care,b.classList.contains('cat-touch')?b:document.querySelector(`#view-${currentView} .cat-touch`));return;}if(b.dataset.character){beginStory(b.dataset.character);return;}if(b.dataset.choice!==undefined){chooseStory(Number(b.dataset.choice));return;}if(b.dataset.memory){showMemory(b.dataset.memory);return;}if(b.dataset.filter){albumFilter=b.dataset.filter;renderAlbum();return;}if(b.dataset.game==='start'){startGame();return;}if(b.dataset.game==='resume'){resumeGame();return;}if(b.dataset.mode){if(['running','countdown','paused','starting'].includes(game.status))return;game.mode=b.dataset.mode;stopGame(true);return;}});
 $('helpBtn').onclick=showHelp;$('footerHelp').onclick=showHelp;$('settingsBtn').onclick=showSettings;$('renamePet').onclick=showSettings;$('giftBtn').onclick=showGift;$('homeAlbumBtn').onclick=()=>route('album');$('storyNext').onclick=nextStory;$('exitStory').onclick=exitStory;
 $('closeModal').onclick=()=>closeModal();$('modalBackdrop').addEventListener('click',e=>{if(e.target===$('modalBackdrop'))closeModal();});
-$('soundBtn').onclick=async()=>{state.sound=!state.sound;save();renderGlobal();if(state.sound)await ensureAudio();if(audioMaster)audioMaster.gain.setTargetAtTime(state.sound ? 0.28 : 0,audioCtx.currentTime,.04);toast(state.sound?(['chronicle','story'].includes(currentView)?'声音已开启 · 故事配乐随剧情播放':'声音已开启 · 进入故事或开始演奏即可听到音乐'):'声音已关闭');};
+$('soundBtn').onclick=async()=>{state.sound=!state.sound;save();renderGlobal();if(state.sound)await ensureAudio();else stopAudioBridge();if(audioMaster)audioMaster.gain.setTargetAtTime(state.sound ? 0.28 : 0,audioCtx.currentTime,.04);toast(state.sound?(['chronicle','story'].includes(currentView)?'声音已开启 · 故事配乐随剧情播放':'声音已开启 · 进入故事或开始演奏即可听到音乐'):'声音已关闭');};
 $('dailyClaim').onclick=()=>{ensureDaily();const d=state.daily;if(!d.claimed&&d.pet&&d.story&&d.rhythm){d.claimed=true;state.coins+=20;state.cards.tickets++;save();renderGlobal();toast('今日份的小幸福已收好 · 音符 +20 · 邀请券 +1',true);}};
 $('takePhoto').onclick=()=>{unlock('photo');save();renderGlobal();showMemory('photo');};
 $('importInput').onchange=async e=>{await importSave(e.target.files[0]);e.target.value='';};
@@ -3127,7 +3156,7 @@ document.addEventListener('keydown',e=>{
  if(currentView==='rhythm'){const k=e.key.toLowerCase(),index=['d','f','j','k'].indexOf(k);if(index>=0&&!e.repeat){e.preventDefault();hitLane(index);}if(e.key==='Escape'&&!e.repeat){e.preventDefault();if(game.status==='paused')resumeGame();else pauseGame();}}
  if(currentView==='story'&&storySession&&e.key===' '&&!e.repeat&&e.target.tagName!=='BUTTON'){e.preventDefault();nextStory();}
 });
-document.addEventListener('visibilitychange',()=>{if(document.hidden&&['running','countdown'].includes(game.status))pauseGame();});window.addEventListener('blur',()=>{if(['running','countdown'].includes(game.status))pauseGame();});window.addEventListener('pagehide',()=>{save();stopSongAudio();});window.addEventListener('resize',()=>{if(currentView==='rhythm')resizeCanvas();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){stopAudioBridge();if(['running','countdown'].includes(game.status))pauseGame();}});window.addEventListener('blur',()=>{if(['running','countdown'].includes(game.status))pauseGame();});window.addEventListener('pagehide',()=>{save();stopSongAudio();stopAudioBridge();});window.addEventListener('resize',()=>{if(currentView==='rhythm')resizeCanvas();});
 if(window.ResizeObserver)new ResizeObserver(()=>{if(currentView==='rhythm')resizeCanvas();}).observe($('canvasArea'));
 $$('[data-icon]').forEach(el=>el.innerHTML=I(el.dataset.icon));$$('img[data-asset]').forEach(el=>el.src=ASSETS[el.dataset.asset]);
 // ---- Card collection, affection, recruiting, and real rhythm reward integration ----
