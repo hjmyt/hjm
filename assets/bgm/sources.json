@@ -1,0 +1,69 @@
+{
+  "source": "用户指定本地素材目录",
+  "license_note": "附带的版权说明.txt 声明该目录音频已获授权；本项目保留该说明，未独立核验授权范围。",
+  "tracks": [
+    {
+      "file": "a-little-story.mp3",
+      "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/A Little Story.MP3",
+      "title": "A Little Story",
+      "use": "第一章日常相遇、心动故事选角页",
+      "duration_seconds": 120,
+      "processing": "120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
+      "bytes": 1440750
+    },
+    {
+      "file": "refrain.mp3",
+      "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/Refrain.mp3",
+      "title": "Refrain",
+      "use": "第二章与章节推进",
+      "duration_seconds": 120,
+      "processing": "120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
+      "bytes": 1440750
+    },
+    {
+      "file": "the-truth-that-you-leave.mp3",
+      "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/The truth that you leave.mp3",
+      "title": "The truth that you leave",
+      "use": "山丘停业、告别与低落结局",
+      "duration_seconds": 120,
+      "processing": "120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
+      "bytes": 1440750
+    },
+    {
+      "file": "fish-in-the-pool.mp3",
+      "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/fish in the pool ・花屋敷.mp3",
+      "title": "fish in the pool ・花屋敷",
+      "use": "山丘酒吧点单、温暖的相遇",
+      "duration_seconds": 120,
+      "processing": "最长 120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
+      "bytes": 1440750
+    },
+    {
+      "file": "lakeside.mp3",
+      "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/湖滨初晴.mp3",
+      "title": "湖滨初晴",
+      "use": "第三章专场筹备",
+      "duration_seconds": 120,
+      "processing": "最长 120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
+      "bytes": 1440750
+    },
+    {
+      "file": "distant-memories.mp3",
+      "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/想い出は遠くの日々.mp3",
+      "title": "想い出は遠くの日々",
+      "use": "心动故事与排练回忆",
+      "duration_seconds": 120,
+      "processing": "最长 120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
+      "bytes": 1440750
+    },
+    {
+      "file": "breath-and-life.mp3",
+      "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/Breath and Life.mp3",
+      "title": "Breath and Life",
+      "use": "第四章剧场演出与胜利谢幕",
+      "duration_seconds": 108.2,
+      "processing": "最长 120 秒网页循环版；96 kbps MP3；响度归一及首尾淡入淡出",
+      "bytes": 1298121
+    }
+  ]
+}
