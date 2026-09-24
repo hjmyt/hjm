@@ -11,20 +11,21 @@ const assert=require('node:assert/strict');
   const out=[],check=(name,ok)=>{if(!ok)throw Error(name+' (scene '+state.chronicle.run.scene+')');out.push(name);};
   const click=async selector=>{await new Promise(r=>setTimeout(r,215));const b=document.querySelector(selector);if(!b||b.disabled)throw Error('Unavailable '+selector);b.click();};
   const choose=n=>click(`[data-cp-choice="${n}"]`);
+  const nextStory=async()=>{await click('[data-cp-action="end-week"]');};
   const reset=()=>{closeModal(false);state=freshState();state.sound=false;save();route('home');};
-  const scene=(ch,id,flags={},aff={})=>{reset();state.chronicle.completedChapters=Array.from({length:ch-1},(_,i)=>i+1);Object.assign(state.chronicle.run,{chapter:ch,ch,name:'测试',inst:'小提琴',scene:id,flags:{...(ch===3?{c3Met:1}:{}),...flags},aff:{...state.chronicle.run.aff,...aff}});save();route('chronicle');};
+  const scene=(ch,id,flags={},aff={})=>{reset();state.chronicle.completedChapters=Array.from({length:ch-1},(_,i)=>i+1);Object.assign(state.chronicle.run,{chapter:ch,ch,name:'测试',inst:'小提琴',scene:id,week:id==='menu'?1:6,weekly:{version:1,done:[1,2,3,4,5],active:0,side:[],recaps:{},approach:null},flags:{...(ch===3?{c3Met:1}:{}),...flags},aff:{...state.chronicle.run.aff,...aff}});save();route('chronicle');};
   reset();route('chronicle');check('Six chapter entrances',document.querySelectorAll('.cp-chapter-tile').length===6);
   Object.assign(state.chronicle.run,{name:'新伙伴',inst:'小提琴'});state.chronicle.completedChapters=[1,2];state.chronicle.slots[2]={...Chronicle.fresh().run,chapter:2,ch:3,name:'新伙伴',inst:'小提琴',scene:'title3',ending:'c2_retry',tech:12,level:3,gold:50};state.chronicle.run.rev++;save();renderGlobal();await click('[data-cp-action="switch-chapter"][data-cp-chapter="3"]');await choose(4);await choose(0);
   check('Third chapter inherits completed second chapter stats',state.chronicle.run.chapter===3&&state.chronicle.run.scene==='c3_intro'&&state.chronicle.run.tech===12&&state.chronicle.run.level===3&&!('gold' in state.chronicle.run));
   check('Qiqi follows the owner at introduction',state.cards.encounters.filter(id=>['zhu','qiqi'].includes(id)).join()==='zhu,qiqi');
   check('Qiqi source rarity and stats preserved',cardDef('qiqi').rarity==='SR'&&cardDef('qiqi').stars===3&&cardDef('qiqi').stats.map(x=>x[1]).join()==='73,78,85,99');
-  await choose(0);check('Lemon and Xiaozhou placeholders unlock when mentioned',cardOwned('lemon')&&cardOwned('xiaozhou')&&!cardOwned('goose')&&!cardOwned('xiaota'));
+  await choose(0);await nextStory();check('Lemon and Xiaozhou placeholders unlock when mentioned',cardOwned('lemon')&&cardOwned('xiaozhou')&&!cardOwned('goose')&&!cardOwned('xiaota'));
   const reading=state.chronicle.run.scene;goCard('lemon');check('Lemon source card replaces placeholder',$('view-card').innerText.includes('帽子领域'));
   check('Bill placeholder stays out of recruit pool',availableCardPool().every(c=>!c.placeholder));
   route('chronicle');check('Card navigation preserves story progress',state.chronicle.run.scene===reading);
   await choose(1);check('Prep choice opens its follow-up',state.chronicle.run.scene==='c3_prep_b'&&$('cpStoryText').textContent.includes('有人一起练琴'));
-  await choose(0);check('Goose unlocks at actual mention',cardOwned('goose')&&!cardOwned('bill'));
-  await choose(0);await choose(0);check('Bill mention unlocks placeholder; unselected Xiaota option does not',state.chronicle.run.scene==='c3_bill'&&cardOwned('bill')&&!cardOwned('xiaota'));
+  await choose(0);await nextStory();await choose(0);await choose(0);await nextStory();check('Goose unlocks at actual mention',cardOwned('goose')&&!cardOwned('bill'));
+  await choose(0);await choose(0);await nextStory();check('Bill mention unlocks placeholder; unselected Xiaota option does not',state.chronicle.run.scene==='c3_bill'&&cardOwned('bill')&&!cardOwned('xiaota'));
   goCard('bill');check('Bill has a true placeholder',$('view-card').innerText.includes('敬请期待')&&!$('view-card').querySelector('[data-card-team]'));route('chronicle');
   await choose(0);check('Xiaota unlocks after selection and follow-up',state.chronicle.run.scene==='c3_bill_a'&&cardOwned('xiaota')&&state.chronicle.run.flags.taIn===1);
   await choose(0);await choose(0);check('Third chapter main path reaches weekly actions',state.chronicle.run.scene==='menu');
@@ -38,13 +39,13 @@ const assert=require('node:assert/strict');
   }
   scene(2,'c2_kong',{strGroup:1},{shiyuan:0});await choose(0);check('Weak stay response agrees with outcome',state.chronicle.run.flags.konggeStay==='weak'&&$('cpStoryText').textContent.includes('没有给出明确的承诺'));
   for(const stem of ['prep','ge','jeal'])for(let i=0;i<3;i++){
-   scene(3,'c3_'+stem);await choose(i);check(`Third chapter ${stem} branch ${i+1}`,state.chronicle.run.scene==='c3_'+stem+'_'+'abc'[i]);await choose(0);check(`Third chapter ${stem} follow-up returns`,state.chronicle.run.scene===({prep:'c3_ge',ge:'c3_bill',jeal:'menu'}[stem]));
+   scene(3,'c3_'+stem);await choose(i);check(`Third chapter ${stem} branch ${i+1}`,state.chronicle.run.scene==='c3_'+stem+'_'+'abc'[i]);await choose(0);check(`Third chapter ${stem} follow-up returns`,state.chronicle.run.scene===({prep:'c3_ge',ge:'c3_bill',jeal:'b_live'}[stem]));
   }
   scene(3,'c3_bill');await choose(1);check('Bill waiting branch recorded',state.chronicle.run.flags.billWait===1&&state.chronicle.run.scene==='c3_bill_b');await choose(0);await choose(0);check('Waiting branch reaches weekly loop',state.chronicle.run.scene==='menu');
-  for(const [roll,id] of [[.1,'c3_band_q'],[.4,'c3_band_zhou'],[.7,'c3_band_bill'],[.9,'practice_partner']]){
-   scene(3,'menu');const random=Math.random;Math.random=()=>roll;try{await click('[data-cp-action="ensemble"]');}finally{Math.random=random;}check('Third chapter ensemble event '+id,state.chronicle.run.scene===id);
-   if(id!=='practice_partner')for(let n=0;n<2;n++){if(n)scene(3,id);await choose(n);check(id+' follow-up '+n,state.chronicle.run.scene.startsWith('band_'));await choose(0);check(id+' return '+n,state.chronicle.run.scene==='menu');}
+  for(const id of ['c3_band_q','c3_band_zhou','c3_band_bill'])for(let n=0;n<2;n++){
+   scene(3,id);await choose(n);check(id+' follow-up '+n,state.chronicle.run.scene.startsWith('band_'));await choose(0);check(id+' return '+n,state.chronicle.run.scene==='menu');
   }
+  scene(3,'menu');await click('[data-cp-action="ensemble"]');check('Free ensemble enters a chosen-partner rehearsal',state.chronicle.run.scene==='practice_partner');
   scene(3,'menu',{}, {azhe:11,dijie:11,tim:11});await click('[data-cp-action="end-week"]');check('Three friendships trigger one jealousy event',state.chronicle.run.scene==='c3_jeal'&&state.chronicle.run.flags.qiJealous===1);await choose(0);await choose(0);await click('[data-cp-action="end-week"]');check('Jealousy event does not repeat',state.chronicle.run.scene==='menu');
   scene(3,'menu',{}, {tim:70});await click('[data-cp-action="end-week"]');check('High bonds do not cause gossip penalties',!state.chronicle.run.flags.qBack&&state.chronicle.run.aff.tim===70);state=cleanState(JSON.parse(JSON.stringify(state)));route('chronicle');await click('[data-cp-action="end-week"]');check('High bonds remain safe after save',!state.chronicle.run.flags.qBack);
   for(const [flags,expected,diff] of [[{taIn:1,stayShi:1},'c3_he',18],[{billWait:1},'c3_te',22],[{qiJealous:1,stayShi:1},'c3_te',20],[{taIn:1,stayShi:1,qiJealous:1,qiSeen:1},'c3_he',18],[{qBack:2},'c3_qiqi',20]]){

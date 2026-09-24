@@ -1,0 +1,512 @@
+[
+  {
+    "batch": "01-arrival",
+    "references": [
+      "assets/cardLala.webp",
+      "assets/shiyuan-portrait-v2.webp",
+      "assets/kongge-portrait-selected.webp",
+      "assets/dijie-portrait-v2.webp",
+      "assets/cardTang.webp"
+    ],
+    "scenes": [
+      {
+        "chapter": 1,
+        "scene": "s_door",
+        "id": "scene_1_s_door",
+        "title": "门边的第一声招呼",
+        "location": "山丘 · 初见",
+        "text": "垃垃在吧台旁整理谱架，抬头迎接推门而来的你。",
+        "description": "Lala, adult woman with long brown ribbon-tied hair, holds a violin and welcomes the viewer at the door of a cozy small bar with music stands being set up."
+      },
+      {
+        "chapter": 1,
+        "scene": "s_room",
+        "id": "scene_1_s_room",
+        "title": "角落里的小星星",
+        "location": "山丘 · 排练前",
+        "text": "垃垃指向角落。十元正拉着《小星星》，还不知道有人在听。",
+        "description": "Lala in foreground points toward Shiyuan in the corner actually playing violin. Shiyuan has short brown bob, star hairclip, cream cardigan. Both distinct women visible, intimate rehearsal bar."
+      },
+      {
+        "chapter": 1,
+        "scene": "s_look",
+        "id": "scene_1_s_look",
+        "title": "谱架之间的伙伴",
+        "location": "山丘 · 四处看看",
+        "text": "翻谱的阿喆、谱架后的笛杰，还有正在调试相机的汤少，组成了你对乐团的第一印象。",
+        "description": "Three adult men in separate layers of one rehearsal scene: curly brown-haired fine-round-glasses Azhe flipping sheet music with violin, plaid-shirt Dijie quietly behind a music stand with silver flute, black-jacket Tang adjusting a camera by doorway."
+      },
+      {
+        "chapter": 1,
+        "scene": "s_shi",
+        "id": "scene_1_s_shi",
+        "title": "停下琴声，向你招手",
+        "location": "山丘 · 十元",
+        "text": "十元放下琴弓，笑着把空出来的位置指给你。",
+        "description": "Shiyuan short bob star clip cream cardigan stops playing violin and beams warmly at a newcomer, gesturing to an empty musician chair beside her, violin lowered."
+      },
+      {
+        "chapter": 1,
+        "scene": "s_dream",
+        "id": "scene_1_s_dream",
+        "title": "还没站上的舞台",
+        "location": "山丘 · 乐团的梦",
+        "text": "说起未来的舞台，十元的眼睛亮了起来。",
+        "description": "Shiyuan excitedly talks about future concerts, pointing at a pinned photo of an empty lit concert stage while holding her violin in the small rehearsal room; grounded present-day scene not a dream collage."
+      },
+      {
+        "chapter": 1,
+        "scene": "s_first",
+        "id": "scene_1_s_first",
+        "title": "首席抬起了笔",
+        "location": "山丘 · 入团考核",
+        "text": "空格让全团安静下来，抬笔示意新人坐到第三排。",
+        "description": "Kongge stocky adult man rectangular black glasses black polo at front music stand raises pencil to quiet orchestra and points toward an empty third-row chair. Attentive musicians sit upright, audition beginning NOT completed."
+      },
+      {
+        "chapter": 1,
+        "scene": "gig",
+        "id": "scene_1_gig",
+        "title": "第一封演出邀请",
+        "location": "山丘 · 商场快闪邀约",
+        "text": "十元举起演出邀约：第六周，乐团终于有机会走到商场的舞台上。",
+        "description": "Shiyuan joyfully lifts a paper invitation with a small shopping-mall stage photo to tell gathered musicians about their first booked gig. Rehearsal room, no actual performance yet, no legible text."
+      },
+      {
+        "chapter": 1,
+        "scene": "emo",
+        "id": "scene_1_emo",
+        "title": "放下长笛的那一刻",
+        "location": "山丘 · 错拍之后",
+        "text": "又一次错拍之后，笛杰默默放下长笛。有人注意到了他的沉默。",
+        "description": "Dijie tousled black hair plaid shirt sits downcast behind a music stand, lowering a SILVER transverse flute onto his lap after a missed entrance. Other musicians blurred, quiet melancholy not smiling performance."
+      }
+    ],
+    "prompt": "Use case: illustration-story. Generate ONE eight-panel atlas for a Chinese orchestra visual novel. EXACT 4 columns x 2 rows, eight equal SQUARE scenes, overall 2:1 landscape. Aim 3072x1536. Straight borders at 25%,50%,75% width and 50% height. No gutters, borders, labels, numbers, text captions, watermark, comic bubbles or UI. Strict row-major scene order. Each panel is an independent complete image with defining faces, hands, instruments and narrative props inside the central 80%, no bleeding across cells. Medium shot or environmental close shot, clear action rather than generic portraits. Do not combine different panels.\nStyle: warm cinematic semi-realistic anime game CG, delicate linework, expressive adult Chinese musicians, richly painted environments. Each character is an ADULT. Preserve character faces, hairstyles and signature clothes from supplied references. References guide identity only, not composition. Small venue Shanqiu is a cozy wood-and-amber bar with music stands. Match mood to text, sad scenes not smiles, anticipation not triumph. Musical notation abstract, no readable text.\n\nReference order: 1: cardLala.webp, 2: shiyuan-portrait-v2.webp, 3: kongge-portrait-selected.webp, 4: dijie-portrait-v2.webp, 5: cardTang.webp.\n\nPANEL 1 (top row, column 1): Lala, adult woman with long brown ribbon-tied hair, holds a violin and welcomes the viewer at the door of a cozy small bar with music stands being set up.\nPANEL 2 (top row, column 2): Lala in foreground points toward Shiyuan in the corner actually playing violin. Shiyuan has short brown bob, star hairclip, cream cardigan. Both distinct women visible, intimate rehearsal bar.\nPANEL 3 (top row, column 3): Three adult men in separate layers of one rehearsal scene: curly brown-haired fine-round-glasses Azhe flipping sheet music with violin, plaid-shirt Dijie quietly behind a music stand with silver flute, black-jacket Tang adjusting a camera by doorway.\nPANEL 4 (top row, column 4): Shiyuan short bob star clip cream cardigan stops playing violin and beams warmly at a newcomer, gesturing to an empty musician chair beside her, violin lowered.\nPANEL 5 (bottom row, column 1): Shiyuan excitedly talks about future concerts, pointing at a pinned photo of an empty lit concert stage while holding her violin in the small rehearsal room; grounded present-day scene not a dream collage.\nPANEL 6 (bottom row, column 2): Kongge stocky adult man rectangular black glasses black polo at front music stand raises pencil to quiet orchestra and points toward an empty third-row chair. Attentive musicians sit upright, audition beginning NOT completed.\nPANEL 7 (bottom row, column 3): Shiyuan joyfully lifts a paper invitation with a small shopping-mall stage photo to tell gathered musicians about their first booked gig. Rehearsal room, no actual performance yet, no legible text.\nPANEL 8 (bottom row, column 4): Dijie tousled black hair plaid shirt sits downcast behind a music stand, lowering a SILVER transverse flute onto his lap after a missed entrance. Other musicians blurred, quiet melancholy not smiling performance."
+  },
+  {
+    "batch": "02-rehearsal",
+    "references": [
+      "assets/feihong-portrait-v2.webp",
+      "assets/kongge-portrait-selected.webp",
+      "assets/dijie-portrait-v2.webp",
+      "assets/cardAzhe.webp",
+      "assets/shiyuan-portrait-v2.webp"
+    ],
+    "scenes": [
+      {
+        "chapter": 1,
+        "scene": "s_conflict",
+        "id": "scene_1_s_conflict",
+        "title": "散场后的争执",
+        "location": "山丘 · 门口",
+        "text": "排练散场，飞鸿在门口为主唱的位置争取一次机会。",
+        "description": "Feihong blue denim overshirt white tee stands in bar doorway holding a microphone, earnestly pleading his case to a second male vocalist seen from behind, tense post-rehearsal conversation, folded music stands."
+      },
+      {
+        "chapter": 1,
+        "scene": "s_fei1",
+        "id": "scene_1_s_fei1",
+        "title": "用和声还给你",
+        "location": "山丘 · 飞鸿的回应",
+        "text": "飞鸿朝你认真鞠躬，说要把这份支持唱进和声里。",
+        "description": "Feihong denim overshirt bends forward in a sincere grateful bow toward viewer at warm bar doorway, clutching vocal sheet music, modest relieved smile."
+      },
+      {
+        "chapter": 1,
+        "scene": "s_fei2",
+        "id": "scene_1_s_fei2",
+        "title": "没有说完的话",
+        "location": "山丘 · 背影",
+        "text": "飞鸿看了你一眼，最终什么也没说，转身走进夜色。",
+        "description": "Feihong denim overshirt looks back with dim disappointed eyes while turning away through the doorway into a cool night street, sheet music lowered. Quiet loneliness, no angry fight."
+      },
+      {
+        "chapter": 1,
+        "scene": "practice_partner",
+        "id": "scene_1_practice_partner",
+        "title": "留给搭档的位置",
+        "location": "山丘 · 合练前",
+        "text": "《欢乐颂》的谱页摆在中间。空格等着你选一位搭档，接住下一段旋律。",
+        "description": "Audition preparation still-life with two empty musician chairs facing a shared score stand, open violin case and silver flute case nearby, Kongge black polo glasses waits with pencil in soft background. No named partner chosen yet."
+      },
+      {
+        "chapter": 1,
+        "scene": "after_practice_win",
+        "id": "scene_1_after_practice_win",
+        "title": "下一拍，有人帮你",
+        "location": "山丘 · 合练通过",
+        "text": "空格点头认可。笛杰轻声提议，可以帮你做个节拍器程序。",
+        "description": "Kongge black polo glasses approvingly nods after rehearsal while Dijie plaid shirt shyly shows a simple metronome app on a laptop, silver flute rests on table. Clear two-man action."
+      },
+      {
+        "chapter": 1,
+        "scene": "after_practice_fail",
+        "id": "scene_1_after_practice_fail",
+        "title": "翻不过去的那一页",
+        "location": "山丘 · 再练一次",
+        "text": "空格圈出需要再练的小节，阿喆悄悄靠过来，替你翻好了下一页。",
+        "description": "Azhe wavy brown hair fine round glasses kindly turns a marked score page toward viewer, violin beside him; Kongge blurred behind points at difficult bars. Encouraging after failed audition, no celebration."
+      },
+      {
+        "chapter": 1,
+        "scene": "live_intro",
+        "id": "scene_1_live_intro",
+        "title": "人群围了过来",
+        "location": "商场 · 快闪开场",
+        "text": "快闪已经开始，商场里驻足的人越来越多。该轮到你的声部了。",
+        "description": "Shopping mall atrium pop-up orchestra performance beginning, Shiyuan star hairclip violin gives an encouraging cue to a foreground musician with face unseen, shoppers gather on ground floor and upper balcony, no contract or victory bow."
+      },
+      {
+        "chapter": 1,
+        "scene": "b_live",
+        "id": "scene_1_b_live",
+        "title": "第一步，走向台前",
+        "location": "商场 · 候场",
+        "text": "琴盒合上，谱架摆好。第一场商演，就从这次深呼吸开始。",
+        "description": "Backstage side view before a mall orchestra flash-mob: closed instrument cases, organized score stands, musicians taking a breath at the edge of stage, bright atrium waiting ahead. Anticipation, not performance or triumph."
+      }
+    ],
+    "prompt": "Use case: illustration-story. Generate ONE eight-panel atlas for a Chinese orchestra visual novel. EXACT 4 columns x 2 rows, eight equal SQUARE scenes, overall 2:1 landscape. Aim 3072x1536. Straight borders at 25%,50%,75% width and 50% height. No gutters, borders, labels, numbers, text captions, watermark, comic bubbles or UI. Strict row-major scene order. Each panel is an independent complete image with defining faces, hands, instruments and narrative props inside the central 80%, no bleeding across cells. Medium shot or environmental close shot, clear action rather than generic portraits. Do not combine different panels.\nStyle: warm cinematic semi-realistic anime game CG, delicate linework, expressive adult Chinese musicians, richly painted environments. Each character is an ADULT. Preserve character faces, hairstyles and signature clothes from supplied references. References guide identity only, not composition. Small venue Shanqiu is a cozy wood-and-amber bar with music stands. Match mood to text, sad scenes not smiles, anticipation not triumph. Musical notation abstract, no readable text.\n\nReference order: 1: feihong-portrait-v2.webp, 2: kongge-portrait-selected.webp, 3: dijie-portrait-v2.webp, 4: cardAzhe.webp, 5: shiyuan-portrait-v2.webp.\n\nPANEL 1 (top row, column 1): Feihong blue denim overshirt white tee stands in bar doorway holding a microphone, earnestly pleading his case to a second male vocalist seen from behind, tense post-rehearsal conversation, folded music stands.\nPANEL 2 (top row, column 2): Feihong denim overshirt bends forward in a sincere grateful bow toward viewer at warm bar doorway, clutching vocal sheet music, modest relieved smile.\nPANEL 3 (top row, column 3): Feihong denim overshirt looks back with dim disappointed eyes while turning away through the doorway into a cool night street, sheet music lowered. Quiet loneliness, no angry fight.\nPANEL 4 (top row, column 4): Audition preparation still-life with two empty musician chairs facing a shared score stand, open violin case and silver flute case nearby, Kongge black polo glasses waits with pencil in soft background. No named partner chosen yet.\nPANEL 5 (bottom row, column 1): Kongge black polo glasses approvingly nods after rehearsal while Dijie plaid shirt shyly shows a simple metronome app on a laptop, silver flute rests on table. Clear two-man action.\nPANEL 6 (bottom row, column 2): Azhe wavy brown hair fine round glasses kindly turns a marked score page toward viewer, violin beside him; Kongge blurred behind points at difficult bars. Encouraging after failed audition, no celebration.\nPANEL 7 (bottom row, column 3): Shopping mall atrium pop-up orchestra performance beginning, Shiyuan star hairclip violin gives an encouraging cue to a foreground musician with face unseen, shoppers gather on ground floor and upper balcony, no contract or victory bow.\nPANEL 8 (bottom row, column 4): Backstage side view before a mall orchestra flash-mob: closed instrument cases, organized score stands, musicians taking a breath at the edge of stage, bright atrium waiting ahead. Anticipation, not performance or triumph."
+  },
+  {
+    "batch": "03-undercurrents",
+    "references": [
+      "assets/tim-portrait-v2.webp",
+      "assets/zhu-conductor.webp",
+      "assets/qiqi-portrait.webp",
+      "assets/xiaozhou-portrait.webp",
+      "assets/shiyuan-portrait-v2.webp"
+    ],
+    "scenes": [
+      {
+        "chapter": 2,
+        "scene": "c2_intro",
+        "id": "scene_2_c2_intro",
+        "title": "两种旋律挤在一起",
+        "location": "山丘 · 哈基米之夜",
+        "text": "流行歌与弦乐撞在一起。吧台边的朱老师，听着这场尚未找到方向的排练。",
+        "description": "Clashing rehearsal in a cramped bar: string quartet on one side, electric guitar and drum kit on other, musicians confused by rhythms. Zhu slim man short black hair rectangular glasses stands at bar looking concerned, not conducting triumphantly."
+      },
+      {
+        "chapter": 2,
+        "scene": "c2_head",
+        "id": "scene_2_c2_head",
+        "title": "十秒换掉的头像",
+        "location": "山丘 · 排练间隙",
+        "text": "TIM 迅速换掉头像，角落里的阿喆却抱紧了琴。",
+        "description": "TIM white shirt work lanyard quickly changes profile icon on his smartphone while adult friends tease him; curly brown-haired bespectacled Azhe sits aside hugging violin, slightly hurt, no legible phone text."
+      },
+      {
+        "chapter": 2,
+        "scene": "c2_sponsor",
+        "id": "scene_2_c2_sponsor",
+        "title": "那份厚厚的心意",
+        "location": "山丘 · 赞助提议",
+        "text": "赞助方递来文件，朱老师客气地笑着，垃垃在旁边沉默。",
+        "description": "An anonymous suited sponsor hands a thick proposal folder to Zhu black glasses behind bar; Lala long brown ribbon hair watches quietly with violin case, politely uneasy negotiation."
+      },
+      {
+        "chapter": 2,
+        "scene": "c2_kong",
+        "id": "scene_2_c2_kong",
+        "title": "楼梯间的去留",
+        "location": "楼梯间 · 空格",
+        "text": "三倍的报价与留下的理由，都停在空格的一次沉默里。",
+        "description": "Stocky adult Kongge black polo rectangular glasses holding violin case sits in dim stairwell facing viewer, serious unresolved career decision, cool overhead lamp, no handshake outcome."
+      },
+      {
+        "chapter": 2,
+        "scene": "c2_bill",
+        "id": "scene_2_c2_bill",
+        "title": "迟迟空着的鼓位",
+        "location": "琴房 · 等待",
+        "text": "十元在琴房门口来回走，Bill 的鼓凳始终空着。",
+        "description": "Shiyuan short bob star clip cream cardigan anxiously paces rehearsal doorway, empty drum stool and unused drumsticks clearly foreground, phone in her hand."
+      },
+      {
+        "chapter": 3,
+        "scene": "c3_intro",
+        "id": "scene_3_c3_intro",
+        "title": "门口的手作饼干",
+        "location": "排练室 · 新伙伴",
+        "text": "柒柒分起手作饼干，又抱起电吉他，弹出让房间安静下来的旋律。",
+        "description": "Qiqi adult elegant woman updo floral qipao red trim arriving at rehearsal doorway handing handmade cookies from paper bag to musicians, red electric guitar strapped over shoulder."
+      },
+      {
+        "chapter": 3,
+        "scene": "c3_prep",
+        "id": "scene_3_c3_prep",
+        "title": "筹备期的小混乱",
+        "location": "排练室 · 键盘声部",
+        "text": "柠檬又忘了谱，小周坐在一旁，有话想说。",
+        "description": "Adult male keyboard player in dark jacket rummages for missing score beside electronic keyboard; Xiaozhou soft black hair pale blue shirt sits nearby with music folder, hesitates to speak. Mild rehearsal confusion."
+      },
+      {
+        "chapter": 3,
+        "scene": "c3_band_zhou",
+        "id": "scene_3_c3_band_zhou",
+        "title": "被画乱的谱页",
+        "location": "排练室 · 小周",
+        "text": "小周抱着画满无关记号的谱子，等一个愿意帮他整理的人。",
+        "description": "Xiaozhou pale blue shirt sits at piano holding sheet music covered with messy unrelated pencil scribbles, red-rimmed sad eyes, eraser and pencil on table, no successful performance."
+      }
+    ],
+    "prompt": "Use case: illustration-story. Generate ONE eight-panel atlas for a Chinese orchestra visual novel. EXACT 4 columns x 2 rows, eight equal SQUARE scenes, overall 2:1 landscape. Aim 3072x1536. Straight borders at 25%,50%,75% width and 50% height. No gutters, borders, labels, numbers, text captions, watermark, comic bubbles or UI. Strict row-major scene order. Each panel is an independent complete image with defining faces, hands, instruments and narrative props inside the central 80%, no bleeding across cells. Medium shot or environmental close shot, clear action rather than generic portraits. Do not combine different panels.\nStyle: warm cinematic semi-realistic anime game CG, delicate linework, expressive adult Chinese musicians, richly painted environments. Each character is an ADULT. Preserve character faces, hairstyles and signature clothes from supplied references. References guide identity only, not composition. Small venue Shanqiu is a cozy wood-and-amber bar with music stands. Match mood to text, sad scenes not smiles, anticipation not triumph. Musical notation abstract, no readable text.\n\nReference order: 1: tim-portrait-v2.webp, 2: zhu-conductor.webp, 3: qiqi-portrait.webp, 4: xiaozhou-portrait.webp, 5: shiyuan-portrait-v2.webp.\n\nPANEL 1 (top row, column 1): Clashing rehearsal in a cramped bar: string quartet on one side, electric guitar and drum kit on other, musicians confused by rhythms. Zhu slim man short black hair rectangular glasses stands at bar looking concerned, not conducting triumphantly.\nPANEL 2 (top row, column 2): TIM white shirt work lanyard quickly changes profile icon on his smartphone while adult friends tease him; curly brown-haired bespectacled Azhe sits aside hugging violin, slightly hurt, no legible phone text.\nPANEL 3 (top row, column 3): An anonymous suited sponsor hands a thick proposal folder to Zhu black glasses behind bar; Lala long brown ribbon hair watches quietly with violin case, politely uneasy negotiation.\nPANEL 4 (top row, column 4): Stocky adult Kongge black polo rectangular glasses holding violin case sits in dim stairwell facing viewer, serious unresolved career decision, cool overhead lamp, no handshake outcome.\nPANEL 5 (bottom row, column 1): Shiyuan short bob star clip cream cardigan anxiously paces rehearsal doorway, empty drum stool and unused drumsticks clearly foreground, phone in her hand.\nPANEL 6 (bottom row, column 2): Qiqi adult elegant woman updo floral qipao red trim arriving at rehearsal doorway handing handmade cookies from paper bag to musicians, red electric guitar strapped over shoulder.\nPANEL 7 (bottom row, column 3): Adult male keyboard player in dark jacket rummages for missing score beside electronic keyboard; Xiaozhou soft black hair pale blue shirt sits nearby with music folder, hesitates to speak. Mild rehearsal confusion.\nPANEL 8 (bottom row, column 4): Xiaozhou pale blue shirt sits at piano holding sheet music covered with messy unrelated pencil scribbles, red-rimmed sad eyes, eraser and pencil on table, no successful performance."
+  },
+  {
+    "batch": "04-theatre",
+    "references": [
+      "assets/shiyuan-portrait-v2.webp",
+      "assets/yeshiyang-portrait-v2.webp",
+      "assets/feihong-portrait-v2.webp",
+      "assets/baoshi-portrait.webp",
+      "assets/qiqi-portrait.webp"
+    ],
+    "scenes": [
+      {
+        "chapter": 3,
+        "scene": "c3_ge",
+        "id": "scene_3_c3_ge",
+        "title": "琴房里没吃完的饭",
+        "location": "琴房 · 十元的心事",
+        "text": "十元一遍遍练琴，旁边的饭却没动多少。专场之前，有些心事还没说开。",
+        "description": "Shiyuan short bob star clip cream cardigan practices violin intensely alone at night, barely touched dinner on stool nearby, tired sad expression, empty rehearsal room."
+      },
+      {
+        "chapter": 3,
+        "scene": "c3_bill",
+        "id": "scene_3_c3_bill",
+        "title": "拨不通的电话",
+        "location": "排练室 · 演出前一周",
+        "text": "鼓手仍旧联系不上。十元攥着手机，努力让大家安心。",
+        "description": "Shiyuan holds smartphone with unanswered-call icon, tries a fragile reassuring smile to worried seated band, empty drum seat prominently behind her. Tension before concert not happiness."
+      },
+      {
+        "chapter": 4,
+        "scene": "c4_intro",
+        "id": "scene_4_c4_intro",
+        "title": "合同之外的一杯温水",
+        "location": "鹭湖剧院 · 邀约",
+        "text": "叶思阳放下场地合同，先把温水递给了坐在边上的你。",
+        "description": "Yeshiyang handsome adult navy suit no glasses puts theatre contracts on table then hands viewer a clear cup of warm water; empty red theatre seats behind, businesslike caring gesture."
+      },
+      {
+        "chapter": 4,
+        "scene": "c4_prep",
+        "id": "scene_4_c4_prep",
+        "title": "八小节，还是十六小节",
+        "location": "剧院 · 节目单",
+        "text": "大羊盯着节目单，想让自己的 SOLO 再长一点。",
+        "description": "Adult male guitarist dark casual shirt carrying acoustic guitar earnestly points at eight highlighted measures on a concert program, phone with many audio clips nearby, rehearsal discussion, no legible text."
+      },
+      {
+        "chapter": 4,
+        "scene": "c4_bao",
+        "id": "scene_4_c4_bao",
+        "title": "我帮你唱和声",
+        "location": "剧院 · 两支麦克风",
+        "text": "宝石紧张的第一句，等到了飞鸿主动接上的和声。",
+        "description": "Two distinct adult male singers: delicate black-haired Baoshi ivory shirt nervously holds microphone, Feihong denim overshirt offers vocal sheet and sings harmony beside him on EMPTY theatre rehearsal stage. Shy supportive eye contact."
+      },
+      {
+        "chapter": 4,
+        "scene": "c4_band_zhou",
+        "id": "scene_4_c4_band_zhou",
+        "title": "登台前冰凉的手",
+        "location": "空剧院 · 小周",
+        "text": "小周坐在钢琴前，低声担心自己会搞砸独奏。",
+        "description": "Xiaozhou adult pale blue shirt soft black hair sits at grand piano in EMPTY theatre, hands clasped nervously above keys, looks toward an unseen supportive friend, no spotlight triumph."
+      },
+      {
+        "chapter": 4,
+        "scene": "c4_qiqi",
+        "id": "scene_4_c4_qiqi",
+        "title": "海报上的署名",
+        "location": "剧院 · 赞助条件",
+        "text": "柒柒端着咖啡，把一份附着条件的赞助提案递给十元。",
+        "description": "Qiqi updo floral qipao gives a sponsorship proposal and coffee to Shiyuan star clip cream cardigan at theatre office table; poster mockup with empty name space on wall, polite but tense negotiation."
+      },
+      {
+        "chapter": 5,
+        "scene": "c5_intro",
+        "id": "scene_5_c5_intro",
+        "title": "站上更大的舞台之前",
+        "location": "音乐节 · 招商会",
+        "text": "黄奕兴指出方案里的漏洞，转身对十元说，剩下的事由他兜底。",
+        "description": "Adult Chinese CEO Huang dark side-parted hair thin rectangular glasses navy suit reviews outdoor music festival venue plan at business meeting, points out details then looks gently toward Shiyuan star hairclip with violin. Outdoor festival truss visible through window."
+      }
+    ],
+    "prompt": "Use case: illustration-story. Generate ONE eight-panel atlas for a Chinese orchestra visual novel. EXACT 4 columns x 2 rows, eight equal SQUARE scenes, overall 2:1 landscape. Aim 3072x1536. Straight borders at 25%,50%,75% width and 50% height. No gutters, borders, labels, numbers, text captions, watermark, comic bubbles or UI. Strict row-major scene order. Each panel is an independent complete image with defining faces, hands, instruments and narrative props inside the central 80%, no bleeding across cells. Medium shot or environmental close shot, clear action rather than generic portraits. Do not combine different panels.\nStyle: warm cinematic semi-realistic anime game CG, delicate linework, expressive adult Chinese musicians, richly painted environments. Each character is an ADULT. Preserve character faces, hairstyles and signature clothes from supplied references. References guide identity only, not composition. Small venue Shanqiu is a cozy wood-and-amber bar with music stands. Match mood to text, sad scenes not smiles, anticipation not triumph. Musical notation abstract, no readable text.\n\nReference order: 1: shiyuan-portrait-v2.webp, 2: yeshiyang-portrait-v2.webp, 3: feihong-portrait-v2.webp, 4: baoshi-portrait.webp, 5: qiqi-portrait.webp.\n\nPANEL 1 (top row, column 1): Shiyuan short bob star clip cream cardigan practices violin intensely alone at night, barely touched dinner on stool nearby, tired sad expression, empty rehearsal room.\nPANEL 2 (top row, column 2): Shiyuan holds smartphone with unanswered-call icon, tries a fragile reassuring smile to worried seated band, empty drum seat prominently behind her. Tension before concert not happiness.\nPANEL 3 (top row, column 3): Yeshiyang handsome adult navy suit no glasses puts theatre contracts on table then hands viewer a clear cup of warm water; empty red theatre seats behind, businesslike caring gesture.\nPANEL 4 (top row, column 4): Adult male guitarist dark casual shirt carrying acoustic guitar earnestly points at eight highlighted measures on a concert program, phone with many audio clips nearby, rehearsal discussion, no legible text.\nPANEL 5 (bottom row, column 1): Two distinct adult male singers: delicate black-haired Baoshi ivory shirt nervously holds microphone, Feihong denim overshirt offers vocal sheet and sings harmony beside him on EMPTY theatre rehearsal stage. Shy supportive eye contact.\nPANEL 6 (bottom row, column 2): Xiaozhou adult pale blue shirt soft black hair sits at grand piano in EMPTY theatre, hands clasped nervously above keys, looks toward an unseen supportive friend, no spotlight triumph.\nPANEL 7 (bottom row, column 3): Qiqi updo floral qipao gives a sponsorship proposal and coffee to Shiyuan star clip cream cardigan at theatre office table; poster mockup with empty name space on wall, polite but tense negotiation.\nPANEL 8 (bottom row, column 4): Adult Chinese CEO Huang dark side-parted hair thin rectangular glasses navy suit reviews outdoor music festival venue plan at business meeting, points out details then looks gently toward Shiyuan star hairclip with violin. Outdoor festival truss visible through window."
+  },
+  {
+    "batch": "05-opening",
+    "references": [
+      "assets/cardTang.webp",
+      "assets/huang-yixing.webp",
+      "assets/baoshi-portrait.webp",
+      "assets/zhu-conductor.webp",
+      "assets/qiqi-portrait.webp"
+    ],
+    "scenes": [
+      {
+        "chapter": 5,
+        "scene": "c5_rival",
+        "id": "scene_5_c5_rival",
+        "title": "相机里的对手",
+        "location": "排练室 · 汤少的提醒",
+        "text": "汤少翻出相机里的素材，认真说起音乐节当天的挑战。",
+        "description": "Tang shaggy black hair black jacket sits with DSLR and open laptop showing a small photo of bespectacled suited Huang at festival meeting, seriously explains to viewer, no cartoon stats or legible text."
+      },
+      {
+        "chapter": 5,
+        "scene": "c5_band_y",
+        "id": "scene_5_c5_band_y",
+        "title": "排练室外的时间表",
+        "location": "排练室 · 不同的节奏",
+        "text": "黄奕兴送来功能饮料和排练时间表。要不要照着练，由你决定。",
+        "description": "Huang dark side-parted hair thin glasses navy suit delivers energy-drink bottles and a printed rehearsal timetable at studio door, musicians look at schedule, no readable lettering or brand labels."
+      },
+      {
+        "chapter": 5,
+        "scene": "c5_band_bao",
+        "id": "scene_5_c5_band_bao",
+        "title": "纸袋里露出的布料",
+        "location": "排练室 · 宝石的小秘密",
+        "text": "宝石慌忙按住纸袋口，露出的那一截裙料还没来得及收好。",
+        "description": "Baoshi delicate adult male ivory shirt sneaks into rehearsal room holding paper shopping bag, embarrassed shy face as he hides a glimpse of lavender dress fabric peeking out, not wearing dress yet."
+      },
+      {
+        "chapter": 5,
+        "scene": "weekly_prep",
+        "id": "scene_5_weekly_prep",
+        "title": "出发前，再对一遍",
+        "location": "排练室 · 节目单",
+        "text": "垃垃把节目单摊在琴盒上，和你确认起拍、换曲与返场。",
+        "description": "Lala adult long brown hair tied pale ribbon leans over concert setlist spread on closed violin case with friends, points at starting cues and transitions, warm practical preparation scene."
+      },
+      {
+        "chapter": 6,
+        "scene": "c6_zhu",
+        "id": "scene_6_c6_zhu",
+        "title": "第七版的深夜",
+        "location": "琴房 · 和声与改谱",
+        "text": "咖啡杯堆在总谱旁。朱老师对着还没写完的旋律，停下了笔。",
+        "description": "Zhu slim adult short black hair rectangular glasses black jacket white tee alone late at night at piano desk, many revised handwritten scores, stacked coffee cups, exhausted pause holding pencil above blank measures."
+      },
+      {
+        "chapter": 6,
+        "scene": "c6_band_zhu",
+        "id": "scene_6_c6_band_zhu",
+        "title": "少了一支小号之后",
+        "location": "排练室 · 卡祖笛",
+        "text": "小号手请假，朱老师从包里拿出卡祖笛，认真接起了空缺的声部。",
+        "description": "Zhu short black hair rectangular glasses plays a SMALL KAZOO, short palm-sized tube with circular membrane on top, definitely NOT trumpet or long flute, musicians behind suppress smiles, empty trumpet chair and open bag visible."
+      },
+      {
+        "chapter": 6,
+        "scene": "c6_band_q",
+        "id": "scene_6_c6_band_q",
+        "title": "排练室的探班礼物",
+        "location": "琴房 · 柒柒",
+        "text": "柒柒把燕窝礼盒递给朱老师，垃垃在旁边欲言又止。",
+        "description": "Qiqi updo floral qipao gives boxed small jars of bird-nest dessert to grateful Zhu black glasses at a score-covered piano; Lala ribbon brown hair stands to side hesitant to speak, no romantic embrace."
+      },
+      {
+        "chapter": 6,
+        "scene": "weekly_prep",
+        "id": "scene_6_weekly_prep",
+        "title": "最后一幕，连起来",
+        "location": "剧院 · 开幕前连排",
+        "text": "垃垃铺开《拾光》的谱页。侧台的朱老师试着信号，等大家一起入场。",
+        "description": "Musical theatre dress rehearsal with Lala long ribbon hair opening orchestral score on table foreground, Zhu glasses at side stage checking entrance cues, cast and musicians lining up near red curtain, not final applause."
+      }
+    ],
+    "prompt": "Use case: illustration-story. Generate ONE eight-panel atlas for a Chinese orchestra visual novel. EXACT 4 columns x 2 rows, eight equal SQUARE scenes, overall 2:1 landscape. Aim 3072x1536. Straight borders at 25%,50%,75% width and 50% height. No gutters, borders, labels, numbers, text captions, watermark, comic bubbles or UI. Strict row-major scene order. Each panel is an independent complete image with defining faces, hands, instruments and narrative props inside the central 80%, no bleeding across cells. Medium shot or environmental close shot, clear action rather than generic portraits. Do not combine different panels.\nStyle: warm cinematic semi-realistic anime game CG, delicate linework, expressive adult Chinese musicians, richly painted environments. Each character is an ADULT. Preserve character faces, hairstyles and signature clothes from supplied references. References guide identity only, not composition. Small venue Shanqiu is a cozy wood-and-amber bar with music stands. Match mood to text, sad scenes not smiles, anticipation not triumph. Musical notation abstract, no readable text.\n\nReference order: 1: cardTang.webp, 2: huang-yixing.webp, 3: baoshi-portrait.webp, 4: zhu-conductor.webp, 5: qiqi-portrait.webp.\n\nPANEL 1 (top row, column 1): Tang shaggy black hair black jacket sits with DSLR and open laptop showing a small photo of bespectacled suited Huang at festival meeting, seriously explains to viewer, no cartoon stats or legible text.\nPANEL 2 (top row, column 2): Huang dark side-parted hair thin glasses navy suit delivers energy-drink bottles and a printed rehearsal timetable at studio door, musicians look at schedule, no readable lettering or brand labels.\nPANEL 3 (top row, column 3): Baoshi delicate adult male ivory shirt sneaks into rehearsal room holding paper shopping bag, embarrassed shy face as he hides a glimpse of lavender dress fabric peeking out, not wearing dress yet.\nPANEL 4 (top row, column 4): Lala adult long brown hair tied pale ribbon leans over concert setlist spread on closed violin case with friends, points at starting cues and transitions, warm practical preparation scene.\nPANEL 5 (bottom row, column 1): Zhu slim adult short black hair rectangular glasses black jacket white tee alone late at night at piano desk, many revised handwritten scores, stacked coffee cups, exhausted pause holding pencil above blank measures.\nPANEL 6 (bottom row, column 2): Zhu short black hair rectangular glasses plays a SMALL KAZOO, short palm-sized tube with circular membrane on top, definitely NOT trumpet or long flute, musicians behind suppress smiles, empty trumpet chair and open bag visible.\nPANEL 7 (bottom row, column 3): Qiqi updo floral qipao gives boxed small jars of bird-nest dessert to grateful Zhu black glasses at a score-covered piano; Lala ribbon brown hair stands to side hesitant to speak, no romantic embrace.\nPANEL 8 (bottom row, column 4): Musical theatre dress rehearsal with Lala long ribbon hair opening orchestral score on table foreground, Zhu glasses at side stage checking entrance cues, cast and musicians lining up near red curtain, not final applause."
+  },
+  {
+    "batch": "06-character-fixes",
+    "references": [
+      "assets/cardAzhe.webp",
+      "assets/cardLala.webp",
+      "assets/dayang-portrait.webp",
+      "assets/baoshi-portrait.webp",
+      "assets/cardTang.webp"
+    ],
+    "scenes": [
+      {
+        "chapter": 1,
+        "scene": "s_look",
+        "id": "scene_1_s_look",
+        "title": "谱架之间的伙伴",
+        "location": "山丘 · 四处看看",
+        "text": "翻谱的阿喆、谱架后的笛杰，还有正在调试相机的汤少，组成了你对乐团的第一印象。",
+        "description": "Exactly three adult MEN: Azhe (REFERENCE 1 wavy BROWN hair fine ROUND GLASSES, slim BLACK shirt) in front flipping score pages, Dijie (tousled black hair NO GLASSES, brown plaid overshirt) behind a music stand holding a silver flute, Tang (REFERENCE 5 black jacket black hair) adjusting camera near door. Do NOT draw stocky Kongge or rectangular glasses on Azhe."
+      },
+      {
+        "chapter": 1,
+        "scene": "after_practice_fail",
+        "id": "scene_1_after_practice_fail",
+        "title": "翻不过去的那一页",
+        "location": "山丘 · 再练一次",
+        "text": "空格圈出需要再练的小节，阿喆悄悄靠过来，替你翻好了下一页。",
+        "description": "Azhe (REFERENCE 1, slim adult wavy BROWN hair, fine ROUND GLASSES, black shirt) kindly leans toward viewer flipping a marked music score, violin on desk, in a warm bar rehearsal room after an unsuccessful audition. Full gentle expressive face, not Kongge."
+      },
+      {
+        "chapter": 5,
+        "scene": "weekly_prep",
+        "id": "scene_5_weekly_prep",
+        "title": "出发前，再对一遍",
+        "location": "排练室 · 节目单",
+        "text": "垃垃把节目单摊在琴盒上，和你确认起拍、换曲与返场。",
+        "description": "LALA (REFERENCE 2: young ADULT woman long brown hair tied PALE RIBBON, white blouse with dark bow and dark pleated skirt, NO QIPAO, NO FLORAL dress, NOT Qiqi) reviews a concert setlist on a closed violin case and points at starting cues, with friends softly blurred. Warm rehearsal room."
+      },
+      {
+        "chapter": 4,
+        "scene": "c4_prep",
+        "id": "scene_4_c4_prep",
+        "title": "八小节，还是十六小节",
+        "location": "剧院 · 节目单",
+        "text": "大羊盯着节目单，想让自己的 SOLO 再长一点。",
+        "description": "Dayang (REFERENCE 3 male adult long tied-back black hair, round glasses, dark shirt) carries an acoustic guitar while pointing earnestly at eight marked music bars on program, tablet with audio clips beside it, discussing a longer solo at theatre rehearsal."
+      },
+      {
+        "chapter": 5,
+        "scene": "c5_band_bao",
+        "id": "scene_5_c5_band_bao",
+        "title": "纸袋里露出的布料",
+        "location": "排练室 · 宝石的小秘密",
+        "text": "宝石慌忙按住纸袋口，露出的那一截裙料还没来得及收好。",
+        "description": "Baoshi (REFERENCE 4 delicate black-haired adult MALE, ivory shirt, NO GLASSES) sneaks through rehearsal-room door hiding a paper bag containing a visible piece of lavender dress fabric. Bashful flustered expression, not wearing the dress yet."
+      },
+      {
+        "chapter": 6,
+        "scene": "c6_warn",
+        "id": "scene_6_c6_warn",
+        "title": "谱页之外的心气",
+        "location": "琴房 · 垃垃的提醒",
+        "text": "垃垃把你拉到一旁，低声说起朱老师对这部音乐剧的心意。",
+        "description": "Lala reference 2 long ribbon-tied brown hair white blouse dark bow quietly leans toward viewer by a rehearsal-room door, holding a score notebook close, serious caring whisper, not qipao."
+      },
+      {
+        "chapter": 2,
+        "scene": "c2_str",
+        "id": "scene_2_c2_str",
+        "title": "站到弦乐这一边",
+        "location": "山丘 · 分组之后",
+        "text": "你站到弦乐组身旁，垃垃安静地看了你一眼。",
+        "description": "Lala reference 2 white blouse dark bow long brown hair pale ribbon sits with violin among a small string quartet, looks quietly toward viewer arriving beside her, warm bar music stands, not a full orchestra or stage."
+      },
+      {
+        "chapter": 2,
+        "scene": "c2_head_a",
+        "id": "scene_2_c2_head_a",
+        "title": "他看过三次门口",
+        "location": "楼梯间 · 阿喆",
+        "text": "阿喆抱着琴坐在楼梯间，看见你来，才慢慢说起刚才的心事。",
+        "description": "Azhe reference 1 slim wavy brown hair fine round glasses black shirt sits in stairwell holding violin close, looks toward viewer with shy hurt but grateful expression, dim corridor lamp, no other named characters."
+      }
+    ],
+    "prompt": "Use case: illustration-story. Generate ONE eight-panel atlas for a Chinese orchestra visual novel. EXACT 4 columns x 2 rows, eight equal SQUARE scenes, overall 2:1 landscape. Aim 3072x1536. Straight borders at 25%,50%,75% width and 50% height. No gutters, borders, labels, numbers, text captions, watermark, comic bubbles or UI. Strict row-major scene order. Each panel is an independent complete image with defining faces, hands, instruments and narrative props inside the central 80%, no bleeding across cells. Medium shot or environmental close shot, clear action rather than generic portraits. Do not combine different panels.\nStyle: warm cinematic semi-realistic anime game CG, delicate linework, expressive adult Chinese musicians, richly painted environments. Each character is an ADULT. Preserve character faces, hairstyles and signature clothes from supplied references. References guide identity only, not composition. Small venue Shanqiu is a cozy wood-and-amber bar with music stands. Match mood to text, sad scenes not smiles, anticipation not triumph. Musical notation abstract, no readable text.\n\nReference order: 1 Azhe, 2 Lala, 3 Dayang, 4 Baoshi, 5 Tang. Preserve each IDENTITY; do not transfer glasses or costumes between characters.\n\nPANEL 1 (top row, column 1): Exactly three adult MEN: Azhe (REFERENCE 1 wavy BROWN hair fine ROUND GLASSES, slim BLACK shirt) in front flipping score pages, Dijie (tousled black hair NO GLASSES, brown plaid overshirt) behind a music stand holding a silver flute, Tang (REFERENCE 5 black jacket black hair) adjusting camera near door. Do NOT draw stocky Kongge or rectangular glasses on Azhe.\nPANEL 2 (top row, column 2): Azhe (REFERENCE 1, slim adult wavy BROWN hair, fine ROUND GLASSES, black shirt) kindly leans toward viewer flipping a marked music score, violin on desk, in a warm bar rehearsal room after an unsuccessful audition. Full gentle expressive face, not Kongge.\nPANEL 3 (top row, column 3): LALA (REFERENCE 2: young ADULT woman long brown hair tied PALE RIBBON, white blouse with dark bow and dark pleated skirt, NO QIPAO, NO FLORAL dress, NOT Qiqi) reviews a concert setlist on a closed violin case and points at starting cues, with friends softly blurred. Warm rehearsal room.\nPANEL 4 (top row, column 4): Dayang (REFERENCE 3 male adult long tied-back black hair, round glasses, dark shirt) carries an acoustic guitar while pointing earnestly at eight marked music bars on program, tablet with audio clips beside it, discussing a longer solo at theatre rehearsal.\nPANEL 5 (bottom row, column 1): Baoshi (REFERENCE 4 delicate black-haired adult MALE, ivory shirt, NO GLASSES) sneaks through rehearsal-room door hiding a paper bag containing a visible piece of lavender dress fabric. Bashful flustered expression, not wearing the dress yet.\nPANEL 6 (bottom row, column 2): Lala reference 2 long ribbon-tied brown hair white blouse dark bow quietly leans toward viewer by a rehearsal-room door, holding a score notebook close, serious caring whisper, not qipao.\nPANEL 7 (bottom row, column 3): Lala reference 2 white blouse dark bow long brown hair pale ribbon sits with violin among a small string quartet, looks quietly toward viewer arriving beside her, warm bar music stands, not a full orchestra or stage.\nPANEL 8 (bottom row, column 4): Azhe reference 1 slim wavy brown hair fine round glasses black shirt sits in stairwell holding violin close, looks toward viewer with shy hurt but grateful expression, dim corridor lamp, no other named characters."
+  }
+]

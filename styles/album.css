@@ -1,0 +1,22 @@
+/* Album scenes keep their entire composition in thumbnails and the detail view. */
+.memory-img {
+  height: auto;
+  aspect-ratio: 1;
+  background: #fffaf4;
+}
+
+.memory-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: none;
+}
+
+.photo-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  object-position: center;
+}

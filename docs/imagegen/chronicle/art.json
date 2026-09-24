@@ -1,0 +1,690 @@
+[
+  {
+    "id": "scene_1_s_door",
+    "chapter": 1,
+    "scene": "s_door",
+    "title": "门边的第一声招呼",
+    "asset": "assets/chronicle/scenes/scene_1_s_door.webp",
+    "source": "assets/chronicle/scenes/source/01-arrival.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/01-arrival.txt"
+  },
+  {
+    "id": "scene_1_s_room",
+    "chapter": 1,
+    "scene": "s_room",
+    "title": "角落里的小星星",
+    "asset": "assets/chronicle/scenes/scene_1_s_room.webp",
+    "source": "assets/chronicle/scenes/source/01-arrival.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/01-arrival.txt"
+  },
+  {
+    "id": "scene_1_s_look",
+    "chapter": 1,
+    "scene": "s_look",
+    "title": "谱架之间的伙伴",
+    "asset": "assets/chronicle/scenes/scene_1_s_look.webp",
+    "source": "assets/chronicle/scenes/source/06-character-fixes.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/06-character-fixes.txt"
+  },
+  {
+    "id": "scene_1_s_shi",
+    "chapter": 1,
+    "scene": "s_shi",
+    "title": "停下琴声，向你招手",
+    "asset": "assets/chronicle/scenes/scene_1_s_shi.webp",
+    "source": "assets/chronicle/scenes/source/01-arrival.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/01-arrival.txt"
+  },
+  {
+    "id": "scene_1_s_dream",
+    "chapter": 1,
+    "scene": "s_dream",
+    "title": "还没站上的舞台",
+    "asset": "assets/chronicle/scenes/scene_1_s_dream.webp",
+    "source": "assets/chronicle/scenes/source/01-arrival.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/01-arrival.txt"
+  },
+  {
+    "id": "scene_1_s_first",
+    "chapter": 1,
+    "scene": "s_first",
+    "title": "首席抬起了笔",
+    "asset": "assets/chronicle/scenes/scene_1_s_first.webp",
+    "source": "assets/chronicle/scenes/source/01-arrival.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/01-arrival.txt"
+  },
+  {
+    "id": "scene_1_gig",
+    "chapter": 1,
+    "scene": "gig",
+    "title": "第一封演出邀请",
+    "asset": "assets/chronicle/scenes/scene_1_gig.webp",
+    "source": "assets/chronicle/scenes/source/01-arrival.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/01-arrival.txt"
+  },
+  {
+    "id": "scene_1_emo",
+    "chapter": 1,
+    "scene": "emo",
+    "title": "放下长笛的那一刻",
+    "asset": "assets/chronicle/scenes/scene_1_emo.webp",
+    "source": "assets/chronicle/scenes/source/01-arrival.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/01-arrival.txt"
+  },
+  {
+    "id": "scene_1_s_conflict",
+    "chapter": 1,
+    "scene": "s_conflict",
+    "title": "散场后的争执",
+    "asset": "assets/chronicle/scenes/scene_1_s_conflict.webp",
+    "source": "assets/chronicle/scenes/source/02-rehearsal.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/02-rehearsal.txt"
+  },
+  {
+    "id": "scene_1_s_fei1",
+    "chapter": 1,
+    "scene": "s_fei1",
+    "title": "用和声还给你",
+    "asset": "assets/chronicle/scenes/scene_1_s_fei1.webp",
+    "source": "assets/chronicle/scenes/source/02-rehearsal.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/02-rehearsal.txt"
+  },
+  {
+    "id": "scene_1_s_fei2",
+    "chapter": 1,
+    "scene": "s_fei2",
+    "title": "没有说完的话",
+    "asset": "assets/chronicle/scenes/scene_1_s_fei2.webp",
+    "source": "assets/chronicle/scenes/source/02-rehearsal.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/02-rehearsal.txt"
+  },
+  {
+    "id": "scene_1_practice_partner",
+    "chapter": 1,
+    "scene": "practice_partner",
+    "title": "留给搭档的位置",
+    "asset": "assets/chronicle/scenes/scene_1_practice_partner.webp",
+    "source": "assets/chronicle/scenes/source/02-rehearsal.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/02-rehearsal.txt"
+  },
+  {
+    "id": "scene_1_after_practice_win",
+    "chapter": 1,
+    "scene": "after_practice_win",
+    "title": "下一拍，有人帮你",
+    "asset": "assets/chronicle/scenes/scene_1_after_practice_win.webp",
+    "source": "assets/chronicle/scenes/source/02-rehearsal.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/02-rehearsal.txt"
+  },
+  {
+    "id": "scene_1_after_practice_fail",
+    "chapter": 1,
+    "scene": "after_practice_fail",
+    "title": "翻不过去的那一页",
+    "asset": "assets/chronicle/scenes/scene_1_after_practice_fail.webp",
+    "source": "assets/chronicle/scenes/source/06-character-fixes.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/06-character-fixes.txt"
+  },
+  {
+    "id": "scene_1_live_intro",
+    "chapter": 1,
+    "scene": "live_intro",
+    "title": "人群围了过来",
+    "asset": "assets/chronicle/scenes/scene_1_live_intro.webp",
+    "source": "assets/chronicle/scenes/source/02-rehearsal.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/02-rehearsal.txt"
+  },
+  {
+    "id": "scene_1_b_live",
+    "chapter": 1,
+    "scene": "b_live",
+    "title": "第一步，走向台前",
+    "asset": "assets/chronicle/scenes/scene_1_b_live.webp",
+    "source": "assets/chronicle/scenes/source/02-rehearsal.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/02-rehearsal.txt"
+  },
+  {
+    "id": "scene_2_c2_intro",
+    "chapter": 2,
+    "scene": "c2_intro",
+    "title": "两种旋律挤在一起",
+    "asset": "assets/chronicle/scenes/scene_2_c2_intro.webp",
+    "source": "assets/chronicle/scenes/source/03-undercurrents.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/03-undercurrents.txt"
+  },
+  {
+    "id": "scene_2_c2_head",
+    "chapter": 2,
+    "scene": "c2_head",
+    "title": "十秒换掉的头像",
+    "asset": "assets/chronicle/scenes/scene_2_c2_head.webp",
+    "source": "assets/chronicle/scenes/source/03-undercurrents.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/03-undercurrents.txt"
+  },
+  {
+    "id": "scene_2_c2_sponsor",
+    "chapter": 2,
+    "scene": "c2_sponsor",
+    "title": "那份厚厚的心意",
+    "asset": "assets/chronicle/scenes/scene_2_c2_sponsor.webp",
+    "source": "assets/chronicle/scenes/source/03-undercurrents.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/03-undercurrents.txt"
+  },
+  {
+    "id": "scene_2_c2_kong",
+    "chapter": 2,
+    "scene": "c2_kong",
+    "title": "楼梯间的去留",
+    "asset": "assets/chronicle/scenes/scene_2_c2_kong.webp",
+    "source": "assets/chronicle/scenes/source/03-undercurrents.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/03-undercurrents.txt"
+  },
+  {
+    "id": "scene_2_c2_bill",
+    "chapter": 2,
+    "scene": "c2_bill",
+    "title": "迟迟空着的鼓位",
+    "asset": "assets/chronicle/scenes/scene_2_c2_bill.webp",
+    "source": "assets/chronicle/scenes/source/03-undercurrents.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/03-undercurrents.txt"
+  },
+  {
+    "id": "scene_3_c3_intro",
+    "chapter": 3,
+    "scene": "c3_intro",
+    "title": "门口的手作饼干",
+    "asset": "assets/chronicle/scenes/scene_3_c3_intro.webp",
+    "source": "assets/chronicle/scenes/source/03-undercurrents.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/03-undercurrents.txt"
+  },
+  {
+    "id": "scene_3_c3_prep",
+    "chapter": 3,
+    "scene": "c3_prep",
+    "title": "筹备期的小混乱",
+    "asset": "assets/chronicle/scenes/scene_3_c3_prep.webp",
+    "source": "assets/chronicle/scenes/source/03-undercurrents.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/03-undercurrents.txt"
+  },
+  {
+    "id": "scene_3_c3_band_zhou",
+    "chapter": 3,
+    "scene": "c3_band_zhou",
+    "title": "被画乱的谱页",
+    "asset": "assets/chronicle/scenes/scene_3_c3_band_zhou.webp",
+    "source": "assets/chronicle/scenes/source/03-undercurrents.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/03-undercurrents.txt"
+  },
+  {
+    "id": "scene_3_c3_ge",
+    "chapter": 3,
+    "scene": "c3_ge",
+    "title": "琴房里没吃完的饭",
+    "asset": "assets/chronicle/scenes/scene_3_c3_ge.webp",
+    "source": "assets/chronicle/scenes/source/04-theatre.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/04-theatre.txt"
+  },
+  {
+    "id": "scene_3_c3_bill",
+    "chapter": 3,
+    "scene": "c3_bill",
+    "title": "拨不通的电话",
+    "asset": "assets/chronicle/scenes/scene_3_c3_bill.webp",
+    "source": "assets/chronicle/scenes/source/04-theatre.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/04-theatre.txt"
+  },
+  {
+    "id": "scene_4_c4_intro",
+    "chapter": 4,
+    "scene": "c4_intro",
+    "title": "合同之外的一杯温水",
+    "asset": "assets/chronicle/scenes/scene_4_c4_intro.webp",
+    "source": "assets/chronicle/scenes/source/04-theatre.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/04-theatre.txt"
+  },
+  {
+    "id": "scene_4_c4_prep",
+    "chapter": 4,
+    "scene": "c4_prep",
+    "title": "八小节，还是十六小节",
+    "asset": "assets/chronicle/scenes/scene_4_c4_prep.webp",
+    "source": "assets/chronicle/scenes/source/06-character-fixes.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/06-character-fixes.txt"
+  },
+  {
+    "id": "scene_4_c4_bao",
+    "chapter": 4,
+    "scene": "c4_bao",
+    "title": "我帮你唱和声",
+    "asset": "assets/chronicle/scenes/scene_4_c4_bao.webp",
+    "source": "assets/chronicle/scenes/source/04-theatre.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/04-theatre.txt"
+  },
+  {
+    "id": "scene_4_c4_band_zhou",
+    "chapter": 4,
+    "scene": "c4_band_zhou",
+    "title": "登台前冰凉的手",
+    "asset": "assets/chronicle/scenes/scene_4_c4_band_zhou.webp",
+    "source": "assets/chronicle/scenes/source/04-theatre.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/04-theatre.txt"
+  },
+  {
+    "id": "scene_4_c4_qiqi",
+    "chapter": 4,
+    "scene": "c4_qiqi",
+    "title": "海报上的署名",
+    "asset": "assets/chronicle/scenes/scene_4_c4_qiqi.webp",
+    "source": "assets/chronicle/scenes/source/04-theatre.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/04-theatre.txt"
+  },
+  {
+    "id": "scene_5_c5_intro",
+    "chapter": 5,
+    "scene": "c5_intro",
+    "title": "站上更大的舞台之前",
+    "asset": "assets/chronicle/scenes/scene_5_c5_intro.webp",
+    "source": "assets/chronicle/scenes/source/04-theatre.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/04-theatre.txt"
+  },
+  {
+    "id": "scene_5_c5_rival",
+    "chapter": 5,
+    "scene": "c5_rival",
+    "title": "相机里的对手",
+    "asset": "assets/chronicle/scenes/scene_5_c5_rival.webp",
+    "source": "assets/chronicle/scenes/source/05-opening.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/05-opening.txt"
+  },
+  {
+    "id": "scene_5_c5_band_y",
+    "chapter": 5,
+    "scene": "c5_band_y",
+    "title": "排练室外的时间表",
+    "asset": "assets/chronicle/scenes/scene_5_c5_band_y.webp",
+    "source": "assets/chronicle/scenes/source/05-opening.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/05-opening.txt"
+  },
+  {
+    "id": "scene_5_c5_band_bao",
+    "chapter": 5,
+    "scene": "c5_band_bao",
+    "title": "纸袋里露出的布料",
+    "asset": "assets/chronicle/scenes/scene_5_c5_band_bao.webp",
+    "source": "assets/chronicle/scenes/source/06-character-fixes.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/06-character-fixes.txt"
+  },
+  {
+    "id": "scene_5_weekly_prep",
+    "chapter": 5,
+    "scene": "weekly_prep",
+    "title": "出发前，再对一遍",
+    "asset": "assets/chronicle/scenes/scene_5_weekly_prep.webp",
+    "source": "assets/chronicle/scenes/source/06-character-fixes.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/06-character-fixes.txt"
+  },
+  {
+    "id": "scene_6_c6_zhu",
+    "chapter": 6,
+    "scene": "c6_zhu",
+    "title": "第七版的深夜",
+    "asset": "assets/chronicle/scenes/scene_6_c6_zhu.webp",
+    "source": "assets/chronicle/scenes/source/05-opening.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/05-opening.txt"
+  },
+  {
+    "id": "scene_6_c6_band_zhu",
+    "chapter": 6,
+    "scene": "c6_band_zhu",
+    "title": "少了一支小号之后",
+    "asset": "assets/chronicle/scenes/scene_6_c6_band_zhu.webp",
+    "source": "assets/chronicle/scenes/source/05-opening.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/05-opening.txt"
+  },
+  {
+    "id": "scene_6_c6_band_q",
+    "chapter": 6,
+    "scene": "c6_band_q",
+    "title": "排练室的探班礼物",
+    "asset": "assets/chronicle/scenes/scene_6_c6_band_q.webp",
+    "source": "assets/chronicle/scenes/source/05-opening.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/05-opening.txt"
+  },
+  {
+    "id": "scene_6_weekly_prep",
+    "chapter": 6,
+    "scene": "weekly_prep",
+    "title": "最后一幕，连起来",
+    "asset": "assets/chronicle/scenes/scene_6_weekly_prep.webp",
+    "source": "assets/chronicle/scenes/source/05-opening.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/05-opening.txt"
+  },
+  {
+    "id": "scene_6_c6_warn",
+    "chapter": 6,
+    "scene": "c6_warn",
+    "title": "谱页之外的心气",
+    "asset": "assets/chronicle/scenes/scene_6_c6_warn.webp",
+    "source": "assets/chronicle/scenes/source/06-character-fixes.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/06-character-fixes.txt"
+  },
+  {
+    "id": "scene_2_c2_str",
+    "chapter": 2,
+    "scene": "c2_str",
+    "title": "站到弦乐这一边",
+    "asset": "assets/chronicle/scenes/scene_2_c2_str.webp",
+    "source": "assets/chronicle/scenes/source/06-character-fixes.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/06-character-fixes.txt"
+  },
+  {
+    "id": "scene_2_c2_head_a",
+    "chapter": 2,
+    "scene": "c2_head_a",
+    "title": "他看过三次门口",
+    "asset": "assets/chronicle/scenes/scene_2_c2_head_a.webp",
+    "source": "assets/chronicle/scenes/source/06-character-fixes.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/06-character-fixes.txt"
+  }
+]

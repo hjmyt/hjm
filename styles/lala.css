@@ -1,0 +1,529 @@
+/* Lala · warm paper, rose & sage. No external fonts or images. */
+#lalaHomeEntry {
+  grid-column:1/-1
+}
+.lala-entry {
+  display:flex;
+  align-items:center;
+  gap:16px;
+  padding:19px 22px;
+  margin:0 0 18px;
+  border:1px solid #e9d6d8;
+  border-radius:20px;
+  background:linear-gradient(110deg,#fff5f3,#f9f9ef);
+  box-shadow:0 8px 26px #89585f0a
+}
+.lala-entry>img {
+  width:72px;
+  height:72px;
+  border-radius:19px;
+  object-fit:cover;
+  flex:none
+}
+.lala-entry>div:nth-child(2) {
+  flex:1;
+  min-width:0
+}
+.lala-entry h3 {
+  font-family:var(--serif);
+  font-size:20px;
+  margin:3px 0
+}
+.lala-entry p {
+  font-size:11px;
+  color:var(--muted)
+}
+.lala-actions {
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap
+}
+#view-card[data-person="lala"] .character-cover {
+  min-height:0;
+  background:linear-gradient(145deg,#fff8f3,#f3e6e8 55%,#e9eee5);
+  border-color:#e4ccd1;
+  color:#644955;
+  box-shadow:0 12px 35px #7b555010
+}
+#view-card[data-person="lala"] .character-cover:before {
+  background:radial-gradient(circle at 90% 10%,#d7b2c840,transparent 50%);
+  z-index:-2
+}
+#view-card[data-person="lala"] .character-cover:after {
+  border-color:#bda38950
+}
+#view-card[data-person="lala"] .cover-art {
+  position:relative;
+  inset:auto;
+  width:calc(100% - 68px);
+  height:auto;
+  max-width:330px;
+  aspect-ratio:191/170;
+  object-fit:cover;
+  margin:105px auto 0;
+  border:6px solid #fffaf7;
+  border-radius:24px;
+  box-shadow:0 9px 28px #7d526c20;
+  z-index:0
+}
+#view-card[data-person="lala"] .cover-top {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1
+}
+#view-card[data-person="lala"] .cover-rarity {
+  color:#a78350;
+  text-shadow:none
+}
+#view-card[data-person="lala"] .cover-rarity small {
+  color:#8d7c84;
+  font-size:8px;
+  letter-spacing:2px
+}
+#view-card[data-person="lala"] .cover-tag {
+  color:#98647b;
+  background:#fffaf8bd;
+  border-color:#e6cad5
+}
+#view-card[data-person="lala"] .cover-content {
+  padding:24px 30px 30px;
+  margin-top:0
+}
+#view-card[data-person="lala"] .cover-name {
+  color:#594150;
+  font-size:42px
+}
+#view-card[data-person="lala"] .cover-sub,#view-card[data-person="lala"] .cover-signature {
+  color:#907780
+}
+#view-card[data-person="lala"] .cover-content blockquote {
+  color:#79606a;
+  margin:19px 0 17px
+}
+#view-card[data-person="lala"] .cover-bottom-stats {
+  border-color:#d8c6ca;
+  color:#977849
+}
+#view-card[data-person="lala"] .cover-bottom-stats b {
+  color:#8d6477
+}
+#view-card[data-person="lala"] .cover-actions .btn {
+  background:#fffaf8;
+  border-color:#e2c7ce;
+  color:#8b5a70
+}
+#view-card[data-person="lala"] .cover-actions .btn.cover-main {
+  background:#be7e91;
+  border-color:#be7e91;
+  color:#fff
+}
+#view-card[data-person="lala"] .profile-stat strong small {
+  font-size:11px;
+  color:#a58056;
+  font-weight:400
+}
+.lala-credit {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  font-size:11px;
+  color:#9c7556;
+  background:#fbf4e8;
+  border:1px solid #eee0c8;
+  padding:9px 12px;
+  border-radius:9px;
+  margin:14px 0 10px
+}
+.lala-music-box {
+  padding:16px;
+  border:1px solid #ebdddb;
+  border-radius:14px;
+  background:#fffcf8;
+  margin-top:12px
+}
+.lala-music-box h4 {
+  font-size:15px;
+  margin:0 0 8px;
+  color:#775569
+}
+.lala-music-box p {
+  font-size:12px;
+  color:#8b7481;
+  line-height:1.9;
+  margin-bottom:12px
+}
+.lala-music-box>small {
+  display:block;
+  font-size:10px;
+  line-height:1.85;
+  color:#9e8892;
+  margin-top:11px
+}
+.lala-section-picker {
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap
+}
+.lala-selected {
+  background:#f1dce5!important;
+  border-color:#c48ba0!important;
+  color:#8a4e6c!important
+}
+.lala-music-box .lala-section-state {
+  margin:11px 0 0;
+  color:#91704f;
+  font-size:11px
+}
+.lala-recap {
+  display:flex;
+  gap:17px;
+  background:linear-gradient(135deg,#fff8ee,#f9edf0);
+  border:1px solid #e8d3d2;
+  border-radius:18px;
+  padding:20px;
+  margin:0 0 18px
+}
+.lala-recap>img {
+  height:72px;
+  width:72px;
+  object-fit:cover;
+  flex:none;
+  border-radius:19px;
+  border:3px solid #fff
+}
+.lala-recap>div {
+  flex:1;
+  min-width:0
+}
+.lala-recap h3 {
+  font-size:17px;
+  font-family:var(--serif);
+  margin:6px 0 8px
+}
+.lala-recap p {
+  font-size:12px;
+  line-height:1.9;
+  color:#876d7c;
+  margin:0 0 13px
+}
+.lala-notebook-shortcut {
+  display:flex;
+  align-items:center;
+  gap:9px;
+  margin:0 0 14px;
+  padding:10px 14px;
+  background:#fffbf4;
+  border:1px solid #eee0ce;
+  border-radius:11px;
+  color:#9b7b59;
+  font-size:11px
+}
+.lala-notebook-shortcut span {
+  flex:1
+}
+.lala-notebook-shortcut .btn {
+  font-size:10px;
+  padding:5px 8px;
+  min-height:30px
+}
+.lala-modal-head {
+  display:flex;
+  gap:15px;
+  align-items:center;
+  margin:0 0 18px
+}
+.lala-modal-head img {
+  width:75px;
+  height:75px;
+  object-fit:cover;
+  border-radius:18px;
+  flex:none;
+  border:3px solid #fff
+}
+.lala-modal-head h3 {
+  margin:4px 0!important;
+  font-family:var(--serif);
+  font-size:20px
+}
+.lala-modal-head p {
+  font-size:11px
+}
+.lala-journal-tabs {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:12px 0
+}
+.lala-notebook-summary {
+  padding:16px 18px;
+  background:#faf0e9;
+  border:1px solid #ebd9d2;
+  border-radius:13px;
+  margin:15px 0
+}
+.lala-notebook-summary p {
+  margin:5px 0;
+  font-size:12px;
+  color:#816373
+}
+.lala-relations {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px
+}
+.lala-relations>span {
+  background:#f1e8eb;
+  border-radius:8px;
+  padding:5px 9px;
+  font-size:11px;
+  color:#896279
+}
+.lala-relations b {
+  margin-left:7px;
+  color:#b07e50
+}
+.lala-journal-item {
+  border:1px solid #e9dbd9;
+  border-radius:11px;
+  background:#fffdfa;
+  margin:8px 0;
+  overflow:hidden
+}
+.lala-journal-item summary {
+  cursor:pointer;
+  font-size:12px;
+  padding:11px 14px;
+  color:#745265
+}
+.lala-journal-item summary>span {
+  font-size:10px;
+  color:#a58a91;
+  margin-right:12px
+}
+.lala-journal-dialogue {
+  border-top:1px solid #eee2dc;
+  padding:13px 15px
+}
+.lala-journal-dialogue>b {
+  font-size:12px;
+  color:#a5667c
+}
+.lala-journal-dialogue p {
+  font-size:12px;
+  margin:9px 0
+}
+.lala-journal-dialogue>small {
+  color:#ad949c;
+  font-size:10px
+}
+.lala-choice-record {
+  background:#f4e6ec;
+  border-radius:9px;
+  font-size:11px;
+  color:#936276;
+  padding:9px 12px;
+  margin-top:11px
+}
+.lala-action-line {
+  display:flex;
+  gap:12px;
+  align-items:baseline;
+  border-bottom:1px dashed #e8dcd7;
+  padding:8px 0
+}
+.lala-action-line>span {
+  flex:none;
+  font-size:10px;
+  color:#b39b9c
+}
+.lala-action-line>p {
+  margin:0;
+  font-size:11px
+}
+.lala-empty {
+  border:1px dashed #dccbcf;
+  padding:13px 16px;
+  border-radius:12px
+}
+.modal h3 small {
+  font:10px var(--sans);
+  color:var(--muted);
+  font-weight:400;
+  display:inline-block;
+  margin-left:7px
+}
+.lala-score-svg {
+  width:100%;
+  height:auto;
+  display:block;
+  margin:15px 0 7px;
+  border:1px solid #e4d7c9;
+  border-radius:12px
+}
+.lala-number-score {
+  background:#f7e9ed;
+  border-radius:12px;
+  padding:14px 16px;
+  margin:0 0 17px;
+  text-align:center
+}
+.lala-number-score>span,.lala-number-score>small {
+  display:block;
+  font-size:11px;
+  color:#957580
+}
+.lala-number-score>strong {
+  display:block;
+  font:22px Georgia,serif;
+  color:#67455c;
+  margin:7px 0;
+  white-space:nowrap
+}
+@media(max-width:720px) {
+  .lala-entry {
+    flex-wrap:wrap;
+    padding:16px;
+    gap:12px
+  }
+  .lala-entry>img {
+    width:58px;
+    height:58px
+  }
+  .lala-entry h3 {
+    font-size:18px
+  }
+  .lala-entry .lala-actions {
+    width:100%
+  }
+  .lala-entry p {
+    font-size:10px
+  }
+  .lala-entry .lala-actions .btn {
+    flex:1
+  }
+  #view-card[data-person="lala"] .cover-art {
+    max-width:275px;
+    margin-top:98px
+  }
+  #view-card[data-person="lala"] .cover-content {
+    padding:20px 25px 24px
+  }
+  #view-card[data-person="lala"] .cover-name {
+    font-size:35px
+  }
+  .lala-recap {
+    padding:15px;
+    gap:11px
+  }
+  .lala-recap>img {
+    width:46px;
+    height:46px;
+    border-radius:13px
+  }
+  .lala-recap h3 {
+    font-size:15px
+  }
+  .lala-recap p {
+    font-size:11px
+  }
+  .lala-recap .eyebrow {
+    font-size:8px;
+    letter-spacing:1px
+  }
+  .lala-recap .btn {
+    font-size:10px;
+    padding:7px 9px
+  }
+  .lala-notebook-shortcut {
+    flex-wrap:wrap;
+    font-size:10px
+  }
+  .lala-notebook-shortcut span {
+    min-width:130px
+  }
+  .lala-modal-head {
+    gap:11px
+  }
+  .lala-modal-head img {
+    width:56px;
+    height:56px
+  }
+  .lala-modal-head h3 {
+    font-size:17px
+  }
+  .lala-modal-head .eyebrow {
+    font-size:8px;
+    letter-spacing:1px
+  }
+  .lala-number-score>strong {
+    font-size:16px
+  }
+  .lala-number-score {
+    padding:13px 7px
+  }
+  .lala-music-box {
+    padding:13px
+  }
+  .lala-music-box p {
+    font-size:11px
+  }
+  .lala-section-picker .btn {
+    font-size:10px;
+    padding:7px 8px;
+    flex:1
+  }
+  .lala-journal-item summary {
+    font-size:11px
+  }
+}
+.chapter-lock-art {
+  min-height:220px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:20px;
+  background:linear-gradient(145deg,#eee9e7,#dedbe5);
+  color:#85808d
+}
+.chapter-lock-art .icon {
+  width:38px;
+  height:38px
+}
+.chapter-lock-art span {
+  font-size:12px;
+  letter-spacing:3px
+}
+.chapter-locked .locked-message {
+  top:50%;
+  transform:translateY(-50%);
+  text-shadow:0 1px 8px #152033
+}
+.chapter-locked .collect-info {
+  padding:22px
+}
+.chapter-locked p {
+  font-size:12px;
+  color:#8c8493;
+  margin:12px 0 18px
+}
+.hidden-skill summary {
+  cursor:pointer;
+  display:flex;
+  align-items:center;
+  gap:9px;
+  font-weight:600;
+  padding:8px 0
+}
+.hidden-skill>article {
+  margin-top:14px
+}
+.hidden-skill.locked {
+  opacity:.8
+}
+.hidden-skill.locked p {
+  color:#918997
+}

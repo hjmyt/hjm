@@ -12,20 +12,21 @@ const assert=require('node:assert/strict');
    const out=[],check=(name,ok)=>{if(!ok)throw Error(name+' (scene '+state.chronicle.run.scene+')');out.push(name);};
    const click=async selector=>{await new Promise(r=>setTimeout(r,215));const b=document.querySelector(selector);if(!b||b.disabled)throw Error('Unavailable '+selector);b.click();};
    const choose=n=>click(`[data-cp-choice="${n}"]`);
+  const nextStory=async()=>{await click('[data-cp-action="end-week"]');};
    const reset=()=>{closeModal(false);state=freshState();state.sound=false;save();route('home');};
    const render=()=>{state.chronicle.run.rev++;renderGlobal();};
-   const scene=(id,flags={},aff={})=>{reset();state.chronicle.completedChapters=[1,2,3];Object.assign(state.chronicle.run,{chapter:4,ch:4,name:'剧场测试',inst:'小提琴',scene:id,tech:15,level:3,gold:60,flags,aff:{...state.chronicle.run.aff,...aff}});save();route('chronicle');};
+   const scene=(id,flags={},aff={})=>{reset();state.chronicle.completedChapters=[1,2,3];Object.assign(state.chronicle.run,{chapter:4,ch:4,name:'剧场测试',inst:'小提琴',scene:id,week:id==='menu'?1:6,weekly:{version:1,done:[1,2,3,4,5],active:0,side:[],recaps:{},approach:null},tech:15,level:3,gold:60,flags,aff:{...state.chronicle.run.aff,...aff}});save();route('chronicle');};
    const serialize=()=>{state=cleanState(JSON.parse(JSON.stringify(state)));save();route('chronicle');};
    reset();route('chronicle');check('Six distinct chapter tabs',document.querySelectorAll('.cp-chapter-tile').length===6&&document.querySelector('[data-cp-chapter="3"]').textContent.includes('星光530'));
    Object.assign(state.chronicle.run,{name:'剧场新人',inst:'小提琴'});state.chronicle.completedChapters=[1,2,3];state.chronicle.slots[3]={...Chronicle.fresh().run,chapter:3,ch:4,name:'剧场新人',inst:'小提琴',scene:'title4',ending:'c3_te',tech:14,level:3,gold:60,aff:{...state.chronicle.run.aff,shiyuan:12}};state.chronicle.run.rev++;save();renderGlobal();await click('[data-cp-action="switch-chapter"][data-cp-chapter="4"]');
    check('Fourth inherits completed third chapter stats',state.chronicle.run.scene==='c4_intro'&&state.chronicle.run.tech===14&&!('gold' in state.chronicle.run)&&state.chronicle.run.level===3&&state.chronicle.run.aff.shiyuan===12);
    check('Fourth opens with Yeshiyang and no drink menu',cardOwned('yeshiyang')&&!document.querySelector('.shanqiu-menu'));
    check('Entry memory recorded',state.memories.includes('cp4_entry'));
-   await choose(0);check('Dayang unlocks on mention, Baoshi remains locked',cardOwned('dayang')&&!cardOwned('baoshi'));
+   await choose(0);await nextStory();check('Dayang unlocks on mention, Baoshi remains locked',cardOwned('dayang')&&!cardOwned('baoshi'));
    await choose(2);check('Compromise gets twelve bars',state.chronicle.run.flags.yangCompromise===1&&$('cpStoryText').textContent.includes('再加四小节'));
-   await choose(0);check('Baoshi and Feihong unlock at duet',cardOwned('baoshi')&&cardOwned('feihong')&&state.chronicle.run.flags.c4bao===1);
+   await choose(0);await nextStory();check('Baoshi and Feihong unlock at duet',cardOwned('baoshi')&&cardOwned('feihong')&&state.chronicle.run.flags.c4bao===1);
    check('New card images remain external assets',availableCardPool().filter(c=>['dayang','baoshi'].includes(c.id)).length===2&&ASSETS.cardBaoshi.startsWith('assets/'));
-   await choose(1);await choose(0);check('Qiqi unlocks at proposal',cardOwned('qiqi'));
+   await choose(1);await choose(0);await nextStory();await choose(0);await choose(0);await nextStory();check('Qiqi unlocks at proposal',cardOwned('qiqi'));
    await choose(1);await choose(0);await choose(0);
    check('Mainline arrives at weekly loop',state.chronicle.run.scene==='menu'&&state.chronicle.run.flags.baoOK===1&&state.chronicle.run.flags.qiHandled===1);
    showLalaJournal(4);check('Fourth notebook contains read choices',$('modalContent').textContent.includes('第四章 · 剧场之夜')&&$('modalContent').textContent.includes('再加四小节'));closeModal(false);
@@ -33,18 +34,15 @@ const assert=require('node:assert/strict');
    await click('[data-cp-action="chat"][data-cp-person="baoshi"]');check('Fourth chapter chat uses new voice',$('cpStoryText').textContent.includes('蜂蜜茶'));await choose(0);
    await click('[data-cp-action="switch-chapter"][data-cp-chapter="1"]');await click('[data-cp-action="switch-chapter"][data-cp-chapter="4"]');serialize();check('Fourth progress and entry snapshot survive round trip',JSON.stringify(state.chronicle.run.flags).includes('yangCompromise')&&state.chronicle.chapter4Start.tech===14&&state.chronicle.slots[1].chapter===1);
    await click('[data-cp-action="restart"]');await click('[data-cp-action="confirm-restart"]');if(state.chronicle.run.scene==='zhu_offer'){await choose(4);await choose(0);}check('Restart restores entrance and retains cards',state.chronicle.run.scene==='c4_intro'&&state.chronicle.run.tech===14&&!state.chronicle.run.flags.yangCompromise&&cardOwned('baoshi'));
-   for(const [stem,count,next] of [['prep',3,'c4_bao'],['bao',2,'c4_qiqi'],['qiqi',3,'c4_menu'],['jeal',3,'menu']])for(let i=0;i<count;i++){
+   for(const [stem,count,next] of [['prep',3,'c4_bao'],['bao',2,'c4_qiqi'],['qiqi',3,'c4_menu'],['jeal',3,'b_live']])for(let i=0;i<count;i++){
     scene('c4_'+stem);await choose(i);check('Branch '+stem+i,state.chronicle.run.scene==='c4_'+stem+'_'+'abc'[i]);serialize();check('Branch save '+stem+i,state.chronicle.run.chapter===4&&state.chronicle.run.scene==='c4_'+stem+'_'+'abc'[i]);await choose(0);check('Branch rejoin '+stem+i,state.chronicle.run.scene===next);
    }
    scene('c4_qiqi');await choose(2);check('Accepted sponsorship adds five notes only',state.coins===35&&!('discontent' in state.chronicle.run));
    scene('c4_qiqi');await choose(0);serialize();check('Refusal counter survives save',state.chronicle.run.flags.qHate===1&&state.chronicle.run.flags.qiHandled===1);
-   for(const [roll,id] of [[.1,'c4_band_lemon'],[.3,'c4_band_zhou'],[.6,'c4_band_bao'],[.9,'practice_partner']]){
-    scene('menu');const random=Math.random;Math.random=()=>roll;try{await click('[data-cp-action="ensemble"]');}finally{Math.random=random;}
-    check('Weekly event '+id,state.chronicle.run.scene===id);
-    if(id!=='practice_partner')for(let n=0;n<2;n++){
-     if(n)scene(id);await choose(n);check(id+' response '+n,state.chronicle.run.scene.startsWith('b4_'));serialize();await choose(0);check(id+' returns '+n,state.chronicle.run.scene==='menu'&&state.chronicle.run.chapter===4);
-    }
+   for(const id of ['c4_band_lemon','c4_band_zhou','c4_band_bao'])for(let n=0;n<2;n++){
+    scene(id);await choose(n);check(id+' response '+n,state.chronicle.run.scene.startsWith('b4_'));serialize();await choose(0);check(id+' returns '+n,state.chronicle.run.scene==='menu'&&state.chronicle.run.chapter===4);
    }
+   scene('menu');await click('[data-cp-action="ensemble"]');check('Free rehearsal uses partner selection',state.chronicle.run.scene==='practice_partner');
    scene('c4_band_lemon');state.coins=19;render();check('Insufficient funds disables borrowing',document.querySelector('[data-cp-choice="0"]').disabled);
    const b=document.querySelector('[data-cp-choice="0"]');b.disabled=false;await choose(0);check('Insufficient-funds guard resists stale DOM',state.coins===19&&state.chronicle.run.scene==='c4_band_lemon');await choose(1);check('Can still refuse',state.chronicle.run.scene==='b4_lemon_b');
    scene('c4_band_lemon',{}, {lemon:10});await choose(0);check('Ordinary borrowing is safe',state.chronicle.run.aff.lemon===12&&!state.chronicle.run.ending);await choose(0);await click('[data-cp-action="social"]');await click('[data-cp-action="chat"][data-cp-person="lemon"]');check('Chat never triggers a score-based BE',!state.chronicle.run.ending&&state.chronicle.run.aff.lemon===13);

@@ -1,0 +1,238 @@
+[
+  {
+    "batch": "01-daily",
+    "ids": [
+      "photo",
+      "trust",
+      "gift",
+      "feihong",
+      "tang",
+      "orange",
+      "stage",
+      "card_band"
+    ],
+    "scenes": [
+      "A grey-and-white fluffy kitten snuggles against the player's shoulder by a sunlit rehearsal-room window; cropped anonymous human, candid affectionate moment.",
+      "The SAME grey-and-white kitten eagerly RUNS across the rehearsal room toward the viewer's open hands, tail raised, music stands behind.",
+      "Still life: a cream invitation envelope with a small treble-clef seal rests on sheet music beside a violin and an empty welcoming chair. No readable lettering.",
+      "Feihong, the man in blue denim reference, confidently chooses a passage at his microphone; an ORANGE tabby rubs his leg. Show BOTH singer and cat.",
+      "Tang, black-haired cameraman in dark jacket reference, has finally joined a smiling group photo; a camera on a tripod with timer is visible in foreground, friends wave him into the middle.",
+      "An ORANGE tabby, not the grey cat, stands proudly on a closed violin case with one paw over the corner of a score; warm rehearsal room.",
+      "First ensemble rehearsal: violinists, flutist and keyboard player listen to one another and begin together in a small rehearsal room. No large audience; intimate teamwork.",
+      "Exactly THREE adult musicians, violinist, flutist and keyboard player, bow together during an encore on a modest stage, a few clapping hands below."
+    ],
+    "references": [
+      "assets/cat.webp",
+      "assets/feihong-portrait-v2.webp",
+      "assets/cardTang.webp"
+    ],
+    "prompt": "Use case: illustration-story. Produce ONE high-resolution eight-panel asset atlas for a Chinese orchestra life-simulation game album. Exactly FOUR columns and TWO rows, equal-sized square panels, in strict row-major order 1-4 across top and 5-8 across bottom. Overall canvas aspect ratio 2:1, ideally 3072x1536 or larger. All panel boundaries perfectly straight at x=25%,50%,75%, y=50%. No outer margin; no gutters, frames, text captions, numbers, watermarks or logos. Each panel must be a separate complete composition, not one scene bleeding through cells. Keep faces, hands and defining props within central 80% of each cell, no clipped heads. Every listed scene must appear ONCE in its assigned cell. Scene content has priority over generic attractive portraits.\nStyle: polished warm cinematic anime / semi-realistic illustrated game CG, delicate linework, natural anatomy, richly detailed instruments and environments, varied camera framing. All humans are adult Chinese musicians. Emotional lighting follows each scene (quiet failure scenes must not look celebratory). Existing supplied portraits are character and style REFERENCES only: preserve faces, hair, glasses and signature clothes when named, but create the new actions and environments described. Do NOT copy portrait compositions, collage reference photos, invent title text, or add extra panels. Musical notation may be abstract, no readable prose anywhere.\n\nReference image order: 1: cat.webp, 2: feihong-portrait-v2.webp, 3: cardTang.webp.\n\nPANEL 1 (top row, column 1): A grey-and-white fluffy kitten snuggles against the player's shoulder by a sunlit rehearsal-room window; cropped anonymous human, candid affectionate moment.\nPANEL 2 (top row, column 2): The SAME grey-and-white kitten eagerly RUNS across the rehearsal room toward the viewer's open hands, tail raised, music stands behind.\nPANEL 3 (top row, column 3): Still life: a cream invitation envelope with a small treble-clef seal rests on sheet music beside a violin and an empty welcoming chair. No readable lettering.\nPANEL 4 (top row, column 4): Feihong, the man in blue denim reference, confidently chooses a passage at his microphone; an ORANGE tabby rubs his leg. Show BOTH singer and cat.\nPANEL 5 (bottom row, column 1): Tang, black-haired cameraman in dark jacket reference, has finally joined a smiling group photo; a camera on a tripod with timer is visible in foreground, friends wave him into the middle.\nPANEL 6 (bottom row, column 2): An ORANGE tabby, not the grey cat, stands proudly on a closed violin case with one paw over the corner of a score; warm rehearsal room.\nPANEL 7 (bottom row, column 3): First ensemble rehearsal: violinists, flutist and keyboard player listen to one another and begin together in a small rehearsal room. No large audience; intimate teamwork.\nPANEL 8 (bottom row, column 4): Exactly THREE adult musicians, violinist, flutist and keyboard player, bow together during an encore on a modest stage, a few clapping hands below."
+  },
+  {
+    "batch": "02-music",
+    "ids": [
+      "tang_eye",
+      "card_bond",
+      "azhe",
+      "dijie",
+      "shiyuan",
+      "azhe_encore",
+      "dijie_gold",
+      "shiyuan_moon"
+    ],
+    "scenes": [
+      "Tang in dark jacket quietly sorting a strip of photographs of friends and rehearsal moments on a light table, camera beside him, photographic memories NOT a literal magical eyeball.",
+      "Close overhead view of two musicians' hands jointly annotating the SAME score with pencil; violin and flute at the table edges, shared rehearsal memories.",
+      "Azhe, wavy dark hair, fine round glasses, dark shirt, swiftly turns one score page with his hand while his other hand holds a violin; partner continues playing.",
+      "Dijie, tousled black hair and brown plaid overshirt, plays a SILVER TRANSVERSE FLUTE beside a shadowed music stand; warm lamp, quiet reflective rehearsal, no bamboo flute.",
+      "Shiyuan, short brown bob with star hairclip and cream cardigan reference, smiles with delight after playing a beginner violin melody; two friends gently applaud in a bright practice room.",
+      "Azhe with fine round glasses performs an energetic solo violin cadenza under a small spotlight; audience hands clapping at bottom edge.",
+      "Dijie lifts his gaze above a music stand while holding a SILVER TRANSVERSE FLUTE after a perfect performance, celebratory golden stage light, not golden skin or clothing.",
+      "Shiyuan with star hairclip plays her violin earnestly in cool moonlight from a rehearsal window; discreet warm applause from two friends, hopeful gentle expression."
+    ],
+    "references": [
+      "assets/cardTang.webp",
+      "assets/cardAzhe.webp",
+      "assets/dijie-portrait-v2.webp",
+      "assets/shiyuan-portrait-v2.webp"
+    ],
+    "prompt": "Use case: illustration-story. Produce ONE high-resolution eight-panel asset atlas for a Chinese orchestra life-simulation game album. Exactly FOUR columns and TWO rows, equal-sized square panels, in strict row-major order 1-4 across top and 5-8 across bottom. Overall canvas aspect ratio 2:1, ideally 3072x1536 or larger. All panel boundaries perfectly straight at x=25%,50%,75%, y=50%. No outer margin; no gutters, frames, text captions, numbers, watermarks or logos. Each panel must be a separate complete composition, not one scene bleeding through cells. Keep faces, hands and defining props within central 80% of each cell, no clipped heads. Every listed scene must appear ONCE in its assigned cell. Scene content has priority over generic attractive portraits.\nStyle: polished warm cinematic anime / semi-realistic illustrated game CG, delicate linework, natural anatomy, richly detailed instruments and environments, varied camera framing. All humans are adult Chinese musicians. Emotional lighting follows each scene (quiet failure scenes must not look celebratory). Existing supplied portraits are character and style REFERENCES only: preserve faces, hair, glasses and signature clothes when named, but create the new actions and environments described. Do NOT copy portrait compositions, collage reference photos, invent title text, or add extra panels. Musical notation may be abstract, no readable prose anywhere.\n\nReference image order: 1: cardTang.webp, 2: cardAzhe.webp, 3: dijie-portrait-v2.webp, 4: shiyuan-portrait-v2.webp.\n\nPANEL 1 (top row, column 1): Tang in dark jacket quietly sorting a strip of photographs of friends and rehearsal moments on a light table, camera beside him, photographic memories NOT a literal magical eyeball.\nPANEL 2 (top row, column 2): Close overhead view of two musicians' hands jointly annotating the SAME score with pencil; violin and flute at the table edges, shared rehearsal memories.\nPANEL 3 (top row, column 3): Azhe, wavy dark hair, fine round glasses, dark shirt, swiftly turns one score page with his hand while his other hand holds a violin; partner continues playing.\nPANEL 4 (top row, column 4): Dijie, tousled black hair and brown plaid overshirt, plays a SILVER TRANSVERSE FLUTE beside a shadowed music stand; warm lamp, quiet reflective rehearsal, no bamboo flute.\nPANEL 5 (bottom row, column 1): Shiyuan, short brown bob with star hairclip and cream cardigan reference, smiles with delight after playing a beginner violin melody; two friends gently applaud in a bright practice room.\nPANEL 6 (bottom row, column 2): Azhe with fine round glasses performs an energetic solo violin cadenza under a small spotlight; audience hands clapping at bottom edge.\nPANEL 7 (bottom row, column 3): Dijie lifts his gaze above a music stand while holding a SILVER TRANSVERSE FLUTE after a perfect performance, celebratory golden stage light, not golden skin or clothing.\nPANEL 8 (bottom row, column 4): Shiyuan with star hairclip plays her violin earnestly in cool moonlight from a rehearsal window; discreet warm applause from two friends, hopeful gentle expression."
+  },
+  {
+    "batch": "03-companions",
+    "ids": [
+      "tim",
+      "yeshiyang",
+      "kongge",
+      "tim_archive",
+      "tim_friend",
+      "tim_distance",
+      "ye_invitation",
+      "kongge_career"
+    ],
+    "scenes": [
+      "TIM, pale shirt and swept dark hair reference, still wearing his work lanyard, counts beats with a fellow musician over one shared score after work; violin rests nearby.",
+      "Yeshiyang, navy suit reference, finally sits at a rehearsal table while a friend hands HIM a glass of warm water; tired grateful smile, his own violin case at his feet.",
+      "Kongge, stockier bespectacled man in black polo reference, nods rare approval at a young player across a music stand, pencil poised above practice score.",
+      "TIM calmly sets boundaries in a respectful conversation across a table; phone face-down, two chairs with comfortable distance, neutral friendship, no romantic touching.",
+      "TIM and a friend rehearse violin together with a shared stand between them, relaxed platonic companionship and separate instrument cases.",
+      "A quiet pair of separated music stands in the same room: TIM and another musician each focus on their OWN scores, generous distance, no anger or romantic embrace.",
+      "Yeshiyang in navy suit sets his planning notebook aside and attentively listens to a seated friend over two cups of water; peaceful ten-minute break.",
+      "Kongge in black shirt and glasses steadies the ensemble behind Shiyuan, short brown bob and star clip, both playing violin in the SAME stage light; equal musical partnership."
+    ],
+    "references": [
+      "assets/tim-portrait-v2.webp",
+      "assets/yeshiyang-portrait-v2.webp",
+      "assets/kongge-portrait-selected.webp",
+      "assets/shiyuan-portrait-v2.webp"
+    ],
+    "prompt": "Use case: illustration-story. Produce ONE high-resolution eight-panel asset atlas for a Chinese orchestra life-simulation game album. Exactly FOUR columns and TWO rows, equal-sized square panels, in strict row-major order 1-4 across top and 5-8 across bottom. Overall canvas aspect ratio 2:1, ideally 3072x1536 or larger. All panel boundaries perfectly straight at x=25%,50%,75%, y=50%. No outer margin; no gutters, frames, text captions, numbers, watermarks or logos. Each panel must be a separate complete composition, not one scene bleeding through cells. Keep faces, hands and defining props within central 80% of each cell, no clipped heads. Every listed scene must appear ONCE in its assigned cell. Scene content has priority over generic attractive portraits.\nStyle: polished warm cinematic anime / semi-realistic illustrated game CG, delicate linework, natural anatomy, richly detailed instruments and environments, varied camera framing. All humans are adult Chinese musicians. Emotional lighting follows each scene (quiet failure scenes must not look celebratory). Existing supplied portraits are character and style REFERENCES only: preserve faces, hair, glasses and signature clothes when named, but create the new actions and environments described. Do NOT copy portrait compositions, collage reference photos, invent title text, or add extra panels. Musical notation may be abstract, no readable prose anywhere.\n\nReference image order: 1: tim-portrait-v2.webp, 2: yeshiyang-portrait-v2.webp, 3: kongge-portrait-selected.webp, 4: shiyuan-portrait-v2.webp.\n\nPANEL 1 (top row, column 1): TIM, pale shirt and swept dark hair reference, still wearing his work lanyard, counts beats with a fellow musician over one shared score after work; violin rests nearby.\nPANEL 2 (top row, column 2): Yeshiyang, navy suit reference, finally sits at a rehearsal table while a friend hands HIM a glass of warm water; tired grateful smile, his own violin case at his feet.\nPANEL 3 (top row, column 3): Kongge, stockier bespectacled man in black polo reference, nods rare approval at a young player across a music stand, pencil poised above practice score.\nPANEL 4 (top row, column 4): TIM calmly sets boundaries in a respectful conversation across a table; phone face-down, two chairs with comfortable distance, neutral friendship, no romantic touching.\nPANEL 5 (bottom row, column 1): TIM and a friend rehearse violin together with a shared stand between them, relaxed platonic companionship and separate instrument cases.\nPANEL 6 (bottom row, column 2): A quiet pair of separated music stands in the same room: TIM and another musician each focus on their OWN scores, generous distance, no anger or romantic embrace.\nPANEL 7 (bottom row, column 3): Yeshiyang in navy suit sets his planning notebook aside and attentively listens to a seated friend over two cups of water; peaceful ten-minute break.\nPANEL 8 (bottom row, column 4): Kongge in black shirt and glasses steadies the ensemble behind Shiyuan, short brown bob and star clip, both playing violin in the SAME stage light; equal musical partnership."
+  },
+  {
+    "batch": "04-friends",
+    "ids": [
+      "lala",
+      "lala_score",
+      "lala_cover",
+      "xiaozhou_sr",
+      "baoshi_secret",
+      "qiqi",
+      "qiqi_sisters",
+      "cp3_entry"
+    ],
+    "scenes": [
+      "Lala, long brown hair tied with a pale ribbon reference, patiently writes a numbered music exercise beside her violin; clear small digits 1 2 3 on the page, gentle rehearsal-room setting.",
+      "Lala teaches Dijie by pointing between a staff melody and numbered notation on one open sheet; Dijie in plaid shirt holds a SILVER transverse flute, both faces and teaching action visible.",
+      "Lala steps into an empty third-violin chair with a fresh score, lifting her violin as the rest of the string section continues; visible act of filling a missing part.",
+      "Xiaozhou in pale blue shirt plays a GRAND PIANO alone under a confident spotlight, hands on keys, his first independent successful performance.",
+      "Baoshi, the soft-featured black-haired adult male singer reference, joyfully performs in an elegant lavender stage dress as his feminine stage persona, microphone and stage lights, no caricature.",
+      "Qiqi, dark updo and floral qipao with red trim reference, receives a small saved pastry from a friend beside an open snack box; her electric guitar rests behind, reciprocal care.",
+      "Qiqi with floral qipao and red electric guitar AND Shiyuan with short bob, star clip and violin share ONE warm stage spotlight, both smiling, two distinct women.",
+      "A bag of handmade cookies waits at the rehearsal-room doorway; Qiqi in floral qipao enters carrying her red electric guitar, evening concert preparation in background."
+    ],
+    "references": [
+      "assets/cardLala.webp",
+      "assets/dijie-portrait-v2.webp",
+      "assets/baoshi-portrait.webp",
+      "assets/qiqi-portrait.webp",
+      "assets/shiyuan-portrait-v2.webp"
+    ],
+    "prompt": "Use case: illustration-story. Produce ONE high-resolution eight-panel asset atlas for a Chinese orchestra life-simulation game album. Exactly FOUR columns and TWO rows, equal-sized square panels, in strict row-major order 1-4 across top and 5-8 across bottom. Overall canvas aspect ratio 2:1, ideally 3072x1536 or larger. All panel boundaries perfectly straight at x=25%,50%,75%, y=50%. No outer margin; no gutters, frames, text captions, numbers, watermarks or logos. Each panel must be a separate complete composition, not one scene bleeding through cells. Keep faces, hands and defining props within central 80% of each cell, no clipped heads. Every listed scene must appear ONCE in its assigned cell. Scene content has priority over generic attractive portraits.\nStyle: polished warm cinematic anime / semi-realistic illustrated game CG, delicate linework, natural anatomy, richly detailed instruments and environments, varied camera framing. All humans are adult Chinese musicians. Emotional lighting follows each scene (quiet failure scenes must not look celebratory). Existing supplied portraits are character and style REFERENCES only: preserve faces, hair, glasses and signature clothes when named, but create the new actions and environments described. Do NOT copy portrait compositions, collage reference photos, invent title text, or add extra panels. Musical notation may be abstract, no readable prose anywhere.\n\nReference image order: 1: cardLala.webp, 2: dijie-portrait-v2.webp, 3: baoshi-portrait.webp, 4: qiqi-portrait.webp, 5: shiyuan-portrait-v2.webp.\n\nPANEL 1 (top row, column 1): Lala, long brown hair tied with a pale ribbon reference, patiently writes a numbered music exercise beside her violin; clear small digits 1 2 3 on the page, gentle rehearsal-room setting.\nPANEL 2 (top row, column 2): Lala teaches Dijie by pointing between a staff melody and numbered notation on one open sheet; Dijie in plaid shirt holds a SILVER transverse flute, both faces and teaching action visible.\nPANEL 3 (top row, column 3): Lala steps into an empty third-violin chair with a fresh score, lifting her violin as the rest of the string section continues; visible act of filling a missing part.\nPANEL 4 (top row, column 4): Xiaozhou in pale blue shirt plays a GRAND PIANO alone under a confident spotlight, hands on keys, his first independent successful performance.\nPANEL 5 (bottom row, column 1): Baoshi, the soft-featured black-haired adult male singer reference, joyfully performs in an elegant lavender stage dress as his feminine stage persona, microphone and stage lights, no caricature.\nPANEL 6 (bottom row, column 2): Qiqi, dark updo and floral qipao with red trim reference, receives a small saved pastry from a friend beside an open snack box; her electric guitar rests behind, reciprocal care.\nPANEL 7 (bottom row, column 3): Qiqi with floral qipao and red electric guitar AND Shiyuan with short bob, star clip and violin share ONE warm stage spotlight, both smiling, two distinct women.\nPANEL 8 (bottom row, column 4): A bag of handmade cookies waits at the rehearsal-room doorway; Qiqi in floral qipao enters carrying her red electric guitar, evening concert preparation in background."
+  },
+  {
+    "batch": "05-beginnings",
+    "ids": [
+      "cp_entry",
+      "cp_audition",
+      "cp_debut",
+      "cp_ordinary",
+      "cp_shadow",
+      "cp2_entry",
+      "cp2_night",
+      "cp2_choice"
+    ],
+    "scenes": [
+      "View through a half-open wooden rehearsal-room door: Lala with long ribbon-tied hair welcomes a newcomer into a warm room of players and an empty chair; invitation to belong.",
+      "Kongge, black polo and rectangular glasses reference, deliberately CLOSES a score folder after approving an audition, modest satisfied smile; violin and pencil on table. Not Azhe.",
+      "After an indoor SHOPPING MALL flashmob, a manager's hand offers the orchestra its first contract folder; Shiyuan and musicians smile, Tang with camera documents it; mall railings behind.",
+      "After a modest mall performance with sparse applause, Shiyuan raises an encouraging fist beside friends carrying violin cases, supportive not triumphant, few spectators.",
+      "Bittersweet symbolic scene: Shiyuan in warm light at front of rehearsal room and a single anonymous follower in her long shadow; many EMPTY chairs behind, isolation despite attention.",
+      "TIM in pale shirt arrives at a cozy amber-lit bar doorway with violin case and his office lanyard still on, night outside, rehearsal stands visible inside.",
+      "Rehearsal musicians stand before a blackboard divided into TWO clear halves with a chalk violin pictogram on left and electric-guitar pictogram on right; choosing sections, NO stage concert.",
+      "Kongge in black polo and glasses with violin case speaks earnestly to a friend in a quiet STAIRWELL under one motion-sensor lamp; contemplative decision to stay or leave."
+    ],
+    "references": [
+      "assets/shiyuan-portrait-v2.webp",
+      "assets/kongge-portrait-selected.webp",
+      "assets/tim-portrait-v2.webp",
+      "assets/cardTang.webp",
+      "assets/cardLala.webp"
+    ],
+    "prompt": "Use case: illustration-story. Produce ONE high-resolution eight-panel asset atlas for a Chinese orchestra life-simulation game album. Exactly FOUR columns and TWO rows, equal-sized square panels, in strict row-major order 1-4 across top and 5-8 across bottom. Overall canvas aspect ratio 2:1, ideally 3072x1536 or larger. All panel boundaries perfectly straight at x=25%,50%,75%, y=50%. No outer margin; no gutters, frames, text captions, numbers, watermarks or logos. Each panel must be a separate complete composition, not one scene bleeding through cells. Keep faces, hands and defining props within central 80% of each cell, no clipped heads. Every listed scene must appear ONCE in its assigned cell. Scene content has priority over generic attractive portraits.\nStyle: polished warm cinematic anime / semi-realistic illustrated game CG, delicate linework, natural anatomy, richly detailed instruments and environments, varied camera framing. All humans are adult Chinese musicians. Emotional lighting follows each scene (quiet failure scenes must not look celebratory). Existing supplied portraits are character and style REFERENCES only: preserve faces, hair, glasses and signature clothes when named, but create the new actions and environments described. Do NOT copy portrait compositions, collage reference photos, invent title text, or add extra panels. Musical notation may be abstract, no readable prose anywhere.\n\nReference image order: 1: shiyuan-portrait-v2.webp, 2: kongge-portrait-selected.webp, 3: tim-portrait-v2.webp, 4: cardTang.webp, 5: cardLala.webp.\n\nPANEL 1 (top row, column 1): View through a half-open wooden rehearsal-room door: Lala with long ribbon-tied hair welcomes a newcomer into a warm room of players and an empty chair; invitation to belong.\nPANEL 2 (top row, column 2): Kongge, black polo and rectangular glasses reference, deliberately CLOSES a score folder after approving an audition, modest satisfied smile; violin and pencil on table. Not Azhe.\nPANEL 3 (top row, column 3): After an indoor SHOPPING MALL flashmob, a manager's hand offers the orchestra its first contract folder; Shiyuan and musicians smile, Tang with camera documents it; mall railings behind.\nPANEL 4 (top row, column 4): After a modest mall performance with sparse applause, Shiyuan raises an encouraging fist beside friends carrying violin cases, supportive not triumphant, few spectators.\nPANEL 5 (bottom row, column 1): Bittersweet symbolic scene: Shiyuan in warm light at front of rehearsal room and a single anonymous follower in her long shadow; many EMPTY chairs behind, isolation despite attention.\nPANEL 6 (bottom row, column 2): TIM in pale shirt arrives at a cozy amber-lit bar doorway with violin case and his office lanyard still on, night outside, rehearsal stands visible inside.\nPANEL 7 (bottom row, column 3): Rehearsal musicians stand before a blackboard divided into TWO clear halves with a chalk violin pictogram on left and electric-guitar pictogram on right; choosing sections, NO stage concert.\nPANEL 8 (bottom row, column 4): Kongge in black polo and glasses with violin case speaks earnestly to a friend in a quiet STAIRWELL under one motion-sensor lamp; contemplative decision to stay or leave."
+  },
+  {
+    "batch": "06-concerts",
+    "ids": [
+      "cp2_street",
+      "cp2_dual",
+      "cp2_solo",
+      "cp2_retry",
+      "cp3_he",
+      "cp3_te",
+      "cp3_fail",
+      "cp3_qiqi"
+    ],
+    "scenes": [
+      "A young male street singer, Xiaojie, sings into a portable microphone beside a small amplifier and open instrument case under an urban pedestrian bridge; a passerby places a coin, evening busking.",
+      "Successful small outdoor commercial roadshow: Shiyuan in cream and Kongge in black polo glasses stand together playing violins, both equally visible, ensemble behind, applause.",
+      "Late-night practice room after a successful roadshow: Shiyuan rehearses violin alone with a contract folder on table and many empty chairs, tired but determined.",
+      "A small outdoor roadshow after a shaky performance: sparse politely clapping crowd; Shiyuan turns toward discouraged bandmates with a determined clenched fist, resolve to try again.",
+      "Indoor pop concert packed with glowing lightsticks, string players, drum kit and electric guitar returning for another encore, warm vibrant musical joy.",
+      "After a successful indoor concert, a signed contract lies beside instrument cases backstage; Qiqi whispers to Shiyuan near the curtain, thoughtful bittersweet side-stage atmosphere.",
+      "A concert stops awkwardly mid-song: silent audience, worried musicians exchanging glances, loose page on the floor and one dim spotlight, no celebratory hands.",
+      "A cancelled rehearsal: small groups whisper at opposite sides of a cold room; untouched cookie box, empty central music stands, anxious separation. No literal knife or violence."
+    ],
+    "references": [
+      "assets/shiyuan-portrait-v2.webp",
+      "assets/kongge-portrait-selected.webp",
+      "assets/qiqi-portrait.webp"
+    ],
+    "prompt": "Use case: illustration-story. Produce ONE high-resolution eight-panel asset atlas for a Chinese orchestra life-simulation game album. Exactly FOUR columns and TWO rows, equal-sized square panels, in strict row-major order 1-4 across top and 5-8 across bottom. Overall canvas aspect ratio 2:1, ideally 3072x1536 or larger. All panel boundaries perfectly straight at x=25%,50%,75%, y=50%. No outer margin; no gutters, frames, text captions, numbers, watermarks or logos. Each panel must be a separate complete composition, not one scene bleeding through cells. Keep faces, hands and defining props within central 80% of each cell, no clipped heads. Every listed scene must appear ONCE in its assigned cell. Scene content has priority over generic attractive portraits.\nStyle: polished warm cinematic anime / semi-realistic illustrated game CG, delicate linework, natural anatomy, richly detailed instruments and environments, varied camera framing. All humans are adult Chinese musicians. Emotional lighting follows each scene (quiet failure scenes must not look celebratory). Existing supplied portraits are character and style REFERENCES only: preserve faces, hair, glasses and signature clothes when named, but create the new actions and environments described. Do NOT copy portrait compositions, collage reference photos, invent title text, or add extra panels. Musical notation may be abstract, no readable prose anywhere.\n\nReference image order: 1: shiyuan-portrait-v2.webp, 2: kongge-portrait-selected.webp, 3: qiqi-portrait.webp.\n\nPANEL 1 (top row, column 1): A young male street singer, Xiaojie, sings into a portable microphone beside a small amplifier and open instrument case under an urban pedestrian bridge; a passerby places a coin, evening busking.\nPANEL 2 (top row, column 2): Successful small outdoor commercial roadshow: Shiyuan in cream and Kongge in black polo glasses stand together playing violins, both equally visible, ensemble behind, applause.\nPANEL 3 (top row, column 3): Late-night practice room after a successful roadshow: Shiyuan rehearses violin alone with a contract folder on table and many empty chairs, tired but determined.\nPANEL 4 (top row, column 4): A small outdoor roadshow after a shaky performance: sparse politely clapping crowd; Shiyuan turns toward discouraged bandmates with a determined clenched fist, resolve to try again.\nPANEL 5 (bottom row, column 1): Indoor pop concert packed with glowing lightsticks, string players, drum kit and electric guitar returning for another encore, warm vibrant musical joy.\nPANEL 6 (bottom row, column 2): After a successful indoor concert, a signed contract lies beside instrument cases backstage; Qiqi whispers to Shiyuan near the curtain, thoughtful bittersweet side-stage atmosphere.\nPANEL 7 (bottom row, column 3): A concert stops awkwardly mid-song: silent audience, worried musicians exchanging glances, loose page on the floor and one dim spotlight, no celebratory hands.\nPANEL 8 (bottom row, column 4): A cancelled rehearsal: small groups whisper at opposite sides of a cold room; untouched cookie box, empty central music stands, anxious separation. No literal knife or violence."
+  },
+  {
+    "batch": "07-theatre",
+    "ids": [
+      "cp4_entry",
+      "cp4_he",
+      "cp4_te",
+      "cp4_fail",
+      "cp4_qiqi",
+      "cp4_lemon",
+      "lemon_be",
+      "cp5_entry"
+    ],
+    "scenes": [
+      "Yeshiyang in navy suit brings a glass of warm water to someone seated at the far edge of an empty THEATRE; contracts on a table, stage lighting being prepared.",
+      "Formal theatre completely FULL of audience, entire orchestra bowing together under star-like warm lights and red curtains, joyful triumphant full-house curtain call.",
+      "After the curtain call, musicians linger separately in theatre WINGS beside heavy velvet curtains, empty spotlight on stage, unresolved quiet feelings, not a full-house image.",
+      "View from theatre stage into rows of seats that are CLEARLY HALF EMPTY; Shiyuan sits at stage edge holding her violin after a disappointing concert, subdued evening lighting.",
+      "CLOSED theatre entrance at night, doors locked, unlit lobby and an unused box-office window; no waiting audience, no readable poster lettering, cancelled event.",
+      "Close still life of a plane ticket and passport beside a packed instrument case; beyond a cold window are tall blank walls rather than any stage, ominous but nonviolent journey.",
+      "A lonely instrument case and abandoned plane ticket inside a bleak enclosed compound corridor with locked gate in distance; promise of a stage never fulfilled, no people harmed, no text.",
+      "Bright summer sunshine over an OUTDOOR FESTIVAL invitation envelope on a rehearsal-room table with sunglasses and violin case; musicians gather eagerly, summer plans arriving."
+    ],
+    "references": [
+      "assets/yeshiyang-portrait-v2.webp",
+      "assets/shiyuan-portrait-v2.webp"
+    ],
+    "prompt": "Use case: illustration-story. Produce ONE high-resolution eight-panel asset atlas for a Chinese orchestra life-simulation game album. Exactly FOUR columns and TWO rows, equal-sized square panels, in strict row-major order 1-4 across top and 5-8 across bottom. Overall canvas aspect ratio 2:1, ideally 3072x1536 or larger. All panel boundaries perfectly straight at x=25%,50%,75%, y=50%. No outer margin; no gutters, frames, text captions, numbers, watermarks or logos. Each panel must be a separate complete composition, not one scene bleeding through cells. Keep faces, hands and defining props within central 80% of each cell, no clipped heads. Every listed scene must appear ONCE in its assigned cell. Scene content has priority over generic attractive portraits.\nStyle: polished warm cinematic anime / semi-realistic illustrated game CG, delicate linework, natural anatomy, richly detailed instruments and environments, varied camera framing. All humans are adult Chinese musicians. Emotional lighting follows each scene (quiet failure scenes must not look celebratory). Existing supplied portraits are character and style REFERENCES only: preserve faces, hair, glasses and signature clothes when named, but create the new actions and environments described. Do NOT copy portrait compositions, collage reference photos, invent title text, or add extra panels. Musical notation may be abstract, no readable prose anywhere.\n\nReference image order: 1: yeshiyang-portrait-v2.webp, 2: shiyuan-portrait-v2.webp.\n\nPANEL 1 (top row, column 1): Yeshiyang in navy suit brings a glass of warm water to someone seated at the far edge of an empty THEATRE; contracts on a table, stage lighting being prepared.\nPANEL 2 (top row, column 2): Formal theatre completely FULL of audience, entire orchestra bowing together under star-like warm lights and red curtains, joyful triumphant full-house curtain call.\nPANEL 3 (top row, column 3): After the curtain call, musicians linger separately in theatre WINGS beside heavy velvet curtains, empty spotlight on stage, unresolved quiet feelings, not a full-house image.\nPANEL 4 (top row, column 4): View from theatre stage into rows of seats that are CLEARLY HALF EMPTY; Shiyuan sits at stage edge holding her violin after a disappointing concert, subdued evening lighting.\nPANEL 5 (bottom row, column 1): CLOSED theatre entrance at night, doors locked, unlit lobby and an unused box-office window; no waiting audience, no readable poster lettering, cancelled event.\nPANEL 6 (bottom row, column 2): Close still life of a plane ticket and passport beside a packed instrument case; beyond a cold window are tall blank walls rather than any stage, ominous but nonviolent journey.\nPANEL 7 (bottom row, column 3): A lonely instrument case and abandoned plane ticket inside a bleak enclosed compound corridor with locked gate in distance; promise of a stage never fulfilled, no people harmed, no text.\nPANEL 8 (bottom row, column 4): Bright summer sunshine over an OUTDOOR FESTIVAL invitation envelope on a rehearsal-room table with sunglasses and violin case; musicians gather eagerly, summer plans arriving."
+  },
+  {
+    "batch": "08-finales",
+    "ids": [
+      "cp5_wind",
+      "cp5_he",
+      "cp5_be",
+      "cp5_fail",
+      "cp6_entry",
+      "cp6_be",
+      "cp6_he",
+      "cp6_te"
+    ],
+    "scenes": [
+      "A summer music festival invitation on the rehearsal table while Shiyuan looks toward bright summer sky through an open window; a distant quiet admirer remains out of focus, bittersweet possibility.",
+      "After a successful summer OUTDOOR music festival, Shiyuan with brown bob and star hairclip beams and takes an anonymous partner's hand at stage edge; strings, grass and summer sky, intimate joy.",
+      "WEDDING scene: Shiyuan recognizable by short brown hair and star hair ornament now in a white bridal gown beside her groom seen from behind; in foreground an unchosen violinist plays for them, bittersweet restrained emotion.",
+      "OUTDOOR festival stage in strong wind: music sheets flutter off stands, microphones lean, Shiyuan secures her violin while performers struggle to recover the beat, cloudy sky, no cheering triumph.",
+      "Teacher Zhu, short dark hair and glasses reference, excitedly presents a thick HANDWRITTEN orchestral score to friends in a rehearsal room, pencil notes and manuscript pages, eyes lit with hope.",
+      "Teacher Zhu in glasses closes a drawer containing unfinished manuscript pages; unopened red theatre curtain and unlit stage beyond, exhausted sad composer, premiere cancelled.",
+      "Musical theatre premiere: actors and full pit orchestra take a final bow under open red curtains; Teacher Zhu in glasses conducts from the pit, packed applauding house, brilliant opening night.",
+      "After a nearly perfect musical premiere, a small stopwatch and annotated score on the conductor's desk beside Teacher Zhu in glasses; softly lit empty stage behind, reflective satisfaction with a little regret, no readable timer text."
+    ],
+    "references": [
+      "assets/shiyuan-portrait-v2.webp",
+      "assets/zhu-conductor.webp"
+    ],
+    "prompt": "Use case: illustration-story. Produce ONE high-resolution eight-panel asset atlas for a Chinese orchestra life-simulation game album. Exactly FOUR columns and TWO rows, equal-sized square panels, in strict row-major order 1-4 across top and 5-8 across bottom. Overall canvas aspect ratio 2:1, ideally 3072x1536 or larger. All panel boundaries perfectly straight at x=25%,50%,75%, y=50%. No outer margin; no gutters, frames, text captions, numbers, watermarks or logos. Each panel must be a separate complete composition, not one scene bleeding through cells. Keep faces, hands and defining props within central 80% of each cell, no clipped heads. Every listed scene must appear ONCE in its assigned cell. Scene content has priority over generic attractive portraits.\nStyle: polished warm cinematic anime / semi-realistic illustrated game CG, delicate linework, natural anatomy, richly detailed instruments and environments, varied camera framing. All humans are adult Chinese musicians. Emotional lighting follows each scene (quiet failure scenes must not look celebratory). Existing supplied portraits are character and style REFERENCES only: preserve faces, hair, glasses and signature clothes when named, but create the new actions and environments described. Do NOT copy portrait compositions, collage reference photos, invent title text, or add extra panels. Musical notation may be abstract, no readable prose anywhere.\n\nReference image order: 1: shiyuan-portrait-v2.webp, 2: zhu-conductor.webp.\n\nPANEL 1 (top row, column 1): A summer music festival invitation on the rehearsal table while Shiyuan looks toward bright summer sky through an open window; a distant quiet admirer remains out of focus, bittersweet possibility.\nPANEL 2 (top row, column 2): After a successful summer OUTDOOR music festival, Shiyuan with brown bob and star hairclip beams and takes an anonymous partner's hand at stage edge; strings, grass and summer sky, intimate joy.\nPANEL 3 (top row, column 3): WEDDING scene: Shiyuan recognizable by short brown hair and star hair ornament now in a white bridal gown beside her groom seen from behind; in foreground an unchosen violinist plays for them, bittersweet restrained emotion.\nPANEL 4 (top row, column 4): OUTDOOR festival stage in strong wind: music sheets flutter off stands, microphones lean, Shiyuan secures her violin while performers struggle to recover the beat, cloudy sky, no cheering triumph.\nPANEL 5 (bottom row, column 1): Teacher Zhu, short dark hair and glasses reference, excitedly presents a thick HANDWRITTEN orchestral score to friends in a rehearsal room, pencil notes and manuscript pages, eyes lit with hope.\nPANEL 6 (bottom row, column 2): Teacher Zhu in glasses closes a drawer containing unfinished manuscript pages; unopened red theatre curtain and unlit stage beyond, exhausted sad composer, premiere cancelled.\nPANEL 7 (bottom row, column 3): Musical theatre premiere: actors and full pit orchestra take a final bow under open red curtains; Teacher Zhu in glasses conducts from the pit, packed applauding house, brilliant opening night.\nPANEL 8 (bottom row, column 4): After a nearly perfect musical premiere, a small stopwatch and annotated score on the conductor's desk beside Teacher Zhu in glasses; softly lit empty stage behind, reflective satisfaction with a little regret, no readable timer text."
+  }
+]

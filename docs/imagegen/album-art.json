@@ -1,0 +1,898 @@
+[
+  {
+    "id": "photo",
+    "asset": "assets/album/photo.webp",
+    "source": "assets/album/source/01-daily.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/album-01-daily.txt",
+    "scene": "A grey-and-white fluffy kitten snuggles against the player's shoulder by a sunlit rehearsal-room window; cropped anonymous human, candid affectionate moment."
+  },
+  {
+    "id": "trust",
+    "asset": "assets/album/trust.webp",
+    "source": "assets/album/source/01-daily.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/album-01-daily.txt",
+    "scene": "The SAME grey-and-white kitten eagerly RUNS across the rehearsal room toward the viewer's open hands, tail raised, music stands behind."
+  },
+  {
+    "id": "gift",
+    "asset": "assets/album/gift.webp",
+    "source": "assets/album/source/01-daily.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/album-01-daily.txt",
+    "scene": "Still life: a cream invitation envelope with a small treble-clef seal rests on sheet music beside a violin and an empty welcoming chair. No readable lettering."
+  },
+  {
+    "id": "feihong",
+    "asset": "assets/album/feihong.webp",
+    "source": "assets/album/source/01-daily.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/album-01-daily.txt",
+    "scene": "Feihong, the man in blue denim reference, confidently chooses a passage at his microphone; an ORANGE tabby rubs his leg. Show BOTH singer and cat."
+  },
+  {
+    "id": "tang",
+    "asset": "assets/album/tang.webp",
+    "source": "assets/album/source/01-daily.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/album-01-daily.txt",
+    "scene": "Tang, black-haired cameraman in dark jacket reference, has finally joined a smiling group photo; a camera on a tripod with timer is visible in foreground, friends wave him into the middle."
+  },
+  {
+    "id": "orange",
+    "asset": "assets/album/orange.webp",
+    "source": "assets/album/source/01-daily.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/album-01-daily.txt",
+    "scene": "An ORANGE tabby, not the grey cat, stands proudly on a closed violin case with one paw over the corner of a score; warm rehearsal room."
+  },
+  {
+    "id": "stage",
+    "asset": "assets/album/stage.webp",
+    "source": "assets/album/source/01-daily.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/album-01-daily.txt",
+    "scene": "First ensemble rehearsal: violinists, flutist and keyboard player listen to one another and begin together in a small rehearsal room. No large audience; intimate teamwork."
+  },
+  {
+    "id": "card_band",
+    "asset": "assets/album/card_band.webp",
+    "source": "assets/album/source/01-daily.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/album-01-daily.txt",
+    "scene": "Exactly THREE adult musicians, violinist, flutist and keyboard player, bow together during an encore on a modest stage, a few clapping hands below."
+  },
+  {
+    "id": "tang_eye",
+    "asset": "assets/album/tang_eye.webp",
+    "source": "assets/album/source/02-music.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/album-02-music.txt",
+    "scene": "Tang in dark jacket quietly sorting a strip of photographs of friends and rehearsal moments on a light table, camera beside him, photographic memories NOT a literal magical eyeball."
+  },
+  {
+    "id": "card_bond",
+    "asset": "assets/album/card_bond.webp",
+    "source": "assets/album/source/02-music.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/album-02-music.txt",
+    "scene": "Close overhead view of two musicians' hands jointly annotating the SAME score with pencil; violin and flute at the table edges, shared rehearsal memories."
+  },
+  {
+    "id": "azhe",
+    "asset": "assets/album/azhe.webp",
+    "source": "assets/album/source/02-music.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/album-02-music.txt",
+    "scene": "Azhe, wavy dark hair, fine round glasses, dark shirt, swiftly turns one score page with his hand while his other hand holds a violin; partner continues playing."
+  },
+  {
+    "id": "dijie",
+    "asset": "assets/album/dijie.webp",
+    "source": "assets/album/source/02-music.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/album-02-music.txt",
+    "scene": "Dijie, tousled black hair and brown plaid overshirt, plays a SILVER TRANSVERSE FLUTE beside a shadowed music stand; warm lamp, quiet reflective rehearsal, no bamboo flute."
+  },
+  {
+    "id": "shiyuan",
+    "asset": "assets/album/shiyuan.webp",
+    "source": "assets/album/source/02-music.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/album-02-music.txt",
+    "scene": "Shiyuan, short brown bob with star hairclip and cream cardigan reference, smiles with delight after playing a beginner violin melody; two friends gently applaud in a bright practice room."
+  },
+  {
+    "id": "azhe_encore",
+    "asset": "assets/album/azhe_encore.webp",
+    "source": "assets/album/source/02-music.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/album-02-music.txt",
+    "scene": "Azhe with fine round glasses performs an energetic solo violin cadenza under a small spotlight; audience hands clapping at bottom edge."
+  },
+  {
+    "id": "dijie_gold",
+    "asset": "assets/album/dijie_gold.webp",
+    "source": "assets/album/source/02-music.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/album-02-music.txt",
+    "scene": "Dijie lifts his gaze above a music stand while holding a SILVER TRANSVERSE FLUTE after a perfect performance, celebratory golden stage light, not golden skin or clothing."
+  },
+  {
+    "id": "shiyuan_moon",
+    "asset": "assets/album/shiyuan_moon.webp",
+    "source": "assets/album/source/02-music.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/album-02-music.txt",
+    "scene": "Shiyuan with star hairclip plays her violin earnestly in cool moonlight from a rehearsal window; discreet warm applause from two friends, hopeful gentle expression."
+  },
+  {
+    "id": "tim",
+    "asset": "assets/album/tim.webp",
+    "source": "assets/album/source/03-companions.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/album-03-companions.txt",
+    "scene": "TIM, pale shirt and swept dark hair reference, still wearing his work lanyard, counts beats with a fellow musician over one shared score after work; violin rests nearby."
+  },
+  {
+    "id": "yeshiyang",
+    "asset": "assets/album/yeshiyang.webp",
+    "source": "assets/album/source/03-companions.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/album-03-companions.txt",
+    "scene": "Yeshiyang, navy suit reference, finally sits at a rehearsal table while a friend hands HIM a glass of warm water; tired grateful smile, his own violin case at his feet."
+  },
+  {
+    "id": "kongge",
+    "asset": "assets/album/kongge.webp",
+    "source": "assets/album/source/03-companions.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/album-03-companions.txt",
+    "scene": "Kongge, stockier bespectacled man in black polo reference, nods rare approval at a young player across a music stand, pencil poised above practice score."
+  },
+  {
+    "id": "tim_archive",
+    "asset": "assets/album/tim_archive.webp",
+    "source": "assets/album/source/03-companions.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/album-03-companions.txt",
+    "scene": "TIM calmly sets boundaries in a respectful conversation across a table; phone face-down, two chairs with comfortable distance, neutral friendship, no romantic touching."
+  },
+  {
+    "id": "tim_friend",
+    "asset": "assets/album/tim_friend.webp",
+    "source": "assets/album/source/03-companions.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/album-03-companions.txt",
+    "scene": "TIM and a friend rehearse violin together with a shared stand between them, relaxed platonic companionship and separate instrument cases."
+  },
+  {
+    "id": "tim_distance",
+    "asset": "assets/album/tim_distance.webp",
+    "source": "assets/album/source/03-companions.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/album-03-companions.txt",
+    "scene": "A quiet pair of separated music stands in the same room: TIM and another musician each focus on their OWN scores, generous distance, no anger or romantic embrace."
+  },
+  {
+    "id": "ye_invitation",
+    "asset": "assets/album/ye_invitation.webp",
+    "source": "assets/album/source/03-companions.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/album-03-companions.txt",
+    "scene": "Yeshiyang in navy suit sets his planning notebook aside and attentively listens to a seated friend over two cups of water; peaceful ten-minute break."
+  },
+  {
+    "id": "kongge_career",
+    "asset": "assets/album/kongge_career.webp",
+    "source": "assets/album/source/03-companions.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/album-03-companions.txt",
+    "scene": "Kongge in black shirt and glasses steadies the ensemble behind Shiyuan, short brown bob and star clip, both playing violin in the SAME stage light; equal musical partnership."
+  },
+  {
+    "id": "lala",
+    "asset": "assets/album/lala.webp",
+    "source": "assets/album/source/04-friends.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/album-04-friends.txt",
+    "scene": "Lala, long brown hair tied with a pale ribbon reference, patiently writes a numbered music exercise beside her violin; clear small digits 1 2 3 on the page, gentle rehearsal-room setting."
+  },
+  {
+    "id": "lala_score",
+    "asset": "assets/album/lala_score.webp",
+    "source": "assets/album/source/04-friends.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/album-04-friends.txt",
+    "scene": "Lala teaches Dijie by pointing between a staff melody and numbered notation on one open sheet; Dijie in plaid shirt holds a SILVER transverse flute, both faces and teaching action visible."
+  },
+  {
+    "id": "lala_cover",
+    "asset": "assets/album/lala_cover.webp",
+    "source": "assets/album/source/04-friends.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/album-04-friends.txt",
+    "scene": "Lala steps into an empty third-violin chair with a fresh score, lifting her violin as the rest of the string section continues; visible act of filling a missing part."
+  },
+  {
+    "id": "xiaozhou_sr",
+    "asset": "assets/album/xiaozhou_sr.webp",
+    "source": "assets/album/source/04-friends.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/album-04-friends.txt",
+    "scene": "Xiaozhou in pale blue shirt plays a GRAND PIANO alone under a confident spotlight, hands on keys, his first independent successful performance."
+  },
+  {
+    "id": "baoshi_secret",
+    "asset": "assets/album/baoshi_secret.webp",
+    "source": "assets/album/source/04-friends.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/album-04-friends.txt",
+    "scene": "Baoshi, the soft-featured black-haired adult male singer reference, joyfully performs in an elegant lavender stage dress as his feminine stage persona, microphone and stage lights, no caricature."
+  },
+  {
+    "id": "qiqi",
+    "asset": "assets/album/qiqi.webp",
+    "source": "assets/album/source/04-friends.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/album-04-friends.txt",
+    "scene": "Qiqi, dark updo and floral qipao with red trim reference, receives a small saved pastry from a friend beside an open snack box; her electric guitar rests behind, reciprocal care."
+  },
+  {
+    "id": "qiqi_sisters",
+    "asset": "assets/album/qiqi_sisters.webp",
+    "source": "assets/album/source/04-friends.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/album-04-friends.txt",
+    "scene": "Qiqi with floral qipao and red electric guitar AND Shiyuan with short bob, star clip and violin share ONE warm stage spotlight, both smiling, two distinct women."
+  },
+  {
+    "id": "cp3_entry",
+    "asset": "assets/album/cp3_entry.webp",
+    "source": "assets/album/source/04-friends.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/album-04-friends.txt",
+    "scene": "A bag of handmade cookies waits at the rehearsal-room doorway; Qiqi in floral qipao enters carrying her red electric guitar, evening concert preparation in background."
+  },
+  {
+    "id": "cp_entry",
+    "asset": "assets/album/cp_entry.webp",
+    "source": "assets/album/source/05-beginnings.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/album-05-beginnings.txt",
+    "scene": "View through a half-open wooden rehearsal-room door: Lala with long ribbon-tied hair welcomes a newcomer into a warm room of players and an empty chair; invitation to belong."
+  },
+  {
+    "id": "cp_audition",
+    "asset": "assets/album/cp_audition.webp",
+    "source": "assets/album/source/05-beginnings.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/album-05-beginnings.txt",
+    "scene": "Kongge, black polo and rectangular glasses reference, deliberately CLOSES a score folder after approving an audition, modest satisfied smile; violin and pencil on table. Not Azhe."
+  },
+  {
+    "id": "cp_debut",
+    "asset": "assets/album/cp_debut.webp",
+    "source": "assets/album/source/05-beginnings.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/album-05-beginnings.txt",
+    "scene": "After an indoor SHOPPING MALL flashmob, a manager's hand offers the orchestra its first contract folder; Shiyuan and musicians smile, Tang with camera documents it; mall railings behind."
+  },
+  {
+    "id": "cp_ordinary",
+    "asset": "assets/album/cp_ordinary.webp",
+    "source": "assets/album/source/05-beginnings.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/album-05-beginnings.txt",
+    "scene": "After a modest mall performance with sparse applause, Shiyuan raises an encouraging fist beside friends carrying violin cases, supportive not triumphant, few spectators."
+  },
+  {
+    "id": "cp_shadow",
+    "asset": "assets/album/cp_shadow.webp",
+    "source": "assets/album/source/05-beginnings.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/album-05-beginnings.txt",
+    "scene": "Bittersweet symbolic scene: Shiyuan in warm light at front of rehearsal room and a single anonymous follower in her long shadow; many EMPTY chairs behind, isolation despite attention."
+  },
+  {
+    "id": "cp2_entry",
+    "asset": "assets/album/cp2_entry.webp",
+    "source": "assets/album/source/05-beginnings.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/album-05-beginnings.txt",
+    "scene": "TIM in pale shirt arrives at a cozy amber-lit bar doorway with violin case and his office lanyard still on, night outside, rehearsal stands visible inside."
+  },
+  {
+    "id": "cp2_night",
+    "asset": "assets/album/cp2_night.webp",
+    "source": "assets/album/source/05-beginnings.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/album-05-beginnings.txt",
+    "scene": "Rehearsal musicians stand before a blackboard divided into TWO clear halves with a chalk violin pictogram on left and electric-guitar pictogram on right; choosing sections, NO stage concert."
+  },
+  {
+    "id": "cp2_choice",
+    "asset": "assets/album/cp2_choice.webp",
+    "source": "assets/album/source/05-beginnings.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/album-05-beginnings.txt",
+    "scene": "Kongge in black polo and glasses with violin case speaks earnestly to a friend in a quiet STAIRWELL under one motion-sensor lamp; contemplative decision to stay or leave."
+  },
+  {
+    "id": "cp2_street",
+    "asset": "assets/album/cp2_street.webp",
+    "source": "assets/album/source/06-concerts.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/album-06-concerts.txt",
+    "scene": "A young male street singer, Xiaojie, sings into a portable microphone beside a small amplifier and open instrument case under an urban pedestrian bridge; a passerby places a coin, evening busking."
+  },
+  {
+    "id": "cp2_dual",
+    "asset": "assets/album/cp2_dual.webp",
+    "source": "assets/album/source/06-concerts.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/album-06-concerts.txt",
+    "scene": "Successful small outdoor commercial roadshow: Shiyuan in cream and Kongge in black polo glasses stand together playing violins, both equally visible, ensemble behind, applause."
+  },
+  {
+    "id": "cp2_solo",
+    "asset": "assets/album/cp2_solo.webp",
+    "source": "assets/album/source/06-concerts.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/album-06-concerts.txt",
+    "scene": "Late-night practice room after a successful roadshow: Shiyuan rehearses violin alone with a contract folder on table and many empty chairs, tired but determined."
+  },
+  {
+    "id": "cp2_retry",
+    "asset": "assets/album/cp2_retry.webp",
+    "source": "assets/album/source/06-concerts.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/album-06-concerts.txt",
+    "scene": "A small outdoor roadshow after a shaky performance: sparse politely clapping crowd; Shiyuan turns toward discouraged bandmates with a determined clenched fist, resolve to try again."
+  },
+  {
+    "id": "cp3_he",
+    "asset": "assets/album/cp3_he.webp",
+    "source": "assets/album/source/06-concerts.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/album-06-concerts.txt",
+    "scene": "Indoor pop concert packed with glowing lightsticks, string players, drum kit and electric guitar returning for another encore, warm vibrant musical joy."
+  },
+  {
+    "id": "cp3_te",
+    "asset": "assets/album/cp3_te.webp",
+    "source": "assets/album/source/06-concerts.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/album-06-concerts.txt",
+    "scene": "After a successful indoor concert, a signed contract lies beside instrument cases backstage; Qiqi whispers to Shiyuan near the curtain, thoughtful bittersweet side-stage atmosphere."
+  },
+  {
+    "id": "cp3_fail",
+    "asset": "assets/album/cp3_fail.webp",
+    "source": "assets/album/source/06-concerts.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/album-06-concerts.txt",
+    "scene": "A concert stops awkwardly mid-song: silent audience, worried musicians exchanging glances, loose page on the floor and one dim spotlight, no celebratory hands."
+  },
+  {
+    "id": "cp3_qiqi",
+    "asset": "assets/album/cp3_qiqi.webp",
+    "source": "assets/album/source/06-concerts.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/album-06-concerts.txt",
+    "scene": "A cancelled rehearsal: small groups whisper at opposite sides of a cold room; untouched cookie box, empty central music stands, anxious separation. No literal knife or violence."
+  },
+  {
+    "id": "cp4_entry",
+    "asset": "assets/album/cp4_entry.webp",
+    "source": "assets/album/source/07-theatre.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/album-07-theatre.txt",
+    "scene": "Yeshiyang in navy suit brings a glass of warm water to someone seated at the far edge of an empty THEATRE; contracts on a table, stage lighting being prepared."
+  },
+  {
+    "id": "cp4_he",
+    "asset": "assets/album/cp4_he.webp",
+    "source": "assets/album/source/07-theatre.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/album-07-theatre.txt",
+    "scene": "Formal theatre completely FULL of audience, entire orchestra bowing together under star-like warm lights and red curtains, joyful triumphant full-house curtain call."
+  },
+  {
+    "id": "cp4_te",
+    "asset": "assets/album/cp4_te.webp",
+    "source": "assets/album/source/07-theatre.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/album-07-theatre.txt",
+    "scene": "After the curtain call, musicians linger separately in theatre WINGS beside heavy velvet curtains, empty spotlight on stage, unresolved quiet feelings, not a full-house image."
+  },
+  {
+    "id": "cp4_fail",
+    "asset": "assets/album/cp4_fail.webp",
+    "source": "assets/album/source/07-theatre.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/album-07-theatre.txt",
+    "scene": "View from theatre stage into rows of seats that are CLEARLY HALF EMPTY; Shiyuan sits at stage edge holding her violin after a disappointing concert, subdued evening lighting."
+  },
+  {
+    "id": "cp4_qiqi",
+    "asset": "assets/album/cp4_qiqi.webp",
+    "source": "assets/album/source/07-theatre.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/album-07-theatre.txt",
+    "scene": "CLOSED theatre entrance at night, doors locked, unlit lobby and an unused box-office window; no waiting audience, no readable poster lettering, cancelled event."
+  },
+  {
+    "id": "cp4_lemon",
+    "asset": "assets/album/cp4_lemon.webp",
+    "source": "assets/album/source/07-theatre.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/album-07-theatre.txt",
+    "scene": "Close still life of a plane ticket and passport beside a packed instrument case; beyond a cold window are tall blank walls rather than any stage, ominous but nonviolent journey."
+  },
+  {
+    "id": "lemon_be",
+    "asset": "assets/album/lemon_be.webp",
+    "source": "assets/album/source/07-theatre.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/album-07-theatre.txt",
+    "scene": "A lonely instrument case and abandoned plane ticket inside a bleak enclosed compound corridor with locked gate in distance; promise of a stage never fulfilled, no people harmed, no text."
+  },
+  {
+    "id": "cp5_entry",
+    "asset": "assets/album/cp5_entry.webp",
+    "source": "assets/album/source/07-theatre.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/album-07-theatre.txt",
+    "scene": "Bright summer sunshine over an OUTDOOR FESTIVAL invitation envelope on a rehearsal-room table with sunglasses and violin case; musicians gather eagerly, summer plans arriving."
+  },
+  {
+    "id": "cp5_wind",
+    "asset": "assets/album/cp5_wind.webp",
+    "source": "assets/album/source/08-finales.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/album-08-finales.txt",
+    "scene": "A summer music festival invitation on the rehearsal table while Shiyuan looks toward bright summer sky through an open window; a distant quiet admirer remains out of focus, bittersweet possibility."
+  },
+  {
+    "id": "cp5_he",
+    "asset": "assets/album/cp5_he.webp",
+    "source": "assets/album/source/08-finales.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/album-08-finales.txt",
+    "scene": "After a successful summer OUTDOOR music festival, Shiyuan with brown bob and star hairclip beams and takes an anonymous partner's hand at stage edge; strings, grass and summer sky, intimate joy."
+  },
+  {
+    "id": "cp5_be",
+    "asset": "assets/album/cp5_be.webp",
+    "source": "assets/album/source/08-finales.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/album-08-finales.txt",
+    "scene": "WEDDING scene: Shiyuan recognizable by short brown hair and star hair ornament now in a white bridal gown beside her groom seen from behind; in foreground an unchosen violinist plays for them, bittersweet restrained emotion."
+  },
+  {
+    "id": "cp5_fail",
+    "asset": "assets/album/cp5_fail.webp",
+    "source": "assets/album/source/08-finales.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/album-08-finales.txt",
+    "scene": "OUTDOOR festival stage in strong wind: music sheets flutter off stands, microphones lean, Shiyuan secures her violin while performers struggle to recover the beat, cloudy sky, no cheering triumph."
+  },
+  {
+    "id": "cp6_entry",
+    "asset": "assets/album/cp6_entry.webp",
+    "source": "assets/album/source/08-finales.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/album-08-finales.txt",
+    "scene": "Teacher Zhu, short dark hair and glasses reference, excitedly presents a thick HANDWRITTEN orchestral score to friends in a rehearsal room, pencil notes and manuscript pages, eyes lit with hope."
+  },
+  {
+    "id": "cp6_be",
+    "asset": "assets/album/cp6_be.webp",
+    "source": "assets/album/source/08-finales.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/album-08-finales.txt",
+    "scene": "Teacher Zhu in glasses closes a drawer containing unfinished manuscript pages; unopened red theatre curtain and unlit stage beyond, exhausted sad composer, premiere cancelled."
+  },
+  {
+    "id": "cp6_he",
+    "asset": "assets/album/cp6_he.webp",
+    "source": "assets/album/source/08-finales.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/album-08-finales.txt",
+    "scene": "Musical theatre premiere: actors and full pit orchestra take a final bow under open red curtains; Teacher Zhu in glasses conducts from the pit, packed applauding house, brilliant opening night."
+  },
+  {
+    "id": "cp6_te",
+    "asset": "assets/album/cp6_te.webp",
+    "source": "assets/album/source/08-finales.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/album-08-finales.txt",
+    "scene": "After a nearly perfect musical premiere, a small stopwatch and annotated score on the conductor's desk beside Teacher Zhu in glasses; softly lit empty stage behind, reflective satisfaction with a little regret, no readable timer text."
+  }
+]

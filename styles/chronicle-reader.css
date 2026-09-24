@@ -1,0 +1,102 @@
+/* Chronicle reading mode: scene, dialogue, and choices form one compact player. */
+#view-chronicle .cp-layout.cp-reading {
+  display: block;
+  max-width: 1120px;
+  margin-inline: auto;
+}
+.cp-reading .cp-banner { display: none; }
+.cp-reading .cp-controls { margin-top: 0; }
+.cp-reading .cp-hud { margin-bottom: 12px; }
+.cp-reading .cp-hud > div { padding: 12px 18px; }
+.cp-reading .cp-hud strong { font-size: 24px; }
+.cp-reading .lala-notebook-shortcut { margin-block: 12px; padding: 10px 16px; }
+.cp-novel {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding: 20px;
+  border: 1px solid #d9d2d8;
+  border-radius: 24px;
+  background: #45414d;
+  box-shadow: 0 10px 30px #38333e0b;
+}
+.cp-novel-illustrated::before {
+  content: '';
+  position: absolute;
+  z-index: -2;
+  inset: -28px;
+  background: var(--scene-art) center / cover;
+  filter: blur(20px) saturate(.55);
+}
+.cp-novel::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(110deg, #25232ddd, #30273175 75%, #35303b99);
+}
+.cp-novel-top { display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #f3e8e6; font-size: 12px; letter-spacing: 1px; }
+.cp-novel-top > span:nth-child(2) { text-align: center; }
+.cp-novel-progress { display: flex; gap: 5px; }
+.cp-novel-progress i { width: 18px; height: 3px; border-radius: 5px; background: #ffffff40; }
+.cp-novel-progress i.past { background: #eac4cd; }
+.cp-novel-visual { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 24px; align-items: center; padding: 22px 24px 26px; }
+.cp-novel-heading { color: #fff5ec; min-width: 0; }
+.cp-novel-heading > span { font-size: 11px; letter-spacing: 3px; color: #ded0d4; }
+.cp-novel-heading h3 { font-family: var(--serif); font-size: clamp(25px, 3vw, 36px); font-weight: 500; line-height: 1.55; letter-spacing: 2px; margin: 12px 0 20px; }
+.cp-memory-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 0; border: 0; border-bottom: 1px solid #ffffff50; background: none; color: #f3d9dc; font-size: 12px; cursor: pointer; }
+.cp-memory-link:hover { color: white; }
+.cp-novel .cp-novel-art { width: auto; max-width: 300px; margin: 0 8px 0 0; padding: 7px 7px 0; border: 0; border-radius: 5px; background: #fffaf3; transform: rotate(2deg); box-shadow: 0 7px 20px #16121935; }
+.cp-novel-art button { display: block; background: transparent; border: 0; padding: 0; cursor: zoom-in; }
+.cp-novel .cp-novel-art img { display: block; width: auto; max-width: 100%; height: 250px; object-fit: contain; }
+.cp-novel .cp-novel-art figcaption { text-align: center; padding: 7px 5px; font-size: 10px; line-height: 1.4; color: #8b7659; }
+.cp-novel-dialogue { padding: 24px; background: #fffdf9; border: 1px solid #f2e8e2; border-radius: 17px; }
+.cp-novel-text-only .cp-novel-dialogue { margin-top: 18px; }
+.cp-novel-dialogue > .cp-surface { padding: 0; border: 0; box-shadow: none; background: none; border-radius: 0; }
+.cp-novel-dialogue .cp-speaker { gap: 12px; margin: 0; align-items: center; flex-wrap: wrap; }
+.cp-novel-dialogue .cp-speaker img, .cp-novel-dialogue .cp-speaker-symbol { width: 42px; height: 48px; border-radius: 9px; }
+.cp-novel-dialogue .cp-speaker b { font-size: 19px; color: #9b6077; }
+.cp-novel-dialogue .cp-speaker small { font-size: 10px; }
+.cp-novel-dialogue .cp-scene-label { margin-left: auto; font-size: 11px; }
+.cp-novel-dialogue .cp-text { font-size: 16px; line-height: 1.95; white-space: pre-line; color: #354860; margin: 16px 0 0; min-height: 0; }
+.cp-novel-dialogue .cp-dialogue-turn + .cp-dialogue-turn { padding-top: 18px; margin-top: 18px; }
+.cp-novel-dialogue .cp-choices { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; margin-top: 22px; }
+.cp-novel-dialogue .cp-choice { min-width: 0; min-height: 56px; padding: 12px 14px; gap: 12px; text-align: left; }
+.cp-novel-dialogue .cp-choice:only-child { grid-column: 1 / -1; }
+.cp-novel-dialogue .cp-choice > span:nth-child(2) { min-width: 0; }
+.cp-novel-dialogue .cp-choice small { font-size: 11px; }
+.cp-novel-dialogue .cp-option-n { font-size: 16px; }
+.cp-novel-dialogue .shanqiu-menu { display: block; }
+.cp-reader-details { margin-top: 16px; border: 1px solid #dce4ef; background: #ffffff9c; border-radius: 14px; padding: 14px 18px; }
+.cp-reader-details > summary { color: #71839d; cursor: pointer; font-size: 13px; }
+.cp-reader-details .cp-sidebar { position: static; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; margin-top: 14px; }
+.cp-reader-details .cp-sidepanel { margin: 0; }
+@media (max-width: 760px) {
+  .cp-novel { padding: 14px; border-radius: 20px; }
+  .cp-novel-visual { padding: 20px 6px 24px; gap: 18px; }
+  .cp-novel-heading h3 { font-size: 26px; }
+  .cp-novel .cp-novel-art img { height: 210px; }
+  .cp-novel-dialogue { padding: 20px; }
+  .cp-reader-details .cp-sidebar { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) {
+  .cp-novel-top { flex-wrap: wrap; gap: 8px; font-size: 10px; }
+  .cp-novel-top > span:nth-child(2) { text-align: right; margin-left: auto; }
+  .cp-novel-progress { width: 100%; justify-content: center; }
+  .cp-novel-visual { grid-template-columns: 1fr; gap: 14px; padding: 16px 0 22px; }
+  .cp-novel-heading { text-align: center; }
+  .cp-novel-heading > span { display: none; }
+  .cp-novel-heading h3 { font-size: 24px; margin: 0 0 4px; }
+  .cp-novel .cp-novel-art { justify-self: center; margin: 0; }
+  .cp-novel .cp-novel-art img { height: 185px; }
+  .cp-novel-dialogue { padding: 16px; border-radius: 13px; }
+  .cp-novel-dialogue .cp-text { font-size: 14px; line-height: 1.9; margin-top: 12px; }
+  .cp-novel-dialogue .cp-speaker b { font-size: 17px; }
+  .cp-novel-dialogue .cp-scene-label { display: none; }
+  .cp-novel-dialogue .cp-choices { grid-template-columns: 1fr; margin-top: 16px; gap: 8px; }
+  .cp-novel-dialogue .cp-choice { font-size: 13px; padding: 11px; }
+  .cp-reading .cp-hud > div { padding: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cp-novel .cp-novel-art { transform: none; }
+}
