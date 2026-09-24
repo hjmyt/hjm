@@ -19,13 +19,14 @@ window.StoryBgm = (() => {
   function trackFor(c) {
     if (!['chronicle', 'story'].includes(c.view)) return null;
     if (c.view === 'story') return c.character ? 'memories' : 'daily';
+    if (c.chapter === 7) return /_BE|_TE|10wait/.test(c.scene||c.ending||'')?'farewell':/_HE/.test(c.scene||c.ending||'')?'starlight':c.scene==='sy_08'?'lounge':'memories';
     if (c.chapter === 6) return 'musical';
     if (c.scene === 'shanqiu_closed' || (c.closed && ['zhu_offer', 'zhu_reply'].includes(c.scene)) || /^be_/.test(c.scene || '') || /_(fail|te)$/.test(c.scene || '') || /_(fail|te)$/.test(c.ending || '') || ['c5_be','c5_wind','c2_solo','shadow','c3_qiqi','c4_qiqi','c4_lemon','c2_retry'].includes(c.ending)) return 'farewell';
     if (['zhu_offer', 'zhu_reply'].includes(c.scene)) return 'lounge';
     if (/_he$/.test(c.scene || '') || /_he$/.test(c.ending || '')) return 'stage';
     return ({1: 'daily', 2: 'chapter', 3: 'starlight', 4: 'stage', 5: 'starlight', 6: 'musical'})[c.chapter] || 'daily';
   }
-  function allowed() {return !!key && enabled && context.sound && !document.hidden && context.scene !== 'live_play';}
+  function allowed() {return !!key && enabled && context.sound && !document.hidden && !['live_play','training'].includes(context.scene);}
   function persist() {try {localStorage.setItem(storageKey, JSON.stringify({enabled, volume}));} catch {}}
   function level(fade = false) {
     if (gain) {const t = audioContext.currentTime;gain.gain.cancelScheduledValues(t);gain.gain.setValueAtTime(fade ? 0 : gain.gain.value, t);gain.gain.linearRampToValueAtTime(volume, t + (fade ? .8 : .1));}
@@ -43,7 +44,7 @@ window.StoryBgm = (() => {
   function pause() {serial++;pending = false;audio.pause();if (gain) {gain.gain.cancelScheduledValues(audioContext.currentTime);gain.gain.setValueAtTime(0, audioContext.currentTime);}}
   function paint() {
     const title = tracks[key]?.title || '故事配乐';
-    const status = !context.sound ? '总声音已关闭' : !enabled ? '配乐已关闭' : failed ? '加载失败，点击重试' : context.scene === 'live_play' ? '演出中，配乐暂停' : blocked || !unlocked ? '点击播放配乐' : pending ? '配乐加载中' : !audio.paused ? '正在播放' : '配乐待续';
+    const status = !context.sound ? '总声音已关闭' : !enabled ? '配乐已关闭' : failed ? '加载失败，点击重试' : context.scene === 'training' ? '训练中，配乐暂停' : context.scene === 'live_play' ? '演出中，配乐暂停' : blocked || !unlocked ? '点击播放配乐' : pending ? '配乐加载中' : !audio.paused ? '正在播放' : '配乐待续';
     document.querySelectorAll('[data-story-music]').forEach(el => {
       el.querySelector('[data-music-title]').textContent = title;el.querySelector('[data-music-status]').textContent = status;
       const button = el.querySelector('[data-music-toggle]');button.disabled = !context.sound;button.setAttribute('aria-pressed', String(enabled));button.setAttribute('aria-label', (enabled && !blocked && unlocked && !failed ? '关闭' : '播放') + '故事配乐');

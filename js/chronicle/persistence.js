@@ -5,9 +5,9 @@ function createChroniclePersistence(ctx) {
     function freshRun() {
         return { weekly: ctx.freshWeeks(), chapter: 1, sourceMode: 'chapter1', events: { sponsor: null, boundary: null, bill: null }, name: '', inst: '', ch: 1, week: 1, tech: 5, level: 1,
             aff: Object.fromEntries(ctx.PERSON_IDS.map(k => [k, 0])), dark: { feihong: 0, dijie: 0 },
-            bar: { order: null, returnTo: null, closed: false, closureSeen: false }, flags: {}, scene: 'start', rev: 0, log: [], journal: [], battle: null, live: null, chat: 'lala', ending: null, legacyEnded: false };
+            bar: { order: null, returnTo: null, closed: false, closureSeen: false }, flags: {}, scene: 'start', rev: 0, log: [], journal: [], battle: null, live: null, chat: 'lala', ending: null, previewedEnding: null, legacyEnded: false };
     }
-    function fresh() { return { version: 2, runNo: 1, claimed: [], endings: [], chapterEndings: {}, completedChapters: [], bonds: Object.fromEntries(ctx.PERSON_IDS.map(k => [k, 0])), slots: {}, chapter2Start: null, chapter3Start: null, chapter4Start: null, chapter5Start: null, chapter6Start: null, run: freshRun() }; }
+    function fresh() { return { personal: ctx.freshPersonal(), version: 2, runNo: 1, claimed: [], endings: [], chapterEndings: {}, completedChapters: [], bonds: Object.fromEntries(ctx.PERSON_IDS.map(k => [k, 0])), slots: {}, chapter2Start: null, chapter3Start: null, chapter4Start: null, chapter5Start: null, chapter6Start: null, run: freshRun() }; }
     // V6: retire the former relationship-penalty branch. Do not reset valid progress.
     // Old identifiers below are migration-only; unknown history entries are filtered by the catalogs.
     function isRetiredRun(a) {
@@ -70,6 +70,7 @@ function createChroniclePersistence(ctx) {
         r.journal = Array.isArray(a.journal) ? a.journal.filter(e => e && typeof e.text === 'string' && ctx.SCENES.includes(e.scene)).slice(-60).map(e => ({ chapter: r.chapter, week: ctx.nInt(e.week, 1, 1, 999), scene: e.scene, who: ctx.PEOPLE[e.who] || ctx.STORY_VOICES[e.who] ? e.who : 'narrator', text: ctx.str(e.text, 1000), choice: typeof e.choice === 'string' ? ctx.str(e.choice, 160) : null })) : [];
         r.chat = ctx.PERSON_IDS.includes(a.chat) ? a.chat : 'lala';
         r.ending = Object.hasOwn(ctx.ENDINGS, a.ending || '') ? a.ending : null;
+        r.previewedEnding = r.ending && a.previewedEnding === r.ending ? r.ending : null;
         r.legacyEnded = a.legacyEnded === true;
         if (Array.isArray(a.log))
             r.log = a.log.filter(x => x && typeof x.text === 'string' && !isRetiredLog(x.text)).slice(-70).map(x => ({ chapter: [1, 2, 3, 4, 5, 6].includes(x.chapter) ? x.chapter : r.chapter, week: ctx.nInt(x.week, 1, 1, 999), text: ctx.str(x.text, 220), warning: x.warning === true }));
@@ -153,8 +154,11 @@ function createChroniclePersistence(ctx) {
         ctx.M().run = ch === 1 ? freshRun() : safeSnapshot(ctx.M()['chapter' + ch + 'Start'] || quickRun(ch, name, inst));
         ctx.R().name = name;
         ctx.R().inst = inst;
+        // Completed training survives a chapter restart as learned technique, not another payout.
+        ctx.R().tech += Object.entries(economy().training).filter(([key]) => key.startsWith(ch + ':')).reduce((sum, [, item]) => sum + item.gain, 0);
         ctx.R().weekly = ctx.freshWeeks();
         ctx.R().ending = null;
+        ctx.R().previewedEnding = null;
         ctx.R().legacyEnded = false;
         ctx.R().battle = null;
         ctx.R().live = null;
@@ -226,7 +230,7 @@ function createChroniclePersistence(ctx) {
         const slots = { ...ctx.M().slots };
         slots[String(ctx.R().chapter)] = safeSnapshot(ctx.R());
         delete slots[String(raw.chapter)];
-        return clean({ version: 2, runNo: ctx.M().runNo, claimed: ctx.M().claimed, endings: ctx.M().endings, chapterEndings: ctx.M().chapterEndings, completedChapters: ctx.M().completedChapters, bonds: ctx.M().bonds, run: raw, slots, chapter2Start: raw.chapter === 2 ? null : ctx.M().chapter2Start, chapter3Start: raw.chapter === 3 ? null : ctx.M().chapter3Start, chapter4Start: raw.chapter === 4 ? null : ctx.M().chapter4Start, chapter5Start: raw.chapter === 5 ? null : ctx.M().chapter5Start, chapter6Start: raw.chapter === 6 ? null : ctx.M().chapter6Start });
+        return clean({ version: 2, runNo: ctx.M().runNo, claimed: ctx.M().claimed, personal: ctx.M().personal, endings: ctx.M().endings, chapterEndings: ctx.M().chapterEndings, completedChapters: ctx.M().completedChapters, bonds: ctx.M().bonds, run: raw, slots, chapter2Start: raw.chapter === 2 ? null : ctx.M().chapter2Start, chapter3Start: raw.chapter === 3 ? null : ctx.M().chapter3Start, chapter4Start: raw.chapter === 4 ? null : ctx.M().chapter4Start, chapter5Start: raw.chapter === 5 ? null : ctx.M().chapter5Start, chapter6Start: raw.chapter === 6 ? null : ctx.M().chapter6Start });
     }
     function requestLegacy(obj) {
         const converted = legacy(obj);
@@ -257,6 +261,7 @@ function createChroniclePersistence(ctx) {
     function safeSnapshot(r) { return JSON.parse(JSON.stringify(r)); }
     function clean(obj) {
         const d = cleanSingle(obj);
+        d.personal=ctx.cleanPersonal(obj?.personal);
         d.slots = {};
         for (const id of ['1', '2', '3', '4', '5', '6']) {
             const a = obj?.slots?.[id];
@@ -298,6 +303,7 @@ function createChroniclePersistence(ctx) {
                 r.name = first.name;
                 r.inst = first.inst;
             }
+        if(!chapterComplete(6,d))d.personal.active=false;
         syncBonds(d);
         return d;
     }
@@ -356,6 +362,7 @@ function createChroniclePersistence(ctx) {
         return r;
     }
     function requestChapter(ch) {
+        if([1,2,3,4,5,6].includes(ch)&&chapterUnlocked(ch)&&ctx.M().personal?.active){ctx.M().personal.active=false;ctx.changed();}
         repairChapterCarry(ctx.M());
         syncBonds();
         if (![1, 2, 3, 4, 5, 6].includes(ch) || ch === ctx.R().chapter)

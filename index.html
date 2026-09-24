@@ -16,6 +16,9 @@
 <link rel="stylesheet" href="styles/chronicle-weeks.css">
 <link rel="stylesheet" href="styles/album.css">
 <link rel="stylesheet" href="styles/chronicle-reader.css">
+<link rel="stylesheet" href="styles/chronicle-training.css">
+<link rel="stylesheet" href="styles/chronicle-personal.css">
+<link rel="stylesheet" href="styles/gift-cards.css">
 </head>
 <body>
 <div class="shell">
@@ -48,7 +51,7 @@
  <div class="activity-grid">
   <button class="card activity-card" data-route="rhythm"><span class="activity-icon"><span data-icon="music"></span></span><div><h3>一起合奏吧</h3><p>让猫爪，落在心动的节拍上</p><span class="mini-link">开始演奏<span data-icon="arrow"></span></span></div></button>
   <button class="card activity-card" id="homeAlbumBtn"><span class="activity-icon cream"><span data-icon="camera"></span></span><div><h3>定格小小瞬间</h3><p id="homeAlbumText">已珍藏 1 张乐团回忆</p><span class="mini-link">翻开相册<span data-icon="arrow"></span></span></div></button>
-  <button class="card activity-card" id="giftBtn"><span class="activity-icon sage"><span data-icon="gift"></span></span><div><h3>来自乐团的礼物</h3><p>输入彩蛋口令，领取见面礼</p><span class="mini-link" id="giftLink">拆开礼物<span data-icon="arrow"></span></span></div></button>
+  <button class="card activity-card" id="giftBtn"><span class="activity-icon sage"><span data-icon="gift"></span></span><div><h3>来自乐团的礼物</h3><p>兑换礼品卡，收下乐团的心意</p><span class="mini-link" id="giftLink">拆开礼物<span data-icon="arrow"></span></span></div></button>
  </div>
  <div class="daily-strip"><div class="daily-left"><span data-icon="sparkles"></span><div><div class="daily-title">今日份的小幸福</div><div class="daily-sub">故事、陪伴与达标演奏，慢慢积累音符</div></div></div><div class="daily-items" id="dailyItems"></div><button class="btn secondary small" id="dailyClaim">领取 10 ♪</button></div>
 </section>
@@ -88,11 +91,13 @@
 <script defer src="js/data/assets.js"></script>
 <script defer src="js/data/characters.js"></script>
 <script defer src="js/data/chronicle-art.js"></script>
+<script defer src="js/data/personal-routes.js"></script>
 <script defer src="js/data/memories.js"></script>
 <script defer src="js/data/cards.js"></script>
 <script defer src="js/data/stories.js"></script>
 <script defer src="js/data/tracks.js"></script>
 <script defer src="js/data/chronicle.js"></script>
+<script defer src="js/data/chronicle-training.js"></script>
 <script defer src="js/data/chronicle-weeks.js"></script>
 <script defer src="js/core/economy.js"></script>
 <script defer src="js/core/bonds.js"></script>
@@ -106,8 +111,12 @@
 <script defer src="js/cards/skills/trio.js"></script>
 <script defer src="js/cards/skills/lala.js"></script>
 <script defer src="js/chronicle/art.js"></script>
+<script defer src="js/chronicle/pulse.js"></script>
+<script defer src="js/chronicle/ear.js"></script>
+<script defer src="js/chronicle/training.js"></script>
 <script defer src="js/chronicle/weeks.js"></script>
 <script defer src="js/chronicle/bar.js"></script>
+<script defer src="js/chronicle/personal.js"></script>
 <script defer src="js/chronicle/persistence.js"></script>
 <script defer src="js/chronicle/encounters.js"></script>
 <script defer src="js/chronicle/activities.js"></script>
@@ -122,6 +131,8 @@
 <script defer src="js/audio/story-bgm.js"></script>
 <script defer src="js/audio/synth.js"></script>
 <script defer src="js/features/pet.js"></script>
+<script defer src="js/data/gift-keys.js"></script>
+<script defer src="js/features/gift-cards.js"></script>
 <script defer src="js/features/settings.js"></script>
 <script defer src="js/features/stories.js"></script>
 <script defer src="js/features/album.js"></script>

@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：黑发黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：浅发宽松浅色衬衫男性主唱。REK：黑发成年男性贝斯手。飞鸿：蓝灰衬衫男主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (sy_04c_ye, do not write ID): 她不在。台阶上坐着一个戴眼镜的男人，斯文，干净，脚边放着还热乎的早餐——两份。 「你好。」他站起身，推了推眼镜，「奕兴。她……昨晚受了惊，我陪她到天亮，刚送她上楼补觉。」他顿了顿，目光在你手里的早餐上停了一秒，「你也给她带了？……心意很像。难怪。」 你站在原地，忽然明白自己差在哪里——不是早餐，是差在每一个「她需要」的时刻，他都在场。
+
+PANEL 2 (sy_04c_ye2, do not write ID): 黄奕兴看了你很久，忽然笑了：「公平竞争，我不拦任何人。」他递给你一张名片，「但记住——对她，要全力以赴。」 他走了。你握着那张烫金的名片，在楼下站了很久。台阶上那两份早餐的热气，一点一点散掉了。
+
+PANEL 3 (sy_m1, do not write ID): 某个排练到深夜的晚上，你最后一个离开琴房，发现十元趴在谱架上睡着了。弓还攥在手里，谱子压在胳膊底下，嘴角还沾着一点铅笔灰。 你轻轻抽走她手里的弓。她皱了皱眉，迷迷糊糊抓住你的袖子：「……别走。这段还没顺完。」 你的心跳，在那一刻漏了半拍。
+
+PANEL 4 (sy_05, do not write ID): （排练间隙，她忽然凑过来，小声说：）「上次……奕兴的电话，你都听到了吧。」她绞着手指，「他是很好的人。好到……有时候我会分不清，哪些是喜欢，哪些是习惯。」 她抬头看你，眼睛里是少见的认真：「你呢？你对我这么好……是为了什么？」
+
+PANEL 5 (sy_05b, do not write ID): （她愣住，然后慢慢笑了，眼眶却有点红：）「……你这个人，说话能不能别总是这么好听。」她深吸一口气，「再给我一点时间。等我把「喜欢」和「习惯」分清楚了，第一个告诉你。」
+
+PANEL 6 (sy_05c, do not write ID): 「……哦。」她笑了笑，那笑容在原地站了两秒，转身跑回了排练室。 那天之后她还是很爱说「没你不行」，只是你总觉得，这四个字里少了点什么。
+
+PANEL 7 (sy_wx, do not write ID): 演出结束后，十元被堵在了后台门口——粉丝举着手机要合影，乐手排着队加微信。她笑得脸都僵了，目光越过人群找到你，眼睛里的求救信号强烈得像闪烁的灯牌。
+
+PANEL 8 (sy_wx_b, do not write ID): 人群散开。十元瘫在后台沙发上，长出一口气。 （仰头看你，忽然说：）「刚才……谢谢你。」她顿了顿，「很奇怪。跟你在一起，我就不慌了。」 后台的灯很暗。你看着她仰起的脸，听见自己说：「那就一直在一起。」——在心里说的。

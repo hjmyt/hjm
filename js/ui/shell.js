@@ -12,7 +12,7 @@ function renderGlobal() {
     $('soundBtn').setAttribute('aria-label', state.sound ? '声音已开启，点击关闭' : '声音已关闭，点击开启');
     $('soundBtn').title = state.sound ? '声音已开启' : '声音已关闭';
     renderAudioStatus();
-    $('giftLink').innerHTML = (state.gift ? '礼物已收好' : '拆开礼物') + I('arrow');
+    $('giftLink').innerHTML = '兑换礼物' + I('arrow');
     renderPet();
     renderDaily();
     if (currentView === 'story' && !storySession)
@@ -27,7 +27,8 @@ function syncStoryMusic() {
     const r = state.chronicle.run;
     if (currentView === 'story' && !$('storyMusicControls').firstChild)
         $('storyMusicControls').innerHTML = window.StoryBgm?.controls() || '';
-    window.StoryBgm?.sync({ view: currentView, sound: state.sound, character: storySession?.id, chapter: r.chapter, scene: currentView === 'chronicle' ? r.scene : '', ending: currentView === 'chronicle' ? r.ending : null, closed: !!r.bar?.closed });
+    const personal=state.chronicle.personal, personalRun=personal?.active?personal.routes[personal.selected]:null;
+    window.StoryBgm?.sync({ view: currentView, sound: state.sound, character: storySession?.id, chapter: personalRun?7:r.chapter, scene: currentView === 'chronicle' ? (personalRun?.scene||r.scene) : '', ending: currentView === 'chronicle' ? (personalRun?.ending||r.ending) : null, closed: !!r.bar?.closed });
 }
 function renderDaily() { const labels = [['pet', '陪猫咪玩一次'], ['story', '读一段故事'], ['rhythm', '完整演奏达到 C']]; $('dailyItems').innerHTML = labels.map(([k, t]) => `<span class="task ${state.daily[k] ? 'done' : ''}"><span class="task-dot">${state.daily[k] ? I('check') : ''}</span>${t}</span>`).join(''); const all = labels.every(([k]) => state.daily[k]); $('dailyClaim').disabled = !all || state.daily.claimed; $('dailyClaim').textContent = state.daily.claimed ? '今日礼物已领取' : '10 ♪ + 1 邀请券'; }
 function markDaily(k) { ensureDaily(); state.daily[k] = true; }

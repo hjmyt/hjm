@@ -1,0 +1,83 @@
+const { chromium } = require('playwright');
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const crypto = require('node:crypto');
+const { execFileSync, spawnSync } = require('node:child_process');
+const { pathToFileURL } = require('node:url');
+const root = path.resolve(__dirname, '..'), dir = fs.mkdtempSync(path.join(os.tmpdir(), 'hjm-gift-test-'));
+const key = path.join(dir, 'private.pem'), pub = path.join(dir, 'public.js');
+const cli = (...args) => execFileSync(process.execPath, [path.join(root, 'scripts/gift-card.cjs'), ...args, '--key', key, '--public', pub], { encoding: 'utf8' }).trim();
+(async () => {
+ let browser;
+ try {
+  cli('init'); const keyBefore = fs.readFileSync(key, 'utf8'); cli('init');
+  assert.equal(fs.readFileSync(key, 'utf8'), keyBefore, 'Init never rotates a live private key');
+  assert.equal(fs.statSync(key).mode & 0o777, 0o600);
+  const code = cli('issue', '--notes', '123', '--days', '30'), payload = JSON.parse(Buffer.from(code.split('.')[1], 'base64url'));
+  assert.equal(payload.notes, 123); assert.equal(payload.exp-payload.iat, 30*86400);
+  assert(!fs.readFileSync(pub,'utf8').includes('PRIVATE'));
+  assert.notEqual(cli('issue','--notes','123'), code, 'Distinct card IDs');
+  for (const amount of ['0','-1','1.5','1000001']) assert.notEqual(spawnSync(process.execPath,[path.join(root,'scripts/gift-card.cjs'),'issue','--notes',amount,'--key',key,'--public',pub]).status,0);
+  const signed = (patch={}, signingKey=keyBefore) => {
+   const p={...payload,id:crypto.randomUUID(),exp:null,...patch}, message='HJM1.'+Buffer.from(JSON.stringify(p)).toString('base64url');
+   return message+'.'+crypto.sign('sha256',Buffer.from(message),{key:signingKey,dsaEncoding:'ieee-p1363'}).toString('base64url');
+  };
+  browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});
+  const page=await browser.newPage({viewport:{width:1440,height:1000}}), errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.route('**/js/data/gift-keys.js', route=>route.fulfill({contentType:'application/javascript',body:fs.readFileSync(pub,'utf8')}));
+  await page.goto(pathToFileURL(path.join(root,'index.html')).href);
+  await page.evaluate(()=>{state.sound=false;save();});
+  await page.locator('#giftBtn').click();
+  await page.locator('#giftCode').fill('MEOW2026');await page.locator('#redeemGift').click();
+  assert.equal(await page.evaluate(()=>state.coins),40);
+  await page.locator('#giftBtn').click();
+  assert(await page.locator('#redeemGift').isDisabled());assert(await page.locator('#redeemGiftCard').isEnabled());
+  await page.locator('#giftCardCode').fill(code.slice(0,70)+'\n'+code.slice(70));
+  await page.locator('#redeemGiftCard').click();
+  await page.waitForFunction(()=>document.querySelector('#giftCardStatus').textContent.includes('兑换成功'));
+  assert.equal(await page.evaluate(()=>state.coins),163,'Verified amount credited');
+  const rejected = async (token,pattern) => {
+   const result=await page.evaluate(async token=>{const before=JSON.stringify([state.coins,state.economy.giftCards]);let message='';try{await GiftCards.redeem(token);}catch(e){message=e.message;}return {message,unchanged:before===JSON.stringify([state.coins,state.economy.giftCards])};},token);
+   assert.match(result.message,pattern);assert(result.unchanged,'Rejected card changes nothing');
+  };
+  await rejected(code,/已经兑换/);
+  const modified=code.split('.');modified[1]=Buffer.from(JSON.stringify({...payload,notes:999})).toString('base64url');
+  await rejected(modified.join('.'),/校验未通过/);
+  await rejected('HJM1.bad.bad',/格式/);
+  for(const patch of [{notes:0},{notes:-10},{notes:1.2},{notes:1000001},{aud:'other-game'},{v:2},{kid:'0000000000000000'},{id:'__proto__'}])await rejected(signed(patch),/无效/);
+  await rejected(signed({iat:payload.iat-1000,exp:payload.iat-1}),/已过期/);
+  await rejected(signed({iat:payload.iat+1000}),/尚未生效/);
+  const wrongKey=crypto.generateKeyPairSync('ec',{namedCurve:'prime256v1'}).privateKey;
+  await rejected(signed({},wrongKey),/校验未通过/);
+  await page.reload();assert.equal(await page.evaluate(()=>state.coins),163);await rejected(code,/已经兑换/);
+  await page.evaluate(()=>{state=cleanState(JSON.parse(JSON.stringify(state)));save();});await rejected(code,/已经兑换/);
+  const concurrent=signed({notes:7});
+  const outcomes=await page.evaluate(token=>Promise.allSettled([GiftCards.redeem(token),GiftCards.redeem(token)]),concurrent);
+  assert.equal(outcomes.filter(x=>x.status==='fulfilled').length,1);assert.equal(await page.evaluate(()=>state.coins),170);
+  const failed=signed({notes:9});
+  await page.evaluate(()=>{window.restoreSetItem=Storage.prototype.setItem;Storage.prototype.setItem=function(){throw Error('quota');};});
+  await rejected(failed,/未保存/);
+  await page.evaluate(()=>{Storage.prototype.setItem=window.restoreSetItem;});
+  assert.equal(await page.evaluate(token=>GiftCards.redeem(token),failed),9,'Failed save leaves card redeemable');
+  const changed=signed({notes:11});
+  const message=await page.evaluate(async token=>{const pending=GiftCards.redeem(token);state=cleanState(JSON.parse(JSON.stringify(state)));try{await pending;return '';}catch(e){return e.message;}},changed);
+  assert.match(message,/存档已变化/);assert.equal(await page.evaluate(()=>state.coins),179);
+  await page.evaluate(()=>{state.coins=99999999;save();});await rejected(signed({notes:1}),/超过上限/);
+  await page.evaluate(()=>{state.coins=179;save();});
+  await page.evaluate(()=>window.dispatchEvent(new StorageEvent('storage',{key:KEY})));
+  await rejected(signed(),/存档已变化/);
+  await page.reload();
+  for(const width of [1440,390]) {
+   await page.setViewportSize({width,height:1000});await page.locator('#giftBtn').click();
+   await page.locator('#giftCardCode').fill(code);
+   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Responsive form');
+   await page.locator('#modalBackdrop').screenshot({path:`/tmp/hjm-gift-cards-${width}.png`});
+   await page.locator('#closeModal').click();
+  }
+  assert.deepEqual(errors,[]);
+  console.log('PASS: signing CLI, real gift form, tampering, invalid amounts, wrong issuer, expiry, repeat/concurrent redemption, persistence, storage rollback, replaced saves, balance cap, legacy gift and mobile layout.');
+ } finally { if(browser)await browser.close();fs.rmSync(dir,{recursive:true,force:true}); }
+})().catch(e=>{console.error(e);process.exitCode=1;});

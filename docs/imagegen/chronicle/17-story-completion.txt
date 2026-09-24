@@ -1,0 +1,60 @@
+Use case: illustration-story. ONE EXACT 4-column x 2-row atlas, eight equal SQUARE panels, overall 2:1 landscape. 3072x1536 preferred. No gutters, no captions, no labels, no numbers, no speech bubbles, no watermark, no UI. Straight crop boundaries at 25/50/75% width and 50% height. Each independent panel contains a complete narrative moment with faces and key props in central 80%. Strict row-major panel order. Match supplied references: warm cinematic semi-realistic anime CG with detailed painted environments. References define character identity only, make NEW composition and precise scene action in each panel. All characters adults. Player viewpoint is gender-neutral observer, do not impose identity. Do not add characters absent from scene. Do not show outcome before it occurs. No readable writing; notes and papers abstract.
+所有人物都是中国成年人。十元：棕色短bob发、星形发卡、奶油开衫、小提琴女团长。垃垃：长棕发蝴蝶结、温柔小提琴女性。阿喆：棕色卷发、细圆框眼镜、黑色衬衫、小提琴男性。TIM：白衬衫棕色短发、工牌、小提琴成年男性。汤少：黑夹克黑发、相机男性。空格：体型结实、短黑发方框眼镜、黑polo小提琴男性（不要画成纤瘦偶像）。笛杰：黑色柔软卷发格子外衫、笛子男性。柒柒：盘发、米白花纹旗袍红滚边、电吉他成年女性。小周：柔软黑发浅蓝衬衫、钢琴成年男性。柠檬：鸭舌帽深色服装、键盘成年男性。大鹅：柔软黑发白色上衣钢琴成年男性。小塔：黑发深色上衣手串、架子鼓成年男性。飞鸿：蓝灰衬衫短发主唱男性。宝石：浅发色浅色宽松衬衫、柔和少年感的成年男性主唱，不是女性。大羊：黑发黑衬衫、原声吉他男性。叶思阳：整洁西装男性。朱老师：瘦、短黑发方框眼镜、酒吧老板和作曲者男性。黄奕兴：短黑发金属框眼镜灰色西装成年男性。
+参考图顺序：1:十元,2:朱老师,3:黄奕兴,4:垃垃,5:阿喆。
+
+PANEL 1 (TOP row, column 1): 第5章，音乐节倒计时。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+音乐节倒计时。每一个百分点，都要自己挣回来。
+
+PANEL 2 (TOP row, column 2): 第5章，这首歌送给你。只画此刻：十元
+白月光 · ENFP · 正传团长
+第 6 周 · 正传
+音乐节最后一首歌，十元站在光里，忽然对着话筒说：「这首歌，送给那个总是站在我身后的人。没你不行——这次，不是口头禅。」
+黄奕兴
+UR · ENTJ · 创业公司 CEO
+接着说
+全场欢呼里，黄奕兴在台下鼓掌，笑容得体。散场后他走到你们面前，把一份文件递给十元：「场地尾款结清了，以后不用再找我兜底。」
+然后他向你伸出手：「她交给你了。兜底这份工作，以后归你。」
+
+PANEL 3 (TOP row, column 3): 第5章，婚宴侧席的琴声。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+两年后。你以乐团成员的身份，坐在婚宴舞台的侧席。婚礼进行曲响起，十元穿着婚纱，挽着黄奕兴，从通道那头走来。
+十元
+白月光 · ENFP · 正传团长
+接着说
+经过你身边时，她停下来，轻声说：「谢谢你，你。乐团就拜托你了。」
+旁白
+乐团正传 · 故事叙述
+接着说
+你笑了笑，琴弓没有停。你终究没能站上她身边的位置——但好歹，在她人生最重要的这一天，你的琴声没有走音。
+
+PANEL 4 (TOP row, column 4): 第5章，散场后披上的外套。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+音乐节中段，大风刮跑了谱架，也刮乱了节拍。观众很宽容，十元很坚强，可你知道有些东西不一样了。散场后黄奕兴把外套披在十元肩上，动作熟练得像排练过千百次。
+
+PANEL 5 (BOTTOM row, column 1): 第6章，首演前的谱桌。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+首演倒计时。多去琴房走走，总谱是不会自己写完的。
+
+PANEL 6 (BOTTOM row, column 2): 第6章，锁进抽屉的音符。只画此刻：朱老师
+山丘酒吧老板 · 音乐剧项目主导人
+第 6 周 · 正传
+首演前一周。朱老师把最后一版手稿收进了抽屉，对大家深深鞠了一躬：「对不起。稿子写不动了……是我没撑住。」
+
+那天晚上的排练室格外安静。海报印好了，票卖出去了，可音乐剧的每一个音符，都还锁在他的抽屉里。
+
+PANEL 7 (BOTTOM row, column 3): 第6章，把两年的路唱给你听。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+首演之夜，剧场满座。音乐剧《拾光》开幕的瞬间，灯光像慢动作的流星雨。朱老师站在侧幕，跟着台上的旋律小声哼唱——手里还握着那支卡祖笛，生怕哪个声部掉了队。
+
+谢幕时，十元把朱老师推到台前。他手足无措地鞠了一躬，眼镜都滑到了鼻尖。全场掌声经久不息。
+
+PANEL 8 (BOTTOM row, column 4): 第6章，侧幕的四十秒。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+首演总体顺利——只有一个声部在第三幕乱了四十秒，朱老师在侧幕急出了满头汗，差点吹起卡祖笛。观众没有察觉，可你知道，这部音乐剧还欠一次完美。

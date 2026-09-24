@@ -7,7 +7,7 @@ const { createHash } = require('node:crypto');
 const http = require('node:http');
 const root = path.resolve(__dirname, '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'docs/imagegen/album-art.json')));
-const catalog = vm.runInNewContext(fs.readFileSync(path.join(root, 'js/data/assets.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/chronicle-art.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/memories.js'), 'utf8') + '\n({ASSETS,MEMORIES})');
+const catalog = vm.runInNewContext(fs.readFileSync(path.join(root, 'js/data/assets.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/chronicle-art.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/personal-routes.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/memories.js'), 'utf8') + '\n({ASSETS,MEMORIES})');
 assert.equal(manifest.length, 64);
 assert.equal(new Set(manifest.map(m => m.id)).size, 64);
 assert.equal(new Set(manifest.map(m => createHash('sha256').update(fs.readFileSync(path.join(root, m.asset))).digest('hex'))).size, 64, 'Every event has a distinct image');
@@ -41,9 +41,14 @@ const server = http.createServer((req, res) => {
     await page.evaluate(() => { memoryVisible = () => true; route('album'); });
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 });
-      const checks = await page.evaluate(async () => {
+      // Album can re-render while media controls settle; inspect the current DOM, not detached images.
+      await page.waitForFunction(() => {
         const imgs = [...document.querySelectorAll('.memory-img img')];
-        await Promise.all(imgs.map(img => { img.loading = 'eager'; return img.decode(); }));
+        imgs.forEach(img => img.loading = 'eager');
+        return imgs.length && imgs.every(img => img.complete && img.naturalWidth > 0);
+      });
+      const checks = await page.evaluate(() => {
+        const imgs = [...document.querySelectorAll('.memory-img img')];
         return { count: imgs.length, fit: imgs.every(img => getComputedStyle(img).objectFit === 'contain'), overflow: document.documentElement.scrollWidth > innerWidth, sizes: imgs.every(img => img.naturalWidth > 0) };
       });
       assert.deepEqual(checks, { count: catalog.MEMORIES.length, fit: true, overflow: false, sizes: true });

@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：黑发黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：浅发宽松浅色衬衫男性主唱。REK：黑发成年男性贝斯手。飞鸿：蓝灰衬衫男主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (azhe_chat_care, do not write ID): 你发现阿喆的备忘录里有一页叫「团内事项」。你的那一栏写着：不吃香菜、弱音器在琴盒第二层、演出前会紧张要留独处时间、豆浆不加糖。最后一行是最近补的：周三晚上八点，别约她。
+
+PANEL 2 (azhe_chat_tape, do not write ID): 「给你的。」他递过来一个包装得像炸药包的东西。拆开是一整箱护指胶带，附赠一张打印的对比测评表：各品牌粘性、透气性、价格，以及最后一栏手写备注——「她拉得久，这个不伤手」。
+
+PANEL 3 (azhe_chat_duet, do not write ID): 「下次合奏，」他状似不经意地整理谱架，「你把第三页那段再稳一稳。我不是说你拉得不好——我是说，我想跟你一起把它拉好。」
+
+PANEL 4 (azhe_duet, do not write ID): 「这段再来一遍。」阿喆帮你翻着谱，「你今天的手感，比昨天好。」
+
+PANEL 5 (sy_act1, do not write ID): 商演彩排，小塔的鼓第一个到位。他冲你扬扬手腕上的手串：「鼓要稳，人也是。十元那场被误会之后，我就想——至少我这一拍，永远不拖她的后腿。」 演出很顺。散场时小塔把一瓶水递给十元，什么都没说，只是比了个大拇指。
+
+PANEL 6 (sy_act2, do not write ID): 小乐队的第一次合排，大羊抱着吉他皱眉：「我的 SOLO 段能不能再加四小节？」他顿了顿，压低声音，「……开玩笑的。十元排的版本，挺好的。」 他嘴上要 C 位，手上却把最难的间奏让给了别人。你以为他没心没肺，其实他的备忘录里写着：周三小乐队，别迟到。
+
+PANEL 7 (sy_act3, do not write ID): 聚会尾声，小周播放了一段视频——是大鹅从外地发来的。画面里的他抱着键盘，弹了一段就停了：「听说你们最近很好。……替我听听十元的新歌，她唱歌其实很好听，就是需要有人信。」 视频结束后，十元盯着黑掉的屏幕看了很久，然后笑着张罗下一场。你忽然明白，这个团的光，是很多人一起点亮的。
+
+PANEL 8 (sy_01, do not write ID): 那天的排练气氛很僵。一段合唱反复不过，有乐手把谱子摔在谱架上：「十元，你的音根本就没唱准！每次都差半个音，全团陪你耗！」 排练室安静得可怕。十元站在谱架前，手指绞着衣角，脸一点点白了下去。

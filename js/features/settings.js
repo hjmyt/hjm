@@ -60,7 +60,8 @@ async function importSave(file) {
     }
 }
 function showGift() {
-    openModal('一封来自乐团的邀请', `<div style="text-align:center;margin:6px 0 15px;color:#b28695">${I('gift', 'lg')}</div><p>“下次排练，也记得来。你的位置已经留好，团宠也在等你。”</p><p style="margin-top:12px">${state.gift ? '你已经领取过这份见面礼了，邀请函已放进相册。' : '输入口令，领取 10 音符和一张限定邀请函。'}</p><div class="redeem-row"><input id="giftCode" class="text-input" placeholder="提示：MEOW2026" maxlength="30" autocomplete="off" ${state.gift ? 'disabled' : ''}><button class="btn primary" id="redeemGift" ${state.gift ? 'disabled' : ''}>${state.gift ? '已领取' : '拆开礼物'}</button></div><div class="modal-foot">这是本地单机彩蛋，不连接真实周边订单或兑换服务。</div>`);
+    openModal('来自乐团的礼物', `<div style="text-align:center;margin:6px 0 15px;color:#b28695">${I('gift', 'lg')}</div><p>“下次排练，也记得来。你的位置已经留好，团宠也在等你。”</p><p style="margin-top:12px">${state.gift ? '你已经领取过这份见面礼了，邀请函已放进相册。' : '输入口令，领取 10 音符和一张限定邀请函。'}</p><div class="redeem-row"><input id="giftCode" class="text-input" placeholder="提示：MEOW2026" maxlength="30" autocomplete="off" ${state.gift ? 'disabled' : ''}><button class="btn primary" id="redeemGift" ${state.gift ? 'disabled' : ''}>${state.gift ? '已领取' : '拆开礼物'}</button></div>${GiftCards.formHTML()}<div class="modal-foot">回忆和兑换记录随当前存档保存，记得在设置中备份。</div>`);
+    GiftCards.mount();
     $('redeemGift').onclick = () => {
         if (state.gift)
             return;

@@ -20,5 +20,6 @@ python3 -m http.server 8000
 - [项目全局规则](AGENTS.md)
 - [音符经济](docs/economy.md)
 - [统一羁绊](docs/unified-bonds.md)
-- [每周剧情与第一章插图](docs/weekly-stories.md)
+- [连贯剧情、每周训练与插图](docs/weekly-stories.md)
+- [第七章个人线](docs/personal-routes.md)
 - [浏览器回归](tests/README.md)

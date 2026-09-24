@@ -159,6 +159,7 @@ const ChronicleData = {
     "huangyx"
   ],
   "SCENES": [
+    "training",
     "weekly_prep",
     "weekly_reply",
     "c5_intro",
@@ -681,6 +682,7 @@ const ChronicleData = {
       "azhe": 5
     },
     "c2_kong:0": {
+      "shiyuan": 5,
       "kongge": 5
     },
     "c2_kong:1": {

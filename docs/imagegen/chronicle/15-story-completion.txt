@@ -1,0 +1,47 @@
+Use case: illustration-story. ONE EXACT 4-column x 2-row atlas, eight equal SQUARE panels, overall 2:1 landscape. 3072x1536 preferred. No gutters, no captions, no labels, no numbers, no speech bubbles, no watermark, no UI. Straight crop boundaries at 25/50/75% width and 50% height. Each independent panel contains a complete narrative moment with faces and key props in central 80%. Strict row-major panel order. Match supplied references: warm cinematic semi-realistic anime CG with detailed painted environments. References define character identity only, make NEW composition and precise scene action in each panel. All characters adults. Player viewpoint is gender-neutral observer, do not impose identity. Do not add characters absent from scene. Do not show outcome before it occurs. No readable writing; notes and papers abstract.
+所有人物都是中国成年人。十元：棕色短bob发、星形发卡、奶油开衫、小提琴女团长。垃垃：长棕发蝴蝶结、温柔小提琴女性。阿喆：棕色卷发、细圆框眼镜、黑色衬衫、小提琴男性。TIM：白衬衫棕色短发、工牌、小提琴成年男性。汤少：黑夹克黑发、相机男性。空格：体型结实、短黑发方框眼镜、黑polo小提琴男性（不要画成纤瘦偶像）。笛杰：黑色柔软卷发格子外衫、笛子男性。柒柒：盘发、米白花纹旗袍红滚边、电吉他成年女性。小周：柔软黑发浅蓝衬衫、钢琴成年男性。柠檬：鸭舌帽深色服装、键盘成年男性。大鹅：柔软黑发白色上衣钢琴成年男性。小塔：黑发深色上衣手串、架子鼓成年男性。飞鸿：蓝灰衬衫短发主唱男性。宝石：浅发色浅色宽松衬衫、柔和少年感的成年男性主唱，不是女性。大羊：黑发黑衬衫、原声吉他男性。叶思阳：整洁西装男性。朱老师：瘦、短黑发方框眼镜、酒吧老板和作曲者男性。黄奕兴：短黑发金属框眼镜灰色西装成年男性。
+参考图顺序：1:柒柒,2:小周,3:柠檬,4:十元,5:垃垃。
+
+PANEL 1 (TOP row, column 1): 第4章，我站他旁边就行。只画此刻：飞鸿
+R → 待定 · 主唱
+第 6 周 · 正传
+（你帮他们把声部重新排了。飞鸿看着新谱子，小声对你说：「谢谢。」顿了顿又补了一句，「他紧张的时候，眼睛会到处找……找我。我站他旁边就行。」
+
+PANEL 2 (TOP row, column 2): 第4章，海报上的每个名字。只画此刻：十元
+白月光 · ENFP · 正传团长
+第 6 周 · 正传
+（十元婉拒得很温柔：「柒柒姐，心意我们领了。但海报上每一个名字，都是一起扛过排练的人。」
+柒柒
+电吉他 · 银行客户经理
+接着说
+柒柒笑了，替十元理了理衣领：「好，听你的。」（她转身时，旗袍的盘扣在灯下闪了一下，你看不清她的表情。
+
+PANEL 3 (TOP row, column 3): 第4章，致谢页最后一行。只画此刻：柒柒
+电吉他 · 银行客户经理
+第 6 周 · 正传
+（叶思阳接过提案，用三个小时把赞助拆成了「鸣谢单位」的形式：钱照收，名字只出现在致谢页最后一行。柒柒看完合同，笑了一声：「叶副团，真是……滴水不漏。」
+
+PANEL 4 (TOP row, column 4): 第4章，咖啡与人情。只画此刻：垃垃
+UR · 二提 / 三提补位
+第 6 周 · 正传
+（赞助谈成了，排练室的咖啡变好了，可垃垃把海报看了很久：「总觉得，欠了不该欠的人。」
+
+PANEL 5 (BOTTOM row, column 1): 第4章，帽檐下的借条。只画此刻：柠檬
+键盘 · 排练新人
+第 6 周 · 正传
+（柠檬收下钱，帽檐压低：「够意思。下个月，双倍还你。」（下个月他没有还，但你收到一条语音：「兄弟，再借点？」
+
+PANEL 6 (BOTTOM row, column 2): 第4章，收回的手。只画此刻：柠檬
+键盘 · 排练新人
+第 6 周 · 正传
+（柠檬撇撇嘴：「行吧，不借就不借。」他转身走了，帽子后面的眼神，你看不见。
+
+PANEL 7 (BOTTOM row, column 3): 第4章，再来一次独奏。只画此刻：小周
+谱页整理 · 合练搭档
+第 6 周 · 正传
+（小周深吸一口气，在空剧场弹了第一遍独奏。弹到一半断了，他自己笑起来：「再来。」那天你们练到了保安来催。
+
+PANEL 8 (BOTTOM row, column 4): 第4章，翻到下一页。只画此刻：小周
+谱页整理 · 合练搭档
+第 6 周 · 正传
+（小周看着自己的手，小声：「星海的手型……真的够用吗？」你没有回答，只是把他的谱子翻到下一页。

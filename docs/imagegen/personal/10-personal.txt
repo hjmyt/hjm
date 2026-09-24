@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：黑发黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：浅发宽松浅色衬衫男性主唱。REK：黑发成年男性贝斯手。飞鸿：蓝灰衬衫男主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (sy_pd_c, do not write ID): 你们拼了一下午。那只鹅最后还是完成了，装进盒子，寄去了外地。十元说：「他收到一定很开心。」你笑了笑，没有说话。
+
+PANEL 2 (sy_rumor2, do not write ID): 网上的风波慢慢平息了，可团里的耳语没有。茶水间、琴房门外、散场后的停车场——「十元跟谁都挺好的」「她最会「管理」了」。这些话没有署名，找不到源头，像梅雨天的潮气，渗进每一个角落。 而你和她——并肩站得太多，留到太晚。风言风语，终于找到了新的靶心。 那天排练后，她把你叫到楼梯间。她的眼睛红红的，却强撑着笑。 「最近……我们还是保持距离吧。」 （她深吸一口气，像用尽了全身的力气：）「对不起，你还是离我远点吧。」
+
+PANEL 3 (sy_r2b, do not write ID): 她愣住了，眼泪一下子掉下来：「……你这个人，怎么这么不听话。」她转身跑上了楼。 但从那天起，你练琴的位置，悄悄换到了窗边的角落——刚好对着她琴房的那扇窗。
+
+PANEL 4 (sy_r2c, do not write ID): （她瞪大眼睛看了你两秒，忽然用力吸了下鼻子，眼睛亮晶晶的：）「你怎么这样啊……突然说这种话。」 （她用力点头，声音还有点抖，却已经笑出来了：）「好！那说定了——你保护我，我罩着你！果然没你不行！」 她最终没有再推开你。那天之后，你们并肩时，她不再慢半步——她走在你旁边，像一轮终于肯被人陪着走的太阳。
+
+PANEL 5 (sy_r2d, do not write ID): 楼梯间的声控灯灭了。你在黑暗里站了很久，听见楼上的琴声响到半夜——比平时更用力，也更乱。
+
+PANEL 6 (sy_rumor3, do not write ID): 两周后，垃垃私下找你。她说，帖子的源头查过了：水军的账号、拼接的聊天记录——专业得像有备而来，可所有的线走到一半就断了。「有人不想让这件事见光。」她顿了顿，「也可能，是不想让那个人被查出来。」 你最终没有得到答案。你只知道，耳语停了——在某个你看不见的地方，有人收了手。或者，换了一个目标。 那天晚上，十元在琴房门口等你。她眼睛肿着，却笑得很亮。 （深深鞠了一躬：）「对不起。还有——」她直起身，「谢谢你，没有走远。」
+
+PANEL 7 (sy_exam, do not write ID): 风波平息后的某个下午，十元把你约到琴房，神秘兮兮地从包里掏出一张宣传单——星海音乐学院，社会考生招生简章。 「我想考星海。」她眼睛亮晶晶的，又有点不好意思，「我知道我琴拉得一般……但我就是想试试。在山丘拉琴，和考进去拉琴，是两回事。」 （她对手指，声音小下去：）「不过我这个人，对练琴的兴趣也就一般般……所以需要一个人看着我。」
+
+PANEL 8 (sy_exam_no, do not write ID): 「……哦。」她笑了笑，把简章收了回去。 半年后，她去了广州。黄奕兴托了关系，找了最好的老师，陪她一遍遍过曲目。她考上了。你在深圳刷到她的朋友圈——照片里她站在星海门口，笑得很亮，身边站着黄奕兴。 你点了个赞，觉得哪里不对，又说不上来。你不帮，是因为你以为总有人会帮。他们确实会。只是站在她身边的人，不是你。

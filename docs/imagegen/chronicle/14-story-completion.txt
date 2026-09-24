@@ -1,0 +1,47 @@
+Use case: illustration-story. ONE EXACT 4-column x 2-row atlas, eight equal SQUARE panels, overall 2:1 landscape. 3072x1536 preferred. No gutters, no captions, no labels, no numbers, no speech bubbles, no watermark, no UI. Straight crop boundaries at 25/50/75% width and 50% height. Each independent panel contains a complete narrative moment with faces and key props in central 80%. Strict row-major panel order. Match supplied references: warm cinematic semi-realistic anime CG with detailed painted environments. References define character identity only, make NEW composition and precise scene action in each panel. All characters adults. Player viewpoint is gender-neutral observer, do not impose identity. Do not add characters absent from scene. Do not show outcome before it occurs. No readable writing; notes and papers abstract.
+所有人物都是中国成年人。十元：棕色短bob发、星形发卡、奶油开衫、小提琴女团长。垃垃：长棕发蝴蝶结、温柔小提琴女性。阿喆：棕色卷发、细圆框眼镜、黑色衬衫、小提琴男性。TIM：白衬衫棕色短发、工牌、小提琴成年男性。汤少：黑夹克黑发、相机男性。空格：体型结实、短黑发方框眼镜、黑polo小提琴男性（不要画成纤瘦偶像）。笛杰：黑色柔软卷发格子外衫、笛子男性。柒柒：盘发、米白花纹旗袍红滚边、电吉他成年女性。小周：柔软黑发浅蓝衬衫、钢琴成年男性。柠檬：鸭舌帽深色服装、键盘成年男性。大鹅：柔软黑发白色上衣钢琴成年男性。小塔：黑发深色上衣手串、架子鼓成年男性。飞鸿：蓝灰衬衫短发主唱男性。宝石：浅发色浅色宽松衬衫、柔和少年感的成年男性主唱，不是女性。大羊：黑发黑衬衫、原声吉他男性。叶思阳：整洁西装男性。朱老师：瘦、短黑发方框眼镜、酒吧老板和作曲者男性。黄奕兴：短黑发金属框眼镜灰色西装成年男性。
+参考图顺序：1:大羊,2:十元,3:宝石,4:柒柒,5:小塔。
+
+PANEL 1 (TOP row, column 1): 第4章，没能打开的剧场。只画此刻：旁白
+乐团正传 · 故事叙述
+结局已收录
+（演出前三天，团里流传起一些话：谁靠关系上的节目单，谁收了谁的好处。没有人站出来承认，也没有人真正相信——可排练室的空气，一点一点冷了下去。6月7日那天，剧场的大门没有打开。）
+
+PANEL 2 (TOP row, column 2): 第4章，返场时一起鞠躬。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+6月7日，鹭湖剧院，满场。
+
+宝石的少年音落下第一秒，全场安静；小塔的鼓点推起第一排的心跳；大羊的八小节 SOLO 弹得连他自己都愣住——这回他没看手机。返场时，十元拉着全员鞠躬，叶思阳在侧幕笑着鼓掌，眼里有光。
+
+PANEL 3 (TOP row, column 3): 第4章，谢幕后的心事。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+6月7日，演出顺利结束了。掌声是真的，只是谢幕时你望向侧幕——柒柒不在，宝石在找飞鸿，而大羊偷偷看了三次手机。
+
+有些星光亮过了，有些心事还悬着。
+
+PANEL 4 (TOP row, column 4): 第4章，空座位里的下一次。只画此刻：十元
+白月光 · ENFP · 正传团长
+第 6 周 · 正传
+剧场很大，大到第一声失误会被无限放大。演出中段乱掉的段落没有找回来，观众礼貌地鼓了掌。散场后十元坐在空座位上发了很久的呆，然后说：「下次，我们再来。」
+
+PANEL 5 (BOTTOM row, column 1): 第4章，调准十六小节。只画此刻：大羊
+ENTP · 指弹吉他
+第 6 周 · 正传
+（大羊盯着修改后的节目单看了很久，咳嗽一声：「十六小节……咳，算你有眼光。我练一个绝的给你看。」（他转身走后，你听见他小声给吉他调音，比平时认真十倍。
+
+PANEL 6 (BOTTOM row, column 2): 第4章，一句也没有出错。只画此刻：大羊
+ENTP · 指弹吉他
+第 6 周 · 正传
+（大羊撇撇嘴没说什么。但那天排练，他的 SOLO 一句没出错——用实力说话的人，嘴上可以不饶人。
+
+PANEL 7 (BOTTOM row, column 3): 第4章，留给别人发光。只画此刻：十元
+白月光 · ENFP · 正传团长
+第 6 周 · 正传
+（你让他自己去谈。十元听完大羊的要求，笑着说：「再加四小节，剩下的留给别人发光。」大羊愣了愣，居然接受了。
+
+PANEL 8 (BOTTOM row, column 4): 第4章，像洗过的天空。只画此刻：宝石
+主唱 · 少年音
+第 6 周 · 正传
+（宝石用力点头，眼睛亮晶晶的：「嗯！我会把第一句唱得特别干净，干净到……干净到像刚洗过的天空！」（他想的比喻很怪，但你莫名听懂了。

@@ -19,6 +19,10 @@ for group in plan:
             col, row = i % 4, i // 4
             box = (round(col * width / 4) + 2, round(row * height / 2) + 2,
                    round((col + 1) * width / 4) - 2, round((row + 1) * height / 2) - 2)
+            if 'cropNormalized' in scene:
+                left, top, right, bottom = scene['cropNormalized']
+                box = (round(left * width) + 2, round(top * height) + 2,
+                       round(right * width) - 2, round(bottom * height) - 2)
             target = Path('assets/chronicle/scenes') / (scene['id'] + '.webp')
             atlas.crop(box).convert('RGB').save(ROOT / target, quality=90, method=6)
             manifest[scene['id']] = {

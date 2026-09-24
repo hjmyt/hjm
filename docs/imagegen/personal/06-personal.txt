@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：黑发黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：浅发宽松浅色衬衫男性主唱。REK：黑发成年男性贝斯手。飞鸿：蓝灰衬衫男主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (sy_01b, do not write ID): 「好了好了，都少说两句。」大鹅抱着琴走过来，笑着打圆场，「十元的音是不稳，可她拉来的场子、聚起来的人，哪个不稳？排练继续，这段我陪她过。」 风波暂时压了下去。但你看懂了——大鹅的和稀泥里，藏着一种小心翼翼的维护。散场后，他独自在角落里调琴，琴箱上放着十元落下的发圈。
+
+PANEL 2 (sy_01c, do not write ID): 没有人说话。十元深吸一口气，笑着说「再来一遍吧」，声音却在抖。那天排练到很晚，你不知道她几点走的——因为她走之前，把灯都关了。
+
+PANEL 3 (sy_rumor1, do not write ID): 演出视频火了，火的方式却不对。深夜，一条帖子被顶了上来：《起底某乐团女团长：暧昧管理，靠异性好感上位》。配图是十元和不同男乐手的合照——阿喆的水果、TIM 的勾肩、黄奕兴的车。 评论区一夜之间长出獠牙。十元把手机扣在谱架上，笑着说「没事，清者自清」，可那天下午的排练，她拉错了七个音。
+
+PANEL 4 (sy_r1b, do not write ID): 声明发出去，评论区吵得更凶了——但乐手们一个接一个地转发。小塔：「鼓手小塔，实名。」冰冰：「大提冰冰，实名。」阿喆转了你的声明，配字：「水果是我洗的，话是真的。」 风向一点一点变了。深夜，十元给你发来三个字：「看到了。」隔了很久，又发来一句：「有你们，我什么都不怕。」
+
+PANEL 5 (sy_r1c, do not write ID): 你在天台上找到她。她抱着膝盖坐着，小声说：「你说，他们为什么就是不信，一个女生可以凭自己把事情做好呢？」 你没有答案。你坐到她旁边，把外套披在她肩上。她靠着你的肩膀坐了很久，久到天台的灯熄了。
+
+PANEL 6 (sy_r1d, do not write ID): 「嗯。」她笑了笑。那之后，她说「没事」的次数越来越多，跟你说话的次数，越来越少。
+
+PANEL 7 (sy_heart, do not write ID): 风波过后那个深夜，你在琴房找到十元。她抱着琴坐在窗台上，脚一晃一晃，没有拉琴，只是抱着。 你坐过去陪她。过了一会儿，你问：「十元，你当初……为什么组乐团？」 （眨眨眼，忽然笑了，笑得有点不好意思：）「说出来你别笑啊。」她抱紧琴，「我最开始学小提琴，就是想——上台，装一下。」 「小时候看电视，觉得舞台特别亮。我就想，站在那个光里面的人，一定很了不起。」 你愣住了。这个答案太不像她——又太像她。
+
+PANEL 8 (sy_heart_b, do not write ID): （怔住。怀里的琴晃了晃：）「……啊。」她张了张嘴，半晌，「我没想过这个。」 （小声：）「只是觉得……没练好，就不应该上台。」 你忽然明白了。这个把所有人推到光中央的人，自己一直站在光的外面。她不需要被仰望——她需要一个人牵着她的手，把她自己也当成一个团员，引导她、等待她。 （她把下巴搁在琴上，冲你笑了笑，眼睛有点亮：）「所以……你问了这个问题，是想替我练，还是想替我上台呀？」

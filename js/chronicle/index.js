@@ -127,15 +127,10 @@ const Chronicle = (() => {
         return false;
     }
     const choice = (text, next, effect = null) => ({ text, next, effect });
-    function choiceBondHint(index) {
-        const rewards = KEY_BOND_CHOICES[R().scene + ':' + index];
-        if (!rewards)
-            return '';
-        return Object.entries(rewards).map(([id, n]) => bondProgress().claimed[`plot:${R().chapter}:${R().scene}:${id}`] ? ' · 羁绊奖励已领取' : ` · ${cardDef(id).name}羁绊分 +${n}`).join('');
-    }
     const spoken = (who, text) => ({ who, text });
     const D = (who, text, ...choices) => { const parts = Array.isArray(text) ? text : [spoken(who, text)]; return { who: parts[0].who, text: parts.map(p => p.text).join('\n\n'), parts, choices }; };
     function dispatch(action, btn) {
+        if (M().personal?.active && !action.startsWith('personal-') && !['switch-chapter','ending-chapter'].includes(action)) return;
         if (action === 'bar-continue') {
             if (R().scene !== 'shanqiu_closed')
                 return;
@@ -157,6 +152,8 @@ const Chronicle = (() => {
         const rev = btn?.dataset.cpRev;
         if (rev !== undefined && Number(rev) !== R().rev)
             return;
+        if (action.startsWith('personal-')) return personalAction(action,btn);
+        if (M().personal?.active && !['switch-chapter','ending-chapter'].includes(action)) return;
         if (action === 'ending-chapter') {
             const ch = Number(btn?.dataset.cpChapter);
             if (!chapterUnlocked(ch))
@@ -174,6 +171,7 @@ const Chronicle = (() => {
             return startChapter(4, btn?.dataset.cpMode);
         if (action === 'start-third')
             return startChapter(3, btn?.dataset.cpMode);
+        if (action.startsWith('training-')) return trainingAction(action, btn);
         if (action === 'week-story') return startWeekStory();
         if (action === 'week-side') return startSide(btn?.dataset.cpEvent);
         if (action === 'event')
@@ -241,6 +239,7 @@ const Chronicle = (() => {
         return (r.chapter === 4 ? 15 - (r.flags.zhouSolo ? 2 : 0) - (r.flags.yangSolo ? 1 : 0) : r.chapter === 3 ? 14 + (r.flags.billWait ? 2 : 0) - (r.flags.taIn ? 2 : 0) : r.chapter === 2 ? 12 : 10) + r.week;
     }
     function mount() {
+        mountTraining();
         document.addEventListener('click', event => {
             const b = event.target.closest('button');
             if (!b || b.disabled)
@@ -269,6 +268,8 @@ const Chronicle = (() => {
         document.addEventListener('keydown', event => {
             if (!$('modalBackdrop').hidden || currentView !== 'chronicle' || event.repeat || event.ctrlKey || event.metaKey || event.altKey || ['INPUT', 'TEXTAREA', 'SELECT'].includes(event.target.tagName))
                 return;
+            if (trainingKey(event)) return;
+            if (R().scene === 'training' && event.code === 'Space') {event.preventDefault();trainingTap();return;}
             if (R().scene === 'live_play' && R().live?.phase === 'playing') {
                 if (event.code === 'Space') {
                     event.preventDefault();
@@ -287,7 +288,12 @@ const Chronicle = (() => {
         window.addEventListener('blur', () => suspend());
         window.addEventListener('pagehide', () => suspend());
     }
+    function suspend() {suspendTraining();suspendPerformance();}
     const context = {
+        get cleanTraining() { return cleanTraining; },
+        get trainingHTML() { return trainingHTML; },
+        get trainingHubHTML() { return trainingHubHTML; },
+        get pendingStory() { return pendingStory; },
         get freshWeeks() { return freshWeeks; },
         get cleanWeeks() { return cleanWeeks; },
         get weekPlan() { return weekPlan; },
@@ -328,10 +334,14 @@ const Chronicle = (() => {
         get chapterThreeDialogue() { return chapterThreeDialogue; },
         get chapterTwoDialogue() { return chapterTwoDialogue; },
         get chapterTwoHelp() { return chapterTwoHelp; },
+        get chapterComplete() { return chapterComplete; },
+        get freshPersonal() { return freshPersonal; },
+        get cleanPersonal() { return cleanPersonal; },
+        get personalHTML() { return personalHTML; },
+        get personalPreview() { return personalPreview; },
         get chapterUnlocked() { return chapterUnlocked; },
         get checkEnding() { return checkEnding; },
         get choice() { return choice; },
-        get choiceBondHint() { return choiceBondHint; },
         get choiceRewards() { return choiceRewards; }, set choiceRewards(value) { choiceRewards = value; },
         get closedBarHTML() { return closedBarHTML; },
         get collectedEndingIds() { return collectedEndingIds; },
@@ -390,17 +400,19 @@ const Chronicle = (() => {
         get thirdTitleHTML() { return thirdTitleHTML; },
         get weekNotice() { return weekNotice; }, set weekNotice(value) { weekNotice = value; }
     };
-    const { freshWeeks, cleanWeeks, weekPlan, storyTransition, enterWeekStory, startWeekStory, sideEvents, startSide, weeklyDialogue, weekStoryHTML, sideStoriesHTML, illustrationHTML, weeklyHelp } = createChronicleWeeks(context);
+    const { freshPersonal, cleanPersonal, personalAction, personalHTML, personalPreview } = createChroniclePersonal(context);
+    const { cleanTraining, startTraining, trainingAction, trainingTap, trainingHTML, trainingHubHTML, suspendTraining, trainingKey, mountTraining } = createChronicleTraining(context);
+    const { freshWeeks, cleanWeeks, weekPlan, pendingStory, storyTransition, enterWeekStory, startWeekStory, sideEvents, startSide, weeklyDialogue, weekStoryHTML, sideStoriesHTML, illustrationHTML, weeklyHelp } = createChronicleWeeks(context);
     const { savedChapter, shouldCloseBar, normalizeFourthOpening, beginBarChapter, barDialogue, orderDrink, barMenuHTML, closedBarHTML, showBarClosure } = createChronicleBar(context);
     const { freshRun, fresh, isRetiredRun, isRetiredLog, cleanSingle, syncBonds, confirmRestart, restart, sourceSaveDetected, legacy, requestLegacy, safeSnapshot, clean, chapterComplete, chapterUnlocked, repairChapterCarry, previousChapter, playerIdentity, canCarryChapter, quickRun, requestChapter, startChapter } = createChroniclePersistence(context);
     const { speaker, dialogueHTML, actionButton, choicesHTML, startHTML, weekAdvanceHTML, weeklyHTML, socialHTML, partnerHTML, practiceHTML, liveResultHTML, titleHTML, mainHTML, phaseText, hudHTML, sidebarHTML, journalHTML, render, refresh, endingType, collectedEndingIds, chapterEndingIds, endingBadges, endingOverviewHTML, endingGalleryChapter, gallery, help, chapterTabs } = createChronicleViews(context);
     const { paidPractice, extraPracticeChoice, plotTech, plotNotes, pick, enroll, weeklyAction, endWeek, canChat, chat, initPractice, startPartner, battleAction } = createChronicleActivities(context);
     const { journalSpeaker, sceneEncounterIds, legacyEncounterIds, encounterIds, recordReadScene } = createChronicleEncounters(context);
     const { dialogue } = createChronicleChaptersOne(context);
-    const { initLive, liveHTML, startLiveMotion, tick, suspend, liveHit, nextLive, finishLive } = createChroniclePerformance(context);
+    const { initLive, liveHTML, startLiveMotion, tick, suspend: suspendPerformance, liveHit, nextLive, finishLive } = createChroniclePerformance(context);
     const { priorHeCount, lateMilestones, lateRulesHTML, lateChapterDialogue, lateTitleHTML } = createChronicleChaptersFiveSix(context);
     const { projectEvent, resolveEvent, chapterTwoDialogue, secondProgress, eventBoard, secondOutcomeText, secondResultHTML, secondTitleHTML, chapterTwoHelp } = createChronicleChaptersTwo(context);
     const { supplementalDialogue, chapterThreeDialogue, thirdTitleHTML, thirdHelp } = createChronicleChaptersThree(context);
     const { chapterFourDialogue, fourthTitleHTML, fourthHelp } = createChronicleChaptersFour(context);
-    return { fresh, clean, syncBonds, refresh, mount, suspend, sourceSaveDetected, requestLegacy, encounterIds, journalSpeaker };
+    return { fresh, clean, syncBonds, refresh, mount, suspend, sourceSaveDetected, requestLegacy, encounterIds, journalSpeaker, priorHeCount, requiredTech };
 })();

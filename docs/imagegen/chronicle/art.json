@@ -563,17 +563,17 @@
     "id": "scene_5_weekly_prep",
     "chapter": 5,
     "scene": "weekly_prep",
-    "title": "出发前，再对一遍",
+    "title": "出发前的节目单",
     "asset": "assets/chronicle/scenes/scene_5_weekly_prep.webp",
-    "source": "assets/chronicle/scenes/source/06-character-fixes.png",
-    "panel": 3,
+    "source": "assets/chronicle/scenes/source/20-rehearsal-transitions.png",
+    "panel": 1,
     "crop": [
-      889,
       2,
-      1328,
+      2,
+      442,
       442
     ],
-    "prompt": "docs/imagegen/chronicle/06-character-fixes.txt"
+    "prompt": "docs/imagegen/chronicle/20-rehearsal-transitions.txt"
   },
   {
     "id": "scene_6_c6_zhu",
@@ -627,17 +627,17 @@
     "id": "scene_6_weekly_prep",
     "chapter": 6,
     "scene": "weekly_prep",
-    "title": "最后一幕，连起来",
+    "title": "最后一次连排",
     "asset": "assets/chronicle/scenes/scene_6_weekly_prep.webp",
-    "source": "assets/chronicle/scenes/source/05-opening.png",
-    "panel": 8,
+    "source": "assets/chronicle/scenes/source/20-rehearsal-transitions.png",
+    "panel": 4,
     "crop": [
       1332,
-      446,
+      2,
       1772,
-      885
+      442
     ],
-    "prompt": "docs/imagegen/chronicle/05-opening.txt"
+    "prompt": "docs/imagegen/chronicle/20-rehearsal-transitions.txt"
   },
   {
     "id": "scene_6_c6_warn",
@@ -686,5 +686,1765 @@
       885
     ],
     "prompt": "docs/imagegen/chronicle/06-character-fixes.txt"
+  },
+  {
+    "id": "scene_2_c2_bar",
+    "chapter": 2,
+    "scene": "c2_bar",
+    "title": "工牌还没摘下",
+    "asset": "assets/chronicle/scenes/scene_2_c2_bar.webp",
+    "source": "assets/chronicle/scenes/source/07-missing-undercurrents.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/07-missing-undercurrents.txt"
+  },
+  {
+    "id": "scene_2_c2_tim_a",
+    "chapter": 2,
+    "scene": "c2_tim_a",
+    "title": "志同道合的目光",
+    "asset": "assets/chronicle/scenes/scene_2_c2_tim_a.webp",
+    "source": "assets/chronicle/scenes/source/07-missing-undercurrents.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/07-missing-undercurrents.txt"
+  },
+  {
+    "id": "scene_2_c2_tim_b",
+    "chapter": 2,
+    "scene": "c2_tim_b",
+    "title": "聊起茶室的时候",
+    "asset": "assets/chronicle/scenes/scene_2_c2_tim_b.webp",
+    "source": "assets/chronicle/scenes/source/07-missing-undercurrents.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/07-missing-undercurrents.txt"
+  },
+  {
+    "id": "scene_2_c2_tim_c",
+    "chapter": 2,
+    "scene": "c2_tim_c",
+    "title": "举高的工牌",
+    "asset": "assets/chronicle/scenes/scene_2_c2_tim_c.webp",
+    "source": "assets/chronicle/scenes/source/07-missing-undercurrents.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/07-missing-undercurrents.txt"
+  },
+  {
+    "id": "scene_2_c2_head_b",
+    "chapter": 2,
+    "scene": "c2_head_b",
+    "title": "一起回去练琴",
+    "asset": "assets/chronicle/scenes/scene_2_c2_head_b.webp",
+    "source": "assets/chronicle/scenes/source/07-missing-undercurrents.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/07-missing-undercurrents.txt"
+  },
+  {
+    "id": "scene_2_c2_head_c",
+    "chapter": 2,
+    "scene": "c2_head_c",
+    "title": "把心事拉进琴里",
+    "asset": "assets/chronicle/scenes/scene_2_c2_head_c.webp",
+    "source": "assets/chronicle/scenes/source/07-missing-undercurrents.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/07-missing-undercurrents.txt"
+  },
+  {
+    "id": "scene_2_c2_night_pre",
+    "chapter": 2,
+    "scene": "c2_night_pre",
+    "title": "黑板分成了两半",
+    "asset": "assets/chronicle/scenes/scene_2_c2_night_pre.webp",
+    "source": "assets/chronicle/scenes/source/07-missing-undercurrents.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/07-missing-undercurrents.txt"
+  },
+  {
+    "id": "scene_2_c2_kong_b",
+    "chapter": 2,
+    "scene": "c2_kong_b",
+    "title": "去看看更大的舞台",
+    "asset": "assets/chronicle/scenes/scene_2_c2_kong_b.webp",
+    "source": "assets/chronicle/scenes/source/07-missing-undercurrents.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/07-missing-undercurrents.txt"
+  },
+  {
+    "id": "scene_1_s_endweek",
+    "chapter": 1,
+    "scene": "s_endweek",
+    "title": "从这一周开始",
+    "asset": "assets/chronicle/scenes/scene_1_s_endweek.webp",
+    "source": "assets/chronicle/scenes/source/08-story-completion.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/08-story-completion.txt"
+  },
+  {
+    "id": "scene_1_be_shiyuan",
+    "chapter": 1,
+    "scene": "be_shiyuan",
+    "title": "合奏之外的背影",
+    "asset": "assets/chronicle/scenes/scene_1_be_shiyuan.webp",
+    "source": "assets/chronicle/scenes/source/08-story-completion.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/08-story-completion.txt"
+  },
+  {
+    "id": "scene_2_c2_tim",
+    "chapter": 2,
+    "scene": "c2_tim",
+    "title": "白天打卡，晚上练琴",
+    "asset": "assets/chronicle/scenes/scene_2_c2_tim.webp",
+    "source": "assets/chronicle/scenes/source/08-story-completion.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/08-story-completion.txt"
+  },
+  {
+    "id": "scene_2_c2_night",
+    "chapter": 2,
+    "scene": "c2_night",
+    "title": "站在哪一边",
+    "asset": "assets/chronicle/scenes/scene_2_c2_night.webp",
+    "source": "assets/chronicle/scenes/source/08-story-completion.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/08-story-completion.txt"
+  },
+  {
+    "id": "scene_2_c2_pop_end",
+    "chapter": 2,
+    "scene": "c2_pop_end",
+    "title": "天桥下的歌声",
+    "asset": "assets/chronicle/scenes/scene_2_c2_pop_end.webp",
+    "source": "assets/chronicle/scenes/source/08-story-completion.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/08-story-completion.txt"
+  },
+  {
+    "id": "scene_2_c2_endweek",
+    "chapter": 2,
+    "scene": "c2_endweek",
+    "title": "新的排练日历",
+    "asset": "assets/chronicle/scenes/scene_2_c2_endweek.webp",
+    "source": "assets/chronicle/scenes/source/08-story-completion.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/08-story-completion.txt"
+  },
+  {
+    "id": "scene_2_c2_boundary",
+    "chapter": 2,
+    "scene": "c2_boundary",
+    "title": "接连亮起的屏幕",
+    "asset": "assets/chronicle/scenes/scene_2_c2_boundary.webp",
+    "source": "assets/chronicle/scenes/source/08-story-completion.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/08-story-completion.txt"
+  },
+  {
+    "id": "scene_2_after_practice",
+    "chapter": 2,
+    "scene": "after_practice",
+    "title": "合练后的谱页",
+    "asset": "assets/chronicle/scenes/scene_2_after_practice.webp",
+    "source": "assets/chronicle/scenes/source/08-story-completion.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/08-story-completion.txt"
+  },
+  {
+    "id": "scene_2_b_live",
+    "chapter": 2,
+    "scene": "b_live",
+    "title": "大幕拉开之前",
+    "asset": "assets/chronicle/scenes/scene_2_b_live.webp",
+    "source": "assets/chronicle/scenes/source/09-story-completion.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/09-story-completion.txt"
+  },
+  {
+    "id": "scene_2_live_intro",
+    "chapter": 2,
+    "scene": "live_intro",
+    "title": "站到灯光里",
+    "asset": "assets/chronicle/scenes/scene_2_live_intro.webp",
+    "source": "assets/chronicle/scenes/source/09-story-completion.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/09-story-completion.txt"
+  },
+  {
+    "id": "scene_2_be_shiyuan",
+    "chapter": 2,
+    "scene": "be_shiyuan",
+    "title": "合奏之外的背影",
+    "asset": "assets/chronicle/scenes/scene_2_be_shiyuan.webp",
+    "source": "assets/chronicle/scenes/source/09-story-completion.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/09-story-completion.txt"
+  },
+  {
+    "id": "scene_2_c2_kong_a",
+    "chapter": 2,
+    "scene": "c2_kong_a",
+    "title": "楼梯间的沉默",
+    "asset": "assets/chronicle/scenes/scene_2_c2_kong_a.webp",
+    "source": "assets/chronicle/scenes/source/09-story-completion.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/09-story-completion.txt"
+  },
+  {
+    "id": "scene_2_c2_kong_c",
+    "chapter": 2,
+    "scene": "c2_kong_c",
+    "title": "再听一次挽留",
+    "asset": "assets/chronicle/scenes/scene_2_c2_kong_c.webp",
+    "source": "assets/chronicle/scenes/source/09-story-completion.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/09-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_menu",
+    "chapter": 3,
+    "scene": "c3_menu",
+    "title": "留给最后一段的时间",
+    "asset": "assets/chronicle/scenes/scene_3_c3_menu.webp",
+    "source": "assets/chronicle/scenes/source/09-story-completion.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/09-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_jeal",
+    "chapter": 3,
+    "scene": "c3_jeal",
+    "title": "传到她耳边的话",
+    "asset": "assets/chronicle/scenes/scene_3_c3_jeal.webp",
+    "source": "assets/chronicle/scenes/source/09-story-completion.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/09-story-completion.txt"
+  },
+  {
+    "id": "scene_3_be_qiqi",
+    "chapter": 3,
+    "scene": "be_qiqi",
+    "title": "没有带来的饼干",
+    "asset": "assets/chronicle/scenes/scene_3_be_qiqi.webp",
+    "source": "assets/chronicle/scenes/source/09-story-completion.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/09-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_he",
+    "chapter": 3,
+    "scene": "c3_he",
+    "title": "返场后的举杯",
+    "asset": "assets/chronicle/scenes/scene_3_c3_he.webp",
+    "source": "assets/chronicle/scenes/source/10-story-completion.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/10-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_te",
+    "chapter": 3,
+    "scene": "c3_te",
+    "title": "庆功宴散场时",
+    "asset": "assets/chronicle/scenes/scene_3_c3_te.webp",
+    "source": "assets/chronicle/scenes/source/10-story-completion.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/10-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_fail",
+    "chapter": 3,
+    "scene": "c3_fail",
+    "title": "礼貌的掌声",
+    "asset": "assets/chronicle/scenes/scene_3_c3_fail.webp",
+    "source": "assets/chronicle/scenes/source/10-story-completion.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/10-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_prep_a",
+    "chapter": 3,
+    "scene": "c3_prep_a",
+    "title": "再过十遍的小节",
+    "asset": "assets/chronicle/scenes/scene_3_c3_prep_a.webp",
+    "source": "assets/chronicle/scenes/source/10-story-completion.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/10-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_prep_b",
+    "chapter": 3,
+    "scene": "c3_prep_b",
+    "title": "有人一起练琴真好",
+    "asset": "assets/chronicle/scenes/scene_3_c3_prep_b.webp",
+    "source": "assets/chronicle/scenes/source/10-story-completion.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/10-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_prep_c",
+    "chapter": 3,
+    "scene": "c3_prep_c",
+    "title": "窗外最后一抹晚霞",
+    "asset": "assets/chronicle/scenes/scene_3_c3_prep_c.webp",
+    "source": "assets/chronicle/scenes/source/10-story-completion.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/10-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_ge_a",
+    "chapter": 3,
+    "scene": "c3_ge_a",
+    "title": "在她旁边坐一会儿",
+    "asset": "assets/chronicle/scenes/scene_3_c3_ge_a.webp",
+    "source": "assets/chronicle/scenes/source/10-story-completion.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/10-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_ge_b",
+    "chapter": 3,
+    "scene": "c3_ge_b",
+    "title": "没有回来的人",
+    "asset": "assets/chronicle/scenes/scene_3_c3_ge_b.webp",
+    "source": "assets/chronicle/scenes/source/10-story-completion.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/10-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_ge_c",
+    "chapter": 3,
+    "scene": "c3_ge_c",
+    "title": "节拍器里的深夜",
+    "asset": "assets/chronicle/scenes/scene_3_c3_ge_c.webp",
+    "source": "assets/chronicle/scenes/source/11-story-completion.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/11-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_bill_a",
+    "chapter": 3,
+    "scene": "c3_bill_a",
+    "title": "稳得像心跳的第一拍",
+    "asset": "assets/chronicle/scenes/scene_3_c3_bill_a.webp",
+    "source": "assets/chronicle/scenes/source/11-story-completion.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/11-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_bill_b",
+    "chapter": 3,
+    "scene": "c3_bill_b",
+    "title": "凌晨两点重新排练",
+    "asset": "assets/chronicle/scenes/scene_3_c3_bill_b.webp",
+    "source": "assets/chronicle/scenes/source/11-story-completion.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/11-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_jeal_a",
+    "chapter": 3,
+    "scene": "c3_jeal_a",
+    "title": "直接说给她听",
+    "asset": "assets/chronicle/scenes/scene_3_c3_jeal_a.webp",
+    "source": "assets/chronicle/scenes/source/11-story-completion.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/11-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_jeal_b",
+    "chapter": 3,
+    "scene": "c3_jeal_b",
+    "title": "镜子里的温柔",
+    "asset": "assets/chronicle/scenes/scene_3_c3_jeal_b.webp",
+    "source": "assets/chronicle/scenes/source/11-story-completion.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/11-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_jeal_c",
+    "chapter": 3,
+    "scene": "c3_jeal_c",
+    "title": "擦过指尖的告别",
+    "asset": "assets/chronicle/scenes/scene_3_c3_jeal_c.webp",
+    "source": "assets/chronicle/scenes/source/11-story-completion.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/11-story-completion.txt"
+  },
+  {
+    "id": "scene_3_band_q_a",
+    "chapter": 3,
+    "scene": "band_q_a",
+    "title": "留给明早的点心",
+    "asset": "assets/chronicle/scenes/scene_3_band_q_a.webp",
+    "source": "assets/chronicle/scenes/source/11-story-completion.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/11-story-completion.txt"
+  },
+  {
+    "id": "scene_3_band_q_b",
+    "chapter": 3,
+    "scene": "band_q_b",
+    "title": "饭桌上的旁敲侧击",
+    "asset": "assets/chronicle/scenes/scene_3_band_q_b.webp",
+    "source": "assets/chronicle/scenes/source/11-story-completion.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/11-story-completion.txt"
+  },
+  {
+    "id": "scene_3_band_zhou_a",
+    "chapter": 3,
+    "scene": "band_zhou_a",
+    "title": "重新整理的谱页",
+    "asset": "assets/chronicle/scenes/scene_3_band_zhou_a.webp",
+    "source": "assets/chronicle/scenes/source/12-story-completion.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/12-story-completion.txt"
+  },
+  {
+    "id": "scene_3_band_zhou_b",
+    "chapter": 3,
+    "scene": "band_zhou_b",
+    "title": "天台上被听见的委屈",
+    "asset": "assets/chronicle/scenes/scene_3_band_zhou_b.webp",
+    "source": "assets/chronicle/scenes/source/12-story-completion.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/12-story-completion.txt"
+  },
+  {
+    "id": "scene_3_band_bill_a",
+    "chapter": 3,
+    "scene": "band_bill_a",
+    "title": "有你在就敢犯错",
+    "asset": "assets/chronicle/scenes/scene_3_band_bill_a.webp",
+    "source": "assets/chronicle/scenes/source/12-story-completion.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/12-story-completion.txt"
+  },
+  {
+    "id": "scene_3_band_bill_b",
+    "chapter": 3,
+    "scene": "band_bill_b",
+    "title": "用打击乐留住希望",
+    "asset": "assets/chronicle/scenes/scene_3_band_bill_b.webp",
+    "source": "assets/chronicle/scenes/source/12-story-completion.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/12-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_band_q",
+    "chapter": 3,
+    "scene": "c3_band_q",
+    "title": "排练之后的邀约",
+    "asset": "assets/chronicle/scenes/scene_3_c3_band_q.webp",
+    "source": "assets/chronicle/scenes/source/12-story-completion.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/12-story-completion.txt"
+  },
+  {
+    "id": "scene_3_c3_band_bill",
+    "chapter": 3,
+    "scene": "c3_band_bill",
+    "title": "缺席的鼓位",
+    "asset": "assets/chronicle/scenes/scene_3_c3_band_bill.webp",
+    "source": "assets/chronicle/scenes/source/12-story-completion.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/12-story-completion.txt"
+  },
+  {
+    "id": "scene_3_after_practice",
+    "chapter": 3,
+    "scene": "after_practice",
+    "title": "合练后的谱页",
+    "asset": "assets/chronicle/scenes/scene_3_after_practice.webp",
+    "source": "assets/chronicle/scenes/source/12-story-completion.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/12-story-completion.txt"
+  },
+  {
+    "id": "scene_3_b_live",
+    "chapter": 3,
+    "scene": "b_live",
+    "title": "大幕拉开之前",
+    "asset": "assets/chronicle/scenes/scene_3_b_live.webp",
+    "source": "assets/chronicle/scenes/source/12-story-completion.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/12-story-completion.txt"
+  },
+  {
+    "id": "scene_3_live_intro",
+    "chapter": 3,
+    "scene": "live_intro",
+    "title": "站到灯光里",
+    "asset": "assets/chronicle/scenes/scene_3_live_intro.webp",
+    "source": "assets/chronicle/scenes/source/13-story-completion.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/13-story-completion.txt"
+  },
+  {
+    "id": "scene_3_be_shiyuan",
+    "chapter": 3,
+    "scene": "be_shiyuan",
+    "title": "合奏之外的背影",
+    "asset": "assets/chronicle/scenes/scene_3_be_shiyuan.webp",
+    "source": "assets/chronicle/scenes/source/13-story-completion.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/13-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_jeal",
+    "chapter": 4,
+    "scene": "c4_jeal",
+    "title": "剧场筹备中的传话",
+    "asset": "assets/chronicle/scenes/scene_4_c4_jeal.webp",
+    "source": "assets/chronicle/scenes/source/13-story-completion.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/13-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_jeal_a",
+    "chapter": 4,
+    "scene": "c4_jeal_a",
+    "title": "说开以后",
+    "asset": "assets/chronicle/scenes/scene_4_c4_jeal_a.webp",
+    "source": "assets/chronicle/scenes/source/13-story-completion.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/13-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_jeal_b",
+    "chapter": 4,
+    "scene": "c4_jeal_b",
+    "title": "镜中那一点迟疑",
+    "asset": "assets/chronicle/scenes/scene_4_c4_jeal_b.webp",
+    "source": "assets/chronicle/scenes/source/13-story-completion.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/13-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_jeal_c",
+    "chapter": 4,
+    "scene": "c4_jeal_c",
+    "title": "旗袍盘扣闪了一下",
+    "asset": "assets/chronicle/scenes/scene_4_c4_jeal_c.webp",
+    "source": "assets/chronicle/scenes/source/13-story-completion.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/13-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_menu",
+    "chapter": 4,
+    "scene": "c4_menu",
+    "title": "节目单已经排好",
+    "asset": "assets/chronicle/scenes/scene_4_c4_menu.webp",
+    "source": "assets/chronicle/scenes/source/13-story-completion.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/13-story-completion.txt"
+  },
+  {
+    "id": "scene_4_be_mianbei",
+    "chapter": 4,
+    "scene": "be_mianbei",
+    "title": "远方没有舞台",
+    "asset": "assets/chronicle/scenes/scene_4_be_mianbei.webp",
+    "source": "assets/chronicle/scenes/source/13-story-completion.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/13-story-completion.txt"
+  },
+  {
+    "id": "scene_4_be_qiqi4",
+    "chapter": 4,
+    "scene": "be_qiqi4",
+    "title": "没能打开的剧场",
+    "asset": "assets/chronicle/scenes/scene_4_be_qiqi4.webp",
+    "source": "assets/chronicle/scenes/source/14-story-completion.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      354,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/14-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_he",
+    "chapter": 4,
+    "scene": "c4_he",
+    "title": "返场时一起鞠躬",
+    "asset": "assets/chronicle/scenes/scene_4_c4_he.webp",
+    "source": "assets/chronicle/scenes/source/14-story-completion.png",
+    "panel": 2,
+    "crop": [
+      358,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/14-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_te",
+    "chapter": 4,
+    "scene": "c4_te",
+    "title": "谢幕后的心事",
+    "asset": "assets/chronicle/scenes/scene_4_c4_te.webp",
+    "source": "assets/chronicle/scenes/source/14-story-completion.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/14-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_fail",
+    "chapter": 4,
+    "scene": "c4_fail",
+    "title": "空座位里的下一次",
+    "asset": "assets/chronicle/scenes/scene_4_c4_fail.webp",
+    "source": "assets/chronicle/scenes/source/14-story-completion.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/14-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_prep_a",
+    "chapter": 4,
+    "scene": "c4_prep_a",
+    "title": "调准十六小节",
+    "asset": "assets/chronicle/scenes/scene_4_c4_prep_a.webp",
+    "source": "assets/chronicle/scenes/source/14-story-completion.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/14-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_prep_b",
+    "chapter": 4,
+    "scene": "c4_prep_b",
+    "title": "一句也没有出错",
+    "asset": "assets/chronicle/scenes/scene_4_c4_prep_b.webp",
+    "source": "assets/chronicle/scenes/source/14-story-completion.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/14-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_prep_c",
+    "chapter": 4,
+    "scene": "c4_prep_c",
+    "title": "留给别人发光",
+    "asset": "assets/chronicle/scenes/scene_4_c4_prep_c.webp",
+    "source": "assets/chronicle/scenes/source/14-story-completion.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/14-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_bao_a",
+    "chapter": 4,
+    "scene": "c4_bao_a",
+    "title": "像洗过的天空",
+    "asset": "assets/chronicle/scenes/scene_4_c4_bao_a.webp",
+    "source": "assets/chronicle/scenes/source/14-story-completion.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/14-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_bao_b",
+    "chapter": 4,
+    "scene": "c4_bao_b",
+    "title": "我站他旁边就行",
+    "asset": "assets/chronicle/scenes/scene_4_c4_bao_b.webp",
+    "source": "assets/chronicle/scenes/source/15-story-completion.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/15-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_qiqi_a",
+    "chapter": 4,
+    "scene": "c4_qiqi_a",
+    "title": "海报上的每个名字",
+    "asset": "assets/chronicle/scenes/scene_4_c4_qiqi_a.webp",
+    "source": "assets/chronicle/scenes/source/15-story-completion.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/15-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_qiqi_b",
+    "chapter": 4,
+    "scene": "c4_qiqi_b",
+    "title": "致谢页最后一行",
+    "asset": "assets/chronicle/scenes/scene_4_c4_qiqi_b.webp",
+    "source": "assets/chronicle/scenes/source/15-story-completion.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/15-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_qiqi_c",
+    "chapter": 4,
+    "scene": "c4_qiqi_c",
+    "title": "咖啡与人情",
+    "asset": "assets/chronicle/scenes/scene_4_c4_qiqi_c.webp",
+    "source": "assets/chronicle/scenes/source/15-story-completion.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/15-story-completion.txt"
+  },
+  {
+    "id": "scene_4_b4_lemon_a",
+    "chapter": 4,
+    "scene": "b4_lemon_a",
+    "title": "帽檐下的借条",
+    "asset": "assets/chronicle/scenes/scene_4_b4_lemon_a.webp",
+    "source": "assets/chronicle/scenes/source/15-story-completion.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/15-story-completion.txt"
+  },
+  {
+    "id": "scene_4_b4_lemon_b",
+    "chapter": 4,
+    "scene": "b4_lemon_b",
+    "title": "收回的手",
+    "asset": "assets/chronicle/scenes/scene_4_b4_lemon_b.webp",
+    "source": "assets/chronicle/scenes/source/15-story-completion.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/15-story-completion.txt"
+  },
+  {
+    "id": "scene_4_b4_zhou_a",
+    "chapter": 4,
+    "scene": "b4_zhou_a",
+    "title": "再来一次独奏",
+    "asset": "assets/chronicle/scenes/scene_4_b4_zhou_a.webp",
+    "source": "assets/chronicle/scenes/source/15-story-completion.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/15-story-completion.txt"
+  },
+  {
+    "id": "scene_4_b4_zhou_b",
+    "chapter": 4,
+    "scene": "b4_zhou_b",
+    "title": "翻到下一页",
+    "asset": "assets/chronicle/scenes/scene_4_b4_zhou_b.webp",
+    "source": "assets/chronicle/scenes/source/15-story-completion.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/15-story-completion.txt"
+  },
+  {
+    "id": "scene_4_b4_bao_a",
+    "chapter": 4,
+    "scene": "b4_bao_a",
+    "title": "把心情也唱进去",
+    "asset": "assets/chronicle/scenes/scene_4_b4_bao_a.webp",
+    "source": "assets/chronicle/scenes/source/16-story-completion.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/16-story-completion.txt"
+  },
+  {
+    "id": "scene_4_b4_bao_b",
+    "chapter": 4,
+    "scene": "b4_bao_b",
+    "title": "半瓶蜂蜜水",
+    "asset": "assets/chronicle/scenes/scene_4_b4_bao_b.webp",
+    "source": "assets/chronicle/scenes/source/16-story-completion.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/16-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_band_lemon",
+    "chapter": 4,
+    "scene": "c4_band_lemon",
+    "title": "递来的远方机票",
+    "asset": "assets/chronicle/scenes/scene_4_c4_band_lemon.webp",
+    "source": "assets/chronicle/scenes/source/16-story-completion.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/16-story-completion.txt"
+  },
+  {
+    "id": "scene_4_c4_band_bao",
+    "chapter": 4,
+    "scene": "c4_band_bao",
+    "title": "空剧场里的回声",
+    "asset": "assets/chronicle/scenes/scene_4_c4_band_bao.webp",
+    "source": "assets/chronicle/scenes/source/16-story-completion.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/16-story-completion.txt"
+  },
+  {
+    "id": "scene_4_b_live",
+    "chapter": 4,
+    "scene": "b_live",
+    "title": "大幕拉开之前",
+    "asset": "assets/chronicle/scenes/scene_4_b_live.webp",
+    "source": "assets/chronicle/scenes/source/16-story-completion.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/16-story-completion.txt"
+  },
+  {
+    "id": "scene_4_live_intro",
+    "chapter": 4,
+    "scene": "live_intro",
+    "title": "站到灯光里",
+    "asset": "assets/chronicle/scenes/scene_4_live_intro.webp",
+    "source": "assets/chronicle/scenes/source/16-story-completion.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/16-story-completion.txt"
+  },
+  {
+    "id": "scene_4_after_practice",
+    "chapter": 4,
+    "scene": "after_practice",
+    "title": "合练后的谱页",
+    "asset": "assets/chronicle/scenes/scene_4_after_practice.webp",
+    "source": "assets/chronicle/scenes/source/16-story-completion.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/16-story-completion.txt"
+  },
+  {
+    "id": "scene_4_be_shiyuan",
+    "chapter": 4,
+    "scene": "be_shiyuan",
+    "title": "合奏之外的背影",
+    "asset": "assets/chronicle/scenes/scene_4_be_shiyuan.webp",
+    "source": "assets/chronicle/scenes/source/16-story-completion.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/16-story-completion.txt"
+  },
+  {
+    "id": "scene_5_c5_menu",
+    "chapter": 5,
+    "scene": "c5_menu",
+    "title": "音乐节倒计时",
+    "asset": "assets/chronicle/scenes/scene_5_c5_menu.webp",
+    "source": "assets/chronicle/scenes/source/17-story-completion.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/17-story-completion.txt"
+  },
+  {
+    "id": "scene_5_c5_he",
+    "chapter": 5,
+    "scene": "c5_he",
+    "title": "这首歌送给你",
+    "asset": "assets/chronicle/scenes/scene_5_c5_he.webp",
+    "source": "assets/chronicle/scenes/source/17-story-completion.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/17-story-completion.txt"
+  },
+  {
+    "id": "scene_5_c5_be",
+    "chapter": 5,
+    "scene": "c5_be",
+    "title": "婚宴侧席的琴声",
+    "asset": "assets/chronicle/scenes/scene_5_c5_be.webp",
+    "source": "assets/chronicle/scenes/source/17-story-completion.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/17-story-completion.txt"
+  },
+  {
+    "id": "scene_5_c5_fail",
+    "chapter": 5,
+    "scene": "c5_fail",
+    "title": "散场后披上的外套",
+    "asset": "assets/chronicle/scenes/scene_5_c5_fail.webp",
+    "source": "assets/chronicle/scenes/source/17-story-completion.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/17-story-completion.txt"
+  },
+  {
+    "id": "scene_6_c6_menu",
+    "chapter": 6,
+    "scene": "c6_menu",
+    "title": "首演前的谱桌",
+    "asset": "assets/chronicle/scenes/scene_6_c6_menu.webp",
+    "source": "assets/chronicle/scenes/source/17-story-completion.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/17-story-completion.txt"
+  },
+  {
+    "id": "scene_6_c6_be",
+    "chapter": 6,
+    "scene": "c6_be",
+    "title": "锁进抽屉的音符",
+    "asset": "assets/chronicle/scenes/scene_6_c6_be.webp",
+    "source": "assets/chronicle/scenes/source/17-story-completion.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/17-story-completion.txt"
+  },
+  {
+    "id": "scene_6_c6_he",
+    "chapter": 6,
+    "scene": "c6_he",
+    "title": "把两年的路唱给你听",
+    "asset": "assets/chronicle/scenes/scene_6_c6_he.webp",
+    "source": "assets/chronicle/scenes/source/17-story-completion.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/17-story-completion.txt"
+  },
+  {
+    "id": "scene_6_c6_te",
+    "chapter": 6,
+    "scene": "c6_te",
+    "title": "侧幕的四十秒",
+    "asset": "assets/chronicle/scenes/scene_6_c6_te.webp",
+    "source": "assets/chronicle/scenes/source/17-story-completion.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/17-story-completion.txt"
+  },
+  {
+    "id": "scene_5_b_live",
+    "chapter": 5,
+    "scene": "b_live",
+    "title": "大幕拉开之前",
+    "asset": "assets/chronicle/scenes/scene_5_b_live.webp",
+    "source": "assets/chronicle/scenes/source/18-story-completion.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/18-story-completion.txt"
+  },
+  {
+    "id": "scene_6_b_live",
+    "chapter": 6,
+    "scene": "b_live",
+    "title": "大幕拉开之前",
+    "asset": "assets/chronicle/scenes/scene_6_b_live.webp",
+    "source": "assets/chronicle/scenes/source/18-story-completion.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/18-story-completion.txt"
+  },
+  {
+    "id": "scene_5_live_intro",
+    "chapter": 5,
+    "scene": "live_intro",
+    "title": "站到灯光里",
+    "asset": "assets/chronicle/scenes/scene_5_live_intro.webp",
+    "source": "assets/chronicle/scenes/source/18-story-completion.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/18-story-completion.txt"
+  },
+  {
+    "id": "scene_6_live_intro",
+    "chapter": 6,
+    "scene": "live_intro",
+    "title": "站到灯光里",
+    "asset": "assets/chronicle/scenes/scene_6_live_intro.webp",
+    "source": "assets/chronicle/scenes/source/18-story-completion.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/18-story-completion.txt"
+  },
+  {
+    "id": "scene_1_b_live_unready",
+    "chapter": 1,
+    "scene": "b_live",
+    "title": "把这一段再练稳",
+    "asset": "assets/chronicle/scenes/scene_1_b_live_unready.webp",
+    "source": "assets/chronicle/scenes/source/18-story-completion.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/18-story-completion.txt"
+  },
+  {
+    "id": "scene_2_b_live_unready",
+    "chapter": 2,
+    "scene": "b_live",
+    "title": "把这一段再练稳",
+    "asset": "assets/chronicle/scenes/scene_2_b_live_unready.webp",
+    "source": "assets/chronicle/scenes/source/18-story-completion.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/18-story-completion.txt"
+  },
+  {
+    "id": "scene_3_b_live_unready",
+    "chapter": 3,
+    "scene": "b_live",
+    "title": "把这一段再练稳",
+    "asset": "assets/chronicle/scenes/scene_3_b_live_unready.webp",
+    "source": "assets/chronicle/scenes/source/18-story-completion.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/18-story-completion.txt"
+  },
+  {
+    "id": "scene_4_b_live_unready",
+    "chapter": 4,
+    "scene": "b_live",
+    "title": "把这一段再练稳",
+    "asset": "assets/chronicle/scenes/scene_4_b_live_unready.webp",
+    "source": "assets/chronicle/scenes/source/18-story-completion.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/18-story-completion.txt"
+  },
+  {
+    "id": "scene_5_b_live_unready",
+    "chapter": 5,
+    "scene": "b_live",
+    "title": "把这一段再练稳",
+    "asset": "assets/chronicle/scenes/scene_5_b_live_unready.webp",
+    "source": "assets/chronicle/scenes/source/19-story-completion.png",
+    "panel": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/19-story-completion.txt"
+  },
+  {
+    "id": "scene_6_b_live_unready",
+    "chapter": 6,
+    "scene": "b_live",
+    "title": "把这一段再练稳",
+    "asset": "assets/chronicle/scenes/scene_6_b_live_unready.webp",
+    "source": "assets/chronicle/scenes/source/19-story-completion.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/19-story-completion.txt"
+  },
+  {
+    "id": "scene_1_s_conflict_meeting",
+    "chapter": 1,
+    "scene": "s_conflict",
+    "title": "在门口擦肩而过",
+    "asset": "assets/chronicle/scenes/scene_1_s_conflict_meeting.webp",
+    "source": "assets/chronicle/scenes/source/19-story-completion.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/19-story-completion.txt"
+  },
+  {
+    "id": "scene_5_c5_intro_wind",
+    "chapter": 5,
+    "scene": "c5_intro",
+    "title": "夏天的风先到了",
+    "asset": "assets/chronicle/scenes/scene_5_c5_intro_wind.webp",
+    "source": "assets/chronicle/scenes/source/19-story-completion.png",
+    "panel": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/19-story-completion.txt"
+  },
+  {
+    "id": "scene_2_after_practice_fail",
+    "chapter": 2,
+    "scene": "after_practice",
+    "title": "阿喆替你折好谱角",
+    "asset": "assets/chronicle/scenes/scene_2_after_practice_fail.webp",
+    "source": "assets/chronicle/scenes/source/19-story-completion.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/19-story-completion.txt"
+  },
+  {
+    "id": "scene_6_b_live_ready",
+    "chapter": 6,
+    "scene": "b_live",
+    "title": "完整的总谱等着开幕",
+    "asset": "assets/chronicle/scenes/scene_6_b_live_ready.webp",
+    "source": "assets/chronicle/scenes/source/19-story-completion.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/19-story-completion.txt"
+  },
+  {
+    "id": "scene_2_c2_kong_a_stay",
+    "chapter": 2,
+    "scene": "c2_kong_a",
+    "title": "再陪你们走一段",
+    "asset": "assets/chronicle/scenes/scene_2_c2_kong_a_stay.webp",
+    "source": "assets/chronicle/scenes/source/19-story-completion.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/19-story-completion.txt"
+  },
+  {
+    "id": "scene_2_c2_kong_c_stay",
+    "chapter": 2,
+    "scene": "c2_kong_c",
+    "title": "下不为例的温柔",
+    "asset": "assets/chronicle/scenes/scene_2_c2_kong_c_stay.webp",
+    "source": "assets/chronicle/scenes/source/19-story-completion.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/19-story-completion.txt"
+  },
+  {
+    "id": "scene_5_weekly_reply_approachFirst",
+    "chapter": 5,
+    "scene": "weekly_reply",
+    "title": "同一次呼吸",
+    "asset": "assets/chronicle/scenes/scene_5_weekly_reply_approachFirst.webp",
+    "source": "assets/chronicle/scenes/source/20-rehearsal-transitions.png",
+    "panel": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/20-rehearsal-transitions.txt"
+  },
+  {
+    "id": "scene_5_weekly_reply_approachSecond",
+    "chapter": 5,
+    "scene": "weekly_reply",
+    "title": "换曲与返场",
+    "asset": "assets/chronicle/scenes/scene_5_weekly_reply_approachSecond.webp",
+    "source": "assets/chronicle/scenes/source/20-rehearsal-transitions.png",
+    "panel": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "prompt": "docs/imagegen/chronicle/20-rehearsal-transitions.txt"
+  },
+  {
+    "id": "scene_6_weekly_reply_approachFirst",
+    "chapter": 6,
+    "scene": "weekly_reply",
+    "title": "侧台的手势",
+    "asset": "assets/chronicle/scenes/scene_6_weekly_reply_approachFirst.webp",
+    "source": "assets/chronicle/scenes/source/20-rehearsal-transitions.png",
+    "panel": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/20-rehearsal-transitions.txt"
+  },
+  {
+    "id": "scene_6_weekly_reply_approachSecond",
+    "chapter": 6,
+    "scene": "weekly_reply",
+    "title": "最后一拍也一起",
+    "asset": "assets/chronicle/scenes/scene_6_weekly_reply_approachSecond.webp",
+    "source": "assets/chronicle/scenes/source/20-rehearsal-transitions.png",
+    "panel": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/20-rehearsal-transitions.txt"
+  },
+  {
+    "id": "scene_2_zhu_offer",
+    "chapter": 2,
+    "scene": "zhu_offer",
+    "title": "又见熟悉的酒单",
+    "asset": "assets/chronicle/scenes/scene_2_zhu_offer.webp",
+    "source": "assets/chronicle/scenes/source/20-rehearsal-transitions.png",
+    "panel": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/20-rehearsal-transitions.txt"
+  },
+  {
+    "id": "scene_3_zhu_offer",
+    "chapter": 3,
+    "scene": "zhu_offer",
+    "title": "排练前来一杯",
+    "asset": "assets/chronicle/scenes/scene_3_zhu_offer.webp",
+    "source": "assets/chronicle/scenes/source/20-rehearsal-transitions.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/chronicle/20-rehearsal-transitions.txt"
   }
 ]

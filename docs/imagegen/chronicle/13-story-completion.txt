@@ -1,0 +1,49 @@
+Use case: illustration-story. ONE EXACT 4-column x 2-row atlas, eight equal SQUARE panels, overall 2:1 landscape. 3072x1536 preferred. No gutters, no captions, no labels, no numbers, no speech bubbles, no watermark, no UI. Straight crop boundaries at 25/50/75% width and 50% height. Each independent panel contains a complete narrative moment with faces and key props in central 80%. Strict row-major panel order. Match supplied references: warm cinematic semi-realistic anime CG with detailed painted environments. References define character identity only, make NEW composition and precise scene action in each panel. All characters adults. Player viewpoint is gender-neutral observer, do not impose identity. Do not add characters absent from scene. Do not show outcome before it occurs. No readable writing; notes and papers abstract.
+所有人物都是中国成年人。十元：棕色短bob发、星形发卡、奶油开衫、小提琴女团长。垃垃：长棕发蝴蝶结、温柔小提琴女性。阿喆：棕色卷发、细圆框眼镜、黑色衬衫、小提琴男性。TIM：白衬衫棕色短发、工牌、小提琴成年男性。汤少：黑夹克黑发、相机男性。空格：体型结实、短黑发方框眼镜、黑polo小提琴男性（不要画成纤瘦偶像）。笛杰：黑色柔软卷发格子外衫、笛子男性。柒柒：盘发、米白花纹旗袍红滚边、电吉他成年女性。小周：柔软黑发浅蓝衬衫、钢琴成年男性。柠檬：鸭舌帽深色服装、键盘成年男性。大鹅：柔软黑发白色上衣钢琴成年男性。小塔：黑发深色上衣手串、架子鼓成年男性。飞鸿：蓝灰衬衫短发主唱男性。宝石：浅发色浅色宽松衬衫、柔和少年感的成年男性主唱，不是女性。大羊：黑发黑衬衫、原声吉他男性。叶思阳：整洁西装男性。朱老师：瘦、短黑发方框眼镜、酒吧老板和作曲者男性。黄奕兴：短黑发金属框眼镜灰色西装成年男性。
+参考图顺序：1:十元,2:柒柒,3:垃垃,4:TIM,5:柠檬。
+
+PANEL 1 (TOP row, column 1): 第3章，站到灯光里。只画此刻：十元
+白月光 · ENFP · 正传团长
+第 6 周 · 正传
+530 专场！台下坐满了人，朱老师、垃垃、TIM 都在侧幕——上吧！
+
+PANEL 2 (TOP row, column 2): 第3章，合奏之外的背影。只画此刻：旁白
+乐团正传 · 故事叙述
+结局已收录
+（你把所有的目光都给了团长。）十元的笑容依旧明亮，可某一天你回过头，身后已经没有了合奏的人。
+
+这一周目走到了结尾，已建立的全局羁绊仍然保留。
+
+PANEL 3 (TOP row, column 3): 第4章，剧场筹备中的传话。只画此刻：柒柒
+电吉他 · 银行客户经理
+第 6 周 · 正传
+（柒柒挽着你的手，笑得温柔：「妹妹，明天陪我去做脸吧，别总跟那群男生混在一起呀。」——这句话传进十元耳朵时，已经变了味道。）
+
+PANEL 4 (TOP row, column 4): 第4章，说开以后。只画此刻：十元
+白月光 · ENFP · 正传团长
+第 6 周 · 正传
+（你当晚就去了琴房，把事情原原本本说了一遍。十元听完，眨眨眼：「就这事？我还以为……」她突然笑了，捶了你一下）「下次直接跟我说，不许让别人转达。没你不行，记得吗？」
+
+PANEL 5 (BOTTOM row, column 1): 第4章，镜中那一点迟疑。只画此刻：柒柒
+电吉他 · 银行客户经理
+第 6 周 · 正传
+（你没去解释。第二天排练，十元照旧冲你笑，只是那笑容里多了零点五秒的迟疑。柒柒挽着你的手更紧了些：「妹妹，走，做脸去。」镜子里，她笑得温柔极了。
+
+PANEL 6 (BOTTOM row, column 2): 第4章，旗袍盘扣闪了一下。只画此刻：柒柒
+电吉他 · 银行客户经理
+第 6 周 · 正传
+（你婉拒了。柒柒也不恼，轻轻捏了捏你的手：「那下次哦，不许推。」她转身走开，旗袍的盘扣在灯光下闪了一下。你心里那点说不清的异样，被她温柔的笑盖了过去。
+
+PANEL 7 (BOTTOM row, column 3): 第4章，节目单已经排好。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+6.7 就在下周。节目单与赞助安排已定，最后再把自己的声部练稳。
+
+PANEL 8 (BOTTOM row, column 4): 第4章，远方没有舞台。只画此刻：旁白
+乐团正传 · 故事叙述
+结局已收录
+（柠檬说要带你去海外看更大的舞台，热情地帮你订了机票。临走前你回头望了一眼排练室——灯还亮着，十元在窗边说「等你回来」。）
+
+有些地方没有舞台，只有围墙。
+
+—— BE · 远方的机票 ——

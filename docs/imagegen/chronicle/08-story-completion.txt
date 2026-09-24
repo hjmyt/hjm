@@ -1,0 +1,51 @@
+Use case: illustration-story. ONE EXACT 4-column x 2-row atlas, eight equal SQUARE panels, overall 2:1 landscape. 3072x1536 preferred. No gutters, no captions, no labels, no numbers, no speech bubbles, no watermark, no UI. Straight crop boundaries at 25/50/75% width and 50% height. Each independent panel contains a complete narrative moment with faces and key props in central 80%. Strict row-major panel order. Match supplied references: warm cinematic semi-realistic anime CG with detailed painted environments. References define character identity only, make NEW composition and precise scene action in each panel. All characters adults. Player viewpoint is gender-neutral observer, do not impose identity. Do not add characters absent from scene. Do not show outcome before it occurs. No readable writing; notes and papers abstract.
+所有人物都是中国成年人。十元：棕色短bob发、星形发卡、奶油开衫、小提琴女团长。垃垃：长棕发蝴蝶结、温柔小提琴女性。阿喆：棕色卷发、细圆框眼镜、黑色衬衫、小提琴男性。TIM：白衬衫棕色短发、工牌、小提琴成年男性。汤少：黑夹克黑发、相机男性。空格：体型结实、短黑发方框眼镜、黑polo小提琴男性（不要画成纤瘦偶像）。笛杰：黑色柔软卷发格子外衫、笛子男性。柒柒：盘发、米白花纹旗袍红滚边、电吉他成年女性。小周：柔软黑发浅蓝衬衫、钢琴成年男性。柠檬：鸭舌帽深色服装、键盘成年男性。大鹅：柔软黑发白色上衣钢琴成年男性。小塔：黑发深色上衣手串、架子鼓成年男性。飞鸿：蓝灰衬衫短发主唱男性。宝石：浅发色浅色宽松衬衫、柔和少年感的成年男性主唱，不是女性。大羊：黑发黑衬衫、原声吉他男性。叶思阳：整洁西装男性。朱老师：瘦、短黑发方框眼镜、酒吧老板和作曲者男性。黄奕兴：短黑发金属框眼镜灰色西装成年男性。
+参考图顺序：1:TIM,2:十元,3:空格,4:垃垃,5:阿喆。
+
+PANEL 1 (TOP row, column 1): 第1章，从这一周开始。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+第 6 周的传说，开始了。这周想怎么过？
+
+PANEL 2 (TOP row, column 2): 第1章，合奏之外的背影。只画此刻：旁白
+乐团正传 · 故事叙述
+结局已收录
+（你把所有时间都花在讨好团长上。）十元的笑容依旧，但你听见身后传来乐手收拾谱架的声音——没人再愿意和你合奏。音准 32 的《小星星》，你陪她拉了一千遍；而乐团的排练，你缺席了整整一个月。
+
+这一周目走到了结尾，已建立的全局羁绊仍然保留。
+
+PANEL 3 (TOP row, column 3): 第2章，白天打卡，晚上练琴。只画此刻：TIM
+SR · 一提 / 国企人
+第 6 周 · 正传
+「大家好，TIM，一提。白天在单位……晚上过来练琴。」
+
+PANEL 4 (TOP row, column 4): 第2章，站在哪一边。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+全团的目光落在你身上。去哪边？
+
+PANEL 5 (BOTTOM row, column 1): 第2章，天桥下的歌声。只画此刻：小杰
+流行组 · 乐手
+第 6 周 · 正传
+你站到了流行组一边。小杰拍了拍你的肩：「兄弟，一起把歌唱好。」
+
+——三个月后，弦乐组越走越远，音乐剧、路演，灯光越来越亮。流行组的人渐渐聚不齐了，排练室的钥匙还挂在小杰腰上。周末的商圈门口，有时还能听见他的音箱在响。
+
+某天你在天桥上路过，往琴盒里放了十块钱。他冲你笑了笑，没说话。
+
+PANEL 6 (BOTTOM row, column 2): 第2章，新的排练日历。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+格局已定。这个月怎么过？
+
+PANEL 7 (BOTTOM row, column 3): 第2章，接连亮起的屏幕。只画此刻：TIM
+SR · 一提 / 国企人
+第 6 周 · 正传
+TIM 盯着手机，有些困扰：「那位团外联系人又加我了……上班时间，十七条消息。」
+
+PANEL 8 (BOTTOM row, column 4): 第2章，合练后的谱页。只画此刻：TIM
+SR · 一提 / 国企人
+第 6 周 · 正传
+空格把笔收好。TIM 拍了拍你的谱角：「刚才那一段，比上一遍齐了。」
+
+合练结束，回到第二章的本周安排。

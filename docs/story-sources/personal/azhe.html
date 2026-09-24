@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>恋与哈基米 · 阿喆个人线（剧本版 v1.0）</title>
+<style>
+body{background:#f7f5f2;color:#2b2926;font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7}
+#app{max-width:560px;margin:0 auto;padding:16px 14px 40px}
+h1{font-size:21px;text-align:center;letter-spacing:3px;margin:8px 0 2px}
+.sub{text-align:center;color:#8a857d;font-size:13px;margin-bottom:14px}
+.panel{background:#fff;border:1px solid #e4e0da;border-radius:12px;padding:16px;margin-bottom:12px}
+.btn{display:block;width:100%;border:1px solid #e4e0da;background:#fff;border-radius:10px;padding:10px;font-size:15px;cursor:pointer;margin-top:8px;text-align:left}
+.btn:hover{border-color:#b8863b;color:#b8863b}
+.btn.pri{background:#b8863b;color:#fff;border-color:#b8863b;text-align:center}
+.btn.pri:hover{filter:brightness(1.08)}
+.hud{display:flex;gap:6px;flex-wrap:wrap;font-size:12px;margin-bottom:10px}
+.hud span{background:#fff;border:1px solid #e4e0da;border-radius:99px;padding:2px 10px}
+.who{font-weight:600;color:#b8863b;margin-bottom:4px}
+.txt{font-size:15px;margin-bottom:10px;white-space:pre-wrap}
+.ins{font-size:13px;color:#8a857d;margin-top:10px}
+.flag{font-size:11px;color:#b0524a}
+</style>
+</head>
+<body>
+<div id="app">
+<h1>阿喆个人线</h1>
+<div class="sub">剧本版 v1.0 · 五幕洗水果 + 星光悸动 + 杭州抉择 · 供策划改稿 / 供程序部署</div>
+<div class="hud" id="hud"></div>
+<div id="main"></div>
+</div>
+
+<!-- ==========================================================================
+     【剧 本 区】（策划只改这里）
+
+     写法五条规则：
+     ① 新事件：【事件名｜条件｜标题】  条件：好感20 ／ 旗标xxx ／ 副场景
+     ② 台词：角色名：内容   可用角色：阿喆 TIM 冰冰 垃垃 十元 旁白
+     ③ 选项： 选项：  下面每行一个 - 开头
+     ④ 效果括号：（好感+3）（记住xxx）（去yyy）  可省略
+     ⑤ 事件之间空一行；段内空行随意
+
+     【旗标总表】
+     sawFruit 看到洗水果   spokeUp 当众说破   quiet 私下递水
+     defended 替他辩解     song 命名了曲子     pulled 拉走他
+     starlight 星光对视    goHZ 跟去杭州      stay 选择留下
+     duet2 合奏两次解锁聊天  foodMap/careful/tape 聊天旗标
+
+     【结局判定】
+     azhe_TE：选「去杭州」直接触发（TE · 同行的方向）
+     azhe_HE：选「留下」且持有 starlight → 异地恋两年 → HE
+     （选「留下」但没有 starlight：在 azhe_08 里走 BE 文本）
+
+     --------------------------------------------------------------------------
+     【给程序员的部署说明】
+     · 本文件自包含：剧本文本 + 解析器 + 引擎，无外部依赖，可直接嵌入主工程
+     · 解析器入口 parseScript(text) → 事件数组，字段：
+       {id, sub(副场景), need{azhe:数值, 旗标名:1}, title, lines[{who,text}], choices[{t,aff{azhe},flag,next}]}
+     · who 映射表在 WHO 对象，新增角色加一行即可
+     · 存档结构 {azhe:数值, flags:{}, done:{}, duet:次数}
+     · 接主工程：把好感/旗标接到主线存档；聊天旗标可换成主线聊天系统
+     · 第七章自动进线规则（羁绊+好感最高者进线）在主线引擎里做，本文件只管线内
+     ========================================================================== -->
+<textarea id="script" style="display:none">
+【azhe_01｜好感20｜第一幕 · 琴房的流水声】
+旁白：路演前两小时，你路过琴房，听见水声。
+
+旁白：阿喆站在洗手台前，面前摆着五个塑料盒。他一颗一颗洗着葡萄和圣女果，洗得极认真，像在擦自己的琴。听到脚步声，他慌忙把盒子往包里塞：「啊、你怎么来了。」
+选项：
+- 「我帮你一起洗。」（好感+3）（记住sawFruit）（去azhe_01b）
+- 「洗这么多，给谁呀？」（好感+1）（记住sawFruit）（去azhe_01c）
+- （假装没看见，退了出去）（去azhe_01d）
+
+【azhe_01b｜副场景｜】
+旁白：他愣了一下，往旁边让了让：「……水有点凉。」你们并肩洗完了五盒水果。他没说给谁，你也没问。但走的时候，他把最满的那盒塞给了你：「这盒甜。」
+选项：
+- （收下）（好感+2）
+
+【azhe_01c｜副场景｜】
+阿喆：「给、给大家啊。」他眼神飘了一下，「路演那么累，补充点维生素。」
+旁白：他包装上精心贴的小标签还没撕，上面写着「已清洗，可直接食用」。
+选项：
+- 「你想得真周到。」（好感+2）
+
+【azhe_01d｜副场景｜】
+旁白：你退了出去。门关上前，你看见他对着那几盒水果笑了笑，像对着什么珍宝。那天路演，你在休息区看到了一模一样的盒子，包装上贴着「已清洗，可直接食用」。
+选项：
+- （继续）
+
+【azhe_02｜好感30 旗标sawFruit｜第二幕 · 「商场送的吧」】
+旁白：路演休息区，那几盒水果被摆在最显眼的位置。小塔抓了一把：「这次商场挺大方啊，还配水果。」
+
+旁白：TIM 搂着阿喆的肩走过来：「好兄弟！你也来路演现场了？正好正好，多吃点！」阿喆的笑僵了半秒，又恢复如常：「嗯，大家吃。」没人看见他指尖上还沾着没擦干的水。
+选项：
+- 「这不是商场送的——是阿喆一颗一颗洗的。」（好感+4）（记住spokeUp）（去azhe_02b）
+- （没说话，默默把自己的水分了一半给阿喆）（好感+3）（记住quiet）（去azhe_02c）
+- （跟着拿了一把水果）（去azhe_02d）
+
+【azhe_02b｜副场景｜】
+旁白：全场安静了一秒。小塔举着葡萄的手停在半空：「……啊？那你早说啊！」TIM 大笑：「可以啊兄弟，贤惠！」只有你看见了——阿喆低头擦琴的时候，耳朵尖红透了，嘴角压都压不下去。
+选项：
+- （继续）
+
+【azhe_02c｜副场景｜】
+旁白：阿喆接过水，指尖碰到了你的指尖。他小声说：「……谢谢。」顿了顿又说，「你看到了吧，刚才。洗水果的事。」你没承认也没否认。他笑了笑：「没关系。他们吃得开心就行。」
+选项：
+- （继续）
+
+【azhe_02d｜副场景｜】
+旁白：那天散场后，你看见阿喆一个人把空盒子都收走了。走在他后面的两个乐手在嘀咕：「阿喆又来路演蹭吃蹭喝，一场不演，吃得倒不少。」他的背影顿了顿，没有回头。
+选项：
+- （继续）（好感-1）
+
+【azhe_03｜好感40｜第三幕 · 蹭吃的人】
+旁白：团建饭局上，大提冰冰随口打趣：「阿喆可是我们团的路演编外人员——演出一场不上，水果一顿不落。」满桌哄笑。阿喆笑着举杯：「我自罚一杯。」
+
+旁白：他笑着，可你把他的杯子和他的手一起看进了眼里——握杯子的手指节发白，酒一滴没洒。
+选项：
+- 「阿喆每场路演都提前两小时到，设备是他调的，谱是他翻的。」（好感+4）（记住defended）（去azhe_03b）
+- （饭局散场后追出去找他）（好感+3）（去azhe_03c）
+- （跟着笑了一声）（去azhe_03d）
+
+【azhe_03b｜副场景｜】
+旁白：笑声戛然而止。冰冰愣住：「……啊？那是你洗的？我还以为是场务弄的！」小塔挠头：「所以设备也是你调的？」阿喆在桌子底下轻轻踢了踢你的鞋，用口型说：「没、事、的。」
+选项：
+- （继续）
+
+【azhe_03c｜副场景｜】
+旁白：你在便利店门口找到他。他拿着饭团，冲你笑：「你怎么也溜了？」你问他为什么不解释。他捏着饭团想了很久：「解释了，他们就会为了照顾我的心情而愧疚。那比误会更难受。」
+选项：
+- 「那就让知道的人，一直知道。」（好感+3）
+
+【azhe_03d｜副场景｜】
+旁白：那晚之后，阿喆还是会来路演，还是带着洗好的水果。只是再没有人听他讲「今天这盒比较甜」了——因为他不再对任何人讲了。
+选项：
+- （继续）（好感-1）
+
+【azhe_04｜好感50｜第四幕 · 没有名字的曲子】
+旁白：深夜的排练室，你听见一段没听过的旋律。阿喆一个人坐在角落练琴，没有谱，闭着眼。琴声的脾气很奇怪——前半段像在问一个问题，后半段像在等一个回答。
+选项：
+- （安静地听完，等他睁眼）（好感+3）（去azhe_04b）
+- 「这首叫什么？」（好感+2）（去azhe_04c）
+- （不打扰，悄悄离开）
+
+【azhe_04b｜副场景｜】
+旁白：他睁开眼，看到你，并不意外，像等了很久。「……你听到了啊。」他低头拨了一个音，「这首曲子，我写了三年。一直没敢给别人听。」他抬眼看你，「你是第一个。」
+选项：
+- （心跳漏了一拍）（好感+2）
+
+【azhe_04c｜副场景｜】
+阿喆：「……还没有名字。」他看着你，忽然把琴往你这边递了递，「你觉得，它应该叫什么？」
+旁白：他在把命名权交给你。这比任何告白都重。
+选项：
+- 「叫《已清洗，可直接食用》。」（好感+4）（记住song）（去azhe_04d）
+- 「叫《没你不行》。」（好感+3）（记住song）（去azhe_04e）
+- 「我还没想好……」（好感+1）
+
+【azhe_04d｜副场景｜】
+旁白：阿喆愣了两秒，然后笑出了声——是真的笑，肩膀都在抖的那种。「你知道吗，」他擦着眼角，「三年里我设想过一百个名字，这个是我最想不到的。」他把琴抱紧了一点，「……就是它了。」
+选项：
+- （继续）（好感+2）
+
+【azhe_04e｜副场景｜】
+旁白：阿喆的手指停在琴弦上。排练室很静，静到你能听见他的呼吸。「……你学坏了，」他低声说，耳朵却红了，「偷我的口头禅。」他没否认这个名字。没否认，就是答应了。
+选项：
+- （继续）（好感+2）
+
+【azhe_05｜好感60｜第五幕 · 「好兄弟」】
+旁白：路演庆功宴，TIM 喝得开心，搂着阿喆的肩对全桌宣布：「阿喆是我最好的兄弟！回头我给他介绍对象——我们单位新来的实习生，可甜了！」全桌起哄。阿喆笑着：「好啊。」
+
+旁白：你看见他另一只手在桌下，把琴包的带子，慢慢缠紧了一圈，又一圈。
+选项：
+- 「阿喆，来一下，谱子有个地方我想请教你。」（拉走他）（好感+4）（记住pulled）（去azhe_05b）
+- 「TIM，介绍对象之前，先记住人家的名字吧。」（好感+2）（记住defended）（去azhe_05c）
+- （举起杯子，跟着起哄）（去azhe_05d）
+
+【azhe_05b｜副场景｜】
+旁白：他跟你走出宴会厅，夜风一吹，他忽然站住了。「……谢谢。」他背对着你，声音闷闷的，「不是谢你帮我解围。」他转过身，眼睛在路灯下亮得惊人，「是谢你，看到了。」
+选项：
+- （继续）（好感+3）
+
+【azhe_05c｜副场景｜】
+旁白：TIM 愣了一下，随即大笑：「哈哈哈哈阿喆这么好记的名字！」满桌又笑起来。只有阿喆没笑——他在看你，看了很久，久到 TIM 的手从他肩上滑下来都没察觉。
+选项：
+- （继续）
+
+【azhe_05d｜副场景｜】
+旁白：那晚散场，阿喆第一个走的。他的琴包带子缠得很紧，背影挺得很直。你忽然想起白天他洗水果的样子——原来有些人的离开，也是安安静静的。
+选项：
+- （继续）（好感-1）
+
+【azhe_06｜好感66｜第六幕 · 星光落在谱架上】
+旁白：剧场演出的那晚，你在侧幕等上场。灯光暗下前，你余光瞥见阿喆抱着你的谱子走过来——他把每一页的谱角都贴了小标签，按顺序排好，还在容易翻乱的第三页夹了荧光条。
+
+旁白：「第三页胶水有点松，我加固了。」他把谱子递给你，语气像在汇报工作，「今天风大，舞台边的谱架我压了沙袋。你别担心，专心拉。」
+
+旁白：整场演出，你没有一次低头找谱。每一次抬眼，谱子永远停在该在的那一页。谢幕的掌声响起时，你回头找他——他站在控制台边，比你还紧张，拳头攥着，指节都白了。看到你望过来，他才松开手，冲你用力点头。
+选项：
+- （去后台找他）（去azhe_06b）
+- （在原地等他走过来）（去azhe_06c）
+
+【azhe_06b｜副场景｜】
+旁白：你穿过人群走向他。他还站在原地，像被钉住了。「……零失误。」他先开口，「今天翻谱，零失误。」顿了顿，又补一句：「我是说，我零失误。你拉得……也很好。」
+
+旁白：剧场的灯一盏盏暗下去，只有穹顶的星光装饰还亮着，落在他的肩膀上。他忽然说：「其实刚才你在台上的时候，我一直在想——」他停住了，耳朵尖慢慢红透，「……没什么。你饿不饿？后台有水果，我洗过了。」
+选项：
+- 「你又洗水果了。」（笑）（好感+4）（记住starlight）（去azhe_06e）
+- 「你刚才想说什么？」（好感+3）（记住starlight）（去azhe_06e）
+
+【azhe_06c｜副场景｜】
+旁白：你站在原地。他像是挣扎了很久，终于穿过人群向你走来，在离你一步的地方停下。星光从穹顶落下来，落在他的睫毛上。
+
+阿喆：「今天的星光，」他看着天，声音很轻，「比排练室的灯好看。」（顿了很久）「跟你一起看的话——更好看。」
+
+旁白：说完这句话，他像是用完了全身的力气，眼神飘向别处，手却诚实地没有走。你看见他的手在微微发抖——和他每次翻谱前试页边时一样稳，又一样抖。
+选项：
+- （伸手，握住他发抖的手）（好感+4）（记住starlight）（去azhe_06e）
+- 「阿喆，我也是这么觉得的。」（好感+3）（记住starlight）（去azhe_06e）
+
+【azhe_06e｜副场景｜】
+阿喆：（他没有抽回手，也没有更进一步，只是站着，像守着一页不敢翻的谱。过了很久，他小声说：）「……这页我能不能，先不翻。」
+
+旁白：你懂他的意思。有些话一旦说破，就没有回头页了。星光下你们站了很久，久到保洁阿姨开始扫地。走的时候，他把你送到琴房楼下，从包里摸出一盒洗好的草莓：「今晚的。……晚安。」
+选项：
+- （抱着草莓上楼）（好感+3）
+
+【azhe_07｜好感72 旗标starlight｜第七幕 · 杭州的 offer】
+旁白：周一，阿喆来得比谁都早。你的谱架上没有谱，只有一杯还冒热气的豆浆——不加糖。你上个月随口说过一次「豆浆不加糖才好喝」，连你自己都忘了。
+
+旁白：他的琴盒立在脚边，扣得严严实实。那是他紧张时才有的小动作。
+
+阿喆：「我要走了。」他说得很平静，像在念别人的事，「杭州。家里托了关系，一家乐团附属的音乐机构，有编制，有宿舍，五险一金。」他扯了扯嘴角，「我妈说，搞音乐的，也要吃饭。」
+
+旁白：排练室很静。你听见自己的心跳，比任何一次演出前都响。
+选项：
+- 「什么时候走？」（好感+2）（去azhe_07b）
+- 「你……想好了吗？」（好感+2）（去azhe_07b）
+- 「哦。挺好的。」（去azhe_07b）
+
+【azhe_07b｜副场景｜】
+阿喆：「下周。」他终于抬起头看你，「我纠结了一整个周末。本来想……星光那晚就说的。没敢说。」他深吸一口气，像是把最后一页谱攥在了手心，「现在说了。你，怎么想？」
+选项：
+- 「我跟你去杭州。」（记住goHZ）（去azhe_TE）
+- 「我留下。哈基米需要我，你也需要更大的舞台。」（记住stay）（去azhe_08）
+
+【azhe_TE｜副场景｜TE · 同行的方向】
+旁白：你辞掉了这边的一切。走的那天，十元在站台上哭得稀里哗啦，塞给你两盒洗好的水果：「杭州的场子要是欺负你们，就回来！没你不行！」
+
+旁白：杭州的生活比想象中难，也比想象中亮。阿喆白天在机构上班，晚上在出租屋的小阳台上给你翻谱——这次，是你找工作的面试稿，他也一页一页贴了标签。
+
+旁白：两年后，你们在钱塘江边租了一个带琴房的两居室。阳台很小，刚好放两把椅子。某个周末的傍晚，他洗了一盒葡萄，递给你最满的那盒：「这盒甜。」和当年一模一样。
+
+旁白：你偶尔会想起哈基米，想起剧场穹顶的星光。阿喆从身后抱住你：「等攒够了钱，我们回去看演出。买最好的位置——不，买侧幕，侧幕看得清翻谱的人。」
+
+旁白：—— TE · 同行的方向 ——（你们在一起了。只是哈基米的谱架上，从此少了一双最稳的手。）
+选项：
+- —— 阿喆线 · TE 完 ——
+
+【azhe_08｜副场景｜两年】
+旁白：你们没有说再见。约定是：每周三视频，每月一封信，谁的演出，另一个能来就来。
+
+旁白：异地恋比想象中难。有时视频里他累得说不出话，有时你演出失利不想说话。但每周三晚上八点，屏幕一定会亮。他给你看他的宿舍、食堂、杭州的雨；你给他看排练室的新谱架、冰冰的新琴、十元又拉了哪首《小星星》。
+
+旁白：第一年，他春节没回来，寄了一盒杭州的糕点，盒底压着一张手写谱——那首《已清洗，可直接食用》的完整版，最后一页是空的，只写了一行字：「这一页，等我们一起写。」
+
+旁白：第二年，哈基米接到了剧场的巡演邀请，做大做强。首演那晚，你在侧幕看到一个熟悉的身影——他拎着琴盒，风尘仆仆，冲着目瞪口呆的你扬了扬手里的水果盒：「这盒甜。……我请了年假。以后每次演出，我都来翻谱。」
+选项：
+- 走向那个结局（去azhe_HE）
+
+【azhe_HE｜副场景｜HE · 星光落回剧场】
+旁白：两年后。哈基米的巡演走遍了六个城市，海报上的名字越来越多，而侧幕的位置始终有一个固定的身影。
+
+旁白：首场巡演的那个剧场，穹顶的星光和那天一模一样。演出结束，观众散尽，他牵着你的手走到舞台中央，从琴盒里取出那本手写的谱子——《已清洗，可直接食用》，最后一页不再是空的。
+
+旁白：那一页写着你的名字。下面还有一行小字：「已确认，可直接演奏一辈子。」
+
+旁白：他单膝跪下去的时候还在紧张，台词说得颠三倒四，戒指是从琴盒的暗格里拿的——藏了整整两个月。你哭着说「好」的时候，他如释重负地笑了：「这页……我终于敢翻了。」
+
+旁白：—— HE · 星光落回剧场 ——
+选项：
+- —— 阿喆线 · HE 完 ——
+
+【azhe_BE_note｜好感72 旗标beNote｜第七幕（无星光版）】
+旁白：（如果你在没有星光旗标的情况下到达这里：阿喆还是说了杭州的事。你祝福了他。走的前一晚他给你送了一盒洗好的水果，站了很久，最终只说了一句「保重」。两年后你收到一盒从杭州寄来的葡萄，没有署名。—— BE · 没翻的那页）
+
+旁白：（要开启完整第七幕，请先在第六幕的星光下，握住他的手。）
+选项：
+- —— 返回 ——
+</textarea>
+
+<script>
+/* ================= 剧本解析器与引擎（程序维护区） ================= */
+var SAVE_KEY='azhe_route_full_v1';
+var WHO={'阿喆':'azhe','TIM':'tim','冰冰':'bingbing','垃垃':'lala','十元':'shiyuan','旁白':'sys'};
+var NAME={azhe:'阿喆',tim:'TIM',bingbing:'冰冰',lala:'垃垃',shiyuan:'十元',sys:'旁白'};
+var G={azhe:20,flags:{},done:{},duet:0};
+
+function parseScript(txt){
+ var raw=txt.split('\n'),blocks=[],cur=[];
+ for(var ri=0;ri<raw.length;ri++){var L=raw[ri];
+  if(!L.trim()){
+   var nxt=null;
+   for(var rj=ri+1;rj<raw.length;rj++){if(raw[rj].trim()){nxt=raw[rj].trim();break;}}
+   if(nxt&&nxt.charAt(0)==='【'){blocks.push(cur.join('\n'));cur=[];}
+   else cur.push(L);
+  }else cur.push(L);
+ }
+ blocks.push(cur.join('\n'));
+ var route=[];
+ blocks.forEach(function(b){
+  b=b.trim();if(!b)return;
+  var lines=b.split('\n'),head=lines[0].match(/^【(.+?)】/);
+  if(!head)return;
+  var parts=head[1].split('｜');
+  var ev={id:parts[0].trim(),sub:false,need:{},title:(parts[2]||'').trim(),lines:[],choices:null};
+  (parts[1]||'').split(' ').forEach(function(c){
+   c=c.trim();if(!c)return;
+   if(c==='副场景')ev.sub=true;
+   else if(c.indexOf('好感')===0)ev.need.azhe=parseInt(c.slice(2))||0;
+   else if(c.indexOf('旗标')===0)ev.need[c.slice(2)]=1;
+  });
+  var mode='text';
+  for(var i=1;i<lines.length;i++){
+   var L=lines[i].trim();if(!L)continue;
+   if(L==='选项：'){mode='choice';ev.choices=[];continue;}
+   if(mode==='choice'&&L.charAt(0)==='-'){
+    var m=L.match(/^-\s*(.+?)(?:（(.+)）)?$/);
+    var c={t:m[1],aff:{},flag:null,next:null};
+    if(m[2]){m[2].split('）（').join('|').split('）|').join('|').split('|').forEach(function(p){
+      p=p.trim().replace(/[（）]/g,'');
+      if(p.indexOf('好感+')===0)c.aff.azhe=parseInt(p.slice(3))||0;
+      else if(p.indexOf('记住')===0)c.flag=p.slice(2);
+      else if(p.indexOf('去')===0)c.next=p.slice(1);
+     });}
+    ev.choices.push(c);continue;}
+   var mi=L.match(/^(.+?)：([\s\S]*)$/);
+   if(mi&&WHO[mi[1]]){ev.lines.push({who:WHO[mi[1]],text:mi[2]});}
+  }
+  route.push(ev);
+ });
+ return route;
+}
+var ROUTE=parseScript(document.getElementById('script').value);
+
+/* 聊天（连续合奏2次解锁；不同选项不同好感） */
+var CHATS=[
+ {id:'foodMap',who:'azhe',title:'巷子里的小店',
+  text:'阿喆：「排练完别走。」他带你拐进琴房后面的小巷，一家没有招牌的面馆。「老板娘认识我，」他得意地挑眉，「多加一份笋，不要香菜——你上次挑出来了，我记得。」',
+  choices:[
+   {t:'「你连这个都记得？」',aff:{azhe:3},flag:'foodMap'},
+   {t:'「还行，凑合。」',aff:{azhe:1}}]},
+ {id:'careful',who:'azhe',title:'他记得一切',
+  text:'旁白：你发现阿喆的备忘录里有一页叫「团内事项」。你的那一栏写着：不吃香菜、弱音器在琴盒第二层、演出前会紧张要留独处时间、豆浆不加糖。最后一行是最近补的：周三晚上八点，别约她。',
+  choices:[
+   {t:'「周三晚上八点，为什么别约我？」',aff:{azhe:3},flag:'careful'},
+   {t:'（假装没看到，心跳如鼓）',aff:{azhe:2}}]},
+ {id:'tape',who:'azhe',title:'直男礼物',
+  text:'阿喆：「给你的。」他递过来一个包装得像炸药包的东西。拆开是一整箱护指胶带，附赠一张打印的对比测评表：各品牌粘性、透气性、价格，以及最后一栏手写备注——「她拉得久，这个不伤手」。',
+  choices:[
+   {t:'「……你做了测评表？」（笑出声）',aff:{azhe:3},flag:'tape'},
+   {t:'「谢谢，很实用。」',aff:{azhe:1}}]},
+ {id:'duetChat',who:'azhe',title:'下次一起',
+  text:'阿喆：「下次合奏，」他状似不经意地整理谱架，「你把第三页那段再稳一稳。我不是说你拉得不好——我是说，我想跟你一起把它拉好。」',
+  choices:[
+   {t:'「好啊，下次一起。」',aff:{azhe:2}},
+   {t:'「你先把自己的翻谱练好吧。」（怼他）',aff:{azhe:1}}]}
+];
+
+function save(){localStorage.setItem(SAVE_KEY,JSON.stringify(G));}
+function load(){var s=localStorage.getItem(SAVE_KEY);if(s){try{G=JSON.parse(s);return true}catch(e){}}return false;}
+var el=function(id){return document.getElementById(id)};
+function hud(){var h='<span>阿喆好感 '+G.azhe+'</span><span>合奏 '+G.duet+' 次</span>';
+ for(var k in G.flags)h+='<span class="flag">◆'+k+'</span>';el('hud').innerHTML=h;}
+function render(ev){hud();G.cur=ev.id;save();
+ var m='<div class="panel">';
+ if(ev.title)m+='<div class="ins" style="margin-top:0">'+ev.title+'</div>';
+ ev.lines.forEach(function(l){m+='<div class="who">'+NAME[l.who]+'</div><div class="txt">'+l.text+'</div>';});
+ if(ev.choices){ev.choices.forEach(function(c,i){m+='<button class="btn" onclick="pick('+i+')">'+c.t+'</button>';});}
+ else{m+='<button class="btn" onclick="pick(0)">（继续）</button>';}
+ m+='</div>';el('main').innerHTML=m;el('main')._ev=ev;}
+function pick(i){G.done[G.cur]=1;var ev=el('main')._ev;
+ var c=ev.choices?ev.choices[i]:null;
+ if(c){if(c.aff)for(var k in c.aff)G.azhe+=(c.aff[k]||0);
+  if(c.flag)G.flags[c.flag]=1;
+  if(c.next){var nx=ROUTE.find(function(e){return e.id===c.next;});if(nx){render(nx);return;}}}
+ idle();}
+function nextEvent(){for(var i=0;i<ROUTE.length;i++){var e=ROUTE[i];
+  if(e.id===G.cur||G.done[e.id]||e.sub)continue;
+  if(check(e.need)){render(e);return true;}}
+ return false;}
+function idle(){
+ /* 特殊拦截：无星光旗标却达到72好感 → 无星光版第七幕 */
+ if((G.azhe||0)>=72&&!G.flags.starlight&&!G.flags.stay&&!G.flags.goHZ&&!G.done['azhe_BE_note']){
+  G.flags.beNote=1;var be=ROUTE.find(function(e){return e.id==='azhe_BE_note'});if(be){render(be);return;}}
+ if(nextEvent())return;
+ /* 动作面板：合奏 / 聊天 / 调试 */
+ var m='<div class="panel"><div class="ins" style="margin-top:0">事件之间 · 自由行动</div>';
+ m+='<button class="btn" onclick="doDuet()">和阿喆合奏一场（好感+2）</button>';
+ if(G.flags.duet2)m+='<button class="btn" onclick="chatAzhe()">找阿喆聊天</button>';
+ else m+='<button class="btn" style="opacity:.55">找阿喆聊天（再合奏 '+(2-G.duet)+' 次解锁）</button>';
+ m+='<button class="btn" onclick="G.azhe+=5;save();idle()">好感 +5（调试用）</button>';
+ m+='<button class="btn" onclick="if(confirm(\'清空存档重来？\')){localStorage.removeItem(SAVE_KEY);location.reload();}">清空重来</button></div>';
+ el('main').innerHTML=m;}
+function doDuet(){G.duet++;G.azhe+=2;if(G.duet>=2)G.flags.duet2=1;hud();save();
+ el('main').innerHTML='<div class="panel"><div class="who">阿喆</div><div class="txt">「这段再来一遍。」阿喆帮你翻着谱，「你今天的手感，比昨天好。」（好感 +2）</div><button class="btn" onclick="idle()">（继续）</button></div>';}
+var chatIdx=0;
+function chatAzhe(){var c=CHATS[chatIdx%CHATS.length];chatIdx++;
+ if(G.flags[c.id]&&chatIdx%CHATS.length===0){}
+ render({id:'chat_'+c.id,title:'日常 · '+c.title,lines:[{who:c.who,text:c.text}],choices:c.choices.concat()});
+ el('main')._chat=true;}
+var _origPick=pick;
+pick=function(i){if(el('main')._chat){el('main')._chat=false;_origPick(i);return;}_origPick(i);};
+function check(need){if(!need)return true;for(var k in need){if(k==='azhe'){if(G.azhe<need[k])return false;}else if(!G.flags[k])return false;}return true;}
+window.onload=function(){load();idle();};
+window.pick=pick;window.G=G;window.idle=idle;window.doDuet=doDuet;window.chatAzhe=chatAzhe;
+</script>
+</body>
+</html>

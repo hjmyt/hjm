@@ -1,6 +1,7 @@
 'use strict';
 
-// One authored story block per week; scene IDs keep existing choices and reward keys stable.
+// Legacy story-block IDs stay stable for choices, illustrations and save migration.
+// Runtime routing groups opening blocks together and schedules only late events by week.
 const ChronicleWeeks = {
   "1": [
     {

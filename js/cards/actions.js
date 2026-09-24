@@ -42,6 +42,7 @@ function selectCard(id) {
 }
 
 function chooseCardGift(key) {
+    ensureCardDay();
     const c = cardDef(CardUI.detailId || state.cards.selected);
     if (!c)
         return;
@@ -52,11 +53,11 @@ function chooseCardGift(key) {
     $$('[data-card-gift]').forEach(b => { b.classList.toggle('selected', b.dataset.cardGift === key); b.setAttribute('aria-pressed', b.dataset.cardGift === key ? 'true' : 'false'); });
     const used = state.cards.daily.gifts[c.id] || 0, b = $('cardFeedBtn');
     if (b) {
-        b.disabled = used >= 3 || state.coins < selected[3];
+        b.disabled = giftFeedDisabled(c, selected, used);
         b.innerHTML = I('heart') + `投喂 ${selected[3]} ♪`;
     }
     if ($('cardGiftHint'))
-        $('cardGiftHint').textContent = `这份心意：${'羁绊分'} +${selected[4]}、经验 +${selected[5]}。${state.coins < selected[3] ? '音符不足，先读故事或完成演奏吧。' : ''}`;
+        $('cardGiftHint').textContent = cardGiftHint(c, selected, used);
 }
 
 function feedCard() {
@@ -74,6 +75,24 @@ function feedCard() {
         return;
     }
     const used = state.cards.daily.gifts[c.id] || 0;
+    if (isFullBondGift(g)) {
+        if (cardBond(c.id) >= 100) {
+            toast('羁绊已达 100，无需再使用满心礼盒。');
+            return;
+        }
+        if (state.coins < BOND_RULES.fullGiftCost) {
+            toast('满心礼盒需要 10000 音符，当前音符不足。');
+            return;
+        }
+        if (!purchaseFullBond(c.id))
+            return;
+        CardUI.response = '“这份心意，我会一直记得。”';
+        save();
+        renderGlobal();
+        toast('满心礼盒已送出 · 羁绊分已达 100 · 普通投喂次数不变', true);
+        playPetSound('feed');
+        return;
+    }
     if (used >= BOND_RULES.giftsPerDay) {
         toast('今天已收到了三份心意，明天再来吧。');
         return;

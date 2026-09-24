@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：黑发黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：浅发宽松浅色衬衫男性主唱。REK：黑发成年男性贝斯手。飞鸿：蓝灰衬衫男主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (sy_career_b, do not write ID): 工作室就这样开了起来。你谈下的第一个合作，是给星海的考生免费提供模拟面试——你没告诉十元，那家机构是你跑了四趟才谈下来的。 你开始在两条战线上作战：白天是老板，晚上是老师。累是真的累。可每次十元解出一道题抬头冲你笑的时候，你觉得这买卖，不亏。
+
+PANEL 2 (sy_career_no, do not write ID): 你婉拒了。理由很充分：风险、稳定、还有——你想多陪陪她。 她知道了，只说了一个「哦」。后来的日子你的琴技越来越好，演出越来越多。可某个深夜你忽然意识到：你的世界，只剩下排练厅那么大。而她的世界，正在你没有参与的方向上，越跑越远。
+
+PANEL 3 (sy_juggle, do not write ID): 工作室最忙的那两周，你连续七天没合过眼。第三周的周三晚上十一点，楼下传来熟悉的声音——十元拎着两杯奶茶，站在你工作室门口，耳朵冻得通红。 是听 REK 说的。她没上来，就先看见了——你趴在企划书上睡着了，胳膊底下压着的，是给她整理的「星海面试题库」最后一页。 她没有叫醒你。她把奶茶放在你手边，替你把台灯拧暗了一格，然后拍了张照，发了一条仅你可见的动态。 「偷拍存档！他替我努力，那我也要加倍努力才行。说好了——一起向前冲！」
+
+PANEL 4 (sy_10, do not write ID): 巡演庆功宴那晚，十元被灌了几杯果酒，脸红红的，在露台上看星星。你走过去，她冲你张开手臂：「{{inst}}手！你看，今天的星星——每一颗都是我们的观众！」 风把她的头发吹乱了。她忽然安静下来，看着你说：「我有时候会觉得，自己何德何能，能让你们都在我身边。」 你的心跳得很快。你知道，有些话今晚不说，也许又要等很久很久。
+
+PANEL 5 (sy_10wait, do not write ID): 她看了你两秒，笑着点头：「嗯！真好看！」她不知道你咽回去的是什么。 那晚之后，你们还是最好拍档。只是有些话，过了季节，就越来越难开口了。
+
+PANEL 6 (sy_HE, do not write ID): 庆功宴后的空露台，你表白了。十元愣了很久很久，久到你以为她被风冻住了。然后她的眼睛一点一点亮起来——比任何舞台灯都亮。 （带着哭腔笑：）「你知道吗，我等这句话，等得比练音准还久。」她吸吸鼻子，「奕兴那边……我会亲口说清楚。他值得一个真心喜欢他的人，而不是一个需要「兜底」的我。」 她从口袋里掏出两张票——游乐场的，山丘的，音乐节的，用过的，整齐的，每一张背面都写着日期。「我都留着。」她把票塞进你手心，「以后的每一张，也都一起吧。」
+
+PANEL 7 (sy_TE, do not write ID): 你表白了。十元没有拒绝，也没有答应。她只是很认真地说：「让我想想。这一次，我想想清楚——为我自己想清楚。」 后来她把全部的力气都给了乐团。哈基米越来越好，好到她的名字出现在每一张海报的最前面。偶尔在庆功宴上碰杯，她还是会笑着说「没你不行」——只是这一次，你懂了，那真的是「团员」的意思。
+
+PANEL 8 (sy_BE_ge, do not write ID): 你还是去找了大鹅。开门见山：「团里都在传——你喜不喜欢十元？」 （他怔了一下，随即笑了，笑得意味不明：）「哈？我怎么会喜欢她那种人呢。」他摆摆手，「别闹了。」 你以为这就是答案，转身走了。你没有看见，你身后，大鹅盯着你的背影看了很久——然后掏出手机，在群里发了一条消息。 三天后，十元看你的眼神变了。她还是笑着，只是不再单独叫你的名字。垃垃欲言又止，最终只问了半句：「你……去找过大鹅？」 （走廊里擦肩而过，她停下来，背对着你说：）「我没什么好被人打听的。」 那句话传遍了团里，越传越变形。你试图解释，可连解释本身，都成了新的谈资。 （最后一次开口，是在排练室门口。她没有看你：）「对不起。我们还是……保持距离吧。」

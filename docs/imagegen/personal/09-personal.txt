@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：黑发黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：浅发宽松浅色衬衫男性主唱。REK：黑发成年男性贝斯手。飞鸿：蓝灰衬衫男主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (sy_wx_c, do not write ID): 她自己应付了过去，只是笑容标准得像打印出来的。回程的路上她说：「当光源……真的好累啊。」你没接住这句话。它从车窗的缝里，飘走了。
+
+PANEL 2 (sy_06, do not write ID): （周五傍晚，她蹦蹦跳跳地拦住你：）「周六有空吗！演出票我有！你选一个——」她摊开手，三张票：游乐场全天、山丘酒吧、城市音乐节。
+
+PANEL 3 (sy_07, do not write ID): 她嘴上说「过山车一点都不怕」，排到跟前却死死攥住了你的袖子。下坡的瞬间她尖叫得比谁都大声，下来之后腿软得站不住，却兴奋得眼睛发亮：「再来一次！」 黄昏的旋转木马上，她忽然安静下来，看着远处的晚霞：「小时候练琴，我最想来的就是这里。今天总算有人陪我来了。」她回头冲你笑，「谢谢你，{{inst}}手。」
+
+PANEL 4 (sy_08, do not write ID): 山丘打烊前的最后一小时，朱老师亲自给你们调了两杯「拾光」。十元捧着杯子，小口小口地喝，话比平时多了很多。 （脸颊微红：）「你知道吗，我第一次来这里的时候，拉琴拉得稀烂，是朱老师说——「弹得烂没关系，别烂在心里」。」她晃着杯子，「后来我就在想，如果有一天，我也能把什么东西装在心里又不烂掉……就好了。」 她说到「什么东西」的时候，看了你一眼。吧台的灯很暗，你没看清她的脸。
+
+PANEL 5 (sy_09, do not write ID): 音乐节的人潮里，她拉着你的袖子穿梭在摊位之间，笑得比舞台灯还亮。压轴乐队响起的时候，你们站在很远的外围，她听了一会儿，忽然靠过来，把半张脸埋在你的肩膀里。 「困了？」你问。她摇摇头，声音闷闷的：「没有。就是想靠一下。」那首歌唱了七分钟，她靠了七分钟。散场的人流里，谁都没有先动。
+
+PANEL 6 (sy_06done, do not write ID): 回程的路上，她哼着歌，忽然说：「今天，很开心。」顿了顿，又小声补了一句，「跟你一起的「今天」，都很开心。」
+
+PANEL 7 (sy_pd, do not write ID): 周末，你在琴房找到十元。她盘腿坐在地上，对着一张图纸拼豆——一颗一颗，拼的是一只鹅。 （头也不抬，语气轻快：）「大鹅生日快到了。他以前在团里说过，他属鹅。」她把一颗黑色的豆子按上去，「这个要寄给他。」 你看着那只渐渐成型的鹅，心里某个地方，堵了一下。
+
+PANEL 8 (sy_pd_b, do not write ID): （愣住，抬头看你：）「……啊？」她眨眨眼，忽然笑了，「吃醋啦？」 她把拼到一半的鹅放到一边，撑着下巴看你：「那你说，不给他拼，给谁拼？」 她没等你的答案，把图纸翻了个面——背面画着一把歪歪扭扭的{{inst}}。

@@ -7,8 +7,12 @@ function createChronicleWeeks(ctx) {
         4: [{ scene: 'c4_band_lemon', week: 2, title: '柠檬的借款', person: 'lemon' }, { scene: 'c4_band_bao', week: 3, title: '空剧场里练嗓', person: 'baoshi' }]
     };
     const openingWeeks = { 1: [1, 2, 4], 2: [1, 2, 4], 3: [1, 2, 4, 5], 4: [1, 2, 3, 5], 5: [1, 2], 6: [1, 2] };
-    function freshWeeks() { return { version: 1, done: [], active: 1, side: [], recaps: {}, approach: null }; }
-    function weekPlan(r = ctx.R(), week = r.week) { return ChronicleWeeks[r.chapter][Math.min(6, week) - 1]; }
+    // Most authored scenes run continuously before training. Late events retain their timing.
+    const front = {1:[1,2,3,4],2:[1,2,3,4],3:[1,2,3],4:[1,2,3,4],5:[1,2,3,4],6:[1,2,3,4]};
+    function freshWeeks() { return { version: 2, done: [], active: 1, side: [], recaps: {}, approach: null, training: {}, trainingWeek: 1 }; }
+    function weekPlan(r = ctx.R(), week = r.week) {
+        return week >= 6 ? {title:ctx.stageName(r),description:'带着练习与选择，走上正式舞台。'} : ChronicleTraining[r.chapter][Math.max(0,week-1)];
+    }
     function sceneWeek(scene, r) {
         const direct = ChronicleWeeks[r.chapter].findIndex(p => p.scene === scene);
         if (direct >= 0) return direct + 1;
@@ -22,77 +26,73 @@ function createChronicleWeeks(ctx) {
         return (prefixes[r.chapter] || []).find(([prefix]) => scene.startsWith(prefix))?.[1] || 0;
     }
     function cleanWeeks(saved, r) {
-        const w = freshWeeks();
-        const validWeek = n => Number.isInteger(n) && n >= 1 && n <= 5;
-        if (saved?.version === 1) {
-            w.done = [...new Set((Array.isArray(saved.done) ? saved.done : []).filter(validWeek))];
-            w.active = validWeek(saved.active) && !w.done.includes(saved.active) ? saved.active : 0;
+        const w = freshWeeks(), valid = n => Number.isInteger(n) && n >= 1 && n <= 5;
+        if ([1,2].includes(saved?.version)) {
+            w.done = [...new Set((Array.isArray(saved.done) ? saved.done : []).filter(valid))];
+            w.active = valid(saved.active) && !w.done.includes(saved.active) ? saved.active : 0;
             w.side = [...new Set((Array.isArray(saved.side) ? saved.side : []).filter(s => (optional[r.chapter] || []).some(e => e.scene === s)))];
-            for (const n of w.done) w.recaps[n] = ctx.str(saved.recaps?.[n], 420) || '本周故事已记录。';
-            w.approach = [0, 1].includes(saved.approach) ? saved.approach : null;
+            for (const n of w.done) w.recaps[n] = ctx.str(saved.recaps?.[n], 420) || '这段故事已记录。';
+            w.approach = [0,1].includes(saved.approach) ? saved.approach : null;
+            w.trainingWeek = valid(saved.trainingWeek) ? saved.trainingWeek : Math.min(5,r.week);
+            for (let n=1;n<=5;n++) {
+                const t = saved.training?.[n];
+                if (t && typeof t === 'object') w.training[n] = ctx.cleanTraining(t);
+            }
             return w;
         }
-        // Old runs reached the weekly menu only after the original opening chain.
-        // Preserve that history, and schedule only unseen material going forward.
         const at = sceneWeek(r.scene, r);
         w.active = at && at < 6 ? at : 0;
-        if (at) r.week = Math.max(r.week, at);
-        const afterOpening = !at && !['start', 'zhu_offer', 'zhu_reply'].includes(r.scene);
-        w.done = [...new Set([...Array.from({ length: Math.min(5, r.week - 1) }, (_, i) => i + 1), ...(afterOpening ? openingWeeks[r.chapter] : [])])];
-        if (w.active) w.done = w.done.filter(n => n !== w.active);
+        // Old uninterrupted runs already read the opening chain. Never rewind their week or scene.
+        const afterOpening = !at && !['start','zhu_offer','zhu_reply'].includes(r.scene);
+        w.done = [...new Set([...Array.from({length:Math.min(5,r.week-1)},(_,i)=>i+1), ...(afterOpening ? openingWeeks[r.chapter] : [])])].filter(n=>n!==w.active);
         for (const entry of r.journal) {
             if (!entry.choice) continue;
-            const n = ChronicleWeeks[r.chapter].findIndex(p => p.scene === entry.scene) + 1;
-            if (n > 0 && n < 6 && n !== w.active && !w.done.includes(n)) w.done.push(n);
-            if ((optional[r.chapter] || []).some(e => e.scene === entry.scene)) w.side.push(entry.scene);
+            const n = ChronicleWeeks[r.chapter].findIndex(p=>p.scene===entry.scene)+1;
+            if (valid(n) && n!==w.active && !w.done.includes(n)) w.done.push(n);
+            if ((optional[r.chapter]||[]).some(e=>e.scene===entry.scene)) w.side.push(entry.scene);
         }
-        for (const n of w.done) w.recaps[n] = '这段故事已在旧存档中经历，原有选择与成长已保留。';
+        for (const n of w.done) w.recaps[n]='旧存档中的故事与选择已保留。';
         return w;
     }
+    function pendingStory(r = ctx.R()) {
+        return front[r.chapter].find(n=>!r.weekly.done.includes(n)) ||
+            [1,2,3,4,5].find(n=>!front[r.chapter].includes(n) && n<=r.week && !r.weekly.done.includes(n)) || 0;
+    }
     function completeWeek() {
-        const r = ctx.R(), w = r.weekly, n = w.active;
+        const r=ctx.R(), w=r.weekly, n=w.active;
         if (!n || w.done.includes(n)) return;
-        const choices = r.journal.filter(e => e.week === r.week && e.choice).slice(-2).map(e => e.choice);
-        w.done.push(n);
-        w.recaps[n] = choices.length ? choices.join(' → ') : '本周故事已记录。';
-        w.active = 0;
-        ctx.log(`本周完成：${weekPlan(r, n).title}。${w.recaps[n]}`);
+        w.done.push(n); w.active=0;
+        w.recaps[n]=r.journal.filter(e=>e.choice).slice(-2).map(e=>e.choice).join(' → ') || '这段故事已记录。';
+        ctx.log('剧情已记录：'+ChronicleWeeks[r.chapter][n-1].title+'。');
     }
     function storyTransition(next) {
-        const r = ctx.R();
-        if (!r.weekly) r.weekly = cleanWeeks(null, r);
-        if (r.ending) { r.weekly.active = 0; r.scene = next; return; }
-        // A week-opening interruption leads straight into the scheduled story.
-        if (next === 'menu' && /^c[34]_jeal_[abc]$/.test(r.scene)) {
-            r.scene = 'menu';
-            enterWeekStory();
-            return;
+        const r=ctx.R();
+        if (!r.weekly || r.weekly.version!==2) r.weekly=cleanWeeks(r.weekly,r);
+        if (r.ending) {r.weekly.active=0;r.scene=next;return;}
+        if (next==='menu' && /^c[34]_jeal_[abc]$/.test(r.scene)) {
+            r.scene='menu'; if(pendingStory(r) || r.week>=6) enterWeekStory(); return;
         }
-        const boundary = ChronicleWeeks[r.chapter].findIndex(p => p.scene === next) + 1;
-        if (boundary > r.week && boundary <= 6) {
-            completeWeek();
-            r.scene = 'menu';
-        } else {
-            if (next === 'menu') completeWeek();
-            r.scene = next;
-        }
+        // Free activities and previously completed story replays follow their own dialogue.
+        if (!r.weekly.active) {r.scene=next;return;}
+        const n=ChronicleWeeks[r.chapter].findIndex(p=>p.scene===next)+1;
+        if (next==='menu' || n && n!==r.weekly.active) completeWeek();
+        if (n && n<6 && (front[r.chapter].includes(n) || n<=r.week) && !r.weekly.done.includes(n)) {
+            r.weekly.active=n; r.scene=next;
+        } else if (next==='menu' || n) {
+            r.scene='menu';
+            if (pendingStory(r)) enterWeekStory();
+        } else r.scene=next;
     }
     function enterWeekStory() {
-        const r = ctx.R();
-        if (r.scene !== 'menu' || r.ending) return;
-        if (r.week >= 6) {
-            if (![1, 2, 3, 4, 5].every(n => r.weekly.done.includes(n))) return;
-            r.scene = 'b_live';
-        } else {
-            if (r.weekly.done.includes(r.week)) return;
-            r.weekly.active = r.week;
-            r.scene = weekPlan().scene;
-        }
+        const r=ctx.R();
+        if (r.scene!=='menu' || r.ending) return;
+        const n=pendingStory(r);
+        if (n) {r.weekly.active=n;r.scene=ChronicleWeeks[r.chapter][n-1].scene;}
+        else if (r.week>=6) r.scene='b_live';
+        else return;
         return true;
     }
-    function startWeekStory() {
-        if (enterWeekStory()) ctx.changed();
-    }
+    function startWeekStory() {if (enterWeekStory()) ctx.changed();}
     function sideEvents() {
         const r = ctx.R();
         return (optional[r.chapter] || []).filter(e => r.week >= e.week && cardOwned(ctx.PEOPLE[e.person].card));
@@ -117,8 +117,8 @@ function createChronicleWeeks(ctx) {
         return null;
     }
     function weekStoryHTML() {
-        const r = ctx.R(), p = weekPlan(), done = r.week >= 6 || r.weekly.done.includes(r.week), recap = r.weekly.recaps[r.week];
-        return `<section class="cp-week-story" aria-label="本周故事"><span class="cp-week-kicker">${r.week >= 6 ? '演出周' : done ? '本周已完成' : '本周主线'}</span><h3>${ctx.E(p.title)}</h3><p>${ctx.E(p.description)}</p>${recap ? `<div class="cp-week-recap">${I('check')}<span>本周手记 · ${ctx.E(recap)}</span></div>` : ''}${!done ? ctx.actionButton('week-story', '开始本周故事', 'arrow', 'primary') : ''}${r.week < 6 ? `<p class="cp-next-story">下周预告 · ${ctx.E(weekPlan(r, r.week + 1).title)}</p>` : ''}</section>`;
+        const r=ctx.R(), n=pendingStory(r);
+        return (n ? `<section class="cp-week-story"><span class="cp-week-kicker">${front[r.chapter].includes(n)?'章节剧情':'排练间隙的故事'}</span><h3>${ctx.E(ChronicleWeeks[r.chapter][n-1].title)}</h3><p>接着上次的选择读下去，完整经历这一段故事。</p>${ctx.actionButton('week-story','继续故事','arrow','primary')}</section>` : '') + ctx.trainingHubHTML();
     }
     function sideStoriesHTML() {
         const events = sideEvents();
@@ -129,6 +129,6 @@ function createChronicleWeeks(ctx) {
         const art = chronicleSceneArt(ctx.R());
         return art ? `<figure class="cp-story-art"><img src="${ASSETS[art.asset]}" alt="${ctx.E(art.text)}" decoding="async"><figcaption>${ctx.E(art.location)}</figcaption></figure>` : '';
     }
-    function weeklyHelp() { return '<p>每章按六周展开：每周完成一段主线，记录选择后再进入下一周。练琴、聊天和可选相遇留在当周，不要求清空支线。第六周演出；琴技不足仍可花费音符延期加练。原有提前结局保留，章节与剧情奖励不因周数重发。</p>'; }
-    return { freshWeeks, cleanWeeks, weekPlan, storyTransition, enterWeekStory, startWeekStory, sideEvents, startSide, weeklyDialogue, weekStoryHTML, sideStoriesHTML, illustrationHTML, weeklyHelp };
+    function weeklyHelp() { return '<p>先连贯阅读章节剧情，再进入五周训练与相处；临近演出的事件按时出现，第六周登台。每周一种训练：跟拍、记旋律、找错拍、接奏和彩排。首次报名 10 音符，完成训练琴技 +2，优秀额外 +1；失败、中断可免费继续，每章每项只奖励一次。普通加练仍为 10 音符 / 琴技 +2。已开放的训练可在演出前补练。摸底失败不阻断剧情；不足的琴技会在训练页明确提示。</p>'; }
+    return {freshWeeks,cleanWeeks,weekPlan,pendingStory,storyTransition,enterWeekStory,startWeekStory,sideEvents,startSide,weeklyDialogue,weekStoryHTML,sideStoriesHTML,illustrationHTML,weeklyHelp};
 }

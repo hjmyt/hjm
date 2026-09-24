@@ -9,7 +9,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
  check('Only Bill remains placeholder',CARD_DEFS.filter(c=>c.placeholder).map(c=>c.id).join()==='bill');
  check('Bill absent from recruit pool',!availableCardPool().some(c=>c.id==='bill'));
  goCard('baoshi');check('Secret absent from locked DOM',!$('view-card').innerHTML.includes('宝石姬')&&!$('view-card').innerHTML.includes('新裙子'));
- state.affinity.baoshi=35;goCard('baoshi');check('Secret unlocks collapsed',$('view-card').innerHTML.includes('宝石姬')&&!$('view-card').innerText.includes('宝石姬'));check('Hidden gift appears after unlock',effectiveGifts(cardDef('baoshi')).length===4);
+ state.affinity.baoshi=35;goCard('baoshi');check('Secret unlocks collapsed',$('view-card').innerHTML.includes('宝石姬')&&!$('view-card').innerText.includes('宝石姬'));check('Hidden gift appears after unlock',effectiveGifts(cardDef('baoshi')).filter(g=>!isFullBondGift(g)).length===4);
  state.cards.team=['xiaozhou'];onSourceGift(cardDef('xiaozhou'),cardDef('xiaozhou').gifts.find(g=>g[0]==='praise'));prepareSourceSkill('xiaozhou');check('Praise doubles active reward',state.cards.prepared.amount===12);state=cleanState(JSON.parse(JSON.stringify(state)));check('Prepared dynamic reward persists',state.cards.prepared.amount===12);
  const perform=(ids)=>{state.cards.team=ids;game.cardRun=captureCardRun();game.notes=[];awardCardPerformance(1);};
  perform(['xiaozhou','goose']);check('Goose present prevents solo growth',sourceCast().xiaozhou.solos===0);

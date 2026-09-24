@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：黑发黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：浅发宽松浅色衬衫男性主唱。REK：黑发成年男性贝斯手。飞鸿：蓝灰衬衫男主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (azhe_06e, do not write ID): （他没有抽回手，也没有更进一步，只是站着，像守着一页不敢翻的谱。过了很久，他小声说：）「……这页我能不能，先不翻。」 你懂他的意思。有些话一旦说破，就没有回头页了。星光下你们站了很久，久到保洁阿姨开始扫地。走的时候，他把你送到琴房楼下，从包里摸出一盒洗好的草莓：「今晚的。……晚安。」
+
+PANEL 2 (azhe_07, do not write ID): 周一，阿喆来得比谁都早。你的谱架上没有谱，只有一杯还冒热气的豆浆——不加糖。你上个月随口说过一次「豆浆不加糖才好喝」，连你自己都忘了。 他的琴盒立在脚边，扣得严严实实。那是他紧张时才有的小动作。 「我要走了。」他说得很平静，像在念别人的事，「杭州。家里托了关系，一家乐团附属的音乐机构，有编制，有宿舍，五险一金。」他扯了扯嘴角，「我妈说，搞音乐的，也要吃饭。」 排练室很静。你听见自己的心跳，比任何一次演出前都响。
+
+PANEL 3 (azhe_07b, do not write ID): 「下周。」他终于抬起头看你，「我纠结了一整个周末。本来想……星光那晚就说的。没敢说。」他深吸一口气，像是把最后一页谱攥在了手心，「现在说了。你，怎么想？」
+
+PANEL 4 (azhe_TE, do not write ID): 你辞掉了这边的一切。走的那天，十元在站台上哭得稀里哗啦，塞给你两盒洗好的水果：「杭州的场子要是欺负你们，就回来！没你不行！」 杭州的生活比想象中难，也比想象中亮。阿喆白天在机构上班，晚上在出租屋的小阳台上给你翻谱——这次，是你找工作的面试稿，他也一页一页贴了标签。 两年后，你们在钱塘江边租了一个带琴房的两居室。阳台很小，刚好放两把椅子。某个周末的傍晚，他洗了一盒葡萄，递给你最满的那盒：「这盒甜。」和当年一模一样。 你偶尔会想起哈基米，想起剧场穹顶的星光。阿喆从身后抱住你：「等攒够了钱，我们回去看演出。买最好的位置——不，买侧幕，侧幕看得清翻谱的人。」
+
+PANEL 5 (azhe_08, do not write ID): 你们没有说再见。约定是：每周三视频，每月一封信，谁的演出，另一个能来就来。 异地恋比想象中难。有时视频里他累得说不出话，有时你演出失利不想说话。但每周三晚上八点，屏幕一定会亮。他给你看他的宿舍、食堂、杭州的雨；你给他看排练室的新谱架、冰冰的新琴、十元又拉了哪首《小星星》。 第一年，他春节没回来，寄了一盒杭州的糕点，盒底压着一张手写谱——那首《已清洗，可直接食用》的完整版，最后一页是空的，只写了一行字：「这一页，等我们一起写。」 第二年，哈基米接到了剧场的巡演邀请，做大做强。首演那晚，你在侧幕看到一个熟悉的身影——他拎着琴盒，风尘仆仆，冲着目瞪口呆的你扬了扬手里的水果盒：「这盒甜。……我请了年假。以后每次演出，我都来翻谱。」
+
+PANEL 6 (azhe_HE, do not write ID): 两年后。哈基米的巡演走遍了六个城市，海报上的名字越来越多，而侧幕的位置始终有一个固定的身影。 首场巡演的那个剧场，穹顶的星光和那天一模一样。演出结束，观众散尽，他牵着你的手走到舞台中央，从琴盒里取出那本手写的谱子——《已清洗，可直接食用》，最后一页不再是空的。 那一页写着你的名字。下面还有一行小字：「已确认，可直接演奏一辈子。」 他单膝跪下去的时候还在紧张，台词说得颠三倒四，戒指是从琴盒的暗格里拿的——藏了整整两个月。你哭着说「好」的时候，他如释重负地笑了：「这页……我终于敢翻了。」
+
+PANEL 7 (azhe_BE_note, do not write ID): 阿喆还是说了杭州的事。你祝福了他。走的前一晚他给你送了一盒洗好的水果，站了很久，最终只说了一句「保重」。两年后，你收到一盒从杭州寄来的葡萄，没有署名。
+
+PANEL 8 (azhe_chat_food, do not write ID): 「排练完别走。」他带你拐进琴房后面的小巷，一家没有招牌的面馆。「老板娘认识我，」他得意地挑眉，「多加一份笋，不要香菜——你上次挑出来了，我记得。」

@@ -28,6 +28,7 @@ function createChronicleActivities(ctx) {
     }
     function plotNotes(amount) { const r = ctx.R(), gain = claimEconomy(`plot:${r.chapter}:${r.scene}`, amount); ctx.log(gain ? `首次赞助：音符 +${gain}。` : '这份赞助已领取，重玩不重复。'); }
     function pick(index) {
+        if (ctx.M().personal?.active) return;
         const d = ctx.dialogue(), c = d?.choices?.[index];
         if (!c || c.disabled)
             return;
@@ -89,13 +90,13 @@ function createChronicleActivities(ctx) {
         else if (kind === 'ensemble') {
             initPractice('weekly');
             r.scene = 'practice_partner';
-            ctx.log('参加自由合练；本周主线与相遇可从事件卡进入。');
+            ctx.log('参加阶段验收；验收不加琴技，训练项目可提高琴技。');
         }
         ctx.changed();
     }
     function endWeek() {
         const r = ctx.R();
-        if (r.scene !== 'menu' || r.ending || r.week >= 6 || !r.weekly.done.includes(r.week))
+        if (r.scene !== 'menu' || r.ending || r.week >= 6 || ctx.pendingStory(r))
             return;
         const previousWeek = r.week;
         r.week++;
@@ -116,7 +117,7 @@ function createChronicleActivities(ctx) {
         ctx.enterWeekStory();
         ctx.changed();
         requestAnimationFrame(() => $('cpMain')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
-        toast(r.week >= 6 ? `已进入第 ${r.week} 周 · ${ctx.stageName()}剧情开启。` : `已进入第 ${r.week} 周 · 距离${ctx.stageName()}还有 ${6 - r.week} 周。`, true);
+        toast(r.week >= 6 ? `已进入第 ${r.week} 周 · ${ctx.stageName()}剧情开启。` : `第 ${r.week} 周 · ${ctx.weekPlan().title}已开放。`, true);
     }
     function canChat(k) {
         if (k === 'huangyx')

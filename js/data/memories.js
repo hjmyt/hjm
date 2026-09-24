@@ -546,6 +546,7 @@ const MEMORIES = [
     "rule": "完成第二章五段路演，但总分未达当场难度",
     "text": "掌声有些稀疏，十元却攥紧拳头：再来，下次一定行。"
   },
+  ...PERSONAL_NODES.map(n=>({id:n.memory,title:n.title,sub:'第七章 · '+PERSONAL_ROUTES[n.route].name+'个人线',asset:n.asset,rule:'阅读对应个人线场景',text:n.artText})),
   ...CHRONICLE_ART.filter(a => a.newMemory).map(a => ({
     id: a.id, title: a.title, sub: a.location, asset: a.asset,
     rule: `在第 ${a.chapter} 章读到对应场景`, text: a.text

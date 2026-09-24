@@ -1,0 +1,2126 @@
+[
+  {
+    "id": "azhe_01",
+    "title": "第一幕 · 琴房的流水声",
+    "asset": "personal_azhe_01",
+    "memory": "cp7_azhe_01",
+    "source": "assets/chronicle/personal/source/01-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_01.webp",
+    "prompt": "docs/imagegen/personal/01-personal.txt"
+  },
+  {
+    "id": "azhe_01b",
+    "title": "第一幕 · 琴房的流水声",
+    "asset": "personal_azhe_01b",
+    "memory": "cp7_azhe_01b",
+    "source": "assets/chronicle/personal/source/01-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_01b.webp",
+    "prompt": "docs/imagegen/personal/01-personal.txt"
+  },
+  {
+    "id": "azhe_01c",
+    "title": "第一幕 · 琴房的流水声",
+    "asset": "personal_azhe_01c",
+    "memory": "cp7_azhe_01c",
+    "source": "assets/chronicle/personal/source/01-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_01c.webp",
+    "prompt": "docs/imagegen/personal/01-personal.txt"
+  },
+  {
+    "id": "azhe_01d",
+    "title": "第一幕 · 琴房的流水声",
+    "asset": "personal_azhe_01d",
+    "memory": "cp7_azhe_01d",
+    "source": "assets/chronicle/personal/source/01-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_01d.webp",
+    "prompt": "docs/imagegen/personal/01-personal.txt"
+  },
+  {
+    "id": "azhe_02",
+    "title": "第二幕 · 「商场送的吧」",
+    "asset": "personal_azhe_02",
+    "memory": "cp7_azhe_02",
+    "source": "assets/chronicle/personal/source/01-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_02.webp",
+    "prompt": "docs/imagegen/personal/01-personal.txt"
+  },
+  {
+    "id": "azhe_02b",
+    "title": "第二幕 · 「商场送的吧」",
+    "asset": "personal_azhe_02b",
+    "memory": "cp7_azhe_02b",
+    "source": "assets/chronicle/personal/source/01-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_02b.webp",
+    "prompt": "docs/imagegen/personal/01-personal.txt"
+  },
+  {
+    "id": "azhe_02c",
+    "title": "第二幕 · 「商场送的吧」",
+    "asset": "personal_azhe_02c",
+    "memory": "cp7_azhe_02c",
+    "source": "assets/chronicle/personal/source/01-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_02c.webp",
+    "prompt": "docs/imagegen/personal/01-personal.txt"
+  },
+  {
+    "id": "azhe_02d",
+    "title": "第二幕 · 「商场送的吧」",
+    "asset": "personal_azhe_02d",
+    "memory": "cp7_azhe_02d",
+    "source": "assets/chronicle/personal/source/01-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_02d.webp",
+    "prompt": "docs/imagegen/personal/01-personal.txt"
+  },
+  {
+    "id": "azhe_03",
+    "title": "第三幕 · 蹭吃的人",
+    "asset": "personal_azhe_03",
+    "memory": "cp7_azhe_03",
+    "source": "assets/chronicle/personal/source/02-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_03.webp",
+    "prompt": "docs/imagegen/personal/02-personal.txt",
+    "editPrompt": "docs/imagegen/personal/02-personal-fix.txt"
+  },
+  {
+    "id": "azhe_03b",
+    "title": "第三幕 · 蹭吃的人",
+    "asset": "personal_azhe_03b",
+    "memory": "cp7_azhe_03b",
+    "source": "assets/chronicle/personal/source/02-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_03b.webp",
+    "prompt": "docs/imagegen/personal/02-personal.txt",
+    "editPrompt": "docs/imagegen/personal/02-personal-fix.txt"
+  },
+  {
+    "id": "azhe_03c",
+    "title": "第三幕 · 蹭吃的人",
+    "asset": "personal_azhe_03c",
+    "memory": "cp7_azhe_03c",
+    "source": "assets/chronicle/personal/source/02-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_03c.webp",
+    "prompt": "docs/imagegen/personal/02-personal.txt",
+    "editPrompt": "docs/imagegen/personal/02-personal-fix.txt"
+  },
+  {
+    "id": "azhe_03d",
+    "title": "第三幕 · 蹭吃的人",
+    "asset": "personal_azhe_03d",
+    "memory": "cp7_azhe_03d",
+    "source": "assets/chronicle/personal/source/02-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_03d.webp",
+    "prompt": "docs/imagegen/personal/02-personal.txt",
+    "editPrompt": "docs/imagegen/personal/02-personal-fix.txt"
+  },
+  {
+    "id": "azhe_04",
+    "title": "第四幕 · 没有名字的曲子",
+    "asset": "personal_azhe_04",
+    "memory": "cp7_azhe_04",
+    "source": "assets/chronicle/personal/source/02-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_04.webp",
+    "prompt": "docs/imagegen/personal/02-personal.txt",
+    "editPrompt": "docs/imagegen/personal/02-personal-fix.txt"
+  },
+  {
+    "id": "azhe_04b",
+    "title": "第四幕 · 没有名字的曲子",
+    "asset": "personal_azhe_04b",
+    "memory": "cp7_azhe_04b",
+    "source": "assets/chronicle/personal/source/02-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_04b.webp",
+    "prompt": "docs/imagegen/personal/02-personal.txt",
+    "editPrompt": "docs/imagegen/personal/02-personal-fix.txt"
+  },
+  {
+    "id": "azhe_04c",
+    "title": "第四幕 · 没有名字的曲子",
+    "asset": "personal_azhe_04c",
+    "memory": "cp7_azhe_04c",
+    "source": "assets/chronicle/personal/source/02-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_04c.webp",
+    "prompt": "docs/imagegen/personal/02-personal.txt",
+    "editPrompt": "docs/imagegen/personal/02-personal-fix.txt"
+  },
+  {
+    "id": "azhe_04d",
+    "title": "第四幕 · 没有名字的曲子",
+    "asset": "personal_azhe_04d",
+    "memory": "cp7_azhe_04d",
+    "source": "assets/chronicle/personal/source/02-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_04d.webp",
+    "prompt": "docs/imagegen/personal/02-personal.txt",
+    "editPrompt": "docs/imagegen/personal/02-personal-fix.txt"
+  },
+  {
+    "id": "azhe_04e",
+    "title": "第四幕 · 没有名字的曲子",
+    "asset": "personal_azhe_04e",
+    "memory": "cp7_azhe_04e",
+    "source": "assets/chronicle/personal/source/03-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_04e.webp",
+    "prompt": "docs/imagegen/personal/03-personal.txt"
+  },
+  {
+    "id": "azhe_05",
+    "title": "第五幕 · 「好兄弟」",
+    "asset": "personal_azhe_05",
+    "memory": "cp7_azhe_05",
+    "source": "assets/chronicle/personal/source/03-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_05.webp",
+    "prompt": "docs/imagegen/personal/03-personal.txt"
+  },
+  {
+    "id": "azhe_05b",
+    "title": "第五幕 · 「好兄弟」",
+    "asset": "personal_azhe_05b",
+    "memory": "cp7_azhe_05b",
+    "source": "assets/chronicle/personal/source/03-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_05b.webp",
+    "prompt": "docs/imagegen/personal/03-personal.txt"
+  },
+  {
+    "id": "azhe_05c",
+    "title": "第五幕 · 「好兄弟」",
+    "asset": "personal_azhe_05c",
+    "memory": "cp7_azhe_05c",
+    "source": "assets/chronicle/personal/source/03-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_05c.webp",
+    "prompt": "docs/imagegen/personal/03-personal.txt"
+  },
+  {
+    "id": "azhe_05d",
+    "title": "第五幕 · 「好兄弟」",
+    "asset": "personal_azhe_05d",
+    "memory": "cp7_azhe_05d",
+    "source": "assets/chronicle/personal/source/03-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_05d.webp",
+    "prompt": "docs/imagegen/personal/03-personal.txt"
+  },
+  {
+    "id": "azhe_06",
+    "title": "第六幕 · 星光落在谱架上",
+    "asset": "personal_azhe_06",
+    "memory": "cp7_azhe_06",
+    "source": "assets/chronicle/personal/source/03-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_06.webp",
+    "prompt": "docs/imagegen/personal/03-personal.txt"
+  },
+  {
+    "id": "azhe_06b",
+    "title": "第六幕 · 星光落在谱架上",
+    "asset": "personal_azhe_06b",
+    "memory": "cp7_azhe_06b",
+    "source": "assets/chronicle/personal/source/03-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_06b.webp",
+    "prompt": "docs/imagegen/personal/03-personal.txt"
+  },
+  {
+    "id": "azhe_06c",
+    "title": "第六幕 · 星光落在谱架上",
+    "asset": "personal_azhe_06c",
+    "memory": "cp7_azhe_06c",
+    "source": "assets/chronicle/personal/source/03-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_06c.webp",
+    "prompt": "docs/imagegen/personal/03-personal.txt"
+  },
+  {
+    "id": "azhe_06e",
+    "title": "第六幕 · 星光落在谱架上",
+    "asset": "personal_azhe_06e",
+    "memory": "cp7_azhe_06e",
+    "source": "assets/chronicle/personal/source/04-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_06e.webp",
+    "prompt": "docs/imagegen/personal/04-personal.txt",
+    "editPrompt": "docs/imagegen/personal/04-personal-fix.txt"
+  },
+  {
+    "id": "azhe_07",
+    "title": "第七幕 · 杭州的 offer",
+    "asset": "personal_azhe_07",
+    "memory": "cp7_azhe_07",
+    "source": "assets/chronicle/personal/source/04-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_07.webp",
+    "prompt": "docs/imagegen/personal/04-personal.txt",
+    "editPrompt": "docs/imagegen/personal/04-personal-fix.txt"
+  },
+  {
+    "id": "azhe_07b",
+    "title": "第七幕 · 杭州的 offer",
+    "asset": "personal_azhe_07b",
+    "memory": "cp7_azhe_07b",
+    "source": "assets/chronicle/personal/source/04-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_07b.webp",
+    "prompt": "docs/imagegen/personal/04-personal.txt",
+    "editPrompt": "docs/imagegen/personal/04-personal-fix.txt"
+  },
+  {
+    "id": "azhe_TE",
+    "title": "TE · 同行的方向",
+    "asset": "personal_azhe_TE",
+    "memory": "cp7_azhe_TE",
+    "source": "assets/chronicle/personal/source/04-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_TE.webp",
+    "prompt": "docs/imagegen/personal/04-personal.txt",
+    "editPrompt": "docs/imagegen/personal/04-personal-fix.txt"
+  },
+  {
+    "id": "azhe_08",
+    "title": "两年",
+    "asset": "personal_azhe_08",
+    "memory": "cp7_azhe_08",
+    "source": "assets/chronicle/personal/source/04-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_08.webp",
+    "prompt": "docs/imagegen/personal/04-personal.txt",
+    "editPrompt": "docs/imagegen/personal/04-personal-fix.txt"
+  },
+  {
+    "id": "azhe_HE",
+    "title": "HE · 星光落回剧场",
+    "asset": "personal_azhe_HE",
+    "memory": "cp7_azhe_HE",
+    "source": "assets/chronicle/personal/source/04-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_HE.webp",
+    "prompt": "docs/imagegen/personal/04-personal.txt",
+    "editPrompt": "docs/imagegen/personal/04-personal-fix.txt"
+  },
+  {
+    "id": "azhe_BE_note",
+    "title": "BE · 没翻的那页",
+    "asset": "personal_azhe_BE_note",
+    "memory": "cp7_azhe_BE_note",
+    "source": "assets/chronicle/personal/source/04-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_BE_note.webp",
+    "prompt": "docs/imagegen/personal/04-personal.txt",
+    "editPrompt": "docs/imagegen/personal/04-personal-fix.txt"
+  },
+  {
+    "id": "azhe_chat_food",
+    "title": "日常 · 巷子里的小店",
+    "asset": "personal_azhe_chat_food",
+    "memory": "cp7_azhe_chat_food",
+    "source": "assets/chronicle/personal/source/04-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/azhe_chat_food.webp",
+    "prompt": "docs/imagegen/personal/04-personal.txt",
+    "editPrompt": "docs/imagegen/personal/04-personal-fix.txt"
+  },
+  {
+    "id": "azhe_chat_care",
+    "title": "日常 · 他记得一切",
+    "asset": "personal_azhe_chat_care",
+    "memory": "cp7_azhe_chat_care",
+    "source": "assets/chronicle/personal/source/05-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_chat_care.webp",
+    "prompt": "docs/imagegen/personal/05-personal.txt"
+  },
+  {
+    "id": "azhe_chat_tape",
+    "title": "日常 · 直男礼物",
+    "asset": "personal_azhe_chat_tape",
+    "memory": "cp7_azhe_chat_tape",
+    "source": "assets/chronicle/personal/source/05-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_chat_tape.webp",
+    "prompt": "docs/imagegen/personal/05-personal.txt"
+  },
+  {
+    "id": "azhe_chat_duet",
+    "title": "日常 · 下次一起",
+    "asset": "personal_azhe_chat_duet",
+    "memory": "cp7_azhe_chat_duet",
+    "source": "assets/chronicle/personal/source/05-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_chat_duet.webp",
+    "prompt": "docs/imagegen/personal/05-personal.txt"
+  },
+  {
+    "id": "azhe_duet",
+    "title": "合奏 · 再来一遍",
+    "asset": "personal_azhe_duet",
+    "memory": "cp7_azhe_duet",
+    "source": "assets/chronicle/personal/source/05-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/azhe_duet.webp",
+    "prompt": "docs/imagegen/personal/05-personal.txt"
+  },
+  {
+    "id": "sy_act1",
+    "title": "活动 · 商场商演",
+    "asset": "personal_sy_act1",
+    "memory": "cp7_sy_act1",
+    "source": "assets/chronicle/personal/source/05-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_act1.webp",
+    "prompt": "docs/imagegen/personal/05-personal.txt"
+  },
+  {
+    "id": "sy_act2",
+    "title": "活动 · 小乐队排练",
+    "asset": "personal_sy_act2",
+    "memory": "cp7_sy_act2",
+    "source": "assets/chronicle/personal/source/05-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_act2.webp",
+    "prompt": "docs/imagegen/personal/05-personal.txt"
+  },
+  {
+    "id": "sy_act3",
+    "title": "活动 · 老乐手小聚",
+    "asset": "personal_sy_act3",
+    "memory": "cp7_sy_act3",
+    "source": "assets/chronicle/personal/source/05-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_act3.webp",
+    "prompt": "docs/imagegen/personal/05-personal.txt"
+  },
+  {
+    "id": "sy_01",
+    "title": "熟识 · 排练室的风波",
+    "asset": "personal_sy_01",
+    "memory": "cp7_sy_01",
+    "source": "assets/chronicle/personal/source/05-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_01.webp",
+    "prompt": "docs/imagegen/personal/05-personal.txt"
+  },
+  {
+    "id": "sy_01b",
+    "title": "熟识 · 排练室的风波",
+    "asset": "personal_sy_01b",
+    "memory": "cp7_sy_01b",
+    "source": "assets/chronicle/personal/source/06-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_01b.webp",
+    "prompt": "docs/imagegen/personal/06-personal.txt"
+  },
+  {
+    "id": "sy_01c",
+    "title": "熟识 · 排练室的风波",
+    "asset": "personal_sy_01c",
+    "memory": "cp7_sy_01c",
+    "source": "assets/chronicle/personal/source/06-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_01c.webp",
+    "prompt": "docs/imagegen/personal/06-personal.txt"
+  },
+  {
+    "id": "sy_rumor1",
+    "title": "风波 · 深夜的帖子",
+    "asset": "personal_sy_rumor1",
+    "memory": "cp7_sy_rumor1",
+    "source": "assets/chronicle/personal/source/06-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_rumor1.webp",
+    "prompt": "docs/imagegen/personal/06-personal.txt"
+  },
+  {
+    "id": "sy_r1b",
+    "title": "风波 · 深夜的帖子",
+    "asset": "personal_sy_r1b",
+    "memory": "cp7_sy_r1b",
+    "source": "assets/chronicle/personal/source/06-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_r1b.webp",
+    "prompt": "docs/imagegen/personal/06-personal.txt"
+  },
+  {
+    "id": "sy_r1c",
+    "title": "风波 · 深夜的帖子",
+    "asset": "personal_sy_r1c",
+    "memory": "cp7_sy_r1c",
+    "source": "assets/chronicle/personal/source/06-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_r1c.webp",
+    "prompt": "docs/imagegen/personal/06-personal.txt"
+  },
+  {
+    "id": "sy_r1d",
+    "title": "风波 · 深夜的帖子",
+    "asset": "personal_sy_r1d",
+    "memory": "cp7_sy_r1d",
+    "source": "assets/chronicle/personal/source/06-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_r1d.webp",
+    "prompt": "docs/imagegen/personal/06-personal.txt"
+  },
+  {
+    "id": "sy_heart",
+    "title": "初心 · 上台装一下",
+    "asset": "personal_sy_heart",
+    "memory": "cp7_sy_heart",
+    "source": "assets/chronicle/personal/source/06-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_heart.webp",
+    "prompt": "docs/imagegen/personal/06-personal.txt"
+  },
+  {
+    "id": "sy_heart_b",
+    "title": "初心 · 上台装一下",
+    "asset": "personal_sy_heart_b",
+    "memory": "cp7_sy_heart_b",
+    "source": "assets/chronicle/personal/source/06-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_heart_b.webp",
+    "prompt": "docs/imagegen/personal/06-personal.txt"
+  },
+  {
+    "id": "sy_heart_c",
+    "title": "初心 · 上台装一下",
+    "asset": "personal_sy_heart_c",
+    "memory": "cp7_sy_heart_c",
+    "source": "assets/chronicle/personal/source/07-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_heart_c.webp",
+    "prompt": "docs/imagegen/personal/07-personal.txt"
+  },
+  {
+    "id": "sy_03",
+    "title": "悸动 · 深夜的误拨",
+    "asset": "personal_sy_03",
+    "memory": "cp7_sy_03",
+    "source": "assets/chronicle/personal/source/07-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_03.webp",
+    "prompt": "docs/imagegen/personal/07-personal.txt"
+  },
+  {
+    "id": "sy_03no",
+    "title": "悸动 · 深夜的误拨",
+    "asset": "personal_sy_03no",
+    "memory": "cp7_sy_03no",
+    "source": "assets/chronicle/personal/source/07-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_03no.webp",
+    "prompt": "docs/imagegen/personal/07-personal.txt"
+  },
+  {
+    "id": "sy_04",
+    "title": "悸动 · 深夜的误拨",
+    "asset": "personal_sy_04",
+    "memory": "cp7_sy_04",
+    "source": "assets/chronicle/personal/source/07-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_04.webp",
+    "prompt": "docs/imagegen/personal/07-personal.txt"
+  },
+  {
+    "id": "sy_04a",
+    "title": "悸动 · 深夜的误拨",
+    "asset": "personal_sy_04a",
+    "memory": "cp7_sy_04a",
+    "source": "assets/chronicle/personal/source/07-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_04a.webp",
+    "prompt": "docs/imagegen/personal/07-personal.txt"
+  },
+  {
+    "id": "sy_04b",
+    "title": "悸动 · 深夜的误拨",
+    "asset": "personal_sy_04b",
+    "memory": "cp7_sy_04b",
+    "source": "assets/chronicle/personal/source/07-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_04b.webp",
+    "prompt": "docs/imagegen/personal/07-personal.txt"
+  },
+  {
+    "id": "sy_04c",
+    "title": "悸动 · 深夜的误拨",
+    "asset": "personal_sy_04c",
+    "memory": "cp7_sy_04c",
+    "source": "assets/chronicle/personal/source/07-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_04c.webp",
+    "prompt": "docs/imagegen/personal/07-personal.txt"
+  },
+  {
+    "id": "sy_04c_ok",
+    "title": "悸动 · 深夜的误拨",
+    "asset": "personal_sy_04c_ok",
+    "memory": "cp7_sy_04c_ok",
+    "source": "assets/chronicle/personal/source/07-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_04c_ok.webp",
+    "prompt": "docs/imagegen/personal/07-personal.txt"
+  },
+  {
+    "id": "sy_04c_ye",
+    "title": "悸动 · 深夜的误拨",
+    "asset": "personal_sy_04c_ye",
+    "memory": "cp7_sy_04c_ye",
+    "source": "assets/chronicle/personal/source/08-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_04c_ye.webp",
+    "prompt": "docs/imagegen/personal/08-personal.txt"
+  },
+  {
+    "id": "sy_04c_ye2",
+    "title": "悸动 · 深夜的误拨",
+    "asset": "personal_sy_04c_ye2",
+    "memory": "cp7_sy_04c_ye2",
+    "source": "assets/chronicle/personal/source/08-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_04c_ye2.webp",
+    "prompt": "docs/imagegen/personal/08-personal.txt"
+  },
+  {
+    "id": "sy_m1",
+    "title": "心动 · 琴房里睡着的人",
+    "asset": "personal_sy_m1",
+    "memory": "cp7_sy_m1",
+    "source": "assets/chronicle/personal/source/08-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_m1.webp",
+    "prompt": "docs/imagegen/personal/08-personal.txt"
+  },
+  {
+    "id": "sy_05",
+    "title": "那通电话之后",
+    "asset": "personal_sy_05",
+    "memory": "cp7_sy_05",
+    "source": "assets/chronicle/personal/source/08-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_05.webp",
+    "prompt": "docs/imagegen/personal/08-personal.txt"
+  },
+  {
+    "id": "sy_05b",
+    "title": "那通电话之后",
+    "asset": "personal_sy_05b",
+    "memory": "cp7_sy_05b",
+    "source": "assets/chronicle/personal/source/08-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_05b.webp",
+    "prompt": "docs/imagegen/personal/08-personal.txt"
+  },
+  {
+    "id": "sy_05c",
+    "title": "那通电话之后",
+    "asset": "personal_sy_05c",
+    "memory": "cp7_sy_05c",
+    "source": "assets/chronicle/personal/source/08-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_05c.webp",
+    "prompt": "docs/imagegen/personal/08-personal.txt"
+  },
+  {
+    "id": "sy_wx",
+    "title": "心动 · 被围住的光源",
+    "asset": "personal_sy_wx",
+    "memory": "cp7_sy_wx",
+    "source": "assets/chronicle/personal/source/08-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_wx.webp",
+    "prompt": "docs/imagegen/personal/08-personal.txt"
+  },
+  {
+    "id": "sy_wx_b",
+    "title": "心动 · 被围住的光源",
+    "asset": "personal_sy_wx_b",
+    "memory": "cp7_sy_wx_b",
+    "source": "assets/chronicle/personal/source/08-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_wx_b.webp",
+    "prompt": "docs/imagegen/personal/08-personal.txt"
+  },
+  {
+    "id": "sy_wx_c",
+    "title": "心动 · 被围住的光源",
+    "asset": "personal_sy_wx_c",
+    "memory": "cp7_sy_wx_c",
+    "source": "assets/chronicle/personal/source/09-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_wx_c.webp",
+    "prompt": "docs/imagegen/personal/09-personal.txt"
+  },
+  {
+    "id": "sy_06",
+    "title": "周末的邀约",
+    "asset": "personal_sy_06",
+    "memory": "cp7_sy_06",
+    "source": "assets/chronicle/personal/source/09-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_06.webp",
+    "prompt": "docs/imagegen/personal/09-personal.txt"
+  },
+  {
+    "id": "sy_07",
+    "title": "约会 · 游乐场",
+    "asset": "personal_sy_07",
+    "memory": "cp7_sy_07",
+    "source": "assets/chronicle/personal/source/09-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_07.webp",
+    "prompt": "docs/imagegen/personal/09-personal.txt"
+  },
+  {
+    "id": "sy_08",
+    "title": "约会 · 山丘酒吧",
+    "asset": "personal_sy_08",
+    "memory": "cp7_sy_08",
+    "source": "assets/chronicle/personal/source/09-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_08.webp",
+    "prompt": "docs/imagegen/personal/09-personal.txt"
+  },
+  {
+    "id": "sy_09",
+    "title": "约会 · 音乐节",
+    "asset": "personal_sy_09",
+    "memory": "cp7_sy_09",
+    "source": "assets/chronicle/personal/source/09-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_09.webp",
+    "prompt": "docs/imagegen/personal/09-personal.txt"
+  },
+  {
+    "id": "sy_06done",
+    "title": "约会 · 音乐节",
+    "asset": "personal_sy_06done",
+    "memory": "cp7_sy_06done",
+    "source": "assets/chronicle/personal/source/09-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_06done.webp",
+    "prompt": "docs/imagegen/personal/09-personal.txt"
+  },
+  {
+    "id": "sy_pd",
+    "title": "拼豆 · 一只鹅",
+    "asset": "personal_sy_pd",
+    "memory": "cp7_sy_pd",
+    "source": "assets/chronicle/personal/source/09-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_pd.webp",
+    "prompt": "docs/imagegen/personal/09-personal.txt"
+  },
+  {
+    "id": "sy_pd_b",
+    "title": "拼豆 · 一只鹅",
+    "asset": "personal_sy_pd_b",
+    "memory": "cp7_sy_pd_b",
+    "source": "assets/chronicle/personal/source/09-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_pd_b.webp",
+    "prompt": "docs/imagegen/personal/09-personal.txt"
+  },
+  {
+    "id": "sy_pd_c",
+    "title": "拼豆 · 一只鹅",
+    "asset": "personal_sy_pd_c",
+    "memory": "cp7_sy_pd_c",
+    "source": "assets/chronicle/personal/source/10-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_pd_c.webp",
+    "prompt": "docs/imagegen/personal/10-personal.txt"
+  },
+  {
+    "id": "sy_rumor2",
+    "title": "疏远 · 那句话",
+    "asset": "personal_sy_rumor2",
+    "memory": "cp7_sy_rumor2",
+    "source": "assets/chronicle/personal/source/10-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_rumor2.webp",
+    "prompt": "docs/imagegen/personal/10-personal.txt"
+  },
+  {
+    "id": "sy_r2b",
+    "title": "疏远 · 那句话",
+    "asset": "personal_sy_r2b",
+    "memory": "cp7_sy_r2b",
+    "source": "assets/chronicle/personal/source/10-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_r2b.webp",
+    "prompt": "docs/imagegen/personal/10-personal.txt"
+  },
+  {
+    "id": "sy_r2c",
+    "title": "疏远 · 那句话",
+    "asset": "personal_sy_r2c",
+    "memory": "cp7_sy_r2c",
+    "source": "assets/chronicle/personal/source/10-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_r2c.webp",
+    "prompt": "docs/imagegen/personal/10-personal.txt"
+  },
+  {
+    "id": "sy_r2d",
+    "title": "疏远 · 那句话",
+    "asset": "personal_sy_r2d",
+    "memory": "cp7_sy_r2d",
+    "source": "assets/chronicle/personal/source/10-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_r2d.webp",
+    "prompt": "docs/imagegen/personal/10-personal.txt"
+  },
+  {
+    "id": "sy_rumor3",
+    "title": "回潮 · 源头沉在水底",
+    "asset": "personal_sy_rumor3",
+    "memory": "cp7_sy_rumor3",
+    "source": "assets/chronicle/personal/source/10-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_rumor3.webp",
+    "prompt": "docs/imagegen/personal/10-personal.txt"
+  },
+  {
+    "id": "sy_exam",
+    "title": "星海 · 一个大胆的想法",
+    "asset": "personal_sy_exam",
+    "memory": "cp7_sy_exam",
+    "source": "assets/chronicle/personal/source/10-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_exam.webp",
+    "prompt": "docs/imagegen/personal/10-personal.txt"
+  },
+  {
+    "id": "sy_exam_no",
+    "title": "星海 · 一个大胆的想法",
+    "asset": "personal_sy_exam_no",
+    "memory": "cp7_sy_exam_no",
+    "source": "assets/chronicle/personal/source/10-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_exam_no.webp",
+    "prompt": "docs/imagegen/personal/10-personal.txt"
+  },
+  {
+    "id": "sy_q1",
+    "title": "复习 · 第一题",
+    "asset": "personal_sy_q1",
+    "memory": "cp7_sy_q1",
+    "source": "assets/chronicle/personal/source/11-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_q1.webp",
+    "prompt": "docs/imagegen/personal/11-personal.txt"
+  },
+  {
+    "id": "sy_i1",
+    "title": "捣乱 · 贝斯没有暂停键",
+    "asset": "personal_sy_i1",
+    "memory": "cp7_sy_i1",
+    "source": "assets/chronicle/personal/source/11-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_i1.webp",
+    "prompt": "docs/imagegen/personal/11-personal.txt"
+  },
+  {
+    "id": "sy_q2",
+    "title": "复习 · 第二题",
+    "asset": "personal_sy_q2",
+    "memory": "cp7_sy_q2",
+    "source": "assets/chronicle/personal/source/11-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_q2.webp",
+    "prompt": "docs/imagegen/personal/11-personal.txt"
+  },
+  {
+    "id": "sy_i2",
+    "title": "乱入 · V我50",
+    "asset": "personal_sy_i2",
+    "memory": "cp7_sy_i2",
+    "source": "assets/chronicle/personal/source/11-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_i2.webp",
+    "prompt": "docs/imagegen/personal/11-personal.txt"
+  },
+  {
+    "id": "sy_q3",
+    "title": "复习 · 第三题",
+    "asset": "personal_sy_q3",
+    "memory": "cp7_sy_q3",
+    "source": "assets/chronicle/personal/source/11-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_q3.webp",
+    "prompt": "docs/imagegen/personal/11-personal.txt"
+  },
+  {
+    "id": "sy_i3",
+    "title": "山丘三宝 · 探班",
+    "asset": "personal_sy_i3",
+    "memory": "cp7_sy_i3",
+    "source": "assets/chronicle/personal/source/11-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_i3.webp",
+    "prompt": "docs/imagegen/personal/11-personal.txt"
+  },
+  {
+    "id": "sy_qdone",
+    "title": "星海 · 放榜",
+    "asset": "personal_sy_qdone",
+    "memory": "cp7_sy_qdone",
+    "source": "assets/chronicle/personal/source/11-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_qdone.webp",
+    "prompt": "docs/imagegen/personal/11-personal.txt"
+  },
+  {
+    "id": "sy_career",
+    "title": "事业 · 一个创业机会",
+    "asset": "personal_sy_career",
+    "memory": "cp7_sy_career",
+    "source": "assets/chronicle/personal/source/11-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_career.webp",
+    "prompt": "docs/imagegen/personal/11-personal.txt"
+  },
+  {
+    "id": "sy_career_b",
+    "title": "事业 · 一个创业机会",
+    "asset": "personal_sy_career_b",
+    "memory": "cp7_sy_career_b",
+    "source": "assets/chronicle/personal/source/12-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_career_b.webp",
+    "prompt": "docs/imagegen/personal/12-personal.txt",
+    "editPrompt": "docs/imagegen/personal/12-personal-fix.txt"
+  },
+  {
+    "id": "sy_career_no",
+    "title": "事业 · 一个创业机会",
+    "asset": "personal_sy_career_no",
+    "memory": "cp7_sy_career_no",
+    "source": "assets/chronicle/personal/source/12-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_career_no.webp",
+    "prompt": "docs/imagegen/personal/12-personal.txt",
+    "editPrompt": "docs/imagegen/personal/12-personal-fix.txt"
+  },
+  {
+    "id": "sy_juggle",
+    "title": "心事 · 两杯奶茶",
+    "asset": "personal_sy_juggle",
+    "memory": "cp7_sy_juggle",
+    "source": "assets/chronicle/personal/source/12-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_juggle.webp",
+    "prompt": "docs/imagegen/personal/12-personal.txt",
+    "editPrompt": "docs/imagegen/personal/12-personal-fix.txt"
+  },
+  {
+    "id": "sy_10",
+    "title": "表白前夜",
+    "asset": "personal_sy_10",
+    "memory": "cp7_sy_10",
+    "source": "assets/chronicle/personal/source/12-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_10.webp",
+    "prompt": "docs/imagegen/personal/12-personal.txt",
+    "editPrompt": "docs/imagegen/personal/12-personal-fix.txt"
+  },
+  {
+    "id": "sy_10wait",
+    "title": "TE · 没说出口",
+    "asset": "personal_sy_10wait",
+    "memory": "cp7_sy_10wait",
+    "source": "assets/chronicle/personal/source/12-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_10wait.webp",
+    "prompt": "docs/imagegen/personal/12-personal.txt",
+    "editPrompt": "docs/imagegen/personal/12-personal-fix.txt"
+  },
+  {
+    "id": "sy_HE",
+    "title": "HE · 光源向你",
+    "asset": "personal_sy_HE",
+    "memory": "cp7_sy_HE",
+    "source": "assets/chronicle/personal/source/12-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_HE.webp",
+    "prompt": "docs/imagegen/personal/12-personal.txt",
+    "editPrompt": "docs/imagegen/personal/12-personal-fix.txt"
+  },
+  {
+    "id": "sy_TE",
+    "title": "TE · 团长与乐团",
+    "asset": "personal_sy_TE",
+    "memory": "cp7_sy_TE",
+    "source": "assets/chronicle/personal/source/12-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_TE.webp",
+    "prompt": "docs/imagegen/personal/12-personal.txt",
+    "editPrompt": "docs/imagegen/personal/12-personal-fix.txt"
+  },
+  {
+    "id": "sy_BE_ge",
+    "title": "BE · 传出去的话",
+    "asset": "personal_sy_BE_ge",
+    "memory": "cp7_sy_BE_ge",
+    "source": "assets/chronicle/personal/source/12-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_BE_ge.webp",
+    "prompt": "docs/imagegen/personal/12-personal.txt",
+    "editPrompt": "docs/imagegen/personal/12-personal-fix.txt"
+  },
+  {
+    "id": "sy_TE2",
+    "title": "TE · 双城",
+    "asset": "personal_sy_TE2",
+    "memory": "cp7_sy_TE2",
+    "source": "assets/chronicle/personal/source/13-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_TE2.webp",
+    "prompt": "docs/imagegen/personal/13-personal.txt"
+  },
+  {
+    "id": "sy_BE",
+    "title": "BE · 最棒的团员",
+    "asset": "personal_sy_BE",
+    "memory": "cp7_sy_BE",
+    "source": "assets/chronicle/personal/source/13-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_BE.webp",
+    "prompt": "docs/imagegen/personal/13-personal.txt"
+  },
+  {
+    "id": "sy_q1_ok",
+    "title": "复习 · 第1题讲解",
+    "asset": "personal_sy_q1_ok",
+    "memory": "cp7_sy_q1_ok",
+    "source": "assets/chronicle/personal/source/13-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_q1_ok.webp",
+    "prompt": "docs/imagegen/personal/13-personal.txt"
+  },
+  {
+    "id": "sy_q1_bad",
+    "title": "复习 · 第1题讲解",
+    "asset": "personal_sy_q1_bad",
+    "memory": "cp7_sy_q1_bad",
+    "source": "assets/chronicle/personal/source/13-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_q1_bad.webp",
+    "prompt": "docs/imagegen/personal/13-personal.txt"
+  },
+  {
+    "id": "sy_q2_ok",
+    "title": "复习 · 第2题讲解",
+    "asset": "personal_sy_q2_ok",
+    "memory": "cp7_sy_q2_ok",
+    "source": "assets/chronicle/personal/source/13-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_q2_ok.webp",
+    "prompt": "docs/imagegen/personal/13-personal.txt"
+  },
+  {
+    "id": "sy_q2_bad",
+    "title": "复习 · 第2题讲解",
+    "asset": "personal_sy_q2_bad",
+    "memory": "cp7_sy_q2_bad",
+    "source": "assets/chronicle/personal/source/13-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_q2_bad.webp",
+    "prompt": "docs/imagegen/personal/13-personal.txt"
+  },
+  {
+    "id": "sy_q3_ok",
+    "title": "复习 · 第3题讲解",
+    "asset": "personal_sy_q3_ok",
+    "memory": "cp7_sy_q3_ok",
+    "source": "assets/chronicle/personal/source/13-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_q3_ok.webp",
+    "prompt": "docs/imagegen/personal/13-personal.txt"
+  },
+  {
+    "id": "sy_q3_bad",
+    "title": "复习 · 第3题讲解",
+    "asset": "personal_sy_q3_bad",
+    "memory": "cp7_sy_q3_bad",
+    "source": "assets/chronicle/personal/source/13-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/sy_q3_bad.webp",
+    "prompt": "docs/imagegen/personal/13-personal.txt"
+  },
+  {
+    "id": "sy_reply",
+    "title": "动态 · 一起向前冲",
+    "asset": "personal_sy_reply",
+    "memory": "cp7_sy_reply",
+    "source": "assets/chronicle/personal/source/14-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/sy_reply.webp",
+    "prompt": "docs/imagegen/personal/14-personal.txt"
+  }
+]

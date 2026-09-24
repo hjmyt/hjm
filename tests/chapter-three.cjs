@@ -11,7 +11,8 @@ const assert=require('node:assert/strict');
   const out=[],check=(name,ok)=>{if(!ok)throw Error(name+' (scene '+state.chronicle.run.scene+')');out.push(name);};
   const click=async selector=>{await new Promise(r=>setTimeout(r,215));const b=document.querySelector(selector);if(!b||b.disabled)throw Error('Unavailable '+selector);b.click();};
   const choose=n=>click(`[data-cp-choice="${n}"]`);
-  const nextStory=async()=>{await click('[data-cp-action="end-week"]');};
+  // Front scenes are continuous; skip training-only weeks when testing late-story content.
+  const nextStory=async()=>{while(state.chronicle.run.scene==='menu'&&state.chronicle.run.week<6)await click('[data-cp-action="end-week"]');};
   const reset=()=>{closeModal(false);state=freshState();state.sound=false;save();route('home');};
   const scene=(ch,id,flags={},aff={})=>{reset();state.chronicle.completedChapters=Array.from({length:ch-1},(_,i)=>i+1);Object.assign(state.chronicle.run,{chapter:ch,ch,name:'测试',inst:'小提琴',scene:id,week:id==='menu'?1:6,weekly:{version:1,done:[1,2,3,4,5],active:0,side:[],recaps:{},approach:null},flags:{...(ch===3?{c3Met:1}:{}),...flags},aff:{...state.chronicle.run.aff,...aff}});save();route('chronicle');};
   reset();route('chronicle');check('Six chapter entrances',document.querySelectorAll('.cp-chapter-tile').length===6);

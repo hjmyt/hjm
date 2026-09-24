@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：黑发黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：浅发宽松浅色衬衫男性主唱。REK：黑发成年男性贝斯手。飞鸿：蓝灰衬衫男主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (sy_q1, do not write ID): （咬着笔杆：）「第一题我就不确定……下列拍号里，哪一个是复拍子呀？」
+
+PANEL 2 (sy_i1, do not write ID): 复习到一半，琴房的门被撞开——REK 抱着贝斯冲了进来，二话不说开始疯狂 slap，说是给十元「来点贝斯助助兴」。 十元头也不抬，拎着后领把他拖出了琴房。走廊里还回荡着 REK 的抗议：「节奏！学音乐需要节奏！」 你和十元对视一眼，同时笑出了声。紧绷了一晚上的空气，松了一秒。
+
+PANEL 3 (sy_q2, do not write ID): （对着乐理卷苦思冥想：）「C 大调的Ⅰ级三和弦，是由哪三个音构成的来着？」
+
+PANEL 4 (sy_i2, do not write ID): 宝石突然从门后探出半个脑袋围观。十元头也不抬：「宝石，V 我 50——帮我占卜一下考试运。」 宝石盯着自己的手机看了三秒，肉痛地转了 25 块：「……V 你 25。铁公鸡，也要讲基本法。」 钱还没捂热，他转身就跑，跑之前还顺走了你的半包饼干。十元对着他的背影喊：「25 的卦象也算数吗！」
+
+PANEL 5 (sy_q3, do not write ID): （对着和声题皱眉：）「和弦连接的时候，共同音保持不动的连接法，叫什么来着？」
+
+PANEL 6 (sy_i3, do not write ID): 复习的第三个晚上，琴房热闹了起来：雪子拎着奶茶来探班，飞鸿来喊宝石对歌，REK 把贝斯搬回来说是「补上次那场演出」。 十元被挤在谱架前继续背题，雪子把吸管插好递到她嘴边，宝石和飞鸿为一小节和声争得面红耳赤。你看着这一屋子人，忽然觉得——她想要的乐团，大概就是这个样子。 散场后，十元悄悄拉住你：「等考完，我请你们所有人吃饭。……第一个请。」
+
+PANEL 7 (sy_qdone, do not write ID): 考试那天，十元穿着你陪她挑的白衬衫，紧张得手心冒汗。进考场前，她忽然转身抱住你，飞快地说：「考完请我吃奶茶！」 放榜那天，她的名字挂在录取名单上。她举着手机从楼道里冲出来，在楼下大喊你的名字，喊得整栋楼都听见了。
+
+PANEL 8 (sy_career, do not write ID): 星海复习期间，一个演出上认识的制作人找上了你。他想做一家「乐手经纪＋演出策划」工作室，开口第一句话就是：「你有乐团的资源和人脉，我有渠道。合伙干不干？」 工作室的执照、场地方案、第一年的企划书，就摆在你面前。你知道接下它意味着什么——白天跑场地、谈合作、写方案；而晚上，还有一个人的乐理题在等你。 你也知道，做得好，它能给某个考进星海的人，铺一条回深圳的路。

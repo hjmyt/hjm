@@ -6,9 +6,11 @@ const { pathToFileURL } = require('node:url');
 const { createHash } = require('node:crypto');
 const root = path.resolve(__dirname, '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'docs/imagegen/chronicle/art.json')));
-assert.equal(manifest.length, 43);
-assert.equal(new Set(manifest.map(a => a.id)).size, 43);
-assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSync(path.join(root, a.asset))).digest('hex'))).size, 43);
+const plan = JSON.parse(fs.readFileSync(path.join(root, 'docs/imagegen/chronicle/plan.json')));
+const expectedCount = new Set(plan.flatMap(g => g.scenes.map(s => s.id))).size;
+assert.equal(manifest.length, expectedCount);
+assert.equal(new Set(manifest.map(a => a.id)).size, expectedCount);
+assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSync(path.join(root, a.asset))).digest('hex'))).size, expectedCount);
 
 (async () => {
   const browser = await chromium.launch({ headless: true, ...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE } : {}) });
@@ -36,20 +38,20 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
       check('Read scene opens same album image', document.querySelector('.photo-frame img').getAttribute('src') === src);
       closeModal();
       r.scene = 's_conflict'; r.level = 1; r.rev++; renderGlobal();
-      check('No dispute art for incidental meeting', !document.querySelector('.cp-novel-art') && !state.memories.includes('scene_1_s_conflict'));
+      check('No dispute art for incidental meeting', state.memories.includes('scene_1_s_conflict_meeting') && !state.memories.includes('scene_1_s_conflict'));
       r.level = 2; r.rev++; renderGlobal();
       check('Actual dispute gets its own art', state.memories.includes('scene_1_s_conflict'));
       r.scene = 'b_live'; r.tech = 0; r.rev++; renderGlobal();
-      check('Unready stage does not show prepared performance', !document.querySelector('.cp-novel-art'));
+      check('Unready stage has its own preparation art', state.memories.includes('scene_1_b_live_unready') && !state.memories.includes('scene_1_b_live'));
       r.scene = 'after_practice'; r.battle = {win: false}; r.rev++; renderGlobal();
       check('Failure scene only unlocks failure image', state.memories.includes('scene_1_after_practice_fail') && !state.memories.includes('scene_1_after_practice_win'));
       r.battle.win = true; r.rev++; renderGlobal();
       check('Success gets separate illustration', state.memories.includes('scene_1_after_practice_win'));
       check('Success keeps both speaker turns', document.querySelectorAll('#cpStoryText [data-speaker]').length === 2);
       r.chapter = 2; r.scene = 'after_practice'; r.rev++; renderGlobal();
-      check('Same scene name in other chapter does not reuse art', !document.querySelector('.cp-novel-art'));
+      check('Same scene name in other chapter has its own art', chronicleSceneArt(r)?.id === 'scene_2_after_practice');
       r.chapter = 5; r.scene = 'c5_intro'; state.affinity.shiyuan = 0; r.rev++; renderGlobal();
-      check('Early ending has no later rival spoiler', !state.memories.includes('scene_5_c5_intro') && !document.querySelector('.cp-novel-art'));
+      check('Early ending has no later rival spoiler', !state.memories.includes('scene_5_c5_intro') && state.memories.includes('scene_5_c5_intro_wind'));
       const old = freshState();
       Object.assign(old.chronicle.run, {name:'旧档',inst:'弦乐',scene:'menu',week:6,journal:[
         {chapter:1,week:1,scene:'s_room',who:'lala',text:'来得正好',choice:null},
@@ -63,10 +65,18 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
       for (const art of CHRONICLE_ART) {
         state = freshState(); state.sound = false;
         Object.assign(state.chronicle.run, {chapter:art.chapter,scene:art.scene,name:'布局测试',inst:'弦乐',level:5,tech:40,battle:{win:art.condition!=='practiceFail'}});
-        state.affinity.shiyuan = 85;
+        state.affinity.shiyuan = art.condition === 'summerUnready' ? 0 : 85;
+        state.affinity.zhu = 12;
+        state.chronicle.chapterEndings = {1:['debut'],2:['c2_dual'],3:['c3_he'],4:['c4_he']};
+        if (art.condition === 'incidentalMeeting') state.chronicle.run.level = 1;
+        if (art.condition === 'performanceUnready') state.chronicle.run.tech = 0;
+        if (art.condition === 'openingIncomplete') state.affinity.zhu = 0;
+        if (art.condition === 'konggeStays') state.chronicle.run.flags.konggeStay = 1;
+        if (art.condition === 'approachSecond') state.chronicle.run.weekly.approach = 1;
         Chronicle.syncBonds(state.chronicle, state.affinity); route('chronicle');
         check('Artwork reachable ' + art.id, document.querySelector('.cp-novel-art img')?.getAttribute('src') === ASSETS[art.asset]);
         check('Artwork collected ' + art.id, memoryVisible(art.id));
+        check('Unvisited alternatives remain locked ' + art.id, CHRONICLE_ART.filter(a => a.id !== art.id && a.chapter === art.chapter && a.scene === art.scene).every(a => !memoryVisible(a.id)));
       }
       // Save/reload uses the normal storage path, with a future illustration still locked.
       state = freshState(); state.sound = false;
@@ -78,11 +88,11 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
     assert(await page.evaluate(() => state.memories.includes('scene_1_s_room') && !state.memories.includes('scene_1_gig')));
     for (const width of [390, 768, 1440, 2356]) {
       await page.setViewportSize({ width, height: 1100 });
-      for (const scene of ['s_room', 'gig', 'emo', 'zhu_offer', 'practice_partner', 'c6_warn']) {
+      for (const scene of ['s_room', 'gig', 'emo', 'zhu_offer', 'practice_partner', 'c6_warn', 'c2_bar']) {
         await page.evaluate(scene => {
           closeModal(); state.sound = false;
           const r = state.chronicle.run;
-          Object.assign(r, {chapter:scene==='c6_warn'?6:1,scene,level:5,tech:30});
+          Object.assign(r, {chapter:scene==='c6_warn'?6:scene==='c2_bar'?2:1,scene,level:5,tech:30});
           r.rev++; route('chronicle');
         }, scene);
         const layout = await page.evaluate(async () => {
@@ -97,12 +107,12 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
         assert(layout.imageWidth <= 301 && layout.imageHeight <= 251, `${scene} image too large at ${width}: ${JSON.stringify(layout)}`);
         assert(layout.gap <= 25, `${scene} excessive gap before choices`);
         assert(layout.sidebarClosed);
-        if ((width === 1440 || width === 390) && ['s_room', 'zhu_offer', 'c6_warn'].includes(scene))
+        if ((width === 1440 || width === 390) && ['s_room', 'zhu_offer', 'c6_warn', 'c2_bar'].includes(scene))
           await page.locator('.cp-novel').screenshot({path:`/tmp/hjm-reader-${scene}-${width}.png`});
       }
     }
     assert.deepEqual(errors, []);
     assert.deepEqual(failures, []);
-    console.log(`PASS: ${count} scene/migration/unlock checks; 43 unique illustrations; 24 responsive reader fixtures; reload, album link and branch guards.`);
+    console.log(`PASS: ${count} scene/migration/unlock checks; ${expectedCount} unique illustrations; 28 responsive reader fixtures; reload, album link and branch guards.`);
   } finally { await browser.close(); }
 })().catch(e => { console.error(e); process.exitCode = 1; });

@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：黑发黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：浅发宽松浅色衬衫男性主唱。REK：黑发成年男性贝斯手。飞鸿：蓝灰衬衫男主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (azhe_01, do not write ID): 路演前两小时，你路过琴房，听见水声。 阿喆站在洗手台前，面前摆着五个塑料盒。他一颗一颗洗着葡萄和圣女果，洗得极认真，像在擦自己的琴。听到脚步声，他慌忙把盒子往包里塞：「啊、你怎么来了。」
+
+PANEL 2 (azhe_01b, do not write ID): 他愣了一下，往旁边让了让：「……水有点凉。」你们并肩洗完了五盒水果。他没说给谁，你也没问。但走的时候，他把最满的那盒塞给了你：「这盒甜。」
+
+PANEL 3 (azhe_01c, do not write ID): 「给、给大家啊。」他眼神飘了一下，「路演那么累，补充点维生素。」 他包装上精心贴的小标签还没撕，上面写着「已清洗，可直接食用」。
+
+PANEL 4 (azhe_01d, do not write ID): 你退了出去。门关上前，你看见他对着那几盒水果笑了笑，像对着什么珍宝。那天路演，你在休息区看到了一模一样的盒子，包装上贴着「已清洗，可直接食用」。
+
+PANEL 5 (azhe_02, do not write ID): 路演休息区，那几盒水果被摆在最显眼的位置。小塔抓了一把：「这次商场挺大方啊，还配水果。」 TIM 搂着阿喆的肩走过来：「好兄弟！你也来路演现场了？正好正好，多吃点！」阿喆的笑僵了半秒，又恢复如常：「嗯，大家吃。」没人看见他指尖上还沾着没擦干的水。
+
+PANEL 6 (azhe_02b, do not write ID): 全场安静了一秒。小塔举着葡萄的手停在半空：「……啊？那你早说啊！」TIM 大笑：「可以啊兄弟，贤惠！」只有你看见了——阿喆低头擦琴的时候，耳朵尖红透了，嘴角压都压不下去。
+
+PANEL 7 (azhe_02c, do not write ID): 阿喆接过水，指尖碰到了你的指尖。他小声说：「……谢谢。」顿了顿又说，「你看到了吧，刚才。洗水果的事。」你没承认也没否认。他笑了笑：「没关系。他们吃得开心就行。」
+
+PANEL 8 (azhe_02d, do not write ID): 那天散场后，你看见阿喆一个人把空盒子都收走了。走在他后面的两个乐手在嘀咕：「阿喆又来路演蹭吃蹭喝，一场不演，吃得倒不少。」他的背影顿了顿，没有回头。

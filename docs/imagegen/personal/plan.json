@@ -1,0 +1,702 @@
+[
+  {
+    "batch": "01-personal",
+    "scenes": [
+      {
+        "id": "azhe_01",
+        "title": "第一幕 · 琴房的流水声",
+        "asset": "personal_azhe_01",
+        "memory": "cp7_azhe_01"
+      },
+      {
+        "id": "azhe_01b",
+        "title": "第一幕 · 琴房的流水声",
+        "asset": "personal_azhe_01b",
+        "memory": "cp7_azhe_01b"
+      },
+      {
+        "id": "azhe_01c",
+        "title": "第一幕 · 琴房的流水声",
+        "asset": "personal_azhe_01c",
+        "memory": "cp7_azhe_01c"
+      },
+      {
+        "id": "azhe_01d",
+        "title": "第一幕 · 琴房的流水声",
+        "asset": "personal_azhe_01d",
+        "memory": "cp7_azhe_01d"
+      },
+      {
+        "id": "azhe_02",
+        "title": "第二幕 · 「商场送的吧」",
+        "asset": "personal_azhe_02",
+        "memory": "cp7_azhe_02"
+      },
+      {
+        "id": "azhe_02b",
+        "title": "第二幕 · 「商场送的吧」",
+        "asset": "personal_azhe_02b",
+        "memory": "cp7_azhe_02b"
+      },
+      {
+        "id": "azhe_02c",
+        "title": "第二幕 · 「商场送的吧」",
+        "asset": "personal_azhe_02c",
+        "memory": "cp7_azhe_02c"
+      },
+      {
+        "id": "azhe_02d",
+        "title": "第二幕 · 「商场送的吧」",
+        "asset": "personal_azhe_02d",
+        "memory": "cp7_azhe_02d"
+      }
+    ]
+  },
+  {
+    "batch": "02-personal",
+    "scenes": [
+      {
+        "id": "azhe_03",
+        "title": "第三幕 · 蹭吃的人",
+        "asset": "personal_azhe_03",
+        "memory": "cp7_azhe_03"
+      },
+      {
+        "id": "azhe_03b",
+        "title": "第三幕 · 蹭吃的人",
+        "asset": "personal_azhe_03b",
+        "memory": "cp7_azhe_03b"
+      },
+      {
+        "id": "azhe_03c",
+        "title": "第三幕 · 蹭吃的人",
+        "asset": "personal_azhe_03c",
+        "memory": "cp7_azhe_03c"
+      },
+      {
+        "id": "azhe_03d",
+        "title": "第三幕 · 蹭吃的人",
+        "asset": "personal_azhe_03d",
+        "memory": "cp7_azhe_03d"
+      },
+      {
+        "id": "azhe_04",
+        "title": "第四幕 · 没有名字的曲子",
+        "asset": "personal_azhe_04",
+        "memory": "cp7_azhe_04"
+      },
+      {
+        "id": "azhe_04b",
+        "title": "第四幕 · 没有名字的曲子",
+        "asset": "personal_azhe_04b",
+        "memory": "cp7_azhe_04b"
+      },
+      {
+        "id": "azhe_04c",
+        "title": "第四幕 · 没有名字的曲子",
+        "asset": "personal_azhe_04c",
+        "memory": "cp7_azhe_04c"
+      },
+      {
+        "id": "azhe_04d",
+        "title": "第四幕 · 没有名字的曲子",
+        "asset": "personal_azhe_04d",
+        "memory": "cp7_azhe_04d"
+      }
+    ]
+  },
+  {
+    "batch": "03-personal",
+    "scenes": [
+      {
+        "id": "azhe_04e",
+        "title": "第四幕 · 没有名字的曲子",
+        "asset": "personal_azhe_04e",
+        "memory": "cp7_azhe_04e"
+      },
+      {
+        "id": "azhe_05",
+        "title": "第五幕 · 「好兄弟」",
+        "asset": "personal_azhe_05",
+        "memory": "cp7_azhe_05"
+      },
+      {
+        "id": "azhe_05b",
+        "title": "第五幕 · 「好兄弟」",
+        "asset": "personal_azhe_05b",
+        "memory": "cp7_azhe_05b"
+      },
+      {
+        "id": "azhe_05c",
+        "title": "第五幕 · 「好兄弟」",
+        "asset": "personal_azhe_05c",
+        "memory": "cp7_azhe_05c"
+      },
+      {
+        "id": "azhe_05d",
+        "title": "第五幕 · 「好兄弟」",
+        "asset": "personal_azhe_05d",
+        "memory": "cp7_azhe_05d"
+      },
+      {
+        "id": "azhe_06",
+        "title": "第六幕 · 星光落在谱架上",
+        "asset": "personal_azhe_06",
+        "memory": "cp7_azhe_06"
+      },
+      {
+        "id": "azhe_06b",
+        "title": "第六幕 · 星光落在谱架上",
+        "asset": "personal_azhe_06b",
+        "memory": "cp7_azhe_06b"
+      },
+      {
+        "id": "azhe_06c",
+        "title": "第六幕 · 星光落在谱架上",
+        "asset": "personal_azhe_06c",
+        "memory": "cp7_azhe_06c"
+      }
+    ]
+  },
+  {
+    "batch": "04-personal",
+    "scenes": [
+      {
+        "id": "azhe_06e",
+        "title": "第六幕 · 星光落在谱架上",
+        "asset": "personal_azhe_06e",
+        "memory": "cp7_azhe_06e"
+      },
+      {
+        "id": "azhe_07",
+        "title": "第七幕 · 杭州的 offer",
+        "asset": "personal_azhe_07",
+        "memory": "cp7_azhe_07"
+      },
+      {
+        "id": "azhe_07b",
+        "title": "第七幕 · 杭州的 offer",
+        "asset": "personal_azhe_07b",
+        "memory": "cp7_azhe_07b"
+      },
+      {
+        "id": "azhe_TE",
+        "title": "TE · 同行的方向",
+        "asset": "personal_azhe_TE",
+        "memory": "cp7_azhe_TE"
+      },
+      {
+        "id": "azhe_08",
+        "title": "两年",
+        "asset": "personal_azhe_08",
+        "memory": "cp7_azhe_08"
+      },
+      {
+        "id": "azhe_HE",
+        "title": "HE · 星光落回剧场",
+        "asset": "personal_azhe_HE",
+        "memory": "cp7_azhe_HE"
+      },
+      {
+        "id": "azhe_BE_note",
+        "title": "BE · 没翻的那页",
+        "asset": "personal_azhe_BE_note",
+        "memory": "cp7_azhe_BE_note"
+      },
+      {
+        "id": "azhe_chat_food",
+        "title": "日常 · 巷子里的小店",
+        "asset": "personal_azhe_chat_food",
+        "memory": "cp7_azhe_chat_food"
+      }
+    ]
+  },
+  {
+    "batch": "05-personal",
+    "scenes": [
+      {
+        "id": "azhe_chat_care",
+        "title": "日常 · 他记得一切",
+        "asset": "personal_azhe_chat_care",
+        "memory": "cp7_azhe_chat_care"
+      },
+      {
+        "id": "azhe_chat_tape",
+        "title": "日常 · 直男礼物",
+        "asset": "personal_azhe_chat_tape",
+        "memory": "cp7_azhe_chat_tape"
+      },
+      {
+        "id": "azhe_chat_duet",
+        "title": "日常 · 下次一起",
+        "asset": "personal_azhe_chat_duet",
+        "memory": "cp7_azhe_chat_duet"
+      },
+      {
+        "id": "azhe_duet",
+        "title": "合奏 · 再来一遍",
+        "asset": "personal_azhe_duet",
+        "memory": "cp7_azhe_duet"
+      },
+      {
+        "id": "sy_act1",
+        "title": "活动 · 商场商演",
+        "asset": "personal_sy_act1",
+        "memory": "cp7_sy_act1"
+      },
+      {
+        "id": "sy_act2",
+        "title": "活动 · 小乐队排练",
+        "asset": "personal_sy_act2",
+        "memory": "cp7_sy_act2"
+      },
+      {
+        "id": "sy_act3",
+        "title": "活动 · 老乐手小聚",
+        "asset": "personal_sy_act3",
+        "memory": "cp7_sy_act3"
+      },
+      {
+        "id": "sy_01",
+        "title": "熟识 · 排练室的风波",
+        "asset": "personal_sy_01",
+        "memory": "cp7_sy_01"
+      }
+    ]
+  },
+  {
+    "batch": "06-personal",
+    "scenes": [
+      {
+        "id": "sy_01b",
+        "title": "熟识 · 排练室的风波",
+        "asset": "personal_sy_01b",
+        "memory": "cp7_sy_01b"
+      },
+      {
+        "id": "sy_01c",
+        "title": "熟识 · 排练室的风波",
+        "asset": "personal_sy_01c",
+        "memory": "cp7_sy_01c"
+      },
+      {
+        "id": "sy_rumor1",
+        "title": "风波 · 深夜的帖子",
+        "asset": "personal_sy_rumor1",
+        "memory": "cp7_sy_rumor1"
+      },
+      {
+        "id": "sy_r1b",
+        "title": "风波 · 深夜的帖子",
+        "asset": "personal_sy_r1b",
+        "memory": "cp7_sy_r1b"
+      },
+      {
+        "id": "sy_r1c",
+        "title": "风波 · 深夜的帖子",
+        "asset": "personal_sy_r1c",
+        "memory": "cp7_sy_r1c"
+      },
+      {
+        "id": "sy_r1d",
+        "title": "风波 · 深夜的帖子",
+        "asset": "personal_sy_r1d",
+        "memory": "cp7_sy_r1d"
+      },
+      {
+        "id": "sy_heart",
+        "title": "初心 · 上台装一下",
+        "asset": "personal_sy_heart",
+        "memory": "cp7_sy_heart"
+      },
+      {
+        "id": "sy_heart_b",
+        "title": "初心 · 上台装一下",
+        "asset": "personal_sy_heart_b",
+        "memory": "cp7_sy_heart_b"
+      }
+    ]
+  },
+  {
+    "batch": "07-personal",
+    "scenes": [
+      {
+        "id": "sy_heart_c",
+        "title": "初心 · 上台装一下",
+        "asset": "personal_sy_heart_c",
+        "memory": "cp7_sy_heart_c"
+      },
+      {
+        "id": "sy_03",
+        "title": "悸动 · 深夜的误拨",
+        "asset": "personal_sy_03",
+        "memory": "cp7_sy_03"
+      },
+      {
+        "id": "sy_03no",
+        "title": "悸动 · 深夜的误拨",
+        "asset": "personal_sy_03no",
+        "memory": "cp7_sy_03no"
+      },
+      {
+        "id": "sy_04",
+        "title": "悸动 · 深夜的误拨",
+        "asset": "personal_sy_04",
+        "memory": "cp7_sy_04"
+      },
+      {
+        "id": "sy_04a",
+        "title": "悸动 · 深夜的误拨",
+        "asset": "personal_sy_04a",
+        "memory": "cp7_sy_04a"
+      },
+      {
+        "id": "sy_04b",
+        "title": "悸动 · 深夜的误拨",
+        "asset": "personal_sy_04b",
+        "memory": "cp7_sy_04b"
+      },
+      {
+        "id": "sy_04c",
+        "title": "悸动 · 深夜的误拨",
+        "asset": "personal_sy_04c",
+        "memory": "cp7_sy_04c"
+      },
+      {
+        "id": "sy_04c_ok",
+        "title": "悸动 · 深夜的误拨",
+        "asset": "personal_sy_04c_ok",
+        "memory": "cp7_sy_04c_ok"
+      }
+    ]
+  },
+  {
+    "batch": "08-personal",
+    "scenes": [
+      {
+        "id": "sy_04c_ye",
+        "title": "悸动 · 深夜的误拨",
+        "asset": "personal_sy_04c_ye",
+        "memory": "cp7_sy_04c_ye"
+      },
+      {
+        "id": "sy_04c_ye2",
+        "title": "悸动 · 深夜的误拨",
+        "asset": "personal_sy_04c_ye2",
+        "memory": "cp7_sy_04c_ye2"
+      },
+      {
+        "id": "sy_m1",
+        "title": "心动 · 琴房里睡着的人",
+        "asset": "personal_sy_m1",
+        "memory": "cp7_sy_m1"
+      },
+      {
+        "id": "sy_05",
+        "title": "那通电话之后",
+        "asset": "personal_sy_05",
+        "memory": "cp7_sy_05"
+      },
+      {
+        "id": "sy_05b",
+        "title": "那通电话之后",
+        "asset": "personal_sy_05b",
+        "memory": "cp7_sy_05b"
+      },
+      {
+        "id": "sy_05c",
+        "title": "那通电话之后",
+        "asset": "personal_sy_05c",
+        "memory": "cp7_sy_05c"
+      },
+      {
+        "id": "sy_wx",
+        "title": "心动 · 被围住的光源",
+        "asset": "personal_sy_wx",
+        "memory": "cp7_sy_wx"
+      },
+      {
+        "id": "sy_wx_b",
+        "title": "心动 · 被围住的光源",
+        "asset": "personal_sy_wx_b",
+        "memory": "cp7_sy_wx_b"
+      }
+    ]
+  },
+  {
+    "batch": "09-personal",
+    "scenes": [
+      {
+        "id": "sy_wx_c",
+        "title": "心动 · 被围住的光源",
+        "asset": "personal_sy_wx_c",
+        "memory": "cp7_sy_wx_c"
+      },
+      {
+        "id": "sy_06",
+        "title": "周末的邀约",
+        "asset": "personal_sy_06",
+        "memory": "cp7_sy_06"
+      },
+      {
+        "id": "sy_07",
+        "title": "约会 · 游乐场",
+        "asset": "personal_sy_07",
+        "memory": "cp7_sy_07"
+      },
+      {
+        "id": "sy_08",
+        "title": "约会 · 山丘酒吧",
+        "asset": "personal_sy_08",
+        "memory": "cp7_sy_08"
+      },
+      {
+        "id": "sy_09",
+        "title": "约会 · 音乐节",
+        "asset": "personal_sy_09",
+        "memory": "cp7_sy_09"
+      },
+      {
+        "id": "sy_06done",
+        "title": "约会 · 音乐节",
+        "asset": "personal_sy_06done",
+        "memory": "cp7_sy_06done"
+      },
+      {
+        "id": "sy_pd",
+        "title": "拼豆 · 一只鹅",
+        "asset": "personal_sy_pd",
+        "memory": "cp7_sy_pd"
+      },
+      {
+        "id": "sy_pd_b",
+        "title": "拼豆 · 一只鹅",
+        "asset": "personal_sy_pd_b",
+        "memory": "cp7_sy_pd_b"
+      }
+    ]
+  },
+  {
+    "batch": "10-personal",
+    "scenes": [
+      {
+        "id": "sy_pd_c",
+        "title": "拼豆 · 一只鹅",
+        "asset": "personal_sy_pd_c",
+        "memory": "cp7_sy_pd_c"
+      },
+      {
+        "id": "sy_rumor2",
+        "title": "疏远 · 那句话",
+        "asset": "personal_sy_rumor2",
+        "memory": "cp7_sy_rumor2"
+      },
+      {
+        "id": "sy_r2b",
+        "title": "疏远 · 那句话",
+        "asset": "personal_sy_r2b",
+        "memory": "cp7_sy_r2b"
+      },
+      {
+        "id": "sy_r2c",
+        "title": "疏远 · 那句话",
+        "asset": "personal_sy_r2c",
+        "memory": "cp7_sy_r2c"
+      },
+      {
+        "id": "sy_r2d",
+        "title": "疏远 · 那句话",
+        "asset": "personal_sy_r2d",
+        "memory": "cp7_sy_r2d"
+      },
+      {
+        "id": "sy_rumor3",
+        "title": "回潮 · 源头沉在水底",
+        "asset": "personal_sy_rumor3",
+        "memory": "cp7_sy_rumor3"
+      },
+      {
+        "id": "sy_exam",
+        "title": "星海 · 一个大胆的想法",
+        "asset": "personal_sy_exam",
+        "memory": "cp7_sy_exam"
+      },
+      {
+        "id": "sy_exam_no",
+        "title": "星海 · 一个大胆的想法",
+        "asset": "personal_sy_exam_no",
+        "memory": "cp7_sy_exam_no"
+      }
+    ]
+  },
+  {
+    "batch": "11-personal",
+    "scenes": [
+      {
+        "id": "sy_q1",
+        "title": "复习 · 第一题",
+        "asset": "personal_sy_q1",
+        "memory": "cp7_sy_q1"
+      },
+      {
+        "id": "sy_i1",
+        "title": "捣乱 · 贝斯没有暂停键",
+        "asset": "personal_sy_i1",
+        "memory": "cp7_sy_i1"
+      },
+      {
+        "id": "sy_q2",
+        "title": "复习 · 第二题",
+        "asset": "personal_sy_q2",
+        "memory": "cp7_sy_q2"
+      },
+      {
+        "id": "sy_i2",
+        "title": "乱入 · V我50",
+        "asset": "personal_sy_i2",
+        "memory": "cp7_sy_i2"
+      },
+      {
+        "id": "sy_q3",
+        "title": "复习 · 第三题",
+        "asset": "personal_sy_q3",
+        "memory": "cp7_sy_q3"
+      },
+      {
+        "id": "sy_i3",
+        "title": "山丘三宝 · 探班",
+        "asset": "personal_sy_i3",
+        "memory": "cp7_sy_i3"
+      },
+      {
+        "id": "sy_qdone",
+        "title": "星海 · 放榜",
+        "asset": "personal_sy_qdone",
+        "memory": "cp7_sy_qdone"
+      },
+      {
+        "id": "sy_career",
+        "title": "事业 · 一个创业机会",
+        "asset": "personal_sy_career",
+        "memory": "cp7_sy_career"
+      }
+    ]
+  },
+  {
+    "batch": "12-personal",
+    "scenes": [
+      {
+        "id": "sy_career_b",
+        "title": "事业 · 一个创业机会",
+        "asset": "personal_sy_career_b",
+        "memory": "cp7_sy_career_b"
+      },
+      {
+        "id": "sy_career_no",
+        "title": "事业 · 一个创业机会",
+        "asset": "personal_sy_career_no",
+        "memory": "cp7_sy_career_no"
+      },
+      {
+        "id": "sy_juggle",
+        "title": "心事 · 两杯奶茶",
+        "asset": "personal_sy_juggle",
+        "memory": "cp7_sy_juggle"
+      },
+      {
+        "id": "sy_10",
+        "title": "表白前夜",
+        "asset": "personal_sy_10",
+        "memory": "cp7_sy_10"
+      },
+      {
+        "id": "sy_10wait",
+        "title": "TE · 没说出口",
+        "asset": "personal_sy_10wait",
+        "memory": "cp7_sy_10wait"
+      },
+      {
+        "id": "sy_HE",
+        "title": "HE · 光源向你",
+        "asset": "personal_sy_HE",
+        "memory": "cp7_sy_HE"
+      },
+      {
+        "id": "sy_TE",
+        "title": "TE · 团长与乐团",
+        "asset": "personal_sy_TE",
+        "memory": "cp7_sy_TE"
+      },
+      {
+        "id": "sy_BE_ge",
+        "title": "BE · 传出去的话",
+        "asset": "personal_sy_BE_ge",
+        "memory": "cp7_sy_BE_ge"
+      }
+    ]
+  },
+  {
+    "batch": "13-personal",
+    "scenes": [
+      {
+        "id": "sy_TE2",
+        "title": "TE · 双城",
+        "asset": "personal_sy_TE2",
+        "memory": "cp7_sy_TE2"
+      },
+      {
+        "id": "sy_BE",
+        "title": "BE · 最棒的团员",
+        "asset": "personal_sy_BE",
+        "memory": "cp7_sy_BE"
+      },
+      {
+        "id": "sy_q1_ok",
+        "title": "复习 · 第1题讲解",
+        "asset": "personal_sy_q1_ok",
+        "memory": "cp7_sy_q1_ok"
+      },
+      {
+        "id": "sy_q1_bad",
+        "title": "复习 · 第1题讲解",
+        "asset": "personal_sy_q1_bad",
+        "memory": "cp7_sy_q1_bad"
+      },
+      {
+        "id": "sy_q2_ok",
+        "title": "复习 · 第2题讲解",
+        "asset": "personal_sy_q2_ok",
+        "memory": "cp7_sy_q2_ok"
+      },
+      {
+        "id": "sy_q2_bad",
+        "title": "复习 · 第2题讲解",
+        "asset": "personal_sy_q2_bad",
+        "memory": "cp7_sy_q2_bad"
+      },
+      {
+        "id": "sy_q3_ok",
+        "title": "复习 · 第3题讲解",
+        "asset": "personal_sy_q3_ok",
+        "memory": "cp7_sy_q3_ok"
+      },
+      {
+        "id": "sy_q3_bad",
+        "title": "复习 · 第3题讲解",
+        "asset": "personal_sy_q3_bad",
+        "memory": "cp7_sy_q3_bad"
+      }
+    ]
+  },
+  {
+    "batch": "14-personal",
+    "scenes": [
+      {
+        "id": "sy_reply",
+        "title": "动态 · 一起向前冲",
+        "asset": "personal_sy_reply",
+        "memory": "cp7_sy_reply"
+      }
+    ]
+  }
+]

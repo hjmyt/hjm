@@ -1,0 +1,45 @@
+Use case: illustration-story. ONE EXACT 4-column x 2-row atlas, eight equal SQUARE panels, overall 2:1 landscape. 3072x1536 preferred. No gutters, no captions, no labels, no numbers, no speech bubbles, no watermark, no UI. Straight crop boundaries at 25/50/75% width and 50% height. Each independent panel contains a complete narrative moment with faces and key props in central 80%. Strict row-major panel order. Match supplied references: warm cinematic semi-realistic anime CG with detailed painted environments. References define character identity only, make NEW composition and precise scene action in each panel. All characters adults. Player viewpoint is gender-neutral observer, do not impose identity. Do not add characters absent from scene. Do not show outcome before it occurs. No readable writing; notes and papers abstract.
+所有人物都是中国成年人。十元：棕色短bob发、星形发卡、奶油开衫、小提琴女团长。垃垃：长棕发蝴蝶结、温柔小提琴女性。阿喆：棕色卷发、细圆框眼镜、黑色衬衫、小提琴男性。TIM：白衬衫棕色短发、工牌、小提琴成年男性。汤少：黑夹克黑发、相机男性。空格：体型结实、短黑发方框眼镜、黑polo小提琴男性（不要画成纤瘦偶像）。笛杰：黑色柔软卷发格子外衫、笛子男性。柒柒：盘发、米白花纹旗袍红滚边、电吉他成年女性。小周：柔软黑发浅蓝衬衫、钢琴成年男性。柠檬：鸭舌帽深色服装、键盘成年男性。大鹅：柔软黑发白色上衣钢琴成年男性。小塔：黑发深色上衣手串、架子鼓成年男性。飞鸿：蓝灰衬衫短发主唱男性。宝石：浅发色浅色宽松衬衫、柔和少年感的成年男性主唱，不是女性。大羊：黑发黑衬衫、原声吉他男性。叶思阳：整洁西装男性。朱老师：瘦、短黑发方框眼镜、酒吧老板和作曲者男性。黄奕兴：短黑发金属框眼镜灰色西装成年男性。
+参考图顺序：1:宝石,2:空格,3:柠檬,4:十元,5:垃垃。
+
+PANEL 1 (TOP row, column 1): 第4章，把心情也唱进去。只画此刻：宝石
+主唱 · 少年音
+第 6 周 · 正传
+（宝石听完你的话，认真地想了想：「那我把鸡皮疙瘩也唱进去。」（？？？但他第二天真的做到了。
+
+PANEL 2 (TOP row, column 2): 第4章，半瓶蜂蜜水。只画此刻：宝石
+主唱 · 少年音
+第 6 周 · 正传
+（三遍练完，宝石递给你半瓶蜂蜜水：「润嗓的。你陪我练，也辛苦了。」
+
+PANEL 3 (TOP row, column 3): 第4章，递来的远方机票。只画此刻：柠檬
+键盘 · 排练新人
+第 6 周 · 正传
+柠檬压低帽檐凑过来：「兄弟，最近手头有点紧，借点？下个月肯定还。」他又递来一张远方的机票：「要不跟我出国挣大钱？」
+
+PANEL 4 (TOP row, column 4): 第4章，空剧场里的回声。只画此刻：宝石
+主唱 · 少年音
+第 6 周 · 正传
+宝石在空剧场练嗓，回声把他的声音托得很远。他冲你挥手：「你来啦！刚才那句，我唱得好吗？」
+
+PANEL 5 (BOTTOM row, column 1): 第4章，大幕拉开之前。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+第 6 周。6月7日，鹭湖剧院，大幕即将拉开。
+
+PANEL 6 (BOTTOM row, column 2): 第4章，站到灯光里。只画此刻：十元
+白月光 · ENFP · 正传团长
+第 6 周 · 正传
+剧场之夜！满场的灯光像星星掉进了观众席——上吧！
+
+PANEL 7 (BOTTOM row, column 3): 第4章，合练后的谱页。只画此刻：首席空格
+SSR · 一提首席 / 技术考核
+第 6 周 · 正传
+空格合上谱子，示意大家休息。剧场里的每一个声部，正在慢慢合到一起。
+
+PANEL 8 (BOTTOM row, column 4): 第4章，合奏之外的背影。只画此刻：旁白
+乐团正传 · 故事叙述
+结局已收录
+你把所有的目光都给了团长，却渐渐错过了其他伙伴的声音。
+
+这一周目走到了结尾，已建立的全局羁绊仍然保留。

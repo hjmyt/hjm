@@ -1,0 +1,19 @@
+Use case: illustration-story. ONE EXACT 4-column x 2-row atlas, eight equal SQUARE panels, overall 2:1 landscape. 3072x1536 preferred. No gutters, no captions, no labels, no numbers, no speech bubbles, no watermark, no UI. Straight crop boundaries at 25/50/75% width and 50% height. Each independent panel contains a complete narrative moment with faces and key props in central 80%. Strict row-major panel order. Match supplied references: warm cinematic semi-realistic anime CG with detailed painted environments. References define character identity only, make NEW composition and precise scene action in each panel. All characters adults. Player viewpoint is gender-neutral observer, do not impose identity. Do not add characters absent from scene. Do not show outcome before it occurs. No readable writing; notes and papers abstract.
+所有人物都是中国成年人。十元：棕色短bob发、星形发卡、奶油开衫、小提琴女团长。垃垃：长棕发蝴蝶结、温柔小提琴女性。阿喆：棕色卷发、细圆框眼镜、黑色衬衫、小提琴男性。TIM：白衬衫棕色短发、工牌、小提琴成年男性。汤少：黑夹克黑发、相机男性。空格：体型结实、短黑发方框眼镜、黑polo小提琴男性（不要画成纤瘦偶像）。笛杰：黑色柔软卷发格子外衫、笛子男性。柒柒：盘发、米白花纹旗袍红滚边、电吉他成年女性。小周：柔软黑发浅蓝衬衫、钢琴成年男性。柠檬：鸭舌帽深色服装、键盘成年男性。大鹅：柔软黑发白色上衣钢琴成年男性。小塔：黑发深色上衣手串、架子鼓成年男性。飞鸿：蓝灰衬衫短发主唱男性。宝石：浅发色浅色宽松衬衫、柔和少年感的成年男性主唱，不是女性。大羊：黑发黑衬衫、原声吉他男性。叶思阳：整洁西装男性。朱老师：瘦、短黑发方框眼镜、酒吧老板和作曲者男性。黄奕兴：短黑发金属框眼镜灰色西装成年男性。
+参考图顺序：1:空格,2:十元,3:阿喆,4:飞鸿,5:朱老师。
+
+PANEL 1 (TOP row, column 1): 第5章，把这一段再练稳。只画此刻：第5章演出前，黑色 polo、方框眼镜、体型结实的首席空格用铅笔指着待练的小节，严肃但耐心；身后是尚未踏上的舞台，绝无成功表演或掌声。第1、2章商场后台，第3章专场后台，第4、6章剧院后台，第5章露天音乐节后台。
+
+PANEL 2 (TOP row, column 2): 第6章，把这一段再练稳。只画此刻：第6章演出前，黑色 polo、方框眼镜、体型结实的首席空格用铅笔指着待练的小节，严肃但耐心；身后是尚未踏上的舞台，绝无成功表演或掌声。第1、2章商场后台，第3章专场后台，第4、6章剧院后台，第5章露天音乐节后台。
+
+PANEL 3 (TOP row, column 3): 第1章，在门口擦肩而过。只画此刻：两个年轻成年男性主唱在酒吧排练室门口擦肩而过，飞鸿穿蓝灰衬衫，雪子深色便装，普通初见，彼此平静，无争吵。
+
+PANEL 4 (TOP row, column 4): 第5章，夏天的风先到了。只画此刻：短发星形发卡奶油开衫的十元，抱着小提琴拿到夏日音乐节邀请在排练室转身，玩家在门口远远看着，轻微失落与距离感。只画十元，没有黄奕兴、没有婚礼或舞台告白。
+
+PANEL 5 (BOTTOM row, column 1): 第2章，阿喆替你折好谱角。只画此刻：卷棕发细框眼镜黑衬衫的阿喆，在失败的合练后温柔折好谱角，首席空格在后面指点铅笔标出的难点，不庆祝，耐心安慰。
+
+PANEL 6 (BOTTOM row, column 2): 第6章，完整的总谱等着开幕。只画此刻：音乐剧首演前侧幕，朱老师短发方框眼镜身旁是一整套已完成装订总谱，十元抱琴等待登台，灯光尚未亮起，不是庆祝谢幕。
+
+PANEL 7 (BOTTOM row, column 3): 第2章，再陪你们走一段。只画此刻：体型结实方框眼镜黑polo的首席空格抱琴盒在楼梯间，灯重新亮起，缓缓点头接受挽留，眼神坚定温和，不离开。
+
+PANEL 8 (BOTTOM row, column 4): 第2章，下不为例的温柔。只画此刻：楼梯间，短棕发星形发卡十元抱琴向首席空格鞠躬，体型结实黑polo方框眼镜的空格无奈而温柔地揉她头发，决定留下。

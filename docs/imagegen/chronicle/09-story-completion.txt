@@ -1,0 +1,45 @@
+Use case: illustration-story. ONE EXACT 4-column x 2-row atlas, eight equal SQUARE panels, overall 2:1 landscape. 3072x1536 preferred. No gutters, no captions, no labels, no numbers, no speech bubbles, no watermark, no UI. Straight crop boundaries at 25/50/75% width and 50% height. Each independent panel contains a complete narrative moment with faces and key props in central 80%. Strict row-major panel order. Match supplied references: warm cinematic semi-realistic anime CG with detailed painted environments. References define character identity only, make NEW composition and precise scene action in each panel. All characters adults. Player viewpoint is gender-neutral observer, do not impose identity. Do not add characters absent from scene. Do not show outcome before it occurs. No readable writing; notes and papers abstract.
+所有人物都是中国成年人。十元：棕色短bob发、星形发卡、奶油开衫、小提琴女团长。垃垃：长棕发蝴蝶结、温柔小提琴女性。阿喆：棕色卷发、细圆框眼镜、黑色衬衫、小提琴男性。TIM：白衬衫棕色短发、工牌、小提琴成年男性。汤少：黑夹克黑发、相机男性。空格：体型结实、短黑发方框眼镜、黑polo小提琴男性（不要画成纤瘦偶像）。笛杰：黑色柔软卷发格子外衫、笛子男性。柒柒：盘发、米白花纹旗袍红滚边、电吉他成年女性。小周：柔软黑发浅蓝衬衫、钢琴成年男性。柠檬：鸭舌帽深色服装、键盘成年男性。大鹅：柔软黑发白色上衣钢琴成年男性。小塔：黑发深色上衣手串、架子鼓成年男性。飞鸿：蓝灰衬衫短发主唱男性。宝石：浅发色浅色宽松衬衫、柔和少年感的成年男性主唱，不是女性。大羊：黑发黑衬衫、原声吉他男性。叶思阳：整洁西装男性。朱老师：瘦、短黑发方框眼镜、酒吧老板和作曲者男性。黄奕兴：短黑发金属框眼镜灰色西装成年男性。
+参考图顺序：1:十元,2:空格,3:柒柒,4:朱老师,5:垃垃。
+
+PANEL 1 (TOP row, column 1): 第2章，大幕拉开之前。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+第 6 周。音乐剧立项在即，乐团必须靠路演证明独立的价值。
+
+PANEL 2 (TOP row, column 2): 第2章，站到灯光里。只画此刻：十元
+白月光 · ENFP · 正传团长
+第 6 周 · 正传
+独立后的第一场路演——台下站着商场经理和朱老师。这一次，没有退路了！
+
+PANEL 3 (TOP row, column 3): 第2章，合奏之外的背影。只画此刻：旁白
+乐团正传 · 故事叙述
+结局已收录
+（你把所有的目光都给了团长。）十元的笑容依旧明亮，可某一天你回过头，身后已经没有了合奏的人。
+
+这一周目走到了结尾，已建立的全局羁绊仍然保留。
+
+PANEL 4 (TOP row, column 4): 第2章，楼梯间的沉默。只画此刻：首席空格
+SSR · 一提首席 / 技术考核
+第 6 周 · 正传
+（楼梯间的灯亮了又暗。）空格想了很久，最后说：「让我再想想。琴还要练，很多话也还没说开。」他没有给出明确的承诺。
+
+PANEL 5 (BOTTOM row, column 1): 第2章，再听一次挽留。只画此刻：首席空格
+SSR · 一提首席 / 技术考核
+第 6 周 · 正传
+十元认真听完，向空格鞠了一躬。他沉默了一会儿：「我明白……但让我再想想。」这次谈话留下了希望，还没有得到明确的答案。
+
+PANEL 6 (BOTTOM row, column 2): 第3章，留给最后一段的时间。只画此刻：旁白
+乐团正传 · 故事叙述
+第 6 周 · 正传
+专场就在下周。最后的排练时间，留给还没合稳的那一段。
+
+PANEL 7 (BOTTOM row, column 3): 第3章，传到她耳边的话。只画此刻：柒柒
+电吉他 · 银行客户经理
+第 6 周 · 正传
+（柒柒挽着你的手，笑得温柔：「妹妹，明天陪我去做脸吧，别总跟那群男生混在一起呀。」——这句话传进十元耳朵时，已经变了味道。）
+
+PANEL 8 (BOTTOM row, column 4): 第3章，没有带来的饼干。只画此刻：旁白
+乐团正传 · 故事叙述
+结局已收录
+一些话在团里流传了很久，谁也说不清从哪开始。等你察觉时，排练室里的空气已经不一样了——大家还在笑，只是笑完之后，会各自沉默。专场取消了，饼干也再没有人带。

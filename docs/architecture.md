@@ -45,7 +45,7 @@
 
 ## 样式与资源
 
-样式加载顺序为 `base → cards → chronicle → character-skills → chronicle-chapters → lala → theme → chronicle-weeks → album → chronicle-reader`，保留原有覆盖关系。组件样式在所属文件维护，通用主题与最终响应式调整在 `theme.css`；不要随意调整链接顺序。
+样式加载顺序为 `base → cards → chronicle → character-skills → chronicle-chapters → lala → theme → chronicle-weeks → album → chronicle-reader → chronicle-training`，保留原有覆盖关系。组件样式在所属文件维护，通用主题与最终响应式调整在 `theme.css`；不要随意调整链接顺序。
 
 JS 中的图片和音频路径仍相对于页面根目录。CSS 的 `url()` 相对于样式文件，后续新增时注意使用 `../assets/…`。发布或复制时需同时带上 `index.html`、`js/`、`styles/`、`assets/`。
 
@@ -57,13 +57,28 @@ JS 中的图片和音频路径仍相对于页面根目录。CSS 的 `url()` 相�
 
 本次拆分保持存档键与存档格式不变，未引入新的经济或剧情规则。
 
-### 按周叙事
+### 连贯叙事与周训练
 
-`js/data/chronicle-weeks.js` 定义六章各六周的主线入口、标题和预告。
-`js/chronicle/weeks.js` 管理场景边界、周完成记录、可选相遇及周进度旧档迁移。
-`activities.pick` 的剧情跳转统一经过 `storyTransition`，遇到后续周入口先结束当周；主线考核的战斗回合仍由原合练模块负责。
-章节存档新增 `weekly`：`done`、`active`、`side`、`recaps` 和第五周的 `approach`。音符和羁绊仍由 core 模块结算。
-`js/data/chronicle-art.js` 定义章节、场景、条件、标题和插图映射，须先于 `data/memories.js` 加载；后者从此目录追加场景回忆，保留既有 ID。
-`js/chronicle/art.js` 负责按分支选图、到达收藏和已读手记迁移；`views.js` 渲染统一阅读器，`styles/chronicle-reader.css` 最后加载以覆盖旧阅读布局。
-场景素材在 `assets/chronicle/scenes/`，8 合 1 原图在其 `source/` 子目录；`docs/imagegen/chronicle/` 留存生成提示词与裁切索引。用 `python3 scripts/crop-chronicle-art.py` 可重建全部 43 张场景图。
-`node tests/chronicle-art.cjs` 检查逐场对应、分支隔离、收藏与迁移、相册链接及桌面/手机布局。
+`js/data/chronicle-weeks.js` 保留既有剧情块 ID，用于连贯开场、晚期事件与旧按周存档迁移。`js/chronicle/weeks.js` 处理这些边界；章节 `weekly.version=2` 将已读块与实际周数分离。
+
+`js/data/chronicle-training.js` 定义每章五种训练主题。`js/chronicle/training.js` 实现三轮评分、报名、进度、音画提示与暂停。`economy.training[章节:周次]` 保存全局付款与收益，`weekly.training` 保存局部尝试。计时器只存在于当前页面，读档会回到本轮准备阶段；不能依靠浏览器后台时间结算成绩。
+
+重开时从原章节起点加回已结算的本章训练收益，报名不退、奖励不重复。`Chronicle.suspend` 同时暂停演出和训练；`StoryBgm` 在训练场景暂停背景音乐。
+
+`js/data/chronicle-art.js` 定义章节、场景、条件、标题和插图映射，先于 `data/memories.js` 加载；`js/chronicle/art.js` 负责到达收藏和已读手记迁移。场景素材在 `assets/chronicle/scenes/`，生成记录在 `docs/imagegen/chronicle/`。
+
+`tests/weekly-stories.cjs` 检查连贯开场及晚期事件；`tests/chronicle-training.cjs` 覆盖真实练习、付款去重、暂停、续练和成长；`tests/chronicle-art.cjs` 覆盖配图与收藏。
+
+- `js/chronicle/pulse.js`：霓虹节奏四轨谱面、音画时间轴、判定与场景；由 `training.js` 调用，奖励仍走统一训练记录。
+
+礼品卡：`js/data/gift-keys.js` 仅保存公钥；`js/features/gift-cards.js` 负责验签、兑换与表单，记录由 `js/core/economy.js` 清理和持久化；`scripts/gift-card.cjs` 在网站外保存私钥并本地签发。详见 `docs/gift-cards.md`。
+
+- `js/chronicle/ear.js`：视听练耳的简谱填空、音画同步与输入；题库在 `js/data/chronicle-training.js`，三轮结算和旧训练记录继续由 `training.js` 管理。
+
+## 第七章 · 个人线
+
+`js/data/personal-routes.js` 为独立剧情目录，由 `scripts/build-personal-routes.py` 从 `docs/story-sources/personal/` 内的两份原稿提取；HTML 原稿只作为文本解析，不运行其中的原型脚本。`js/chronicle/personal.js` 通过显式工厂接入正传控制器，样式在 `styles/chronicle-personal.css`。
+
+六章的 `run`、`slots` 与原章节编号保持兼容。个人线保存在 `chronicle.personal`：当前角色与阅读状态、每角色独立的剧情节点、选择标记、已读场景、结局和相处记录。角色羁绊仍由全局 core 提供，进入条件为完成第六章且对应角色羁绊严格大于 35。第七章奖励共用 `economy.claimed['chapter:7']`，不同个人线或结局不重复发放。
+
+个人线插图按每个阅读节点单独绑定，回忆 ID 为 `cp7_<节点>`；只按实际已读记录收藏和补齐。8 合 1 原图在 `assets/chronicle/personal/source/`，提示词、清单与坐标在 `docs/imagegen/personal/`，运行 `python3 scripts/crop-personal-art.py` 重建全部裁图。

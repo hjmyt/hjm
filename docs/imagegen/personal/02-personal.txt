@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：黑发黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：浅发宽松浅色衬衫男性主唱。REK：黑发成年男性贝斯手。飞鸿：蓝灰衬衫男主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (azhe_03, do not write ID): 团建饭局上，大提冰冰随口打趣：「阿喆可是我们团的路演编外人员——演出一场不上，水果一顿不落。」满桌哄笑。阿喆笑着举杯：「我自罚一杯。」 他笑着，可你把他的杯子和他的手一起看进了眼里——握杯子的手指节发白，酒一滴没洒。
+
+PANEL 2 (azhe_03b, do not write ID): 笑声戛然而止。冰冰愣住：「……啊？那是你洗的？我还以为是场务弄的！」小塔挠头：「所以设备也是你调的？」阿喆在桌子底下轻轻踢了踢你的鞋，用口型说：「没、事、的。」
+
+PANEL 3 (azhe_03c, do not write ID): 你在便利店门口找到他。他拿着饭团，冲你笑：「你怎么也溜了？」你问他为什么不解释。他捏着饭团想了很久：「解释了，他们就会为了照顾我的心情而愧疚。那比误会更难受。」
+
+PANEL 4 (azhe_03d, do not write ID): 那晚之后，阿喆还是会来路演，还是带着洗好的水果。只是再没有人听他讲「今天这盒比较甜」了——因为他不再对任何人讲了。
+
+PANEL 5 (azhe_04, do not write ID): 深夜的排练室，你听见一段没听过的旋律。阿喆一个人坐在角落练琴，没有谱，闭着眼。琴声的脾气很奇怪——前半段像在问一个问题，后半段像在等一个回答。
+
+PANEL 6 (azhe_04b, do not write ID): 他睁开眼，看到你，并不意外，像等了很久。「……你听到了啊。」他低头拨了一个音，「这首曲子，我写了三年。一直没敢给别人听。」他抬眼看你，「你是第一个。」
+
+PANEL 7 (azhe_04c, do not write ID): 「……还没有名字。」他看着你，忽然把琴往你这边递了递，「你觉得，它应该叫什么？」 他在把命名权交给你。这比任何告白都重。
+
+PANEL 8 (azhe_04d, do not write ID): 阿喆愣了两秒，然后笑出了声——是真的笑，肩膀都在抖的那种。「你知道吗，」他擦着眼角，「三年里我设想过一百个名字，这个是我最想不到的。」他把琴抱紧了一点，「……就是它了。」

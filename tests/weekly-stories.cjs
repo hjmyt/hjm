@@ -1,122 +1,82 @@
-const {chromium} = require('playwright');
-const assert = require('node:assert/strict');
-const {pathToFileURL} = require('node:url');
-const path = require('node:path');
-(async () => {
- const browser = await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE ? {executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE} : {})});
- try {
-  const page = await browser.newPage({viewport:{width:1440,height:1000}, reducedMotion:'reduce'}), errors=[];
-  page.on('pageerror', e=>errors.push(e.message));
+const {chromium}=require('playwright');
+const assert=require('node:assert/strict');
+const {pathToFileURL}=require('node:url');
+const path=require('node:path');
+(async()=>{
+ const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});
+ try{
+  const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'}),errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
   await page.goto(pathToFileURL(path.resolve(__dirname,'../index.html')).href);
-  const result = await page.evaluate(async () => {
-   const checks=[], traces={};
-   const check=(name,ok)=>{if(!ok)throw Error(name+' at '+state.chronicle.run.chapter+':'+state.chronicle.run.week+':'+state.chronicle.run.scene);checks.push(name);};
-   const click=async sel=>{await new Promise(r=>setTimeout(r,210));const b=document.querySelector(sel);if(!b||b.disabled)throw Error('Unavailable '+sel+' at '+state.chronicle.run.scene);b.click();};
-   const action=a=>click(`[data-cp-action="${a}"]`), choice=i=>click(`[data-cp-choice="${i}"]`);
+  const result=await page.evaluate(()=>{
+   let count=0;const traces={};
+   let now=performance.now();performance.now=()=>now;
+   const check=(ok,label)=>{if(!ok)throw Error(label+' at '+state.chronicle.run.chapter+':'+state.chronicle.run.week+':'+state.chronicle.run.scene);count++;};
+   const click=sel=>{now+=250;const b=document.querySelector(sel);check(b&&!b.disabled,'Available '+sel);b.click();};
    const setup=ch=>{
-    closeModal(false); state=freshState();state.sound=false;state.coins=100;
-    Object.assign(state.chronicle.run,{chapter:ch,ch,name:'每周测试',inst:'长笛',tech:30,level:5,scene:ch===1?'s_door':`c${ch}_intro`});
+    closeModal();state=freshState();state.sound=false;state.coins=100;
+    Object.assign(state.chronicle.run,{chapter:ch,ch,name:'连贯测试',inst:'长笛',tech:30,level:5,scene:ch===1?'s_door':`c${ch}_intro`});
     state.chronicle.completedChapters=Array.from({length:ch-1},(_,i)=>i+1);
-    state.chronicle.endings=['debut','c2_dual','c3_he','c4_he'];
-    for(const k of Object.keys(state.affinity)) state.affinity[k]=85;
-    Chronicle.syncBonds(state.chronicle,state.affinity);save();route('chronicle');
+    for(const k of Object.keys(state.affinity))state.affinity[k]=85;
+    Chronicle.syncBonds(state.chronicle,state.affinity);route('chronicle');
    };
-   const read=async()=>{
-    const r=state.chronicle.run;
-    if(r.scene==='practice_partner') await click('[data-cp-action="partner"][data-cp-person="shiyuan"]');
-    else if(r.scene==='practice_turn') await click('[data-cp-action="battle"][data-cp-battle="duet"]');
-    else if(r.scene==='practice_result') await action('practice-continue');
-    else await choice(r.scene==='zhu_offer'?4:0);
+   const read=()=>{
+    const s=state.chronicle.run.scene;
+    if(s==='practice_partner')click('[data-cp-action="partner"][data-cp-person="shiyuan"]');
+    else if(s==='practice_turn')click('[data-cp-action="battle"][data-cp-battle="duet"]');
+    else if(s==='practice_result')click('[data-cp-action="practice-continue"]');
+    else click(`[data-cp-choice="${s==='zhu_offer'?4:0}"]`);
    };
-   for(let ch=1;ch<=6;ch++) {
-    setup(ch);traces[ch]=[];
-    let count=0;
-    while(state.chronicle.run.week<6 && ++count<100) {
-     const r=state.chronicle.run;traces[ch].push([r.week,r.scene]);
-     if(r.scene==='menu') {
-      check(ch+' week card '+r.week,document.querySelector('.cp-week-story h3').textContent===ChronicleWeeks[ch][r.week-1].title);
-      if(r.weekly.done.includes(r.week)) {
-       check('Recap exists '+ch+':'+r.week,!!r.weekly.recaps[r.week]);
-       const week=r.week;
-       await action('end-week');
-       check('One click enters next story '+ch+':'+week,r.week===week+1&&r.scene!=='menu'&&!document.querySelector('[data-cp-action="week-story"]'));
-      } else {
-       check('Next week disabled before core',document.querySelector('[data-cp-action="end-week"]').disabled);
-       // DOM tampering cannot skip a core week or open the stage early.
-       const week=r.week, forged=document.createElement('button');forged.dataset.cpAction='end-week';document.body.append(forged);
-       await new Promise(r=>setTimeout(r,210));forged.click();forged.remove();check('Handler protects unfinished core',r.week===week);
-       await action('week-story');
-      }
-     } else await read();
+   const front={1:[1,2,3,4],2:[1,2,3,4],3:[1,2,3],4:[1,2,3,4],5:[1,2,3,4],6:[1,2,3,4]};
+   for(let ch=1;ch<=6;ch++){
+    setup(ch);traces[ch]=[];let guard=0;
+    while(state.chronicle.run.scene!=='menu'&&guard++<80){traces[ch].push([state.chronicle.run.week,state.chronicle.run.scene]);read();}
+    check(guard<80,'Opening terminates');
+    check(state.chronicle.run.week===1,'Continuous opening stays in week one');
+    check(front[ch].every(n=>state.chronicle.run.weekly.done.includes(n)),'Complete front story before training');
+    check(front[ch].every(n=>traces[ch].some(([w,s])=>w===1&&s===ChronicleWeeks[ch][n-1].scene)),'All front roots seen together');
+    check(!!document.querySelector('.cp-training-hub'),'Training hub follows opening');
+    check(document.querySelectorAll('.cp-training-card:not(:disabled)').length===1,'Only first training initially open');
+    while(state.chronicle.run.week<6){
+     const before=state.chronicle.run.week;click('[data-cp-action="end-week"]');
+     check(state.chronicle.run.week===before+1,'Exactly one week advances');
+     if(state.chronicle.run.week===6)break;
+     let late=0;
+     while(state.chronicle.run.scene!=='menu'&&late++<30){traces[ch].push([state.chronicle.run.week,state.chronicle.run.scene]);read();}
+     check(late<30,'Late story returns to training');
+     check(document.querySelectorAll('.cp-training-card:not(:disabled)').length===state.chronicle.run.week,'Previous training remains available');
     }
-    check('All five weeks completed '+ch, [1,2,3,4,5].every(n=>state.chronicle.run.weekly.done.includes(n)));
-    while(state.chronicle.run.scene.startsWith('c'+ch+'_jeal')) await read();
-    check('Week six opens stage directly '+ch,state.chronicle.run.scene==='b_live');
-    check('Unique weekly titles '+ch,new Set(ChronicleWeeks[ch].map(p=>p.title)).size===6);
-    for(let w=1;w<=5;w++) check('Authored root at correct week '+ch+':'+w,traces[ch].some(([n,s])=>n===w&&s===ChronicleWeeks[ch][w-1].scene));
-    const before=JSON.stringify(state.chronicle.run.weekly);
-    state=cleanState(JSON.parse(JSON.stringify(state)));route('chronicle');
-    check('Weekly save roundtrip '+ch,JSON.stringify(state.chronicle.run.weekly)===before);
-    check('Stage survives cleaning '+ch,state.chronicle.run.scene==='b_live');
-    await choice(0);check('Original stage intact '+ch,state.chronicle.run.scene==='live_intro');
+    check(state.chronicle.run.scene==='b_live','Week six opens stage');
+    check([1,2,3,4,5].every(n=>state.chronicle.run.weekly.done.includes(n)),'All main stories retained');
+    for(const n of [1,2,3,4,5].filter(n=>!front[ch].includes(n)))check(traces[ch].some(([w,s])=>w===n&&s===ChronicleWeeks[ch][n-1].scene),'Late scene timing '+n);
+    const saved=JSON.parse(JSON.stringify(state));state=cleanState(saved);route('chronicle');
+    check(state.chronicle.run.scene==='b_live'&&state.chronicle.run.week===6,'Save keeps stage progress');
    }
-   // Old pending menus still work; forged advancement cannot skip their unfinished core.
-   for(let ch=1;ch<=6;ch++) {
-    setup(ch);const r=state.chronicle.run;
-    Object.assign(r,{week:2,scene:'menu',weekly:{version:1,done:[1],active:0,side:[],recaps:{1:'已完成'},approach:null}});
-    r.rev++;renderGlobal();
-    const button=document.querySelector('[data-cp-action="end-week"]');
-    check('Pending old menu blocks next week '+ch,button.disabled);
-    button.disabled=false;await action('end-week');
-    check('Forged next cannot skip '+ch,r.week===2&&r.scene==='menu');
-    await action('week-story');
-    check('Old pending menu still starts '+ch,r.scene===ChronicleWeeks[ch][1].scene&&r.weekly.active===2);
-   }
-   // Both new rehearsal choices have different prose, persist mid-scene and grant no resources.
-   for(const ch of [5,6])for(const selected of [0,1]) {
-    setup(ch);Object.assign(state.chronicle.run,{week:5,scene:'weekly_prep',weekly:{version:1,done:[1,2,3,4],active:5,side:[],recaps:{},approach:null}});state.chronicle.run.rev++;renderGlobal();
-    const resources=JSON.stringify([state.coins,state.affinity,state.chronicle.run.tech]);
-    await choice(selected);check('Preparation response '+ch+':'+selected,state.chronicle.run.scene==='weekly_reply'&&state.chronicle.run.weekly.approach===selected);
-    state=cleanState(JSON.parse(JSON.stringify(state)));route('chronicle');check('Midweek response survives cleaning',state.chronicle.run.weekly.active===5&&state.chronicle.run.weekly.approach===selected);
-    await choice(0);check('Preparation records week without rewards',state.chronicle.run.weekly.done.includes(5)&&resources===JSON.stringify([state.coins,state.affinity,state.chronicle.run.tech]));
-   }
-   // Optional stories neither complete nor block the core; stale double-click cannot charge twice.
-   setup(4);Object.assign(state.chronicle.run,{week:2,scene:'menu',weekly:{version:1,done:[1],active:0,side:[],recaps:{1:'已完成'},approach:null}});
-   // Explicitly encountered character makes this optional scene available.
-   state.cards.encounters.push('lemon');syncStoryCards(state);state.chronicle.run.rev++;renderGlobal();
-   // Force the appropriate encounter through its already-read source node if card ownership was not reconstructed.
-   if(!cardOwned('lemon')) {state.chronicle.run.journal.push({chapter:4,week:2,scene:'c4_band_lemon',who:'lemon',text:'柠檬',choice:null});syncStoryCards(state);state.chronicle.run.rev++;renderGlobal();}
-   await click('[data-cp-action="week-side"][data-cp-event="c4_band_lemon"]');await choice(1);await choice(0);
-   check('Side choice leaves main pending',!state.chronicle.run.weekly.done.includes(2));
-   check('Side cannot replay in run',document.querySelector('[data-cp-event="c4_band_lemon"]').disabled);
-   await action('week-story');check('Main remains reachable',state.chronicle.run.scene==='c4_prep');
-   // Legacy migration preserves seen opening, scene, balances and history; repeated cleaning is stable.
-   setup(3);let raw=JSON.parse(JSON.stringify(state));delete raw.chronicle.run.weekly;Object.assign(raw.chronicle.run,{scene:'menu',week:1});
-   state=cleanState(raw);check('Old menu carries read opening',state.chronicle.run.weekly.done.includes(1)&&state.chronicle.run.weekly.done.includes(5)&&state.coins===100);
-   const stable=x=>JSON.stringify(x,(_,v)=>v&&typeof v==='object'&&!Array.isArray(v)?Object.fromEntries(Object.entries(v).sort(([a],[b])=>a.localeCompare(b))):v);const once=stable(state.chronicle);state=cleanState(JSON.parse(JSON.stringify(state)));check('Migration idempotent',stable(state.chronicle)===once);
-   delete raw.chronicle.run.weekly;raw.chronicle.run.scene='c3_ge_a';state=cleanState(raw);check('Mid-dialogue old save continues in correct week',state.chronicle.run.scene==='c3_ge_a'&&state.chronicle.run.week===4&&state.chronicle.run.weekly.active===4);
-   // Earlier endings remain possible, no need to clear six weeks.
-   setup(2);state.chronicle.run.scene='c2_night';state.chronicle.run.rev++;renderGlobal();await choice(1);check('Pop ending retained',state.chronicle.run.ending==='c2_street');
-   setup(5);state.affinity.shiyuan=0;state.chronicle.run.rev++;renderGlobal();await choice(0);check('Fifth chapter short ending retained',state.chronicle.run.ending==='c5_wind');
-   setup(1);state.chronicle.run.scene='s_dream';state.chronicle.run.rev++;renderGlobal();await choice(2);check('Explicit shadow ending retained',state.chronicle.run.ending==='shadow');
-   // Fresh restart must reset weekly progress, not global balances or bond claims.
-   setup(4);state.chronicle.run.weekly.done=[1,2];state.chronicle.run.weekly.active=0;
-   await action('restart');await action('confirm-restart');check('Restart schedules first week',state.chronicle.run.week===1&&state.chronicle.run.weekly.active===1&&state.chronicle.run.weekly.done.length===0&&state.coins===100);
-   setup(1);state.chronicle.run.scene='zhu_offer';state.chronicle.run.bar.returnTo='s_first';state.chronicle.run.rev++;save();renderGlobal();
-   return {count:checks.length,traces};
+   // Forced failed admission assessment still continues to the entire opening and training.
+   setup(1);Object.assign(state.chronicle.run,{scene:'s_first',tech:5,level:1});state.chronicle.run.weekly.done=[1];state.chronicle.run.weekly.active=2;
+   for(const k of Object.keys(state.affinity))state.affinity[k]=0;
+   Chronicle.syncBonds(state.chronicle,state.affinity);state.chronicle.run.rev++;renderGlobal();
+   click('[data-cp-choice="0"]');click('[data-cp-action="partner"][data-cp-person="lala"]');
+   const random=Math.random;Math.random=()=>.99;
+   while(state.chronicle.run.scene==='practice_turn')click('[data-cp-action="battle"][data-cp-battle="stable"]');Math.random=random;
+   check(!state.chronicle.run.battle.win,'Failed admission fixture');
+   let guard=0;while(state.chronicle.run.scene!=='menu'&&guard++<30)read();
+   check(state.chronicle.run.scene==='menu'&&!!document.querySelector('.cp-training-hub'),'Failure reaches training without retry loop');
+   // Previous weekly saves continue their exact scene and skip already read roots.
+   setup(1);const old=JSON.parse(JSON.stringify(state));
+   Object.assign(old.chronicle.run,{week:3,scene:'gig',weekly:{version:1,done:[1,2],active:3,side:[],recaps:{1:'已读'},approach:null}});
+   state=cleanState(old);route('chronicle');
+   check(state.chronicle.run.week===3&&state.chronicle.run.scene==='gig','Old weekly scene preserved');
+   const before=JSON.stringify(state.chronicle.run.weekly);state=cleanState(JSON.parse(JSON.stringify(state)));
+   check(JSON.stringify(state.chronicle.run.weekly)===before,'Migration idempotent');
+   route('chronicle');read();check(state.chronicle.run.scene==='s_conflict','Old save proceeds to next unread scene');
+   setup(2);state.chronicle.run.scene='c2_night';state.chronicle.run.rev++;renderGlobal();click('[data-cp-choice="1"]');check(state.chronicle.run.ending==='c2_street','Early pop ending retained');
+   setup(5);state.affinity.shiyuan=0;state.chronicle.run.rev++;renderGlobal();click('[data-cp-choice="0"]');check(state.chronicle.run.ending==='c5_wind','Early low-bond ending retained');
+   setup(1);state.chronicle.run.scene='menu';state.chronicle.run.weekly.active=0;state.chronicle.run.weekly.done=[1,2,3,4];state.chronicle.run.rev++;save();renderGlobal();
+   return {count,traces};
   });
   await page.reload();await page.evaluate(()=>route('chronicle'));
-  for(const width of [1440,390]) {
-   await page.setViewportSize({width,height:900});
-   for(const scene of ['start','s_room','zhu_offer','zhu_reply','menu']) {
-    await page.evaluate(scene=>{state.chronicle.run.scene=scene;state.chronicle.run.rev++;renderGlobal();},scene);
-    const images=page.locator('.cp-story-art img');
-    if(await images.count()) assert(await images.evaluateAll(imgs=>Promise.all(imgs.map(i=>i.decode().then(()=>i.naturalWidth>0)))).then(v=>v.every(Boolean)),'Attachment loads');
-    assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),scene+' mobile layout');
-    await page.locator('#cpMain').screenshot({path:`/tmp/hjm-weekly-${scene}-${width}.png`});
-   }
-  }
-  assert.deepEqual(errors,[]);
-  console.log(`PASS: ${result.count} weekly-flow checks, all six chapters, guards, branches, optional choices, migration/restart, attachment loading, actual reload and desktop/mobile layout.`);
- } finally {await browser.close();}
+  for(const width of [1440,390]){await page.setViewportSize({width,height:1000});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.locator('#cpMain').screenshot({path:`/tmp/hjm-training-hub-${width}.png`});}
+  assert.deepEqual(errors,[]);console.log(`PASS: ${result.count} checks; six continuous openings, late events, training weeks, failed assessment, legacy migration, early endings and layouts.`);
+ }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});
