@@ -139,10 +139,18 @@ function createChronicleViews(ctx) {
             return;
         const signature = [ctx.M().runNo, r.rev, r.scene, r.live?.phase || '', r.ending || '', LalaUI.recap ? 1 : 0, JSON.stringify(state.affinity), state.coins,ctx.M().personal?.active,ctx.M().personal?.rev].join(':');
         if (signature !== ctx.renderSignature || ctx.renderedRun !== r || !$('cpMain')) {
+            // Training redraws on input and on asynchronous playback completion.
+            // Replacing the DOM drops the browser's scroll anchor (notably on iOS).
+            // Restore immediately, before paint; never schedule a later scroll that
+            // could override the player's own scrolling or a subsequent navigation.
+            const position = !ctx.M().personal?.active && ctx.renderedRun === r &&
+                ctx.renderedScene === 'training' && r.scene === 'training' && $('cpMain')
+                ? { left: window.scrollX, top: window.scrollY } : null;
             ctx.renderSignature = signature;
             ctx.renderedRun = r;
             ctx.renderedScene = r.scene;
             render();
+            if (position) window.scrollTo({ ...position, behavior: 'instant' });
         }
         if(ctx.M().personal?.active){ctx.personalPreview();return;}
         if (r.scene === 'shanqiu_closed' && !r.bar.closureSeen && $('modalBackdrop').hidden)
