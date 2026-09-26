@@ -151,7 +151,8 @@ function createChronicleActivities(ctx) {
         ctx.R().battle = { context, hp: 10 + ctx.R().tech, maxHp: 10 + ctx.R().tech, pressure: 14, round: 1, partner: null, over: false, win: false, last: '' };
     }
     function startPartner(k) {
-        if (ctx.R().scene !== 'practice_partner' || !['shiyuan', 'azhe', 'dijie', 'feihong', 'tim', 'yeshiyang', 'lala'].includes(k))
+        const duo=k==='baoshi_feihong'&&ctx.R().flags.feiSide&&(cardOwned('baoshi')||ctx.R().flags.c4bao);
+        if (ctx.R().scene !== 'practice_partner' || !(['shiyuan', 'azhe', 'dijie', 'feihong', 'tim', 'yeshiyang', 'lala'].includes(k)||duo))
             return;
         if (!ctx.R().battle)
             initPractice('intro');
@@ -173,9 +174,9 @@ function createChronicleActivities(ctx) {
             msg = me > 5 ? '状态爆棚，首席都挑了挑眉！' : '手感冰凉，拉呲了一个音……';
         }
         else if (type === 'duet') {
-            const aff = r.aff[b.partner] || 0;
+            const aff = b.partner==='baoshi_feihong'?Math.min(cardBond('baoshi'),cardBond('feihong')):(r.aff[b.partner] || 0);
             me = aff < 3 ? 2 : 6 + aff + Math.floor(Math.random() * 3);
-            msg = aff < 3 ? '默契还不够，合奏有点散。' : ctx.person(b.partner).name + '与你严丝合缝，首席空格的笔停了。';
+            msg = aff < 3 ? '默契还不够，合奏有点散。' : (b.partner==='baoshi_feihong'?'宝石主唱、飞鸿和声，三个声部稳稳合在一起':ctx.person(b.partner).name+'与你严丝合缝，首席空格的笔停了。');
         }
         else
             return;
@@ -191,6 +192,7 @@ function createChronicleActivities(ctx) {
             r.scene = 'practice_result';
             if (b.win) {
                 r.flags.practiceWin = 1;
+                if(b.partner==='baoshi_feihong')r.flags.baoFeiPractice=1;
                 r.level++;
                 const gain = claimEconomy('battle', 3, { daily: true });
                 ctx.reward('audition');

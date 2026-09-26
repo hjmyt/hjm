@@ -14,6 +14,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 20,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -22,7 +23,7 @@ const PERSONAL_ROUTES = {
             "text": "路演前两小时，你路过琴房，听见水声。"
           },
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "阿喆站在洗手台前，面前摆着五个塑料盒。他一颗一颗洗着葡萄和圣女果，洗得极认真，像在擦自己的琴。听到脚步声，他慌忙把盒子往包里塞：「啊、你怎么来了。」"
           }
         ],
@@ -30,6 +31,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「我帮你一起洗。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "sawFruit"
             ],
@@ -38,6 +40,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「洗这么多，给谁呀？」",
             "bond": 1,
+            "score": 0,
             "flags": [
               "sawFruit"
             ],
@@ -46,6 +49,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（假装没看见，退了出去）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "azhe_01d"
           }
@@ -60,11 +64,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "他愣了一下，往旁边让了让：「……水有点凉。」你们并肩洗完了五盒水果。他没说给谁，你也没问。但走的时候，他把最满的那盒塞给了你：「这盒甜。」"
           }
         ],
@@ -72,6 +77,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（收下）",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -86,6 +92,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -102,6 +109,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「你想得真周到。」",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -116,6 +124,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -128,6 +137,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -142,6 +152,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 30,
+          "score": 0,
           "flags": [
             [
               "sawFruit"
@@ -162,6 +173,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「这不是商场送的——是阿喆一颗一颗洗的。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "spokeUp"
             ],
@@ -170,6 +182,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（没说话，默默把自己的水分了一半给阿喆）",
             "bond": 5,
+            "score": 0,
             "flags": [
               "quiet"
             ],
@@ -178,6 +191,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（跟着拿了一把水果）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "azhe_02d"
           }
@@ -192,6 +206,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -204,6 +219,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -218,11 +234,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "阿喆接过水，指尖碰到了你的指尖。他小声说：「……谢谢。」顿了顿又说，「你看到了吧，刚才。洗水果的事。」你没承认也没否认。他笑了笑：「没关系。他们吃得开心就行。」"
           }
         ],
@@ -230,6 +247,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -244,11 +262,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "crowd",
             "text": "那天散场后，你看见阿喆一个人把空盒子都收走了。走在他后面的两个乐手在嘀咕：「阿喆又来路演蹭吃蹭喝，一场不演，吃得倒不少。」他的背影顿了顿，没有回头。"
           }
         ],
@@ -256,6 +275,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -270,6 +290,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 40,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -286,6 +307,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「阿喆每场路演都提前两小时到，设备是他调的，谱是他翻的。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "defended"
             ],
@@ -294,12 +316,14 @@ const PERSONAL_ROUTES = {
           {
             "text": "（饭局散场后追出去找他）",
             "bond": 5,
+            "score": 0,
             "flags": [],
             "next": "azhe_03c"
           },
           {
             "text": "（跟着笑了一声）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "azhe_03d"
           }
@@ -314,6 +338,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -326,6 +351,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -340,11 +366,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "你在便利店门口找到他。他拿着饭团，冲你笑：「你怎么也溜了？」你问他为什么不解释。他捏着饭团想了很久：「解释了，他们就会为了照顾我的心情而愧疚。那比误会更难受。」"
           }
         ],
@@ -352,6 +379,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「那就让知道的人，一直知道。」",
             "bond": 5,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -366,6 +394,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -378,6 +407,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -392,6 +422,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 50,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -404,18 +435,21 @@ const PERSONAL_ROUTES = {
           {
             "text": "（安静地听完，等他睁眼）",
             "bond": 5,
+            "score": 0,
             "flags": [],
             "next": "azhe_04b"
           },
           {
             "text": "「这首叫什么？」",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": "azhe_04c"
           },
           {
             "text": "（不打扰，悄悄离开）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -430,11 +464,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "他睁开眼，看到你，并不意外，像等了很久。「……你听到了啊。」他低头拨了一个音，「这首曲子，我写了三年。一直没敢给别人听。」他抬眼看你，「你是第一个。」"
           }
         ],
@@ -442,6 +477,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（心跳漏了一拍）",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -456,6 +492,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -472,6 +509,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「叫《已清洗，可直接食用》。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "song"
             ],
@@ -480,6 +518,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「叫《没你不行》。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "song"
             ],
@@ -488,6 +527,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「我还没想好……」",
             "bond": 1,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -502,11 +542,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "阿喆愣了两秒，然后笑出了声——是真的笑，肩膀都在抖的那种。「你知道吗，」他擦着眼角，「三年里我设想过一百个名字，这个是我最想不到的。」他把琴抱紧了一点，「……就是它了。」"
           }
         ],
@@ -514,6 +555,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -528,11 +570,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "阿喆的手指停在琴弦上。排练室很静，静到你能听见他的呼吸。「……你学坏了，」他低声说，耳朵却红了，「偷我的口头禅。」他没否认这个名字。没否认，就是答应了。"
           }
         ],
@@ -540,6 +583,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -554,6 +598,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 60,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -570,6 +615,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「阿喆，来一下，谱子有个地方我想请教你。」（拉走他）",
             "bond": 5,
+            "score": 0,
             "flags": [
               "pulled"
             ],
@@ -578,6 +624,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「TIM，介绍对象之前，先记住人家的名字吧。」",
             "bond": 2,
+            "score": 0,
             "flags": [
               "defended"
             ],
@@ -586,6 +633,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（举起杯子，跟着起哄）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "azhe_05d"
           }
@@ -600,11 +648,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "他跟你走出宴会厅，夜风一吹，他忽然站住了。「……谢谢。」他背对着你，声音闷闷的，「不是谢你帮我解围。」他转过身，眼睛在路灯下亮得惊人，「是谢你，看到了。」"
           }
         ],
@@ -612,6 +661,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -626,11 +676,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "tim",
             "text": "TIM 愣了一下，随即大笑：「哈哈哈哈阿喆这么好记的名字！」满桌又笑起来。只有阿喆没笑——他在看你，看了很久，久到 TIM 的手从他肩上滑下来都没察觉。"
           }
         ],
@@ -638,6 +689,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -652,6 +704,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -664,6 +717,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -678,6 +732,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 66,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -686,7 +741,7 @@ const PERSONAL_ROUTES = {
             "text": "剧场演出的那晚，你在侧幕等上场。灯光暗下前，你余光瞥见阿喆抱着你的谱子走过来——他把每一页的谱角都贴了小标签，按顺序排好，还在容易翻乱的第三页夹了荧光条。"
           },
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "「第三页胶水有点松，我加固了。」他把谱子递给你，语气像在汇报工作，「今天风大，舞台边的谱架我压了沙袋。你别担心，专心拉。」"
           },
           {
@@ -698,18 +753,21 @@ const PERSONAL_ROUTES = {
           {
             "text": "（去后台找他）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "azhe_06b"
           },
           {
             "text": "（在原地等他走过来）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "azhe_06c"
           },
           {
             "text": "（没有走向他，独自离开剧场）",
             "bond": 0,
+            "score": 0,
             "flags": [
               "missedStarlight"
             ],
@@ -726,15 +784,16 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "你穿过人群走向他。他还站在原地，像被钉住了。「……零失误。」他先开口，「今天翻谱，零失误。」顿了顿，又补一句：「我是说，我零失误。你拉得……也很好。」"
           },
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "剧场的灯一盏盏暗下去，只有穹顶的星光装饰还亮着，落在他的肩膀上。他忽然说：「其实刚才你在台上的时候，我一直在想——」他停住了，耳朵尖慢慢红透，「……没什么。你饿不饿？后台有水果，我洗过了。」"
           }
         ],
@@ -742,6 +801,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「你又洗水果了。」（笑）",
             "bond": 5,
+            "score": 0,
             "flags": [
               "starlight"
             ],
@@ -750,6 +810,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「你刚才想说什么？」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "starlight"
             ],
@@ -766,6 +827,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -786,6 +848,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（伸手，握住他发抖的手）",
             "bond": 5,
+            "score": 0,
             "flags": [
               "starlight"
             ],
@@ -794,6 +857,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「阿喆，我也是这么觉得的。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "starlight"
             ],
@@ -810,6 +874,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -818,7 +883,7 @@ const PERSONAL_ROUTES = {
             "text": "（他没有抽回手，也没有更进一步，只是站着，像守着一页不敢翻的谱。过了很久，他小声说：）「……这页我能不能，先不翻。」"
           },
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "你懂他的意思。有些话一旦说破，就没有回头页了。星光下你们站了很久，久到保洁阿姨开始扫地。走的时候，他把你送到琴房楼下，从包里摸出一盒洗好的草莓：「今晚的。……晚安。」"
           }
         ],
@@ -826,6 +891,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（抱着草莓上楼）",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -840,6 +906,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 72,
+          "score": 0,
           "flags": [
             [
               "starlight"
@@ -868,18 +935,21 @@ const PERSONAL_ROUTES = {
           {
             "text": "「什么时候走？」",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": "azhe_07b"
           },
           {
             "text": "「你……想好了吗？」",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": "azhe_07b"
           },
           {
             "text": "「哦。挺好的。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "azhe_07b"
           }
@@ -894,6 +964,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -906,6 +977,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「我跟你去杭州。」",
             "bond": 0,
+            "score": 0,
             "flags": [
               "goHZ"
             ],
@@ -914,6 +986,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「我留下。哈基米需要我，你也需要更大的舞台。」",
             "bond": 0,
+            "score": 0,
             "flags": [
               "stay"
             ],
@@ -930,11 +1003,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "你辞掉了这边的一切。走的那天，十元在站台上哭得稀里哗啦，塞给你两盒洗好的水果：「杭州的场子要是欺负你们，就回来！没你不行！」"
           },
           {
@@ -942,11 +1016,11 @@ const PERSONAL_ROUTES = {
             "text": "杭州的生活比想象中难，也比想象中亮。阿喆白天在机构上班，晚上在出租屋的小阳台上给你翻谱——这次，是你找工作的面试稿，他也一页一页贴了标签。"
           },
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "两年后，你们在钱塘江边租了一个带琴房的两居室。阳台很小，刚好放两把椅子。某个周末的傍晚，他洗了一盒葡萄，递给你最满的那盒：「这盒甜。」和当年一模一样。"
           },
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "你偶尔会想起哈基米，想起剧场穹顶的星光。阿喆从身后抱住你：「等攒够了钱，我们回去看演出。买最好的位置——不，买侧幕，侧幕看得清翻谱的人。」"
           }
         ],
@@ -954,6 +1028,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "—— 阿喆线 · TE 完 ——",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -969,6 +1044,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -985,7 +1061,7 @@ const PERSONAL_ROUTES = {
             "text": "第一年，他春节没回来，寄了一盒杭州的糕点，盒底压着一张手写谱——那首《已清洗，可直接食用》的完整版，最后一页是空的，只写了一行字：「这一页，等我们一起写。」"
           },
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "第二年，哈基米接到了剧场的巡演邀请，做大做强。首演那晚，你在侧幕看到一个熟悉的身影——他拎着琴盒，风尘仆仆，冲着目瞪口呆的你扬了扬手里的水果盒：「这盒甜。……我请了年假。以后每次演出，我都来翻谱。」"
           }
         ],
@@ -993,6 +1069,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "走向那个结局",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "azhe_HE"
           }
@@ -1007,6 +1084,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -1023,7 +1101,7 @@ const PERSONAL_ROUTES = {
             "text": "那一页写着你的名字。下面还有一行小字：「已确认，可直接演奏一辈子。」"
           },
           {
-            "who": "narrator",
+            "who": "azhe",
             "text": "他单膝跪下去的时候还在紧张，台词说得颠三倒四，戒指是从琴盒的暗格里拿的——藏了整整两个月。你哭着说「好」的时候，他如释重负地笑了：「这页……我终于敢翻了。」"
           }
         ],
@@ -1031,6 +1109,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "—— 阿喆线 · HE 完 ——",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1046,6 +1125,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 72,
+          "score": 0,
           "flags": [
             [
               "beNote"
@@ -1062,6 +1142,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "—— 阿喆线 · BE 完 ——",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1089,12 +1170,14 @@ const PERSONAL_ROUTES = {
           {
             "text": "「你连这个都记得？」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           },
           {
             "text": "「还行，凑合。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1122,12 +1205,14 @@ const PERSONAL_ROUTES = {
           {
             "text": "「周三晚上八点，为什么别约我？」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           },
           {
             "text": "（假装没看到，心跳如鼓）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1155,12 +1240,14 @@ const PERSONAL_ROUTES = {
           {
             "text": "「……你做了测评表？」（笑出声）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           },
           {
             "text": "「谢谢，很实用。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1188,12 +1275,14 @@ const PERSONAL_ROUTES = {
           {
             "text": "「好啊，下次一起。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           },
           {
             "text": "「你先把自己的翻谱练好吧。」（怼他）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1244,11 +1333,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "ta",
+            "who": "xiaota",
             "text": "商演彩排，小塔的鼓第一个到位。他冲你扬扬手腕上的手串：「鼓要稳，人也是。十元那场被误会之后，我就想——至少我这一拍，永远不拖她的后腿。」"
           },
           {
@@ -1260,6 +1350,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（这就是乐手的浪漫）",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1274,11 +1365,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "yang",
+            "who": "dayang",
             "text": "小乐队的第一次合排，大羊抱着吉他皱眉：「我的 SOLO 段能不能再加四小节？」他顿了顿，压低声音，「……开玩笑的。十元排的版本，挺好的。」"
           },
           {
@@ -1290,6 +1382,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（记下这个反差）",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1304,11 +1397,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "goose",
             "text": "聚会尾声，小周播放了一段视频——是大鹅从外地发来的。画面里的他抱着键盘，弹了一段就停了：「听说你们最近很好。……替我听听十元的新歌，她唱歌其实很好听，就是需要有人信。」"
           },
           {
@@ -1320,6 +1414,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（大鹅人在远方，名字还在）",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1334,11 +1429,12 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 35,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "crowd",
             "text": "那天的排练气氛很僵。一段合唱反复不过，有乐手把谱子摔在谱架上：「十元，你的音根本就没唱准！每次都差半个音，全团陪你耗！」"
           },
           {
@@ -1350,6 +1446,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「我是{{inst}}手，全程都在听——她的音没你们说的那么糟，是这段编曲本身的音域不友好。要改，改谱，不改人。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "helped",
               "instLine"
@@ -1359,6 +1456,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「她每天最后一个走、第一个到。你们见过凌晨的排练室吗？她见过。今天到这吧，我来陪她练这段。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "helped"
             ],
@@ -1367,6 +1465,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（沉默地看着地面）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_01c"
           }
@@ -1381,11 +1480,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "ge",
+            "who": "goose",
             "text": "「好了好了，都少说两句。」大鹅抱着琴走过来，笑着打圆场，「十元的音是不稳，可她拉来的场子、聚起来的人，哪个不稳？排练继续，这段我陪她过。」"
           },
           {
@@ -1397,12 +1497,14 @@ const PERSONAL_ROUTES = {
           {
             "text": "按捺不住，去找大鹅谈谈",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_BE_ge"
           },
           {
             "text": "（今天先到此为止）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1417,11 +1519,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "没有人说话。十元深吸一口气，笑着说「再来一遍吧」，声音却在抖。那天排练到很晚，你不知道她几点走的——因为她走之前，把灯都关了。"
           }
         ],
@@ -1429,6 +1532,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1443,6 +1547,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 45,
+          "score": 0,
           "flags": [
             [
               "acts2"
@@ -1455,7 +1560,7 @@ const PERSONAL_ROUTES = {
             "text": "演出视频火了，火的方式却不对。深夜，一条帖子被顶了上来：《起底某乐团女团长：暧昧管理，靠异性好感上位》。配图是十元和不同男乐手的合照——阿喆的水果、TIM 的勾肩、黄奕兴的车。"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "评论区一夜之间长出獠牙。十元把手机扣在谱架上，笑着说「没事，清者自清」，可那天下午的排练，她拉错了七个音。"
           }
         ],
@@ -1463,6 +1568,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「我发声明。我是{{inst}}手，我天天在场，我作证她是什么样的人。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "voiceUp"
             ],
@@ -1471,12 +1577,14 @@ const PERSONAL_ROUTES = {
           {
             "text": "（什么都不发，先上去陪她）",
             "bond": 5,
+            "score": 0,
             "flags": [],
             "next": "sy_r1c"
           },
           {
             "text": "「清者自清，别理会就好。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_r1d"
           }
@@ -1491,6 +1599,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -1499,7 +1608,7 @@ const PERSONAL_ROUTES = {
             "text": "声明发出去，评论区吵得更凶了——但乐手们一个接一个地转发。小塔：「鼓手小塔，实名。」冰冰：「大提冰冰，实名。」阿喆转了你的声明，配字：「水果是我洗的，话是真的。」"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "风向一点一点变了。深夜，十元给你发来三个字：「看到了。」隔了很久，又发来一句：「有你们，我什么都不怕。」"
           }
         ],
@@ -1507,6 +1616,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1521,11 +1631,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "你在天台上找到她。她抱着膝盖坐着，小声说：「你说，他们为什么就是不信，一个女生可以凭自己把事情做好呢？」"
           },
           {
@@ -1537,6 +1648,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 5,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1551,11 +1663,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "「嗯。」她笑了笑。那之后，她说「没事」的次数越来越多，跟你说话的次数，越来越少。"
           }
         ],
@@ -1563,6 +1676,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1577,6 +1691,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 48,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -1585,7 +1700,7 @@ const PERSONAL_ROUTES = {
             "text": "风波过后那个深夜，你在琴房找到十元。她抱着琴坐在窗台上，脚一晃一晃，没有拉琴，只是抱着。"
           },
           {
-            "who": "narrator",
+            "who": "player",
             "text": "你坐过去陪她。过了一会儿，你问：「十元，你当初……为什么组乐团？」"
           },
           {
@@ -1605,12 +1720,14 @@ const PERSONAL_ROUTES = {
           {
             "text": "「可是……为什么我来了之后，演出机会那么多，你随时能上去混一把，你却从来没上去过？」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_heart_b"
           },
           {
             "text": "「装一下也挺好的，谁不想呢。」",
             "bond": 0,
+            "score": 1,
             "flags": [],
             "next": "sy_heart_c"
           }
@@ -1625,6 +1742,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -1649,6 +1767,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「都替。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "heartCore",
               "soul"
@@ -1666,11 +1785,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "「对吧！」她用力点头，像遇到了知音。可你望着她怀里的琴，总觉得有哪里不对——一个组的团的人，为什么一次都没有为自己拉过琴？"
           }
         ],
@@ -1678,6 +1798,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "目送她抱着琴走远",
             "bond": 1,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1692,11 +1813,12 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 50,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "凌晨一点，你收到十元的一条消息，只有三个字：「你睡了吗」。你回过去，她没再说话。"
           },
           {
@@ -1716,12 +1838,14 @@ const PERSONAL_ROUTES = {
           {
             "text": "（接起电话）「别挂。我在这儿。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_04"
           },
           {
             "text": "（挂断，发消息让她找黄奕兴）",
             "bond": 0,
+            "score": 0,
             "flags": [
               "missedCall"
             ],
@@ -1738,11 +1862,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "player",
             "text": "你打了行字又删掉，最后只发了三个字：「找奕兴。」她回了一个「嗯」。"
           },
           {
@@ -1754,6 +1879,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1768,6 +1894,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -1780,6 +1907,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「电话别挂，我陪你到天亮。」",
             "bond": 0,
+            "score": 0,
             "flags": [
               "comfortOnline"
             ],
@@ -1788,6 +1916,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「把地址发我，我现在过去。」",
             "bond": 0,
+            "score": 0,
             "flags": [
               "comfortHome"
             ],
@@ -1796,6 +1925,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「别睡了，明早我带早餐在你楼下等。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_04c"
           }
@@ -1810,6 +1940,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -1818,7 +1949,7 @@ const PERSONAL_ROUTES = {
             "text": "你们通了一整夜电话。她哭着哭着睡着了，呼吸声轻得像羽毛。你没挂，把手机放在枕边，像守一盏不敢关的灯。"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "清晨六点，她的消息跳出来：「早安！昨晚……谢谢你。我是说，所有的昨晚。」"
           }
         ],
@@ -1826,6 +1957,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "陪她到天亮",
             "bond": 5,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -1840,6 +1972,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -1860,6 +1993,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "把外套披紧一点",
             "bond": 5,
+            "score": 0,
             "flags": [
               "soul"
             ],
@@ -1876,6 +2010,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -1888,6 +2023,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（走向楼道口）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "CHK_COMFORT"
           }
@@ -1902,6 +2038,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -1910,11 +2047,11 @@ const PERSONAL_ROUTES = {
             "text": "她看到你的瞬间，眼睛亮了一下，又迅速红了。你把早餐递过去：「三分糖，去冰，加珍珠——你上次排了四十分钟队的那家。」她捧着奶茶，忽然说：「你怎么连这个都记得……」"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "就在这时，她的手机响了。屏幕上两个字：奕兴。她接起来：「嗯……没事了……对，他来了。」电话那头不知说了什么，她看了你一眼，轻声说：「……我知道啦。你放心。」"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "挂了电话，她冲你吐吐舌头：「他就是这样，朋友也要管东管西。」你没有说话。你听懂了那通电话的分量——也下定了某种决心。"
           }
         ],
@@ -1922,6 +2059,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「趁热喝。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "breakfastOK",
               "huangCall",
@@ -1940,6 +2078,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -1960,6 +2099,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「你照顾好她。」",
             "bond": 1,
+            "score": 0,
             "flags": [
               "metYe"
             ],
@@ -1968,6 +2108,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「她的心意，不该只是被安排好的。」",
             "bond": 2,
+            "score": 0,
             "flags": [
               "metYe"
             ],
@@ -1984,11 +2125,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "huangyx",
             "text": "黄奕兴看了你很久，忽然笑了：「公平竞争，我不拦任何人。」他递给你一张名片，「但记住——对她，要全力以赴。」"
           },
           {
@@ -2000,6 +2142,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -2014,6 +2157,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 55,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2022,7 +2166,7 @@ const PERSONAL_ROUTES = {
             "text": "某个排练到深夜的晚上，你最后一个离开琴房，发现十元趴在谱架上睡着了。弓还攥在手里，谱子压在胳膊底下，嘴角还沾着一点铅笔灰。"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "你轻轻抽走她手里的弓。她皱了皱眉，迷迷糊糊抓住你的袖子：「……别走。这段还没顺完。」"
           },
           {
@@ -2034,6 +2178,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（把外套披在她肩上）",
             "bond": 5,
+            "score": 0,
             "flags": [
               "heartFlutter",
               "soul"
@@ -2043,6 +2188,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（把谱子理好，悄悄离开）",
             "bond": 1,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -2057,6 +2203,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 60,
+          "score": 0,
           "flags": [
             [
               "huangCall"
@@ -2069,7 +2216,7 @@ const PERSONAL_ROUTES = {
             "text": "（排练间隙，她忽然凑过来，小声说：）「上次……奕兴的电话，你都听到了吧。」她绞着手指，「他是很好的人。好到……有时候我会分不清，哪些是喜欢，哪些是习惯。」"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "她抬头看你，眼睛里是少见的认真：「你呢？你对我这么好……是为了什么？」"
           }
         ],
@@ -2077,6 +2224,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「为了你自己知道的答案。」",
             "bond": 0,
+            "score": 0,
             "flags": [
               "rivalOK"
             ],
@@ -2085,6 +2233,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「因为我是你的团员啊。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_05c"
           }
@@ -2099,6 +2248,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2111,6 +2261,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「好。我等你分清楚。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "soul"
             ],
@@ -2127,6 +2278,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2143,6 +2295,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "目送她跑回排练室",
             "bond": 1,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -2157,6 +2310,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 62,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2169,6 +2323,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（走过去，接过她手里的琴：「十元要赶下一场了，大家体谅一下。」）",
             "bond": 5,
+            "score": 0,
             "flags": [
               "wxSave"
             ],
@@ -2177,6 +2332,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（在远处看着，替她捏一把汗）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_wx_c"
           }
@@ -2191,6 +2347,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2203,7 +2360,7 @@ const PERSONAL_ROUTES = {
             "text": "（仰头看你，忽然说：）「刚才……谢谢你。」她顿了顿，「很奇怪。跟你在一起，我就不慌了。」"
           },
           {
-            "who": "narrator",
+            "who": "player",
             "text": "后台的灯很暗。你看着她仰起的脸，听见自己说：「那就一直在一起。」——在心里说的。"
           }
         ],
@@ -2211,6 +2368,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「那就一直在一起。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "soul"
             ],
@@ -2227,11 +2385,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "她自己应付了过去，只是笑容标准得像打印出来的。回程的路上她说：「当光源……真的好累啊。」你没接住这句话。它从车窗的缝里，飘走了。"
           }
         ],
@@ -2239,6 +2398,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "把车窗关好",
             "bond": 1,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -2253,6 +2413,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 70,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2265,6 +2426,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「游乐场。」",
             "bond": 0,
+            "score": 0,
             "flags": [
               "datePark"
             ],
@@ -2273,6 +2435,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「山丘酒吧。」",
             "bond": 0,
+            "score": 0,
             "flags": [
               "dateBar"
             ],
@@ -2281,6 +2444,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「音乐节。」",
             "bond": 0,
+            "score": 0,
             "flags": [
               "dateFest"
             ],
@@ -2297,15 +2461,16 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "她嘴上说「过山车一点都不怕」，排到跟前却死死攥住了你的袖子。下坡的瞬间她尖叫得比谁都大声，下来之后腿软得站不住，却兴奋得眼睛发亮：「再来一次！」"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "黄昏的旋转木马上，她忽然安静下来，看着远处的晚霞：「小时候练琴，我最想来的就是这里。今天总算有人陪我来了。」她回头冲你笑，「谢谢你，{{inst}}手。」"
           }
         ],
@@ -2313,6 +2478,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（在她下木马时伸手接住她）",
             "bond": 5,
+            "score": 0,
             "flags": [],
             "next": "sy_06done"
           }
@@ -2327,6 +2493,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2347,6 +2514,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「现在装的东西，烂不掉。」",
             "bond": 5,
+            "score": 0,
             "flags": [],
             "next": "sy_06done"
           }
@@ -2361,6 +2529,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2369,21 +2538,30 @@ const PERSONAL_ROUTES = {
             "text": "音乐节的人潮里，她拉着你的袖子穿梭在摊位之间，笑得比舞台灯还亮。压轴乐队响起的时候，你们站在很远的外围，她听了一会儿，忽然靠过来，把半张脸埋在你的肩膀里。"
           },
           {
+            "who": "player",
+            "text": "「困了？」你问。"
+          },
+          {
+            "who": "shiyuan",
+            "text": "她摇摇头，声音闷闷的：「没有。就是想靠一下。」"
+          },
+          {
             "who": "narrator",
-            "text": "「困了？」你问。她摇摇头，声音闷闷的：「没有。就是想靠一下。」那首歌唱了七分钟，她靠了七分钟。散场的人流里，谁都没有先动。"
+            "text": "那首歌唱了七分钟，她靠了七分钟。散场的人流里，谁都没有先动。"
           }
         ],
         "choices": [
           {
             "text": "一动不动，任她靠着",
             "bond": 5,
+            "score": 0,
             "flags": [],
             "next": "sy_06done"
           }
         ],
         "asset": "personal_sy_09",
         "memory": "cp7_sy_09",
-        "artText": "音乐节的人潮里，她拉着你的袖子穿梭在摊位之间，笑得比舞台灯还亮。压轴乐队响起的时候，你们站在很远的外围，她听了一会儿，忽然靠过来，把半张脸埋在你的肩膀里。 「困了？」你问。她摇摇头，声音闷闷的：「没有。就是想靠一下。」那首歌唱了七分钟，她靠了七分钟。散场的人流里，谁都没有先动。"
+        "artText": "音乐节的人潮里，她拉着你的袖子穿梭在摊位之间，笑得比舞台灯还亮。压轴乐队响起的时候，你们站在很远的外围，她听了一会儿，忽然靠过来，把半张脸埋在你的肩膀里。 「困了？」你问。 她摇摇头，声音闷闷的：「没有。就是想靠一下。」 那首歌唱了七分钟，她靠了七分钟。散场的人流里，谁都没有先动。"
       },
       {
         "id": "sy_06done",
@@ -2391,11 +2569,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "回程的路上，她哼着歌，忽然说：「今天，很开心。」顿了顿，又小声补了一句，「跟你一起的「今天」，都很开心。」"
           }
         ],
@@ -2403,6 +2582,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「我也是。」",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -2417,6 +2597,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 76,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2437,12 +2618,14 @@ const PERSONAL_ROUTES = {
           {
             "text": "「……你在给大鹅拼礼物？」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_pd_b"
           },
           {
             "text": "（沉默地看着她拼完）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_pd_c"
           }
@@ -2457,6 +2640,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2465,7 +2649,7 @@ const PERSONAL_ROUTES = {
             "text": "（愣住，抬头看你：）「……啊？」她眨眨眼，忽然笑了，「吃醋啦？」"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "她把拼到一半的鹅放到一边，撑着下巴看你：「那你说，不给他拼，给谁拼？」"
           },
           {
@@ -2477,6 +2661,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "心软，拿起豆子：「我陪你一起拼。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "pdHelp",
               "soul"
@@ -2486,6 +2671,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「反正不准给他拼。」",
             "bond": 0,
+            "score": 0,
             "flags": [
               "pdStop"
             ],
@@ -2502,11 +2688,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "你们拼了一下午。那只鹅最后还是完成了，装进盒子，寄去了外地。十元说：「他收到一定很开心。」你笑了笑，没有说话。"
           }
         ],
@@ -2514,6 +2701,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "帮着把包装盒封好",
             "bond": 1,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -2528,6 +2716,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 78,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2556,6 +2745,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（后退一步）「好。那我就站在这儿——刚好是你回头就能看见的地方。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "waitFar"
             ],
@@ -2564,6 +2754,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「我不走。这些话伤不到我，更不该伤到你。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "stayClose"
             ],
@@ -2572,6 +2763,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（转身离开，没有再说话）",
             "bond": 0,
+            "score": 0,
             "flags": [
               "walkAway"
             ],
@@ -2588,11 +2780,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "她愣住了，眼泪一下子掉下来：「……你这个人，怎么这么不听话。」她转身跑上了楼。"
           },
           {
@@ -2604,6 +2797,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -2618,6 +2812,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2638,6 +2833,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 2,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -2652,6 +2848,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2664,6 +2861,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -2678,6 +2876,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 85,
+          "score": 0,
           "flags": [
             [
               "waitFar",
@@ -2687,7 +2886,7 @@ const PERSONAL_ROUTES = {
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "lala",
             "text": "两周后，垃垃私下找你。她说，帖子的源头查过了：水军的账号、拼接的聊天记录——专业得像有备而来，可所有的线走到一半就断了。「有人不想让这件事见光。」她顿了顿，「也可能，是不想让那个人被查出来。」"
           },
           {
@@ -2707,6 +2906,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「我哪都没去。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "notGone",
               "soul"
@@ -2716,6 +2916,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「下次再推开我，我就真的站远一点给你看。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "notGone",
               "soul"
@@ -2733,6 +2934,7 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 86,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2753,6 +2955,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「我帮你复习。乐理和声，包在我身上。」",
             "bond": 5,
+            "score": 0,
             "flags": [
               "examHelp"
             ],
@@ -2761,6 +2964,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「星海太难了，要不……算了吧？」",
             "bond": 0,
+            "score": 0,
             "flags": [
               "noExam"
             ],
@@ -2777,6 +2981,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2797,6 +3002,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "给她朋友圈点了个赞",
             "bond": 1,
+            "score": 0,
             "flags": [],
             "next": "sy_TE2"
           }
@@ -2811,6 +3017,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 87,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2823,6 +3030,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「6/8——它是两个 3/8 合成的，属于复拍子。」",
             "bond": 2,
+            "score": 0,
             "flags": [
               "q1"
             ],
@@ -2831,18 +3039,21 @@ const PERSONAL_ROUTES = {
           {
             "text": "「3/4。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_q1_bad"
           },
           {
             "text": "「2/4。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_q1_bad"
           },
           {
             "text": "「3/8。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_q1_bad"
           }
@@ -2857,6 +3068,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 88,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2877,6 +3089,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "给他也倒杯水",
             "bond": 0,
+            "score": 1,
             "flags": [],
             "next": "sy_q2"
           }
@@ -2891,6 +3104,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 89,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2903,6 +3117,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「do、mi、sol。」",
             "bond": 2,
+            "score": 0,
             "flags": [
               "q2"
             ],
@@ -2911,18 +3126,21 @@ const PERSONAL_ROUTES = {
           {
             "text": "「re、fa、la。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_q2_bad"
           },
           {
             "text": "「mi、sol、si。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_q2_bad"
           },
           {
             "text": "「fa、la、do。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_q2_bad"
           }
@@ -2937,19 +3155,20 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 90,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "宝石突然从门后探出半个脑袋围观。十元头也不抬：「宝石，V 我 50——帮我占卜一下考试运。」"
           },
           {
-            "who": "narrator",
+            "who": "baoshi",
             "text": "宝石盯着自己的手机看了三秒，肉痛地转了 25 块：「……V 你 25。铁公鸡，也要讲基本法。」"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "钱还没捂热，他转身就跑，跑之前还顺走了你的半包饼干。十元对着他的背影喊：「25 的卦象也算数吗！」"
           }
         ],
@@ -2957,6 +3176,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "把饼干钱记他账上",
             "bond": 0,
+            "score": 1,
             "flags": [],
             "next": "sy_q3"
           }
@@ -2971,6 +3191,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 91,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -2983,6 +3204,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「和声连接法。」",
             "bond": 2,
+            "score": 0,
             "flags": [
               "q3"
             ],
@@ -2991,18 +3213,21 @@ const PERSONAL_ROUTES = {
           {
             "text": "「旋律连接法。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_q3_bad"
           },
           {
             "text": "「跳进。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_q3_bad"
           },
           {
             "text": "「同和弦转换。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_q3_bad"
           }
@@ -3017,6 +3242,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 92,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3029,7 +3255,7 @@ const PERSONAL_ROUTES = {
             "text": "十元被挤在谱架前继续背题，雪子把吸管插好递到她嘴边，宝石和飞鸿为一小节和声争得面红耳赤。你看着这一屋子人，忽然觉得——她想要的乐团，大概就是这个样子。"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "散场后，十元悄悄拉住你：「等考完，我请你们所有人吃饭。……第一个请。」"
           }
         ],
@@ -3037,6 +3263,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "把这句话记下来",
             "bond": 0,
+            "score": 1,
             "flags": [],
             "next": "sy_career"
           }
@@ -3051,11 +3278,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "考试那天，十元穿着你陪她挑的白衬衫，紧张得手心冒汗。进考场前，她忽然转身抱住你，飞快地说：「考完请我吃奶茶！」"
           },
           {
@@ -3067,6 +3295,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "请她喝了杯奶茶",
             "bond": 5,
+            "score": 0,
             "flags": [
               "soul"
             ],
@@ -3083,6 +3312,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 93,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3103,6 +3333,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「干。」",
             "bond": 0,
+            "score": 0,
             "flags": [
               "startup"
             ],
@@ -3111,6 +3342,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "「不了。我想把重心放在乐团和她身上。」",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_career_no"
           }
@@ -3125,6 +3357,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3141,6 +3374,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 0,
+            "score": 2,
             "flags": [],
             "next": "sy_juggle"
           }
@@ -3155,6 +3389,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3171,6 +3406,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续）",
             "bond": 1,
+            "score": 0,
             "flags": [],
             "next": "sy_qdone"
           }
@@ -3185,6 +3421,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 94,
+          "score": 0,
           "flags": [
             [
               "startup"
@@ -3213,6 +3450,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "点赞",
             "bond": 5,
+            "score": 3,
             "flags": [
               "seenWork",
               "soul"
@@ -3222,6 +3460,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "回复（记住seenWork）（记住soul）（大旗+3）（去REPLY）",
             "bond": 5,
+            "score": 0,
             "flags": [],
             "next": "sy_reply"
           }
@@ -3236,15 +3475,16 @@ const PERSONAL_ROUTES = {
         "sub": false,
         "need": {
           "bond": 95,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "巡演庆功宴那晚，十元被灌了几杯果酒，脸红红的，在露台上看星星。你走过去，她冲你张开手臂：「{{inst}}手！你看，今天的星星——每一颗都是我们的观众！」"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "风把她的头发吹乱了。她忽然安静下来，看着你说：「我有时候会觉得，自己何德何能，能让你们都在我身边。」"
           },
           {
@@ -3256,15 +3496,19 @@ const PERSONAL_ROUTES = {
           {
             "text": "「十元，我喜欢你。」",
             "bond": 0,
+            "score": 0,
             "flags": [
               "confessed"
             ],
             "next": null
           },
           {
-            "text": "「……星星真好看。」",
+            "text": "「十元，我们继续一起组乐团吧。」",
             "bond": 0,
-            "flags": [],
+            "score": 0,
+            "flags": [
+              "syFriend"
+            ],
             "next": "sy_10wait"
           }
         ],
@@ -3278,11 +3522,12 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "她看了你两秒，笑着点头：「嗯！真好看！」她不知道你咽回去的是什么。"
           },
           {
@@ -3294,6 +3539,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "—— TE · 没说出口 ——",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -3309,6 +3555,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3321,7 +3568,7 @@ const PERSONAL_ROUTES = {
             "text": "（带着哭腔笑：）「你知道吗，我等这句话，等得比练音准还久。」她吸吸鼻子，「奕兴那边……我会亲口说清楚。他值得一个真心喜欢他的人，而不是一个需要「兜底」的我。」"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "她从口袋里掏出两张票——游乐场的，山丘的，音乐节的，用过的，整齐的，每一张背面都写着日期。「我都留着。」她把票塞进你手心，「以后的每一张，也都一起吧。」"
           }
         ],
@@ -3329,6 +3576,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "—— 十元线 · HE 完 ——",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -3344,15 +3592,16 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "你表白了。十元没有拒绝，也没有答应。她只是很认真地说：「让我想想。这一次，我想想清楚——为我自己想清楚。」"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "后来她把全部的力气都给了乐团。哈基米越来越好，好到她的名字出现在每一张海报的最前面。偶尔在庆功宴上碰杯，她还是会笑着说「没你不行」——只是这一次，你懂了，那真的是「团员」的意思。"
           }
         ],
@@ -3360,6 +3609,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "—— 十元线 · TE 完 ——",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -3375,15 +3625,16 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "player",
             "text": "你还是去找了大鹅。开门见山：「团里都在传——你喜不喜欢十元？」"
           },
           {
-            "who": "ge",
+            "who": "goose",
             "text": "（他怔了一下，随即笑了，笑得意味不明：）「哈？我怎么会喜欢她那种人呢。」他摆摆手，「别闹了。」"
           },
           {
@@ -3391,7 +3642,7 @@ const PERSONAL_ROUTES = {
             "text": "你以为这就是答案，转身走了。你没有看见，你身后，大鹅盯着你的背影看了很久——然后掏出手机，在群里发了一条消息。"
           },
           {
-            "who": "narrator",
+            "who": "lala",
             "text": "三天后，十元看你的眼神变了。她还是笑着，只是不再单独叫你的名字。垃垃欲言又止，最终只问了半句：「你……去找过大鹅？」"
           },
           {
@@ -3411,6 +3662,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "—— 十元线 · BE 完 ——",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -3426,6 +3678,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3438,7 +3691,7 @@ const PERSONAL_ROUTES = {
             "text": "两年后，你们的乐团巡演到广州。演出结束，你在后台看见她——她站在走廊那头，身边还是那个永远体面的身影。"
           },
           {
-            "who": "narrator",
+            "who": "shiyuan",
             "text": "她冲你挥手，笑得和从前一样：「没你不行呀。」你还是笑了。只是你知道，「没你不行」这四个字，从此有很多种说法。"
           }
         ],
@@ -3446,6 +3699,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "—— 十元线 · TE 完 ——",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -3461,6 +3715,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3481,6 +3736,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "—— 十元线 · BE 完 ——",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": null
           }
@@ -3496,6 +3752,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3508,6 +3765,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续复习）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_i1"
           }
@@ -3522,6 +3780,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3534,6 +3793,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续复习）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_i1"
           }
@@ -3548,6 +3808,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3560,6 +3821,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续复习）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_i2"
           }
@@ -3574,6 +3836,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3586,6 +3849,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续复习）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_i2"
           }
@@ -3600,6 +3864,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3612,6 +3877,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续复习）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_i3"
           }
@@ -3626,6 +3892,7 @@ const PERSONAL_ROUTES = {
         "sub": true,
         "need": {
           "bond": 0,
+          "score": 0,
           "flags": []
         },
         "lines": [
@@ -3638,6 +3905,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（继续复习）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_i3"
           }
@@ -3656,7 +3924,7 @@ const PERSONAL_ROUTES = {
         },
         "lines": [
           {
-            "who": "narrator",
+            "who": "player",
             "text": "你回复：「{{reply}}」\n十元秒回了三个感叹号，外加一个冲拳的表情。"
           }
         ],
@@ -3664,6 +3932,7 @@ const PERSONAL_ROUTES = {
           {
             "text": "（收起手机，继续陪她备考）",
             "bond": 0,
+            "score": 0,
             "flags": [],
             "next": "sy_qdone"
           }
@@ -3673,7 +3942,1748 @@ const PERSONAL_ROUTES = {
         "artText": "你回复：「{{reply}}」\n十元秒回了三个感叹号，外加一个冲拳的表情。"
       }
     ]
+  },
+  "baoshi_feihong": {
+    "id": "baoshi_feihong",
+    "name": "宝石×飞鸿",
+    "tagline": "大旗扇起来，别让两个笨蛋走散",
+    "asset": "cardBaoshi",
+    "nodes": [
+      {
+        "id": "cp_00",
+        "title": "入线 · 山丘的驻唱",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 10,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "山丘的驻唱计划定下来了——每晚九点到十一点，两把吉他，一支话筒。"
+          },
+          {
+            "who": "narrator",
+            "text": "驻唱的是两个人：飞鸿，高音能唱到 High C 的小镇青年；宝石，天然呆主唱，少年音干净得像山泉。他们搭档了小半年，好得像一个人。"
+          },
+          {
+            "who": "shiyuan",
+            "text": "（凑到你耳边，压低声音：）「驻唱的这两个，你不觉得……」她话说到一半，自己先笑了，「没什么，当我没说。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「我懂，我来扛旗。」",
+            "bond": 0,
+            "score": 3,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "「啥？不明所以。」",
+            "bond": 0,
+            "score": 1,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_00",
+        "memory": "cp7_cp_00",
+        "artText": "山丘的驻唱计划定下来了——每晚九点到十一点，两把吉他，一支话筒。 驻唱的是两个人：飞鸿，高音能唱到 High C 的小镇青年；宝石，天然呆主唱，少年音干净得像山泉。他们搭档了小半年，好得像一个人。 （凑到你耳边，压低声音：）「驻唱的这两个，你不觉得……」她话说到一半，自己先笑了，「没什么，当我没说。」",
+        "pageArt": [
+          {
+            "id": "cp_00",
+            "asset": "personal_cp_00",
+            "memory": "cp7_cp_00",
+            "text": "山丘的驻唱计划定下来了——每晚九点到十一点，两把吉他，一支话筒。\n\n驻唱的是两个人：飞鸿，高音能唱到 High C 的小镇青年；宝石，天然呆主唱，少年音干净得像山泉。他们搭档了小半年，好得像一个人。 （凑到你耳边，压低声音：）「驻唱的这两个，你不觉得……」她话说到一半，自己先笑了，「没什么，当我没说。」",
+            "prompt": "山丘的驻唱计划定下来了——每晚九点到十一点，两把吉他，一支话筒。\n\n驻唱的是两个人：飞鸿，高音能唱到 High C 的小镇青年；宝石，天然呆主唱，少年音干净得像山泉。他们搭档了小半年，好得像一个人。 （凑到你耳边，压低声音：）「驻唱的这两个，你不觉得……」她话说到一半，自己先笑了，「没什么，当我没说。」"
+          }
+        ]
+      },
+      {
+        "id": "cp_00b",
+        "title": "入队 · 530的邀请",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 12,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "宝石和飞鸿本来只是山丘的驻唱。两个人性格单纯，跟十元混得极好——好到十元每次来山丘，都能白蹭一首歌。"
+          },
+          {
+            "who": "shiyuan",
+            "text": "（某个晚上，她听完歌，把杯子往桌上一放：）「你俩，来我们乐团吧！」她掰着手指头，「530 专场，就缺一个干净的主唱，和一个不抢戏的和声！」"
+          },
+          {
+            "who": "baoshi",
+            "text": "（眼睛一亮，转头看飞鸿：）「去吗去吗？」"
+          },
+          {
+            "who": "feihong",
+            "text": "（看着那双亮晶晶的眼睛，把「再想想」咽了回去：）「……去。」"
+          },
+          {
+            "who": "narrator",
+            "text": "很多年后你才知道，这一个「去」字，把两个人的命运拧在了一起。当然，彼时的他们都以为，只是去唱一场演出。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "默默扫码预约530观众席位",
+            "bond": 0,
+            "score": 2,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_00b",
+        "memory": "cp7_cp_00b",
+        "artText": "宝石和飞鸿本来只是山丘的驻唱。两个人性格单纯，跟十元混得极好——好到十元每次来山丘，都能白蹭一首歌。 （某个晚上，她听完歌，把杯子往桌上一放：）「你俩，来我们乐团吧！」她掰着手指头，「530 专场，就缺一个干净的主唱，和一个不抢戏的和声！」 （眼睛一亮，转头看飞鸿：）「去吗去吗？」 （看着那双亮晶晶的眼睛，把「再想想」咽了回去：）「……去。」 很多年后你才知道，这一个「去」字，把两个人的命运拧在了一起。当然，彼时的他们都以为，只是去唱一场演出。",
+        "pageArt": [
+          {
+            "id": "cp_00b",
+            "asset": "personal_cp_00b",
+            "memory": "cp7_cp_00b",
+            "text": "宝石和飞鸿本来只是山丘的驻唱。两个人性格单纯，跟十元混得极好——好到十元每次来山丘，都能白蹭一首歌。 （某个晚上，她听完歌，把杯子往桌上一放：）「你俩，来我们乐团吧！」她掰着手指头，「530 专场，就缺一个干净的主唱，和一个不抢戏的和声！」",
+            "prompt": "宝石和飞鸿本来只是山丘的驻唱。两个人性格单纯，跟十元混得极好——好到十元每次来山丘，都能白蹭一首歌。 （某个晚上，她听完歌，把杯子往桌上一放：）「你俩，来我们乐团吧！」她掰着手指头，「530 专场，就缺一个干净的主唱，和一个不抢戏的和声！」"
+          },
+          {
+            "id": "cp_00b_page2",
+            "asset": "personal_cp_00b_page2",
+            "memory": "cp7_cp_00b_page2",
+            "text": "（眼睛一亮，转头看飞鸿：）「去吗去吗？」 （看着那双亮晶晶的眼睛，把「再想想」咽了回去：）「……去。」",
+            "prompt": "剧情分镜《入队 · 530的邀请》的第 2 幕：（眼睛一亮，转头看飞鸿：）「去吗去吗？」 （看着那双亮晶晶的眼睛，把「再想想」咽了回去：）「……去。」"
+          },
+          {
+            "id": "cp_00b_page3",
+            "asset": "personal_cp_00b_page3",
+            "memory": "cp7_cp_00b_page3",
+            "text": "很多年后你才知道，这一个「去」字，把两个人的命运拧在了一起。当然，彼时的他们都以为，只是去唱一场演出。",
+            "prompt": "剧情分镜《入队 · 530的邀请》的第 3 幕：很多年后你才知道，这一个「去」字，把两个人的命运拧在了一起。当然，彼时的他们都以为，只是去唱一场演出。"
+          }
+        ]
+      },
+      {
+        "id": "cp_01",
+        "title": "相熟 · 白切黑计划",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 15,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "你很快发现，飞鸿对宝石的态度很奇怪。他总在观察宝石——点单时故意报错、排练时故意出错，像在测试什么。"
+          },
+          {
+            "who": "narrator",
+            "text": "某天后台，你终于问出口。飞鸿压低声音，一脸「我早看穿了」的表情："
+          },
+          {
+            "who": "feihong",
+            "text": "「你不觉得吗？他那个天然呆，是装的。这世上哪有二十多岁还这么单纯的人？我试探他半个月了——白切黑，绝对是白切黑。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「赌一顿夜宵，他是真的天然。」",
+            "bond": 0,
+            "score": 0,
+            "flags": [
+              "push1"
+            ],
+            "next": "cp_01b"
+          },
+          {
+            "text": "「你说得对，我也觉得他在装。」",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": "cp_01c"
+          }
+        ],
+        "asset": "personal_cp_01",
+        "memory": "cp7_cp_01",
+        "artText": "你很快发现，飞鸿对宝石的态度很奇怪。他总在观察宝石——点单时故意报错、排练时故意出错，像在测试什么。 某天后台，你终于问出口。飞鸿压低声音，一脸「我早看穿了」的表情： 「你不觉得吗？他那个天然呆，是装的。这世上哪有二十多岁还这么单纯的人？我试探他半个月了——白切黑，绝对是白切黑。」",
+        "pageArt": [
+          {
+            "id": "cp_01",
+            "asset": "personal_cp_01",
+            "memory": "cp7_cp_01",
+            "text": "你很快发现，飞鸿对宝石的态度很奇怪。他总在观察宝石——点单时故意报错、排练时故意出错，像在测试什么。\n\n某天后台，你终于问出口。飞鸿压低声音，一脸「我早看穿了」的表情： 「你不觉得吗？他那个天然呆，是装的。这世上哪有二十多岁还这么单纯的人？我试探他半个月了——白切黑，绝对是白切黑。」",
+            "prompt": "你很快发现，飞鸿对宝石的态度很奇怪。他总在观察宝石——点单时故意报错、排练时故意出错，像在测试什么。\n\n某天后台，你终于问出口。飞鸿压低声音，一脸「我早看穿了」的表情： 「你不觉得吗？他那个天然呆，是装的。这世上哪有二十多岁还这么单纯的人？我试探他半个月了——白切黑，绝对是白切黑。」"
+          }
+        ]
+      },
+      {
+        "id": "cp_01b",
+        "title": "相熟 · 白切黑计划",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "baoshi",
+            "text": "那晚收工，你亲眼目睹了史上最强翻车现场：宝石把飞鸿故意报错的三杯饮品，原封不动按「错」的拿了，还认真地说：「你要的半糖去冰，我没记错呀。」"
+          },
+          {
+            "who": "feihong",
+            "text": "（端着那杯错误的饮品，僵在原地，声音越来越小：）「……他连『将计就计』都不会吗。」他咬了咬牙，「长这么大，第一次见到这么单纯的人。」"
+          },
+          {
+            "who": "narrator",
+            "text": "夜宵你赢了。但飞鸿输得魂不守舍——他嘟囔了一整晚「这么可爱的宝石，想象不到谁会压力他」。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "笑而不语，深藏功与名",
+            "bond": 0,
+            "score": 3,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "「飞鸿，你不觉得你太在意宝石了吗？」",
+            "bond": 0,
+            "score": 3,
+            "flags": [
+              "push1"
+            ],
+            "next": null
+          },
+          {
+            "text": "「哎哟喂，你俩组上CP了。」",
+            "bond": 0,
+            "score": 1,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_01b",
+        "memory": "cp7_cp_01b",
+        "artText": "那晚收工，你亲眼目睹了史上最强翻车现场：宝石把飞鸿故意报错的三杯饮品，原封不动按「错」的拿了，还认真地说：「你要的半糖去冰，我没记错呀。」 （端着那杯错误的饮品，僵在原地，声音越来越小：）「……他连『将计就计』都不会吗。」他咬了咬牙，「长这么大，第一次见到这么单纯的人。」 夜宵你赢了。但飞鸿输得魂不守舍——他嘟囔了一整晚「这么可爱的宝石，想象不到谁会压力他」。",
+        "pageArt": [
+          {
+            "id": "cp_01b",
+            "asset": "personal_cp_01b",
+            "memory": "cp7_cp_01b",
+            "text": "那晚收工，你亲眼目睹了史上最强翻车现场：宝石把飞鸿故意报错的三杯饮品，原封不动按「错」的拿了，还认真地说：「你要的半糖去冰，我没记错呀。」 （端着那杯错误的饮品，僵在原地，声音越来越小：）「……他连『将计就计』都不会吗。」他咬了咬牙，「长这么大，第一次见到这么单纯的人。」",
+            "prompt": "那晚收工，你亲眼目睹了史上最强翻车现场：宝石把飞鸿故意报错的三杯饮品，原封不动按「错」的拿了，还认真地说：「你要的半糖去冰，我没记错呀。」 （端着那杯错误的饮品，僵在原地，声音越来越小：）「……他连『将计就计』都不会吗。」他咬了咬牙，「长这么大，第一次见到这么单纯的人。」"
+          },
+          {
+            "id": "cp_01b_page2",
+            "asset": "personal_cp_01b_page2",
+            "memory": "cp7_cp_01b_page2",
+            "text": "夜宵你赢了。但飞鸿输得魂不守舍——他嘟囔了一整晚「这么可爱的宝石，想象不到谁会压力他」。",
+            "prompt": "剧情分镜《相熟 · 白切黑计划》的第 2 幕：夜宵你赢了。但飞鸿输得魂不守舍——他嘟囔了一整晚「这么可爱的宝石，想象不到谁会压力他」。"
+          }
+        ]
+      },
+      {
+        "id": "cp_01c",
+        "title": "相熟 · 白切黑计划",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "你选择了站在飞鸿这边。于是你们俩组了「反宝石白切黑联盟」，设计了更精密的测试。结果一个都没用——宝石每次都认真地掉进陷阱里，还担心你们摔得疼不疼。"
+          },
+          {
+            "who": "feihong",
+            "text": "一个月后联盟自动解散。飞鸿退盟那天说：「我认输。他不是装的，他是真的。」说完这句话，他自己愣了很久，像是在消化什么。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "联盟解散，各回各家",
+            "bond": 0,
+            "score": 1,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_01c",
+        "memory": "cp7_cp_01c",
+        "artText": "你选择了站在飞鸿这边。于是你们俩组了「反宝石白切黑联盟」，设计了更精密的测试。结果一个都没用——宝石每次都认真地掉进陷阱里，还担心你们摔得疼不疼。 一个月后联盟自动解散。飞鸿退盟那天说：「我认输。他不是装的，他是真的。」说完这句话，他自己愣了很久，像是在消化什么。",
+        "pageArt": [
+          {
+            "id": "cp_01c",
+            "asset": "personal_cp_01c",
+            "memory": "cp7_cp_01c",
+            "text": "你选择了站在飞鸿这边。于是你们俩组了「反宝石白切黑联盟」，设计了更精密的测试。结果一个都没用——宝石每次都认真地掉进陷阱里，还担心你们摔得疼不疼。 一个月后联盟自动解散。飞鸿退盟那天说：「我认输。他不是装的，他是真的。」说完这句话，他自己愣了很久，像是在消化什么。",
+            "prompt": "你选择了站在飞鸿这边。于是你们俩组了「反宝石白切黑联盟」，设计了更精密的测试。结果一个都没用——宝石每次都认真地掉进陷阱里，还担心你们摔得疼不疼。 一个月后联盟自动解散。飞鸿退盟那天说：「我认输。他不是装的，他是真的。」说完这句话，他自己愣了很久，像是在消化什么。"
+          }
+        ]
+      },
+      {
+        "id": "cp_00c",
+        "title": "530 · 被掐掉的SOLO",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 18,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "530 专场，后台兵荒马乱。原定流程里有大羊的一段吉他 SOLO——结果宝石天然呆发作，数错了小节，提前开唱，把那段 SOLO 整个「掐」了过去。"
+          },
+          {
+            "who": "dayang",
+            "text": "（下台后抱着吉他，阴阳怪气：）「哟，咱们主唱真厉害。三十二个小节的 SOLO，唱两个字就给我掐了。下次要不要我连琴都不用带？」"
+          },
+          {
+            "who": "baoshi",
+            "text": "宝石还没反应过来这是在说他，认真地点头：「你要不想带，我可以帮你背！」大羊被噎得差点背过气。"
+          },
+          {
+            "who": "feihong",
+            "text": "（往前一步，挡在宝石前面，声音不大：）「他数错了，是他不对。」他顿了顿，「但刚才台下喊安可的时候，喊的是全团的名字。大羊，你的 SOLO 是亮点，他的嗓音也是。530 不是一个人的专场。」"
+          },
+          {
+            "who": "narrator",
+            "text": "大羊张了张嘴，没说出话，甩头走了。宝石从飞鸿身后探出脑袋。"
+          },
+          {
+            "who": "baoshi",
+            "text": "「飞鸿，你刚才好帅。」"
+          },
+          {
+            "who": "narrator",
+            "text": "飞鸿的耳根腾地红了。"
+          },
+          {
+            "who": "feihong",
+            "text": "「……闭嘴，背你的词去。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "默默跟着小乐队蹭了一顿宵夜",
+            "bond": 0,
+            "score": 3,
+            "flags": [
+              "push1"
+            ],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_00c",
+        "memory": "cp7_cp_00c",
+        "artText": "530 专场，后台兵荒马乱。原定流程里有大羊的一段吉他 SOLO——结果宝石天然呆发作，数错了小节，提前开唱，把那段 SOLO 整个「掐」了过去。 （下台后抱着吉他，阴阳怪气：）「哟，咱们主唱真厉害。三十二个小节的 SOLO，唱两个字就给我掐了。下次要不要我连琴都不用带？」 宝石还没反应过来这是在说他，认真地点头：「你要不想带，我可以帮你背！」大羊被噎得差点背过气。 （往前一步，挡在宝石前面，声音不大：）「他数错了，是他不对。」他顿了顿，「但刚才台下喊安可的时候，喊的是全团的名字。大羊，你的 SOLO 是亮点，他的嗓音也是。530 不是一个人的专场。」 ",
+        "pageArt": [
+          {
+            "id": "cp_00c",
+            "asset": "personal_cp_00c",
+            "memory": "cp7_cp_00c",
+            "text": "530 专场，后台兵荒马乱。原定流程里有大羊的一段吉他 SOLO——结果宝石天然呆发作，数错了小节，提前开唱，把那段 SOLO 整个「掐」了过去。 （下台后抱着吉他，阴阳怪气：）「哟，咱们主唱真厉害。三十二个小节的 SOLO，唱两个字就给我掐了。下次要不要我连琴都不用带？」",
+            "prompt": "530 专场，后台兵荒马乱。原定流程里有大羊的一段吉他 SOLO——结果宝石天然呆发作，数错了小节，提前开唱，把那段 SOLO 整个「掐」了过去。 （下台后抱着吉他，阴阳怪气：）「哟，咱们主唱真厉害。三十二个小节的 SOLO，唱两个字就给我掐了。下次要不要我连琴都不用带？」"
+          },
+          {
+            "id": "cp_00c_page2",
+            "asset": "personal_cp_00c_page2",
+            "memory": "cp7_cp_00c_page2",
+            "text": "宝石还没反应过来这是在说他，认真地点头：「你要不想带，我可以帮你背！」大羊被噎得差点背过气。 （往前一步，挡在宝石前面，声音不大：）「他数错了，是他不对。」他顿了顿，「但刚才台下喊安可的时候，喊的是全团的名字。大羊，你的 SOLO 是亮点，他的嗓音也是。530 不是一个人的专场。」",
+            "prompt": "剧情分镜《530 · 被掐掉的SOLO》的第 2 幕：宝石还没反应过来这是在说他，认真地点头：「你要不想带，我可以帮你背！」大羊被噎得差点背过气。 （往前一步，挡在宝石前面，声音不大：）「他数错了，是他不对。」他顿了顿，「但刚才台下喊安可的时候，喊的是全团的名字。大羊，你的 SOLO 是亮点，他的嗓音也是。530 不是一个人的专场。」"
+          },
+          {
+            "id": "cp_00c_page3",
+            "asset": "personal_cp_00c_page3",
+            "memory": "cp7_cp_00c_page3",
+            "text": "大羊张了张嘴，没说出话，甩头走了。宝石从飞鸿身后探出脑袋。 「飞鸿，你刚才好帅。」",
+            "prompt": "剧情分镜《530 · 被掐掉的SOLO》的第 3 幕：大羊张了张嘴，没说出话，甩头走了。宝石从飞鸿身后探出脑袋。 「飞鸿，你刚才好帅。」"
+          },
+          {
+            "id": "cp_00c_page4",
+            "asset": "personal_cp_00c_page4",
+            "memory": "cp7_cp_00c_page4",
+            "text": "飞鸿的耳根腾地红了。 「……闭嘴，背你的词去。」",
+            "prompt": "剧情分镜《530 · 被掐掉的SOLO》的第 4 幕：飞鸿的耳根腾地红了。 「……闭嘴，背你的词去。」"
+          }
+        ]
+      },
+      {
+        "id": "cp_02",
+        "title": "互动 · 铁公鸡请客",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 24,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "相处久了，你发现宝石有个习惯：无论吃什么，都偷偷留一口给飞鸿。烤红薯留最甜的尖，盒饭里的鸡腿永远完整——他藏得很拙劣，飞鸿每次都「恰好」发现。"
+          },
+          {
+            "who": "feihong",
+            "text": "宝石出了名地抠。团员 AA 他精确到毛，奶茶只蹭别人的。可那天飞鸿随口开了句玩笑：「宝石，赚了钱也不请兄弟吃一顿？」"
+          },
+          {
+            "who": "baoshi",
+            "text": "（认真想了想，一咬牙：）「请！」"
+          },
+          {
+            "who": "baoshi",
+            "text": "他真的请了。人均六十的牛排馆，他自己点了最便宜的意面，把牛排推给飞鸿：「这个月……只能请你吃这个了。下个月发了驻唱的钱，再请你吃好的。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "餐厅角落，认出两个熟悉的身影——哎呀这不是宝石飞鸿吗？默默换了张桌子，偷听他们说话",
+            "bond": 0,
+            "score": 3,
+            "flags": [
+              "foodShare"
+            ],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_02",
+        "memory": "cp7_cp_02",
+        "artText": "相处久了，你发现宝石有个习惯：无论吃什么，都偷偷留一口给飞鸿。烤红薯留最甜的尖，盒饭里的鸡腿永远完整——他藏得很拙劣，飞鸿每次都「恰好」发现。 宝石出了名地抠。团员 AA 他精确到毛，奶茶只蹭别人的。可那天飞鸿随口开了句玩笑：「宝石，赚了钱也不请兄弟吃一顿？」 （认真想了想，一咬牙：）「请！」 他真的请了。人均六十的牛排馆，他自己点了最便宜的意面，把牛排推给飞鸿：「这个月……只能请你吃这个了。下个月发了驻唱的钱，再请你吃好的。」",
+        "pageArt": [
+          {
+            "id": "cp_02",
+            "asset": "personal_cp_02",
+            "memory": "cp7_cp_02",
+            "text": "相处久了，你发现宝石有个习惯：无论吃什么，都偷偷留一口给飞鸿。烤红薯留最甜的尖，盒饭里的鸡腿永远完整——他藏得很拙劣，飞鸿每次都「恰好」发现。 宝石出了名地抠。团员 AA 他精确到毛，奶茶只蹭别人的。可那天飞鸿随口开了句玩笑：「宝石，赚了钱也不请兄弟吃一顿？」",
+            "prompt": "相处久了，你发现宝石有个习惯：无论吃什么，都偷偷留一口给飞鸿。烤红薯留最甜的尖，盒饭里的鸡腿永远完整——他藏得很拙劣，飞鸿每次都「恰好」发现。 宝石出了名地抠。团员 AA 他精确到毛，奶茶只蹭别人的。可那天飞鸿随口开了句玩笑：「宝石，赚了钱也不请兄弟吃一顿？」"
+          },
+          {
+            "id": "cp_02_page2",
+            "asset": "personal_cp_02_page2",
+            "memory": "cp7_cp_02_page2",
+            "text": "（认真想了想，一咬牙：）「请！」\n\n他真的请了。人均六十的牛排馆，他自己点了最便宜的意面，把牛排推给飞鸿：「这个月……只能请你吃这个了。下个月发了驻唱的钱，再请你吃好的。」",
+            "prompt": "剧情分镜《互动 · 铁公鸡请客》的第 2 幕：（认真想了想，一咬牙：）「请！」\n\n他真的请了。人均六十的牛排馆，他自己点了最便宜的意面，把牛排推给飞鸿：「这个月……只能请你吃这个了。下个月发了驻唱的钱，再请你吃好的。」"
+          }
+        ]
+      },
+      {
+        "id": "cp_03x",
+        "title": "心疼 · 牛排与捉迷藏",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 26,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "那晚吃到最后，飞鸿随口问起宝石家里是做什么的——他一直以为，宝石是哪个富家公子哥出来体验生活。宝石的叉子停了停，难得地安静了几秒。"
+          },
+          {
+            "who": "baoshi",
+            "text": "（欲言又止，最后还是说了。语气还是平时那副没心没肺的调子，只是慢了些：）「我不是什么公子哥。我是跟奶奶长大的。」他戳了戳盘子里的意面，「她最近……身体不太好。」"
+          },
+          {
+            "who": "narrator",
+            "text": "开朗的眼眸里，落下一丝愁绪。快得像错觉，可你看见飞鸿的手顿在了半空。"
+          },
+          {
+            "who": "narrator",
+            "text": "飞鸿忽然觉得，胸口流过一丝异样。他抬手抚住胸口，又觉得这个动作弱弱的，讪讪放下。可这感觉，似曾相识——"
+          },
+          {
+            "who": "narrator",
+            "text": "小时候跟伙伴玩捉迷藏，轮到他躲。他找了个最隐蔽的地方，想着谁都找不到自己。一分钟……两分钟……半小时。等他终于按捺不住冲出来，兴奋地大喊「哈哈，你们都输啦」——月光下的操场，一个人都没有了。小伙伴们见找不着他，各自散了。那时候的他心里，就是这种感觉。只是那时的他不明白，原来这种感觉，叫难过。"
+          },
+          {
+            "who": "baoshi",
+            "text": "（他先开了口，笑嘻嘻地把盘子往前一推：）「哎呀，你别这样。也没啥大不了的。牛排不吃我吃啦？」"
+          },
+          {
+            "who": "narrator",
+            "text": "飞鸿第一次没有跟他抢。他只是似笑非笑地看着宝石，把牛排推了回去。"
+          },
+          {
+            "who": "feihong",
+            "text": "「给你。以后……都给你。」"
+          },
+          {
+            "who": "baoshi",
+            "text": "（眼睛都亮了：）「真的啊？！哈哈，你说的啊，骗人是小狗！」"
+          },
+          {
+            "who": "narrator",
+            "text": "宝石的眼睛本来就有些下垂，这会儿亮晶晶的，像一只比熊。飞鸿觉得自己心跳漏了一拍，随即警铃大作——"
+          },
+          {
+            "who": "narrator",
+            "text": "（我别是有病吧。）他面无表情地扒了口意面。（对着个哥们，我心动个屁。）"
+          },
+          {
+            "who": "narrator",
+            "text": "彼时的他还不明白，有一种心跳，意味着情谊明媚。只觉得心，有点疼。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "CP粉泪目——一定要把大旗扛稳",
+            "bond": 0,
+            "score": 4,
+            "flags": [
+              "heartStruck"
+            ],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_03x",
+        "memory": "cp7_cp_03x",
+        "artText": "那晚吃到最后，飞鸿随口问起宝石家里是做什么的——他一直以为，宝石是哪个富家公子哥出来体验生活。宝石的叉子停了停，难得地安静了几秒。 （欲言又止，最后还是说了。语气还是平时那副没心没肺的调子，只是慢了些：）「我不是什么公子哥。我是跟奶奶长大的。」他戳了戳盘子里的意面，「她最近……身体不太好。」 开朗的眼眸里，落下一丝愁绪。快得像错觉，可你看见飞鸿的手顿在了半空。 飞鸿忽然觉得，胸口流过一丝异样。他抬手抚住胸口，又觉得这个动作弱弱的，讪讪放下。可这感觉，似曾相识—— 小时候跟伙伴玩捉迷藏，轮到他躲。他找了个最隐蔽的地方，想着谁都找不到自己。一分钟……两分钟…",
+        "pageArt": [
+          {
+            "id": "cp_03x",
+            "asset": "personal_cp_03x",
+            "memory": "cp7_cp_03x",
+            "text": "那晚吃到最后，飞鸿随口问起宝石家里是做什么的——他一直以为，宝石是哪个富家公子哥出来体验生活。宝石的叉子停了停，难得地安静了几秒。 （欲言又止，最后还是说了。语气还是平时那副没心没肺的调子，只是慢了些：）「我不是什么公子哥。我是跟奶奶长大的。」他戳了戳盘子里的意面，「她最近……身体不太好。」",
+            "prompt": "那晚吃到最后，飞鸿随口问起宝石家里是做什么的——他一直以为，宝石是哪个富家公子哥出来体验生活。宝石的叉子停了停，难得地安静了几秒。 （欲言又止，最后还是说了。语气还是平时那副没心没肺的调子，只是慢了些：）「我不是什么公子哥。我是跟奶奶长大的。」他戳了戳盘子里的意面，「她最近……身体不太好。」"
+          },
+          {
+            "id": "cp_03x_page2",
+            "asset": "personal_cp_03x_page2",
+            "memory": "cp7_cp_03x_page2",
+            "text": "开朗的眼眸里，落下一丝愁绪。快得像错觉，可你看见飞鸿的手顿在了半空。\n\n飞鸿忽然觉得，胸口流过一丝异样。他抬手抚住胸口，又觉得这个动作弱弱的，讪讪放下。可这感觉，似曾相识——\n\n小时候跟伙伴玩捉迷藏，轮到他躲。他找了个最隐蔽的地方，想着谁都找不到自己。一分钟……两分钟……半小时。等他终于按捺不住冲出来，兴奋地大喊「哈哈，你们都输啦」——月光下的操场，一个人都没有了。小伙伴们见找不着他，各自散了。那时候的他心里，就是这种感觉。只是那时的他不明白，原来这种感觉，叫难过。 （他先开了口，笑嘻嘻地把盘子往前一推：）「哎呀，你别这样。也没啥大不了的。牛排不吃我吃啦",
+            "prompt": "剧情分镜《心疼 · 牛排与捉迷藏》的第 2 幕：开朗的眼眸里，落下一丝愁绪。快得像错觉，可你看见飞鸿的手顿在了半空。\n\n飞鸿忽然觉得，胸口流过一丝异样。他抬手抚住胸口，又觉得这个动作弱弱的，讪讪放下。可这感觉，似曾相识——\n\n小时候跟伙伴玩捉迷藏，轮到他躲。他找了个最隐蔽的地方，想着谁都找不到自己。一分钟……两分钟……半小时。等他终于按捺不住冲出来，兴奋地大喊「哈哈，你们都输啦」——月光下的操场，一个人都没有了。小伙伴们见找不着他，各自散了。那时候的他心里，就是这种感觉。只是那时的他不明白，原来这种感觉，叫难过。 （他先开了口，笑嘻嘻地把盘子往前一推：）「哎呀，你别这样。也没啥大不了的。牛排不吃我吃啦？」"
+          },
+          {
+            "id": "cp_03x_page3",
+            "asset": "personal_cp_03x_page3",
+            "memory": "cp7_cp_03x_page3",
+            "text": "飞鸿第一次没有跟他抢。他只是似笑非笑地看着宝石，把牛排推了回去。 「给你。以后……都给你。」",
+            "prompt": "剧情分镜《心疼 · 牛排与捉迷藏》的第 3 幕：飞鸿第一次没有跟他抢。他只是似笑非笑地看着宝石，把牛排推了回去。 「给你。以后……都给你。」"
+          },
+          {
+            "id": "cp_03x_page4",
+            "asset": "personal_cp_03x_page4",
+            "memory": "cp7_cp_03x_page4",
+            "text": "（眼睛都亮了：）「真的啊？！哈哈，你说的啊，骗人是小狗！」 宝石的眼睛本来就有些下垂，这会儿亮晶晶的，像一只比熊。飞鸿觉得自己心跳漏了一拍，随即警铃大作——\n\n（我别是有病吧。）他面无表情地扒了口意面。（对着个哥们，我心动个屁。）\n\n彼时的他还不明白，有一种心跳，意味着情谊明媚。只觉得心，有点疼。",
+            "prompt": "剧情分镜《心疼 · 牛排与捉迷藏》的第 4 幕：（眼睛都亮了：）「真的啊？！哈哈，你说的啊，骗人是小狗！」 宝石的眼睛本来就有些下垂，这会儿亮晶晶的，像一只比熊。飞鸿觉得自己心跳漏了一拍，随即警铃大作——\n\n（我别是有病吧。）他面无表情地扒了口意面。（对着个哥们，我心动个屁。）\n\n彼时的他还不明白，有一种心跳，意味着情谊明媚。只觉得心，有点疼。"
+          }
+        ]
+      },
+      {
+        "id": "cp_03",
+        "title": "相知 · 柠檬水",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 28,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "那顿饭之后，飞鸿对宝石更好了——好得不动声色。上台前的柠檬水永远温度刚好，定曲子的时候永远提前扒好调，和声永远垫在主音下面三度，恰到好处，从不喧宾夺主。"
+          },
+          {
+            "who": "narrator",
+            "text": "有天深夜你在山丘收东西，撞见飞鸿一个人对着手机傻笑。你凑过去一看——相册里全是宝石：唱歌的、发呆的、啃苹果的、睡着的。"
+          },
+          {
+            "who": "feihong",
+            "text": "（被发现他也不躲，反而把手机举给你看，理直气壮：）「你们不觉得宝石这样很可爱吗？」他顿了顿，补了一句，「宝石真的好可爱。」"
+          },
+          {
+            "who": "feihong",
+            "text": "你正想调侃，他忽然收起手机，望着台上的方向，轻声说：「小镇上出来的人，最怕欠人东西。他对我好一次，我就想还十次。可是越还……越算不清了。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「那你就别算了。」",
+            "bond": 0,
+            "score": 3,
+            "flags": [],
+            "next": "cp_03b"
+          },
+          {
+            "text": "「你那是想还吗？我都不好意思拆穿你。」",
+            "bond": 0,
+            "score": 4,
+            "flags": [
+              "push1"
+            ],
+            "next": "cp_03b"
+          }
+        ],
+        "asset": "personal_cp_03",
+        "memory": "cp7_cp_03",
+        "artText": "那顿饭之后，飞鸿对宝石更好了——好得不动声色。上台前的柠檬水永远温度刚好，定曲子的时候永远提前扒好调，和声永远垫在主音下面三度，恰到好处，从不喧宾夺主。 有天深夜你在山丘收东西，撞见飞鸿一个人对着手机傻笑。你凑过去一看——相册里全是宝石：唱歌的、发呆的、啃苹果的、睡着的。 （被发现他也不躲，反而把手机举给你看，理直气壮：）「你们不觉得宝石这样很可爱吗？」他顿了顿，补了一句，「宝石真的好可爱。」 你正想调侃，他忽然收起手机，望着台上的方向，轻声说：「小镇上出来的人，最怕欠人东西。他对我好一次，我就想还十次。可是越还……越算不清了。」",
+        "pageArt": [
+          {
+            "id": "cp_03",
+            "asset": "personal_cp_03",
+            "memory": "cp7_cp_03",
+            "text": "那顿饭之后，飞鸿对宝石更好了——好得不动声色。上台前的柠檬水永远温度刚好，定曲子的时候永远提前扒好调，和声永远垫在主音下面三度，恰到好处，从不喧宾夺主。\n\n有天深夜你在山丘收东西，撞见飞鸿一个人对着手机傻笑。你凑过去一看——相册里全是宝石：唱歌的、发呆的、啃苹果的、睡着的。 （被发现他也不躲，反而把手机举给你看，理直气壮：）「你们不觉得宝石这样很可爱吗？」他顿了顿，补了一句，「宝石真的好可爱。」\n\n你正想调侃，他忽然收起手机，望着台上的方向，轻声说：「小镇上出来的人，最怕欠人东西。他对我好一次，我就想还十次。可是越还……越算不清了。」",
+            "prompt": "那顿饭之后，飞鸿对宝石更好了——好得不动声色。上台前的柠檬水永远温度刚好，定曲子的时候永远提前扒好调，和声永远垫在主音下面三度，恰到好处，从不喧宾夺主。\n\n有天深夜你在山丘收东西，撞见飞鸿一个人对着手机傻笑。你凑过去一看——相册里全是宝石：唱歌的、发呆的、啃苹果的、睡着的。 （被发现他也不躲，反而把手机举给你看，理直气壮：）「你们不觉得宝石这样很可爱吗？」他顿了顿，补了一句，「宝石真的好可爱。」\n\n你正想调侃，他忽然收起手机，望着台上的方向，轻声说：「小镇上出来的人，最怕欠人东西。他对我好一次，我就想还十次。可是越还……越算不清了。」"
+          }
+        ]
+      },
+      {
+        "id": "cp_03b",
+        "title": "相知 · 柠檬水",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "feihong",
+            "text": "（被你噎了一下，却没反驳。他低头摆弄了一会儿吉他弦，忽然说：）「你说，一个人要是开始心疼另一个人——是不是就不对劲了？」"
+          },
+          {
+            "who": "narrator",
+            "text": "他没有等你回答，抱起吉他上了台。那晚他的和声比任何一次都温柔，温柔得不像衬托，像守护。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "默默录下了这晚的歌声",
+            "bond": 0,
+            "score": 2,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_03b",
+        "memory": "cp7_cp_03b",
+        "artText": "（被你噎了一下，却没反驳。他低头摆弄了一会儿吉他弦，忽然说：）「你说，一个人要是开始心疼另一个人——是不是就不对劲了？」 他没有等你回答，抱起吉他上了台。那晚他的和声比任何一次都温柔，温柔得不像衬托，像守护。",
+        "pageArt": [
+          {
+            "id": "cp_03b",
+            "asset": "personal_cp_03b",
+            "memory": "cp7_cp_03b",
+            "text": "（被你噎了一下，却没反驳。他低头摆弄了一会儿吉他弦，忽然说：）「你说，一个人要是开始心疼另一个人——是不是就不对劲了？」 他没有等你回答，抱起吉他上了台。那晚他的和声比任何一次都温柔，温柔得不像衬托，像守护。",
+            "prompt": "（被你噎了一下，却没反驳。他低头摆弄了一会儿吉他弦，忽然说：）「你说，一个人要是开始心疼另一个人——是不是就不对劲了？」 他没有等你回答，抱起吉他上了台。那晚他的和声比任何一次都温柔，温柔得不像衬托，像守护。"
+          }
+        ]
+      },
+      {
+        "id": "cp_04",
+        "title": "雪子 · 铁三角",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 38,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "要说宝石和飞鸿的搭档里缺了谁都不行，那一定是雪子——长发，键盘手，山丘的常客。他最初只是个粉丝，场场演出不落，后来混成了工作人员，再后来，干脆自己上了台。"
+          },
+          {
+            "who": "xuezi",
+            "text": "三个人成了铁三角：宝石唱，飞鸿和声，雪子的键盘把两个人的声音缝在一起。团员打趣他们是「山丘三宝」，雪子总是摆摆手：「别，我是来加入这个家的。」"
+          },
+          {
+            "who": "narrator",
+            "text": "雪子对宝石的好，大大方方，从不遮掩——可谁都看得出，那是哥们式的好，仗义，坦荡，没有杂质。你一度以为这条线里最大的变量会是他，后来才发现，变量从来只有一个。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "去跟雪子谈谈",
+            "bond": 0,
+            "score": 0,
+            "flags": [
+              "xueziOK"
+            ],
+            "next": "cp_04talk"
+          },
+          {
+            "text": "默默观察",
+            "bond": 0,
+            "score": 2,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_04",
+        "memory": "cp7_cp_04",
+        "artText": "要说宝石和飞鸿的搭档里缺了谁都不行，那一定是雪子——长发，键盘手，山丘的常客。他最初只是个粉丝，场场演出不落，后来混成了工作人员，再后来，干脆自己上了台。 三个人成了铁三角：宝石唱，飞鸿和声，雪子的键盘把两个人的声音缝在一起。团员打趣他们是「山丘三宝」，雪子总是摆摆手：「别，我是来加入这个家的。」 雪子对宝石的好，大大方方，从不遮掩——可谁都看得出，那是哥们式的好，仗义，坦荡，没有杂质。你一度以为这条线里最大的变量会是他，后来才发现，变量从来只有一个。",
+        "pageArt": [
+          {
+            "id": "cp_04",
+            "asset": "personal_cp_04",
+            "memory": "cp7_cp_04",
+            "text": "要说宝石和飞鸿的搭档里缺了谁都不行，那一定是雪子——长发，键盘手，山丘的常客。他最初只是个粉丝，场场演出不落，后来混成了工作人员，再后来，干脆自己上了台。 三个人成了铁三角：宝石唱，飞鸿和声，雪子的键盘把两个人的声音缝在一起。团员打趣他们是「山丘三宝」，雪子总是摆摆手：「别，我是来加入这个家的。」",
+            "prompt": "要说宝石和飞鸿的搭档里缺了谁都不行，那一定是雪子——长发，键盘手，山丘的常客。他最初只是个粉丝，场场演出不落，后来混成了工作人员，再后来，干脆自己上了台。 三个人成了铁三角：宝石唱，飞鸿和声，雪子的键盘把两个人的声音缝在一起。团员打趣他们是「山丘三宝」，雪子总是摆摆手：「别，我是来加入这个家的。」"
+          },
+          {
+            "id": "cp_04_page2",
+            "asset": "personal_cp_04_page2",
+            "memory": "cp7_cp_04_page2",
+            "text": "雪子对宝石的好，大大方方，从不遮掩——可谁都看得出，那是哥们式的好，仗义，坦荡，没有杂质。你一度以为这条线里最大的变量会是他，后来才发现，变量从来只有一个。",
+            "prompt": "剧情分镜《雪子 · 铁三角》的第 2 幕：雪子对宝石的好，大大方方，从不遮掩——可谁都看得出，那是哥们式的好，仗义，坦荡，没有杂质。你一度以为这条线里最大的变量会是他，后来才发现，变量从来只有一个。"
+          }
+        ]
+      },
+      {
+        "id": "cp_04talk",
+        "title": "雪子言叶",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "散场后，你在后台堵住了雪子。他抱着键盘，长发扎成一束，见你来也不意外。"
+          },
+          {
+            "who": "player",
+            "text": "你决定贴脸开大：「你是不是喜欢宝石。」"
+          },
+          {
+            "who": "xuezi",
+            "text": "（他想都没想：）「谁不喜欢宝石呢？」"
+          },
+          {
+            "who": "player",
+            "text": "「呵呵……」你冷笑了一声，没接话。"
+          },
+          {
+            "who": "xuezi",
+            "text": "（他沉默了几秒，忽然笑了，看着远处正在收拾话筒的宝石：）「一开始，是有点吧。」他把键盘包背好，语气轻下来，「但是后来我想明白了——太阳照到你，不是真的为你一个人发光。我恰好路过，晒到了，仅此而已。」"
+          },
+          {
+            "who": "xuezi",
+            "text": "（他转过头看你，眼睛很亮：）「宝石……他不明白这些。所以，别让他输。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "（雪子言叶，大旗+3）",
+            "bond": 0,
+            "score": 0,
+            "flags": [
+              "snowWords"
+            ],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_04talk",
+        "memory": "cp7_cp_04talk",
+        "artText": "散场后，你在后台堵住了雪子。他抱着键盘，长发扎成一束，见你来也不意外。 你决定贴脸开大：「你是不是喜欢宝石。」 （他想都没想：）「谁不喜欢宝石呢？」 「呵呵……」你冷笑了一声，没接话。 （他沉默了几秒，忽然笑了，看着远处正在收拾话筒的宝石：）「一开始，是有点吧。」他把键盘包背好，语气轻下来，「但是后来我想明白了——太阳照到你，不是真的为你一个人发光。我恰好路过，晒到了，仅此而已。」 （他转过头看你，眼睛很亮：）「宝石……他不明白这些。所以，别让他输。」",
+        "pageArt": [
+          {
+            "id": "cp_04talk",
+            "asset": "personal_cp_04talk",
+            "memory": "cp7_cp_04talk",
+            "text": "散场后，你在后台堵住了雪子。他抱着键盘，长发扎成一束，见你来也不意外。 你决定贴脸开大：「你是不是喜欢宝石。」",
+            "prompt": "散场后，你在后台堵住了雪子。他抱着键盘，长发扎成一束，见你来也不意外。 你决定贴脸开大：「你是不是喜欢宝石。」"
+          },
+          {
+            "id": "cp_04talk_page2",
+            "asset": "personal_cp_04talk_page2",
+            "memory": "cp7_cp_04talk_page2",
+            "text": "（他想都没想：）「谁不喜欢宝石呢？」 「呵呵……」你冷笑了一声，没接话。",
+            "prompt": "剧情分镜《雪子言叶》的第 2 幕：（他想都没想：）「谁不喜欢宝石呢？」 「呵呵……」你冷笑了一声，没接话。"
+          },
+          {
+            "id": "cp_04talk_page3",
+            "asset": "personal_cp_04talk_page3",
+            "memory": "cp7_cp_04talk_page3",
+            "text": "（他沉默了几秒，忽然笑了，看着远处正在收拾话筒的宝石：）「一开始，是有点吧。」他把键盘包背好，语气轻下来，「但是后来我想明白了——太阳照到你，不是真的为你一个人发光。我恰好路过，晒到了，仅此而已。」\n\n（他转过头看你，眼睛很亮：）「宝石……他不明白这些。所以，别让他输。」",
+            "prompt": "剧情分镜《雪子言叶》的第 3 幕：（他沉默了几秒，忽然笑了，看着远处正在收拾话筒的宝石：）「一开始，是有点吧。」他把键盘包背好，语气轻下来，「但是后来我想明白了——太阳照到你，不是真的为你一个人发光。我恰好路过，晒到了，仅此而已。」\n\n（他转过头看你，眼睛很亮：）「宝石……他不明白这些。所以，别让他输。」"
+          }
+        ]
+      },
+      {
+        "id": "cp_05",
+        "title": "非醋 · 鞋带",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 48,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "xuezi",
+            "text": "铁三角的默契也有出差错的时候。那天演出前，宝石的鞋带散了，蹲下去系了两次都没系好——雪子看不过去，单膝一蹲，两下给他系了个漂亮的结，还拍了拍他的鞋面：「行了，上台吧。」"
+          },
+          {
+            "who": "narrator",
+            "text": "全程不到十秒。全后台没人觉得有问题——除了飞鸿。"
+          },
+          {
+            "who": "narrator",
+            "text": "你看见飞鸿盯着那个鞋带结看了三秒，转身进了消防通道。你追过去，他正对着墙，拿额头轻轻磕着墙皮，念念有词："
+          },
+          {
+            "who": "feihong",
+            "text": "「我去，都是哥们，你不爽个屁。」他磕了一下，又补一句，「人家帮忙系个鞋带，你在这演什么内心戏。」再磕一下，「……飞鸿，你清醒一点。」"
+          },
+          {
+            "who": "feihong",
+            "text": "你清了清嗓子。他猛地回头，一秒切换成无事发生：「我没事。我就是……就是来背歌词的。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「背歌词需要拿头磕墙吗？」",
+            "bond": 0,
+            "score": 2,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "「我什么都没看见。」（憋笑离开）",
+            "bond": 0,
+            "score": 3,
+            "flags": [
+              "push1"
+            ],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_05",
+        "memory": "cp7_cp_05",
+        "artText": "铁三角的默契也有出差错的时候。那天演出前，宝石的鞋带散了，蹲下去系了两次都没系好——雪子看不过去，单膝一蹲，两下给他系了个漂亮的结，还拍了拍他的鞋面：「行了，上台吧。」 全程不到十秒。全后台没人觉得有问题——除了飞鸿。 你看见飞鸿盯着那个鞋带结看了三秒，转身进了消防通道。你追过去，他正对着墙，拿额头轻轻磕着墙皮，念念有词： 「我去，都是哥们，你不爽个屁。」他磕了一下，又补一句，「人家帮忙系个鞋带，你在这演什么内心戏。」再磕一下，「……飞鸿，你清醒一点。」 你清了清嗓子。他猛地回头，一秒切换成无事发生：「我没事。我就是……就是来背歌词的。」",
+        "pageArt": [
+          {
+            "id": "cp_05",
+            "asset": "personal_cp_05",
+            "memory": "cp7_cp_05",
+            "text": "铁三角的默契也有出差错的时候。那天演出前，宝石的鞋带散了，蹲下去系了两次都没系好——雪子看不过去，单膝一蹲，两下给他系了个漂亮的结，还拍了拍他的鞋面：「行了，上台吧。」 全程不到十秒。全后台没人觉得有问题——除了飞鸿。\n\n你看见飞鸿盯着那个鞋带结看了三秒，转身进了消防通道。你追过去，他正对着墙，拿额头轻轻磕着墙皮，念念有词：",
+            "prompt": "铁三角的默契也有出差错的时候。那天演出前，宝石的鞋带散了，蹲下去系了两次都没系好——雪子看不过去，单膝一蹲，两下给他系了个漂亮的结，还拍了拍他的鞋面：「行了，上台吧。」 全程不到十秒。全后台没人觉得有问题——除了飞鸿。\n\n你看见飞鸿盯着那个鞋带结看了三秒，转身进了消防通道。你追过去，他正对着墙，拿额头轻轻磕着墙皮，念念有词："
+          },
+          {
+            "id": "cp_05_page2",
+            "asset": "personal_cp_05_page2",
+            "memory": "cp7_cp_05_page2",
+            "text": "「我去，都是哥们，你不爽个屁。」他磕了一下，又补一句，「人家帮忙系个鞋带，你在这演什么内心戏。」再磕一下，「……飞鸿，你清醒一点。」\n\n你清了清嗓子。他猛地回头，一秒切换成无事发生：「我没事。我就是……就是来背歌词的。」",
+            "prompt": "剧情分镜《非醋 · 鞋带》的第 2 幕：「我去，都是哥们，你不爽个屁。」他磕了一下，又补一句，「人家帮忙系个鞋带，你在这演什么内心戏。」再磕一下，「……飞鸿，你清醒一点。」\n\n你清了清嗓子。他猛地回头，一秒切换成无事发生：「我没事。我就是……就是来背歌词的。」"
+          }
+        ]
+      },
+      {
+        "id": "cp_06",
+        "title": "团建 · 巴士",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 56,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "就这样，又过了一段时间。乐团外出团建，大巴去邻市。宝石晕车，一上车就坐到了第一排靠窗。飞鸿晚几个站才上车，拎着两袋零食，上车第一眼就找到了那个靠窗的脑袋。"
+          },
+          {
+            "who": "feihong",
+            "text": "（走到宝石旁边，刚要开口：）「晕车吗——」"
+          },
+          {
+            "who": "xuezi",
+            "text": "话音未落，雪子从前门上了车，步子轻快，径直坐在了宝石旁边的空位上：「巧了，我也晕车，咱俩正好作伴。」"
+          },
+          {
+            "who": "narrator",
+            "text": "飞鸿僵在过道里。你看见他的手在半空停了停，最终转身坐到了后排——全程目视前方，一动不动，像一座装了发动机的雕塑。"
+          },
+          {
+            "who": "narrator",
+            "text": "回程时天色晚了，雪子去了后排跟大塔聊天。飞鸿立刻起身，在宝石旁边坐下，动作快得像抢拍的鼓点。宝石迷迷糊糊睁开眼。"
+          },
+          {
+            "who": "baoshi",
+            "text": "「你没晕车呀？」"
+          },
+          {
+            "who": "narrator",
+            "text": "飞鸿把外套披到他肩上。"
+          },
+          {
+            "who": "feihong",
+            "text": "「睡了就闭嘴。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "（坐他们后排，全程姨母笑）",
+            "bond": 0,
+            "score": 2,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "（对十元发消息：「旗要成了」）",
+            "bond": 0,
+            "score": 3,
+            "flags": [
+              "push2"
+            ],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_06",
+        "memory": "cp7_cp_06",
+        "artText": "就这样，又过了一段时间。乐团外出团建，大巴去邻市。宝石晕车，一上车就坐到了第一排靠窗。飞鸿晚几个站才上车，拎着两袋零食，上车第一眼就找到了那个靠窗的脑袋。 （走到宝石旁边，刚要开口：）「晕车吗——」 话音未落，雪子从前门上了车，步子轻快，径直坐在了宝石旁边的空位上：「巧了，我也晕车，咱俩正好作伴。」 飞鸿僵在过道里。你看见他的手在半空停了停，最终转身坐到了后排——全程目视前方，一动不动，像一座装了发动机的雕塑。 回程时天色晚了，雪子去了后排跟大塔聊天。飞鸿立刻起身，在宝石旁边坐下，动作快得像抢拍的鼓点。宝石迷迷糊糊睁开眼。 「你没晕车呀？」 飞鸿把外套披",
+        "pageArt": [
+          {
+            "id": "cp_06",
+            "asset": "personal_cp_06",
+            "memory": "cp7_cp_06",
+            "text": "就这样，又过了一段时间。乐团外出团建，大巴去邻市。宝石晕车，一上车就坐到了第一排靠窗。飞鸿晚几个站才上车，拎着两袋零食，上车第一眼就找到了那个靠窗的脑袋。 （走到宝石旁边，刚要开口：）「晕车吗——」",
+            "prompt": "就这样，又过了一段时间。乐团外出团建，大巴去邻市。宝石晕车，一上车就坐到了第一排靠窗。飞鸿晚几个站才上车，拎着两袋零食，上车第一眼就找到了那个靠窗的脑袋。 （走到宝石旁边，刚要开口：）「晕车吗——」"
+          },
+          {
+            "id": "cp_06_page2",
+            "asset": "personal_cp_06_page2",
+            "memory": "cp7_cp_06_page2",
+            "text": "话音未落，雪子从前门上了车，步子轻快，径直坐在了宝石旁边的空位上：「巧了，我也晕车，咱俩正好作伴。」 飞鸿僵在过道里。你看见他的手在半空停了停，最终转身坐到了后排——全程目视前方，一动不动，像一座装了发动机的雕塑。\n\n回程时天色晚了，雪子去了后排跟大塔聊天。飞鸿立刻起身，在宝石旁边坐下，动作快得像抢拍的鼓点。宝石迷迷糊糊睁开眼。",
+            "prompt": "剧情分镜《团建 · 巴士》的第 2 幕：话音未落，雪子从前门上了车，步子轻快，径直坐在了宝石旁边的空位上：「巧了，我也晕车，咱俩正好作伴。」 飞鸿僵在过道里。你看见他的手在半空停了停，最终转身坐到了后排——全程目视前方，一动不动，像一座装了发动机的雕塑。\n\n回程时天色晚了，雪子去了后排跟大塔聊天。飞鸿立刻起身，在宝石旁边坐下，动作快得像抢拍的鼓点。宝石迷迷糊糊睁开眼。"
+          },
+          {
+            "id": "cp_06_page3",
+            "asset": "personal_cp_06_page3",
+            "memory": "cp7_cp_06_page3",
+            "text": "「你没晕车呀？」 飞鸿把外套披到他肩上。",
+            "prompt": "剧情分镜《团建 · 巴士》的第 3 幕：「你没晕车呀？」 飞鸿把外套披到他肩上。"
+          },
+          {
+            "id": "cp_06_page4",
+            "asset": "personal_cp_06_page4",
+            "memory": "cp7_cp_06_page4",
+            "text": "「睡了就闭嘴。」",
+            "prompt": "剧情分镜《团建 · 巴士》的第 4 幕：「睡了就闭嘴。」"
+          }
+        ]
+      },
+      {
+        "id": "cp_07",
+        "title": "悸动 · 摩天轮",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 64,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "歌友会大获成功。散场后十元提议去坐摩天轮，说要「团建收尾」。然后她拉着你和众人，在轿厢分配上做了这辈子最精彩的一次调度——宝石和飞鸿，单独一个轿厢。"
+          },
+          {
+            "who": "narrator",
+            "text": "你隔着玻璃看见：小小的轿厢里，宝石贴着窗看夜景，飞鸿看着他。城市的灯一点点升上来，落到两个人的眼睛里。"
+          },
+          {
+            "who": "narrator",
+            "text": "下来的时候，宝石的脸有点红，说是闷的。飞鸿走在他后面半步，手一直虚虚地护在他身后，护了一路，什么也没碰。"
+          },
+          {
+            "who": "shiyuan",
+            "text": "（凑过来跟你咬耳朵，眼睛亮晶晶：）「看到没有！那个半步！那个虚护！」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「我看到了！大旗我来扛！」",
+            "bond": 0,
+            "score": 4,
+            "flags": [
+              "push2"
+            ],
+            "next": null
+          },
+          {
+            "text": "（拍照留念）",
+            "bond": 0,
+            "score": 2,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_07",
+        "memory": "cp7_cp_07",
+        "artText": "歌友会大获成功。散场后十元提议去坐摩天轮，说要「团建收尾」。然后她拉着你和众人，在轿厢分配上做了这辈子最精彩的一次调度——宝石和飞鸿，单独一个轿厢。 你隔着玻璃看见：小小的轿厢里，宝石贴着窗看夜景，飞鸿看着他。城市的灯一点点升上来，落到两个人的眼睛里。 下来的时候，宝石的脸有点红，说是闷的。飞鸿走在他后面半步，手一直虚虚地护在他身后，护了一路，什么也没碰。 （凑过来跟你咬耳朵，眼睛亮晶晶：）「看到没有！那个半步！那个虚护！」",
+        "pageArt": [
+          {
+            "id": "cp_07",
+            "asset": "personal_cp_07",
+            "memory": "cp7_cp_07",
+            "text": "歌友会大获成功。散场后十元提议去坐摩天轮，说要「团建收尾」。然后她拉着你和众人，在轿厢分配上做了这辈子最精彩的一次调度——宝石和飞鸿，单独一个轿厢。\n\n你隔着玻璃看见：小小的轿厢里，宝石贴着窗看夜景，飞鸿看着他。城市的灯一点点升上来，落到两个人的眼睛里。\n\n下来的时候，宝石的脸有点红，说是闷的。飞鸿走在他后面半步，手一直虚虚地护在他身后，护了一路，什么也没碰。 （凑过来跟你咬耳朵，眼睛亮晶晶：）「看到没有！那个半步！那个虚护！」",
+            "prompt": "歌友会大获成功。散场后十元提议去坐摩天轮，说要「团建收尾」。然后她拉着你和众人，在轿厢分配上做了这辈子最精彩的一次调度——宝石和飞鸿，单独一个轿厢。\n\n你隔着玻璃看见：小小的轿厢里，宝石贴着窗看夜景，飞鸿看着他。城市的灯一点点升上来，落到两个人的眼睛里。\n\n下来的时候，宝石的脸有点红，说是闷的。飞鸿走在他后面半步，手一直虚虚地护在他身后，护了一路，什么也没碰。 （凑过来跟你咬耳朵，眼睛亮晶晶：）「看到没有！那个半步！那个虚护！」"
+          }
+        ]
+      },
+      {
+        "id": "cp_08",
+        "title": "挑明前夜 · 递刀",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 72,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "歌友会之后，飞鸿变得很奇怪。他排练老走神，看宝石的眼神像看一道解不出来的和弦。周四深夜，他把你约到山丘后门，抽了半根烟——他不会抽，呛得直咳嗽。"
+          },
+          {
+            "who": "feihong",
+            "text": "（终于开口：）「我受不了了。」他盯着自己的鞋尖，「雪子天天在他旁边，他还傻乎乎地什么都感觉不到。我……我想跟他挑明。」"
+          },
+          {
+            "who": "narrator",
+            "text": "他抬起头，眼睛里全是血丝，和一点不肯承认的怕。"
+          },
+          {
+            "who": "feihong",
+            "text": "「你帮我看看，我机会大吗？」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「大。他现在离不开你，只是不知道那叫什么。」",
+            "bond": 0,
+            "score": 3,
+            "flags": [
+              "push3"
+            ],
+            "next": "cp_08b"
+          },
+          {
+            "text": "「万一说了连朋友都做不成呢？」",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": "cp_08c"
+          }
+        ],
+        "asset": "personal_cp_08",
+        "memory": "cp7_cp_08",
+        "artText": "歌友会之后，飞鸿变得很奇怪。他排练老走神，看宝石的眼神像看一道解不出来的和弦。周四深夜，他把你约到山丘后门，抽了半根烟——他不会抽，呛得直咳嗽。 （终于开口：）「我受不了了。」他盯着自己的鞋尖，「雪子天天在他旁边，他还傻乎乎地什么都感觉不到。我……我想跟他挑明。」 他抬起头，眼睛里全是血丝，和一点不肯承认的怕。 「你帮我看看，我机会大吗？」",
+        "pageArt": [
+          {
+            "id": "cp_08",
+            "asset": "personal_cp_08",
+            "memory": "cp7_cp_08",
+            "text": "歌友会之后，飞鸿变得很奇怪。他排练老走神，看宝石的眼神像看一道解不出来的和弦。周四深夜，他把你约到山丘后门，抽了半根烟——他不会抽，呛得直咳嗽。 （终于开口：）「我受不了了。」他盯着自己的鞋尖，「雪子天天在他旁边，他还傻乎乎地什么都感觉不到。我……我想跟他挑明。」",
+            "prompt": "歌友会之后，飞鸿变得很奇怪。他排练老走神，看宝石的眼神像看一道解不出来的和弦。周四深夜，他把你约到山丘后门，抽了半根烟——他不会抽，呛得直咳嗽。 （终于开口：）「我受不了了。」他盯着自己的鞋尖，「雪子天天在他旁边，他还傻乎乎地什么都感觉不到。我……我想跟他挑明。」"
+          },
+          {
+            "id": "cp_08_page2",
+            "asset": "personal_cp_08_page2",
+            "memory": "cp7_cp_08_page2",
+            "text": "他抬起头，眼睛里全是血丝，和一点不肯承认的怕。 「你帮我看看，我机会大吗？」",
+            "prompt": "剧情分镜《挑明前夜 · 递刀》的第 2 幕：他抬起头，眼睛里全是血丝，和一点不肯承认的怕。 「你帮我看看，我机会大吗？」"
+          }
+        ]
+      },
+      {
+        "id": "cp_08b",
+        "title": "挑明前夜 · 递刀",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "feihong",
+            "text": "飞鸿深吸一口气，点了点头：「那我就说了。输也输个明白。」"
+          },
+          {
+            "who": "feihong",
+            "text": "他转身要走，又回头，很认真地补了一句：「到时候不管成不成，都谢谢你——这段时间，全团就你在真心帮我们。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「加油。」",
+            "bond": 0,
+            "score": 2,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_08b",
+        "memory": "cp7_cp_08b",
+        "artText": "飞鸿深吸一口气，点了点头：「那我就说了。输也输个明白。」 他转身要走，又回头，很认真地补了一句：「到时候不管成不成，都谢谢你——这段时间，全团就你在真心帮我们。」",
+        "pageArt": [
+          {
+            "id": "cp_08b",
+            "asset": "personal_cp_08b",
+            "memory": "cp7_cp_08b",
+            "text": "飞鸿深吸一口气，点了点头：「那我就说了。输也输个明白。」\n\n他转身要走，又回头，很认真地补了一句：「到时候不管成不成，都谢谢你——这段时间，全团就你在真心帮我们。」",
+            "prompt": "飞鸿深吸一口气，点了点头：「那我就说了。输也输个明白。」\n\n他转身要走，又回头，很认真地补了一句：「到时候不管成不成，都谢谢你——这段时间，全团就你在真心帮我们。」"
+          }
+        ]
+      },
+      {
+        "id": "cp_08c",
+        "title": "挑明前夜 · 递刀",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "feihong",
+            "text": "飞鸿沉默了。他把那根没抽完的烟摁灭，笑了笑：「也是。他那种性格，万一被吓跑了……」"
+          },
+          {
+            "who": "feihong",
+            "text": "「再等等吧。」他说。可你听得出来，这个「等」字，每说一次就更薄一层。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "目送他走进夜色",
+            "bond": 0,
+            "score": 1,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_08c",
+        "memory": "cp7_cp_08c",
+        "artText": "飞鸿沉默了。他把那根没抽完的烟摁灭，笑了笑：「也是。他那种性格，万一被吓跑了……」 「再等等吧。」他说。可你听得出来，这个「等」字，每说一次就更薄一层。",
+        "pageArt": [
+          {
+            "id": "cp_08c",
+            "asset": "personal_cp_08c",
+            "memory": "cp7_cp_08c",
+            "text": "飞鸿沉默了。他把那根没抽完的烟摁灭，笑了笑：「也是。他那种性格，万一被吓跑了……」\n\n「再等等吧。」他说。可你听得出来，这个「等」字，每说一次就更薄一层。",
+            "prompt": "飞鸿沉默了。他把那根没抽完的烟摁灭，笑了笑：「也是。他那种性格，万一被吓跑了……」\n\n「再等等吧。」他说。可你听得出来，这个「等」字，每说一次就更薄一层。"
+          }
+        ]
+      },
+      {
+        "id": "cp_09",
+        "title": "误解 · 无心的话最疼",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 78,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "周五演出后，飞鸿把宝石约到了天台。你躲在楼梯间，掐着大旗值偷听。"
+          },
+          {
+            "who": "feihong",
+            "text": "（他的声音在抖，却还在笑：）「宝石，我跟你说件事。我……我可能，不止想当朋友。」"
+          },
+          {
+            "who": "baoshi",
+            "text": "（长久的沉默。然后是他一贯清澈的声音，认认真真：）「飞鸿，你当然不只是朋友呀。你是我最重要的搭档。」"
+          },
+          {
+            "who": "baoshi",
+            "text": "（他又想了想，语气轻快：）「你是不是最近压力太大了？这样，你要是谈对象了，我帮你把关！我跟你说，我认识一个女生特别好，你要不要考虑——」"
+          },
+          {
+            "who": "feihong",
+            "text": "「你是真不明白，」他的声音低下去，「还是假不明白。」"
+          },
+          {
+            "who": "narrator",
+            "text": "宝石愣住了。他被飞鸿的眼神直愣愣地看着，半天，轻轻地说。"
+          },
+          {
+            "who": "baoshi",
+            "text": "（淡淡地：）「……我们都是男生，不是吗？」"
+          },
+          {
+            "who": "narrator",
+            "text": "你听见什么东西碎掉的声音。飞鸿下意识地握着拳，再开口时，语气已经平得听不出波澜。"
+          },
+          {
+            "who": "feihong",
+            "text": "「……哎呦，跟你开个玩笑，看你吓得。」他越过宝石往楼下走。走了两步，又回过头，挤出一个笑。"
+          },
+          {
+            "who": "feihong",
+            "text": "「宝石，晚安。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "（追出去找飞鸿）",
+            "bond": 0,
+            "score": 2,
+            "flags": [
+              "hurt"
+            ],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_09",
+        "memory": "cp7_cp_09",
+        "artText": "周五演出后，飞鸿把宝石约到了天台。你躲在楼梯间，掐着大旗值偷听。 （他的声音在抖，却还在笑：）「宝石，我跟你说件事。我……我可能，不止想当朋友。」 （长久的沉默。然后是他一贯清澈的声音，认认真真：）「飞鸿，你当然不只是朋友呀。你是我最重要的搭档。」 （他又想了想，语气轻快：）「你是不是最近压力太大了？这样，你要是谈对象了，我帮你把关！我跟你说，我认识一个女生特别好，你要不要考虑——」 「你是真不明白，」他的声音低下去，「还是假不明白。」 宝石愣住了。他被飞鸿的眼神直愣愣地看着，半天，轻轻地说。 （淡淡地：）「……我们都是男生，不是吗？」 你听见什么东西碎",
+        "pageArt": [
+          {
+            "id": "cp_09",
+            "asset": "personal_cp_09",
+            "memory": "cp7_cp_09",
+            "text": "周五演出后，飞鸿把宝石约到了天台。你躲在楼梯间，掐着大旗值偷听。 （他的声音在抖，却还在笑：）「宝石，我跟你说件事。我……我可能，不止想当朋友。」",
+            "prompt": "周五演出后，飞鸿把宝石约到了天台。你躲在楼梯间，掐着大旗值偷听。 （他的声音在抖，却还在笑：）「宝石，我跟你说件事。我……我可能，不止想当朋友。」"
+          },
+          {
+            "id": "cp_09_page2",
+            "asset": "personal_cp_09_page2",
+            "memory": "cp7_cp_09_page2",
+            "text": "（长久的沉默。然后是他一贯清澈的声音，认认真真：）「飞鸿，你当然不只是朋友呀。你是我最重要的搭档。」\n\n（他又想了想，语气轻快：）「你是不是最近压力太大了？这样，你要是谈对象了，我帮你把关！我跟你说，我认识一个女生特别好，你要不要考虑——」 「你是真不明白，」他的声音低下去，「还是假不明白。」",
+            "prompt": "剧情分镜《误解 · 无心的话最疼》的第 2 幕：（长久的沉默。然后是他一贯清澈的声音，认认真真：）「飞鸿，你当然不只是朋友呀。你是我最重要的搭档。」\n\n（他又想了想，语气轻快：）「你是不是最近压力太大了？这样，你要是谈对象了，我帮你把关！我跟你说，我认识一个女生特别好，你要不要考虑——」 「你是真不明白，」他的声音低下去，「还是假不明白。」"
+          },
+          {
+            "id": "cp_09_page3",
+            "asset": "personal_cp_09_page3",
+            "memory": "cp7_cp_09_page3",
+            "text": "宝石愣住了。他被飞鸿的眼神直愣愣地看着，半天，轻轻地说。 （淡淡地：）「……我们都是男生，不是吗？」",
+            "prompt": "剧情分镜《误解 · 无心的话最疼》的第 3 幕：宝石愣住了。他被飞鸿的眼神直愣愣地看着，半天，轻轻地说。 （淡淡地：）「……我们都是男生，不是吗？」"
+          },
+          {
+            "id": "cp_09_page4",
+            "asset": "personal_cp_09_page4",
+            "memory": "cp7_cp_09_page4",
+            "text": "你听见什么东西碎掉的声音。飞鸿下意识地握着拳，再开口时，语气已经平得听不出波澜。 「……哎呦，跟你开个玩笑，看你吓得。」他越过宝石往楼下走。走了两步，又回过头，挤出一个笑。\n\n「宝石，晚安。」",
+            "prompt": "剧情分镜《误解 · 无心的话最疼》的第 4 幕：你听见什么东西碎掉的声音。飞鸿下意识地握着拳，再开口时，语气已经平得听不出波澜。 「……哎呦，跟你开个玩笑，看你吓得。」他越过宝石往楼下走。走了两步，又回过头，挤出一个笑。\n\n「宝石，晚安。」"
+          }
+        ]
+      },
+      {
+        "id": "cp_10",
+        "title": "离开 · 行李箱",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 84,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "feihong",
+            "text": "第二天，飞鸿开始收拾行李。他辞了驻唱，买了回老家的票。你走之前问他去哪，他说南边，「找个能唱歌的地方」。"
+          },
+          {
+            "who": "narrator",
+            "text": "山丘门口，雪子拦住了他。你远远看着，只看见雪子说了很久，最后伸出手——不是挽留，是击掌。"
+          },
+          {
+            "who": "xuezi",
+            "text": "（后来雪子转述给你听：）「我对他说：我光明正大，但不趁人之危。你这一走，我输得心服口服，可我还是会喜欢他——这不妨碍我瞧不起逃兵。」他顿了顿，「他骂我多管闲事。然后行李箱的拉杆，断了。」"
+          },
+          {
+            "who": "narrator",
+            "text": "上车前，飞鸿给宝石发了最后一条消息。你看到宝石的手机屏幕亮起，只有一行字："
+          },
+          {
+            "who": "feihong",
+            "text": "「在你想明白之前，我都不会见你了。」"
+          },
+          {
+            "who": "narrator",
+            "text": "宝石盯着那行字，愣愣的，一动不动。你走过去，他抬起头，你才发现他脸上全是泪。"
+          },
+          {
+            "who": "baoshi",
+            "text": "「宝石，你哭了呀？」他莫名其妙地抬手摸了摸脸：「是吗……我不知道。它自己流下来的。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "拿纸巾擦干宝石的眼泪",
+            "bond": 0,
+            "score": 1,
+            "flags": [
+              "xuezihook"
+            ],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_10",
+        "memory": "cp7_cp_10",
+        "artText": "第二天，飞鸿开始收拾行李。他辞了驻唱，买了回老家的票。你走之前问他去哪，他说南边，「找个能唱歌的地方」。 山丘门口，雪子拦住了他。你远远看着，只看见雪子说了很久，最后伸出手——不是挽留，是击掌。 （后来雪子转述给你听：）「我对他说：我光明正大，但不趁人之危。你这一走，我输得心服口服，可我还是会喜欢他——这不妨碍我瞧不起逃兵。」他顿了顿，「他骂我多管闲事。然后行李箱的拉杆，断了。」 上车前，飞鸿给宝石发了最后一条消息。你看到宝石的手机屏幕亮起，只有一行字： 「在你想明白之前，我都不会见你了。」 宝石盯着那行字，愣愣的，一动不动。你走过去，他抬起头，你才发现",
+        "pageArt": [
+          {
+            "id": "cp_10",
+            "asset": "personal_cp_10",
+            "memory": "cp7_cp_10",
+            "text": "第二天，飞鸿开始收拾行李。他辞了驻唱，买了回老家的票。你走之前问他去哪，他说南边，「找个能唱歌的地方」。 山丘门口，雪子拦住了他。你远远看着，只看见雪子说了很久，最后伸出手——不是挽留，是击掌。",
+            "prompt": "第二天，飞鸿开始收拾行李。他辞了驻唱，买了回老家的票。你走之前问他去哪，他说南边，「找个能唱歌的地方」。 山丘门口，雪子拦住了他。你远远看着，只看见雪子说了很久，最后伸出手——不是挽留，是击掌。"
+          },
+          {
+            "id": "cp_10_page2",
+            "asset": "personal_cp_10_page2",
+            "memory": "cp7_cp_10_page2",
+            "text": "（后来雪子转述给你听：）「我对他说：我光明正大，但不趁人之危。你这一走，我输得心服口服，可我还是会喜欢他——这不妨碍我瞧不起逃兵。」他顿了顿，「他骂我多管闲事。然后行李箱的拉杆，断了。」 上车前，飞鸿给宝石发了最后一条消息。你看到宝石的手机屏幕亮起，只有一行字：",
+            "prompt": "剧情分镜《离开 · 行李箱》的第 2 幕：（后来雪子转述给你听：）「我对他说：我光明正大，但不趁人之危。你这一走，我输得心服口服，可我还是会喜欢他——这不妨碍我瞧不起逃兵。」他顿了顿，「他骂我多管闲事。然后行李箱的拉杆，断了。」 上车前，飞鸿给宝石发了最后一条消息。你看到宝石的手机屏幕亮起，只有一行字："
+          },
+          {
+            "id": "cp_10_page3",
+            "asset": "personal_cp_10_page3",
+            "memory": "cp7_cp_10_page3",
+            "text": "「在你想明白之前，我都不会见你了。」 宝石盯着那行字，愣愣的，一动不动。你走过去，他抬起头，你才发现他脸上全是泪。",
+            "prompt": "剧情分镜《离开 · 行李箱》的第 3 幕：「在你想明白之前，我都不会见你了。」 宝石盯着那行字，愣愣的，一动不动。你走过去，他抬起头，你才发现他脸上全是泪。"
+          },
+          {
+            "id": "cp_10_page4",
+            "asset": "personal_cp_10_page4",
+            "memory": "cp7_cp_10_page4",
+            "text": "「宝石，你哭了呀？」他莫名其妙地抬手摸了摸脸：「是吗……我不知道。它自己流下来的。」",
+            "prompt": "剧情分镜《离开 · 行李箱》的第 4 幕：「宝石，你哭了呀？」他莫名其妙地抬手摸了摸脸：「是吗……我不知道。它自己流下来的。」"
+          }
+        ]
+      },
+      {
+        "id": "cp_11",
+        "title": "开窍 · 日子不对劲",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 88,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "飞鸿走后的第一周，宝石一切如常。第二周，他开始在演出前发呆——柠檬水没人准备了，温度总是不对。"
+          },
+          {
+            "who": "baoshi",
+            "text": "第三周，定新歌的时候，他对着谱子坐了两个小时，才发现没人提前帮他扒好调。第四周，他的和声自己唱，唱到一半忽然停下来：「这个音……以前飞鸿会垫在下面。」"
+          },
+          {
+            "who": "baoshi",
+            "text": "第五周的深夜，你收到宝石的消息，只有一句话：「原来他唱歌那么好听，比我好。可是他从来没抢过我一句。」"
+          },
+          {
+            "who": "narrator",
+            "text": "第六周，你看见他翻出旧手机相册——不知道哪来的，满满全是这两年的照片：他唱歌，他在笑，他在看飞鸿。而每张照片的边缘，都有半张侧脸，永远朝着他。"
+          },
+          {
+            "who": "baoshi",
+            "text": "（他坐在舞台边，喃喃自语：）「他说，想明白之前不见我……那如果我一直想不明白呢？」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「那就想到明白为止。他在等。」",
+            "bond": 0,
+            "score": 3,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "「你其实已经想明白了，对吧。」",
+            "bond": 0,
+            "score": 3,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_cp_11",
+        "memory": "cp7_cp_11",
+        "artText": "飞鸿走后的第一周，宝石一切如常。第二周，他开始在演出前发呆——柠檬水没人准备了，温度总是不对。 第三周，定新歌的时候，他对着谱子坐了两个小时，才发现没人提前帮他扒好调。第四周，他的和声自己唱，唱到一半忽然停下来：「这个音……以前飞鸿会垫在下面。」 第五周的深夜，你收到宝石的消息，只有一句话：「原来他唱歌那么好听，比我好。可是他从来没抢过我一句。」 第六周，你看见他翻出旧手机相册——不知道哪来的，满满全是这两年的照片：他唱歌，他在笑，他在看飞鸿。而每张照片的边缘，都有半张侧脸，永远朝着他。 （他坐在舞台边，喃喃自语：）「他说，想明白之前不见我……那如果我一",
+        "pageArt": [
+          {
+            "id": "cp_11",
+            "asset": "personal_cp_11",
+            "memory": "cp7_cp_11",
+            "text": "飞鸿走后的第一周，宝石一切如常。第二周，他开始在演出前发呆——柠檬水没人准备了，温度总是不对。 第三周，定新歌的时候，他对着谱子坐了两个小时，才发现没人提前帮他扒好调。第四周，他的和声自己唱，唱到一半忽然停下来：「这个音……以前飞鸿会垫在下面。」\n\n第五周的深夜，你收到宝石的消息，只有一句话：「原来他唱歌那么好听，比我好。可是他从来没抢过我一句。」",
+            "prompt": "飞鸿走后的第一周，宝石一切如常。第二周，他开始在演出前发呆——柠檬水没人准备了，温度总是不对。 第三周，定新歌的时候，他对着谱子坐了两个小时，才发现没人提前帮他扒好调。第四周，他的和声自己唱，唱到一半忽然停下来：「这个音……以前飞鸿会垫在下面。」\n\n第五周的深夜，你收到宝石的消息，只有一句话：「原来他唱歌那么好听，比我好。可是他从来没抢过我一句。」"
+          },
+          {
+            "id": "cp_11_page2",
+            "asset": "personal_cp_11_page2",
+            "memory": "cp7_cp_11_page2",
+            "text": "第六周，你看见他翻出旧手机相册——不知道哪来的，满满全是这两年的照片：他唱歌，他在笑，他在看飞鸿。而每张照片的边缘，都有半张侧脸，永远朝着他。 （他坐在舞台边，喃喃自语：）「他说，想明白之前不见我……那如果我一直想不明白呢？」",
+            "prompt": "剧情分镜《开窍 · 日子不对劲》的第 2 幕：第六周，你看见他翻出旧手机相册——不知道哪来的，满满全是这两年的照片：他唱歌，他在笑，他在看飞鸿。而每张照片的边缘，都有半张侧脸，永远朝着他。 （他坐在舞台边，喃喃自语：）「他说，想明白之前不见我……那如果我一直想不明白呢？」"
+          }
+        ]
+      },
+      {
+        "id": "cp_12",
+        "title": "火葬场 · 最后一推",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 92,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "第七周，宝石来找你。他把头发抓成了鸟窝，眼睛亮得吓人，像是终于烧穿了某层壳："
+          },
+          {
+            "who": "baoshi",
+            "text": "（他深吸一口气：）「我想到明白是什么了。我要把他追回来。」他顿了顿，声音忽然软下来，「可是……我不知道他还在不在原地。你能帮我吗？」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「下周末，市歌友会——他的新乐队受邀演出。你去唱那首《爱我还是他》。」",
+            "bond": 0,
+            "score": 4,
+            "flags": [
+              "push4"
+            ],
+            "next": "cp_12b"
+          },
+          {
+            "text": "「我也不知道他在哪……」",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": "cp_12c"
+          }
+        ],
+        "asset": "personal_cp_12",
+        "memory": "cp7_cp_12",
+        "artText": "第七周，宝石来找你。他把头发抓成了鸟窝，眼睛亮得吓人，像是终于烧穿了某层壳： （他深吸一口气：）「我想到明白是什么了。我要把他追回来。」他顿了顿，声音忽然软下来，「可是……我不知道他还在不在原地。你能帮我吗？」",
+        "pageArt": [
+          {
+            "id": "cp_12",
+            "asset": "personal_cp_12",
+            "memory": "cp7_cp_12",
+            "text": "第七周，宝石来找你。他把头发抓成了鸟窝，眼睛亮得吓人，像是终于烧穿了某层壳： （他深吸一口气：）「我想到明白是什么了。我要把他追回来。」他顿了顿，声音忽然软下来，「可是……我不知道他还在不在原地。你能帮我吗？」",
+            "prompt": "第七周，宝石来找你。他把头发抓成了鸟窝，眼睛亮得吓人，像是终于烧穿了某层壳： （他深吸一口气：）「我想到明白是什么了。我要把他追回来。」他顿了顿，声音忽然软下来，「可是……我不知道他还在不在原地。你能帮我吗？」"
+          }
+        ]
+      },
+      {
+        "id": "cp_12b",
+        "title": "火葬场 · 最后一推",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "baoshi",
+            "text": "（他怔了两秒，忽然眼睛一亮：「市歌友会……他的新乐队，受邀演出，对不对？」你用力点头。他转身就跑，跑到门口又折回来，用力抱了你一下：）「等我好消息！」"
+          },
+          {
+            "who": "narrator",
+            "text": "他冲出去的那扇门，被风带得来回晃。你忽然想起飞鸿走那天，这扇门也这么晃过。原来有些门，进进出出，都是同一些人。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "（对着他的背影大喊）宝石，你还记得摩天轮吗？",
+            "bond": 0,
+            "score": 3,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "resolveCpEnding": true,
+        "asset": "personal_cp_12b",
+        "memory": "cp7_cp_12b",
+        "artText": "（他怔了两秒，忽然眼睛一亮：「市歌友会……他的新乐队，受邀演出，对不对？」你用力点头。他转身就跑，跑到门口又折回来，用力抱了你一下：）「等我好消息！」 他冲出去的那扇门，被风带得来回晃。你忽然想起飞鸿走那天，这扇门也这么晃过。原来有些门，进进出出，都是同一些人。",
+        "pageArt": [
+          {
+            "id": "cp_12b",
+            "asset": "personal_cp_12b",
+            "memory": "cp7_cp_12b",
+            "text": "（他怔了两秒，忽然眼睛一亮：「市歌友会……他的新乐队，受邀演出，对不对？」你用力点头。他转身就跑，跑到门口又折回来，用力抱了你一下：）「等我好消息！」 他冲出去的那扇门，被风带得来回晃。你忽然想起飞鸿走那天，这扇门也这么晃过。原来有些门，进进出出，都是同一些人。",
+            "prompt": "（他怔了两秒，忽然眼睛一亮：「市歌友会……他的新乐队，受邀演出，对不对？」你用力点头。他转身就跑，跑到门口又折回来，用力抱了你一下：）「等我好消息！」 他冲出去的那扇门，被风带得来回晃。你忽然想起飞鸿走那天，这扇门也这么晃过。原来有些门，进进出出，都是同一些人。"
+          }
+        ]
+      },
+      {
+        "id": "cp_12c",
+        "title": "火葬场 · 最后一推",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "baoshi",
+            "text": "宝石的眼神暗了一下，但很快又亮起来：「没关系，我自己找。一个城市一个城市地找。」"
+          },
+          {
+            "who": "narrator",
+            "text": "他走后的第三个月，你从十元那里听说：他在南边每个Livehouse门口都唱过那首《爱我还是他》。只是没有一个门口，站着那个人。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "替他留意南方的演出消息",
+            "bond": 0,
+            "score": 1,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "resolveCpEnding": true,
+        "asset": "personal_cp_12c",
+        "memory": "cp7_cp_12c",
+        "artText": "宝石的眼神暗了一下，但很快又亮起来：「没关系，我自己找。一个城市一个城市地找。」 他走后的第三个月，你从十元那里听说：他在南边每个Livehouse门口都唱过那首《爱我还是他》。只是没有一个门口，站着那个人。",
+        "pageArt": [
+          {
+            "id": "cp_12c",
+            "asset": "personal_cp_12c",
+            "memory": "cp7_cp_12c",
+            "text": "宝石的眼神暗了一下，但很快又亮起来：「没关系，我自己找。一个城市一个城市地找。」 他走后的第三个月，你从十元那里听说：他在南边每个Livehouse门口都唱过那首《爱我还是他》。只是没有一个门口，站着那个人。",
+            "prompt": "宝石的眼神暗了一下，但很快又亮起来：「没关系，我自己找。一个城市一个城市地找。」 他走后的第三个月，你从十元那里听说：他在南边每个Livehouse门口都唱过那首《爱我还是他》。只是没有一个门口，站着那个人。"
+          }
+        ]
+      },
+      {
+        "id": "yc_hold",
+        "title": "羊村线 · 待续",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": [
+            [
+              "yangcun"
+            ]
+          ]
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "（羊村线剧情待补充。此线经由「前期与宝石、飞鸿一起练习提升乐队等级」直接进入，与十元线、乐队线部分重叠。占位事件，不会自动触发。）"
+          }
+        ],
+        "choices": [
+          {
+            "text": "（占位）",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "placeholder": true,
+        "artPrompt": "山丘酒吧温暖的空排练室，两支并排的话筒、两把靠在一起的木吉他与一架键盘，舞台灯刚亮，像一支新乐队即将开始排练；无人，无文字。",
+        "asset": "personal_yc_hold",
+        "memory": "cp7_yc_hold",
+        "artText": "（羊村线剧情待补充。此线经由「前期与宝石、飞鸿一起练习提升乐队等级」直接进入，与十元线、乐队线部分重叠。占位事件，不会自动触发。）",
+        "pageArt": [
+          {
+            "id": "yc_hold",
+            "asset": "personal_yc_hold",
+            "memory": "cp7_yc_hold",
+            "text": "（羊村线剧情待补充。此线经由「前期与宝石、飞鸿一起练习提升乐队等级」直接进入，与十元线、乐队线部分重叠。占位事件，不会自动触发。）",
+            "prompt": "山丘酒吧温暖的空排练室，两支并排的话筒、两把靠在一起的木吉他与一架键盘，舞台灯刚亮，像一支新乐队即将开始排练；无人，无文字。"
+          }
+        ]
+      },
+      {
+        "id": "cp_HE",
+        "title": "HE · 爱我还是他",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "歌友会那晚，宝石唱完那首《爱我还是他》，全场欢呼。可飞鸿没有出现在后台——他提前离场了。"
+          },
+          {
+            "who": "narrator",
+            "text": "宝石穿过人群，找遍了后台和出口，都没有那个身影。他忽然想起你白天说的那句话，抓起外套冲出了场馆。"
+          },
+          {
+            "who": "narrator",
+            "text": "摩天轮下，霓虹还亮着。飞鸿立在售票亭前，脚边放着行李箱，拉杆上缠着胶带。"
+          },
+          {
+            "who": "narrator",
+            "text": "宝石跑过去，喘着气。千言万语涌到嘴边，出口的第一句却是——"
+          },
+          {
+            "who": "baoshi",
+            "text": "「打烊了，明天再来吧。」"
+          },
+          {
+            "who": "feihong",
+            "text": "飞鸿：「……」他深吸一口气，「我坐了六个小时的车来听你一句「打烊了」？」"
+          },
+          {
+            "who": "baoshi",
+            "text": "（慌了，语无伦次：）「不是，我是说——你看这摩天轮，像不像歌友会那天？我是想说——」"
+          },
+          {
+            "who": "feihong",
+            "text": "（他忽然笑了，眼眶却是红的：）「宝石，如果你想缓和关系，其实不用这样的……」"
+          },
+          {
+            "who": "baoshi",
+            "text": "（他深吸一口气，一字一句：）「飞鸿。我不是来续约搭档的。」他顿了顿，「我是来追你的。想明白了——」"
+          },
+          {
+            "who": "feihong",
+            "text": "「那你的答案——」"
+          },
+          {
+            "who": "narrator",
+            "text": "宝石深吸一口气，拉过飞鸿，亲了一口。"
+          },
+          {
+            "who": "baoshi",
+            "text": "（退开半寸，眼睛亮得惊人：）「我喜欢你。我选你。」"
+          },
+          {
+            "who": "narrator",
+            "text": "霓虹下，两个人都安静了一秒。然后飞鸿张开手臂，宝石不管不顾地撞了进去。那个拥抱很长，很用力，仅此而已——但胜过万语千言。"
+          },
+          {
+            "who": "shiyuan",
+            "text": "远处，你和十元蹲在绿化带后面。十元压低声音，大旗挥舞：「看到了吗！我磕的 CP 是真的！！」雪子在不远处抱着手臂笑，眼眶有点红。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "—— 宝石×飞鸿 · HE 完 ——",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "ending": "HE",
+        "artPrompt": "夜晚摩天轮下的霓虹广场。宝石穿米白衬衫，飞鸿穿蓝灰衬衫，两个成年男性久别重逢后穿着完整地用力拥抱，眼眶微红、如释重负，行李箱放在脚边；远处十元和雪子欣慰旁观。温柔克制、非情色，不表现亲吻。",
+        "asset": "personal_cp_HE",
+        "memory": "cp7_cp_HE",
+        "artText": "歌友会那晚，宝石唱完那首《爱我还是他》，全场欢呼。可飞鸿没有出现在后台——他提前离场了。 宝石穿过人群，找遍了后台和出口，都没有那个身影。他忽然想起你白天说的那句话，抓起外套冲出了场馆。 摩天轮下，霓虹还亮着。飞鸿立在售票亭前，脚边放着行李箱，拉杆上缠着胶带。 宝石跑过去，喘着气。千言万语涌到嘴边，出口的第一句却是—— 「打烊了，明天再来吧。」 飞鸿：「……」他深吸一口气，「我坐了六个小时的车来听你一句「打烊了」？」 （慌了，语无伦次：）「不是，我是说——你看这摩天轮，像不像歌友会那天？我是想说——」 （他忽然笑了，眼眶却是红的：）「宝石，如果你想缓和关",
+        "pageArt": [
+          {
+            "id": "cp_HE_page1",
+            "asset": "personal_cp_HE_page1",
+            "memory": "cp7_cp_HE_page1",
+            "text": "歌友会那晚，宝石唱完那首《爱我还是他》，全场欢呼。可飞鸿没有出现在后台——他提前离场了。\n\n宝石穿过人群，找遍了后台和出口，都没有那个身影。他忽然想起你白天说的那句话，抓起外套冲出了场馆。\n\n摩天轮下，霓虹还亮着。飞鸿立在售票亭前，脚边放着行李箱，拉杆上缠着胶带。\n\n宝石跑过去，喘着气。千言万语涌到嘴边，出口的第一句却是—— 「打烊了，明天再来吧。」",
+            "prompt": "夜晚摩天轮下，飞鸿穿蓝灰衬衫站在缠着胶带的行李箱旁；宝石穿米白衬衫气喘吁吁跑到他面前，久别重逢、欲言又止，霓虹映亮两人的脸。"
+          },
+          {
+            "id": "cp_HE_page2",
+            "asset": "personal_cp_HE_page2",
+            "memory": "cp7_cp_HE_page2",
+            "text": "飞鸿：「……」他深吸一口气，「我坐了六个小时的车来听你一句「打烊了」？」 （慌了，语无伦次：）「不是，我是说——你看这摩天轮，像不像歌友会那天？我是想说——」",
+            "prompt": "摩天轮霓虹下，飞鸿眼眶微红、克制地质问，宝石慌张摆手解释；脚边有旅行六小时带来的行李箱，两个成年男性近景对话。"
+          },
+          {
+            "id": "cp_HE_page3",
+            "asset": "personal_cp_HE_page3",
+            "memory": "cp7_cp_HE_page3",
+            "text": "（他忽然笑了，眼眶却是红的：）「宝石，如果你想缓和关系，其实不用这样的……」 （他深吸一口气，一字一句：）「飞鸿。我不是来续约搭档的。」他顿了顿，「我是来追你的。想明白了——」",
+            "prompt": "摩天轮下的安静近景，宝石认真直视飞鸿，一字一句坦白自己不是来续约搭档、而是来追他；飞鸿惊讶又期待。"
+          },
+          {
+            "id": "cp_HE_page4",
+            "asset": "personal_cp_HE_page4",
+            "memory": "cp7_cp_HE_page4",
+            "text": "「那你的答案——」 宝石深吸一口气，拉过飞鸿，亲了一口。",
+            "prompt": "夜晚摩天轮霓虹下，宝石穿米白衬衫轻轻拉近穿蓝灰衬衫的飞鸿，两个成年男性闭眼温柔接吻；浪漫、克制、真挚，完整着装，非情色。"
+          },
+          {
+            "id": "cp_HE_page5",
+            "asset": "personal_cp_HE_page5",
+            "memory": "cp7_cp_HE_page5",
+            "text": "（退开半寸，眼睛亮得惊人：）「我喜欢你。我选你。」 霓虹下，两个人都安静了一秒。然后飞鸿张开手臂，宝石不管不顾地撞了进去。那个拥抱很长，很用力，仅此而已——但胜过万语千言。",
+            "prompt": "接吻后两人额头几乎相抵，宝石眼睛发亮说出喜欢，随后飞鸿张开双臂，两位成年男性用力长久拥抱，行李箱在脚边。"
+          },
+          {
+            "id": "cp_HE_page6",
+            "asset": "personal_cp_HE_page6",
+            "memory": "cp7_cp_HE_page6",
+            "text": "远处，你和十元蹲在绿化带后面。十元压低声音，大旗挥舞：「看到了吗！我磕的 CP 是真的！！」雪子在不远处抱着手臂笑，眼眶有点红。",
+            "prompt": "摩天轮远处的绿化带后，十元兴奋地挥着小旗，雪子抱臂含泪微笑；前景远处可见宝石与飞鸿相拥，温暖圆满。"
+          }
+        ]
+      },
+      {
+        "id": "cp_BE",
+        "title": "BE · 没有他的歌友会",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "你没能集齐足够的助力。宝石去找过，也唱过，可线索一条条断掉——没有人把那个对的时机递到他手里。"
+          },
+          {
+            "who": "narrator",
+            "text": "两年后，山丘重新装修。你路过旧舞台，看见公告栏上贴着两张泛黄的演出照：一张是两个人的合影，一张是一个人的独唱。"
+          },
+          {
+            "who": "narrator",
+            "text": "独唱那张的海报上写着：《爱我还是他》。主办方的名字，是宝石。可你知道吗，从那之后，这首歌他再也没有唱完过。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "—— 宝石×飞鸿 · BE 完 ——",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "ending": "BE",
+        "artPrompt": "两年后的山丘旧舞台，空无一人。公告栏上并排贴着两张已经泛黄但没有可读文字的演出照片，一张双人合影、一张孤独主唱的剪影；冷清舞台灯、未唱完的遗憾气氛。",
+        "asset": "personal_cp_BE",
+        "memory": "cp7_cp_BE",
+        "artText": "你没能集齐足够的助力。宝石去找过，也唱过，可线索一条条断掉——没有人把那个对的时机递到他手里。 两年后，山丘重新装修。你路过旧舞台，看见公告栏上贴着两张泛黄的演出照：一张是两个人的合影，一张是一个人的独唱。 独唱那张的海报上写着：《爱我还是他》。主办方的名字，是宝石。可你知道吗，从那之后，这首歌他再也没有唱完过。",
+        "pageArt": [
+          {
+            "id": "cp_BE",
+            "asset": "personal_cp_BE",
+            "memory": "cp7_cp_BE",
+            "text": "你没能集齐足够的助力。宝石去找过，也唱过，可线索一条条断掉——没有人把那个对的时机递到他手里。\n\n两年后，山丘重新装修。你路过旧舞台，看见公告栏上贴着两张泛黄的演出照：一张是两个人的合影，一张是一个人的独唱。\n\n独唱那张的海报上写着：《爱我还是他》。主办方的名字，是宝石。可你知道吗，从那之后，这首歌他再也没有唱完过。",
+            "prompt": "两年后的山丘旧舞台，空无一人。公告栏上并排贴着两张已经泛黄但没有可读文字的演出照片，一张双人合影、一张孤独主唱的剪影；冷清舞台灯、未唱完的遗憾气氛。"
+          }
+        ]
+      }
+    ],
+    "entry": "cp_00"
   }
 };
 const PERSONAL_NODES = Object.values(PERSONAL_ROUTES).flatMap(r=>r.nodes.map(n=>({...n,route:r.id})));
-Object.assign(ASSETS,Object.fromEntries(PERSONAL_NODES.map(n=>[n.asset,`assets/chronicle/personal/${n.id}.webp`])));
+const PERSONAL_PAGE_ART = PERSONAL_NODES.flatMap(n=>(n.pageArt||[]).map((a,index)=>({...a,route:n.route,node:n.id,page:index+1,title:n.title})));
+Object.assign(ASSETS,Object.fromEntries([...PERSONAL_NODES.filter(n=>n.asset).map(n=>[n.asset,`assets/chronicle/personal/${n.id}.webp`]),...PERSONAL_PAGE_ART.map(a=>[a.asset,`assets/chronicle/personal/${a.id}.webp`])]));

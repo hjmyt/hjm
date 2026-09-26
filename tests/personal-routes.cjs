@@ -15,21 +15,27 @@ const assert=require('node:assert/strict');
   const wait=()=>new Promise(r=>setTimeout(r,215));
   const click=async selector=>{await wait();const b=document.querySelector(selector);if(!b||b.disabled)throw Error('Unavailable '+selector+' at '+S()?.scene);b.click();};
   const action=(name)=>click(`[data-cp-action="personal-${name}"]`);
-  const choose=n=>click(`[data-personal-choice="${n}"]`);
+  const pageToChoices=async()=>{while(document.querySelector('[data-cp-action="personal-page"]'))await action('page');};
+  const choose=async n=>{await pageToChoices();return click(`[data-personal-choice="${n}"]`);};
   const forged=async(action,data={})=>{await wait();const b=document.createElement('button');b.dataset.cpAction=action;Object.assign(b.dataset,data);document.body.append(b);b.click();b.remove();};
   const setup=(bond=100,complete=true)=>{closeModal(false);state=freshState();state.sound=false;state.coins=100;state.chronicle.completedChapters=complete?[1,2,3,4,5,6]:[1,2,3,4,5];Object.assign(state.chronicle.run,{chapter:6,ch:6,name:'测试玩家',inst:'长笛',scene:'c6_intro',tech:24});for(const id of ['azhe','shiyuan'])applyBondValue(id,bond);save();route('chronicle');};
   const select=async id=>{await action('picker');await click(`[data-cp-person="${id}"]`);};
   const reload=()=>{closeModal(false);state=cleanState(JSON.parse(JSON.stringify(state)));save();route('chronicle');};
-  const go=scene=>{closeModal(false);S().scene=scene;S().ending=null;P().rev++;renderGlobal();};
+  const go=scene=>{closeModal(false);S().scene=scene;S().page=0;S().ending=null;P().rev++;renderGlobal();};
   const finish=async()=>{await choose(0);check('Ending auto preview '+S().ending,!$('modalBackdrop').hidden);closeModal(false);};
   for(const route of Object.values(PERSONAL_ROUTES))for(const n of route.nodes){
    check('Valid graph '+n.id,n.lines.length>0&&n.choices.length>0&&n.choices.every(c=>c.next===null||c.next==='CHK_COMFORT'||route.nodes.some(v=>v.id===c.next)));
    check('Explicit bond range '+n.id,n.choices.every(c=>[0,1,2,5].includes(c.bond)));
+   check('Known personal speaker '+n.id,n.lines.every(l=>['narrator','player','bingbing','xuezi','rek','crowd',...ChronicleData.PERSON_IDS].includes(l.who)));
   }
+  for(const n of PERSONAL_ROUTES.baoshi_feihong.nodes){const turns=[];for(const l of n.lines){if(turns.at(-1)?.who===l.who)turns.at(-1).text+=' '+l.text;else turns.push({...l});}check('Every CP dialogue page has dedicated art '+n.id,n.pageArt.length===Math.ceil(turns.length/2)&&n.pageArt.every(a=>a.asset&&a.memory));}
   setup(100,false);check('Chapter seven disabled before six',document.querySelector('[data-cp-action="personal-picker"]').disabled);
   await forged('personal-select',{cpPerson:'azhe'});check('Direct entry blocked before six',!P().active);
   setup(35);await action('picker');check('35 boundary stays locked',document.querySelector('[data-cp-person="azhe"]').disabled);
   await forged('personal-select',{cpPerson:'azhe'});check('Execution rechecks 35',!P().active);closeModal(false);
+  setup(35);state.coins=9999;await action('picker');await click('[data-cp-action="personal-unlock"][data-cp-person="azhe"]');check('Insufficient direct unlock never charges',state.coins===9999&&!P().unlocks.azhe);closeModal(false);
+  state.coins=10007;await action('picker');await click('[data-cp-action="personal-unlock"][data-cp-person="azhe"]');check('Ten-thousand-note unlock is exact and does not change bond',state.coins===7&&P().unlocks.azhe&&cardBond('azhe')===35);closeModal(false);reload();check('Paid personal unlock survives save cleaning',P().unlocks.azhe===true);await select('azhe');check('Paid unlock bypasses bond gate',P().active&&S().scene==='azhe_01');
+  setup(0);state.coins=10000;await action('picker');await click('[data-cp-action="personal-unlock"][data-cp-person="baoshi_feihong"]');closeModal(false);await select('baoshi_feihong');check('Paid CP unlock bypasses special prerequisites',state.coins===0&&P().active&&S().scene==='cp_00'&&!state.chronicle.run.flags.feiSide);
   applyBondValue('azhe',36);await select('azhe');check('36 enters actual dialogue',S().scene==='azhe_01'&&P().active);
   check('Reading collects only actual scene',state.memories.includes('cp7_azhe_01')&&!state.memories.includes('cp7_azhe_01c'));
   const before=cardBond('azhe');await choose(0);check('Key choice adds global five',cardBond('azhe')===before+5&&S().scene==='azhe_01b');
@@ -65,7 +71,7 @@ const assert=require('node:assert/strict');
   const selections={sy_04:2,sy_pd_b:0,sy_juggle:1};
   for(let step=0;step<90&&S().scene!=='sy_HE';step++){
    const id=S().scene;if(id==='hub'){await action('continue');continue;}
-   if(id==='sy_juggle')$('cpPersonalReply').value='<img src=x>';
+   if(id==='sy_juggle'){await pageToChoices();$('cpPersonalReply').value='<img src=x>';}
    await choose(selections[id]??0);
   }
   check('Shiyuan full HE route reached',S().scene==='sy_HE');
@@ -88,6 +94,23 @@ const assert=require('node:assert/strict');
   await forged('personal-choose',{personalRev:String(rev),personalChoice:'0'});check('Stale button cannot skip dialogue',S().scene===current);
   await forged('confirm-restart');check('Old chapter controls cannot reset six while personal active',P().active&&state.chronicle.run.scene==='c6_intro');
   go('azhe_HE');await finish();await action('restart');await action('confirm-restart');go('azhe_HE');await finish();check('Restart can show ending preview again',S().run===2);
+  // Baoshi×Feihong uses story prerequisites rather than a character-bond gate.
+  setup();Object.assign(state.chronicle.run,{level:6,flags:{feiSide:1,strGroup:1}});await select('shiyuan');S().flags.syFriend=true;P().rev++;renderGlobal();await select('baoshi_feihong');
+  check('String group plus Shiyuan friendship enters CP route',P().selected==='baoshi_feihong'&&S().scene==='cp_00');
+  check('Personal reader limits each page to two dialogue turns',document.querySelectorAll('.cp-dialogue-turn').length<=2);
+  await choose(1);check('Low banner choice pauses at support hub',S().scene==='hub'&&S().score===11);await action('support');await action('continue');check('Listening support reaches next CP scene',S().scene==='cp_00b');
+  check('Long personal scenes use continuation pages before choices',document.querySelectorAll('.cp-dialogue-turn').length<=2&&!!document.querySelector('[data-cp-action="personal-page"]')&&!document.querySelector('[data-personal-choice]'));
+  await action('page');await action('hub');await action('continue');check('Pause and continue restore the same dialogue page',S().scene==='cp_00b'&&S().page===1&&document.querySelectorAll('.cp-dialogue-turn').length<=2);
+  go('cp_00c');check('SOLO scene attributes first page to narrator and Dayang',[...document.querySelectorAll('.cp-speaker b')].map(e=>e.textContent).join('|')==='旁白|大羊');await action('page');check('SOLO scene attributes Baoshi and Feihong dialogue',document.querySelector('#cpMain').textContent.includes('宝石')&&document.querySelector('#cpMain').textContent.includes('飞鸿')&&!document.querySelector('#cpMain').textContent.includes('旁白'));
+  S().score=200;S().flags={push1:true,push2:true,push3:true};go('cp_12b');await choose(0);check('Three assist flags resolve CP HE',S().scene==='cp_HE');
+  const heImages=[];for(let i=0;i<6;i++){await wait();const img=document.querySelector('.cp-novel-art img');heImages.push(img?.getAttribute('src'));check('HE page art is visible '+(i+1),!!img&&img.complete&&img.naturalWidth>0&&img.getBoundingClientRect().width>0);if(i<5)await action('page');}
+  check('HE uses six distinct page illustrations including the kiss',new Set(heImages).size===6&&heImages[3].endsWith('/cp_HE_page4.webp')&&state.memories.includes('cp7_cp_HE_page4'));
+  await choose(0);check('CP ending completes with its generated memorial art',S().scene==='complete'&&!$('modalBackdrop').hidden&&state.memories.includes('cp7_cp_HE'));closeModal(false);
+  setup();Object.assign(state.chronicle.run,{level:6,flags:{feiSide:1,baoFeiPractice:1,yangcun:1}});await action('picker');check('Yangcun band path stays independent from CP route',document.querySelector('[data-cp-person="baoshi_feihong"]').disabled&&document.querySelector('#modalContent').textContent.includes('羊村乐队线为独立路线'));closeModal(false);await forged('personal-select',{cpPerson:'baoshi_feihong'});check('Band path cannot directly enter CP route',!P().active);
+  setup();Object.assign(state.chronicle.run,{level:6,flags:{feiSide:1,strGroup:1}});await select('shiyuan');S().flags.syFriend=true;P().rev++;renderGlobal();await select('baoshi_feihong');S().score=93;S().flags={cpReady:true,push1:true,push2:true,push3:true};S().done=Object.fromEntries(PERSONAL_ROUTES.baoshi_feihong.nodes.filter(n=>!n.sub&&!n.ending).map(n=>[n.id,true]));S().scene='hub';P().rev++;renderGlobal();check('Low final banner never falls into Yangcun placeholder',document.querySelector('#cpMain').textContent.includes('还差 2 点大旗值')&&!document.querySelector('#cpMain').textContent.includes('羊村线待续'));await action('support');check('Final support resolves CP ending',S().scene==='cp_HE');
+  P().active=false;Object.assign(state.chronicle.run,{scene:'menu',level:5,flags:{feiSide:1,c4bao:1}});state.chronicle.run.rev++;renderGlobal();await click('[data-cp-action="ensemble"]');await click('[data-cp-action="partner"][data-cp-person="baoshi_feihong"]');
+  const random=Math.random;Math.random=()=>0;while(state.chronicle.run.scene==='practice_turn')await click('[data-cp-action="battle"][data-cp-battle="stable"]');Math.random=random;
+  check('Baoshi and Feihong duo rehearsal records route and raises band',state.chronicle.run.flags.baoFeiPractice&&state.chronicle.run.level===6);
   setup(100);await select('shiyuan');go('sy_i3');save();
   window.personalTest={setup,select,go};
   return out;
@@ -100,8 +123,8 @@ const assert=require('node:assert/strict');
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Personal reader overflow '+width+' doc='+await page.evaluate(()=>document.documentElement.scrollWidth)+' '+JSON.stringify(await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>e.getBoundingClientRect().right>innerWidth+.5).map(e=>({cls:e.className,right:e.getBoundingClientRect().right})).slice(0,40))));
   await page.screenshot({path:'/tmp/hjm-personal-'+width+'.png',fullPage:true});
  }
- const assets=await page.evaluate(()=>PERSONAL_NODES.map(n=>ASSETS[n.asset]));
- assert.equal(new Set(assets).size,105,'Unique per-dialogue assets');
+ const assets=await page.evaluate(()=>[...PERSONAL_NODES.filter(n=>n.asset).map(n=>ASSETS[n.asset]),...PERSONAL_PAGE_ART.map(a=>ASSETS[a.asset])]);
+ assert.equal(new Set(assets).size,163,'Unique per-dialogue-page assets');
  if(!process.env.PERSONAL_SKIP_ART)for(const asset of assets)assert(fs.existsSync(path.resolve(__dirname,'..',asset)),asset);
  assert.deepEqual(errors,[],'Runtime errors');
  console.log(`PASS: ${checks.length} personal route graph/behavior checks, full HE/TE/BE paths, actual refresh and four widths.`);

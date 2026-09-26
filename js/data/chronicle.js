@@ -261,6 +261,7 @@ const ChronicleData = {
     "c2_tim",
     "c2_night_pre",
     "c2_night",
+    "c2_yangcun",
     "c2_str",
     "c2_pop_end",
     "c2_head",
@@ -321,7 +322,7 @@ const ChronicleData = {
     },
     "c5_be": {
       "chapter": 5,
-      "title": "婚礼上的一元",
+      "title": "婚礼上的十元",
       "code": "BE · CHAPTER V",
       "icon": "moon",
       "memory": "cp5_be",

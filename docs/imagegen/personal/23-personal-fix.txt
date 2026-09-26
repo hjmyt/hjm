@@ -1,0 +1,12 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene. Warm cinematic semi-realistic anime painted CG matching the supplied character references. All characters are fictional Chinese adults. Keep faces, hair and clothing consistent. No glasses on Baoshi or Feihong.
+
+PANEL 1 (cp_08_page2): In a dim rehearsal room at night, Feihong—the adult man with neat short black hair, blue-gray overshirt over a white T-shirt—sits alone with tired bloodshot eyes, looking up with a trace of fear and asking whether he has a chance. Vulnerable but restrained, no instrument, no glasses, no other visible character.
+
+PANEL 2 (cp_11_page2): On the edge of the old stage, Baoshi—the adult man with slightly wavy black hair and a loose ivory shirt—holds an old smartphone showing a photo-gallery grid without readable text. The photos suggest two years of singing beside Feihong. Baoshi looks lost and newly heartbroken, no glasses, no violin, no other foreground character.
+
+PANEL 3: Empty warm rehearsal room with two microphones, no characters, no readable text.
+PANEL 4: Empty warm rehearsal room with two acoustic guitars, no characters, no readable text.
+PANEL 5: Empty warm rehearsal room with a keyboard, no characters, no readable text.
+PANEL 6: Empty warm rehearsal room with stage lights, no characters, no readable text.
+PANEL 7: Empty warm rehearsal room with music stands, no characters, no readable text.
+PANEL 8: Empty warm rehearsal room at sunset, no characters, no readable text.

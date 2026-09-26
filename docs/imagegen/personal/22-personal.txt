@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：黑发成年男性贝斯手。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (cp_11_page2, do not write ID): 剧情分镜《开窍 · 日子不对劲》的第 2 幕：第六周，你看见他翻出旧手机相册——不知道哪来的，满满全是这两年的照片：他唱歌，他在笑，他在看飞鸿。而每张照片的边缘，都有半张侧脸，永远朝着他。 （他坐在舞台边，喃喃自语：）「他说，想明白之前不见我……那如果我一直想不明白呢？」
+
+PANEL 2 (cp_HE_page1, do not write ID): 夜晚摩天轮下，飞鸿穿蓝灰衬衫站在缠着胶带的行李箱旁；宝石穿米白衬衫气喘吁吁跑到他面前，久别重逢、欲言又止，霓虹映亮两人的脸。
+
+PANEL 3 (cp_HE_page2, do not write ID): 摩天轮霓虹下，飞鸿眼眶微红、克制地质问，宝石慌张摆手解释；脚边有旅行六小时带来的行李箱，两个成年男性近景对话。
+
+PANEL 4 (cp_HE_page3, do not write ID): 摩天轮下的安静近景，宝石认真直视飞鸿，一字一句坦白自己不是来续约搭档、而是来追他；飞鸿惊讶又期待。
+
+PANEL 5 (cp_HE_page4, do not write ID): 夜晚摩天轮霓虹下，宝石穿米白衬衫轻轻拉近穿蓝灰衬衫的飞鸿，两个成年男性闭眼温柔接吻；浪漫、克制、真挚，完整着装，非情色。
+
+PANEL 6 (cp_HE_page5, do not write ID): 接吻后两人额头几乎相抵，宝石眼睛发亮说出喜欢，随后飞鸿张开双臂，两位成年男性用力长久拥抱，行李箱在脚边。
+
+PANEL 7 (cp_HE_page6, do not write ID): 摩天轮远处的绿化带后，十元兴奋地挥着小旗，雪子抱臂含泪微笑；前景远处可见宝石与飞鸿相拥，温暖圆满。
+
+PANEL 8: Archive detail study, an empty warm rehearsal room with two microphones and two acoustic guitars, no characters, no readable text.

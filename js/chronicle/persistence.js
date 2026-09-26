@@ -76,7 +76,7 @@ function createChroniclePersistence(ctx) {
             r.log = a.log.filter(x => x && typeof x.text === 'string' && !isRetiredLog(x.text)).slice(-70).map(x => ({ chapter: [1, 2, 3, 4, 5, 6].includes(x.chapter) ? x.chapter : r.chapter, week: ctx.nInt(x.week, 1, 1, 999), text: ctx.str(x.text, 220), warning: x.warning === true }));
         if (a.battle && typeof a.battle === 'object') {
             const b = a.battle;
-            r.battle = { context: b.context === 'weekly' ? 'weekly' : 'intro', hp: ctx.nInt(b.hp, 15, 0, 10009), maxHp: ctx.nInt(b.maxHp, 15, 1, 10009), pressure: ctx.nInt(b.pressure, 14, 0, 14), round: ctx.nInt(b.round, 1, 1, 100), partner: ['shiyuan', 'azhe', 'dijie', 'feihong', 'tim', 'yeshiyang', 'lala'].includes(b.partner) ? b.partner : null, over: b.over === true, win: b.win === true, last: ctx.str(b.last, 300) };
+            r.battle = { context: b.context === 'weekly' ? 'weekly' : 'intro', hp: ctx.nInt(b.hp, 15, 0, 10009), maxHp: ctx.nInt(b.maxHp, 15, 1, 10009), pressure: ctx.nInt(b.pressure, 14, 0, 14), round: ctx.nInt(b.round, 1, 1, 100), partner: ['shiyuan', 'azhe', 'dijie', 'feihong', 'tim', 'yeshiyang', 'lala', 'baoshi_feihong'].includes(b.partner) ? b.partner : null, over: b.over === true, win: b.win === true, last: ctx.str(b.last, 300) };
         }
         if (a.live && typeof a.live === 'object') {
             const l = a.live, scores = Array.isArray(l.scores) ? l.scores.filter(n => [2, 6, 10].includes(n)).slice(0, 5) : [];

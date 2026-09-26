@@ -45,9 +45,9 @@
 .cp-novel-heading h3 { font-family: var(--serif); font-size: 28px; font-weight: 500; line-height: 1.5; letter-spacing: 1px; margin: 0; }
 .cp-memory-link { display: inline-flex; align-items: center; gap: 8px; padding: 8px 0; border: 0; border-bottom: 1px solid #ffffff50; background: none; color: #f3d9dc; font-size: 12px; cursor: pointer; }
 .cp-memory-link:hover { color: white; }
-.cp-novel .cp-novel-art { grid-area: art; justify-self: center; width: auto; max-width: min(100%, 300px); margin: 0; padding: 7px 7px 0; border: 0; border-radius: 5px; background: #fffaf3; transform: rotate(2deg); box-shadow: 0 7px 20px #16121935; }
-.cp-novel-art button { display: block; background: transparent; border: 0; padding: 0; cursor: zoom-in; }
-.cp-novel .cp-novel-art img { display: block; width: auto; max-width: 100%; height: auto; max-height: 250px; object-fit: contain; }
+.cp-novel .cp-novel-art { grid-area: art; justify-self: center; width: min(100%, 250px); margin: 0; padding: 7px 7px 0; border: 0; border-radius: 5px; background: #fffaf3; transform: rotate(2deg); box-shadow: 0 7px 20px #16121935; }
+.cp-novel-art button { display: block; width: 100%; aspect-ratio: 1; overflow: hidden; background: #eee8e4; border: 0; padding: 0; cursor: zoom-in; }
+.cp-novel .cp-novel-art img { display: block; width: 100%; max-width: none; height: 100%; max-height: none; object-fit: contain; }
 .cp-novel .cp-novel-art figcaption { text-align: center; padding: 7px 5px; font-size: 10px; line-height: 1.4; color: #8b7659; }
 .cp-novel-dialogue { grid-area: dialogue; min-width: 0; padding: 20px; background: #fffdf9; border: 1px solid #f2e8e2; border-radius: 17px; }
 .cp-novel-dialogue > .cp-surface { padding: 0; border: 0; box-shadow: none; background: none; border-radius: 0; }
@@ -71,10 +71,10 @@
 .cp-reader-details .cp-sidepanel { margin: 0; }
 @media (max-width: 840px) {
   .cp-novel { padding: 14px; border-radius: 20px; }
-  .cp-novel-illustrated .cp-novel-body { grid-template-columns: 1fr; grid-template-areas: 'heading' 'art' 'dialogue'; grid-template-rows: auto; gap: 16px; }
+  .cp-novel-illustrated .cp-novel-body { grid-template-columns: minmax(0,1fr) clamp(100px,22vw,148px); grid-template-areas: 'heading art' 'dialogue dialogue'; grid-template-rows: auto auto; gap: 12px 16px; align-items: start; }
+  .cp-novel-heading { align-self: center; }
   .cp-novel-heading h3 { font-size: 26px; }
-  .cp-novel .cp-novel-art { margin: 0; }
-  .cp-novel .cp-novel-art img { max-height: 210px; max-width: 286px; }
+  .cp-novel .cp-novel-art { width: 100%; max-width: 148px; margin: 0; }
   .cp-novel-dialogue { padding: 20px; }
   .cp-reader-details .cp-sidebar { grid-template-columns: 1fr; }
 }
@@ -83,10 +83,11 @@
   .cp-novel-top > span:nth-child(2) { text-align: right; margin-left: auto; }
   .cp-novel-progress { width: 100%; justify-content: center; }
   .cp-novel-body { margin-top: 16px; }
-  .cp-novel-heading { justify-content: center; text-align: center; gap: 4px 12px; }
-  .cp-novel-heading h3 { font-size: 24px; }
-  .cp-novel .cp-novel-art { justify-self: center; margin: 0; }
-  .cp-novel .cp-novel-art img { max-height: 185px; max-width: 100%; }
+  .cp-novel-illustrated .cp-novel-body { grid-template-columns: minmax(0,1fr) 88px; gap: 10px 12px; }
+  .cp-novel-heading { justify-content: flex-start; text-align: left; gap: 4px 12px; }
+  .cp-novel-heading h3 { font-size: 22px; }
+  .cp-novel .cp-novel-art { justify-self: end; width: 88px; padding: 4px 4px 0; transform: none; }
+  .cp-novel .cp-novel-art figcaption { display: none; }
   .cp-novel-dialogue { padding: 16px; border-radius: 13px; }
   .cp-novel-dialogue .cp-text { font-size: 14px; line-height: 1.9; margin-top: 12px; }
   .cp-novel-dialogue .cp-speaker b { font-size: 17px; }

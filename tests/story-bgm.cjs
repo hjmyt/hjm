@@ -110,6 +110,9 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
   await site.evaluate(()=>route('chronicle'));
   await site.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return !a.paused&&a.currentSrc.includes('a-little-story.mp3')&&a.currentTime>.05;});
   assert(await site.locator('#siteMusicControls').isHidden());
+  await site.evaluate(()=>StoryBgm.sync({view:'chronicle',chapter:7,scene:'cp_BE',ending:'cp_BE',sound:true}));
+  await site.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return !a.paused&&a.currentSrc.includes('huimosrushen-de-mingzi.mp3')&&a.currentTime>.05;});
+  assert((await status()).duration>1,'Baoshi-Feihong BE song decodes');
   await site.evaluate(()=>StoryBgm.sync({view:'chronicle',chapter:1,scene:'training',sound:true}));assert((await status()).paused,'Training pauses music');
   await site.evaluate(()=>route('home'));await waitSite();
   await site.evaluate(()=>route('rhythm'));assert((await status()).paused,'Rhythm stage pauses site music');

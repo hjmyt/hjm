@@ -27,5 +27,24 @@ for batch in plan:
             fix = ROOT / 'docs/imagegen/personal' / (batch['batch'] + '-fix.txt')
             if fix.exists(): entry['editPrompt'] = str(fix.relative_to(ROOT))
             manifest.append(entry)
+fixes_path = ROOT / 'docs/imagegen/personal/page-fixes.json'
+if fixes_path.exists():
+    by_id = {entry['id']: entry for entry in manifest}
+    for fix in json.loads(fixes_path.read_text()):
+        original = ROOT / fix['source']
+        if not original.exists():
+            if args.partial:
+                continue
+            raise FileNotFoundError(original)
+        with Image.open(original) as atlas:
+            w, h = atlas.size
+            i = fix['cell'] - 1
+            x, y = i % 4, i // 4
+            box = [round(x*w/4)+3, round(y*h/2)+3, round((x+1)*w/4)-3, round((y+1)*h/2)-3]
+            output = ROOT / 'assets/chronicle/personal' / (fix['id'] + '.webp')
+            atlas.crop(box).convert('RGB').save(output, quality=92, method=6)
+            previous = by_id[fix['id']]
+            by_id[fix['id']] = {**previous, 'source': fix['source'], 'size': [w,h], 'cell': fix['cell'], 'crop': box, 'output': str(output.relative_to(ROOT)), 'prompt': fix['prompt'], 'corrected': True}
+    manifest = list(by_id.values())
 (ROOT / 'docs/imagegen/personal/art.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + '\n')
 print(f'Rebuilt {len(manifest)} illustrations from preserved atlases.')

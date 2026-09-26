@@ -152,7 +152,7 @@ function lalaSummary(r) {
     }
     if (r.bar?.closed)
         lines.push('这一章，山丘酒吧停业了。');
-    const ends = { c5_wind: '夏天的风', c5_he: '夏天的形状', c5_be: '婚礼上的一元', c5_fail: '风吹过的舞台', c6_he: '开幕之夜', c6_te: '差四十秒的完美', c6_be: '没有开幕的夜晚', debut: '第一笔合约', ordinary: '下一次一定行', shadow: '团长的影子', c2_street: '街头卖唱', c2_dual: '双核', c2_solo: '独奏者', c2_retry: '翻车与重来', c3_he: '舞台与真心', c3_te: '专场之夜', c3_fail: '安可之前', c3_qiqi: '温柔的刀', c4_he: "6.7 满场星光", c4_te: "谢幕后", c4_fail: "空了一半的剧场", c4_qiqi: "没等到的观众", c4_lemon: "远方的机票" };
+    const ends = { c5_wind: '夏天的风', c5_he: '夏天的形状', c5_be: '婚礼上的十元', c5_fail: '风吹过的舞台', c6_he: '开幕之夜', c6_te: '差四十秒的完美', c6_be: '没有开幕的夜晚', debut: '第一笔合约', ordinary: '下一次一定行', shadow: '团长的影子', c2_street: '街头卖唱', c2_dual: '双核', c2_solo: '独奏者', c2_retry: '翻车与重来', c3_he: '舞台与真心', c3_te: '专场之夜', c3_fail: '安可之前', c3_qiqi: '温柔的刀', c4_he: "6.7 满场星光", c4_te: "谢幕后", c4_fail: "空了一半的剧场", c4_qiqi: "没等到的观众", c4_lemon: "远方的机票" };
     if (ends[r.ending])
         lines.push('本周目已收录结局：「' + ends[r.ending] + '」。');
     return lines;

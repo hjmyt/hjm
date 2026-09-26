@@ -1,0 +1,28 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：黑发成年男性贝斯手。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (cp_03x_page3, do not write ID): 剧情分镜《心疼 · 牛排与捉迷藏》的第 3 幕：飞鸿第一次没有跟他抢。他只是似笑非笑地看着宝石，把牛排推了回去。 「给你。以后……都给你。」
+
+PANEL 2 (cp_03x_page4, do not write ID): 剧情分镜《心疼 · 牛排与捉迷藏》的第 4 幕：（眼睛都亮了：）「真的啊？！哈哈，你说的啊，骗人是小狗！」 宝石的眼睛本来就有些下垂，这会儿亮晶晶的，像一只比熊。飞鸿觉得自己心跳漏了一拍，随即警铃大作——
+
+（我别是有病吧。）他面无表情地扒了口意面。（对着个哥们，我心动个屁。）
+
+彼时的他还不明白，有一种心跳，意味着情谊明媚。只觉得心，有点疼。
+
+PANEL 3 (cp_04_page2, do not write ID): 剧情分镜《雪子 · 铁三角》的第 2 幕：雪子对宝石的好，大大方方，从不遮掩——可谁都看得出，那是哥们式的好，仗义，坦荡，没有杂质。你一度以为这条线里最大的变量会是他，后来才发现，变量从来只有一个。
+
+PANEL 4 (cp_04talk_page2, do not write ID): 剧情分镜《雪子言叶》的第 2 幕：（他想都没想：）「谁不喜欢宝石呢？」 「呵呵……」你冷笑了一声，没接话。
+
+PANEL 5 (cp_04talk_page3, do not write ID): 剧情分镜《雪子言叶》的第 3 幕：（他沉默了几秒，忽然笑了，看着远处正在收拾话筒的宝石：）「一开始，是有点吧。」他把键盘包背好，语气轻下来，「但是后来我想明白了——太阳照到你，不是真的为你一个人发光。我恰好路过，晒到了，仅此而已。」
+
+（他转过头看你，眼睛很亮：）「宝石……他不明白这些。所以，别让他输。」
+
+PANEL 6 (cp_05_page2, do not write ID): 剧情分镜《非醋 · 鞋带》的第 2 幕：「我去，都是哥们，你不爽个屁。」他磕了一下，又补一句，「人家帮忙系个鞋带，你在这演什么内心戏。」再磕一下，「……飞鸿，你清醒一点。」
+
+你清了清嗓子。他猛地回头，一秒切换成无事发生：「我没事。我就是……就是来背歌词的。」
+
+PANEL 7 (cp_06_page2, do not write ID): 剧情分镜《团建 · 巴士》的第 2 幕：话音未落，雪子从前门上了车，步子轻快，径直坐在了宝石旁边的空位上：「巧了，我也晕车，咱俩正好作伴。」 飞鸿僵在过道里。你看见他的手在半空停了停，最终转身坐到了后排——全程目视前方，一动不动，像一座装了发动机的雕塑。
+
+回程时天色晚了，雪子去了后排跟大塔聊天。飞鸿立刻起身，在宝石旁边坐下，动作快得像抢拍的鼓点。宝石迷迷糊糊睁开眼。
+
+PANEL 8 (cp_06_page3, do not write ID): 剧情分镜《团建 · 巴士》的第 3 幕：「你没晕车呀？」 飞鸿把外套披到他肩上。

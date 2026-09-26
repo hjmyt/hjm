@@ -698,5 +698,393 @@
         "memory": "cp7_sy_reply"
       }
     ]
+  },
+  {
+    "batch": "15-personal",
+    "scenes": [
+      {
+        "id": "cp_00",
+        "title": "入线 · 山丘的驻唱",
+        "asset": "personal_cp_00",
+        "memory": "cp7_cp_00"
+      },
+      {
+        "id": "cp_00b",
+        "title": "入队 · 530的邀请",
+        "asset": "personal_cp_00b",
+        "memory": "cp7_cp_00b"
+      },
+      {
+        "id": "cp_01",
+        "title": "相熟 · 白切黑计划",
+        "asset": "personal_cp_01",
+        "memory": "cp7_cp_01"
+      },
+      {
+        "id": "cp_01b",
+        "title": "相熟 · 白切黑计划",
+        "asset": "personal_cp_01b",
+        "memory": "cp7_cp_01b"
+      },
+      {
+        "id": "cp_01c",
+        "title": "相熟 · 白切黑计划",
+        "asset": "personal_cp_01c",
+        "memory": "cp7_cp_01c"
+      },
+      {
+        "id": "cp_00c",
+        "title": "530 · 被掐掉的SOLO",
+        "asset": "personal_cp_00c",
+        "memory": "cp7_cp_00c"
+      },
+      {
+        "id": "cp_02",
+        "title": "互动 · 铁公鸡请客",
+        "asset": "personal_cp_02",
+        "memory": "cp7_cp_02"
+      },
+      {
+        "id": "cp_03x",
+        "title": "心疼 · 牛排与捉迷藏",
+        "asset": "personal_cp_03x",
+        "memory": "cp7_cp_03x"
+      }
+    ]
+  },
+  {
+    "batch": "16-personal",
+    "scenes": [
+      {
+        "id": "cp_03",
+        "title": "相知 · 柠檬水",
+        "asset": "personal_cp_03",
+        "memory": "cp7_cp_03"
+      },
+      {
+        "id": "cp_03b",
+        "title": "相知 · 柠檬水",
+        "asset": "personal_cp_03b",
+        "memory": "cp7_cp_03b"
+      },
+      {
+        "id": "cp_04",
+        "title": "雪子 · 铁三角",
+        "asset": "personal_cp_04",
+        "memory": "cp7_cp_04"
+      },
+      {
+        "id": "cp_04talk",
+        "title": "雪子言叶",
+        "asset": "personal_cp_04talk",
+        "memory": "cp7_cp_04talk"
+      },
+      {
+        "id": "cp_05",
+        "title": "非醋 · 鞋带",
+        "asset": "personal_cp_05",
+        "memory": "cp7_cp_05"
+      },
+      {
+        "id": "cp_06",
+        "title": "团建 · 巴士",
+        "asset": "personal_cp_06",
+        "memory": "cp7_cp_06"
+      },
+      {
+        "id": "cp_07",
+        "title": "悸动 · 摩天轮",
+        "asset": "personal_cp_07",
+        "memory": "cp7_cp_07"
+      },
+      {
+        "id": "cp_08",
+        "title": "挑明前夜 · 递刀",
+        "asset": "personal_cp_08",
+        "memory": "cp7_cp_08"
+      }
+    ]
+  },
+  {
+    "batch": "17-personal",
+    "scenes": [
+      {
+        "id": "cp_08b",
+        "title": "挑明前夜 · 递刀",
+        "asset": "personal_cp_08b",
+        "memory": "cp7_cp_08b"
+      },
+      {
+        "id": "cp_08c",
+        "title": "挑明前夜 · 递刀",
+        "asset": "personal_cp_08c",
+        "memory": "cp7_cp_08c"
+      },
+      {
+        "id": "cp_09",
+        "title": "误解 · 无心的话最疼",
+        "asset": "personal_cp_09",
+        "memory": "cp7_cp_09"
+      },
+      {
+        "id": "cp_10",
+        "title": "离开 · 行李箱",
+        "asset": "personal_cp_10",
+        "memory": "cp7_cp_10"
+      },
+      {
+        "id": "cp_11",
+        "title": "开窍 · 日子不对劲",
+        "asset": "personal_cp_11",
+        "memory": "cp7_cp_11"
+      },
+      {
+        "id": "cp_12",
+        "title": "火葬场 · 最后一推",
+        "asset": "personal_cp_12",
+        "memory": "cp7_cp_12"
+      },
+      {
+        "id": "cp_12b",
+        "title": "火葬场 · 最后一推",
+        "asset": "personal_cp_12b",
+        "memory": "cp7_cp_12b"
+      },
+      {
+        "id": "cp_12c",
+        "title": "火葬场 · 最后一推",
+        "asset": "personal_cp_12c",
+        "memory": "cp7_cp_12c"
+      }
+    ]
+  },
+  {
+    "batch": "18-personal",
+    "scenes": [
+      {
+        "id": "yc_hold",
+        "title": "羊村线 · 待续",
+        "asset": "personal_yc_hold",
+        "memory": "cp7_yc_hold"
+      },
+      {
+        "id": "cp_HE",
+        "title": "HE · 爱我还是他",
+        "asset": "personal_cp_HE",
+        "memory": "cp7_cp_HE"
+      },
+      {
+        "id": "cp_BE",
+        "title": "BE · 没有他的歌友会",
+        "asset": "personal_cp_BE",
+        "memory": "cp7_cp_BE"
+      }
+    ]
+  },
+  {
+    "batch": "19-personal",
+    "scenes": [
+      {
+        "id": "cp_00b_page2",
+        "title": "入队 · 530的邀请",
+        "asset": "personal_cp_00b_page2",
+        "memory": "cp7_cp_00b_page2"
+      },
+      {
+        "id": "cp_00b_page3",
+        "title": "入队 · 530的邀请",
+        "asset": "personal_cp_00b_page3",
+        "memory": "cp7_cp_00b_page3"
+      },
+      {
+        "id": "cp_01b_page2",
+        "title": "相熟 · 白切黑计划",
+        "asset": "personal_cp_01b_page2",
+        "memory": "cp7_cp_01b_page2"
+      },
+      {
+        "id": "cp_00c_page2",
+        "title": "530 · 被掐掉的SOLO",
+        "asset": "personal_cp_00c_page2",
+        "memory": "cp7_cp_00c_page2"
+      },
+      {
+        "id": "cp_00c_page3",
+        "title": "530 · 被掐掉的SOLO",
+        "asset": "personal_cp_00c_page3",
+        "memory": "cp7_cp_00c_page3"
+      },
+      {
+        "id": "cp_00c_page4",
+        "title": "530 · 被掐掉的SOLO",
+        "asset": "personal_cp_00c_page4",
+        "memory": "cp7_cp_00c_page4"
+      },
+      {
+        "id": "cp_02_page2",
+        "title": "互动 · 铁公鸡请客",
+        "asset": "personal_cp_02_page2",
+        "memory": "cp7_cp_02_page2"
+      },
+      {
+        "id": "cp_03x_page2",
+        "title": "心疼 · 牛排与捉迷藏",
+        "asset": "personal_cp_03x_page2",
+        "memory": "cp7_cp_03x_page2"
+      }
+    ]
+  },
+  {
+    "batch": "20-personal",
+    "scenes": [
+      {
+        "id": "cp_03x_page3",
+        "title": "心疼 · 牛排与捉迷藏",
+        "asset": "personal_cp_03x_page3",
+        "memory": "cp7_cp_03x_page3"
+      },
+      {
+        "id": "cp_03x_page4",
+        "title": "心疼 · 牛排与捉迷藏",
+        "asset": "personal_cp_03x_page4",
+        "memory": "cp7_cp_03x_page4"
+      },
+      {
+        "id": "cp_04_page2",
+        "title": "雪子 · 铁三角",
+        "asset": "personal_cp_04_page2",
+        "memory": "cp7_cp_04_page2"
+      },
+      {
+        "id": "cp_04talk_page2",
+        "title": "雪子言叶",
+        "asset": "personal_cp_04talk_page2",
+        "memory": "cp7_cp_04talk_page2"
+      },
+      {
+        "id": "cp_04talk_page3",
+        "title": "雪子言叶",
+        "asset": "personal_cp_04talk_page3",
+        "memory": "cp7_cp_04talk_page3"
+      },
+      {
+        "id": "cp_05_page2",
+        "title": "非醋 · 鞋带",
+        "asset": "personal_cp_05_page2",
+        "memory": "cp7_cp_05_page2"
+      },
+      {
+        "id": "cp_06_page2",
+        "title": "团建 · 巴士",
+        "asset": "personal_cp_06_page2",
+        "memory": "cp7_cp_06_page2"
+      },
+      {
+        "id": "cp_06_page3",
+        "title": "团建 · 巴士",
+        "asset": "personal_cp_06_page3",
+        "memory": "cp7_cp_06_page3"
+      }
+    ]
+  },
+  {
+    "batch": "21-personal",
+    "scenes": [
+      {
+        "id": "cp_06_page4",
+        "title": "团建 · 巴士",
+        "asset": "personal_cp_06_page4",
+        "memory": "cp7_cp_06_page4"
+      },
+      {
+        "id": "cp_08_page2",
+        "title": "挑明前夜 · 递刀",
+        "asset": "personal_cp_08_page2",
+        "memory": "cp7_cp_08_page2"
+      },
+      {
+        "id": "cp_09_page2",
+        "title": "误解 · 无心的话最疼",
+        "asset": "personal_cp_09_page2",
+        "memory": "cp7_cp_09_page2"
+      },
+      {
+        "id": "cp_09_page3",
+        "title": "误解 · 无心的话最疼",
+        "asset": "personal_cp_09_page3",
+        "memory": "cp7_cp_09_page3"
+      },
+      {
+        "id": "cp_09_page4",
+        "title": "误解 · 无心的话最疼",
+        "asset": "personal_cp_09_page4",
+        "memory": "cp7_cp_09_page4"
+      },
+      {
+        "id": "cp_10_page2",
+        "title": "离开 · 行李箱",
+        "asset": "personal_cp_10_page2",
+        "memory": "cp7_cp_10_page2"
+      },
+      {
+        "id": "cp_10_page3",
+        "title": "离开 · 行李箱",
+        "asset": "personal_cp_10_page3",
+        "memory": "cp7_cp_10_page3"
+      },
+      {
+        "id": "cp_10_page4",
+        "title": "离开 · 行李箱",
+        "asset": "personal_cp_10_page4",
+        "memory": "cp7_cp_10_page4"
+      }
+    ]
+  },
+  {
+    "batch": "22-personal",
+    "scenes": [
+      {
+        "id": "cp_11_page2",
+        "title": "开窍 · 日子不对劲",
+        "asset": "personal_cp_11_page2",
+        "memory": "cp7_cp_11_page2"
+      },
+      {
+        "id": "cp_HE_page1",
+        "title": "HE · 爱我还是他",
+        "asset": "personal_cp_HE_page1",
+        "memory": "cp7_cp_HE_page1"
+      },
+      {
+        "id": "cp_HE_page2",
+        "title": "HE · 爱我还是他",
+        "asset": "personal_cp_HE_page2",
+        "memory": "cp7_cp_HE_page2"
+      },
+      {
+        "id": "cp_HE_page3",
+        "title": "HE · 爱我还是他",
+        "asset": "personal_cp_HE_page3",
+        "memory": "cp7_cp_HE_page3"
+      },
+      {
+        "id": "cp_HE_page4",
+        "title": "HE · 爱我还是他",
+        "asset": "personal_cp_HE_page4",
+        "memory": "cp7_cp_HE_page4"
+      },
+      {
+        "id": "cp_HE_page5",
+        "title": "HE · 爱我还是他",
+        "asset": "personal_cp_HE_page5",
+        "memory": "cp7_cp_HE_page5"
+      },
+      {
+        "id": "cp_HE_page6",
+        "title": "HE · 爱我还是他",
+        "asset": "personal_cp_HE_page6",
+        "memory": "cp7_cp_HE_page6"
+      }
+    ]
   }
 ]

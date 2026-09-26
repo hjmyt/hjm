@@ -100,11 +100,15 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
           const choices = document.querySelector('.cp-choices'), text = document.querySelector('#cpStoryText');
           return {overflow: document.documentElement.scrollWidth > innerWidth,
             imageWidth: img.getBoundingClientRect().width, imageHeight: img.getBoundingClientRect().height,
+            reservedWidth: img.getAttribute('width'), reservedHeight: img.getAttribute('height'),
             gap: choices && text ? choices.getBoundingClientRect().top - text.getBoundingClientRect().bottom : 0,
             sidebarClosed: !document.querySelector('.cp-reader-details').open};
         });
         assert(!layout.overflow, `${scene} overflows ${width}`);
         assert(layout.imageWidth <= 301 && layout.imageHeight <= 251, `${scene} image too large at ${width}: ${JSON.stringify(layout)}`);
+        assert.equal(layout.reservedWidth, '440', `${scene} reserves image width before decode`);
+        assert.equal(layout.reservedHeight, '440', `${scene} reserves image height before decode`);
+        if (width === 390) assert(layout.imageWidth <= 80 && layout.imageHeight <= 80, `${scene} keeps mobile art compact: ${JSON.stringify(layout)}`);
         assert(layout.gap <= 25, `${scene} excessive gap before choices`);
         assert(layout.sidebarClosed);
         if ((width === 1440 || width === 390) && ['s_room', 'zhu_offer', 'c6_warn', 'c2_bar'].includes(scene))

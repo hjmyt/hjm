@@ -42,7 +42,7 @@
 | `lala_cover` | 每个声部，都有回响 | `assets/album/lala_cover.webp` |
 | `cp5_wind` | 夏天的风 | `assets/album/cp5_wind.webp` |
 | `cp5_he` | 夏天的形状 | `assets/album/cp5_he.webp` |
-| `cp5_be` | 婚礼上的一元 | `assets/album/cp5_be.webp` |
+| `cp5_be` | 婚礼上的十元 | `assets/album/cp5_be.webp` |
 | `cp5_fail` | 风吹过的舞台 | `assets/album/cp5_fail.webp` |
 | `cp6_be` | 没有开幕的夜晚 | `assets/album/cp6_be.webp` |
 | `cp6_he` | 开幕之夜 | `assets/album/cp6_he.webp` |

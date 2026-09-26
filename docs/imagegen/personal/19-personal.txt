@@ -1,0 +1,24 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：黑发成年男性贝斯手。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (cp_00b_page2, do not write ID): 剧情分镜《入队 · 530的邀请》的第 2 幕：（眼睛一亮，转头看飞鸿：）「去吗去吗？」 （看着那双亮晶晶的眼睛，把「再想想」咽了回去：）「……去。」
+
+PANEL 2 (cp_00b_page3, do not write ID): 剧情分镜《入队 · 530的邀请》的第 3 幕：很多年后你才知道，这一个「去」字，把两个人的命运拧在了一起。当然，彼时的他们都以为，只是去唱一场演出。
+
+PANEL 3 (cp_01b_page2, do not write ID): 剧情分镜《相熟 · 白切黑计划》的第 2 幕：夜宵你赢了。但飞鸿输得魂不守舍——他嘟囔了一整晚「这么可爱的宝石，想象不到谁会压力他」。
+
+PANEL 4 (cp_00c_page2, do not write ID): 剧情分镜《530 · 被掐掉的SOLO》的第 2 幕：宝石还没反应过来这是在说他，认真地点头：「你要不想带，我可以帮你背！」大羊被噎得差点背过气。 （往前一步，挡在宝石前面，声音不大：）「他数错了，是他不对。」他顿了顿，「但刚才台下喊安可的时候，喊的是全团的名字。大羊，你的 SOLO 是亮点，他的嗓音也是。530 不是一个人的专场。」
+
+PANEL 5 (cp_00c_page3, do not write ID): 剧情分镜《530 · 被掐掉的SOLO》的第 3 幕：大羊张了张嘴，没说出话，甩头走了。宝石从飞鸿身后探出脑袋。 「飞鸿，你刚才好帅。」
+
+PANEL 6 (cp_00c_page4, do not write ID): 剧情分镜《530 · 被掐掉的SOLO》的第 4 幕：飞鸿的耳根腾地红了。 「……闭嘴，背你的词去。」
+
+PANEL 7 (cp_02_page2, do not write ID): 剧情分镜《互动 · 铁公鸡请客》的第 2 幕：（认真想了想，一咬牙：）「请！」
+
+他真的请了。人均六十的牛排馆，他自己点了最便宜的意面，把牛排推给飞鸿：「这个月……只能请你吃这个了。下个月发了驻唱的钱，再请你吃好的。」
+
+PANEL 8 (cp_03x_page2, do not write ID): 剧情分镜《心疼 · 牛排与捉迷藏》的第 2 幕：开朗的眼眸里，落下一丝愁绪。快得像错觉，可你看见飞鸿的手顿在了半空。
+
+飞鸿忽然觉得，胸口流过一丝异样。他抬手抚住胸口，又觉得这个动作弱弱的，讪讪放下。可这感觉，似曾相识——
+
+小时候跟伙伴玩捉迷藏，轮到他躲。他找了个最隐蔽的地方，想着谁都找不到自己。一分钟……两分钟……半小时。等他终于按捺不住冲出来，兴奋地大喊「哈哈，你们都输啦」——月光下的操场，一个人都没有了。小伙伴们见找不着他，各自散了。那时候的他心里，就是这种感觉。只是那时的他不明白，原来这种感觉，叫难过。 （他先开了口，笑嘻嘻地把盘子往前一推：）「哎呀，你别这样。也没啥大不了的。牛排不吃我吃啦？」

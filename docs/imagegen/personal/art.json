@@ -2122,5 +2122,1167 @@
     ],
     "output": "assets/chronicle/personal/sy_reply.webp",
     "prompt": "docs/imagegen/personal/14-personal.txt"
+  },
+  {
+    "id": "cp_00",
+    "title": "入线 · 山丘的驻唱",
+    "asset": "personal_cp_00",
+    "memory": "cp7_cp_00",
+    "source": "assets/chronicle/personal/source/15-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_00.webp",
+    "prompt": "docs/imagegen/personal/15-personal.txt"
+  },
+  {
+    "id": "cp_00b",
+    "title": "入队 · 530的邀请",
+    "asset": "personal_cp_00b",
+    "memory": "cp7_cp_00b",
+    "source": "assets/chronicle/personal/source/15-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_00b.webp",
+    "prompt": "docs/imagegen/personal/15-personal.txt"
+  },
+  {
+    "id": "cp_01",
+    "title": "相熟 · 白切黑计划",
+    "asset": "personal_cp_01",
+    "memory": "cp7_cp_01",
+    "source": "assets/chronicle/personal/source/15-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_01.webp",
+    "prompt": "docs/imagegen/personal/15-personal.txt"
+  },
+  {
+    "id": "cp_01b",
+    "title": "相熟 · 白切黑计划",
+    "asset": "personal_cp_01b",
+    "memory": "cp7_cp_01b",
+    "source": "assets/chronicle/personal/source/15-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_01b.webp",
+    "prompt": "docs/imagegen/personal/15-personal.txt"
+  },
+  {
+    "id": "cp_01c",
+    "title": "相熟 · 白切黑计划",
+    "asset": "personal_cp_01c",
+    "memory": "cp7_cp_01c",
+    "source": "assets/chronicle/personal/source/15-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_01c.webp",
+    "prompt": "docs/imagegen/personal/15-personal.txt"
+  },
+  {
+    "id": "cp_00c",
+    "title": "530 · 被掐掉的SOLO",
+    "asset": "personal_cp_00c",
+    "memory": "cp7_cp_00c",
+    "source": "assets/chronicle/personal/source/15-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_00c.webp",
+    "prompt": "docs/imagegen/personal/15-personal.txt"
+  },
+  {
+    "id": "cp_02",
+    "title": "互动 · 铁公鸡请客",
+    "asset": "personal_cp_02",
+    "memory": "cp7_cp_02",
+    "source": "assets/chronicle/personal/source/15-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_02.webp",
+    "prompt": "docs/imagegen/personal/15-personal.txt"
+  },
+  {
+    "id": "cp_03x",
+    "title": "心疼 · 牛排与捉迷藏",
+    "asset": "personal_cp_03x",
+    "memory": "cp7_cp_03x",
+    "source": "assets/chronicle/personal/source/15-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_03x.webp",
+    "prompt": "docs/imagegen/personal/15-personal.txt"
+  },
+  {
+    "id": "cp_03",
+    "title": "相知 · 柠檬水",
+    "asset": "personal_cp_03",
+    "memory": "cp7_cp_03",
+    "source": "assets/chronicle/personal/source/16-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_03.webp",
+    "prompt": "docs/imagegen/personal/16-personal.txt"
+  },
+  {
+    "id": "cp_03b",
+    "title": "相知 · 柠檬水",
+    "asset": "personal_cp_03b",
+    "memory": "cp7_cp_03b",
+    "source": "assets/chronicle/personal/source/16-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_03b.webp",
+    "prompt": "docs/imagegen/personal/16-personal.txt"
+  },
+  {
+    "id": "cp_04",
+    "title": "雪子 · 铁三角",
+    "asset": "personal_cp_04",
+    "memory": "cp7_cp_04",
+    "source": "assets/chronicle/personal/source/16-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_04.webp",
+    "prompt": "docs/imagegen/personal/16-personal.txt"
+  },
+  {
+    "id": "cp_04talk",
+    "title": "雪子言叶",
+    "asset": "personal_cp_04talk",
+    "memory": "cp7_cp_04talk",
+    "source": "assets/chronicle/personal/source/16-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_04talk.webp",
+    "prompt": "docs/imagegen/personal/16-personal.txt"
+  },
+  {
+    "id": "cp_05",
+    "title": "非醋 · 鞋带",
+    "asset": "personal_cp_05",
+    "memory": "cp7_cp_05",
+    "source": "assets/chronicle/personal/source/16-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_05.webp",
+    "prompt": "docs/imagegen/personal/16-personal.txt"
+  },
+  {
+    "id": "cp_06",
+    "title": "团建 · 巴士",
+    "asset": "personal_cp_06",
+    "memory": "cp7_cp_06",
+    "source": "assets/chronicle/personal/source/16-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_06.webp",
+    "prompt": "docs/imagegen/personal/16-personal.txt"
+  },
+  {
+    "id": "cp_07",
+    "title": "悸动 · 摩天轮",
+    "asset": "personal_cp_07",
+    "memory": "cp7_cp_07",
+    "source": "assets/chronicle/personal/source/16-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_07.webp",
+    "prompt": "docs/imagegen/personal/16-personal.txt"
+  },
+  {
+    "id": "cp_08",
+    "title": "挑明前夜 · 递刀",
+    "asset": "personal_cp_08",
+    "memory": "cp7_cp_08",
+    "source": "assets/chronicle/personal/source/16-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_08.webp",
+    "prompt": "docs/imagegen/personal/16-personal.txt"
+  },
+  {
+    "id": "cp_08b",
+    "title": "挑明前夜 · 递刀",
+    "asset": "personal_cp_08b",
+    "memory": "cp7_cp_08b",
+    "source": "assets/chronicle/personal/source/17-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_08b.webp",
+    "prompt": "docs/imagegen/personal/17-personal.txt"
+  },
+  {
+    "id": "cp_08c",
+    "title": "挑明前夜 · 递刀",
+    "asset": "personal_cp_08c",
+    "memory": "cp7_cp_08c",
+    "source": "assets/chronicle/personal/source/17-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_08c.webp",
+    "prompt": "docs/imagegen/personal/17-personal.txt"
+  },
+  {
+    "id": "cp_09",
+    "title": "误解 · 无心的话最疼",
+    "asset": "personal_cp_09",
+    "memory": "cp7_cp_09",
+    "source": "assets/chronicle/personal/source/17-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_09.webp",
+    "prompt": "docs/imagegen/personal/17-personal.txt"
+  },
+  {
+    "id": "cp_10",
+    "title": "离开 · 行李箱",
+    "asset": "personal_cp_10",
+    "memory": "cp7_cp_10",
+    "source": "assets/chronicle/personal/source/17-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_10.webp",
+    "prompt": "docs/imagegen/personal/17-personal.txt"
+  },
+  {
+    "id": "cp_11",
+    "title": "开窍 · 日子不对劲",
+    "asset": "personal_cp_11",
+    "memory": "cp7_cp_11",
+    "source": "assets/chronicle/personal/source/17-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_11.webp",
+    "prompt": "docs/imagegen/personal/17-personal.txt"
+  },
+  {
+    "id": "cp_12",
+    "title": "火葬场 · 最后一推",
+    "asset": "personal_cp_12",
+    "memory": "cp7_cp_12",
+    "source": "assets/chronicle/personal/source/17-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_12.webp",
+    "prompt": "docs/imagegen/personal/17-personal.txt"
+  },
+  {
+    "id": "cp_12b",
+    "title": "火葬场 · 最后一推",
+    "asset": "personal_cp_12b",
+    "memory": "cp7_cp_12b",
+    "source": "assets/chronicle/personal/source/17-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_12b.webp",
+    "prompt": "docs/imagegen/personal/17-personal.txt"
+  },
+  {
+    "id": "cp_12c",
+    "title": "火葬场 · 最后一推",
+    "asset": "personal_cp_12c",
+    "memory": "cp7_cp_12c",
+    "source": "assets/chronicle/personal/source/17-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_12c.webp",
+    "prompt": "docs/imagegen/personal/17-personal.txt"
+  },
+  {
+    "id": "yc_hold",
+    "title": "羊村线 · 待续",
+    "asset": "personal_yc_hold",
+    "memory": "cp7_yc_hold",
+    "source": "assets/chronicle/personal/source/18-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_hold.webp",
+    "prompt": "docs/imagegen/personal/18-personal.txt"
+  },
+  {
+    "id": "cp_HE",
+    "title": "HE · 爱我还是他",
+    "asset": "personal_cp_HE",
+    "memory": "cp7_cp_HE",
+    "source": "assets/chronicle/personal/source/18-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_HE.webp",
+    "prompt": "docs/imagegen/personal/18-personal.txt"
+  },
+  {
+    "id": "cp_BE",
+    "title": "BE · 没有他的歌友会",
+    "asset": "personal_cp_BE",
+    "memory": "cp7_cp_BE",
+    "source": "assets/chronicle/personal/source/18-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_BE.webp",
+    "prompt": "docs/imagegen/personal/18-personal.txt"
+  },
+  {
+    "id": "cp_00b_page2",
+    "title": "入队 · 530的邀请",
+    "asset": "personal_cp_00b_page2",
+    "memory": "cp7_cp_00b_page2",
+    "source": "assets/chronicle/personal/source/19-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_00b_page2.webp",
+    "prompt": "docs/imagegen/personal/19-personal.txt"
+  },
+  {
+    "id": "cp_00b_page3",
+    "title": "入队 · 530的邀请",
+    "asset": "personal_cp_00b_page3",
+    "memory": "cp7_cp_00b_page3",
+    "source": "assets/chronicle/personal/source/19-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_00b_page3.webp",
+    "prompt": "docs/imagegen/personal/19-personal.txt"
+  },
+  {
+    "id": "cp_01b_page2",
+    "title": "相熟 · 白切黑计划",
+    "asset": "personal_cp_01b_page2",
+    "memory": "cp7_cp_01b_page2",
+    "source": "assets/chronicle/personal/source/19-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_01b_page2.webp",
+    "prompt": "docs/imagegen/personal/19-personal.txt"
+  },
+  {
+    "id": "cp_00c_page2",
+    "title": "530 · 被掐掉的SOLO",
+    "asset": "personal_cp_00c_page2",
+    "memory": "cp7_cp_00c_page2",
+    "source": "assets/chronicle/personal/source/19-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_00c_page2.webp",
+    "prompt": "docs/imagegen/personal/19-personal.txt"
+  },
+  {
+    "id": "cp_00c_page3",
+    "title": "530 · 被掐掉的SOLO",
+    "asset": "personal_cp_00c_page3",
+    "memory": "cp7_cp_00c_page3",
+    "source": "assets/chronicle/personal/source/19-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_00c_page3.webp",
+    "prompt": "docs/imagegen/personal/19-personal.txt"
+  },
+  {
+    "id": "cp_00c_page4",
+    "title": "530 · 被掐掉的SOLO",
+    "asset": "personal_cp_00c_page4",
+    "memory": "cp7_cp_00c_page4",
+    "source": "assets/chronicle/personal/source/19-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_00c_page4.webp",
+    "prompt": "docs/imagegen/personal/19-personal.txt"
+  },
+  {
+    "id": "cp_02_page2",
+    "title": "互动 · 铁公鸡请客",
+    "asset": "personal_cp_02_page2",
+    "memory": "cp7_cp_02_page2",
+    "source": "assets/chronicle/personal/source/19-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_02_page2.webp",
+    "prompt": "docs/imagegen/personal/19-personal.txt"
+  },
+  {
+    "id": "cp_03x_page2",
+    "title": "心疼 · 牛排与捉迷藏",
+    "asset": "personal_cp_03x_page2",
+    "memory": "cp7_cp_03x_page2",
+    "source": "assets/chronicle/personal/source/19-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_03x_page2.webp",
+    "prompt": "docs/imagegen/personal/19-personal.txt"
+  },
+  {
+    "id": "cp_03x_page3",
+    "title": "心疼 · 牛排与捉迷藏",
+    "asset": "personal_cp_03x_page3",
+    "memory": "cp7_cp_03x_page3",
+    "source": "assets/chronicle/personal/source/20-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_03x_page3.webp",
+    "prompt": "docs/imagegen/personal/20-personal.txt"
+  },
+  {
+    "id": "cp_03x_page4",
+    "title": "心疼 · 牛排与捉迷藏",
+    "asset": "personal_cp_03x_page4",
+    "memory": "cp7_cp_03x_page4",
+    "source": "assets/chronicle/personal/source/20-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_03x_page4.webp",
+    "prompt": "docs/imagegen/personal/20-personal.txt"
+  },
+  {
+    "id": "cp_04_page2",
+    "title": "雪子 · 铁三角",
+    "asset": "personal_cp_04_page2",
+    "memory": "cp7_cp_04_page2",
+    "source": "assets/chronicle/personal/source/20-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_04_page2.webp",
+    "prompt": "docs/imagegen/personal/20-personal.txt"
+  },
+  {
+    "id": "cp_04talk_page2",
+    "title": "雪子言叶",
+    "asset": "personal_cp_04talk_page2",
+    "memory": "cp7_cp_04talk_page2",
+    "source": "assets/chronicle/personal/source/20-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_04talk_page2.webp",
+    "prompt": "docs/imagegen/personal/20-personal.txt"
+  },
+  {
+    "id": "cp_04talk_page3",
+    "title": "雪子言叶",
+    "asset": "personal_cp_04talk_page3",
+    "memory": "cp7_cp_04talk_page3",
+    "source": "assets/chronicle/personal/source/20-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_04talk_page3.webp",
+    "prompt": "docs/imagegen/personal/20-personal.txt"
+  },
+  {
+    "id": "cp_05_page2",
+    "title": "非醋 · 鞋带",
+    "asset": "personal_cp_05_page2",
+    "memory": "cp7_cp_05_page2",
+    "source": "assets/chronicle/personal/source/20-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_05_page2.webp",
+    "prompt": "docs/imagegen/personal/20-personal.txt"
+  },
+  {
+    "id": "cp_06_page2",
+    "title": "团建 · 巴士",
+    "asset": "personal_cp_06_page2",
+    "memory": "cp7_cp_06_page2",
+    "source": "assets/chronicle/personal/source/20-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_06_page2.webp",
+    "prompt": "docs/imagegen/personal/20-personal.txt"
+  },
+  {
+    "id": "cp_06_page3",
+    "title": "团建 · 巴士",
+    "asset": "personal_cp_06_page3",
+    "memory": "cp7_cp_06_page3",
+    "source": "assets/chronicle/personal/source/20-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_06_page3.webp",
+    "prompt": "docs/imagegen/personal/20-personal.txt"
+  },
+  {
+    "id": "cp_06_page4",
+    "title": "团建 · 巴士",
+    "asset": "personal_cp_06_page4",
+    "memory": "cp7_cp_06_page4",
+    "source": "assets/chronicle/personal/source/21-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_06_page4.webp",
+    "prompt": "docs/imagegen/personal/21-personal.txt"
+  },
+  {
+    "id": "cp_08_page2",
+    "title": "挑明前夜 · 递刀",
+    "asset": "personal_cp_08_page2",
+    "memory": "cp7_cp_08_page2",
+    "source": "assets/chronicle/personal/source/23-personal-fix.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_08_page2.webp",
+    "prompt": "docs/imagegen/personal/23-personal-fix.txt",
+    "corrected": true
+  },
+  {
+    "id": "cp_09_page2",
+    "title": "误解 · 无心的话最疼",
+    "asset": "personal_cp_09_page2",
+    "memory": "cp7_cp_09_page2",
+    "source": "assets/chronicle/personal/source/21-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_09_page2.webp",
+    "prompt": "docs/imagegen/personal/21-personal.txt"
+  },
+  {
+    "id": "cp_09_page3",
+    "title": "误解 · 无心的话最疼",
+    "asset": "personal_cp_09_page3",
+    "memory": "cp7_cp_09_page3",
+    "source": "assets/chronicle/personal/source/21-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_09_page3.webp",
+    "prompt": "docs/imagegen/personal/21-personal.txt"
+  },
+  {
+    "id": "cp_09_page4",
+    "title": "误解 · 无心的话最疼",
+    "asset": "personal_cp_09_page4",
+    "memory": "cp7_cp_09_page4",
+    "source": "assets/chronicle/personal/source/21-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_09_page4.webp",
+    "prompt": "docs/imagegen/personal/21-personal.txt"
+  },
+  {
+    "id": "cp_10_page2",
+    "title": "离开 · 行李箱",
+    "asset": "personal_cp_10_page2",
+    "memory": "cp7_cp_10_page2",
+    "source": "assets/chronicle/personal/source/21-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_10_page2.webp",
+    "prompt": "docs/imagegen/personal/21-personal.txt"
+  },
+  {
+    "id": "cp_10_page3",
+    "title": "离开 · 行李箱",
+    "asset": "personal_cp_10_page3",
+    "memory": "cp7_cp_10_page3",
+    "source": "assets/chronicle/personal/source/21-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_10_page3.webp",
+    "prompt": "docs/imagegen/personal/21-personal.txt"
+  },
+  {
+    "id": "cp_10_page4",
+    "title": "离开 · 行李箱",
+    "asset": "personal_cp_10_page4",
+    "memory": "cp7_cp_10_page4",
+    "source": "assets/chronicle/personal/source/21-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_10_page4.webp",
+    "prompt": "docs/imagegen/personal/21-personal.txt"
+  },
+  {
+    "id": "cp_11_page2",
+    "title": "开窍 · 日子不对劲",
+    "asset": "personal_cp_11_page2",
+    "memory": "cp7_cp_11_page2",
+    "source": "assets/chronicle/personal/source/23-personal-fix.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_11_page2.webp",
+    "prompt": "docs/imagegen/personal/23-personal-fix.txt",
+    "corrected": true
+  },
+  {
+    "id": "cp_HE_page1",
+    "title": "HE · 爱我还是他",
+    "asset": "personal_cp_HE_page1",
+    "memory": "cp7_cp_HE_page1",
+    "source": "assets/chronicle/personal/source/22-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_HE_page1.webp",
+    "prompt": "docs/imagegen/personal/22-personal.txt"
+  },
+  {
+    "id": "cp_HE_page2",
+    "title": "HE · 爱我还是他",
+    "asset": "personal_cp_HE_page2",
+    "memory": "cp7_cp_HE_page2",
+    "source": "assets/chronicle/personal/source/22-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_HE_page2.webp",
+    "prompt": "docs/imagegen/personal/22-personal.txt"
+  },
+  {
+    "id": "cp_HE_page3",
+    "title": "HE · 爱我还是他",
+    "asset": "personal_cp_HE_page3",
+    "memory": "cp7_cp_HE_page3",
+    "source": "assets/chronicle/personal/source/22-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/cp_HE_page3.webp",
+    "prompt": "docs/imagegen/personal/22-personal.txt"
+  },
+  {
+    "id": "cp_HE_page4",
+    "title": "HE · 爱我还是他",
+    "asset": "personal_cp_HE_page4",
+    "memory": "cp7_cp_HE_page4",
+    "source": "assets/chronicle/personal/source/22-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_HE_page4.webp",
+    "prompt": "docs/imagegen/personal/22-personal.txt"
+  },
+  {
+    "id": "cp_HE_page5",
+    "title": "HE · 爱我还是他",
+    "asset": "personal_cp_HE_page5",
+    "memory": "cp7_cp_HE_page5",
+    "source": "assets/chronicle/personal/source/22-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_HE_page5.webp",
+    "prompt": "docs/imagegen/personal/22-personal.txt"
+  },
+  {
+    "id": "cp_HE_page6",
+    "title": "HE · 爱我还是他",
+    "asset": "personal_cp_HE_page6",
+    "memory": "cp7_cp_HE_page6",
+    "source": "assets/chronicle/personal/source/22-personal.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/cp_HE_page6.webp",
+    "prompt": "docs/imagegen/personal/22-personal.txt"
   }
 ]

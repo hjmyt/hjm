@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：黑发成年男性贝斯手。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (cp_03, do not write ID): 那顿饭之后，飞鸿对宝石更好了——好得不动声色。上台前的柠檬水永远温度刚好，定曲子的时候永远提前扒好调，和声永远垫在主音下面三度，恰到好处，从不喧宾夺主。 有天深夜你在山丘收东西，撞见飞鸿一个人对着手机傻笑。你凑过去一看——相册里全是宝石：唱歌的、发呆的、啃苹果的、睡着的。 （被发现他也不躲，反而把手机举给你看，理直气壮：）「你们不觉得宝石这样很可爱吗？」他顿了顿，补了一句，「宝石真的好可爱。」 你正想调侃，他忽然收起手机，望着台上的方向，轻声说：「小镇上出来的人，最怕欠人东西。他对我好一次，我就想还十次。可是越还……越算不清了。」
+
+PANEL 2 (cp_03b, do not write ID): （被你噎了一下，却没反驳。他低头摆弄了一会儿吉他弦，忽然说：）「你说，一个人要是开始心疼另一个人——是不是就不对劲了？」 他没有等你回答，抱起吉他上了台。那晚他的和声比任何一次都温柔，温柔得不像衬托，像守护。
+
+PANEL 3 (cp_04, do not write ID): 要说宝石和飞鸿的搭档里缺了谁都不行，那一定是雪子——长发，键盘手，山丘的常客。他最初只是个粉丝，场场演出不落，后来混成了工作人员，再后来，干脆自己上了台。 三个人成了铁三角：宝石唱，飞鸿和声，雪子的键盘把两个人的声音缝在一起。团员打趣他们是「山丘三宝」，雪子总是摆摆手：「别，我是来加入这个家的。」 雪子对宝石的好，大大方方，从不遮掩——可谁都看得出，那是哥们式的好，仗义，坦荡，没有杂质。你一度以为这条线里最大的变量会是他，后来才发现，变量从来只有一个。
+
+PANEL 4 (cp_04talk, do not write ID): 散场后，你在后台堵住了雪子。他抱着键盘，长发扎成一束，见你来也不意外。 你决定贴脸开大：「你是不是喜欢宝石。」 （他想都没想：）「谁不喜欢宝石呢？」 「呵呵……」你冷笑了一声，没接话。 （他沉默了几秒，忽然笑了，看着远处正在收拾话筒的宝石：）「一开始，是有点吧。」他把键盘包背好，语气轻下来，「但是后来我想明白了——太阳照到你，不是真的为你一个人发光。我恰好路过，晒到了，仅此而已。」 （他转过头看你，眼睛很亮：）「宝石……他不明白这些。所以，别让他输。」
+
+PANEL 5 (cp_05, do not write ID): 铁三角的默契也有出差错的时候。那天演出前，宝石的鞋带散了，蹲下去系了两次都没系好——雪子看不过去，单膝一蹲，两下给他系了个漂亮的结，还拍了拍他的鞋面：「行了，上台吧。」 全程不到十秒。全后台没人觉得有问题——除了飞鸿。 你看见飞鸿盯着那个鞋带结看了三秒，转身进了消防通道。你追过去，他正对着墙，拿额头轻轻磕着墙皮，念念有词： 「我去，都是哥们，你不爽个屁。」他磕了一下，又补一句，「人家帮忙系个鞋带，你在这演什么内心戏。」再磕一下，「……飞鸿，你清醒一点。」 你清了清嗓子。他猛地回头，一秒切换成无事发生：「我没事。我就是……就是来背歌词的。」
+
+PANEL 6 (cp_06, do not write ID): 就这样，又过了一段时间。乐团外出团建，大巴去邻市。宝石晕车，一上车就坐到了第一排靠窗。飞鸿晚几个站才上车，拎着两袋零食，上车第一眼就找到了那个靠窗的脑袋。 （走到宝石旁边，刚要开口：）「晕车吗——」 话音未落，雪子从前门上了车，步子轻快，径直坐在了宝石旁边的空位上：「巧了，我也晕车，咱俩正好作伴。」 飞鸿僵在过道里。你看见他的手在半空停了停，最终转身坐到了后排——全程目视前方，一动不动，像一座装了发动机的雕塑。 回程时天色晚了，雪子去了后排跟大塔聊天。飞鸿立刻起身，在宝石旁边坐下，动作快得像抢拍的鼓点。宝石迷迷糊糊睁开眼。 「你没晕车呀？」 飞鸿把外套披到他肩上。 「睡了就闭嘴。」
+
+PANEL 7 (cp_07, do not write ID): 歌友会大获成功。散场后十元提议去坐摩天轮，说要「团建收尾」。然后她拉着你和众人，在轿厢分配上做了这辈子最精彩的一次调度——宝石和飞鸿，单独一个轿厢。 你隔着玻璃看见：小小的轿厢里，宝石贴着窗看夜景，飞鸿看着他。城市的灯一点点升上来，落到两个人的眼睛里。 下来的时候，宝石的脸有点红，说是闷的。飞鸿走在他后面半步，手一直虚虚地护在他身后，护了一路，什么也没碰。 （凑过来跟你咬耳朵，眼睛亮晶晶：）「看到没有！那个半步！那个虚护！」
+
+PANEL 8 (cp_08, do not write ID): 歌友会之后，飞鸿变得很奇怪。他排练老走神，看宝石的眼神像看一道解不出来的和弦。周四深夜，他把你约到山丘后门，抽了半根烟——他不会抽，呛得直咳嗽。 （终于开口：）「我受不了了。」他盯着自己的鞋尖，「雪子天天在他旁边，他还傻乎乎地什么都感觉不到。我……我想跟他挑明。」 他抬起头，眼睛里全是血丝，和一点不肯承认的怕。 「你帮我看看，我机会大吗？」

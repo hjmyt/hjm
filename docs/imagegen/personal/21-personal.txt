@@ -1,0 +1,22 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：黑发成年男性贝斯手。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (cp_06_page4, do not write ID): 剧情分镜《团建 · 巴士》的第 4 幕：「睡了就闭嘴。」
+
+PANEL 2 (cp_08_page2, do not write ID): 剧情分镜《挑明前夜 · 递刀》的第 2 幕：他抬起头，眼睛里全是血丝，和一点不肯承认的怕。 「你帮我看看，我机会大吗？」
+
+PANEL 3 (cp_09_page2, do not write ID): 剧情分镜《误解 · 无心的话最疼》的第 2 幕：（长久的沉默。然后是他一贯清澈的声音，认认真真：）「飞鸿，你当然不只是朋友呀。你是我最重要的搭档。」
+
+（他又想了想，语气轻快：）「你是不是最近压力太大了？这样，你要是谈对象了，我帮你把关！我跟你说，我认识一个女生特别好，你要不要考虑——」 「你是真不明白，」他的声音低下去，「还是假不明白。」
+
+PANEL 4 (cp_09_page3, do not write ID): 剧情分镜《误解 · 无心的话最疼》的第 3 幕：宝石愣住了。他被飞鸿的眼神直愣愣地看着，半天，轻轻地说。 （淡淡地：）「……我们都是男生，不是吗？」
+
+PANEL 5 (cp_09_page4, do not write ID): 剧情分镜《误解 · 无心的话最疼》的第 4 幕：你听见什么东西碎掉的声音。飞鸿下意识地握着拳，再开口时，语气已经平得听不出波澜。 「……哎呦，跟你开个玩笑，看你吓得。」他越过宝石往楼下走。走了两步，又回过头，挤出一个笑。
+
+「宝石，晚安。」
+
+PANEL 6 (cp_10_page2, do not write ID): 剧情分镜《离开 · 行李箱》的第 2 幕：（后来雪子转述给你听：）「我对他说：我光明正大，但不趁人之危。你这一走，我输得心服口服，可我还是会喜欢他——这不妨碍我瞧不起逃兵。」他顿了顿，「他骂我多管闲事。然后行李箱的拉杆，断了。」 上车前，飞鸿给宝石发了最后一条消息。你看到宝石的手机屏幕亮起，只有一行字：
+
+PANEL 7 (cp_10_page3, do not write ID): 剧情分镜《离开 · 行李箱》的第 3 幕：「在你想明白之前，我都不会见你了。」 宝石盯着那行字，愣愣的，一动不动。你走过去，他抬起头，你才发现他脸上全是泪。
+
+PANEL 8 (cp_10_page4, do not write ID): 剧情分镜《离开 · 行李箱》的第 4 幕：「宝石，你哭了呀？」他莫名其妙地抬手摸了摸脸：「是吗……我不知道。它自己流下来的。」

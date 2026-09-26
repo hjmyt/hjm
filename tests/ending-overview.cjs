@@ -13,7 +13,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
   await click('.cp-end-gate');check('Gate links directly to chapter breakdown',!!row(6));
   check('Contributors are chapters two and four',[2,4].every(ch=>row(ch).querySelector('.cp-end-credit').textContent.includes('已计入'))&&[1,3,5].every(ch=>!row(ch).querySelector('.cp-end-credit').textContent.includes('已计入')));
   check('Each chapter shows acquired type and name',row(1).textContent.includes('TE')&&row(1).textContent.includes('下一次一定行')&&row(3).textContent.includes('BE')&&row(3).textContent.includes('温柔的刀'));
-  check('Unread ending names remain concealed',!row(5).textContent.includes('婚礼上的一元')&&!row(4).textContent.includes('远方的机票'));
+  check('Unread ending names remain concealed',!row(5).textContent.includes('婚礼上的十元')&&!row(4).textContent.includes('远方的机票'));
   check('Sixth HE explicitly excluded from prerequisite',row(6).textContent.includes('不计入前期演出 HE'));
   closeModal(false);state.chronicle.endings.push('debut','c3_he','c3_he');state.chronicle.slots[5]={...Chronicle.fresh().run,chapter:5,ch:6,name:'结局测试',inst:'长笛',scene:'title6',ending:'c5_fail'};reload();check('Four distinct prior HE unlock stage',$('cpStoryText').textContent.includes('大幕即将拉开'));
   await open();check('First GOOD END normalized to HE',row(1).querySelector('[data-ending-type="HE"]')&&row(1).textContent.includes('第一笔合约'));

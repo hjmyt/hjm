@@ -1,0 +1,14 @@
+[
+  {
+    "source": "assets/chronicle/personal/source/23-personal-fix.png",
+    "prompt": "docs/imagegen/personal/23-personal-fix.txt",
+    "cell": 1,
+    "id": "cp_08_page2"
+  },
+  {
+    "source": "assets/chronicle/personal/source/23-personal-fix.png",
+    "prompt": "docs/imagegen/personal/23-personal-fix.txt",
+    "cell": 2,
+    "id": "cp_11_page2"
+  }
+]

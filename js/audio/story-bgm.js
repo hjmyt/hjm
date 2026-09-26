@@ -10,7 +10,8 @@ window.StoryBgm = (() => {
     stage: {title: 'Breath and Life', src: 'assets/bgm/breath-and-life.mp3'},
     daily: {title: 'A Little Story', src: 'assets/bgm/a-little-story.mp3'},
     chapter: {title: 'Refrain', src: 'assets/bgm/refrain.mp3'},
-    farewell: {title: 'The truth that you leave', src: 'assets/bgm/the-truth-that-you-leave.mp3'}
+    farewell: {title: 'The truth that you leave', src: 'assets/bgm/the-truth-that-you-leave.mp3'},
+    cpFarewell: {title: '讳莫如深的名字 · 宝石飞鸿 BE', src: 'assets/bgm/huimosrushen-de-mingzi.mp3'}
   };
   const storageKey = 'hjm-story-bgm-v1';
   let enabled = true, volume = .32;
@@ -29,7 +30,7 @@ window.StoryBgm = (() => {
     if (['home', 'cards', 'card', 'care', 'album'].includes(c.view)) return 'site';
     if (!['chronicle', 'story'].includes(c.view)) return null;
     if (c.view === 'story') return c.character ? 'memories' : 'daily';
-    if (c.chapter === 7) return /_BE|_TE|10wait/.test(c.scene||c.ending||'')?'farewell':/_HE/.test(c.scene||c.ending||'')?'starlight':c.scene==='sy_08'?'lounge':'memories';
+    if (c.chapter === 7) return c.scene==='cp_BE'||c.ending==='cp_BE'?'cpFarewell':/_BE|_TE|10wait/.test(c.scene||c.ending||'')?'farewell':/_HE/.test(c.scene||c.ending||'')?'starlight':c.scene==='sy_08'?'lounge':'memories';
     if (c.chapter === 6) return 'musical';
     if (c.scene === 'shanqiu_closed' || (c.closed && ['zhu_offer', 'zhu_reply'].includes(c.scene)) || /^be_/.test(c.scene || '') || /_(fail|te)$/.test(c.scene || '') || /_(fail|te)$/.test(c.ending || '') || ['c5_be','c5_wind','c2_solo','shadow','c3_qiqi','c4_qiqi','c4_lemon','c2_retry'].includes(c.ending)) return 'farewell';
     if (['zhu_offer', 'zhu_reply'].includes(c.scene)) return 'lounge';
