@@ -27,7 +27,7 @@ const cli = (...args) => execFileSync(process.execPath, [path.join(root, 'script
   browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});
   const page=await browser.newPage({viewport:{width:1440,height:1000}}), errors=[];
   page.on('pageerror',e=>errors.push(e.message));
-  await page.route('**/js/data/gift-keys.js', route=>route.fulfill({contentType:'application/javascript',body:fs.readFileSync(pub,'utf8')}));
+  await page.route(url=>url.pathname.endsWith('/js/data/gift-keys.js'), route=>route.fulfill({contentType:'application/javascript',body:fs.readFileSync(pub,'utf8')}));
   await page.goto(pathToFileURL(path.join(root,'index.html')).href);
   await page.evaluate(()=>{state.sound=false;save();});
   await page.locator('#giftBtn').click();

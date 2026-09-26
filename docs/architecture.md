@@ -49,6 +49,8 @@
 
 JS 中的图片和音频路径仍相对于页面根目录。CSS 的 `url()` 相对于样式文件，后续新增时注意使用 `../assets/…`。发布或复制时需同时带上 `index.html`、`js/`、`styles/`、`assets/`。
 
+首页 JS/CSS 引用包含 `?v=内容哈希`。修改后运行 `node scripts/version-assets.cjs` 更新引用，发布时同时上传首页与资源；`--check` 检查版本是否过期，architecture 回归也会执行此检查。参数不改变经典脚本的顺序或 `defer` 行为，不影响 file:// 加载及存档。首页自身的缓存需由部署端通过 `Cache-Control: no-cache` 控制，详见 README 的发布说明。
+
 ## 验证
 
 - `node tests/architecture.cjs`：脚本语法、入口顺序、资源完整性、`file://` 与严格 MIME 的 HTTP 加载、刷新存档、桌面和手机布局。

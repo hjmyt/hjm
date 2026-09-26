@@ -70,6 +70,10 @@ function renderGameOverlay() {
         const n = gameCountdownRemaining();
         e.innerHTML = `<div class="countdown-num">${n}</div><p>把手放在 D · F · J · K 上</p>`;
         game.countdownLabel = n;
+        if (game.countdownSoundLabel !== n) {
+            game.countdownSoundLabel = n;
+            playCountdownTone(n);
+        }
     }
     else if (game.status === 'paused') {
         e.innerHTML = `${I('moon', 'lg')}<h3>休息一拍，也没关系。</h3><p>你的旋律停在这里，等你回来。<br>点击继续，或按 Esc。</p><button class="btn primary" data-game="resume">${I('play')}继续演奏</button>`;
@@ -104,10 +108,6 @@ function scheduleSong() {
             [root + 12, root + 12 + third, root + 19].forEach((p, j) => toneAt(p, at + beat * (.5 + j * .5), beat * 1.3, .058, 'song', 'sine'));
         }
     });
-    // Soft count-in clicks only for the countdown that has not yet elapsed.
-    for (const d of [-2, -1, 0].map(t => t - gameLeadIn()))
-        if (origin + d >= now + .005)
-            toneAt(d === -gameLeadIn() ? 84 : 79, origin + d, .06, .08, 'song', 'sine');
 }
 async function startGame() {
     if (game.status === 'starting')
@@ -148,7 +148,7 @@ async function startGame() {
     }
     generateChart();
     const preparation = (TRACKS[game.track].countIn ?? 3) + gameLeadIn();
-    Object.assign(game, { elapsed: -preparation, score: 0, combo: 0, maxCombo: 0, perfect: 0, good: 0, nice: 0, miss: 0, flashes: [0, 0, 0, 0], judgement: null, result: null, status: 'countdown', startAt: performance.now() + preparation * 1000, countdownLabel: 3 });
+    Object.assign(game, { elapsed: -preparation, score: 0, combo: 0, maxCombo: 0, perfect: 0, good: 0, nice: 0, miss: 0, flashes: [0, 0, 0, 0], judgement: null, result: null, status: 'countdown', startAt: performance.now() + preparation * 1000, countdownLabel: 3, countdownSoundLabel: null });
     game.cardRun = captureCardRun();
     renderRhythmTeam();
     if (audioMaster)

@@ -131,6 +131,13 @@ function stopSongAudio(keepOutput = false) {
     }
     songNodes.clear();
 }
+function playCountdownTone(number) {
+    if (!state.sound || !audioCtx || audioCtx.state !== 'running')
+        return;
+    // Driven by the visible numeral/media clock, so recordings and synthesized
+    // songs share the same three cues without drift, catch-up or duplicate resume.
+    toneAt(number === 1 ? 84 : 79, audioCtx.currentTime + .002, .065, .15, 'song', 'sine');
+}
 async function playPetSound(action) {
     if (!state.sound)
         return;

@@ -59,3 +59,5 @@
 - `node tests/rhythm-midi.cjs`：鼓点瞬态来源与前后半段时间边界、OP 默认首位、各曲目/难度/成绩档音符奖励、每日共享次数和编队上限、旧成绩保留及移动端奖励文案。
 
 - `python3 tests/rhythm-intro.py`：解码实际 MP3，验证倒计时静音、倒计时后 2.5 秒原曲入场音乐连续有声及音频总长度；可传原文件路径检查从 00:00 开始且前后无漂移；需 ffmpeg。`rhythm-recording.cjs` 同时检查 HTTP 浏览器实际入场音频信号。
+
+- `node tests/rhythm-countdown.cjs`：原曲和合成曲的 3/2/1 提示音、可听信号、数字同步、重复渲染去重、暂停/继续、静音和重开。
