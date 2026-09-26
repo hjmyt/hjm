@@ -6,13 +6,25 @@
       "file": "a-little-story.mp3",
       "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/A Little Story.MP3",
       "title": "A Little Story",
-      "use": "第一章日常相遇、心动故事选角页",
+      "use": "心动故事选角页",
       "duration_seconds": 204.460408,
       "processing": "直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
       "bytes": 3272246,
       "bit_rate": 128000,
       "sample_rate": 44100,
       "sha256": "918b1b1364a8d454f5f575a764be197db19deb617dda301e72693cc97ccdf13e"
+    },
+    {
+      "file": "hakimi.mp3",
+      "source_file": "/Users/hxj/Library/Containers/com.tencent.xinWeChat/Data/Documents/xwechat_files/wxid_cffn50ubxx421_89e0/temp/RWTemp/2026-08/bf4713d74d81c156254cd070e90c5d33/哈基米.mp3",
+      "title": "哈基米",
+      "use": "第一章主线剧情",
+      "duration_seconds": 149.338125,
+      "processing": "按用户要求直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 2390508,
+      "bit_rate": 128058,
+      "sample_rate": 44100,
+      "sha256": "68cf65ca33fdf5451057d5bcc362d36293d303c32d45cc061ac7d1112b101a5d"
     },
     {
       "file": "refrain.mp3",

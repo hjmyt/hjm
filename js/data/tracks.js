@@ -289,7 +289,7 @@ TRACKS.push({
     "love-hakimi-op-opening-drums-v1"
   ],
   "default": true,
-  "name": "恋与哈基米（OP）· 完整版",
+  "name": "恋与哈基米（编曲 · 垃垃）",
   "desc": "从原曲 00:00 到完整尾声，跟着鼓点演奏。",
   "gentle": 143.2,
   "normal": 143.2,

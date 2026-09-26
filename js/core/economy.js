@@ -11,7 +11,7 @@ function rhythmBaseRewards(trackId, mode = 'gentle') {
     const table = trackId === 'love-hakimi-op-preview-v1' ? RHYTHM_REWARDS.op : RHYTHM_REWARDS.standard;
     return table[mode === 'normal' ? 'normal' : 'gentle'];
 }
-const ECONOMY_HELP = '音符全局共用。普通练琴 10 音符 → 琴技 +2；周训练报名 10 音符，60 分完成 +2 / 90 分 +3，失败免费重试，每章每项一次；普通投喂 10 音符 → 羁绊分 +1，每日三次；满心礼盒 10000 音符 → 羁绊直达 100，不占用、不受每日三次限制。完整演奏达到 C（45%）才获得音符：C/B/A/S：其他曲目简单 3/4/5/6、困难 4/5/6/7；OP 简单 5/6/7/8、困难 7/8/9/10。编队与技能合计最多另 +2；每天前 3 场达标正常奖励，之后每场总共 1 音符。演奏免费，未达标不扣音符。';
+const ECONOMY_HELP = '音符全局共用。普通练琴 10 音符 → 琴技 +2；周训练报名 10 音符，60 分完成 +2 / 90 分 +3，失败免费重试，每章每项一次；普通投喂 10 音符 → 羁绊分 +1，每日三次；满心礼盒 10000 音符 → 羁绊直达 100，不占用、不受每日三次限制。与伙伴完成一场有手动命中的合奏，编队角色羁绊分各 +1；合奏额度独立计算，每角色每日最多 10 次。完整演奏达到 C（45%）才获得音符：C/B/A/S：其他曲目简单 3/4/5/6、困难 4/5/6/7；OP 简单 5/6/7/8、困难 7/8/9/10。编队与技能合计最多另 +2；每天前 3 场达标正常奖励，之后每场总共 1 音符。演奏免费，未达标不扣音符。';
 function freshEconomy() { return { version: 1, claimed: {}, training: {}, giftCards: {}, daily: { date: dateKey(), rhythm: 0, claims: {} } }; }
 function cleanEconomy(obj) {
     const d = freshEconomy();

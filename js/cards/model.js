@@ -70,6 +70,7 @@ function addCardXP(id, amount) {
     return cardLevel(id) > before;
 }
 function rewardCompanionBond(id) { return grantBond(id, 1, { daily: true }); }
+function rewardPerformanceBond(id) { return grantBond(id, 1, { daily: 'performance' }); }
 function cardBonus(id, ids = state.cards.team) {
     const c = cardDef(id);
     if (!c)

@@ -34,7 +34,7 @@ function renderRhythmTeam() {
     const run = locked ? game.cardRun : null, ids = run ? run.ids : state.cards.team;
     const plus = economy().daily.rhythm >= 3 ? 0 : Math.min(2, run ? run.passive + (run.prepared?.amount || 0) : teamBonus() + (state.cards.prepared?.amount || 0));
     $('rhythmTeam').classList.toggle('is-solo', !ids.length);
-    $('rhythmTeam').innerHTML = `${ids.length ? `<div class="team-lineup">${teamSlots(ids, false)}</div>` : `<div class="rhythm-solo-mark">${I('music')}</div>`}<div class="rhythm-team-text"><strong>${locked ? '本场阵容已就位' : ids.length ? '和伙伴一起登台' : '先来一场独奏练习'}${ids.length ? `<span class="rhythm-bonus">奖励 +${plus} ♪</span>` : ''}</strong><small>今日已完成 ${economy().daily.rhythm} 场达标演奏。前 3 场 · 当前${game.mode === 'normal' ? '困难' : '简单'}谱面：C/B/A/S 奖励 ${rhythmBaseRewards(TRACKS[game.track].id, game.mode).join('/')} 音符，编队与技能最多另 +2；之后每场共 1 音符。须完整演奏达到 C（45%），演奏免费。</small></div><button class="btn ghost small" data-route="${availableCardPool().length ? 'cards' : 'chronicle'}">${I(availableCardPool().length ? 'team' : 'album')}${locked ? '查看编队' : availableCardPool().length ? '调整编队' : '去相遇'}</button>`;
+    $('rhythmTeam').innerHTML = `${ids.length ? `<div class="team-lineup">${teamSlots(ids, false)}</div>` : `<div class="rhythm-solo-mark">${I('music')}</div>`}<div class="rhythm-team-text"><strong>${locked ? '本场阵容已就位' : ids.length ? '和伙伴一起登台' : '先来一场独奏练习'}${ids.length ? `<span class="rhythm-bonus">奖励 +${plus} ♪</span>` : ''}</strong><small>今日已完成 ${economy().daily.rhythm} 场达标演奏。与伙伴完成一场有手动命中的合奏，编队角色羁绊分各 +1；合奏额度独立计算，每角色每日最多 10 次。前 3 场 · 当前${game.mode === 'normal' ? '困难' : '简单'}谱面：C/B/A/S 奖励 ${rhythmBaseRewards(TRACKS[game.track].id, game.mode).join('/')} 音符，编队与技能最多另 +2；之后每场共 1 音符。须完整演奏达到 C（45%）才发音符，演奏免费。</small></div><button class="btn ghost small" data-route="${availableCardPool().length ? 'cards' : 'chronicle'}">${I(availableCardPool().length ? 'team' : 'album')}${locked ? '查看编队' : availableCardPool().length ? '调整编队' : '去相遇'}</button>`;
 }
 
 function renderCardGlobals() {
@@ -93,7 +93,7 @@ function renderCardPage() {
 }
 
 function showCardsHelp() {
-    openModal('与故事一起，慢慢相遇', `<div class="card-help-table"><strong>剧情相遇</strong><span>读到人物出场，或当前对白提到这个人，就会立即获得对应人物卡并加入招募池，无需等到章节结束。已选回应与实际合练搭档也会记录相遇；人物列表、玩法说明和未经历分支不会提前解锁。尚未提到的人物保持锁定。档案待补充的人物先保留卡位，暂不参与招募与编队。</span><strong>邀请与成长</strong><span>仅能邀请已在剧情中相遇的人物，重复卡增加 40 经验。1 张邀请券邀请一次；券不足时每次消耗 12 音符。可在招募页查看当前概率。</span><strong>隐藏技能</strong><span>羁绊分达到 35 才能开启隐藏技能；角色专属事件条件仍需满足。条件满足前仅显示锁定入口，不公开技能名称、效果与故事线索。条件满足后，点击展开查看。人物档案与特殊故事需要在相处中发现。</span><strong>养成与编队</strong><span>每次投喂消耗 10 音符，羁绊分 +1，每人每日最多 3 次；聊天、演奏等陪伴每日合计最多 +1 分，关键剧情可额外 +5，同一节点不重复奖励。最多 3 人编队，每场可准备一项主动技能。${ECONOMY_HELP}</span><strong>进度保存</strong><span>剧情相遇跨章节、跨周目保留，重复遇见不会重复发卡。旧存档保留养成数据，并按已读对白、当前节点和能够确认的必经剧情补齐人物；未经历的可选分支不提前解锁。</span></div>`);
+    openModal('与故事一起，慢慢相遇', `<div class="card-help-table"><strong>剧情相遇</strong><span>读到人物出场，或当前对白提到这个人，就会立即获得对应人物卡并加入招募池，无需等到章节结束。已选回应与实际合练搭档也会记录相遇；人物列表、玩法说明和未经历分支不会提前解锁。尚未提到的人物保持锁定。档案待补充的人物先保留卡位，暂不参与招募与编队。</span><strong>邀请与成长</strong><span>仅能邀请已在剧情中相遇的人物，重复卡增加 40 经验。1 张邀请券邀请一次；券不足时每次消耗 12 音符。可在招募页查看当前概率。</span><strong>隐藏技能</strong><span>羁绊分达到 35 才能开启隐藏技能；角色专属事件条件仍需满足。条件满足前仅显示锁定入口，不公开技能名称、效果与故事线索。条件满足后，点击展开查看。人物档案与特殊故事需要在相处中发现。</span><strong>养成与编队</strong><span>每次投喂消耗 10 音符，羁绊分 +1，每人每日最多 3 次；聊天与技能陪伴每角色每日合计最多 +1，合奏另计、每角色每日最多 +10；关键剧情可额外 +5，同一节点不重复奖励。最多 3 人编队，每场可准备一项主动技能。${ECONOMY_HELP}</span><strong>进度保存</strong><span>剧情相遇跨章节、跨周目保留，重复遇见不会重复发卡。旧存档保留养成数据，并按已读对白、当前节点和能够确认的必经剧情补齐人物；未经历的可选分支不提前解锁。</span></div>`);
 }
 
 function renderDetailContent(c, own) {

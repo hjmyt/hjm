@@ -9,6 +9,7 @@ window.StoryBgm = (() => {
     memories: {title: '想い出は遠くの日々', src: 'assets/bgm/distant-memories.mp3'},
     stage: {title: 'Breath and Life', src: 'assets/bgm/breath-and-life.mp3'},
     daily: {title: 'A Little Story', src: 'assets/bgm/a-little-story.mp3'},
+    chapterOne: {title: '哈基米', src: 'assets/bgm/hakimi.mp3'},
     chapter: {title: 'Refrain', src: 'assets/bgm/refrain.mp3'},
     farewell: {title: 'The truth that you leave', src: 'assets/bgm/the-truth-that-you-leave.mp3'},
     cpFarewell: {title: '讳莫如深的名字 · 宝石飞鸿 BE', src: 'assets/bgm/huimosrushen-de-mingzi.mp3'}
@@ -35,7 +36,7 @@ window.StoryBgm = (() => {
     if (c.scene === 'shanqiu_closed' || (c.closed && ['zhu_offer', 'zhu_reply'].includes(c.scene)) || /^be_/.test(c.scene || '') || /_(fail|te)$/.test(c.scene || '') || /_(fail|te)$/.test(c.ending || '') || ['c5_be','c5_wind','c2_solo','shadow','c3_qiqi','c4_qiqi','c4_lemon','c2_retry'].includes(c.ending)) return 'farewell';
     if (['zhu_offer', 'zhu_reply'].includes(c.scene)) return 'lounge';
     if (/_he$/.test(c.scene || '') || /_he$/.test(c.ending || '')) return 'stage';
-    return ({1: 'daily', 2: 'chapter', 3: 'starlight', 4: 'stage', 5: 'starlight', 6: 'musical'})[c.chapter] || 'daily';
+    return ({1: 'chapterOne', 2: 'chapter', 3: 'starlight', 4: 'stage', 5: 'starlight', 6: 'musical'})[c.chapter] || 'daily';
   }
   function allowed() {return entered && !!key && enabled && context.sound && !document.hidden && !['live_play','training'].includes(context.scene);}
   function persist() {try {localStorage.setItem(storageKey, JSON.stringify({enabled, volume}));} catch {}}

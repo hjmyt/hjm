@@ -14,7 +14,7 @@ function createChronicleEar({ session, chart, changed, complete, pause, active }
         const osc = audioCtx.createOscillator(), gain = audioCtx.createGain();
         osc.type = 'triangle'; osc.frequency.value = 440 * 2 ** ((midi[note - 1] - 69) / 12);
         gain.gain.setValueAtTime(.001, when);
-        gain.gain.linearRampToValueAtTime(.18, when + .015);
+        gain.gain.linearRampToValueAtTime(.99, when + .015);
         gain.gain.exponentialRampToValueAtTime(.001, when + duration);
         osc.connect(gain); gain.connect(audioMaster); voices.add(osc); synthNodes.add(osc); clearTimeout(bridgeIdleTimer);
         osc.onended = () => { voices.delete(osc); synthNodes.delete(osc); osc.disconnect(); gain.disconnect(); releaseAudioBridge(); };

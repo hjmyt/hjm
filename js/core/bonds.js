@@ -1,6 +1,6 @@
 'use strict';
 
-const BOND_RULES = Object.freeze({ hidden: 35, giftCost: 10, giftGain: 1, giftsPerDay: 3, dailyCompanion: 1, fullGiftCost: 10000 });
+const BOND_RULES = Object.freeze({ hidden: 35, giftCost: 10, giftGain: 1, giftsPerDay: 3, dailyCompanion: 1, dailyPerformance: 10, fullGiftCost: 10000 });
 function freshBondProgress() { return { version: 1, claimed: {}, daily: { date: dateKey(), counts: {} } }; }
 function cleanBondProgress(raw) {
     const d = freshBondProgress();
@@ -10,8 +10,10 @@ function cleanBondProgress(raw) {
                 d.claimed[key] = true;
     if (raw?.daily?.date === dateKey())
         for (const [key, v] of Object.entries(raw.daily.counts || {}))
-            if (/^(companion|catGift):[a-z0-9]+$/.test(key) && Number.isFinite(v))
-                d.daily.counts[key] = clamp(Math.floor(v), 0, 3);
+            if (/^(companion|performance|catGift):[a-z0-9]+$/.test(key) && Number.isFinite(v)) {
+                const limit = key.startsWith('performance:') ? BOND_RULES.dailyPerformance : key.startsWith('catGift:') ? BOND_RULES.giftsPerDay : BOND_RULES.dailyCompanion;
+                d.daily.counts[key] = clamp(Math.floor(v), 0, limit);
+            }
     return d;
 }
 function bondProgress() {
@@ -26,8 +28,9 @@ function grantBond(id, amount, { key = null, daily = false } = {}) {
         id = 'tang';
     if (id !== 'cat' && !CARD_DEFS.some(c => c.id === id) || !Number.isFinite(amount) || amount <= 0)
         return 0;
-    const p = bondProgress(), dailyKey = 'companion:' + id;
-    if (key && p.claimed[key] || daily && (p.daily.counts[dailyKey] || 0) >= BOND_RULES.dailyCompanion)
+    const p = bondProgress(), dailyType = daily === 'performance' ? 'performance' : 'companion', dailyKey = dailyType + ':' + id;
+    const dailyLimit = dailyType === 'performance' ? BOND_RULES.dailyPerformance : BOND_RULES.dailyCompanion;
+    if (key && p.claimed[key] || daily && (p.daily.counts[dailyKey] || 0) >= dailyLimit)
         return 0;
     if (key)
         p.claimed[key] = true;
@@ -65,4 +68,4 @@ function applyBondValue(id, after) {
         toast(`${CARD_DEFS.find(c => c.id === id).name}羁绊分达到 35 · 隐藏技能门槛已达成`, true);
     return after - before;
 }
-function bondSummary(id) { const n = cardBond(id); return `<p class="stat-caption">演奏音符加成：编队与技能合计最多 +2，仅限每日前 3 场完整达标演奏。</p><p class="stat-caption">羁绊分 ${n} · ${n < 35 ? '距离隐藏技能门槛还差 ' + (35 - n) + ' 分' : '已达到隐藏技能 35 分门槛'}<br>正传与卡册共用；普通投喂 10 音符 / +1 分，每天最多 3 次；满心礼盒 10000 音符，羁绊直达 100，不占用、不受每日三次限制；聊天、演奏等陪伴每日合计最多 +1 分。关键剧情可额外 +5，重玩不重复。</p>`; }
+function bondSummary(id) { const n = cardBond(id); return `<p class="stat-caption">演奏音符加成：编队与技能合计最多 +2，仅限每日前 3 场完整达标演奏。</p><p class="stat-caption">羁绊分 ${n} · ${n < 35 ? '距离隐藏技能门槛还差 ' + (35 - n) + ' 分' : '已达到隐藏技能 35 分门槛'}<br>正传与卡册共用；普通投喂 10 音符 / +1 分，每天最多 3 次；满心礼盒 10000 音符，羁绊直达 100，不占用、不受每日三次限制；聊天与技能陪伴每角色每日合计最多 +1，合奏另计、每角色每日最多 +10。关键剧情可额外 +5，重玩不重复。</p>`; }

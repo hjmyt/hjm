@@ -106,7 +106,7 @@ function renderTrioDetail(c, own) {
     let skills = '';
     if (c.id === 'tim') {
         skills += skillBlock(c.activeName, '主动技', c.activeText, '入队自动提供「安心」，将同队笛杰的连续 MISS 阈值从 5 提至 ceil(5×1.5)=8。另可准备一次察言观色：下场完整演奏达标，参与全队加成（合计最多 +2 音符）。这里的安全评估是游戏演示，不识别现实人物。', prepare, false, '进入新场合时自动');
-        skills += skillBlock('隐秘档案 · 有女朋友', '解锁条件', '羁绊分达到 35 后，解锁感情线真相。可选择「渐行渐远」或「普通朋友」，没有第三条。', '礼物按标注增加羁绊分；有效演奏参与每日陪伴奖励，每角色每天合计最多 +1 分。达到条件后才能打开档案。', own ? `<div class="trio-inline-actions"><button class="btn primary small" data-trio-archive="open" ${cardBond('tim') < 35 ? 'disabled' : ''}>${cardBond('tim') < 35 ? '羁绊 ' + cardBond('tim') + '/35 · 待解锁' : '正式打开档案'}</button><button class="btn ghost small" data-route="rhythm">去节奏舞台合奏</button></div>` : '', true);
+        skills += skillBlock('隐秘档案 · 有女朋友', '解锁条件', '羁绊分达到 35 后，解锁感情线真相。可选择「渐行渐远」或「普通朋友」，没有第三条。', '礼物按标注增加羁绊分；完成有手动命中的合奏，TIM 羁绊分 +1，每天最多 10 次，不占聊天与技能陪伴额度。达到条件后才能打开档案。', own ? `<div class="trio-inline-actions"><button class="btn primary small" data-trio-archive="open" ${cardBond('tim') < 35 ? 'disabled' : ''}>${cardBond('tim') < 35 ? '羁绊 ' + cardBond('tim') + '/35 · 待解锁' : '正式打开档案'}</button><button class="btn ghost small" data-route="rhythm">去节奏舞台合奏</button></div>` : '', true);
     }
     else if (c.id === 'yeshiyang') {
         skills += skillBlock(c.activeName, '主动技', c.activeText, '准备后，在下一场完整节奏演奏结算：达标时参与全队加成（合计最多 +2 音符），其他同队伙伴恢复 30 点合奏精力，叶思阳参与每日陪伴奖励（合计最多 +1 分）。十元同队时恢复 60 点精力，羁绊奖励不翻倍。精力上限 100，不改变原有音游命中或生命值。', prepare, false, '无');

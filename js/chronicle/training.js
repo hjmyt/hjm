@@ -11,15 +11,24 @@ function createChronicleTraining(ctx) {
     const key = (week = ctx.R().weekly.trainingWeek) => `${ctx.R().chapter}:${week}`;
     const receipt = (week = ctx.R().weekly.trainingWeek) => economy().training[key(week)];
     const ear = createChronicleEar({ session,
-        chart: () => chronicleEarChart(ctx.R().chapter, session().round),
+        chart: () => session()?.earChart || chronicleEarChart(ctx.R().chapter, session().round),
         active: () => currentView === 'chronicle' && ctx.R().scene === 'training' && ['playing','feedback','result'].includes(session()?.phase),
         changed: () => ctx.changed(), complete: finishRound, pause: suspendTraining });
-    function cleanTraining(t) {
+    function cleanTraining(t, week = 0) {
+        const phase = ['feedback','result'].includes(t.phase) ? t.phase : 'ready';
+        const savedChart = t.earChart && Array.isArray(t.earChart.notes) && t.earChart.notes.length===8 &&
+            t.earChart.notes.every((note,i)=>Number.isInteger(note) && (i===7 ? note===0 : note>=1&&note<=7)) &&
+            Array.isArray(t.earChart.blanks) && t.earChart.blanks.length>=2 && t.earChart.blanks.length<=4 &&
+            new Set(t.earChart.blanks).size===t.earChart.blanks.length &&
+            t.earChart.blanks.every(i=>Number.isInteger(i)&&i>=0&&i<7) ?
+            {notes:t.earChart.notes.slice(),blanks:[...new Set(t.earChart.blanks)].sort((a,b)=>a-b),bpm:ctx.nInt(t.earChart.bpm,62,40,160)} : null;
+        const reviewChart = savedChart || (phase!=='ready' && week===1 ? legacyChronicleEarChart(ctx.R().chapter,ctx.nInt(t.round,0,0,2)) : null);
         return { round: ctx.nInt(t.round, 0, 0, 2), points: ctx.nInt(t.points, 0, 0, 300),
-            phase: ['feedback','result'].includes(t.phase) ? t.phase : 'ready',
+            phase,
             score: ctx.nInt(t.score, 0, 0, 100), step: 0, correct: 0,
             message: ctx.str(t.message, 160),
-            answers: Object.fromEntries(Object.entries(t.answers && typeof t.answers==='object' ? t.answers : {}).filter(([i,n])=>/^[0-7]$/.test(i)&&Number.isInteger(n)&&n>=1&&n<=7)) };
+            ...(reviewChart?{earChart:reviewChart}:{}),
+            answers: Object.fromEntries(Object.entries(phase!=='ready'&&t.answers && typeof t.answers==='object' ? t.answers : {}).filter(([i,n])=>/^[0-7]$/.test(i)&&Number.isInteger(n)&&n>=1&&n<=7)) };
     }
     function freshAttempt() { return {round:0,points:0,phase:'ready',score:0,step:0,correct:0,message:''}; }
     function exercise(t = session()) {
@@ -100,6 +109,10 @@ function createChronicleTraining(ctx) {
         if(exercise().kind==='ear' && !state.sound){toast('请先开启右上角声音，再开始视听练耳。');return;}
         stopPlayback();
         const e=exercise(), r=ctx.R(), token=generation;
+        if(e.kind==='ear' && !t.earChart) {
+            const chart=chronicleEarChart(r.chapter,t.round);
+            t.earChart={notes:chart.notes.slice(),blanks:chart.blanks.slice(),bpm:chart.bpm};
+        }
         t.step=0;t.correct=0;t.phase=e.kind==='memory'?'demo':'playing';t.message='';
         ctx.changed();
         playback={run:r,token,start:0,last:-1,hits:[],extra:0};
@@ -181,8 +194,12 @@ function createChronicleTraining(ctx) {
         }
         if(action==='training-tap')return trainingTap();
         if(action==='training-answer')return answerTraining(Number(btn?.dataset.cpAnswer));
-        if(action==='training-next' && t?.phase==='feedback') {stopPlayback();t.round++;t.phase='ready';t.message='';delete t.answers;delete t.selected;ctx.changed();}
-        if(action==='training-retry' && t?.phase==='result') {stopPlayback();ctx.R().weekly.training[ctx.R().weekly.trainingWeek]=freshAttempt();ctx.changed();}
+        if(action==='training-next' && t?.phase==='feedback') {stopPlayback();t.round++;t.phase='ready';t.message='';delete t.answers;delete t.selected;delete t.earChart;ctx.changed();}
+        if(action==='training-retry' && t?.phase==='result') {
+            stopPlayback();
+            if(plan().kind==='ear')resetChronicleEarCharts(ctx.R().chapter);
+            ctx.R().weekly.training[ctx.R().weekly.trainingWeek]=freshAttempt();ctx.changed();
+        }
     }
     function trainingHubHTML() {
         const r=ctx.R(), missing=Math.max(0,ctx.requiredTech()-r.tech);

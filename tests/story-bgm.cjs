@@ -13,7 +13,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
  assert.equal((await player()).src,null,'Music waits for an explicit entrance choice');
  assert((await player()).paused,'Welcome entrance keeps music paused');
  await page.locator('[data-music-enter]').click();await playing();assert(await page.locator('#musicWelcome').isHidden());
- await page.locator('.nav-btn[data-route="chronicle"]').click();await playing();assert((await player()).src.endsWith('a-little-story.mp3'));assert(Math.abs((await player()).duration-204.460408)<1,'Original full-length MP3 decodes');
+ await page.locator('.nav-btn[data-route="chronicle"]').click();await playing();assert((await player()).src.endsWith('hakimi.mp3'));assert(Math.abs((await player()).duration-149.338125)<1,'User-supplied chapter-one MP3 decodes');
  await page.waitForFunction(()=>{if(!window.bgmAnalyser)return true;const a=new Float32Array(bgmAnalyser.fftSize);bgmAnalyser.getFloatTimeDomainData(a);return a.some(v=>Math.abs(v)>.00001);},{},{timeout:5000});
  await page.evaluate(()=>{document.querySelector('#storyBgmAudio').currentTime=25;renderGlobal();renderGlobal();});assert((await player()).time>=25,'Dialogue rendering does not restart track');
  const setScene=async(ch,scene,extra={})=>{await page.evaluate(([ch,scene,extra])=>{closeModal(false);Object.assign(state.chronicle.run,{chapter:ch,ch,scene,...extra});renderGlobal();},[ch,scene,extra]);};
@@ -77,7 +77,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
   if(touch)await enter.tap();else await enter.click();
   const nav=direct.locator('.nav-btn[data-route="chronicle"]');
   if(touch)await nav.tap();else await nav.click();
-  await direct.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return !a.paused&&a.currentSrc.includes('a-little-story.mp3')&&a.currentTime>.1;});
+  await direct.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return !a.paused&&a.currentSrc.includes('hakimi.mp3')&&a.currentTime>.1;});
   await direct.waitForFunction(()=>{if(!window.directBgmOutput)return false;const samples=new Float32Array(directBgmOutput.fftSize);directBgmOutput.getFloatTimeDomainData(samples);return samples.some(v=>Math.abs(v)>.00001);},null,{timeout:5000});
   assert(await direct.evaluate(()=>directBgmGain.gain.value>0),'First navigation restores audible output gain');
   await ctx.close();
@@ -108,7 +108,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
   await site.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'));});assert((await status()).paused);
   await site.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:false});document.dispatchEvent(new Event('visibilitychange'));});await waitSite();
   await site.evaluate(()=>route('chronicle'));
-  await site.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return !a.paused&&a.currentSrc.includes('a-little-story.mp3')&&a.currentTime>.05;});
+  await site.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return !a.paused&&a.currentSrc.includes('hakimi.mp3')&&a.currentTime>.05;});
   assert(await site.locator('#siteMusicControls').isHidden());
   await site.evaluate(()=>StoryBgm.sync({view:'chronicle',chapter:7,scene:'cp_BE',ending:'cp_BE',sound:true}));
   await site.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return !a.paused&&a.currentSrc.includes('huimosrushen-de-mingzi.mp3')&&a.currentTime>.05;});

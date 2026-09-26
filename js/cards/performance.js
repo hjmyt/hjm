@@ -1,6 +1,6 @@
 'use strict';
 
-function captureCardRun() { return { sourceSnapshot: { xiaota: state.cards.team.includes('xiaota'), rescued: false, beats: 0, assists: 0, manualHits: 0, dayangOnline: sourceCast().dayang.online, xiaozhouPraised: sourceCast().xiaozhou.praised }, qiqiStage: state.cards.team.includes('qiqi') ? { charm: 15, sisters: state.cards.team.includes('shiyuan') } : null, lalaCover: lalaState().cover, lalaCoverBonus: lalaCoverBonus(), lalaJianpuBonus: lalaJianpuBonus(), ids: [...state.cards.team], passive: teamBonus(), prepared: state.cards.prepared ? { ...state.cards.prepared } : null, tang: state.cards.team.includes('tang'), orange: state.cards.team.includes('orange'), credited: false, missStreak: 0, emoTriggered: false, timSafe: state.cards.team.includes('tim'), konggeGood: state.cards.prepared?.id === 'kongge' && sourceRhythm(state.cards.prepared.target) >= 85 }; }
+function captureCardRun() { return { sourceSnapshot: { xiaota: state.cards.team.includes('xiaota'), rescued: false, beats: 0, assists: 0, manualHits: 0, dayangOnline: sourceCast().dayang.online, xiaozhouPraised: sourceCast().xiaozhou.praised }, qiqiStage: state.cards.team.includes('qiqi') ? { charm: 15, sisters: state.cards.team.includes('shiyuan') } : null, lalaCover: lalaState().cover, lalaCoverBonus: lalaCoverBonus(), lalaJianpuBonus: lalaJianpuBonus(), ids: [...state.cards.team], passive: teamBonus(), prepared: state.cards.prepared ? { ...state.cards.prepared } : null, tang: state.cards.team.includes('tang'), orange: state.cards.team.includes('orange'), credited: false, bondGains: [], missStreak: 0, emoTriggered: false, timSafe: state.cards.team.includes('tim'), konggeGood: state.cards.prepared?.id === 'kongge' && sourceRhythm(state.cards.prepared.target) >= 85 }; }
 function awardCardPerformance(hits) {
     const run = game.cardRun;
     if (!run || run.credited || hits <= 0)
@@ -11,7 +11,8 @@ function awardCardPerformance(hits) {
     state.coins += extra;
     for (const id of run.ids) {
         addCardXP(id, 20 + (run.tang ? 5 : 0));
-        rewardCompanionBond(id);
+        if (rewardPerformanceBond(id))
+            run.bondGains.push(id);
     }
     if (run.prepared?.id === 'azhe') {
         const at = run.ids.indexOf('azhe');

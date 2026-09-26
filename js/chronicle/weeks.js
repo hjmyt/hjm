@@ -36,7 +36,7 @@ function createChronicleWeeks(ctx) {
             w.trainingWeek = valid(saved.trainingWeek) ? saved.trainingWeek : Math.min(5,r.week);
             for (let n=1;n<=5;n++) {
                 const t = saved.training?.[n];
-                if (t && typeof t === 'object') w.training[n] = ctx.cleanTraining(t);
+                if (t && typeof t === 'object') w.training[n] = ctx.cleanTraining(t, Number(n));
             }
             return w;
         }

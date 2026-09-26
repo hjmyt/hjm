@@ -197,7 +197,7 @@ def build():
     track['charts']={'gentle':simple,'normal':normal}
     track['chartVersion']='full-drums-v1'
     track['duration']=float(duration)
-    track['name']='恋与哈基米（OP）· 完整版'
+    track['name']='恋与哈基米（编曲 · 垃垃）'
     track['legacyScoreIds']=list(dict.fromkeys([*track.get('legacyScoreIds',[]),'love-hakimi-op-opening-drums-v1']))
     track['audio']='assets/audio/rhythm/love-hakimi-op-full.mp3?v='+hashlib.sha256(AUDIO.read_bytes()).hexdigest()[:12]
     track['scoreId']='love-hakimi-op-full-drums-v1'
