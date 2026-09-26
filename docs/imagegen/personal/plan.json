@@ -1086,5 +1086,140 @@
         "memory": "cp7_cp_HE_page6"
       }
     ]
+  },
+  {
+    "batch": "24-personal",
+    "scenes": [
+      {
+        "id": "azhe_06_page2",
+        "title": "第六幕 · 星光落在谱架上",
+        "asset": "personal_azhe_06_page2",
+        "memory": "cp7_azhe_06_page2"
+      },
+      {
+        "id": "azhe_06c_page2",
+        "title": "第六幕 · 星光落在谱架上",
+        "asset": "personal_azhe_06c_page2",
+        "memory": "cp7_azhe_06c_page2"
+      },
+      {
+        "id": "azhe_07_page2",
+        "title": "第七幕 · 杭州的 offer",
+        "asset": "personal_azhe_07_page2",
+        "memory": "cp7_azhe_07_page2"
+      },
+      {
+        "id": "azhe_TE_page2",
+        "title": "TE · 同行的方向",
+        "asset": "personal_azhe_TE_page2",
+        "memory": "cp7_azhe_TE_page2"
+      },
+      {
+        "id": "sy_heart_page2",
+        "title": "初心 · 上台装一下",
+        "asset": "personal_sy_heart_page2",
+        "memory": "cp7_sy_heart_page2"
+      },
+      {
+        "id": "sy_heart_b_page2",
+        "title": "初心 · 上台装一下",
+        "asset": "personal_sy_heart_b_page2",
+        "memory": "cp7_sy_heart_b_page2"
+      },
+      {
+        "id": "sy_03_page2",
+        "title": "悸动 · 深夜的误拨",
+        "asset": "personal_sy_03_page2",
+        "memory": "cp7_sy_03_page2"
+      },
+      {
+        "id": "sy_04b_page2",
+        "title": "悸动 · 深夜的误拨",
+        "asset": "personal_sy_04b_page2",
+        "memory": "cp7_sy_04b_page2"
+      }
+    ]
+  },
+  {
+    "batch": "25-personal",
+    "scenes": [
+      {
+        "id": "sy_04c_ye_page2",
+        "title": "悸动 · 深夜的误拨",
+        "asset": "personal_sy_04c_ye_page2",
+        "memory": "cp7_sy_04c_ye_page2"
+      },
+      {
+        "id": "sy_m1_page2",
+        "title": "心动 · 琴房里睡着的人",
+        "asset": "personal_sy_m1_page2",
+        "memory": "cp7_sy_m1_page2"
+      },
+      {
+        "id": "sy_wx_b_page2",
+        "title": "心动 · 被围住的光源",
+        "asset": "personal_sy_wx_b_page2",
+        "memory": "cp7_sy_wx_b_page2"
+      },
+      {
+        "id": "sy_08_page2",
+        "title": "约会 · 山丘酒吧",
+        "asset": "personal_sy_08_page2",
+        "memory": "cp7_sy_08_page2"
+      },
+      {
+        "id": "sy_09_page2",
+        "title": "约会 · 音乐节",
+        "asset": "personal_sy_09_page2",
+        "memory": "cp7_sy_09_page2"
+      },
+      {
+        "id": "sy_pd_page2",
+        "title": "拼豆 · 一只鹅",
+        "asset": "personal_sy_pd_page2",
+        "memory": "cp7_sy_pd_page2"
+      },
+      {
+        "id": "sy_rumor3_page2",
+        "title": "回潮 · 源头沉在水底",
+        "asset": "personal_sy_rumor3_page2",
+        "memory": "cp7_sy_rumor3_page2"
+      },
+      {
+        "id": "sy_i2_page2",
+        "title": "乱入 · V我50",
+        "asset": "personal_sy_i2_page2",
+        "memory": "cp7_sy_i2_page2"
+      }
+    ]
+  },
+  {
+    "batch": "26-personal",
+    "scenes": [
+      {
+        "id": "sy_BE_ge_page2",
+        "title": "BE · 传出去的话",
+        "asset": "personal_sy_BE_ge_page2",
+        "memory": "cp7_sy_BE_ge_page2"
+      },
+      {
+        "id": "sy_BE_ge_page3",
+        "title": "BE · 传出去的话",
+        "asset": "personal_sy_BE_ge_page3",
+        "memory": "cp7_sy_BE_ge_page3"
+      },
+      {
+        "id": "sy_BE_ge_page4",
+        "title": "BE · 传出去的话",
+        "asset": "personal_sy_BE_ge_page4",
+        "memory": "cp7_sy_BE_ge_page4"
+      },
+      {
+        "id": "sy_BE_page2",
+        "title": "BE · 最棒的团员",
+        "asset": "personal_sy_BE_page2",
+        "memory": "cp7_sy_BE_page2"
+      }
+    ]
   }
 ]

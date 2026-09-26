@@ -1,0 +1,16 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene. Warm cinematic semi-realistic anime painted CG matching the supplied character references. All characters are fictional Chinese adults. Shiyuan must keep her short brown bob, gold star hair clip, cream cardigan and violinist identity. The player is always a gender-neutral first-person viewpoint with only a sleeve, hand, or shoulder visible—never give the player a face or fixed gender.
+
+PANEL 1 (sy_04c_ye_page2): First-person view on an apartment stair landing at dawn. The player's hands hold a now-unneeded breakfast bag. In the middle distance, Huang Yixing—the neat adult man with black short hair, metal-frame glasses and gray suit—stands beside a second warm breakfast and the closed apartment door after accompanying Shiyuan through the night. Quiet realization and missed timing; Shiyuan herself is already upstairs and not visible.
+
+PANEL 2 (sy_m1_page2): In a rehearsal room late at night, Shiyuan with short brown bob, gold star hair clip and cream cardigan is asleep leaning over a music stand, violin bow still near her hand, pencil smudge at the corner of her mouth. From first-person view, one sleeve gently removes the bow while her sleepy hand catches that sleeve. Tender, intimate, no male character visible.
+
+PANEL 3 (sy_08_page2): At the dim bar counter of Shanqiu, Shiyuan with short brown bob, gold star hair clip and cream cardigan holds a softly glowing cocktail and glances toward the first-person viewer, cheeks faintly flushed, vulnerable words left unsaid. Only the viewer's blurred shoulder edge may appear; no other woman.
+
+PANEL 4 (sy_09_page2): Outdoor music festival at night, crowd and stage lights blurred behind. Shiyuan with short brown bob and gold star hair clip rests half her face against the first-person viewer's shoulder for a long quiet moment. Show only the viewer's shoulder/sleeve, never the viewer's face. Warm and restrained.
+
+PANEL 5 (sy_pd_page2): Top-down first-person view in the rehearsal room. Shiyuan sits cross-legged in her cream cardigan, short brown bob and gold star hair clip visible as she presses colorful fuse beads into a small goose pattern. The viewer's hands rest near the almost-finished bead goose; no fixed protagonist face, no male character.
+
+PANEL 6 (sy_BE_ge_page2): Rehearsal-room doorway seen from first-person view after the viewer has turned away. Dayan—the adult male keyboardist with black hair and a white top—stands behind, watching the departing viewer and secretly taking out his phone to post in a group chat. Only the viewer's blurred sleeve/back edge is visible; no readable phone text.
+
+PANEL 7: Empty warm rehearsal room with a violin case, no characters, no readable text.
+PANEL 8: Empty warm rehearsal room at sunset, no characters, no readable text.

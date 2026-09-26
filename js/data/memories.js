@@ -547,7 +547,7 @@ const MEMORIES = [
     "text": "掌声有些稀疏，十元却攥紧拳头：再来，下次一定行。"
   },
   ...PERSONAL_NODES.filter(n=>n.memory&&n.asset).map(n=>({id:n.memory,title:n.title,sub:'第七章 · '+PERSONAL_ROUTES[n.route].name+(n.route==='baoshi_feihong'?' CP 线':'个人线'),asset:n.asset,rule:'阅读对应个人线场景',text:n.artText})),
-  ...PERSONAL_PAGE_ART.filter(a=>a.memory&&a.asset&&!PERSONAL_NODES.some(n=>n.memory===a.memory)).map(a=>({id:a.memory,title:a.title+' · '+a.page+'/'+PERSONAL_ROUTES[a.route].nodes.find(n=>n.id===a.node).pageArt.length,sub:'第七章 · '+PERSONAL_ROUTES[a.route].name+' CP 线',asset:a.asset,rule:'阅读对应 CP 剧情分页',text:a.text})),
+  ...PERSONAL_PAGE_ART.filter(a=>a.memory&&a.asset&&!PERSONAL_NODES.some(n=>n.memory===a.memory)).map(a=>({id:a.memory,title:a.title+' · '+a.page+'/'+PERSONAL_ROUTES[a.route].nodes.find(n=>n.id===a.node).pageArt.length,sub:'第七章 · '+PERSONAL_ROUTES[a.route].name+(a.route==='baoshi_feihong'?' CP 线':'个人线'),asset:a.asset,rule:'阅读对应个人线剧情分页',text:a.text})),
   ...CHRONICLE_ART.filter(a => a.newMemory).map(a => ({
     id: a.id, title: a.title, sub: a.location, asset: a.asset,
     rule: `在第 ${a.chapter} 章读到对应场景`, text: a.text

@@ -28,7 +28,7 @@ const assert=require('node:assert/strict');
    check('Explicit bond range '+n.id,n.choices.every(c=>[0,1,2,5].includes(c.bond)));
    check('Known personal speaker '+n.id,n.lines.every(l=>['narrator','player','bingbing','xuezi','rek','crowd',...ChronicleData.PERSON_IDS].includes(l.who)));
   }
-  for(const n of PERSONAL_ROUTES.baoshi_feihong.nodes){const turns=[];for(const l of n.lines){if(turns.at(-1)?.who===l.who)turns.at(-1).text+=' '+l.text;else turns.push({...l});}check('Every CP dialogue page has dedicated art '+n.id,n.pageArt.length===Math.ceil(turns.length/2)&&n.pageArt.every(a=>a.asset&&a.memory));}
+  for(const route of Object.values(PERSONAL_ROUTES))for(const n of route.nodes){const turns=[];for(const l of n.lines){if(turns.at(-1)?.who===l.who)turns.at(-1).text+=' '+l.text;else turns.push({...l});}check('Every personal dialogue page has dedicated art '+route.id+':'+n.id,n.pageArt.length===Math.ceil(turns.length/2)&&n.pageArt.every(a=>a.asset&&a.memory));}
   setup(100,false);check('Chapter seven disabled before six',document.querySelector('[data-cp-action="personal-picker"]').disabled);
   await forged('personal-select',{cpPerson:'azhe'});check('Direct entry blocked before six',!P().active);
   setup(35);await action('picker');check('35 boundary stays locked',document.querySelector('[data-cp-person="azhe"]').disabled);
@@ -124,7 +124,7 @@ const assert=require('node:assert/strict');
   await page.screenshot({path:'/tmp/hjm-personal-'+width+'.png',fullPage:true});
  }
  const assets=await page.evaluate(()=>[...PERSONAL_NODES.filter(n=>n.asset).map(n=>ASSETS[n.asset]),...PERSONAL_PAGE_ART.map(a=>ASSETS[a.asset])]);
- assert.equal(new Set(assets).size,163,'Unique per-dialogue-page assets');
+ assert.equal(new Set(assets).size,183,'Unique per-dialogue-page assets');
  if(!process.env.PERSONAL_SKIP_ART)for(const asset of assets)assert(fs.existsSync(path.resolve(__dirname,'..',asset)),asset);
  assert.deepEqual(errors,[],'Runtime errors');
  console.log(`PASS: ${checks.length} personal route graph/behavior checks, full HE/TE/BE paths, actual refresh and four widths.`);

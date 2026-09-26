@@ -10,5 +10,41 @@
     "prompt": "docs/imagegen/personal/23-personal-fix.txt",
     "cell": 2,
     "id": "cp_11_page2"
+  },
+  {
+    "source": "assets/chronicle/personal/source/27-personal-fix.png",
+    "prompt": "docs/imagegen/personal/27-personal-fix.txt",
+    "cell": 1,
+    "id": "sy_04c_ye_page2"
+  },
+  {
+    "source": "assets/chronicle/personal/source/27-personal-fix.png",
+    "prompt": "docs/imagegen/personal/27-personal-fix.txt",
+    "cell": 2,
+    "id": "sy_m1_page2"
+  },
+  {
+    "source": "assets/chronicle/personal/source/27-personal-fix.png",
+    "prompt": "docs/imagegen/personal/27-personal-fix.txt",
+    "cell": 3,
+    "id": "sy_08_page2"
+  },
+  {
+    "source": "assets/chronicle/personal/source/27-personal-fix.png",
+    "prompt": "docs/imagegen/personal/27-personal-fix.txt",
+    "cell": 4,
+    "id": "sy_09_page2"
+  },
+  {
+    "source": "assets/chronicle/personal/source/27-personal-fix.png",
+    "prompt": "docs/imagegen/personal/27-personal-fix.txt",
+    "cell": 5,
+    "id": "sy_pd_page2"
+  },
+  {
+    "source": "assets/chronicle/personal/source/27-personal-fix.png",
+    "prompt": "docs/imagegen/personal/27-personal-fix.txt",
+    "cell": 6,
+    "id": "sy_BE_ge_page2"
   }
 ]

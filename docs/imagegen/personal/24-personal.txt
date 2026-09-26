@@ -1,0 +1,22 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：黑发成年男性贝斯手。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (azhe_06_page2, do not write ID): 剧情分镜《第六幕 · 星光落在谱架上》的第 2 幕：整场演出，你没有一次低头找谱。每一次抬眼，谱子永远停在该在的那一页。谢幕的掌声响起时，你回头找他——他站在控制台边，比你还紧张，拳头攥着，指节都白了。看到你望过来，他才松开手，冲你用力点头。
+
+PANEL 2 (azhe_06c_page2, do not write ID): 剧情分镜《第六幕 · 星光落在谱架上》的第 2 幕：说完这句话，他像是用完了全身的力气，眼神飘向别处，手却诚实地没有走。你看见他的手在微微发抖——和他每次翻谱前试页边时一样稳，又一样抖。
+
+PANEL 3 (azhe_07_page2, do not write ID): 剧情分镜《第七幕 · 杭州的 offer》的第 2 幕：排练室很静。你听见自己的心跳，比任何一次演出前都响。
+
+PANEL 4 (azhe_TE_page2, do not write ID): 剧情分镜《TE · 同行的方向》的第 2 幕：两年后，你们在钱塘江边租了一个带琴房的两居室。阳台很小，刚好放两把椅子。某个周末的傍晚，他洗了一盒葡萄，递给你最满的那盒：「这盒甜。」和当年一模一样。
+
+你偶尔会想起哈基米，想起剧场穹顶的星光。阿喆从身后抱住你：「等攒够了钱，我们回去看演出。买最好的位置——不，买侧幕，侧幕看得清翻谱的人。」
+
+PANEL 5 (sy_heart_page2, do not write ID): 剧情分镜《初心 · 上台装一下》的第 2 幕：（眨眨眼，忽然笑了，笑得有点不好意思：）「说出来你别笑啊。」她抱紧琴，「我最开始学小提琴，就是想——上台，装一下。」
+
+「小时候看电视，觉得舞台特别亮。我就想，站在那个光里面的人，一定很了不起。」 你愣住了。这个答案太不像她——又太像她。
+
+PANEL 6 (sy_heart_b_page2, do not write ID): 剧情分镜《初心 · 上台装一下》的第 2 幕：（她把下巴搁在琴上，冲你笑了笑，眼睛有点亮：）「所以……你问了这个问题，是想替我练，还是想替我上台呀？」
+
+PANEL 7 (sy_03_page2, do not write ID): 剧情分镜《悸动 · 深夜的误拨》的第 2 幕：（带着哭腔，语无伦次：）「帽子……那个帽子……我在楼下便利店，他又在外面，戴的还是那顶帽子……」 你让她别挂电话。她断断续续地说：昨晚回家路上就觉得有人跟着；今天一整天没敢自己走；刚才下楼买水，一抬头，又看到了那顶帽子。
+
+PANEL 8 (sy_04b_page2, do not write ID): 剧情分镜《悸动 · 深夜的误拨》的第 2 幕：你陪她坐到天亮。她靠着你的肩膀睡着了，眉头终于舒展开。你一动不敢动，看了一夜她家的楼道灯。

@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：黑发成年男性贝斯手。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (sy_04c_ye_page2, do not write ID): 剧情分镜《悸动 · 深夜的误拨》的第 2 幕：你站在原地，忽然明白自己差在哪里——不是早餐，是差在每一个「她需要」的时刻，他都在场。
+
+PANEL 2 (sy_m1_page2, do not write ID): 剧情分镜《心动 · 琴房里睡着的人》的第 2 幕：你的心跳，在那一刻漏了半拍。
+
+PANEL 3 (sy_wx_b_page2, do not write ID): 剧情分镜《心动 · 被围住的光源》的第 2 幕：后台的灯很暗。你看着她仰起的脸，听见自己说：「那就一直在一起。」——在心里说的。
+
+PANEL 4 (sy_08_page2, do not write ID): 剧情分镜《约会 · 山丘酒吧》的第 2 幕：她说到「什么东西」的时候，看了你一眼。吧台的灯很暗，你没看清她的脸。
+
+PANEL 5 (sy_09_page2, do not write ID): 剧情分镜《约会 · 音乐节》的第 2 幕：她摇摇头，声音闷闷的：「没有。就是想靠一下。」 那首歌唱了七分钟，她靠了七分钟。散场的人流里，谁都没有先动。
+
+PANEL 6 (sy_pd_page2, do not write ID): 剧情分镜《拼豆 · 一只鹅》的第 2 幕：你看着那只渐渐成型的鹅，心里某个地方，堵了一下。
+
+PANEL 7 (sy_rumor3_page2, do not write ID): 剧情分镜《回潮 · 源头沉在水底》的第 2 幕：（深深鞠了一躬：）「对不起。还有——」她直起身，「谢谢你，没有走远。」
+
+PANEL 8 (sy_i2_page2, do not write ID): 剧情分镜《乱入 · V我50》的第 2 幕：钱还没捂热，他转身就跑，跑之前还顺走了你的半包饼干。十元对着他的背影喊：「25 的卦象也算数吗！」

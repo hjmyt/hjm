@@ -37,11 +37,24 @@ function memoryVisible(id) {
         return cardOwned('yeshiyang');
     return true;
 }
+function orderedAlbumMemories(filter = albumFilter) {
+    const unlockOrder = new Map(state.memories.map((id, index) => [id, index]));
+    return MEMORIES.map((memory, catalogIndex) => ({
+        memory,
+        catalogIndex,
+        open: memoryVisible(memory.id)
+    })).filter(item => filter === 'all' || item.open).sort((a, b) => {
+        if (a.open !== b.open)
+            return a.open ? -1 : 1;
+        if (a.open)
+            return (unlockOrder.get(a.memory.id) ?? Number.MAX_SAFE_INTEGER) - (unlockOrder.get(b.memory.id) ?? Number.MAX_SAFE_INTEGER);
+        return a.catalogIndex - b.catalogIndex;
+    });
+}
 function renderAlbum() {
-    const list = MEMORIES.filter(m => albumFilter === 'all' || memoryVisible(m.id));
+    const list = orderedAlbumMemories();
     $('albumDescription').textContent = `已珍藏 ${MEMORIES.filter(m => memoryVisible(m.id)).length} / ${MEMORIES.length} 张回忆。我们记住的，都是小事。`;
-    $('albumGrid').innerHTML = list.map(m => {
-        const open = memoryVisible(m.id);
+    $('albumGrid').innerHTML = list.map(({ memory: m, open }) => {
         if (!open)
             return `<button class="memory-card locked" data-memory="${m.id}" aria-label="未解锁的回忆"><div class="chapter-lock-art">${I('lock')}</div><h3>未解锁的回忆</h3><p>在故事与相处中慢慢发现</p></button>`;
         const index = MEMORIES.indexOf(m) + 1;

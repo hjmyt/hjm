@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：黑发成年男性贝斯手。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。
+
+PANEL 1 (sy_BE_ge_page2, do not write ID): 剧情分镜《BE · 传出去的话》的第 2 幕：你以为这就是答案，转身走了。你没有看见，你身后，大鹅盯着你的背影看了很久——然后掏出手机，在群里发了一条消息。 三天后，十元看你的眼神变了。她还是笑着，只是不再单独叫你的名字。垃垃欲言又止，最终只问了半句：「你……去找过大鹅？」
+
+PANEL 2 (sy_BE_ge_page3, do not write ID): 剧情分镜《BE · 传出去的话》的第 3 幕：（走廊里擦肩而过，她停下来，背对着你说：）「我没什么好被人打听的。」 那句话传遍了团里，越传越变形。你试图解释，可连解释本身，都成了新的谈资。
+
+PANEL 3 (sy_BE_ge_page4, do not write ID): 剧情分镜《BE · 传出去的话》的第 4 幕：（最后一次开口，是在排练室门口。她没有看你：）「对不起。我们还是……保持距离吧。」
+
+PANEL 4 (sy_BE_page2, do not write ID): 剧情分镜《BE · 最棒的团员》的第 2 幕：她的温柔比任何拒绝都锋利。那天之后你还是她的{{inst}}手，还是她口中最可靠的伙伴。只是你终于明白：光源照亮所有人，而你，站得离光太近了，忘了问自己配不配。
+
+PANEL 5: Archive detail study, an empty warm rehearsal room with a violin case and open music pages, no characters, no readable text.
+
+PANEL 6: Archive detail study, an empty warm rehearsal room with a violin case and open music pages, no characters, no readable text.
+
+PANEL 7: Archive detail study, an empty warm rehearsal room with a violin case and open music pages, no characters, no readable text.
+
+PANEL 8: Archive detail study, an empty warm rehearsal room with a violin case and open music pages, no characters, no readable text.

@@ -179,9 +179,10 @@ def dialogue_pages(lines):
   else:turns.append(copy.deepcopy(line))
  return [turns[i:i+2] for i in range(0,len(turns),2)] or [[]]
 
-# A long CP node spans several reader pages. Give every visible page its own
+# Long nodes span several reader pages. Give every visible page its own
 # illustration instead of repeating a single node cover across later beats.
 cp_page_scenes=[]
+other_page_scenes=[]
 he_prompts=[
  '夜晚摩天轮下，飞鸿穿蓝灰衬衫站在缠着胶带的行李箱旁；宝石穿米白衬衫气喘吁吁跑到他面前，久别重逢、欲言又止，霓虹映亮两人的脸。',
  '摩天轮霓虹下，飞鸿眼眶微红、克制地质问，宝石慌张摆手解释；脚边有旅行六小时带来的行李箱，两个成年男性近景对话。',
@@ -206,6 +207,20 @@ for n in result['baoshi_feihong']['nodes']:
   if output_id!=n['id']:cp_page_scenes.append({'node':n['id'],'page':page_index+1,'title':n['title'],**art})
  n['pageArt']=page_art
 
+for route_id in ['azhe','shiyuan']:
+ for n in result[route_id]['nodes']:
+  pages=dialogue_pages(n['lines']);page_art=[]
+  for page_index,page in enumerate(pages):
+   if page_index==0:
+    output_id=n['id'];asset=n['asset'];memory=n['memory'];prompt=n.get('artPrompt',' '.join(l['text'] for l in page))
+   else:
+    output_id=f'{n["id"]}_page{page_index+1}';asset=f'personal_{output_id}';memory=f'cp7_{output_id}'
+    prompt=f'剧情分镜《{n["title"]}》的第 {page_index+1} 幕：'+' '.join(l['text'] for l in page)
+   art={'id':output_id,'asset':asset,'memory':memory,'text':' '.join(l['text'] for l in page)[:280],'prompt':prompt}
+   page_art.append(art)
+   if page_index>0:other_page_scenes.append({'route':route_id,'node':n['id'],'page':page_index+1,'title':n['title'],**art})
+  n['pageArt']=page_art
+
 (ROOT/'js/data/personal-routes.js').write_text("'use strict';\n\n// Compiled from supplied scripts; production rules are explicit in the build script.\nconst PERSONAL_ROUTES = "+json.dumps(result,ensure_ascii=False,indent=2)+";\nconst PERSONAL_NODES = Object.values(PERSONAL_ROUTES).flatMap(r=>r.nodes.map(n=>({...n,route:r.id})));\nconst PERSONAL_PAGE_ART = PERSONAL_NODES.flatMap(n=>(n.pageArt||[]).map((a,index)=>({...a,route:n.route,node:n.id,page:index+1,title:n.title})));\nObject.assign(ASSETS,Object.fromEntries([...PERSONAL_NODES.filter(n=>n.asset).map(n=>[n.asset,`assets/chronicle/personal/${n.id}.webp`]),...PERSONAL_PAGE_ART.map(a=>[a.asset,`assets/chronicle/personal/${a.id}.webp`])]));\n")
 # Every reader node gets its own panel. No character portraits substitute for scene art.
 base='''Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.\n阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：黑发成年男性贝斯手。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。\n'''
@@ -228,5 +243,13 @@ for start in range(0,len(cp_page_scenes),8):
  for i in range(len(group),8):prompt+=f'\nPANEL {i+1}: Archive detail study, an empty warm rehearsal room with two microphones and two acoustic guitars, no characters, no readable text.\n'
  (ROOT/f'docs/imagegen/personal/{batch}.txt').write_text(prompt)
  plan.append({'batch':batch,'scenes':[{k:scene[k] for k in ['id','title','asset','memory']} for scene in group]})
+# Batch 23 is reserved for the two audited correction cells. Batches 24–26
+# complete later pages in the Azhe and Shiyuan routes.
+for start in range(0,len(other_page_scenes),8):
+ number=24+start//8;group=other_page_scenes[start:start+8];batch=f'{number:02d}-personal';prompt=base
+ for i,scene in enumerate(group):prompt+=f'\nPANEL {i+1} ({scene["id"]}, do not write ID): '+scene['prompt']+'\n'
+ for i in range(len(group),8):prompt+=f'\nPANEL {i+1}: Archive detail study, an empty warm rehearsal room with a violin case and open music pages, no characters, no readable text.\n'
+ (ROOT/f'docs/imagegen/personal/{batch}.txt').write_text(prompt)
+ plan.append({'batch':batch,'scenes':[{k:scene[k] for k in ['id','title','asset','memory']} for scene in group]})
 (ROOT/'docs/imagegen/personal/plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n')
-print(f'{sum(len(v["nodes"]) for v in result.values())} dialogue scenes ({len(nodes)+len(cp_nodes)+len(cp_page_scenes)} illustrated pages), {len(plan)} atlases; '+', '.join(f'{k}: {len(v["nodes"])}' for k,v in result.items()))
+print(f'{sum(len(v["nodes"]) for v in result.values())} dialogue scenes ({len(nodes)+len(cp_nodes)+len(cp_page_scenes)+len(other_page_scenes)} illustrated pages), {len(plan)} atlases; '+', '.join(f'{k}: {len(v["nodes"])}' for k,v in result.items()))

@@ -37,6 +37,17 @@ const server = http.createServer((req, res) => {
     });
     await page.reload();
     assert(await page.evaluate(() => memoryVisible('cp_audition') && memoryVisible('cp4_fail')), 'Existing memory IDs survive reload');
+    await page.evaluate(() => route('album'));
+    const albumOrder = await page.locator('#albumGrid .memory-card').evaluateAll(cards => cards.map(card => ({ id: card.dataset.memory, locked: card.classList.contains('locked') })));
+    assert.deepEqual(albumOrder.slice(0, 3), [
+      { id: 'first', locked: false },
+      { id: 'cp_audition', locked: false },
+      { id: 'cp4_fail', locked: false }
+    ], 'Unlocked memories are grouped first in collection order');
+    assert(albumOrder.slice(3).every(item => item.locked), 'Locked placeholders follow all collected memories');
+    await page.evaluate(() => document.querySelector('[data-filter="unlocked"]').click());
+    assert.deepEqual(await page.locator('#albumGrid .memory-card').evaluateAll(cards => cards.map(card => card.dataset.memory)), ['first', 'cp_audition', 'cp4_fail'], 'Collected filter keeps collection order');
+    await page.evaluate(() => document.querySelector('[data-filter="all"]').click());
     // Layout fixture only: real unlock guards checked above, no live save touched.
     await page.evaluate(() => { memoryVisible = () => true; route('album'); });
     for (const width of [1440, 390]) {
