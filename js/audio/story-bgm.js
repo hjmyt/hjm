@@ -16,7 +16,15 @@ window.StoryBgm = (() => {
   let enabled = true, volume = .32;
   try {const saved = JSON.parse(localStorage.getItem(storageKey));if (saved) {enabled = saved.enabled !== false;if (Number.isFinite(saved.volume)) volume = Math.min(1, Math.max(0, saved.volume));}} catch {}
   const audio = new Audio();audio.loop = true;audio.preload = 'none';audio.id = 'storyBgmAudio';audio.hidden = true;audio.setAttribute('aria-hidden', 'true');document.body.append(audio);
-  let context = {}, key = null, loaded = null, unlocked = false, pending = false, failed = false, blocked = false, serial = 0, audioContext = null, gain = null;
+  let context = {}, key = null, loaded = null, entered = false, unlocked = false, pending = false, failed = false, blocked = false, serial = 0, audioContext = null, gain = null;
+  const welcome = document.getElementById('musicWelcome');
+  function showWelcome() {
+    if (!welcome || !welcome.hidden) return;
+    welcome.hidden = false;
+  }
+  function hideWelcome() {
+    if (welcome) welcome.hidden = true;
+  }
   function trackFor(c) {
     if (['home', 'cards', 'card', 'care', 'album'].includes(c.view)) return 'site';
     if (!['chronicle', 'story'].includes(c.view)) return null;
@@ -28,7 +36,7 @@ window.StoryBgm = (() => {
     if (/_he$/.test(c.scene || '') || /_he$/.test(c.ending || '')) return 'stage';
     return ({1: 'daily', 2: 'chapter', 3: 'starlight', 4: 'stage', 5: 'starlight', 6: 'musical'})[c.chapter] || 'daily';
   }
-  function allowed() {return !!key && enabled && context.sound && !document.hidden && !['live_play','training'].includes(context.scene);}
+  function allowed() {return entered && !!key && enabled && context.sound && !document.hidden && !['live_play','training'].includes(context.scene);}
   function persist() {try {localStorage.setItem(storageKey, JSON.stringify({enabled, volume}));} catch {}}
   function level(fade = false) {
     if (gain) {const t = audioContext.currentTime;gain.gain.cancelScheduledValues(t);gain.gain.setValueAtTime(fade ? 0 : gain.gain.value, t);gain.gain.linearRampToValueAtTime(volume, t + (fade ? .8 : .1));}
@@ -61,15 +69,16 @@ window.StoryBgm = (() => {
   function sync(c = context) {
     context = c;const next = trackFor(context);
     if (next !== key) {pause();key = next;failed = false;blocked = false;}
-    if (!allowed()) {pause();paint();return;}
+    if (!entered) {pause();showWelcome();paint();return;}
+    if (!allowed()) {pause();hideWelcome();paint();return;}
     if (pending || failed || blocked) {paint();return;}
     if (loaded !== key) {audio.src = tracks[key].src + '?v=original-128-v2';loaded = key;}
     if (!audio.paused) {level();paint();return;}
     const token = ++serial;pending = true;level(true);paint();
     // Try audible playback on entry; the browser may require a later gesture.
-    audio.play().then(() => {if (token !== serial) return;unlocked = true;pending = false;paint();}).catch(error => {
+    audio.play().then(() => {if (token !== serial) return;unlocked = true;pending = false;hideWelcome();paint();}).catch(error => {
       if (token !== serial) return;pending = false;
-      if (error.name === 'NotAllowedError') blocked = true;else if (error.name !== 'AbortError') failed = true;
+      if (error.name === 'NotAllowedError') {blocked = true;showWelcome();} else if (error.name !== 'AbortError') failed = true;
       paint();
     });
   }
@@ -82,8 +91,14 @@ window.StoryBgm = (() => {
     if (enabled) unlock();persist();sync();
   });
   document.addEventListener('input', event => {if (!event.target.matches('[data-music-volume]')) return;volume = Number(event.target.value) / 100;persist();level();paint();});
+  welcome?.querySelector('[data-music-enter]')?.addEventListener('click', () => {
+    entered = true;blocked = false;failed = false;enabled = true;unlock();persist();sync();
+  });
+  welcome?.querySelector('[data-music-enter-muted]')?.addEventListener('click', () => {
+    entered = true;blocked = false;enabled = false;persist();pause();hideWelcome();paint();
+  });
   // Retry when a browser blocks audible autoplay; preserve the user's mute choice.
-  const gesture = event => {if (!event.isTrusted || event.target.closest('input,textarea,select') || !key || !enabled || !context.sound || document.hidden) return;if (!unlocked || blocked || audioContext?.state === 'suspended') {blocked = false;unlock();sync();}};
+  const gesture = event => {if (!entered || !event.isTrusted || event.target.closest('input,textarea,select') || !key || !enabled || !context.sound || document.hidden) return;if (!unlocked || blocked || audioContext?.state === 'suspended') {blocked = false;unlock();sync();}};
   window.addEventListener('click', gesture);window.addEventListener('keydown', gesture);
   document.addEventListener('visibilitychange', () => {sync();});
   window.addEventListener('pagehide', pause);window.addEventListener('pageshow', () => sync());

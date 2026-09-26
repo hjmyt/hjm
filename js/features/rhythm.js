@@ -4,7 +4,7 @@ const game = { status: 'idle', track: Math.max(0, TRACKS.findIndex(t => t.defaul
 const canvas = $('rhythmCanvas'), ctx = canvas.getContext('2d');
 function gameKey() { return `${TRACKS[game.track].scoreId || TRACKS[game.track].id || game.track}_${game.mode}`; }
 // Chart-relative time is negative during the original recording prelude.
-// Countdown ends before this audible lead-in; notes retain their MIDI timing.
+// Countdown ends before this audible lead-in; notes retain their percussion attack timing.
 function gameLeadIn() { return TRACKS[game.track].leadIn ?? 2.5; }
 function gameCountdownRemaining() { return Math.max(1, Math.ceil(-game.elapsed - gameLeadIn())); }
 function gameTime(now = performance.now()) {
@@ -33,7 +33,7 @@ function updateTrackUI() {
     const t = TRACKS[game.track];
     $('trackName').textContent = t.name;
     $('trackDesc').textContent = t.desc;
-    $('trackKind').textContent = t.audio ? '原曲录音 · 试玩' : '原创合成小曲';
+    $('trackKind').textContent = t.audio ? '原曲录音 · 完整版' : '原创合成小曲';
     $('trackBpm').textContent = `${t[game.mode]} BPM`;
     $('trackDuration').textContent = `约 ${Math.round(game.duration + (t.audioPrelude || 0))} 秒`;
     $('gameTrackLabel').textContent = t.name;

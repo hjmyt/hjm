@@ -834,6 +834,84 @@ body:is([data-view="cards"],[data-view="rhythm"]) .greeting-line {
   width:92px;
   accent-color:var(--pink)
 }
+.music-welcome-backdrop {
+  position:fixed;
+  inset:0;
+  z-index:180;
+  display:grid;
+  place-items:center;
+  padding:24px;
+  background:linear-gradient(145deg,#263958b8,#513b55a8);
+  backdrop-filter:blur(12px);
+  animation:appear .25s ease
+}
+.music-welcome {
+  width:min(640px,100%);
+  max-height:92vh;
+  max-height:92dvh;
+  padding:42px 38px 34px;
+  overflow:auto;
+  position:relative;
+  text-align:center;
+  border:1px solid #fff8;
+  border-radius:30px;
+  background:linear-gradient(155deg,#fffdf9 0%,#f5f7ff 62%,#f9edf2 100%);
+  box-shadow:0 30px 100px #18243f66
+}
+.music-welcome::before,.music-welcome::after {
+  content:'';
+  position:absolute;
+  width:170px;
+  height:170px;
+  border-radius:50%;
+  filter:blur(2px);
+  pointer-events:none
+}
+.music-welcome::before {top:-105px;right:-55px;background:#dce8ff88}
+.music-welcome::after {bottom:-125px;left:-65px;background:#f4ceda80}
+.music-welcome>* {position:relative;z-index:1}
+.music-welcome-art {
+  height:270px;
+  margin:-42px -38px 0;
+  overflow:hidden;
+  background:#332a2c
+}
+.music-welcome-art::after {
+  content:'';
+  position:absolute;
+  inset:auto 0 0;
+  height:70px;
+  background:linear-gradient(transparent,#fffdf9)
+}
+.music-welcome-art img {width:100%;height:100%;object-fit:cover;object-position:center 48%}
+.music-welcome-mark {
+  display:grid;
+  place-items:center;
+  width:62px;
+  height:62px;
+  margin:-34px auto 16px;
+  border-radius:50%;
+  color:#fff;
+  font:32px var(--serif);
+  background:linear-gradient(145deg,#ba7895,#8095bb);
+  box-shadow:0 12px 28px #9c6d8b4d
+}
+.music-welcome h2 {
+  margin:8px 0 12px;
+  color:var(--ink);
+  font-family:var(--serif);
+  font-size:29px;
+  letter-spacing:1px
+}
+.music-welcome p {color:var(--muted);font-size:14px;line-height:1.9}
+.music-welcome-actions {
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  margin:25px 0 15px
+}
+.music-welcome-actions .btn {min-width:132px;justify-content:center}
+.music-welcome small {display:block;color:#9ba6b8;font-size:10px}
 @media(max-width:520px) {
   .story-music {
     gap:10px;
@@ -845,6 +923,12 @@ body:is([data-view="cards"],[data-view="rhythm"]) .greeting-line {
   .story-music label {
     gap:4px
   }
+  .music-welcome-backdrop {padding:18px}
+  .music-welcome {padding:34px 22px 28px;border-radius:24px}
+  .music-welcome-art {height:230px;margin:-34px -22px 0}
+  .music-welcome h2 {font-size:24px}
+  .music-welcome-actions {flex-direction:column}
+  .music-welcome-actions .btn {width:100%}
 }
 .cp-end-overview {
   display:flex;

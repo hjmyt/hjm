@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
                 const Native = window.Audio;
                 window.Audio = function(src) {
                     const audio = new Native(src);
-                    if (src?.includes('op-preview')) window.recording = audio;
+                    if (src?.includes('op-full')) window.recording = audio;
                     return audio;
                 };
             });
@@ -33,11 +33,12 @@ const server = http.createServer((req, res) => {
             assert.equal(await page.locator('#trackSelect').inputValue(), '2', 'OP is selected by default');
             assert.equal(await page.locator('#trackSelect option').first().getAttribute('value'), '2', 'OP is displayed first');
             assert.match(await page.locator('#trackKind').textContent(), /原曲/);
-            assert.equal(await page.evaluate(() => game.notes.length), 62);
+            assert(await page.evaluate(() => game.notes.length > 250));
             const duration = await page.evaluate(() => game.duration);
+            assert(duration > 152 && duration < 153, 'Full song duration');
             await page.locator('[data-mode="normal"]').click();
             assert.equal(await page.evaluate(() => game.duration), duration, 'Difficulty never changes recording speed');
-            assert.equal(await page.evaluate(() => game.notes.length), 121);
+            assert(await page.evaluate(() => game.notes.length > 500 && game.notes.length > TRACKS[2].charts.gentle.length));
             assert(await page.evaluate(() => game.notes.some((n, i, a) => i && n.time-a[i-1].time < .3)), 'Hard chart includes drum subdivisions');
             await page.locator('[data-mode="gentle"]').click();
             await page.locator('#startGame').click();
@@ -110,14 +111,14 @@ const server = http.createServer((req, res) => {
                         if (game.status === 'finished') clearInterval(window.testHits);
                     }, 8);
                 });
-                await page.waitForFunction(() => game.status === 'finished', null, {timeout:35000});
+                await page.waitForFunction(() => game.status === 'finished', null, {timeout:175000});
                 assert(await page.evaluate(() => game.result.accuracy >= 85 && game.result.reward > 0 && recording.paused));
                 const coins = await page.evaluate(() => state.coins);
                 await page.evaluate(() => finishGame());
                 assert.equal(await page.evaluate(() => state.coins), coins, 'End settles once');
-                assert(await page.evaluate(() => state.best['love-hakimi-op-opening-drums-v1_gentle'].score > 0));
+                assert(await page.evaluate(() => state.best['love-hakimi-op-full-drums-v1_gentle'].score > 0));
                 await page.reload();
-                assert(await page.evaluate(() => state.best['love-hakimi-op-opening-drums-v1_gentle'].score > 0));
+                assert(await page.evaluate(() => state.best['love-hakimi-op-full-drums-v1_gentle'].score > 0));
             } else {
                 await page.evaluate(() => {
                     Object.defineProperty(document, 'hidden', {configurable:true,value:true});
@@ -127,11 +128,11 @@ const server = http.createServer((req, res) => {
                 await page.evaluate(() => Object.defineProperty(document,'hidden',{configurable:true,value:false}));
                 await page.locator('#restartGame').click();
                 const before = await page.evaluate(() => state.coins);
-                await page.route('**/love-hakimi-op-preview.mp3*', r => r.abort());
+                await page.route('**/love-hakimi-op-full.mp3*', r => r.abort());
                 await page.locator('#startGame').click();
                 await page.waitForFunction(() => game.status === 'idle');
                 assert.equal(await page.evaluate(() => state.coins), before, 'Failed load grants no payout');
-                await page.unroute('**/love-hakimi-op-preview.mp3*');
+                await page.unroute('**/love-hakimi-op-full.mp3*');
                 await page.locator('#startGame').click();
                 await page.waitForFunction(() => game.status === 'countdown');
                 await page.locator('#restartGame').click();

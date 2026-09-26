@@ -137,7 +137,7 @@ function bindAppEvents() {
     $('rhythmGuide').onclick = () => {
         if (['running', 'countdown'].includes(game.status))
             pauseGame();
-        openModal('第一次合奏，也可以很好听', `<p>猫爪从上方落下，<strong>中心到达底部横线时</strong>，按下对应琴键。</p><div class="help-step">${I('music')}<div><strong>电脑：D / F / J / K</strong><p>分别对应从左到右四条轨道。每个猫爪只需点按一次，不用长按。Esc 可以暂停或继续。</p></div></div><div class="help-step">${I('hand')}<div><strong>手机：点击下方四个琴键</strong><p>也可以点击相应轨道。建议打开声音，听着节拍来按。</p></div></div><p>PERFECT：1000 分；GOOD：700 分；NICE：400 分。漏接为 0 分并中断连击，但不会结束游戏。空按不扣分。</p><p style="margin-top:12px">${ECONOMY_HELP}</p><p>准确率＝实际得分 ÷ 全部音符的满分。S ≥ 95%；A ≥ 85%；B ≥ 70%；C ≥ 45%。达到 C 及以上可解锁合奏回忆。</p><div class="modal-foot">“初见”跟随主要鼓点；“合奏”是困难谱，加入更多清晰的踩镲等分拍。OP 试玩为从原曲 00:00 开始的约 31 秒录音，已按录音中的鼓点分段校准，两档保持原速；其余曲目为约 35—46 秒的合成旋律。先进行 3 秒倒计时；OP 倒计时结束即播放原曲入场音乐，音符随后从顶部下落，到达判定线时击打。</div>`);
+        openModal('第一次合奏，也可以很好听', `<p>猫爪从上方落下，<strong>中心到达底部横线时</strong>，按下对应琴键。</p><div class="help-step">${I('music')}<div><strong>电脑：D / F / J / K</strong><p>分别对应从左到右四条轨道。每个猫爪只需点按一次，不用长按。Esc 可以暂停或继续。</p></div></div><div class="help-step">${I('hand')}<div><strong>手机：点击下方四个琴键</strong><p>也可以点击相应轨道。建议打开声音，听着节拍来按。</p></div></div><p>PERFECT：1000 分；GOOD：700 分；NICE：400 分。漏接为 0 分并中断连击，但不会结束游戏。空按不扣分。</p><p style="margin-top:12px">${ECONOMY_HELP}</p><p>准确率＝实际得分 ÷ 全部音符的满分。S ≥ 95%；A ≥ 85%；B ≥ 70%；C ≥ 45%。达到 C 及以上可解锁合奏回忆。</p><div class="modal-foot">“初见”跟随主要鼓点；“合奏”是困难谱，加入更多清晰的踩镲等分拍。OP 为从原曲 00:00 开始的约 2 分 35 秒完整录音，按各段实际鼓点起音校准，两档保持原速；其余曲目为约 35—46 秒的合成旋律。先进行 3 秒倒计时；OP 倒计时结束即播放原曲入场音乐，音符随后从顶部下落，到达判定线时击打。</div>`);
     };
     $$('[data-lane]').forEach(btn => {
         btn.addEventListener('pointerdown', e => { e.preventDefault(); hitLane(Number(btn.dataset.lane)); });

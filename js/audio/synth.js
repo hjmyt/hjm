@@ -40,7 +40,7 @@ function unlockSynthAudio() {
 }
 function renderAudioStatus() {
     RhythmRecording.syncSound();
-    $('audioStatus').textContent = !state.sound ? '静音中 · 可点右上角开启' : TRACKS[game.track].audio ? '♪ OP 原曲 · 31 秒试玩' : audioUnavailable ? '浏览器不支持合成音频' : audioBlocked ? '音频暂停 · 点击开始或继续重试' : '♪ 原创合成音色';
+    $('audioStatus').textContent = !state.sound ? '静音中 · 可点右上角开启' : TRACKS[game.track].audio ? '♪ OP 原曲 · 完整版' : audioUnavailable ? '浏览器不支持合成音频' : audioBlocked ? '音频暂停 · 点击开始或继续重试' : '♪ 原创合成音色';
 }
 async function ensureAudio() {
     if (audioUnavailable)

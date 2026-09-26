@@ -29,7 +29,7 @@ function cleanState(obj) {
     if (obj.best && typeof obj.best === 'object')
         for (const [k, v] of Object.entries(obj.best)) {
             if (bestKeys.has(k) && v && typeof v === 'object')
-                d.best[k] = { score: number(v.score, 0), accuracy: number(v.accuracy, 0, 0, 100), combo: number(v.combo, 0, 0, 200), rank: ['S', 'A', 'B', 'C', 'D'].includes(v.rank) ? v.rank : 'D' };
+                d.best[k] = { score: number(v.score, 0), accuracy: number(v.accuracy, 0, 0, 100), combo: number(v.combo, 0, 0, 99999), rank: ['S', 'A', 'B', 'C', 'D'].includes(v.rank) ? v.rank : 'D' };
         }
     if (obj.storyProgress && typeof obj.storyProgress === 'object')
         for (const c of CHARACTERS) {
