@@ -12,6 +12,8 @@ const url=pathToFileURL(path.resolve(__dirname,'../index.html')).href;
   const context=await browser.newContext({...devices['iPhone 13']});
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
   await page.addInitScript(modern=>{
+   // Keep music disabled to verify synthesis starts independently of site BGM.
+   localStorage.setItem('hjm-story-bgm-v1',JSON.stringify({enabled:false,volume:.32}));
    window.audioEvents=[];window.synthPeak=0;window.interrupted=false;window.rejectResume=false;
    let type='ambient';
    Object.defineProperty(navigator,'audioSession',{configurable:true,value:modern?{get type(){return type;},set type(v){type=v;audioEvents.push(v);}}:undefined});
@@ -56,6 +58,7 @@ const url=pathToFileURL(path.resolve(__dirname,'../index.html')).href;
   {
    const {page,context}=await fresh();
    await page.locator('.nav-btn[data-route="rhythm"]').tap();
+   await page.locator('#trackSelect').selectOption('0'); // This suite specifically verifies synthesis.
    await page.locator('#startGame').tap();await signal(page);await noStory(page);
    assert.equal(await page.evaluate(()=>audioCtx.state),'running');
    await page.evaluate(async()=>{await audioCtx.suspend();window.interrupted=true;});
@@ -86,7 +89,9 @@ const url=pathToFileURL(path.resolve(__dirname,'../index.html')).href;
   // Older iOS: bridge stays alive for a performance, stops on mute/route exit.
   {
    const {page,context}=await fresh(false);
-   await page.locator('.nav-btn[data-route="rhythm"]').tap();await page.locator('#startGame').tap();await signal(page);await noStory(page);
+   await page.locator('.nav-btn[data-route="rhythm"]').tap();
+   await page.locator('#trackSelect').selectOption('0'); // This suite specifically verifies synthesis.
+   await page.locator('#startGame').tap();await signal(page);await noStory(page);
    assert.equal(await page.evaluate(()=>synthAudioBridge.paused),false);
    await page.locator('#soundBtn').tap();assert.equal(await page.evaluate(()=>synthAudioBridge.paused),true);
    await page.locator('#soundBtn').tap();await page.waitForFunction(()=>!synthAudioBridge.paused);

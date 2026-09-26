@@ -1,12 +1,14 @@
 const http=require('node:http'),fs=require('node:fs');
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),path=require('node:path'),{pathToFileURL}=require('node:url');
-(async()=>{const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});const root=path.resolve(__dirname,'..'),server=http.createServer((req,res)=>{const file=path.join(root,decodeURIComponent(new URL(req.url,'http://localhost').pathname));if(!file.startsWith(root+path.sep)||!fs.existsSync(file)){res.writeHead(404);res.end();return;}const data=fs.readFileSync(file),type=file.endsWith('.mp3')?'audio/mpeg':file.endsWith('.js')?'application/javascript':file.endsWith('.css')?'text/css':file.endsWith('.html')?'text/html':'application/octet-stream';const range=req.headers.range?.match(/bytes=(\d+)-(\d*)/);if(range){const start=+range[1],end=range[2]?Math.min(+range[2],data.length-1):data.length-1;res.writeHead(206,{'Content-Type':type,'Content-Range':`bytes ${start}-${end}/${data.length}`,'Accept-Ranges':'bytes','Content-Length':end-start+1});res.end(data.subarray(start,end+1));}else{res.writeHead(200,{'Content-Type':type,'Content-Length':data.length,'Accept-Ranges':'bytes'});res.end(data);}});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const url=`http://127.0.0.1:${server.address().port}/index.html`;try{
+(async()=>{const browser=await chromium.launch({headless:true,args:['--autoplay-policy=document-user-activation-required'],...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});const root=path.resolve(__dirname,'..'),server=http.createServer((req,res)=>{const file=path.join(root,decodeURIComponent(new URL(req.url,'http://localhost').pathname));if(!file.startsWith(root+path.sep)||!fs.existsSync(file)){res.writeHead(404);res.end();return;}const data=fs.readFileSync(file),type=file.endsWith('.mp3')?'audio/mpeg':file.endsWith('.js')?'application/javascript':file.endsWith('.css')?'text/css':file.endsWith('.html')?'text/html':'application/octet-stream';const range=req.headers.range?.match(/bytes=(\d+)-(\d*)/);if(range){const start=+range[1],end=range[2]?Math.min(+range[2],data.length-1):data.length-1;res.writeHead(206,{'Content-Type':type,'Content-Range':`bytes ${start}-${end}/${data.length}`,'Accept-Ranges':'bytes','Content-Length':end-start+1});res.end(data.subarray(start,end+1));}else{res.writeHead(200,{'Content-Type':type,'Content-Length':data.length,'Accept-Ranges':'bytes'});res.end(data);}});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));const url=`http://127.0.0.1:${server.address().port}/index.html`;try{
  const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.addInitScript(()=>{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;const original=AC.prototype.createMediaElementSource;AC.prototype.createMediaElementSource=function(media){const source=original.call(this,media);window.bgmAnalyser=this.createAnalyser();source.connect(window.bgmAnalyser);return source;};});await page.goto(url);
  const player=()=>page.evaluate(()=>({paused:document.querySelector('#storyBgmAudio').paused,time:document.querySelector('#storyBgmAudio').currentTime,src:document.querySelector('#storyBgmAudio').getAttribute('src')?.split('?')[0] || null,duration:document.querySelector('#storyBgmAudio').duration}));
  const playing=()=>page.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return !a.paused&&a.currentTime>.05;});
- assert.equal((await player()).src,null,'No audio fetched on home');
- await page.evaluate(()=>route('chronicle'));assert.equal((await player()).src,null,'No playback without a gesture');
- await page.locator('#view-chronicle [data-music-toggle]').click();await playing();assert((await player()).src.endsWith('a-little-story.mp3'));assert(Math.abs((await player()).duration-204.460408)<1,'Original full-length MP3 decodes');
+ await page.waitForFunction(()=>document.querySelector('#siteMusicControls [data-music-status]').textContent==='浏览器阻止自动播放，点击开启');
+ assert((await player()).src.endsWith('love-hakimi-strings.mp3'),'Entry attempts the site track automatically');
+ assert((await player()).paused,'Browser policy can block audible autoplay');
+ await page.locator('#siteMusicControls [data-music-toggle]').click();await playing();
+ await page.locator('.nav-btn[data-route="chronicle"]').click();await playing();assert((await player()).src.endsWith('a-little-story.mp3'));assert(Math.abs((await player()).duration-204.460408)<1,'Original full-length MP3 decodes');
  await page.waitForFunction(()=>{if(!window.bgmAnalyser)return true;const a=new Float32Array(bgmAnalyser.fftSize);bgmAnalyser.getFloatTimeDomainData(a);return a.some(v=>Math.abs(v)>.00001);},{},{timeout:5000});
  await page.evaluate(()=>{document.querySelector('#storyBgmAudio').currentTime=25;renderGlobal();renderGlobal();});assert((await player()).time>=25,'Dialogue rendering does not restart track');
  const setScene=async(ch,scene,extra={})=>{await page.evaluate(([ch,scene,extra])=>{closeModal(false);Object.assign(state.chronicle.run,{chapter:ch,ch,scene,...extra});renderGlobal();},[ch,scene,extra]);};
@@ -27,7 +29,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
  await page.evaluate(()=>window.dispatchEvent(new Event('pagehide')));assert((await player()).paused);await page.evaluate(()=>window.dispatchEvent(new Event('pageshow')));await playing();
  // Recover from browser autoplay rejection with the explicit control.
  await page.evaluate(()=>{route('home');window.realPlay=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=()=>Promise.reject(new DOMException('Blocked','NotAllowedError'));route('story');});
- await page.waitForFunction(()=>document.querySelector('#view-story [data-music-status]').textContent==='点击播放配乐');
+ await page.waitForFunction(()=>document.querySelector('#view-story [data-music-status]').textContent==='浏览器阻止自动播放，点击开启');
  await page.evaluate(()=>HTMLMediaElement.prototype.play=window.realPlay);await page.locator('#view-story [data-music-toggle]').click();await playing();
  // A missing/unreadable file is a recoverable UI state, not an unhandled rejection.
  await page.evaluate(()=>{route('home');HTMLMediaElement.prototype.play=()=>Promise.reject(new DOMException('Decode failed','NotSupportedError'));route('story');});
@@ -37,7 +39,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
  await page.evaluate(()=>StoryBgm.sync({view:'chronicle',sound:true,chapter:1,scene:'zhu_offer'}));await playing();assert((await player()).src.endsWith('fish-in-the-pool.mp3'));
  await page.evaluate(()=>StoryBgm.sync({view:'story',sound:true,character:'lala'}));await playing();assert((await player()).src.endsWith('distant-memories.mp3'));
  await page.evaluate(()=>StoryBgm.sync({view:'chronicle',sound:true,chapter:6,scene:'c6_intro'}));await playing();assert((await player()).src.endsWith('re-lie.mp3'),'Musical uses user supplied BGM');
- assert(Math.abs((await player()).duration-205.896)<1,'Original 320 kbps musical MP3 decodes');
+ assert(Math.abs((await player()).duration-207.192)<1,'Current musical MP3 decodes');
  await page.waitForFunction(()=>{const a=new Float32Array(bgmAnalyser.fftSize);bgmAnalyser.getFloatTimeDomainData(a);return a.some(v=>Math.abs(v)>.00001);},{},{timeout:5000});
  await page.evaluate(()=>{document.querySelector('#storyBgmAudio').currentTime=35;StoryBgm.sync({view:'chronicle',sound:true,chapter:6,scene:'c6_warn'});});assert((await player()).time>=35,'Musical dialogue does not restart song');
  await page.evaluate(()=>StoryBgm.sync({view:'chronicle',sound:true,chapter:6,scene:'live_play'}));assert((await player()).paused,'Musical pauses for timed performance');
@@ -47,5 +49,99 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
  await page.evaluate(()=>{route('chronicle');for(const chapter of [1,2,3,4]){Object.assign(state.chronicle.run,{chapter,scene:'menu'});renderGlobal();}});await playing();assert((await player()).src.endsWith('breath-and-life.mp3'));assert.equal(await page.locator('audio').count(),1);
  await page.setViewportSize({width:390,height:844});for(const view of ['story','chronicle']){await page.evaluate(view=>route(view),view);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),view+' mobile overflow');}
  await page.locator('#view-chronicle [data-story-music]').screenshot({path:'/tmp/hjm-story-bgm-mobile.png'});
- assert.deepEqual(errors,[]);console.log('PASS: real MP3 playback, eight tracks, rerender continuity, independent/master mute, persisted volume, scene/route/visibility changes, autoplay/decode recovery, rapid switching and mobile.');
+ // First interaction after reload goes straight into the story. Measure after
+ // the volume gain: a running media clock or pre-gain signal can still be silent.
+ for(const touch of [false,true]){
+  const ctx=await browser.newContext({viewport:touch?{width:390,height:844}:{width:1440,height:1000},hasTouch:touch,isMobile:touch}),direct=await ctx.newPage();
+  direct.on('pageerror',e=>errors.push(e.message));
+  await direct.addInitScript(()=>{
+   const AC=window.AudioContext||window.webkitAudioContext,createGain=AC.prototype.createGain;
+   AC.prototype.createGain=function(...args){
+    const gain=createGain.apply(this,args),connect=gain.connect;
+    gain.connect=function(destination,...rest){
+     const result=connect.call(this,destination,...rest);
+     if(destination===this.context.destination){window.directBgmGain=this;window.directBgmOutput=this.context.createAnalyser();connect.call(this,window.directBgmOutput);}
+     return result;
+    };
+    return gain;
+   };
+  });
+  await direct.goto(url);await direct.reload();
+  await direct.waitForFunction(()=>document.querySelector('#siteMusicControls [data-music-status]').textContent==='浏览器阻止自动播放，点击开启');
+  const nav=direct.locator('.nav-btn[data-route="chronicle"]');
+  if(touch)await nav.tap();else await nav.click();
+  await direct.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return !a.paused&&a.currentSrc.includes('a-little-story.mp3')&&a.currentTime>.1;});
+  await direct.waitForFunction(()=>{if(!window.directBgmOutput)return false;const samples=new Float32Array(directBgmOutput.fftSize);directBgmOutput.getFloatTimeDomainData(samples);return samples.some(v=>Math.abs(v)>.00001);},null,{timeout:5000});
+  assert(await direct.evaluate(()=>directBgmGain.gain.value>0),'First navigation restores audible output gain');
+  await ctx.close();
+ }
+ // Fresh site startup, uninterrupted browsing and actual end-to-start looping.
+ for(const entry of [url,pathToFileURL(path.join(root,'index.html')).href]){
+  const ctx=await browser.newContext({viewport:{width:1440,height:1000}}),site=await ctx.newPage();
+  site.on('pageerror',e=>errors.push(e.message));
+  await site.goto(entry);
+  const status=()=>site.evaluate(()=>{const a=document.querySelector('#storyBgmAudio');return {src:a.getAttribute('src'),paused:a.paused,time:a.currentTime,loop:a.loop,duration:a.duration};});
+  const waitSite=()=>site.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return a.currentSrc.includes('love-hakimi-strings.mp3')&&a.readyState>=2&&!a.paused&&a.currentTime>.05;});
+  await site.waitForFunction(()=>document.querySelector('#siteMusicControls [data-music-status]').textContent==='浏览器阻止自动播放，点击开启');
+  assert((await status()).src.includes('love-hakimi-strings.mp3'),'Fresh entry attempts autoplay');
+  assert((await status()).paused,'Blocked autoplay stays paused');
+  await site.locator('.brand').click();await waitSite();
+  assert.equal((await status()).loop,true,'Whole song loops');
+  assert(Math.abs((await status()).duration-154.8535)<1,'Full string recording decodes');
+  await site.evaluate(()=>document.querySelector('#storyBgmAudio').currentTime=20);
+  for(const view of ['cards','card','care','album','home']){
+   await site.evaluate(view=>route(view),view);await waitSite();
+   assert((await status()).time>=20,view+' keeps the music position');
+   assert(await site.locator('#siteMusicControls').isVisible());
+  }
+  await site.evaluate(()=>{const a=document.querySelector('#storyBgmAudio');a.currentTime=a.duration-.2;});
+  await site.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return !a.paused&&a.currentTime>0&&a.currentTime<2;});
+  await site.locator('#soundBtn').click();assert((await status()).paused);
+  await site.locator('#soundBtn').click();await waitSite();
+  await site.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'));});assert((await status()).paused);
+  await site.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:false});document.dispatchEvent(new Event('visibilitychange'));});await waitSite();
+  await site.evaluate(()=>route('chronicle'));
+  await site.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return !a.paused&&a.currentSrc.includes('a-little-story.mp3')&&a.currentTime>.05;});
+  assert(await site.locator('#siteMusicControls').isHidden());
+  await site.evaluate(()=>StoryBgm.sync({view:'chronicle',chapter:1,scene:'training',sound:true}));assert((await status()).paused,'Training pauses music');
+  await site.evaluate(()=>route('home'));await waitSite();
+  await site.evaluate(()=>route('rhythm'));assert((await status()).paused,'Rhythm stage pauses site music');
+  await site.locator('#startGame').click();assert((await status()).paused,'No background track over the rhythm song');
+  await site.evaluate(()=>route('home'));await waitSite();
+  assert.equal(await site.locator('#storyBgmAudio').count(),1,'One shared BGM player');
+  await site.locator('#siteMusicControls [data-music-volume]').fill('21');
+  await site.locator('#siteMusicControls [data-music-toggle]').click();assert((await status()).paused);
+  await site.reload();await site.locator('.brand').click();assert((await status()).paused,'Music off persists');
+  assert.equal(await site.locator('#siteMusicControls [data-music-volume]').inputValue(),'21');
+  await site.locator('#siteMusicControls [data-music-toggle]').click();await waitSite();
+  for(const width of [320,390,1440]){
+   await site.setViewportSize({width,height:900});
+   assert(await site.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Site control fits '+width);
+  }
+  if(entry===url)await site.locator('#siteMusicControls').screenshot({path:'/tmp/hjm-site-music.png'});
+  await ctx.close();
+ }
+ // A browser that allows autoplay must hear music without any input.
+ const autoBrowser=await chromium.launch({headless:true,args:['--autoplay-policy=no-user-gesture-required'],...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});
+ try{
+  for(const entry of [url,pathToFileURL(path.join(root,'index.html')).href]){
+   const ctx=await autoBrowser.newContext(),auto=await ctx.newPage();
+   auto.on('pageerror',e=>errors.push(e.message));
+   await auto.goto(entry);
+   const autoPlaying=()=>auto.waitForFunction(()=>{const a=document.querySelector('#storyBgmAudio');return !a.paused&&!a.muted&&a.volume>0&&a.currentTime>.1&&a.loop;});
+   await autoPlaying();
+   assert.equal(await auto.locator('#siteMusicControls [data-music-status]').textContent(),'正在播放');
+   await auto.reload();await autoPlaying();
+   // The first control click stops autoplay, rather than merely unlocking it.
+   await auto.locator('#siteMusicControls [data-music-toggle]').click();
+   assert(await auto.evaluate(()=>document.querySelector('#storyBgmAudio').paused));
+   await auto.reload();
+   assert.equal(await auto.locator('#storyBgmAudio').getAttribute('src'),null,'Saved music-off preference prevents autoplay');
+   await auto.locator('#siteMusicControls [data-music-toggle]').click();await autoPlaying();
+   await auto.locator('#soundBtn').click();await auto.reload();
+   assert.equal(await auto.locator('#storyBgmAudio').getAttribute('src'),null,'Saved master mute prevents autoplay');
+   await ctx.close();
+  }
+ }finally{await autoBrowser.close();}
+ assert.deepEqual(errors,[]);console.log('PASS: immediate audible autoplay, blocked-autoplay gesture recovery, site full-track playback and looping over file/HTTP, browsing continuity, original story tracks, independent/master mute, persisted volume, training/rhythm/background pause, recovery and mobile.');
 }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}})().catch(e=>{console.error(e);process.exitCode=1;});

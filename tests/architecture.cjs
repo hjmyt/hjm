@@ -36,7 +36,12 @@ const server = http.createServer((req, res) => {
       const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
       const page = await context.newPage(), errors = [], failures = [], loaded = new Set();
       page.on('pageerror', e => errors.push(e.message));
-      page.on('requestfailed', req => failures.push(req.url()));
+      page.on('requestfailed', req => {
+        // Rapid navigation cancels the new auto-playing BGM; a cancelled media
+        // request is not a missing asset. Actual playback is covered by story-bgm.
+        if (req.resourceType() === 'media' && req.failure()?.errorText === 'net::ERR_ABORTED') return;
+        failures.push(req.url() + ': ' + req.failure()?.errorText);
+      });
       page.on('response', res => {
         if (res.status() >= 400) failures.push(`${res.status()} ${res.url()}`);
         const pathname = new URL(res.url()).pathname;

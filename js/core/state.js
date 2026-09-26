@@ -25,9 +25,10 @@ function cleanState(obj) {
     d.memories = Array.isArray(obj.memories) ? [...new Set(['first', ...obj.memories.filter(x => MEMORIES.some(m => m.id === x))])] : ['first'];
     for (const c of CARD_DEFS)
         d.affinity[c.id] = number(obj.affinity?.[c.id], 0, 0, 99999);
+    const bestKeys = new Set(TRACKS.flatMap((track, index) => [track.id || index, track.scoreId, ...(track.legacyScoreIds || [])].filter(id => id !== undefined).flatMap(id => ['gentle', 'normal'].map(mode => `${id}_${mode}`))));
     if (obj.best && typeof obj.best === 'object')
         for (const [k, v] of Object.entries(obj.best)) {
-            if (/^[01]_(gentle|normal)$/.test(k) && v && typeof v === 'object')
+            if (bestKeys.has(k) && v && typeof v === 'object')
                 d.best[k] = { score: number(v.score, 0), accuracy: number(v.accuracy, 0, 0, 100), combo: number(v.combo, 0, 0, 200), rank: ['S', 'A', 'B', 'C', 'D'].includes(v.rank) ? v.rank : 'D' };
         }
     if (obj.storyProgress && typeof obj.storyProgress === 'object')

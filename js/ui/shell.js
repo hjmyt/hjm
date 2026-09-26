@@ -25,6 +25,10 @@ function renderGlobal() {
 }
 function syncStoryMusic() {
     const r = state.chronicle.run;
+    const siteControls = $('siteMusicControls');
+    siteControls.hidden = ['chronicle', 'story', 'rhythm'].includes(currentView);
+    if (!siteControls.hidden && !siteControls.firstChild)
+        siteControls.innerHTML = window.StoryBgm?.controls() || '';
     if (currentView === 'story' && !$('storyMusicControls').firstChild)
         $('storyMusicControls').innerHTML = window.StoryBgm?.controls() || '';
     const personal=state.chronicle.personal, personalRun=personal?.active?personal.routes[personal.selected]:null;

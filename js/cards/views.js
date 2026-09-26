@@ -23,9 +23,9 @@ function renderHomeCards() {
     }
     else
         feature.setAttribute('aria-label', '当前陪伴角色');
-    $('homeRoster').innerHTML = CARD_DEFS.map(x => `<button class="mini-character ${x.id === 'tang' ? 'is-hidden-edition' : ''} ${x.id === c.id ? 'selected' : ''} ${cardOwned(x.id) ? '' : 'locked'}" data-card-select="${x.id}" aria-label="${cardOwned(x.id) ? '选择' : '查看未拥有卡牌'}：${x.name}"><img src="${ASSETS[x.asset]}" alt="${x.name}" loading="lazy"><span class="mini-rarity">${cardRarity(x)}${x.id === 'tang' ? ' · 隐藏' : ''}</span>${state.cards.team.includes(x.id) ? '<span class="mini-team">编队</span>' : ''}${cardOwned(x.id) ? '' : `<span class="mini-lock">${I('lock')}</span>`}<span class="mini-name">${x.name}<small>${x.role} · ${cardOwned(x.id) ? `Lv.${cardLevel(x.id)}` : chapterLockText(x.id)}</small></span></button>`).join('');
+    $('homeRoster').innerHTML = CARD_DEFS.map(x => `<button class="mini-character ${x.id === 'tang' ? 'is-hidden-edition' : ''} ${x.id === c.id ? 'selected' : ''} ${cardOwned(x.id) ? '' : 'locked'}" data-card-open="${x.id}" aria-label="查看卡牌详情：${x.name}"><img src="${ASSETS[x.asset]}" alt="${x.name}" loading="lazy"><span class="mini-rarity">${cardRarity(x)}${x.id === 'tang' ? ' · 隐藏' : ''}</span>${state.cards.team.includes(x.id) ? '<span class="mini-team">编队</span>' : ''}${cardOwned(x.id) ? '' : `<span class="mini-lock">${I('lock')}</span>`}<span class="mini-name">${x.name}<small>${x.role} · ${cardOwned(x.id) ? `Lv.${cardLevel(x.id)}` : chapterLockText(x.id)}</small></span></button>`).join('');
     const count = CARD_DEFS.filter(c => cardOwned(c.id)).length;
-    $('homeCollectionCount').textContent = `已相遇 ${count} / ${CARD_DEFS.length} · 点击小卡，切换陪伴`;
+    $('homeCollectionCount').textContent = `已相遇 ${count} / ${CARD_DEFS.length} · 点击小卡，查看详情`;
     $('cardEvent').innerHTML = `${I('album')}<span class="home-premiere-copy"><strong>相遇，就在故事推进时</strong><small>剧情提到谁，谁就加入卡册 · 无需等到章节结束</small></span><button class="btn" data-route="chronicle">继续剧情${I('arrow')}</button>`;
 }
 
@@ -34,7 +34,7 @@ function renderRhythmTeam() {
     const run = locked ? game.cardRun : null, ids = run ? run.ids : state.cards.team;
     const plus = economy().daily.rhythm >= 3 ? 0 : Math.min(2, run ? run.passive + (run.prepared?.amount || 0) : teamBonus() + (state.cards.prepared?.amount || 0));
     $('rhythmTeam').classList.toggle('is-solo', !ids.length);
-    $('rhythmTeam').innerHTML = `${ids.length ? `<div class="team-lineup">${teamSlots(ids, false)}</div>` : `<div class="rhythm-solo-mark">${I('music')}</div>`}<div class="rhythm-team-text"><strong>${locked ? '本场阵容已就位' : ids.length ? '和伙伴一起登台' : '先来一场独奏练习'}${ids.length ? `<span class="rhythm-bonus">奖励 +${plus} ♪</span>` : ''}</strong><small>今日已完成 ${economy().daily.rhythm} 场达标演奏。前 3 场：C/B/A/S 奖励 3/4/5/6 音符，编队与技能最多另 +2；之后每场共 1 音符。须完整演奏达到 C（45%），演奏免费。</small></div><button class="btn ghost small" data-route="${availableCardPool().length ? 'cards' : 'chronicle'}">${I(availableCardPool().length ? 'team' : 'album')}${locked ? '查看编队' : availableCardPool().length ? '调整编队' : '去相遇'}</button>`;
+    $('rhythmTeam').innerHTML = `${ids.length ? `<div class="team-lineup">${teamSlots(ids, false)}</div>` : `<div class="rhythm-solo-mark">${I('music')}</div>`}<div class="rhythm-team-text"><strong>${locked ? '本场阵容已就位' : ids.length ? '和伙伴一起登台' : '先来一场独奏练习'}${ids.length ? `<span class="rhythm-bonus">奖励 +${plus} ♪</span>` : ''}</strong><small>今日已完成 ${economy().daily.rhythm} 场达标演奏。前 3 场 · 当前${game.mode === 'normal' ? '困难' : '简单'}谱面：C/B/A/S 奖励 ${rhythmBaseRewards(TRACKS[game.track].id, game.mode).join('/')} 音符，编队与技能最多另 +2；之后每场共 1 音符。须完整演奏达到 C（45%），演奏免费。</small></div><button class="btn ghost small" data-route="${availableCardPool().length ? 'cards' : 'chronicle'}">${I(availableCardPool().length ? 'team' : 'album')}${locked ? '查看编队' : availableCardPool().length ? '调整编队' : '去相遇'}</button>`;
 }
 
 function renderCardGlobals() {

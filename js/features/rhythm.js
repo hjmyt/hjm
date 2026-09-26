@@ -1,11 +1,23 @@
 'use strict';
 
-const game = { status: 'idle', track: 0, mode: 'gentle', notes: [], melodyEvents: [], duration: 45, startAt: 0, elapsed: 0, score: 0, combo: 0, maxCombo: 0, perfect: 0, good: 0, nice: 0, miss: 0, raf: 0, lastUi: 0, flashes: [0, 0, 0, 0], judgement: null, result: null, countdownLabel: null, width: 500, height: 404, startToken: 0 };
+const game = { status: 'idle', track: Math.max(0, TRACKS.findIndex(t => t.default)), mode: 'gentle', notes: [], melodyEvents: [], duration: 45, startAt: 0, elapsed: 0, score: 0, combo: 0, maxCombo: 0, perfect: 0, good: 0, nice: 0, miss: 0, raf: 0, lastUi: 0, flashes: [0, 0, 0, 0], judgement: null, result: null, countdownLabel: null, width: 500, height: 404, startToken: 0 };
 const canvas = $('rhythmCanvas'), ctx = canvas.getContext('2d');
-function gameKey() { return `${game.track}_${game.mode}`; }
+function gameKey() { return `${TRACKS[game.track].scoreId || TRACKS[game.track].id || game.track}_${game.mode}`; }
+// Chart-relative time is negative during the original recording prelude.
+// Countdown ends before this audible lead-in; notes retain their MIDI timing.
+function gameLeadIn() { return TRACKS[game.track].leadIn ?? 2.5; }
+function gameCountdownRemaining() { return Math.max(1, Math.ceil(-game.elapsed - gameLeadIn())); }
+function gameTime(now = performance.now()) {
+    return TRACKS[game.track].audio ? RhythmRecording.time() : (now - game.startAt) / 1000;
+}
 function generateChart() {
     const t = TRACKS[game.track], b = 60 / t[game.mode], ns = [];
     game.melodyEvents = [];
+    if (t.audio) {
+        game.notes = t.charts[game.mode].map(([time, lane]) => ({ time, lane, hit: false, missed: false }));
+        game.duration = t.duration;
+        return;
+    }
     for (let i = 0; i < 64; i++) {
         const pitch = t.melody[i], time = 1 + i * b;
         game.melodyEvents.push({ pitch, time, duration: b * .76 });
@@ -17,10 +29,26 @@ function generateChart() {
     game.notes = ns.sort((a, b) => a.time - b.time);
     game.duration = 64 * b + 2;
 }
-function updateTrackUI() { const t = TRACKS[game.track]; $('trackName').textContent = t.name; $('trackDesc').textContent = t.desc; $('trackBpm').textContent = `${t[game.mode]} BPM`; $('trackDuration').textContent = `约 ${Math.round(game.duration)} 秒`; $('gameTrackLabel').textContent = t.name; $('trackSelect').value = String(game.track); $$('[data-mode]').forEach(b => b.classList.toggle('active', b.dataset.mode === game.mode)); updateBest(); updateGameStats(); }
+function updateTrackUI() {
+    const t = TRACKS[game.track];
+    $('trackName').textContent = t.name;
+    $('trackDesc').textContent = t.desc;
+    $('trackKind').textContent = t.audio ? '原曲录音 · 试玩' : '原创合成小曲';
+    $('trackBpm').textContent = `${t[game.mode]} BPM`;
+    $('trackDuration').textContent = `约 ${Math.round(game.duration + (t.audioPrelude || 0))} 秒`;
+    $('gameTrackLabel').textContent = t.name;
+    $('trackSelect').value = String(game.track);
+    $$('[data-mode]').forEach(b => {
+        b.classList.toggle('active', b.dataset.mode === game.mode);
+        b.textContent = b.dataset.mode === 'gentle' ? '初见 · 简单' : '合奏 · 困难';
+    });
+    updateBest();
+    updateGameStats();
+    renderAudioStatus();
+}
 function updateBest() { const best = state.best[gameKey()]; $('bestScore').textContent = best ? best.score.toLocaleString() : 0; $('bestRank').textContent = best ? `${best.rank} 评级 · ${best.accuracy}% 准确率` : '这首歌，还在等你的第一次演奏'; }
 function formatTime(t) { t = Math.max(0, Math.floor(t)); return `${String(Math.floor(t / 60)).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`; }
-function updateGameStats() { $('gameScore').textContent = String(game.score).padStart(6, '0'); $('gameCombo').textContent = game.combo; $('gameMaxCombo').textContent = game.maxCombo; $('perfectCount').textContent = game.perfect; $('goodCount').textContent = game.good; $('niceCount').textContent = game.nice; $('missCount').textContent = game.miss; $('gameTime').textContent = `${formatTime(game.elapsed)} / ${formatTime(game.duration)}`; }
+function updateGameStats() { $('gameScore').textContent = String(game.score).padStart(6, '0'); $('gameCombo').textContent = game.combo; $('gameMaxCombo').textContent = game.maxCombo; $('perfectCount').textContent = game.perfect; $('goodCount').textContent = game.good; $('niceCount').textContent = game.nice; $('missCount').textContent = game.miss; $('gameTime').textContent = `${formatTime(game.elapsed + (TRACKS[game.track].audioPrelude || 0))} / ${formatTime(game.duration + (TRACKS[game.track].audioPrelude || 0))}`; }
 function syncGameControls() { const active = ['starting', 'countdown', 'running', 'paused'].includes(game.status); $('trackSelect').disabled = active; $$('[data-mode]').forEach(b => b.disabled = active); $('record').classList.toggle('playing', ['running', 'countdown'].includes(game.status)); $('pauseGame').disabled = !['running', 'countdown', 'paused'].includes(game.status); $('pauseGame').innerHTML = I(game.status === 'paused' ? 'play' : 'pause'); $('pauseGame').setAttribute('aria-label', game.status === 'paused' ? '继续演奏' : '暂停演奏'); const labels = { starting: '正在准备…', countdown: '暂停演奏', running: '暂停演奏', paused: '继续演奏', finished: '再演一遍', idle: '开始演奏' }; $('startGame').innerHTML = I(['running', 'countdown'].includes(game.status) ? 'pause' : 'play') + labels[game.status]; $('startGame').disabled = game.status === 'starting'; }
 function renderGameOverlay() {
     const e = $('gameOverlay');
@@ -39,7 +67,7 @@ function renderGameOverlay() {
     else if (game.status === 'countdown') {
         e.style.background = '#f0e8f135';
         e.style.backdropFilter = 'blur(1px)';
-        const n = Math.max(1, Math.ceil(-game.elapsed));
+        const n = gameCountdownRemaining();
         e.innerHTML = `<div class="countdown-num">${n}</div><p>把手放在 D · F · J · K 上</p>`;
         game.countdownLabel = n;
     }
@@ -48,7 +76,7 @@ function renderGameOverlay() {
     }
     else if (game.status === 'finished') {
         const r = game.result;
-        e.innerHTML = `<div class="eyebrow">OUR LITTLE ENCORE</div><h3 class="result-rank">${r.rank}</h3><h3 style="font-size:18px;margin-top:8px">${r.accuracy >= 85 ? '这一次，我们很有默契。' : r.accuracy >= 45 ? '你认真演奏的样子，很好看。' : '每一首合奏，都从第一拍开始。'}</h3><div class="result-stats"><div><strong>${game.score}</strong><span>本次得分</span></div><div><strong>${r.accuracy}%</strong><span>准确率</span></div><div><strong>${game.maxCombo}</strong><span>最高连击</span></div></div><p style="margin:0 0 17px">${r.reward ? `收获 ${r.reward} 音符 · ${r.newBest ? '刷新个人最佳！' : '谢谢你的认真演奏。'}` : '完整演奏达到 C（45%）即可获得音符，试试慢速再来一次。'}</p>${r.cardBonus ? `<p class="result-extra">其中编队加成 +${r.cardBonus} ♪ · 成员经验与羁绊分已同步</p>` : ''}${game.cardRun?.trioReport ? '<p class="result-extra">' + escapeHTML(game.cardRun.trioReport) + '</p>' : ''}${game.cardRun?.sourceReport ? `<p class="result-extra">${escapeHTML(game.cardRun.sourceReport)}</p>` : ''}${game.cardRun?.lalaReport ? `<p class="result-extra">${escapeHTML(game.cardRun.lalaReport)}</p>` : ''}${game.cardRun?.ids.includes('azhe') && game.cardRun?.credited ? '<button class="btn secondary small" data-azhe-applause style="margin-bottom:8px">为阿喆送上掌声 · 华彩安可</button>' : ''}<div class="result-buttons"><button class="btn primary small" data-game="start">${I('repeat')}再演一遍</button><button class="btn secondary small" data-route="home">回排练室</button></div>`;
+        e.innerHTML = `<div class="eyebrow">OUR LITTLE ENCORE</div><h3 class="result-rank">${r.rank}</h3><h3 style="font-size:18px;margin-top:8px">${r.accuracy >= 85 ? '这一次，我们很有默契。' : r.accuracy >= 45 ? '你认真演奏的样子，很好看。' : '每一首合奏，都从第一拍开始。'}</h3><div class="result-stats"><div><strong>${game.score}</strong><span>本次得分</span></div><div><strong>${r.accuracy}%</strong><span>准确率</span></div><div><strong>${game.maxCombo}</strong><span>最高连击</span></div></div><p style="margin:0 0 17px">${r.reward ? `收获 ${r.reward} 音符 · ${r.newBest ? '刷新个人最佳！' : '谢谢你的认真演奏。'}` : '完整演奏达到 C（45%）即可获得音符，试试简单模式再来一次。'}</p>${r.cardBonus ? `<p class="result-extra">其中编队加成 +${r.cardBonus} ♪ · 成员经验与羁绊分已同步</p>` : ''}${game.cardRun?.trioReport ? '<p class="result-extra">' + escapeHTML(game.cardRun.trioReport) + '</p>' : ''}${game.cardRun?.sourceReport ? `<p class="result-extra">${escapeHTML(game.cardRun.sourceReport)}</p>` : ''}${game.cardRun?.lalaReport ? `<p class="result-extra">${escapeHTML(game.cardRun.lalaReport)}</p>` : ''}${game.cardRun?.ids.includes('azhe') && game.cardRun?.credited ? '<button class="btn secondary small" data-azhe-applause style="margin-bottom:8px">为阿喆送上掌声 · 华彩安可</button>' : ''}<div class="result-buttons"><button class="btn primary small" data-game="start">${I('repeat')}再演一遍</button><button class="btn secondary small" data-route="home">回排练室</button></div>`;
     }
     if (game.status !== 'countdown') {
         e.style.background = '';
@@ -56,6 +84,8 @@ function renderGameOverlay() {
     }
 }
 function scheduleSong() {
+    if (TRACKS[game.track].audio)
+        return;
     if (!audioCtx)
         return;
     stopSongAudio(true);
@@ -75,9 +105,9 @@ function scheduleSong() {
         }
     });
     // Soft count-in clicks only for the countdown that has not yet elapsed.
-    for (const d of [-2, -1, 0])
+    for (const d of [-2, -1, 0].map(t => t - gameLeadIn()))
         if (origin + d >= now + .005)
-            toneAt(d === 0 ? 84 : 79, origin + d, .06, .08, 'song', 'sine');
+            toneAt(d === -gameLeadIn() ? 84 : 79, origin + d, .06, .08, 'song', 'sine');
 }
 async function startGame() {
     if (game.status === 'starting')
@@ -103,8 +133,22 @@ async function startGame() {
         renderGameOverlay();
         return;
     }
+    if (TRACKS[game.track].audio) {
+        try {
+            await RhythmRecording.start(TRACKS[game.track]);
+        } catch {
+            if (token === game.startToken) {
+                game.status = 'idle';
+                renderGameOverlay();
+                toast('歌曲未能播放，请检查音频后点开始重试。');
+            }
+            return;
+        }
+        if (token !== game.startToken) return;
+    }
     generateChart();
-    Object.assign(game, { elapsed: -3, score: 0, combo: 0, maxCombo: 0, perfect: 0, good: 0, nice: 0, miss: 0, flashes: [0, 0, 0, 0], judgement: null, result: null, status: 'countdown', startAt: performance.now() + 3000, countdownLabel: 3 });
+    const preparation = (TRACKS[game.track].countIn ?? 3) + gameLeadIn();
+    Object.assign(game, { elapsed: -preparation, score: 0, combo: 0, maxCombo: 0, perfect: 0, good: 0, nice: 0, miss: 0, flashes: [0, 0, 0, 0], judgement: null, result: null, status: 'countdown', startAt: performance.now() + preparation * 1000, countdownLabel: 3 });
     game.cardRun = captureCardRun();
     renderRhythmTeam();
     if (audioMaster)
@@ -121,7 +165,7 @@ async function startGame() {
 function pauseGame() {
     if (!['running', 'countdown'].includes(game.status))
         return;
-    game.elapsed = (performance.now() - game.startAt) / 1000;
+    game.elapsed = gameTime();
     game.status = 'paused';
     stopSongAudio();
     renderGameOverlay();
@@ -135,8 +179,18 @@ async function resumeGame() {
         return;
     if (!a && state.sound && !audioUnavailable)
         return;
+    if (TRACKS[game.track].audio) {
+        try {
+            await RhythmRecording.resume();
+        } catch {
+            if (token === game.startToken)
+                toast('歌曲暂未恢复，请再点一次继续，或从头再来。');
+            return;
+        }
+        if (token !== game.startToken || game.status !== 'paused') return;
+    }
     game.startAt = performance.now() - game.elapsed * 1000;
-    game.status = game.elapsed < 0 ? 'countdown' : 'running';
+    game.status = game.elapsed < -gameLeadIn() ? 'countdown' : 'running';
     scheduleSong();
     renderGameOverlay();
     ensureGameLoop();
@@ -148,6 +202,7 @@ async function resumeGame() {
 function stopGame(reset = false) {
     game.startToken++;
     stopSongAudio();
+    RhythmRecording.reset();
     game.status = 'idle';
     game.elapsed = 0;
     game.cardRun = null;
@@ -174,7 +229,7 @@ function finishGame() {
     game.status = 'finished';
     stopSongAudio();
     const hits = game.perfect + game.good + game.nice - (game.cardRun?.sourceSnapshot?.assists || 0), raw = game.notes.length ? game.score / (game.notes.length * 1000) * 100 : 0, accuracy = Math.round(raw), rank = raw >= 95 ? 'S' : raw >= 85 ? 'A' : raw >= 70 ? 'B' : raw >= 45 ? 'C' : 'D';
-    const qualified = complete && hits > 0 && raw >= 45, payout = qualified ? rhythmPayout(raw) : { base: 0, bonus: false };
+    const qualified = complete && hits > 0 && raw >= 45, payout = qualified ? rhythmPayout(raw, TRACKS[game.track].id, game.mode) : { base: 0, bonus: false };
     game.coinBonusEligible = qualified && payout.bonus;
     const previous = state.best[gameKey()], newBest = complete && hits > 0 && game.score > (previous?.score || 0);
     if (newBest)
@@ -202,7 +257,7 @@ function hitLane(lane) {
     setTimeout(() => btn?.classList.remove('pressed'), 120);
     if (game.status !== 'running')
         return;
-    const time = (now - game.startAt) / 1000, windowSize = game.mode === 'gentle' ? .24 : .19;
+    const time = gameTime(now), windowSize = game.mode === 'gentle' ? .24 : .19;
     let nearest = null, dist = Infinity;
     for (const note of game.notes) {
         if (note.lane !== lane || note.hit || note.missed)
@@ -317,10 +372,8 @@ function drawGame(now) {
         ctx.textAlign = 'center';
         ctx.fillText(['D', 'F', 'J', 'K'][i], (i + .5) * laneW, h - 14);
     }
-    const time = game.status === 'idle' ? 0 : game.elapsed;
-    let visible = game.notes;
-    if (game.status === 'idle')
-        visible = [{ time: .6, lane: 1 }, { time: 1.1, lane: 3 }, { time: 1.55, lane: 0 }, { time: 2.05, lane: 2 }];
+    const time = game.elapsed;
+    const visible = game.status === 'running' || (game.status === 'paused' && time >= -gameLeadIn()) ? game.notes : [];
     visible.forEach(n => {
         if (n.hit || n.missed)
             return;
@@ -365,13 +418,13 @@ function gameFrame(now) {
     if (currentView !== 'rhythm')
         return;
     if (['running', 'countdown'].includes(game.status)) {
-        game.elapsed = (now - game.startAt) / 1000;
+        game.elapsed = gameTime(now);
         if (game.status === 'countdown') {
-            if (game.elapsed >= 0) {
+            if (game.elapsed >= -gameLeadIn()) {
                 game.status = 'running';
                 renderGameOverlay();
             }
-            else if (Math.ceil(-game.elapsed) !== game.countdownLabel)
+            else if (gameCountdownRemaining() !== game.countdownLabel)
                 renderGameOverlay();
         }
         if (game.status === 'running') {

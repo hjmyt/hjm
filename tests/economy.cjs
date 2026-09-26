@@ -4,7 +4,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
  const checks=await page.evaluate(async()=>{
   const out=[],check=(n,b)=>{if(!b)throw Error(n);out.push(n);};
   const click=async sel=>{await new Promise(r=>setTimeout(r,220));const b=document.querySelector(sel);if(!b||b.disabled)throw Error('Unavailable '+sel);b.click();};
-  const reset=()=>{closeModal(false);state=freshState();state.sound=false;save();};
+  const reset=()=>{closeModal(false);game.track=0;game.mode='gentle';state=freshState();state.sound=false;save();};
   const scene=(ch,id)=>{state.chronicle.completedChapters=[1,2,3,4,5];Object.assign(state.chronicle.run,{chapter:ch,ch,name:'经济测试',inst:'长笛',scene:id,ending:null});state.chronicle.run.rev++;save();route('chronicle');};
   const pick=n=>click('[data-cp-choice="'+n+'"]');
   const reload=()=>{state=cleanState(JSON.parse(JSON.stringify(state)));save();};
