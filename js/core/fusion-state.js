@@ -30,12 +30,20 @@ function cleanFusion(raw) {
             for (const [name, count] of Object.entries(source.chats))
                 if (typeof name === 'string' && Number.isFinite(Number(count)))
                     run.chats[name.slice(0, 12)] = clamp(Math.floor(Number(count)), 0, 99);
+        // “REK” was the temporary label for A-Qi in chapter two's contacts.
+        // Preserve existing chat progress after correcting the displayed name.
+        if (key === 'ep2' && run.chats.REK) {
+            run.chats['阿齐'] = clamp((run.chats['阿齐'] || 0) + run.chats.REK, 0, 99);
+            delete run.chats.REK;
+        }
         run.chatTotal = Number.isFinite(Number(source.chatTotal)) ? clamp(Math.floor(Number(source.chatTotal)), 0, 999) : 0;
         if (source.seen && typeof source.seen === 'object')
             for (const [name, count] of Object.entries(source.seen))
                 if (typeof name === 'string' && Number.isFinite(Number(count)))
                     run.seen[name.slice(0, 12)] = clamp(Math.floor(Number(count)), 0, 99);
         run.lastChat = typeof source.lastChat === 'string' ? source.lastChat.slice(0, 12) : null;
+        if (key === 'ep2' && run.lastChat === 'REK')
+            run.lastChat = '阿齐';
         run.poolStage = ['story', 'pre', 'post'].includes(source.poolStage) ? source.poolStage : null;
     }
     clean.chapter = ['rl', 'ep2', 'fm'].includes(raw.chapter) ? raw.chapter : null;

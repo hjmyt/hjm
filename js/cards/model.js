@@ -21,7 +21,7 @@ function compareCollection(a, b, mode = 'rarity') {
     return diff || COLLECTION_ORDER.indexOf(a.id) - COLLECTION_ORDER.indexOf(b.id);
 }
 // ---- Card collection, affection, recruiting, and real rhythm reward integration ----
-const CardUI = { filter: '全部', sort: 'chapter', tab: 'detail', gift: null, response: null, detailId: null, returnTo: 'cards' };
+const CardUI = { filter: '全部', sort: 'chapter', tab: 'detail', gift: null, response: null, detailId: null, returnTo: 'cards', jerryPair: 'dijie' };
 const cardDef = id => CARD_DEFS.find(c => c.id === id);
 // Full-body art, card covers, and small avatars have different safe areas.
 // Dedicated crops take precedence so responsive containers cannot cut off a face.

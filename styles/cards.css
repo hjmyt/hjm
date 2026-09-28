@@ -1183,6 +1183,10 @@ body {
   background:#fbf1db;
   color:#b39554
 }
+.skill-tag.pairing {
+  background:#fff2d8;
+  color:#d59424
+}
 .skill-item p {
   font-size:11px;
   color:#8a9ab2;
@@ -1199,6 +1203,30 @@ body {
   display:flex;
   gap:8px;
   flex-wrap:wrap
+}
+.jerry-pair-options {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  margin-top:12px
+}
+.jerry-pair-options button {
+  min-height:38px;
+  border:1px solid #e2e8f3;
+  border-radius:10px;
+  background:#fff;
+  color:#7185a6;
+  font:inherit;
+  cursor:pointer
+}
+.jerry-pair-options button.active {
+  border-color:#ff9800;
+  background:#ff9800;
+  color:#fff
+}
+.skill-item .jerry-pair-copy {
+  margin-top:10px;
+  color:#667895
 }
 .skill-heading .skill-state {
   margin-left:auto;

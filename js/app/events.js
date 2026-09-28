@@ -235,6 +235,11 @@ function bindAppEvents() {
                 requestAnimationFrame(() => document.querySelector('.profile-tabs')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
             return;
         }
+        if (d.jerryPair) {
+            CardUI.jerryPair = d.jerryPair === 'lala' ? 'lala' : 'dijie';
+            renderCardPage();
+            return;
+        }
         if (d.cardBack !== undefined)
             return route(CardUI.returnTo);
         if (d.cardGift)
