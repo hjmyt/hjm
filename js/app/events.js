@@ -287,6 +287,10 @@ function bindAppEvents() {
             return fusionChat(d.fusionChat);
         if (d.fusionNextMain !== undefined)
             return continueFusionMain();
+        if (d.fusionCpLater !== undefined)
+            return closeModal();
+        if (d.fusionCpEnter !== undefined)
+            return Chronicle.enterFusionCp();
         if (d.fusionPoolEnd !== undefined)
             return finishFusionPool();
         if (d.fusionRestart)

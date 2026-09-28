@@ -30,6 +30,11 @@ const assert=require('node:assert/strict');
   }
   for(const route of Object.values(PERSONAL_ROUTES))for(const n of route.nodes){const turns=[];for(const l of n.lines){if(turns.at(-1)?.who===l.who)turns.at(-1).text+=' '+l.text;else turns.push({...l});}check('Every personal dialogue page has dedicated art '+route.id+':'+n.id,n.pageArt.length===Math.ceil(turns.length/2)&&n.pageArt.every(a=>a.asset&&a.memory));}
   setup(100,false);check('Chapter seven disabled before six',document.querySelector('[data-cp-action="personal-picker"]').disabled);
+  Chronicle.unlockFusionCp();check('Fusion choice unlocks only the CP chapter-seven entry before chapter six',P().storyUnlocks.baoshi_feihong&& !document.querySelector('[data-cp-action="personal-picker"]').disabled);
+  reload();check('Fusion CP unlock survives save cleaning before chapter six',P().storyUnlocks.baoshi_feihong===true);
+  await action('picker');check('Early fusion unlock enables CP route but keeps regular personal routes locked',!document.querySelector('[data-cp-person="baoshi_feihong"]').disabled&&document.querySelector('[data-cp-person="azhe"]').disabled&&$('modalContent').textContent.includes('融合线关键聊天已解锁'));closeModal(false);
+  Chronicle.enterFusionCp();check('Fusion CP unlock enters the actual CP opening without chapter six',P().active&&P().selected==='baoshi_feihong'&&S().scene==='cp_00');
+  setup(100,false);
   await forged('personal-select',{cpPerson:'azhe'});check('Direct entry blocked before six',!P().active);
   setup(35);await action('picker');check('35 boundary stays locked',document.querySelector('[data-cp-person="azhe"]').disabled);
   await forged('personal-select',{cpPerson:'azhe'});check('Execution rechecks 35',!P().active);closeModal(false);

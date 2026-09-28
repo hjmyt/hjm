@@ -106,6 +106,19 @@ const { pathToFileURL } = require('node:url');
         const node = routeLines.find(item => item.id === id), line = node.lines.find(item => item.text.startsWith(prefix));
         check(`Reviewed paragraph belongs to ${speaker}: ${id} / ${prefix}`, fusionLineTurns(node, line)[0].who === speaker);
       }
+      const reviewedNarration = [
+        ['f2_m1', '大羊秒回一段四十六秒'],
+        ['f2_dj3', '「这竹笛可以啊'],
+        ['f2_fusenight', '队长摘下耳机'],
+        ['f2_aq2', '「九点了，我要回东莞了」已经成为'],
+        ['f2_slap', '演出那天，阿齐的 slap 段落']
+      ];
+      for (const [id, prefix] of reviewedNarration) {
+        const node = routeLines.find(item => item.id === id), line = node.lines.find(item => item.text.startsWith(prefix));
+        check(`Anonymous or multi-speaker paragraph stays with narration: ${id} / ${prefix}`, fusionLineTurns(node, line)[0].who === '旁白');
+      }
+      const dayangReply = fusionNode('fm', 'f2_rocknight').lines.find(line => line.text.startsWith('「你是不敢承认'));
+      check('Jerry keeps the unlabelled follow-up line in Dayang hidden memory', fusionLineTurns(fusionNode('fm', 'f2_rocknight'), dayangReply)[0].who === 'Jerry');
       const routeIds = new Set(routeLines.map(node => node.id));
       const routeSentinels = new Set(['NEXT','POOL','PREPOOL','POSTPOOL','RESULT','LLJUDGE','f2_mX','m_result']);
       check('Every fusion branch resolves to a node or route action', routeLines.every(node => node.choices.every(choice => !choice.next || routeIds.has(choice.next) || routeSentinels.has(choice.next))));
@@ -172,6 +185,17 @@ const { pathToFileURL } = require('node:url');
         f2_ldp2b: 'f2_ldp2b-v2.jpg', f2_ldp3: 'f2_ldp3-v2.jpg', f2_ldp3a: 'f2_ldp3a-v2.jpg', f2_ldnight: 'f2_ldnight-v2.jpg'
       };
       check('Every Old Du story illustration points to the regenerated identity pass', Object.entries(oldDuArtFiles).every(([id, file]) => ASSETS[fusionSceneArt(Object.entries(FUSION_ROUTES).find(([, nodes]) => nodes.some(node => node.id === id))[0], id).asset].endsWith('/' + file)));
+      const hiddenMemoryDetails = {
+        f2_ldnight: ['管乐之夜', 'Autumn Leaves'],
+        f2_rocknight: ['摇滚佬也有春天', 'chewing gum'],
+        f2_fusenight: ['融合第一曲', '竹笛 feat.'],
+        f2_slap: ['slap 全场', '加个班'],
+        f2_bsstop: ['欲言又止的宝石', '愿闻其详']
+      };
+      for (const [id, phrases] of Object.entries(hiddenMemoryDetails)) {
+        const memory = MEMORIES.find(item => item.id === fusionSceneArt('fm', id).id);
+        check(`Hidden memory has detailed rule and description: ${id}`, memory.rule.includes('第三篇') && phrases.every(phrase => memory.title.includes(phrase) || memory.text.includes(phrase)) && memory.text.length > 80);
+      }
       state.fusion.chapter = 'rl'; showFusionNode('rl', 'fs_07');
       check('Shiyuan help scene keeps Shiyuan and Jerry as its visual focus', document.querySelector('.cp-novel-art img')?.src.includes('/fs_07-v2.jpg'));
       while (state.fusion.runs.rl.page < 1) continueFusionPage();
@@ -192,6 +216,13 @@ const { pathToFileURL } = require('node:url');
       check('Baoshi listening branch uses its own plot-specific illustration', document.querySelector('.cp-novel-art img')?.src.includes('/f2_cpgo-v2.jpg'));
       state.fusion.runs.fm.poolStage = 'pre'; while (document.querySelector('[data-fusion-page-next]')) continueFusionPage(); chooseFusion(0);
       check('Baoshi listening branch returns to the active chat pool', state.fusion.runs.fm.flags.poolHub && state.fusion.runs.fm.poolStage === 'pre');
+      check('Baoshi listening branch naturally unlocks the CP route and shows both jump choices', state.chronicle.personal.storyUnlocks.baoshi_feihong && !$('modalBackdrop').hidden && $('modalTitle').textContent.includes('宝石×飞鸿 CP 线已解锁') && !!document.querySelector('[data-fusion-cp-enter]') && !!document.querySelector('[data-fusion-cp-later]'));
+      Chronicle.enterFusionCp();
+      check('Fusion unlock prompt jumps directly into Baoshi and Feihong CP route', currentView === 'chronicle' && state.chronicle.personal.active && state.chronicle.personal.selected === 'baoshi_feihong' && state.chronicle.personal.routes.baoshi_feihong.scene === 'cp_00');
+      state.chronicle.personal.active = false;
+      state.fusion.chapter = 'fm';
+      route('fusion');
+      openFusionPool('pre');
       const chatGrid = document.querySelector('.fusion-chat-grid');
       const poolAction = document.querySelector('.fusion-pool-actions');
       const gridRect = chatGrid.getBoundingClientRect(), actionRect = poolAction.getBoundingClientRect();
@@ -202,6 +233,34 @@ const { pathToFileURL } = require('node:url');
       state.fusion.runs.fm.poolStage = 'post';
       fusionPoolChat('十元');
       check('Shiyuan post-show message renders crying and milk-tea emoji', document.querySelector('.fusion-message')?.textContent.includes('😭😭😭') && document.querySelector('.fusion-message')?.textContent.includes('🧋'));
+
+      const hiddenChatRoutes = {
+        '老杜': ['f2_ldp1', 'f2_ldp2', 'f2_ldp3', 'f2_ldnight'],
+        '大羊': ['f2_dy1', 'f2_dy2', 'f2_dy3', 'f2_rocknight'],
+        '笛杰': ['f2_dj1', 'f2_dj2', 'f2_dj3', 'f2_fusenight'],
+        '阿齐': ['f2_aq1', 'f2_aq2', 'f2_aq3', 'f2_slap']
+      };
+      for (const [name, ids] of Object.entries(hiddenChatRoutes)) {
+        state.fusion.runs.fm = freshFusionRun();
+        state.fusion.chapter = 'fm';
+        ids.forEach((id, index) => {
+          state.fusion.runs.fm.poolStage = index < 2 ? 'story' : index === 2 ? 'pre' : 'post';
+          fusionPoolChat(name);
+          check(`${name} chat ${index + 1} reaches ${id} across pool stages`, state.fusion.runs.fm.current === id && state.fusion.runs.fm.seen[name] === index + 1 && state.fusion.runs.fm.chats[name] === index + 1);
+        });
+        const memory = fusionSceneArt('fm', ids[3]).id;
+        check(`${name} fourth chat collects the hidden memory`, state.memories.includes(memory));
+      }
+      state.fusion.runs.fm = freshFusionRun();
+      state.fusion.chapter = 'fm';
+      ['story', 'pre', 'post'].forEach((stage, index) => {
+        state.fusion.runs.fm.poolStage = stage;
+        fusionPoolChat('宝石');
+        check(`Baoshi chat ${index + 1} reaches ${FUSION_FM_POOL_LINES['宝石'][index]}`, state.fusion.runs.fm.current === FUSION_FM_POOL_LINES['宝石'][index]);
+      });
+      while (document.querySelector('[data-fusion-page-next]')) continueFusionPage();
+      chooseFusion(1);
+      check('Baoshi third chat consolation branch reaches and collects the withheld-memory scene', state.fusion.runs.fm.current === 'f2_bsstop' && state.memories.includes(fusionSceneArt('fm', 'f2_bsstop').id));
 
       const pick = index => { while (document.querySelector('[data-fusion-page-next]')) continueFusionPage(); chooseFusion(index); };
       state.fusion.runs.fm = freshFusionRun(); state.fusion.chapter = 'fm'; showFusionNode('fm', 'm_ice');

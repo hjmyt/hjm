@@ -64,7 +64,7 @@ const FUSION_LINE_SPEAKER_OVERRIDES = {
     fs_yr2: [['悦柔见你过来', '悦柔']],
     fs_05: [['排练第一轮结束', '垃垃']],
     fs_07: [['十元抬起头', '十元']],
-    f2_m1: [['你花了一个星期', 'Jerry']],
+    f2_m1: [['大羊秒回一段四十六秒', '旁白'], ['你花了一个星期', 'Jerry']],
     f2_llclose: [['第二天的排练照常进行', '垃垃']],
     f2_ll1: [['垃垃回得很快', '垃垃']],
     f2_ll3: [['面试完弦乐手', '垃垃']],
@@ -78,6 +78,11 @@ const FUSION_LINE_SPEAKER_OVERRIDES = {
     m_perfect: [['最后一首歌，十元', '十元']],
     f2_ldp1: [['第一次课后，老杜', '老杜']],
     f2_ldnight: [['第三次聊完的周末，老杜', '老杜']],
+    f2_rocknight: [['「你是不敢承认', 'Jerry']],
+    f2_dj3: [['「这竹笛可以啊', '旁白']],
+    f2_fusenight: [['队长摘下耳机', '旁白']],
+    f2_aq2: [['「九点了，我要回东莞了」已经成为', '旁白']],
+    f2_slap: [['演出那天，阿齐的 slap 段落', '旁白']],
     f2_bs1: [['宝石跟你聊天', '宝石']],
     f2_bs2: [['宝石开始绕圈', '宝石']],
     f2_cpgo: [['宝石抬起头', '宝石']],
@@ -418,10 +423,15 @@ function chooseFusion(index) {
     if (choice.next)
         return showFusionNode(key, choice.next);
     if (key === 'fm' && node.id === 'f2_cpgo')
-        return openFusionPool(run.poolStage || 'pre');
+        return unlockFusionCpRoute();
     if (key === 'ep2')
         return openFusionChats();
     nextFusionMain(key);
+}
+function unlockFusionCpRoute() {
+    const first = Chronicle.unlockFusionCp();
+    openFusionPool(fusionRun('fm').poolStage || 'pre');
+    openModal(first ? '宝石×飞鸿 CP 线已解锁' : '宝石×飞鸿 CP 线', `<p>${first ? '你认真听完了宝石没说完的话，这条故事线已经正式开启。' : '这条故事线已经开启，可以随时继续。'}</p><p style="margin-top:12px">融合主线进度已经保存。现在可以退出本篇，直接进入宝石×飞鸿 CP 篇章；也可以稍后从「乐团正传 → 第七章」进入。</p><div class="settings-actions"><button class="btn secondary" data-fusion-cp-later>留在融合主线</button><button class="btn primary" data-fusion-cp-enter>进入 CP 篇章 ${I('arrow')}</button></div>`);
 }
 function continueFusionPage() {
     const key = state.fusion.chapter, run = fusionRun(key), node = fusionNode(key, run.current);
@@ -500,8 +510,10 @@ function fusionPoolChat(name) {
     run.chatTotal++;
     run.lastChat = name;
     const seen = run.seen[name] || 0;
-    const limit = run.poolStage === 'story' ? 2 : run.poolStage === 'pre' ? lines.length : 0;
-    if (seen < Math.min(limit, lines.length)) {
+    // A musician's chat chain is cumulative throughout the third chapter.
+    // The surrounding pool stage only changes the scene label; it must not
+    // strand later events behind an artificial rehearsal/pre-show boundary.
+    if (seen < lines.length) {
         run.seen[name] = seen + 1;
         save();
         return showFusionNode('fm', lines[seen]);

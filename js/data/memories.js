@@ -554,6 +554,6 @@ const MEMORIES = [
   })),
   ...FUSION_ART.map(a => ({
     id: a.id, title: a.title, sub: `融合线 · ${a.location}`, asset: a.asset,
-    rule: '在融合线读到对应场景', text: a.text
+    rule: a.rule || '在融合线读到对应场景', text: a.text
   }))
 ];

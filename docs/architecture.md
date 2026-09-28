@@ -81,7 +81,7 @@ JS 中的图片和音频路径仍相对于页面根目录。CSS 的 `url()` 相�
 
 `js/data/personal-routes.js` 为独立剧情目录，由 `scripts/build-personal-routes.py` 从 `docs/story-sources/personal/` 内的两份原稿提取；HTML 原稿只作为文本解析，不运行其中的原型脚本。`js/chronicle/personal.js` 通过显式工厂接入正传控制器，样式在 `styles/chronicle-personal.css`。
 
-六章的 `run`、`slots` 与原章节编号保持兼容。个人线保存在 `chronicle.personal`：当前角色与阅读状态、每角色独立的剧情节点、选择标记、已读场景、结局和相处记录。角色羁绊仍由全局 core 提供，进入条件为完成第六章且对应角色羁绊严格大于 35。第七章奖励共用 `economy.claimed['chapter:7']`，不同个人线或结局不重复发放。
+六章的 `run`、`slots` 与原章节编号保持兼容。个人线保存在 `chronicle.personal`：当前角色与阅读状态、每角色独立的剧情节点、选择标记、已读场景、结局、相处记录，以及剧情来源的自然解锁记录 `storyUnlocks`。角色羁绊仍由全局 core 提供；阿喆、十元入口要求完成第六章且对应角色羁绊严格大于 35，宝石×飞鸿 CP 线还可由融合线关键聊天直接解锁并跳转。第七章奖励共用 `economy.claimed['chapter:7']`，不同个人线或结局不重复发放。
 
 个人线插图按每个阅读节点单独绑定，回忆 ID 为 `cp7_<节点>`；只按实际已读记录收藏和补齐。8 合 1 原图在 `assets/chronicle/personal/source/`，提示词、清单与坐标在 `docs/imagegen/personal/`，运行 `python3 scripts/crop-personal-art.py` 重建全部裁图。
 

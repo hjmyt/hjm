@@ -66,6 +66,28 @@ const FUSION_LEGACY_ART = {
   m_ice: ['fusion_art_rehearsal','fusionRehearsal','山丘酒吧 · 融合排练'],
   m_show: ['fusion_art_night','fusionNight','山丘酒吧 · 正式舞台']
 };
+const FUSION_MEMORY_DETAILS = {
+  f2_ldnight: {
+    rule: '第三篇与老杜完成前三次专属聊天后，第 4 次聊天触发',
+    text: '从 demo 的风格、SOLO 的句子，到西装场与小酒馆的格调，老杜始终似笑非笑、看破不说破。第三次聊完的周末，他换上西装约 Jerry 去小酒馆，从《Autumn Leaves》一路 JAM 到打烊，终于破例问出那句：你来哈基米，不是想带团，是想找个能说话的地方——找到了吗？'
+  },
+  f2_rocknight: {
+    rule: '第三篇与大羊完成前三次专属聊天后，第 4 次聊天触发',
+    text: '大羊总用抢话、绕弯和玩笑挡住真心，把“我的 SOLO 为什么不能是主角”藏在跑场无人听的失落后面。chewing gum 酒馆散场后的台阶上，两把吉他聊到后半夜；Jerry 帮他拆开“不甘心”和“不自信”，而他终于不再开玩笑，认真地说：再来一遍，这次你听着。'
+  },
+  f2_fusenight: {
+    rule: '第三篇与笛杰完成前三次专属聊天后，第 4 次聊天触发',
+    text: '从只看得懂简谱、追问《在水一方》是什么风格，到一点点学会五线谱与和声，笛杰始终温柔、坚持，也越来越敢说出自己的判断。融合音乐会后，toneso 的伙伴认可了他的演出，新专辑邀请他录制一首竹笛 feat.；简谱少年与爵士乐队由此互相推开了对方世界的门。'
+  },
+  f2_slap: {
+    rule: '第三篇与阿齐完成前三次专属聊天后，第 4 次聊天触发',
+    text: '“九点了，我要回东莞了”从阿齐的口头禅变成了全组下班铃；八点五十九收琴，是他对东莞的尊重。可演出返场时，台下齐喊“东莞”，这个练了九年 slap、永远准点的人难得一笑，把贝斯重新抱稳：九点了——加个班。'
+  },
+  f2_bsstop: {
+    rule: '第三篇与宝石第 3 次专属聊天时，选择“客套安慰两句”',
+    text: '宝石绕着飞鸿讲了三次：和声、柠檬水、扒谱，还有那句没能说完的“你觉得，飞鸿他——”。Jerry 客套地把一切归为朋友之间的寻常，宝石只回了一个“哦”，从此再也没有提起飞鸿；有些话错过那一次，就没有第二次了。选择“愿闻其详”则会正式解锁宝石×飞鸿 CP 线。'
+  }
+};
 const FUSION_ART = Object.entries(FUSION_ROUTES).flatMap(([chapter, nodes]) => nodes.map((node, index) => {
   const legacy = FUSION_LEGACY_ART[node.id];
   let asset = legacy?.[1];
@@ -88,6 +110,7 @@ const FUSION_ART = Object.entries(FUSION_ROUTES).flatMap(([chapter, nodes]) => n
     title: node.title || `${chapter === 'rl' ? '入线篇' : chapter === 'ep2' ? '后宫日常' : '融合主线'} · ${String(index + 1).padStart(2, '0')}`,
     location: legacy?.[2] || (chapter === 'rl' ? '山丘酒吧 · 入线之夜' : chapter === 'ep2' ? '排练之后 · 日常回响' : '六次排练 · 融合舞台'),
     asset,
-    text: `${node.title || '融合线场景'}的剧情插图。`
+    rule: FUSION_MEMORY_DETAILS[node.id]?.rule,
+    text: FUSION_MEMORY_DETAILS[node.id]?.text || `${node.title || '融合线场景'}的剧情插图。`
   };
 }));

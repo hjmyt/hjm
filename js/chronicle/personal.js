@@ -7,7 +7,7 @@ function createChroniclePersonal(ctx) {
     const routes = Object.values(PERSONAL_ROUTES);
     const getNode = (id, scene) => PERSONAL_ROUTES[id]?.nodes.find(n => n.id === scene);
     const freshRoute = id => ({scene:PERSONAL_ROUTES[id]?.entry||(id==='azhe'?'azhe_01':'sy_01'),page:0,flags:{},done:{},resume:null,resumePage:0,read:[],ending:null,endings:[],run:1,duets:0,chatIndex:0,focus:0,score:id==='baoshi_feihong'?10:0,previewed:null,reply:''});
-    const freshPersonal = () => ({active:false,selected:null,rev:0,tech:20,unlocks:{},routes:{}});
+    const freshPersonal = () => ({active:false,selected:null,rev:0,tech:20,unlocks:{},storyUnlocks:{},routes:{}});
     const P = () => ctx.M().personal || (ctx.M().personal=freshPersonal());
     const S = () => P().routes[P().selected];
     const config = () => PERSONAL_ROUTES[P().selected];
@@ -18,7 +18,9 @@ function createChroniclePersonal(ctx) {
     const cpFriendPath = () => historicFlag('strGroup') && !!P().routes.shiyuan?.flags?.syFriend;
     const cpStoryStarted = () => !!P().routes.baoshi_feihong && (P().routes.baoshi_feihong.read.some(id=>id.startsWith('cp_'))||P().routes.baoshi_feihong.endings.length>0);
     const paidUnlock = id => P().unlocks?.[id]===true;
-    const admitted = id => !!PERSONAL_ROUTES[id] && unlocked() && (paidUnlock(id)||(id==='baoshi_feihong'?cpStoryStarted()||(historicFlag('feiSide')&&bandLevel()>=6&&cpFriendPath()):cardBond(id)>35));
+    const fusionCpUnlocked = () => P().storyUnlocks?.baoshi_feihong===true;
+    const personalPickerUnlocked = () => unlocked()||fusionCpUnlocked();
+    const admitted = id => !!PERSONAL_ROUTES[id] && (id==='baoshi_feihong'&&fusionCpUnlocked() || unlocked()&&(paidUnlock(id)||(id==='baoshi_feihong'?cpStoryStarted()||(historicFlag('feiSide')&&bandLevel()>=6&&cpFriendPath()):cardBond(id)>35)));
     const esc = ctx.E;
     function cleanPersonal(raw) {
         const p=freshPersonal();if(!raw || typeof raw!=='object')return p;
@@ -26,6 +28,7 @@ function createChroniclePersonal(ctx) {
         p.active=raw.active===true && !!p.selected;
         p.rev=ctx.nInt(raw.rev,0,0,99999999);p.tech=ctx.nInt(raw.tech,20,0,9999);
         p.unlocks=Object.fromEntries(routes.filter(r=>raw.unlocks?.[r.id]===true||raw.unlocks?.[r.id]===1).map(r=>[r.id,true]));
+        p.storyUnlocks=Object.fromEntries(routes.filter(r=>raw.storyUnlocks?.[r.id]===true||raw.storyUnlocks?.[r.id]===1).map(r=>[r.id,true]));
         for(const r of routes){
             const a=raw.routes?.[r.id];if(!a || typeof a!=='object')continue;
             const s=freshRoute(r.id), ids=new Set(r.nodes.map(n=>n.id));
@@ -51,12 +54,13 @@ function createChroniclePersonal(ctx) {
     function changed() {P().rev++;ctx.changed();}
     function button(action,text,extra='',cls='secondary') {return `<button class="btn ${cls}" data-cp-action="personal-${action}" data-personal-rev="${P().rev}" ${extra}>${text}</button>`;}
     function picker() {
-        if(!unlocked()){toast('完成第六章后，才可以进入第七章个人线。');return;}
-        openModal('第七章 · 选择你的故事线',`<p class="cp-caption">阿喆、十元线需对应角色羁绊超过 35 分；宝石×飞鸿是特殊 CP 线，按第一章选择、乐团等级与前置分流判定。未满足对应条件时，也可支付 10000 音符永久解锁该路线；付费解锁不改动羁绊和正传选择。</p><div class="cp-personal-picker">${routes.map(r=>{
+        if(!personalPickerUnlocked()){toast('完成第六章后，才可以进入第七章个人线。');return;}
+        openModal('第七章 · 选择你的故事线',`<p class="cp-caption">阿喆、十元线需完成第六章且对应角色羁绊超过 35 分；宝石×飞鸿可由融合线关键聊天直接解锁，也可按正传特殊前置开启。</p><div class="cp-personal-picker">${routes.map(r=>{
             const cp=r.id==='baoshi_feihong',bond=cp?0:cardBond(r.id),s=P().routes[r.id],open=admitted(r.id);
-            const purchased=paidUnlock(r.id),cpStatus=purchased?'已支付 10000 音符永久解锁':cpStoryStarted()?(s?.ending?'结局已收录 · 可重读':'已有进度 · 继续故事'):!historicFlag('feiSide')?'需第一章替飞鸿解围':bandLevel()<6?`乐团 Lv.${bandLevel()} / 6 · 可与乐团成员合练升级`:!cpFriendPath()?'需弦乐组＋十元友情分流；羊村乐队线为独立路线':'前置已解锁 · 开启 CP 线';
-            const status=cp?cpStatus:purchased?'已支付 10000 音符永久解锁':`羁绊 ${bond} · ${bond<=35?'还差 '+(36-bond)+' 分可进入':s?.ending?'结局已收藏 · 可继续或重读':s?'已有进度 · 继续故事':'已解锁 · 开启故事'}`;
-            return `<div class="cp-personal-pick-row"><button class="cp-personal-pick ${open?'':'locked'}" data-cp-action="personal-select" data-cp-person="${r.id}" ${open?'':'disabled aria-disabled="true"'}><img src="${ASSETS[r.asset]}" alt="${r.name}"><span><b>${r.name}${cp?' CP 线':'个人线'}</b><em>${r.tagline}</em><small>${status}</small></span>${I(open?'arrow':'lock')}</button>${open?'':`<button class="btn secondary cp-personal-unlock" data-cp-action="personal-unlock" data-cp-person="${r.id}">支付 10000 音符直接解锁 <small>当前 ${state.coins}</small></button>`}</div>`;
+            const purchased=paidUnlock(r.id),cpStatus=fusionCpUnlocked()?'融合线关键聊天已解锁 · 开启 CP 线':purchased?'已支付 10000 音符永久解锁':cpStoryStarted()?(s?.ending?'结局已收录 · 可重读':'已有进度 · 继续故事'):!historicFlag('feiSide')?'需第一章替飞鸿解围':bandLevel()<6?`乐团 Lv.${bandLevel()} / 6 · 可与乐团成员合练升级`:!cpFriendPath()?'需弦乐组＋十元友情分流；羊村乐队线为独立路线':'前置已解锁 · 开启 CP 线';
+            const status=cp?cpStatus:!unlocked()?'完成第六章后开放':purchased?'已支付 10000 音符永久解锁':`羁绊 ${bond} · ${bond<=35?'还差 '+(36-bond)+' 分可进入':s?.ending?'结局已收藏 · 可继续或重读':s?'已有进度 · 继续故事':'已解锁 · 开启故事'}`;
+            const canPurchase=!open&&unlocked();
+            return `<div class="cp-personal-pick-row"><button class="cp-personal-pick ${open?'':'locked'}" data-cp-action="personal-select" data-cp-person="${r.id}" ${open?'':'disabled aria-disabled="true"'}><img src="${ASSETS[r.asset]}" alt="${r.name}"><span><b>${r.name}${cp?' CP 线':'个人线'}</b><em>${r.tagline}</em><small>${status}</small></span>${I(open?'arrow':'lock')}</button>${canPurchase?`<button class="btn secondary cp-personal-unlock" data-cp-action="personal-unlock" data-cp-person="${r.id}">支付 10000 音符直接解锁 <small>当前 ${state.coins}</small></button>`:''}</div>`;
         }).join('')}</div><p class="cp-caption">其他角色的个人线将陆续开放。</p>`);
     }
     function purchaseUnlock(id) {
@@ -66,11 +70,20 @@ function createChroniclePersonal(ctx) {
         state.coins-=10000;P().unlocks[id]=true;changed();toast(`已永久解锁${PERSONAL_ROUTES[id].name}故事线，音符 −10000。`,true);picker();
     }
     function select(id) {
-        if(!admitted(id)){toast(unlocked()?(id==='baoshi_feihong'?'宝石×飞鸿线的前置条件还没有满足。':'该角色的羁绊需要超过 35 分才能进入。'):'请先完成第六章。');return;}
+        if(!admitted(id)){toast(unlocked()?(id==='baoshi_feihong'?'宝石×飞鸿线的前置条件还没有满足。':'该角色的羁绊需要超过 35 分才能进入。'):'请先完成第六章，或从融合线关键聊天解锁宝石×飞鸿 CP 线。');return;}
         ctx.suspend();const p=P();p.selected=id;p.active=true;
         p.routes[id]??=freshRoute(id);
         if(!Object.keys(p.routes).some(k=>k!==id))p.tech=Math.max(p.tech,ctx.R().tech);
         closeModal(false);changed();route('chronicle');
+    }
+    function unlockFusionCp() {
+        const first=!fusionCpUnlocked();
+        if(first){P().storyUnlocks.baoshi_feihong=true;changed();}
+        return first;
+    }
+    function enterFusionCp() {
+        unlockFusionCp();
+        select('baoshi_feihong');
     }
     function nextMain() {
         const s=S(),id=P().selected;
@@ -246,5 +259,5 @@ function createChroniclePersonal(ctx) {
         const s=S();if(!P().active||!s||s.scene!=='complete'||!s.ending||s.previewed===s.ending||!$('modalBackdrop').hidden)return;
         const memory=getNode(P().selected,s.ending).memory;s.previewed=s.ending;save();if(memory)showMemory(memory);
     }
-    return {freshPersonal,cleanPersonal,personalAction,personalHTML,personalPreview};
+    return {freshPersonal,cleanPersonal,personalAction,personalHTML,personalPreview,personalPickerUnlocked,unlockFusionCp,enterFusionCp};
 }
