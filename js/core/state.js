@@ -7,7 +7,7 @@ const V5_KEY = 'love_hakimi_cards_save_v5';
 const V4_KEY = 'love_hakimi_cards_save_v4';
 const PREVIOUS_KEY = 'love_hakimi_cards_save_v2';
 const LEGACY_KEY = 'love_hakimi_save_v1';
-function freshState() { const d = { version: 1, economy: freshEconomy(), bondProgress: freshBondProgress(), created: Date.now(), nickname: '乐团新人', catName: '哈基米', coins: ECONOMY_RULES.start, cat: { aff: 0, hunger: 76, mood: 84, energy: 72, pets: 0 }, completed: [], memories: ['first'], affinity: Object.fromEntries(CARD_DEFS.map(c => [c.id, 0])), best: {}, storyProgress: {}, daily: { date: dateKey(), pet: false, story: false, rhythm: false, claimed: false }, gift: false, sound: true, cards: freshCards(), chronicle: Chronicle.fresh() }; syncUnifiedBonds(d); return d; }
+function freshState() { const d = { version: 1, economy: freshEconomy(), bondProgress: freshBondProgress(), created: Date.now(), nickname: '乐团新人', catName: '哈基米', coins: ECONOMY_RULES.start, cat: { aff: 0, hunger: 76, mood: 84, energy: 72, pets: 0 }, completed: [], memories: ['first'], affinity: Object.fromEntries(CARD_DEFS.map(c => [c.id, 0])), best: {}, storyProgress: {}, daily: { date: dateKey(), pet: false, story: false, rhythm: false, claimed: false }, gift: false, sound: true, cards: freshCards(), fusion: freshFusion(), chronicle: Chronicle.fresh() }; syncUnifiedBonds(d); return d; }
 function cleanState(obj) {
     if (!obj || typeof obj !== 'object' || obj.version !== 1)
         throw new Error('存档格式不正确');
@@ -43,6 +43,7 @@ function cleanState(obj) {
     d.gift = obj.gift === true;
     d.sound = obj.sound !== false;
     d.cards = cleanCards(obj.cards);
+    d.fusion = cleanFusion(obj.fusion);
     d.chronicle = Chronicle.clean(obj.chronicle);
     if (!obj.economy)
         seedLegacyEconomy(d);

@@ -21,5 +21,11 @@ const {pathToFileURL}=require('node:url');const path=require('node:path');const 
   save();return out;
  });
  await page.reload();await page.evaluate(()=>route('chronicle'));assert(await page.evaluate(()=>state.chronicle.run.chapter===4&&state.chronicle.run.name==='小雨'&&state.chronicle.run.inst==='长笛'),'Identity and chapter survive actual reload');
+ await page.setViewportSize({width:390,height:844});
+ await page.evaluate(()=>{window.scrollTo({top:0,behavior:'instant'});document.querySelector('.cp-chapter-tile[data-cp-chapter="2"]').click();});
+ await page.waitForTimeout(900);
+ const mobileChapterScroll=await page.evaluate(()=>({chapter:state.chronicle.run.chapter,top:$('cpMain').getBoundingClientRect().top,y:window.scrollY}));
+ assert.equal(mobileChapterScroll.chapter,2,'Mobile chapter tile switches chapter');
+ assert(mobileChapterScroll.y>0&&mobileChapterScroll.top>=0&&mobileChapterScroll.top<40,`Mobile chapter tile scrolls to story area (${JSON.stringify(mobileChapterScroll)})`);
  await page.evaluate(()=>{closeModal(false);state=freshState();state.sound=false;save();route('chronicle');});await page.screenshot({path:'/tmp/hjm-chapter-locks.png'});await page.setViewportSize({width:390,height:844});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:'/tmp/hjm-chapter-locks-mobile.png'});assert.deepEqual(errors,[]);console.log('PASS: '+checks.length+' chapter order checks, actual reload and mobile layout.');
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

@@ -3012,6 +3012,12 @@ body {
   mask-image:linear-gradient(90deg,transparent,#000 19%);
   -webkit-mask-image:linear-gradient(90deg,transparent,#000 19%)
 }
+.card-cover-image,.card-full-image {
+  object-position:center top!important
+}
+.card-avatar-image {
+  object-position:center center!important
+}
 .profile-info dt,.profile-stat-head,.skill-item p,.collect-quote,.companion-copy p,.bond-milestone p,.bond-story-panel p,.info-bio {
   color:#647792
 }

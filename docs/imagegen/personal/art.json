@@ -2148,20 +2148,22 @@
     "title": "入队 · 530的邀请",
     "asset": "personal_cp_00b",
     "memory": "cp7_cp_00b",
-    "source": "assets/chronicle/personal/source/15-personal.png",
+    "sourceOverride": "assets/chronicle/personal/source/cp_00b-fixed.png",
+    "promptOverride": "docs/imagegen/personal/anatomy-fixes-2026-09-27.md",
+    "source": "assets/chronicle/personal/source/cp_00b-fixed.png",
     "size": [
       1774,
       887
     ],
-    "cell": 2,
+    "cell": "override",
     "crop": [
-      447,
-      3,
-      884,
-      441
+      0,
+      0,
+      437,
+      438
     ],
     "output": "assets/chronicle/personal/cp_00b.webp",
-    "prompt": "docs/imagegen/personal/15-personal.txt"
+    "prompt": "docs/imagegen/personal/anatomy-fixes-2026-09-27.md"
   },
   {
     "id": "cp_01",
@@ -3089,20 +3091,22 @@
     "title": "离开 · 行李箱",
     "asset": "personal_cp_10_page2",
     "memory": "cp7_cp_10_page2",
-    "source": "assets/chronicle/personal/source/21-personal.png",
+    "sourceOverride": "assets/chronicle/personal/source/cp_10_page2-fixed.png",
+    "promptOverride": "docs/imagegen/personal/anatomy-fixes-2026-09-27.md",
+    "source": "assets/chronicle/personal/source/cp_10_page2-fixed.png",
     "size": [
       1774,
       887
     ],
-    "cell": 6,
+    "cell": "override",
     "crop": [
-      447,
-      447,
-      884,
-      884
+      0,
+      0,
+      437,
+      437
     ],
     "output": "assets/chronicle/personal/cp_10_page2.webp",
-    "prompt": "docs/imagegen/personal/21-personal.txt"
+    "prompt": "docs/imagegen/personal/anatomy-fixes-2026-09-27.md"
   },
   {
     "id": "cp_10_page3",

@@ -15,7 +15,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
    scene(+ch,id);check(ch+':'+id+' speakers '+wanted,voices()===wanted);
    for(const el of document.querySelectorAll('#cpMain [data-speaker]')){
     const id=el.dataset.speaker,c=cardDef(id==='tangshao'?'tang':id),img=el.querySelector('img');
-    check(ch+':'+id+' correct portrait',c?img?.getAttribute('src')===ASSETS[c.asset]:!img);
+    check(ch+':'+id+' correct portrait',c?img?.getAttribute('src')===cardImage(c,'avatar'):!img);
    }
    const e=state.chronicle.run.journal.at(-1),text=e.text;check(ch+':'+id+' journal names',Chronicle.journalSpeaker({...e,who:'lala'},state.chronicle.run)===[...document.querySelectorAll('#cpMain [data-speaker] b')].map(e=>e.textContent).join(' / '));check('Journal content unchanged',e.text===text);
   }
@@ -28,7 +28,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
   scene(4,'c4_prep');const old=state.chronicle.run.journal.at(-1);old.who='lala';const before=JSON.stringify(state.chronicle);
   check('Old journal corrects Dayang',Chronicle.journalSpeaker(old,state.chronicle.run)==='大羊');check('Reading attribution does not change progress',JSON.stringify(state.chronicle)===before);
   showLalaJournal(4);check('Notebook displays corrected label',document.querySelector('.lala-journal-dialogue b').textContent==='大羊');check('Export displays corrected label',lalaJournalText(state.chronicle.run).includes('第 1 周 · 大羊'));closeModal(false);
-  check('Guests not inserted into card pool',!CARD_DEFS.some(c=>['jerry','xiaojie','narrator','crowd'].includes(c.id)));
+  check('Named musicians use cards while actual guests stay outside the pool',CARD_DEFS.some(c=>c.id==='jerry')&&CARD_DEFS.some(c=>c.id==='laodu')&&CARD_DEFS.some(c=>c.id==='xuezi')&&!CARD_DEFS.some(c=>['xiaojie','narrator','crowd'].includes(c.id)));
   save();return {count:checks.length,scenes:Object.values(expected).reduce((n,v)=>n+Object.keys(v).length,0)};
  });
  await page.reload();await page.evaluate(()=>route('chronicle'));assert.equal(await page.locator('#cpMain [data-speaker]').first().getAttribute('data-speaker'),'dayang');

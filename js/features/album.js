@@ -76,8 +76,13 @@ function showMemory(id) {
 async function saveMemoryPhoto(m) {
     try {
         const img = new Image();
-        img.src = ASSETS[m.asset];
-        await img.decode();
+        await new Promise((resolve, reject) => {
+            img.onload = resolve;
+            img.onerror = reject;
+            img.src = ASSETS[m.asset];
+            if (img.complete && img.naturalWidth)
+                resolve();
+        });
         const w = 900, artH = clamp(Math.round(820 / (img.width / img.height)), 265, 1100), cv = document.createElement('canvas');
         cv.width = w;
         cv.height = artH + 246;

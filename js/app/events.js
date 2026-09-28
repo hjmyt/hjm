@@ -261,6 +261,31 @@ function bindAppEvents() {
             return prepareCardSkill(d.cardSkill);
         if (d.cardStory)
             return openCardStory(d.cardStory);
+        if (d.fusionOpen !== undefined)
+            return openFusion();
+        if (d.fusionHome !== undefined) {
+            state.fusion.chapter = null;
+            save();
+            renderFusion();
+            syncStoryMusic();
+            return;
+        }
+        if (d.fusionChapter)
+            return enterFusionChapter(d.fusionChapter);
+        if (d.fusionNextChapter)
+            return enterFusionChapter(d.fusionNextChapter);
+        if (d.fusionChoice !== undefined)
+            return chooseFusion(Number(d.fusionChoice));
+        if (d.fusionPageNext !== undefined)
+            return continueFusionPage();
+        if (d.fusionChat)
+            return fusionChat(d.fusionChat);
+        if (d.fusionNextMain !== undefined)
+            return continueFusionMain();
+        if (d.fusionPoolEnd !== undefined)
+            return finishFusionPool();
+        if (d.fusionRestart)
+            return restartFusionChapter(d.fusionRestart);
         if (d.cardForm !== undefined)
             return switchTangForm();
         if (d.cardDark !== undefined)

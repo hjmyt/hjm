@@ -97,6 +97,7 @@ const assert=require('node:assert/strict');
   // Baoshi×Feihong uses story prerequisites rather than a character-bond gate.
   setup();Object.assign(state.chronicle.run,{level:6,flags:{feiSide:1,strGroup:1}});await select('shiyuan');S().flags.syFriend=true;P().rev++;renderGlobal();await select('baoshi_feihong');
   check('String group plus Shiyuan friendship enters CP route',P().selected==='baoshi_feihong'&&S().scene==='cp_00');
+  go('cp_04');check('Xuezi personal-line dialogue uses his card avatar',[...document.querySelectorAll('.cp-speaker')].find(node=>node.querySelector('b')?.textContent==='雪子')?.querySelector('img')?.getAttribute('src')===ASSETS.cardXueziAvatar);go('cp_00');
   check('Personal reader limits each page to two dialogue turns',document.querySelectorAll('.cp-dialogue-turn').length<=2);
   await choose(1);check('Low banner choice pauses at support hub',S().scene==='hub'&&S().score===11);await action('support');await action('continue');check('Listening support reaches next CP scene',S().scene==='cp_00b');
   check('Long personal scenes use continuation pages before choices',document.querySelectorAll('.cp-dialogue-turn').length<=2&&!!document.querySelector('[data-cp-action="personal-page"]')&&!document.querySelector('[data-personal-choice]'));

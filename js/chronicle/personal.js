@@ -166,7 +166,7 @@ function createChroniclePersonal(ctx) {
     }
     function character(who) {
         if(who==='bingbing')return {name:'冰冰',tag:'大提琴 · 女明星般的亮眼气质',icon:'music'};
-        if(who==='xuezi')return {name:'雪子',tag:'键盘手 · 山丘的男性老友',icon:'music'};
+        if(who==='xuezi')return {name:'雪子',tag:'键盘手 · 山丘的男性老友',icon:'music',asset:'cardXueziAvatar'};
         if(who==='rek')return {name:'REK',tag:'贝斯手 · 乐团成员',icon:'music'};
         if(who==='ta')return {name:'大塔',tag:'乐团成员',icon:'music'};
         if(who==='player')return {name:ctx.R().name||'你',tag:'你的回应',icon:'heart'};

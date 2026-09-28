@@ -22,8 +22,24 @@ for batch in plan:
             x, y = i % 4, i // 4
             box = [round(x*w/4)+3, round(y*h/2)+3, round((x+1)*w/4)-3, round((y+1)*h/2)-3]
             output = ROOT / 'assets/chronicle/personal' / (scene['id'] + '.webp')
-            atlas.crop(box).convert('RGB').save(output, quality=92, method=6)
-            entry = {**scene, 'source': str(original.relative_to(ROOT)), 'size': [w,h], 'cell': i+1, 'crop': box, 'output': str(output.relative_to(ROOT)), 'prompt': 'docs/imagegen/personal/' + batch['batch'] + '.txt'}
+            override = scene.get('sourceOverride')
+            if override:
+                with Image.open(ROOT / override) as replacement:
+                    replacement.convert('RGB').resize(
+                        (box[2] - box[0], box[3] - box[1]),
+                        Image.Resampling.LANCZOS
+                    ).save(output, quality=92, method=6)
+            else:
+                atlas.crop(box).convert('RGB').save(output, quality=92, method=6)
+            entry = {
+                **scene,
+                'source': override or str(original.relative_to(ROOT)),
+                'size': [w,h],
+                'cell': 'override' if override else i+1,
+                'crop': [0, 0, box[2] - box[0], box[3] - box[1]] if override else box,
+                'output': str(output.relative_to(ROOT)),
+                'prompt': scene.get('promptOverride', 'docs/imagegen/personal/' + batch['batch'] + '.txt')
+            }
             fix = ROOT / 'docs/imagegen/personal' / (batch['batch'] + '-fix.txt')
             if fix.exists(): entry['editPrompt'] = str(fix.relative_to(ROOT))
             manifest.append(entry)

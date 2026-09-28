@@ -54,9 +54,9 @@ const server = http.createServer((req, res) => {
       assert.equal(loaded.size, scripts.length + styles.length, 'All split resources loaded');
       await page.evaluate(() => {
         if (!state || state.coins !== 30 || !storageOK) throw Error('Fresh state failed');
-        if (CARD_DEFS.length !== 20 || new Set(CARD_DEFS.map(c => c.id)).size !== CARD_DEFS.length) throw Error('Card catalog integrity');
+        if (CARD_DEFS.length !== 24 || new Set(CARD_DEFS.map(c => c.id)).size !== CARD_DEFS.length) throw Error('Card catalog integrity');
         if (new Set(MEMORIES.map(m => m.id)).size !== MEMORIES.length) throw Error('Memory catalog integrity');
-        for (const view of ['home', 'chronicle', 'story', 'care', 'rhythm', 'album', 'cards']) route(view);
+        for (const view of ['home', 'chronicle', 'story', 'care', 'rhythm', 'album', 'cards', 'fusion']) route(view);
         state.coins = 287;
         grantBond('lala', 5, { key: 'special:architecture' });
         state.economy.daily.rhythm = 3;

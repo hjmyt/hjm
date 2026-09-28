@@ -26,19 +26,24 @@ function renderGlobal() {
 function syncStoryMusic() {
     const r = state.chronicle.run;
     const siteControls = $('siteMusicControls');
-    siteControls.hidden = ['chronicle', 'story', 'rhythm'].includes(currentView);
+    siteControls.hidden = ['chronicle', 'story', 'fusion', 'rhythm'].includes(currentView);
     if (!siteControls.hidden && !siteControls.firstChild)
         siteControls.innerHTML = window.StoryBgm?.controls() || '';
     if (currentView === 'story' && !$('storyMusicControls').firstChild)
         $('storyMusicControls').innerHTML = window.StoryBgm?.controls() || '';
     const personal=state.chronicle.personal, personalRun=personal?.active?personal.routes[personal.selected]:null;
-    window.StoryBgm?.sync({ view: currentView, sound: state.sound, character: storySession?.id, chapter: personalRun?7:r.chapter, scene: currentView === 'chronicle' ? (personalRun?.scene||r.scene) : '', ending: currentView === 'chronicle' ? (personalRun?.ending||r.ending) : null, closed: !!r.bar?.closed });
+    const fusionChapter = currentView === 'fusion' ? state.fusion.chapter : null;
+    window.StoryBgm?.sync({ view: currentView, sound: state.sound, character: storySession?.id, chapter: personalRun?7:r.chapter, scene: currentView === 'chronicle' ? (personalRun?.scene||r.scene) : '', ending: currentView === 'chronicle' ? (personalRun?.ending||r.ending) : null, closed: !!r.bar?.closed, fusionChapter, fusionEnded: !!(fusionChapter && state.fusion.runs[fusionChapter]?.ended) });
 }
 function renderDaily() { const labels = [['pet', '陪猫咪玩一次'], ['story', '读一段故事'], ['rhythm', '完整演奏达到 C']]; $('dailyItems').innerHTML = labels.map(([k, t]) => `<span class="task ${state.daily[k] ? 'done' : ''}"><span class="task-dot">${state.daily[k] ? I('check') : ''}</span>${t}</span>`).join(''); const all = labels.every(([k]) => state.daily[k]); $('dailyClaim').disabled = !all || state.daily.claimed; $('dailyClaim').textContent = state.daily.claimed ? '今日礼物已领取' : '10 ♪ + 1 邀请券'; }
 function markDaily(k) { ensureDaily(); state.daily[k] = true; }
 function route(name) {
-    if (!['home', 'cards', 'card', 'care', 'story', 'chronicle', 'rhythm', 'album'].includes(name))
+    if (!['home', 'cards', 'card', 'care', 'story', 'chronicle', 'fusion', 'rhythm', 'album'].includes(name))
         return;
+    if (name === 'fusion' && (!cardOwned('jerry') || cardBond('jerry') <= 20)) {
+        toast(`Jerry 羁绊分需要严格大于 20；当前 ${cardBond('jerry')}。`);
+        return;
+    }
     if (currentView === 'chronicle' && name !== 'chronicle')
         Chronicle.suspend();
     if (currentView === 'rhythm' && name !== 'rhythm' && ['running', 'countdown'].includes(game.status))
@@ -56,12 +61,14 @@ function route(name) {
         else
             b.removeAttribute('aria-current');
     });
-    const titles = { chronicle: '从排练室到剧场，写下我们的正传。', cards: '乐团卡册', card: '和你，在同一个频率相遇。', home: '今天，也来合奏一点快乐。', care: '有人等你，也有猫等你。', story: '每一次相遇，都有回响。', rhythm: '节奏舞台', album: '那些小瞬间，都在这里。' };
+    const titles = { chronicle: '从排练室到剧场，写下我们的正传。', fusion: '去山丘，听见另一种融合。', cards: '乐团卡册', card: '和你，在同一个频率相遇。', home: '今天，也来合奏一点快乐。', care: '有人等你，也有猫等你。', story: '每一次相遇，都有回响。', rhythm: '节奏舞台', album: '那些小瞬间，都在这里。' };
     $('pageTitle').textContent = titles[name];
     if (name === 'story' && !storySession)
         renderCharacters();
     if (name === 'album')
         renderAlbum();
+    if (name === 'fusion')
+        renderFusion();
     if (name === 'rhythm') {
         updateBest();
         requestAnimationFrame(() => { resizeCanvas(); renderGameOverlay(); ensureGameLoop(); });

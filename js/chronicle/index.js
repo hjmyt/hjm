@@ -17,6 +17,16 @@ const Chronicle = (() => {
         if (r.log.length > 70)
             r.log.shift();
     }
+    function scrollToChapterStory() {
+        if (currentView !== 'chronicle' || !matchMedia('(max-width: 720px)').matches)
+            return;
+        // Switching chapters replaces the whole chronicle DOM. Wait until the new
+        // chapter has rendered and painted before locating its reading area.
+        requestAnimationFrame(() => requestAnimationFrame(() => {
+            if (currentView === 'chronicle')
+                $('cpMain')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }));
+    }
     function changed() {
         if (R().chapter === 4 && R().scene === 'c4_bao')
             R().flags.c4bao = 1;
@@ -27,8 +37,8 @@ const Chronicle = (() => {
         save();
         renderSignature = '';
         renderGlobal();
-        if (sceneChanged && currentView === 'chronicle' && innerWidth <= 520)
-            requestAnimationFrame(() => $('cpMain')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+        if (sceneChanged)
+            scrollToChapterStory();
     }
     function go(scene) {
         if (!SCENES.includes(scene))
@@ -163,8 +173,13 @@ const Chronicle = (() => {
             route('chronicle');
             return;
         }
-        if (action === 'switch-chapter')
-            return requestChapter(Number(btn?.dataset.cpChapter));
+        if (action === 'switch-chapter') {
+            const chapter = Number(btn?.dataset.cpChapter);
+            requestChapter(chapter);
+            if ([1, 2, 3, 4, 5, 6].includes(chapter) && chapterUnlocked(chapter))
+                scrollToChapterStory();
+            return;
+        }
         if (action === 'start-second')
             return startChapter(2, btn?.dataset.cpMode);
         if (action === 'start-fourth')

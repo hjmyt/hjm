@@ -12,7 +12,11 @@ window.StoryBgm = (() => {
     chapterOne: {title: '哈基米', src: 'assets/bgm/hakimi.mp3'},
     chapter: {title: 'Refrain', src: 'assets/bgm/refrain.mp3'},
     farewell: {title: 'The truth that you leave', src: 'assets/bgm/the-truth-that-you-leave.mp3'},
-    cpFarewell: {title: '讳莫如深的名字 · 宝石飞鸿 BE', src: 'assets/bgm/huimosrushen-de-mingzi.mp3'}
+    cpFarewell: {title: '讳莫如深的名字 · 宝石飞鸿 BE', src: 'assets/bgm/huimosrushen-de-mingzi.mp3'},
+    fusionEntry: {title: 'My Sunset · 融合入线篇', src: 'assets/bgm/fusion-my-sunset.mp3'},
+    fusionDaily: {title: 'NEXT TO YOU · 融合日常篇', src: 'assets/bgm/fusion-next-to-you.mp3'},
+    fusionStage: {title: 'Take Off · 融合主线篇', src: 'assets/bgm/fusion-take-off.mp3'},
+    fusionFinale: {title: '这团不好带 · 融合篇终章', src: 'assets/bgm/fusion-this-band-is-hard-to-lead.mp3'}
   };
   const storageKey = 'hjm-story-bgm-v1';
   let enabled = true, volume = .32;
@@ -29,6 +33,9 @@ window.StoryBgm = (() => {
   }
   function trackFor(c) {
     if (['home', 'cards', 'card', 'care', 'album'].includes(c.view)) return 'site';
+    if (c.view === 'fusion') return c.fusionChapter === 'fm' && c.fusionEnded
+      ? 'fusionFinale'
+      : ({rl: 'fusionEntry', ep2: 'fusionDaily', fm: 'fusionStage'})[c.fusionChapter] || 'fusionEntry';
     if (!['chronicle', 'story'].includes(c.view)) return null;
     if (c.view === 'story') return c.character ? 'memories' : 'daily';
     if (c.chapter === 7) return c.scene==='cp_BE'||c.ending==='cp_BE'?'cpFarewell':/_BE|_TE|10wait/.test(c.scene||c.ending||'')?'farewell':/_HE/.test(c.scene||c.ending||'')?'starlight':c.scene==='sy_08'?'lounge':'memories';

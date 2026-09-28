@@ -9,8 +9,14 @@ function cardAvailable(id, source = state) { return source.cards.encounters.incl
 function chapterLockText() { return '剧情提到这位伙伴时自动解锁'; }
 function syncStoryCards(source = state, notify = false, recoverLegacy = false) {
     const cards = source.cards, newIds = [];
-    const discovered = Chronicle.encounterIds(source.chronicle, recoverLegacy || cards.encounterVersion !== 1);
-    cards.encounterVersion = 1;
+    const discovered = Chronicle.encounterIds(source.chronicle, recoverLegacy || cards.encounterVersion !== 3);
+    const fusionSeen = Object.values(source.fusion?.runs || {}).some(run => run?.current === 'fs_yuerou' || run?.done?.includes('fs_yuerou') || run?.done?.includes('fs_yrok') || run?.done?.includes('fs_yrno'));
+    if (fusionSeen && !discovered.includes('yuerou'))
+        discovered.push('yuerou');
+    const laoduSeen = Object.values(source.fusion?.runs || {}).some(run => run?.current === 'fs_laodu' || run?.done?.includes('fs_laodu'));
+    if (laoduSeen && !discovered.includes('laodu'))
+        discovered.push('laodu');
+    cards.encounterVersion = 3;
     for (const id of discovered)
         if (!cards.encounters.includes(id)) {
             cards.encounters.push(id);
@@ -83,5 +89,5 @@ function concealCardSkills(html, c) {
 function renderZhuSecret() {
     if (!hiddenSkillReady('zhu') || !state.cards.zhuNight)
         return `<article class="skill-item hidden-skill locked"><div class="skill-heading">${I('lock')}<h4>隐藏技能</h4><span class="skill-tag">${hiddenSkillReady('zhu') ? '可解锁' : '未解锁'}</span></div><p>羁绊分达到 35 后，亲自揭开吧台后的故事。</p><button class="btn secondary small" data-zhu-reveal ${hiddenSkillReady('zhu') ? '' : 'disabled'}>${hiddenSkillReady('zhu') ? '解锁隐藏技能' : '条件未满足'}</button></article>`;
-    return `<details class="skill-item hidden-skill" ${CardUI.zhuOpened ? 'open' : ''}><summary>${I('sparkles')}隐藏技能 · 已解锁，点击查看</summary><h4>深夜吧台 · 调酒</h4><p>打烊后的山丘，吧台是他的另一个舞台。shaker 摇出的节奏比他的指挥稳一百倍——招牌「拾光」入口先是苦，回甘却很长。多少乐手的心事与梦想，是在他的吧台前被一杯酒接住的。他不劝，只听。</p><p class="cp-caption">调酒 96 已揭晓；投喂新增「打烊后的一杯拾光」——投喂消耗 10 音符。</p></details>`;
+    return `<details class="skill-item hidden-skill" ${CardUI.zhuOpened ? 'open' : ''}><summary>${I('sparkles')}隐藏技能 · 已解锁，点击查看</summary><h4>深夜吧台 · 调酒</h4><p>打烊后的山丘，吧台是他的另一个舞台。shaker 摇出的节奏比他的指挥稳一百倍——招牌「拾光」入口先是苦，回甘却很长。多少乐手的心事与梦想，是在他的吧台前被一杯酒接住的。他不劝，只听。</p><p class="cp-caption">调酒 96 已揭晓；投喂新增「打烊后的一杯拾光」——消耗 5 音符，羁绊分 +1。</p></details>`;
 }

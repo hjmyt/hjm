@@ -1,6 +1,6 @@
 'use strict';
 
-function freshCards() { return { edition: 7, zhuNight: false, sourceCast: freshSourceCast(), qiqi: freshQiqi(), lala: freshLala(), trio: freshTrio(), expansion: freshExpansion(), tickets: 3, pulls: 0, pity: 0, encounterVersion: 1, encounters: [], selected: null, team: [], form: 'normal', prepared: null, blackUntil: 0, collection: Object.fromEntries(CARD_DEFS.map(c => [c.id, { owned: false, xp: 0, copies: 0 }])), daily: { date: dateKey(), gifts: {}, eye: false }, history: [] }; }
+function freshCards() { return { edition: 7, zhuNight: false, sourceCast: freshSourceCast(), qiqi: freshQiqi(), lala: freshLala(), trio: freshTrio(), expansion: freshExpansion(), tickets: 3, pulls: 0, pity: 0, encounterVersion: 3, encounters: [], selected: null, team: [], form: 'normal', prepared: null, blackUntil: 0, collection: Object.fromEntries(CARD_DEFS.map(c => [c.id, { owned: false, xp: 0, copies: 0 }])), daily: { date: dateKey(), gifts: {}, eye: false }, history: [] }; }
 function cleanCards(input) {
     const d = freshCards();
     if (!input || typeof input !== 'object') {
@@ -10,7 +10,7 @@ function cleanCards(input) {
     d.zhuNight = input.zhuNight === true;
     d.qiqi = cleanQiqi(input.qiqi);
     d.sourceCast = cleanSourceCast(input.sourceCast);
-    d.encounterVersion = input.encounterVersion === 1 ? 1 : 0;
+    d.encounterVersion = input.encounterVersion === 3 ? 3 : 0;
     d.encounters = Array.isArray(input.encounters) ? [...new Set(input.encounters.filter(id => CARD_DEFS.some(c => c.id === id)))] : [];
     const num = (n, max = 999999) => Number.isFinite(Number(n)) ? clamp(Math.floor(Number(n)), 0, max) : 0;
     for (const k of ['tickets', 'pulls', 'pity'])
@@ -38,7 +38,7 @@ function cleanCards(input) {
     if (input.daily?.date === dateKey()) {
         d.daily.eye = input.daily.eye === true;
         for (const c of CARD_DEFS) {
-            const count = num(input.daily.gifts?.[c.id], 3);
+            const count = num(input.daily.gifts?.[c.id], BOND_RULES.giftsPerDay);
             if (count)
                 d.daily.gifts[c.id] = count;
         }

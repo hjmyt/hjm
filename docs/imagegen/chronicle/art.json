@@ -677,15 +677,15 @@
     "scene": "c2_head_a",
     "title": "他看过三次门口",
     "asset": "assets/chronicle/scenes/scene_2_c2_head_a.webp",
-    "source": "assets/chronicle/scenes/source/06-character-fixes.png",
-    "panel": 8,
+    "source": "assets/chronicle/scenes/source/scene_2_c2_head_a-fixed.png",
+    "panel": "override",
     "crop": [
-      1332,
-      446,
-      1772,
-      885
+      0,
+      0,
+      440,
+      439
     ],
-    "prompt": "docs/imagegen/chronicle/06-character-fixes.txt"
+    "prompt": "docs/imagegen/chronicle/anatomy-fixes-2026-09-27.md"
   },
   {
     "id": "scene_2_c2_bar",
@@ -789,15 +789,15 @@
     "scene": "c2_night_pre",
     "title": "黑板分成了两半",
     "asset": "assets/chronicle/scenes/scene_2_c2_night_pre.webp",
-    "source": "assets/chronicle/scenes/source/07-missing-undercurrents.png",
-    "panel": 7,
+    "source": "assets/chronicle/scenes/source/scene_2_c2_night_pre-jerry.png",
+    "panel": "override",
     "crop": [
-      889,
-      446,
-      1328,
-      885
+      0,
+      0,
+      439,
+      439
     ],
-    "prompt": "docs/imagegen/chronicle/07-missing-undercurrents.txt"
+    "prompt": "docs/imagegen/chronicle/scene_2_c2_night_pre-jerry.md"
   },
   {
     "id": "scene_2_c2_kong_b",
@@ -1925,15 +1925,15 @@
     "scene": "live_intro",
     "title": "站到灯光里",
     "asset": "assets/chronicle/scenes/scene_4_live_intro.webp",
-    "source": "assets/chronicle/scenes/source/16-story-completion.png",
-    "panel": 6,
+    "source": "assets/chronicle/scenes/source/scene_4_live_intro-fixed.png",
+    "panel": "override",
     "crop": [
-      446,
-      446,
-      885,
-      885
+      0,
+      0,
+      439,
+      439
     ],
-    "prompt": "docs/imagegen/chronicle/16-story-completion.txt"
+    "prompt": "docs/imagegen/chronicle/anatomy-fixes-2026-09-27.md"
   },
   {
     "id": "scene_4_after_practice",
@@ -2149,15 +2149,15 @@
     "scene": "live_intro",
     "title": "站到灯光里",
     "asset": "assets/chronicle/scenes/scene_6_live_intro.webp",
-    "source": "assets/chronicle/scenes/source/18-story-completion.png",
-    "panel": 4,
+    "source": "assets/chronicle/scenes/source/scene_6_live_intro-fixed.png",
+    "panel": "override",
     "crop": [
-      1332,
-      2,
-      1772,
-      442
+      0,
+      0,
+      440,
+      440
     ],
-    "prompt": "docs/imagegen/chronicle/18-story-completion.txt"
+    "prompt": "docs/imagegen/chronicle/anatomy-fixes-2026-09-27.md"
   },
   {
     "id": "scene_1_b_live_unready",
@@ -2309,15 +2309,15 @@
     "scene": "b_live",
     "title": "完整的总谱等着开幕",
     "asset": "assets/chronicle/scenes/scene_6_b_live_ready.webp",
-    "source": "assets/chronicle/scenes/source/19-story-completion.png",
-    "panel": 6,
+    "source": "assets/chronicle/scenes/source/scene_6_b_live_ready-fixed.png",
+    "panel": "override",
     "crop": [
-      446,
-      446,
-      885,
-      885
+      0,
+      0,
+      439,
+      439
     ],
-    "prompt": "docs/imagegen/chronicle/19-story-completion.txt"
+    "prompt": "docs/imagegen/chronicle/anatomy-fixes-2026-09-27.md"
   },
   {
     "id": "scene_2_c2_kong_a_stay",

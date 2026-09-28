@@ -94,7 +94,7 @@ function feedCard() {
         return;
     }
     if (used >= BOND_RULES.giftsPerDay) {
-        toast('今天已收到了三份心意，明天再来吧。');
+        toast('今天已收到了五份心意，明天再来吧。');
         return;
     }
     if (state.coins < g[3]) {
@@ -167,7 +167,7 @@ function toggleTeam(id) {
         return;
     }
     if (team.length >= 3) {
-        openModal('这一次，换谁上台？', `<p>编队最多 3 位。选择一位替换为 <strong>${c.name}</strong>，只是轮换，不会丢失角色或羁绊分。</p><div class="replace-list">${team.map(old => { const x = cardDef(old); return `<button class="replace-option" data-card-replace-old="${old}" data-card-replace-new="${id}"><img src="${ASSETS[x.asset]}" alt="${x.name}"><span><strong>${x.name} → ${c.name}</strong><small>${x.role} · 参与全队加成，合计最多 +2 ♪</small></span>${I('repeat')}</button>`; }).join('')}</div>`);
+        openModal('这一次，换谁上台？', `<p>编队最多 3 位。选择一位替换为 <strong>${c.name}</strong>，只是轮换，不会丢失角色或羁绊分。</p><div class="replace-list">${team.map(old => { const x = cardDef(old); return `<button class="replace-option" data-card-replace-old="${old}" data-card-replace-new="${id}"><img class="card-avatar-image" src="${cardImage(x, 'avatar')}" alt="${x.name}"><span><strong>${x.name} → ${c.name}</strong><small>${x.role} · 参与全队加成，合计最多 +2 ♪</small></span>${I('repeat')}</button>`; }).join('')}</div>`);
         return;
     }
     team.push(id);

@@ -1849,6 +1849,178 @@ const CARD_DEFS = [
       "“条理清楚，我喜欢。”",
       "“彼此。下次舞台上见。”"
     ]
+  },
+  {
+    "id": "jerry",
+    "name": "Jerry",
+    "rarity": "UR",
+    "role": "现代音乐人",
+    "group": "幕后",
+    "asset": "cardJerry",
+    "coverAsset": "cardJerryCover",
+    "avatarAsset": "avatarJerry",
+    "icon": "music",
+    "tag": "作曲编曲 · 音乐老师",
+    "stars": 6,
+    "bonus": 4,
+    "active": 8,
+    "subtitle": "我是 fusion 佬，不是爵士佬。",
+    "quote": "世界静音，只剩音乐。",
+    "identity": "现代音乐人 · 作曲编曲 · 音乐老师",
+    "seat": "小号（童年起）· 吉他 · Bass · 键盘 · 电吹管 · 长笛",
+    "specialty": "全能演奏 · 心流创作 · 跨界融合",
+    "rival": "被叫成费翔",
+    "stats": [
+      ["全能指数", 100],
+      ["低音炮", 98],
+      ["心流时长", 100],
+      ["费翔相似度", 98]
+    ],
+    "statnote": "全能指数 EX；专注时进入全屏模式——世界静音，只剩音乐。",
+    "activeName": "心流状态",
+    "activeText": "全屏模式启动：屏蔽干扰，让下一场达标演奏参与全队加成；编队与技能合计最多 +2 音符。",
+    "passiveName": "组合技 · 搭配预览",
+    "passiveText": "与笛杰同场可触发「融合巴洛克」；与垃垃同场可触发「竹笛遇上低音炮」。组合效果仍遵循每场音符加成总上限。",
+    "bio": "从童年小号到吉他、Bass、键盘、电吹管与长笛，Jerry 把不同音色写进同一首歌。羁绊分严格大于 20 后，他会邀你去山丘看看。",
+    "gifts": [
+      ["hotpot", "火锅（心流后补给）", "gift", 10, 1, 24],
+      ["steak", "牛排（七分熟）", "gift", 10, 1, 24],
+      ["coffee", "冰美式", "sun", 10, 1, 24],
+      ["beer", "冰啤酒", "moon", 10, 1, 24],
+      ["quiet", "一小时安静", "music", 10, 1, 24]
+    ],
+    "thanks": [
+      "“正好。心流结束以后，得靠这个补回来。”",
+      "“七分熟，记住了。”",
+      "“先放这儿。等这一轨录完。”",
+      "“今晚的编曲，可以再大胆一点。”",
+      "“谢谢。世界终于只剩音乐了。”"
+    ]
+  },
+  {
+    "id": "yuerou",
+    "name": "悦柔",
+    "rarity": "SR",
+    "role": "小提琴手",
+    "group": "融合组",
+    "asset": "cardYuerou",
+    "coverAsset": "cardYuerouCover",
+    "avatarAsset": "cardYuerouAvatar",
+    "icon": "music",
+    "tag": "高挑 · 奶呼呼 · 可甜可盐",
+    "stars": 3,
+    "bonus": 2,
+    "active": 6,
+    "subtitle": "户外全能，三分钟就能把陌生人变成下一次同行的人。",
+    "quote": "她会对每个人说「下次一起呀」——但只有真的会去的人，她才会记住。",
+    "identity": "小提琴手 · 融合组伙伴",
+    "seat": "小提琴 · 项目发起",
+    "specialty": "热情联络 · 户外灵感 · 影像企划",
+    "rival": "被搁置的好点子",
+    "profileFields": [
+      ["外形", "身材高挑 · 脸蛋奶呼呼 · 笑起来有梨涡"],
+      ["社交", "三分钟内加上陌生人微信 · 每条朋友圈点赞数百"],
+      ["爱好", "户外全能 · 雪山、徒步、羽毛球、微电影啥都会"],
+      ["备注", "团内很多男生对她存在天然好感（她本人似乎没察觉）"]
+    ],
+    "stats": [["社交力", 100], ["朋友圈点赞", "999+"], ["小提琴", 70], ["户外全能", 92]],
+    "statnote": "从小学小提琴，但爱好太多，没有一样肯精进——除了交朋友。",
+    "activeName": "三分钟好友",
+    "activeText": "任何场合三分钟内完成破冰加微信。被她加过的人会开心一整天，顺便给她点赞。",
+    "passiveName": "朋友圈风暴",
+    "passiveText": "每条动态点赞数百条，评论区永远热闹。团内消息以她为圆心流转——她浑然不觉。",
+    "profileOnlySkills": true,
+    "extraSkills": [
+      { "name": "周末消失术", "tag": "户外", "icon": "sun", "text": "周五晚失联，周一带着雪山日出和微电影成片回归。周一的排练室，因为她的故事而高堂。" }
+    ],
+    "bio": "在山丘角落调琴的长发女生，身材高挑，脸蛋奶呼呼，笑起来有梨涡。她热情、直接，总能把雪山、徒步、羽毛球、微电影和下一次合奏，说得像明天就会发生。",
+    "giftTitle": "周末装备补给",
+    "gifts": [["racket", "新羽毛球拍", "sun", 10, 1, 24], ["hiking", "雪山徒步攻略", "album", 10, 1, 24], ["film", "微电影场记板", "cards", 10, 1, 24], ["vlog", "帮她拍一条 vlog", "camera", 10, 1, 24]],
+    "thanks": ["“周末约球！我先把场地发你。”", "“这个路线好！下次一起呀！”", "“来，第一镜就从你推门开始。”", "“你拍得也太好了吧，等我剪完一定第一个发你！”"]
+  },
+  {
+    "id": "laodu",
+    "name": "老杜",
+    "rarity": "SR",
+    "role": "萨克斯手",
+    "group": "融合组",
+    "asset": "cardLaodu",
+    "coverAsset": "cardLaoduCover",
+    "avatarAsset": "cardLaoduAvatar",
+    "icon": "music",
+    "tag": "萨克斯 · 爵士脑 · 放心",
+    "stars": 3,
+    "bonus": 2,
+    "active": 6,
+    "subtitle": "乐手间口碑最好的人，聊起音乐理论就能把排练前变成一场公开课。",
+    "quote": "他的音乐很稳，他的人也很稳。",
+    "identity": "萨克斯手 · 融合组伙伴",
+    "seat": "萨克斯",
+    "specialty": "爵士理论 · 即兴演奏 · 稳定合奏",
+    "rival": "话题聊到 Lydian 以后忘了时间",
+    "profileFields": [
+      ["外形", "成熟稳重 · 戴眼镜 · 演出时穿西装"],
+      ["乐器", "萨克斯"],
+      ["特点", "一聊到音乐理论就停不下来，Lydian、替代和弦、五声音阶张口就来"],
+      ["印象", "乐手间口碑最好，缺席时像墙上少了一块砖"]
+    ],
+    "stats": [["乐理", 96], ["口碑", 98], ["稳定感", 92], ["即兴", 88]],
+    "statnote": "他在的时候，复杂的和声与临时的状况都会慢慢回到稳稳的拍子上。",
+    "activeName": "Lydian 开讲",
+    "activeText": "聊起爵士音阶就能讲上二十分钟，把排练前变成一场小型公开课。",
+    "passiveName": "口碑最好的人",
+    "passiveText": "他在的时候大家都更安心；他不在，排练室会明显空一块。",
+    "profileOnlySkills": true,
+    "extraSkills": [
+      { "name": "放心", "tag": "隐藏技能", "icon": "sparkles", "text": "登台前他只说两个字：「放心。」全场就会稳下来。" }
+    ],
+    "bio": "成熟稳重的萨克斯手，黑框眼镜与演出西装是他的舞台标记。乐理、口碑、稳定感和即兴都可靠得近乎理所当然。",
+    "giftTitle": "老杜的爵士脑燃料",
+    "gifts": [["reed", "新哨片", "music", 10, 1, 24], ["harmony_page", "一页和声分析", "album", 10, 1, 24], ["late_bbq", "深夜烧烤", "gift", 10, 1, 24]],
+    "thanks": ["“正好，今晚试试这片的响应。”", "“好问题。来，我们从 Lydian 说起。”", "“排练结束再聊，先吃点东西。”"],
+    "fusionOnly": true
+  },
+  {
+    "id": "xuezi",
+    "name": "雪子",
+    "rarity": "R",
+    "role": "键盘手",
+    "group": "乐团",
+    "asset": "cardXuezi",
+    "coverAsset": "cardXueziCover",
+    "avatarAsset": "cardXueziAvatar",
+    "icon": "music",
+    "tag": "键盘 · 嘻哈",
+    "stars": 2,
+    "bonus": 1,
+    "active": 4,
+    "subtitle": "长黑发的山丘铁三角，把主旋律和节奏之间的缝隙缝起来。",
+    "quote": "他的喜欢很大方，退场也很大方。",
+    "identity": "键盘手 · 山丘铁三角",
+    "seat": "键盘",
+    "specialty": "和声衔接 · 眼力见 · 成全",
+    "rival": "错过该出现或该退场的时机",
+    "profileFields": [
+      ["外形", "长黑发 · 嘻哈装扮"],
+      ["乐器", "键盘"],
+      ["好友", "宝石 · 飞鸿"],
+      ["来历", "山丘的粉丝，一场场演出泡出来的工作人员，后来自己上了台"]
+    ],
+    "stats": [["键盘", 86], ["和声感", 82], ["眼力见", 95], ["成全力", "EX"]],
+    "statnote": "山丘的铁三角之一；知道什么时候该出现，也知道什么时候该退后一步。",
+    "activeName": "缝针",
+    "activeText": "把主旋律和节奏之间的缝隙缝起来。宝石唱、飞鸿和声，他的键盘是让两个人听起来像一个人的那根线。",
+    "passiveName": "眼力见",
+    "passiveText": "永远知道什么时候该出现、什么时候该消失。递水的是他，让座的也是他。",
+    "profileOnlySkills": true,
+    "extraSkills": [
+      { "name": "成全", "tag": "隐藏技能 · 天赋", "icon": "heart", "text": "当所爱之人走向别人，他退后的那一步比谁都快、比谁都稳。为那对 CP 扛旗时，全团获得「圆满」光环——而他自己，把那份喜欢收进了嘻哈外套的内袋，拉链拉好。" }
+    ],
+    "bio": "长黑发的男性键盘手。最初只是山丘的粉丝，一场场演出泡成了工作人员，后来干脆自己上台，与宝石、飞鸿组成铁三角。",
+    "giftTitle": "铁三角的夜宵基金",
+    "gifts": [["chicken_beer", "炸鸡配啤酒", "gift", 10, 1, 24], ["headphones", "新耳机", "music", 10, 1, 24], ["harmony", "给他和声一次", "team", 10, 1, 24]],
+    "thanks": ["“来，夜宵算我的下一轮。”", "“正好，排练时能把每一层和声听清了。”", "“这次换我站在你的声音后面。”"],
+    "chronicleOnly": true
   }
 ];
 
@@ -1907,10 +2079,27 @@ const COLLECTION_ORDER = [
   "bill",
   "dayang",
   "baoshi",
-  "huangyx"
+  "huangyx",
+  "jerry",
+  "yuerou",
+  "laodu",
+  "xuezi"
 ];
 
 const STORY_CARD_ALIASES = {
+  "jerry": [
+    "Jerry",
+    "jerry"
+  ],
+  "yuerou": [
+    "悦柔"
+  ],
+  "laodu": [
+    "老杜"
+  ],
+  "xuezi": [
+    "雪子"
+  ],
   "huangyx": [
     "黄奕兴"
   ],

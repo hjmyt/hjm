@@ -24,11 +24,17 @@ for group in plan:
                 box = (round(left * width) + 2, round(top * height) + 2,
                        round(right * width) - 2, round(bottom * height) - 2)
             target = Path('assets/chronicle/scenes') / (scene['id'] + '.webp')
-            atlas.crop(box).convert('RGB').save(ROOT / target, quality=90, method=6)
+            override = scene.get('sourceOverride')
+            if override:
+                with Image.open(ROOT / override) as replacement:
+                    replacement.convert('RGB').resize((box[2] - box[0], box[3] - box[1]), Image.Resampling.LANCZOS).save(ROOT / target, quality=90, method=6)
+            else:
+                atlas.crop(box).convert('RGB').save(ROOT / target, quality=90, method=6)
             manifest[scene['id']] = {
                 **{key: scene[key] for key in ['id', 'chapter', 'scene', 'title']},
-                'asset': str(target), 'source': str(source), 'panel': i + 1,
-                'crop': box, 'prompt': 'docs/imagegen/chronicle/' + group['batch'] + '.txt'
+                'asset': str(target), 'source': override or str(source), 'panel': 'override' if override else i + 1,
+                'crop': [0, 0, box[2] - box[0], box[3] - box[1]] if override else box,
+                'prompt': scene.get('promptOverride', 'docs/imagegen/chronicle/' + group['batch'] + '.txt')
             }
 (ROOT / 'docs/imagegen/chronicle/art.json').write_text(
     json.dumps(list(manifest.values()), ensure_ascii=False, indent=2) + '\n')

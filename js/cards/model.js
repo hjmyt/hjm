@@ -23,6 +23,10 @@ function compareCollection(a, b, mode = 'rarity') {
 // ---- Card collection, affection, recruiting, and real rhythm reward integration ----
 const CardUI = { filter: '全部', sort: 'chapter', tab: 'detail', gift: null, response: null, detailId: null, returnTo: 'cards' };
 const cardDef = id => CARD_DEFS.find(c => c.id === id);
+// Full-body art, card covers, and small avatars have different safe areas.
+// Dedicated crops take precedence so responsive containers cannot cut off a face.
+const cardAssetKey = (card, usage = 'cover') => usage === 'full' ? card.asset : usage === 'avatar' ? (card.avatarAsset || card.coverAsset || card.asset) : (card.coverAsset || card.asset);
+const cardImage = (card, usage = 'cover') => ASSETS[cardAssetKey(card, usage)];
 const cardRarity = c => c.id === 'xiaozhou' && sourceCast().xiaozhou.solos >= 3 ? 'SR' : c.rarity;
 const cardStarCount = c => c.id === 'xiaozhou' && sourceCast().xiaozhou.solos >= 3 ? 3 : c.stars;
 const cardOwned = id => cardAvailable(id) && !!state.cards.collection[id]?.owned;
@@ -30,8 +34,24 @@ const cardLevel = id => Math.min(60, 1 + Math.floor((state.cards.collection[id]?
 const cardBond = id => state.affinity[id] || 0;
 const cardName = c => c.id === 'tang' && state.cards.form === 'god' ? '汤少 · 汤神' : c.name;
 const cardDark = () => state.cards.blackUntil > Date.now();
-const cardStars = c => c.placeholder ? '设定待补充' : '★'.repeat(cardStarCount(c)) + ((c.newMember || c.sourceSet || c.id === 'qiqi') && cardStarCount(c) < 5 ? '<span style="opacity:.25">' + '★'.repeat(5 - cardStarCount(c)) + '</span>' : '');
-const cardGifts = c => (c.gifts || DEFAULT_GIFTS).map(g => [g[0], g[1], g[2], BOND_RULES.giftCost, BOND_RULES.giftGain, g[5]]).filter(g => !(c.id === 'zhu' && g[0] === 'night' && (!state.cards.zhuNight || !hiddenSkillReady('zhu'))) && !(c.id === 'baoshi' && g[0] === 'dress' && !hiddenSkillReady('baoshi'))).concat(c.placeholder ? [] : [['full_bond', '满心礼盒', 'gift', BOND_RULES.fullGiftCost, 0, 0]]);
+const cardStars = c => c.placeholder ? '设定待补充' : '★'.repeat(cardStarCount(c)) + ((c.newMember || c.sourceSet || c.profileOnlySkills || c.id === 'qiqi') && cardStarCount(c) < 5 ? '<span style="opacity:.25">' + '★'.repeat(5 - cardStarCount(c)) + '</span>' : '');
+function normalGiftGain(gift, index, gifts) {
+    const rawGain = Number(gift[4]) || 0;
+    // Older cards already carry relative gift values. Newer cards whose
+    // placeholder values are identical progress from everyday to premium.
+    if (gifts.every(item => (Number(item[4]) || 0) <= 1)) {
+        const position = gifts.length <= 1 ? 0 : index / (gifts.length - 1);
+        return position >= .8 ? 10 : position >= .35 ? 5 : 1;
+    }
+    return rawGain >= 13 ? 10 : rawGain >= 10 ? 5 : 1;
+}
+const cardGifts = c => {
+    const gifts = c.gifts || DEFAULT_GIFTS;
+    return gifts.map((g, index) => {
+        const gain = normalGiftGain(g, index, gifts);
+        return [g[0], g[1], g[2], gain * BOND_RULES.notesPerBond, gain, g[5]];
+    }).filter(g => !(c.id === 'zhu' && g[0] === 'night' && (!state.cards.zhuNight || !hiddenSkillReady('zhu'))) && !(c.id === 'baoshi' && g[0] === 'dress' && !hiddenSkillReady('baoshi'))).concat(c.placeholder ? [] : [['full_bond', '满心礼盒', 'gift', BOND_RULES.fullGiftCost, 0, 0]]);
+};
 const isFullBondGift = g => g?.[0] === 'full_bond';
 function giftChoiceDisabled(c, g, used) {
     return isFullBondGift(g) ? cardBond(c.id) >= 100 : used >= BOND_RULES.giftsPerDay;
@@ -46,10 +66,10 @@ function cardGiftHint(c, g, used) {
     if (isFullBondGift(g) && cardBond(c.id) >= 100)
         return '羁绊已达 100，无需再使用满心礼盒。';
     if (g && !isFullBondGift(g) && used >= BOND_RULES.giftsPerDay)
-        return '今日普通投喂已满三次；满心礼盒仍可使用。';
+        return '今日普通投喂已满五次；满心礼盒仍可使用。';
     if (!g)
         return '选择一份心意，再点击投喂。满心礼盒消耗 10000 音符，羁绊直达 100，不占普通投喂次数。';
-    return (isFullBondGift(g) ? '消耗 10000 音符，羁绊直接提升到 100，不占用、不受每日三次限制。' : `这份心意：羁绊分 +${g[4]}、经验 +${g[5]}。`) + (state.coins < g[3] ? '音符不足，先读故事或完成演奏吧。' : '');
+    return (isFullBondGift(g) ? '消耗 10000 音符，羁绊直接提升到 100，不占用、不受每日五次限制。' : `这份心意：${g[3]} 音符、羁绊分 +${g[4]}、经验 +${g[5]}。`) + (state.coins < g[3] ? '音符不足，先读故事或完成演奏吧。' : '');
 }
 function renderGiftChoices(c, gifts, used) {
     return gifts.map(g => `<button class="gift-choice ${isFullBondGift(g) ? 'full-bond-gift' : ''} ${CardUI.gift === g[0] ? 'selected' : ''}" data-card-gift="${g[0]}" aria-pressed="${CardUI.gift === g[0]}" ${giftChoiceDisabled(c, g, used) ? 'disabled' : ''}>${I(g[2])}<span>${g[1]}</span><small>${g[3]} ♪ · ${giftEffectText(g)}</small></button>`).join('');
@@ -82,9 +102,13 @@ function cardBonus(id, ids = state.cards.team) {
     if (id === 'dijie') {
         if (dijieGolden())
             amount = Math.ceil(amount * 1.5);
-        if (expansion().dijie.emo)
+        if (ids.includes('jerry') && hiddenSkillReady('jerry'))
+            amount *= 2;
+        else if (expansion().dijie.emo)
             amount = Math.floor(amount * .7);
     }
+    if (id === 'lala' && ids.includes('jerry') && hiddenSkillReady('jerry'))
+        amount *= 2;
     if (state.cards.prepared?.id === 'shiyuan' && state.cards.prepared.target === id)
         amount = Math.ceil(amount * 1.25);
     if (state.cards.prepared?.id === 'kongge' && state.cards.prepared.target === id && sourceRhythm(id) >= 85)

@@ -7,7 +7,7 @@
 <meta name="description" content="恋与哈基米：离线乐团卡牌小游戏：角色收藏、投喂养成、汤神双形态、编队加成，以及原有猫咪、故事、节奏演奏与回忆。">
 <title>恋与哈基米 · V6.3 剧场之夜版</title>
 <link rel="stylesheet" href="styles/base.css?v=371b9bdd3481">
-<link rel="stylesheet" href="styles/cards.css?v=db4dddfb8be9">
+<link rel="stylesheet" href="styles/cards.css?v=522fefa72b4c">
 <link rel="stylesheet" href="styles/chronicle.css?v=bb2e68f663ce">
 <link rel="stylesheet" href="styles/character-skills.css?v=be62731343cf">
 <link rel="stylesheet" href="styles/chronicle-chapters.css?v=978378d54223">
@@ -19,6 +19,7 @@
 <link rel="stylesheet" href="styles/chronicle-training.css?v=cfae256cd7a5">
 <link rel="stylesheet" href="styles/chronicle-personal.css?v=bd432804595d">
 <link rel="stylesheet" href="styles/gift-cards.css?v=1fa531c8f941">
+<link rel="stylesheet" href="styles/fusion.css?v=7c8888a989c2">
 </head>
 <body>
 <div class="shell">
@@ -79,6 +80,7 @@
 <section class="view" id="view-cards" aria-label="乐团卡册" hidden></section>
 <section class="view" id="view-card" aria-label="角色卡牌详情" hidden></section>
 <section class="view" id="view-chronicle" aria-label="乐团正传" hidden></section>
+<section class="view" id="view-fusion" aria-label="融合线" hidden></section>
 </main>
 <footer class="page-footer"><div class="footer-note"><span data-icon="paw"></span><span>不只是周边，也是可以一起玩的心动回忆。</span></div><button class="text-btn" id="footerHelp">V6.3 · 剧场之夜 · 自动存档</button></footer>
 </div>
@@ -103,35 +105,38 @@
 <!-- Classic scripts intentionally preserve file:// support. Keep dependency order; bootstrap is last. -->
 <script defer src="js/core/utils.js?v=c46c87e3565f"></script>
 <script defer src="js/ui/icons.js?v=917f32c79a18"></script>
-<script defer src="js/data/assets.js?v=d4c15bbf82b9"></script>
+<script defer src="js/data/assets.js?v=04232eac6cfe"></script>
 <script defer src="js/data/characters.js?v=be3fb8e69e14"></script>
 <script defer src="js/data/chronicle-art.js?v=7e589e7fe712"></script>
 <script defer src="js/data/personal-routes.js?v=748f31c1969d"></script>
-<script defer src="js/data/memories.js?v=4bde135ac7d1"></script>
-<script defer src="js/data/cards.js?v=647fb8beaa21"></script>
+<script defer src="js/data/fusion-routes.js?v=3ce05ec44aa6"></script>
+<script defer src="js/data/fusion-art.js?v=48c7caaa0230"></script>
+<script defer src="js/data/memories.js?v=8d5dcb44b2c7"></script>
+<script defer src="js/data/cards.js?v=fbed17f890ca"></script>
 <script defer src="js/data/stories.js?v=7b8e1b84ac47"></script>
 <script defer src="js/data/tracks.js?v=816e7da0afec"></script>
-<script defer src="js/data/chronicle.js?v=a86fa2df32f8"></script>
+<script defer src="js/data/chronicle.js?v=6815bfe0f6a6"></script>
 <script defer src="js/data/chronicle-training.js?v=40d62315e815"></script>
 <script defer src="js/data/chronicle-weeks.js?v=c9c4b4ca957d"></script>
-<script defer src="js/core/economy.js?v=0696ab6aa6a3"></script>
-<script defer src="js/core/bonds.js?v=c6ed496996f7"></script>
-<script defer src="js/core/state.js?v=7be28f7a2537"></script>
-<script defer src="js/cards/state.js?v=b2bb4efb7ca1"></script>
-<script defer src="js/cards/model.js?v=104d55b7aba2"></script>
-<script defer src="js/cards/unlocks.js?v=f053f52db5af"></script>
+<script defer src="js/core/economy.js?v=ab12cf5edc21"></script>
+<script defer src="js/core/bonds.js?v=f22e7f6e81a1"></script>
+<script defer src="js/core/fusion-state.js?v=b8626001fc64"></script>
+<script defer src="js/core/state.js?v=7f397970f0c9"></script>
+<script defer src="js/cards/state.js?v=efa0a935f5d7"></script>
+<script defer src="js/cards/model.js?v=af210712f715"></script>
+<script defer src="js/cards/unlocks.js?v=d485836d93fa"></script>
 <script defer src="js/cards/skills/source.js?v=c37ee5a30996"></script>
 <script defer src="js/cards/skills/qiqi.js?v=578c07ff8c4c"></script>
-<script defer src="js/cards/skills/expansion.js?v=275a4d405d2c"></script>
-<script defer src="js/cards/skills/trio.js?v=17a10ab4b337"></script>
-<script defer src="js/cards/skills/lala.js?v=f2edd4b3188d"></script>
+<script defer src="js/cards/skills/expansion.js?v=88dc4627fa2c"></script>
+<script defer src="js/cards/skills/trio.js?v=8d6609a26356"></script>
+<script defer src="js/cards/skills/lala.js?v=bed614b52f10"></script>
 <script defer src="js/chronicle/art.js?v=d16c064b5011"></script>
 <script defer src="js/chronicle/pulse.js?v=2badbe2411f2"></script>
 <script defer src="js/chronicle/ear.js?v=8501181bed5f"></script>
 <script defer src="js/chronicle/training.js?v=388c285404c3"></script>
 <script defer src="js/chronicle/weeks.js?v=50be28dd9849"></script>
 <script defer src="js/chronicle/bar.js?v=112fa5792ca2"></script>
-<script defer src="js/chronicle/personal.js?v=6fc805b6524e"></script>
+<script defer src="js/chronicle/personal.js?v=31e552192586"></script>
 <script defer src="js/chronicle/persistence.js?v=7eb46dcb55b1"></script>
 <script defer src="js/chronicle/encounters.js?v=4c9e85dcc72d"></script>
 <script defer src="js/chronicle/activities.js?v=469bfe685935"></script>
@@ -142,24 +147,25 @@
 <script defer src="js/chronicle/chapters/three.js?v=ab38806b43e1"></script>
 <script defer src="js/chronicle/chapters/four.js?v=74b6b6e2d2bb"></script>
 <script defer src="js/chronicle/chapters/five-six.js?v=133647810aca"></script>
-<script defer src="js/chronicle/index.js?v=383fdbfec5d0"></script>
-<script defer src="js/audio/story-bgm.js?v=9f54d47ca1ae"></script>
+<script defer src="js/chronicle/index.js?v=acd57120ffdb"></script>
+<script defer src="js/audio/story-bgm.js?v=ec505ea51515"></script>
 <script defer src="js/audio/rhythm-recording.js?v=b53b0982f71b"></script>
 <script defer src="js/audio/synth.js?v=348e96ae8bf1"></script>
-<script defer src="js/features/pet.js?v=62261ad568de"></script>
+<script defer src="js/features/pet.js?v=b8723df27691"></script>
 <script defer src="js/data/gift-keys.js?v=a8649d050684"></script>
 <script defer src="js/features/gift-cards.js?v=2637d2115ed5"></script>
 <script defer src="js/features/settings.js?v=d9cbb0e3ee67"></script>
-<script defer src="js/features/stories.js?v=205065ff670d"></script>
-<script defer src="js/features/album.js?v=8e2035f0f253"></script>
+<script defer src="js/features/stories.js?v=5f9aa037672c"></script>
+<script defer src="js/features/album.js?v=f4edc61a2cae"></script>
 <script defer src="js/features/rhythm.js?v=6317afab0b8a"></script>
-<script defer src="js/cards/views.js?v=b18675959673"></script>
-<script defer src="js/cards/actions.js?v=c34bbd7bccba"></script>
-<script defer src="js/cards/recruitment.js?v=c7c0e19f3590"></script>
+<script defer src="js/features/fusion.js?v=b086b16c594b"></script>
+<script defer src="js/cards/views.js?v=3261b2f121e1"></script>
+<script defer src="js/cards/actions.js?v=33cf6a5b4add"></script>
+<script defer src="js/cards/recruitment.js?v=e076caa8b49e"></script>
 <script defer src="js/cards/performance.js?v=c3b7f2d3f9be"></script>
 <script defer src="js/ui/common.js?v=983ee5e2a062"></script>
-<script defer src="js/ui/shell.js?v=13dafb5d121f"></script>
-<script defer src="js/app/events.js?v=76e70e05a17d"></script>
+<script defer src="js/ui/shell.js?v=ef4f97cc51ff"></script>
+<script defer src="js/app/events.js?v=80caaf50ccec"></script>
 <script defer src="js/app/bootstrap.js?v=659674659542"></script>
 </body>
 </html>

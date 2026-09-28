@@ -97,6 +97,66 @@
       "bit_rate": 128000,
       "sample_rate": 48000,
       "sha256": "02a2d7f660c08fb5b1cb58c211ae1c773083ff9c584df35a36a8625f46bd917a"
+    },
+    {
+      "file": "fusion-my-sunset.mp3",
+      "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/My Sunset (Original Mix).mp3",
+      "title": "My Sunset",
+      "use": "融合线第一篇 · 重返山丘与入线选择",
+      "duration_seconds": 326.177959,
+      "processing": "直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 5219630,
+      "bit_rate": 128019,
+      "sample_rate": 44100,
+      "sha256": "76a9a2501fa3fd6119e8b0e71f8dbcfc44a07cc2428943cb741743dc1f3ea290"
+    },
+    {
+      "file": "fusion-next-to-you.mp3",
+      "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/NEXT TO YOU.mp3",
+      "title": "NEXT TO YOU",
+      "use": "融合线第二篇 · 微信夜聊与乐手日常",
+      "duration_seconds": 224.718367,
+      "processing": "直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 3596163,
+      "bit_rate": 128023,
+      "sample_rate": 44100,
+      "sha256": "a0ffe8443c4aa0fcea9c77cac010a3f8a888d3249d622eb954127567312a893f"
+    },
+    {
+      "file": "fusion-midu-shange.mp3",
+      "source_file": "/Users/hxj/Desktop/弥渡山歌.mp3",
+      "title": "弥渡山歌",
+      "use": "备用曲目 · 当前未启用（曾用于融合线第二篇）",
+      "duration_seconds": 221.424,
+      "processing": "按用户要求直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 8857010,
+      "bit_rate": 320001,
+      "sample_rate": 48000,
+      "sha256": "bc8af09e84e4e9bac4f911789f6f33b288ee97701880aa3839312542e91c5912"
+    },
+    {
+      "file": "fusion-take-off.mp3",
+      "source_file": "/Users/hxj/Documents/work/超级个体/AI 漫剧/bgm/影视解说知识科普配乐---30首/Take Off.mp3",
+      "title": "Take Off",
+      "use": "融合线第三篇 · 六次排练与融合之夜",
+      "duration_seconds": 244.832653,
+      "processing": "直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 3917992,
+      "bit_rate": 128021,
+      "sample_rate": 44100,
+      "sha256": "fb35fc23473e65210edab754f71405b065c9b72b135c03f1700fa120e89f9905"
+    },
+    {
+      "file": "fusion-this-band-is-hard-to-lead.mp3",
+      "source_file": "/Users/hxj/Desktop/这团不好带.mp3",
+      "title": "这团不好带",
+      "use": "融合线第三篇 · 结局页",
+      "duration_seconds": 55.872,
+      "processing": "按用户要求直接复制完整原始 MP3；不转码、不裁剪、不做响度或动态处理",
+      "bytes": 2234930,
+      "bit_rate": 320007,
+      "sample_rate": 48000,
+      "sha256": "fc6a7a4e53f5190d8b6c59172f5f9effefeafa4bd16da1efa6fcc1a2f0af22a2"
     }
   ]
 }

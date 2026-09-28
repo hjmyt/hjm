@@ -615,7 +615,14 @@ const ChronicleData = {
     "jerry": {
       "name": "Jerry",
       "tag": "音乐人 · 分组提议",
-      "icon": "music"
+      "icon": "music",
+      "asset": "avatarJerry"
+    },
+    "xuezi": {
+      "name": "雪子",
+      "tag": "键盘手 · 山丘的男性老友",
+      "icon": "music",
+      "asset": "cardXueziAvatar"
     },
     "xiaojie": {
       "name": "小杰",

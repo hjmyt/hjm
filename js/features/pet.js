@@ -25,11 +25,11 @@ function care(action, el) {
         }
         const ledger = bondProgress(), used = ledger.daily.counts['catGift:cat'] || 0;
         if (used >= BOND_RULES.giftsPerDay) {
-            toast('今天已投喂三次，明天再来吧。');
+            toast(`今天已投喂${BOND_RULES.giftsPerDay}次，明天再来吧。`);
             return;
         }
         if (state.coins < BOND_RULES.giftCost) {
-            toast('音符不够啦，投喂需要 10 音符。');
+            toast(`音符不够啦，投喂需要 ${BOND_RULES.giftCost} 音符。`);
             return;
         }
         state.coins -= BOND_RULES.giftCost;
@@ -39,7 +39,7 @@ function care(action, el) {
         c.mood = clamp(c.mood + 3, 0, 100);
         markDaily('pet');
         sayCat('是小鱼干！你果然最懂我。');
-        toast('喂食成功 · 音符 −10 · 饱腹感 +18 · 羁绊分 +' + gained);
+        toast(`喂食成功 · 音符 −${BOND_RULES.giftCost} · 饱腹感 +18 · 羁绊分 +${gained}`);
     }
     else if (action === 'play') {
         if (c.energy < 10) {

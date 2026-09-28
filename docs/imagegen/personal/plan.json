@@ -712,7 +712,9 @@
         "id": "cp_00b",
         "title": "入队 · 530的邀请",
         "asset": "personal_cp_00b",
-        "memory": "cp7_cp_00b"
+        "memory": "cp7_cp_00b",
+        "sourceOverride": "assets/chronicle/personal/source/cp_00b-fixed.png",
+        "promptOverride": "docs/imagegen/personal/anatomy-fixes-2026-09-27.md"
       },
       {
         "id": "cp_01",
@@ -1024,7 +1026,9 @@
         "id": "cp_10_page2",
         "title": "离开 · 行李箱",
         "asset": "personal_cp_10_page2",
-        "memory": "cp7_cp_10_page2"
+        "memory": "cp7_cp_10_page2",
+        "sourceOverride": "assets/chronicle/personal/source/cp_10_page2-fixed.png",
+        "promptOverride": "docs/imagegen/personal/anatomy-fixes-2026-09-27.md"
       },
       {
         "id": "cp_10_page3",

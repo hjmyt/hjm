@@ -22,7 +22,7 @@ function renderStory() {
     if (!storySession)
         return;
     const s = storySession, c = CHARACTERS.find(c => c.id === s.id), d = STORIES[s.id];
-    $('storyPortrait').src = ASSETS[c.asset];
+    $('storyPortrait').src = cardImage(cardDef(c.id) || c, 'full');
     $('storyPortrait').alt = c.name;
     $('storyLocation').textContent = c.location;
     $('storySceneTitle').innerHTML = c.scene.split('\n').map(escapeHTML).join('<br>') + `<small>${c.eng}</small>`;
@@ -86,6 +86,6 @@ function renderCharacters() {
         if (!cardAvailable(c.id))
             return `<article class="char-card locked-story"><div class="chapter-lock-art">${I('lock')}</div><div class="char-info"><h3>${c.name}</h3><p>${chapterLockText(c.id)}</p><button class="btn secondary" data-route="chronicle">继续剧情</button></div></article>`;
         const done = state.completed.includes(c.id), prog = state.storyProgress[c.id], own = cardOwned(c.id), cd = cardDef(c.id);
-        return `<article class="char-card ${own ? '' : 'locked-story'}"><div class="char-art"><img src="${ASSETS[c.asset]}" alt="${c.name}"><span class="char-instrument">${I(cd?.icon || 'music', 'sm')} ${c.instrument}</span><span class="char-aff">${own ? '♡ ' + cardBond(c.id) : '等待邀请'}</span></div><div class="char-info"><h3>${c.name}</h3><p>${c.quote}</p><button class="btn ${done ? 'secondary' : 'primary'}" ${own ? `data-character="${c.id}"` : 'data-card-recruit'}>${!own ? '先邀请，再相遇' : done ? '重温这次相遇' : prog ? '继续这次相遇' : '和 TA 相遇'}${I('arrow')}</button><button class="story-card-entry" data-card-open="${c.id}">${I('cards')}查看${cardRarity(cd)}卡牌 · 技能与投喂</button><div class="char-chapter">${done ? '已珍藏 · ' : ''}${c.chapter}</div></div></article>`;
+        return `<article class="char-card ${own ? '' : 'locked-story'}"><div class="char-art"><img class="card-cover-image" src="${cardImage(cd || c)}" alt="${c.name}"><span class="char-instrument">${I(cd?.icon || 'music', 'sm')} ${c.instrument}</span><span class="char-aff">${own ? '♡ ' + cardBond(c.id) : '等待邀请'}</span></div><div class="char-info"><h3>${c.name}</h3><p>${c.quote}</p><button class="btn ${done ? 'secondary' : 'primary'}" ${own ? `data-character="${c.id}"` : 'data-card-recruit'}>${!own ? '先邀请，再相遇' : done ? '重温这次相遇' : prog ? '继续这次相遇' : '和 TA 相遇'}${I('arrow')}</button><button class="story-card-entry" data-card-open="${c.id}">${I('cards')}查看${cardRarity(cd)}卡牌 · 技能与投喂</button><div class="char-chapter">${done ? '已珍藏 · ' : ''}${c.chapter}</div></div></article>`;
     }).join('');
 }

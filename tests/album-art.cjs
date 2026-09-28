@@ -7,7 +7,7 @@ const { createHash } = require('node:crypto');
 const http = require('node:http');
 const root = path.resolve(__dirname, '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'docs/imagegen/album-art.json')));
-const catalog = vm.runInNewContext(fs.readFileSync(path.join(root, 'js/data/assets.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/chronicle-art.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/personal-routes.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/memories.js'), 'utf8') + '\n({ASSETS,MEMORIES})');
+const catalog = vm.runInNewContext(fs.readFileSync(path.join(root, 'js/data/assets.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/chronicle-art.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/personal-routes.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/fusion-routes.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/fusion-art.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/memories.js'), 'utf8') + '\n({ASSETS,MEMORIES})');
 assert.equal(manifest.length, 64);
 assert.equal(new Set(manifest.map(m => m.id)).size, 64);
 assert.equal(new Set(manifest.map(m => createHash('sha256').update(fs.readFileSync(path.join(root, m.asset))).digest('hex'))).size, 64, 'Every event has a distinct image');
@@ -76,7 +76,7 @@ const server = http.createServer((req, res) => {
     // Export keeps the complete square scene and names the correct event.
     await page.evaluate(() => showMemory('cp_audition'));
     const pendingDownload = page.waitForEvent('download');
-    await page.locator('#saveMemoryPhoto').click();
+    await page.evaluate(() => document.querySelector('#saveMemoryPhoto').click());
     const download = await pendingDownload;
     assert(download.suggestedFilename().includes(catalog.MEMORIES.find(m => m.id === 'cp_audition').title));
     const exported = '/tmp/hjm-album-export.png'; await download.saveAs(exported);

@@ -504,7 +504,9 @@
         "title": "他看过三次门口",
         "location": "楼梯间 · 阿喆",
         "text": "阿喆抱着琴坐在楼梯间，看见你来，才慢慢说起刚才的心事。",
-        "description": "Azhe reference 1 slim wavy brown hair fine round glasses black shirt sits in stairwell holding violin close, looks toward viewer with shy hurt but grateful expression, dim corridor lamp, no other named characters."
+        "description": "Azhe reference 1 slim wavy brown hair fine round glasses black shirt sits in stairwell holding violin close, looks toward viewer with shy hurt but grateful expression, dim corridor lamp, no other named characters.",
+        "sourceOverride": "assets/chronicle/scenes/source/scene_2_c2_head_a-fixed.png",
+        "promptOverride": "docs/imagegen/chronicle/anatomy-fixes-2026-09-27.md"
       }
     ],
     "prompt": "Use case: illustration-story. Generate ONE eight-panel atlas for a Chinese orchestra visual novel. EXACT 4 columns x 2 rows, eight equal SQUARE scenes, overall 2:1 landscape. Aim 3072x1536. Straight borders at 25%,50%,75% width and 50% height. No gutters, borders, labels, numbers, text captions, watermark, comic bubbles or UI. Strict row-major scene order. Each panel is an independent complete image with defining faces, hands, instruments and narrative props inside the central 80%, no bleeding across cells. Medium shot or environmental close shot, clear action rather than generic portraits. Do not combine different panels.\nStyle: warm cinematic semi-realistic anime game CG, delicate linework, expressive adult Chinese musicians, richly painted environments. Each character is an ADULT. Preserve character faces, hairstyles and signature clothes from supplied references. References guide identity only, not composition. Small venue Shanqiu is a cozy wood-and-amber bar with music stands. Match mood to text, sad scenes not smiles, anticipation not triumph. Musical notation abstract, no readable text.\n\nReference order: 1 Azhe, 2 Lala, 3 Dayang, 4 Baoshi, 5 Tang. Preserve each IDENTITY; do not transfer glasses or costumes between characters.\n\nPANEL 1 (top row, column 1): Exactly three adult MEN: Azhe (REFERENCE 1 wavy BROWN hair fine ROUND GLASSES, slim BLACK shirt) in front flipping score pages, Dijie (tousled black hair NO GLASSES, brown plaid overshirt) behind a music stand holding a silver flute, Tang (REFERENCE 5 black jacket black hair) adjusting camera near door. Do NOT draw stocky Kongge or rectangular glasses on Azhe.\nPANEL 2 (top row, column 2): Azhe (REFERENCE 1, slim adult wavy BROWN hair, fine ROUND GLASSES, black shirt) kindly leans toward viewer flipping a marked music score, violin on desk, in a warm bar rehearsal room after an unsuccessful audition. Full gentle expressive face, not Kongge.\nPANEL 3 (top row, column 3): LALA (REFERENCE 2: young ADULT woman long brown hair tied PALE RIBBON, white blouse with dark bow and dark pleated skirt, NO QIPAO, NO FLORAL dress, NOT Qiqi) reviews a concert setlist on a closed violin case and points at starting cues, with friends softly blurred. Warm rehearsal room.\nPANEL 4 (top row, column 4): Dayang (REFERENCE 3 male adult long tied-back black hair, round glasses, dark shirt) carries an acoustic guitar while pointing earnestly at eight marked music bars on program, tablet with audio clips beside it, discussing a longer solo at theatre rehearsal.\nPANEL 5 (bottom row, column 1): Baoshi (REFERENCE 4 delicate black-haired adult MALE, ivory shirt, NO GLASSES) sneaks through rehearsal-room door hiding a paper bag containing a visible piece of lavender dress fabric. Bashful flustered expression, not wearing the dress yet.\nPANEL 6 (bottom row, column 2): Lala reference 2 long ribbon-tied brown hair white blouse dark bow quietly leans toward viewer by a rehearsal-room door, holding a score notebook close, serious caring whisper, not qipao.\nPANEL 7 (bottom row, column 3): Lala reference 2 white blouse dark bow long brown hair pale ribbon sits with violin among a small string quartet, looks quietly toward viewer arriving beside her, warm bar music stands, not a full orchestra or stage.\nPANEL 8 (bottom row, column 4): Azhe reference 1 slim wavy brown hair fine round glasses black shirt sits in stairwell holding violin close, looks toward viewer with shy hurt but grateful expression, dim corridor lamp, no other named characters."
@@ -580,6 +582,8 @@
         "id": "scene_2_c2_night_pre",
         "title": "黑板分成了两半",
         "location": "山丘 · 暗涌",
+        "sourceOverride": "assets/chronicle/scenes/source/scene_2_c2_night_pre-jerry.png",
+        "promptOverride": "docs/imagegen/chronicle/scene_2_c2_night_pre-jerry.md",
         "description": "Jerry\n音乐人 · 分组提议\n第 6 周 · 正传\n那晚，音乐人 Jerry 自己来到了山丘酒吧。他只看了一场排练就给出诊断：「一锅烩，必死。要分组。」\n\n黑板被分成两半——左边写着「弦乐组」，右边写着「流行组」。朱老师沉默良久，点了点头。史称：哈基米之夜。"
       },
       {
@@ -1345,7 +1349,9 @@
         "id": "scene_4_live_intro",
         "title": "站到灯光里",
         "location": "剧场 · 排练与相遇",
-        "description": "十元\n白月光 · ENFP · 正传团长\n第 6 周 · 正传\n剧场之夜！满场的灯光像星星掉进了观众席——上吧！"
+        "description": "十元\n白月光 · ENFP · 正传团长\n第 6 周 · 正传\n剧场之夜！满场的灯光像星星掉进了观众席——上吧！",
+        "sourceOverride": "assets/chronicle/scenes/source/scene_4_live_intro-fixed.png",
+        "promptOverride": "docs/imagegen/chronicle/anatomy-fixes-2026-09-27.md"
       },
       {
         "chapter": 4,
@@ -1497,7 +1503,9 @@
         "id": "scene_6_live_intro",
         "title": "站到灯光里",
         "location": "拾光 · 首演",
-        "description": "十元\n白月光 · ENFP · 正传团长\n第 6 周 · 正传\n《拾光》开幕！这一晚，我们把两年的路，唱给所有人听！"
+        "description": "十元\n白月光 · ENFP · 正传团长\n第 6 周 · 正传\n《拾光》开幕！这一晚，我们把两年的路，唱给所有人听！",
+        "sourceOverride": "assets/chronicle/scenes/source/scene_6_live_intro-fixed.png",
+        "promptOverride": "docs/imagegen/chronicle/anatomy-fixes-2026-09-27.md"
       },
       {
         "id": "scene_1_b_live_unready",
@@ -1609,7 +1617,9 @@
         "location": "剧院 · 开幕前",
         "text": "总谱终于写完，大家在舞台侧幕整理好谱页，等待首演。",
         "description": "音乐剧首演前侧幕，朱老师短发方框眼镜身旁是一整套已完成装订总谱，十元抱琴等待登台，灯光尚未亮起，不是庆祝谢幕。",
-        "condition": "performanceReady"
+        "condition": "performanceReady",
+        "sourceOverride": "assets/chronicle/scenes/source/scene_6_b_live_ready-fixed.png",
+        "promptOverride": "docs/imagegen/chronicle/anatomy-fixes-2026-09-27.md"
       },
       {
         "id": "scene_2_c2_kong_a_stay",
