@@ -8,6 +8,8 @@ const V5_KEY = 'love_hakimi_cards_save_v5';
 const V4_KEY = 'love_hakimi_cards_save_v4';
 const PREVIOUS_KEY = 'love_hakimi_cards_save_v2';
 const LEGACY_KEY = 'love_hakimi_save_v1';
+const BACKUP_KEY = 'love_hakimi_cards_save_v62_backup';
+const RECOVERY_KEY = 'love_hakimi_cards_save_v62_recovery';
 
 // The wallet is deliberately only a lightweight anti-tamper layer. Its fixed
 // key is split so the balance is not exposed by a plain-text search in either
@@ -93,16 +95,18 @@ function sealBonds(source) {
     const values = { cat: sealProtectedNumber(source.cat.aff, 'bond:cat') };
     for (const card of CARD_DEFS)
         values[card.id] = sealProtectedNumber(source.affinity[card.id] || 0, 'bond:' + card.id);
-    return { v: 1, values };
+    return { v: 2, values };
 }
 function openBonds(vault) {
-    if (!vault || vault.v !== 1 || !vault.values || typeof vault.values !== 'object')
+    if (!vault || ![1, 2].includes(vault.v) || !vault.values || typeof vault.values !== 'object')
         throw new Error('羁绊数据校验失败');
     const values = { cat: openProtectedNumber(vault.values.cat, 'bond:cat') };
     for (const card of CARD_DEFS) {
-        // Xiaojie was added after bond vault v1 shipped. Old valid vaults do not
-        // have a token for him, so seed only that newly introduced bond at zero.
-        values[card.id] = card.id === 'xiaojie' && vault.values[card.id] === undefined
+        // Bond vault v1 shipped before Xiaojie and REK. Their missing tokens are
+        // valid only in v1; v2 requires the complete roster so deleting an
+        // existing protected value still fails validation.
+        const legacyAddition = vault.v === 1 && ['xiaojie', 'rek'].includes(card.id);
+        values[card.id] = legacyAddition && vault.values[card.id] === undefined
             ? 0
             : openProtectedNumber(vault.values[card.id], 'bond:' + card.id);
     }
@@ -234,37 +238,86 @@ function cleanImportedState(obj) {
         throw new Error('导入存档缺少完整的加密成长数据');
     return cleanState(obj);
 }
-let storageOK = true, state;
-function loadState() {
+let storageOK = true, storageRecovered = false, storageLoadError = '', state;
+function preserveUnreadableSave(raw) {
+    if (!raw)
+        return;
     try {
-        const current = localStorage.getItem(KEY);
-        if (current)
-            state = cleanImportedState(JSON.parse(current));
-        else {
-            const legacy = localStorage.getItem(V61_KEY) || localStorage.getItem(V6_KEY) || localStorage.getItem(V53_KEY) || localStorage.getItem(V5_KEY) || localStorage.getItem(V4_KEY) || localStorage.getItem(PREVIOUS_KEY) || localStorage.getItem(LEGACY_KEY);
-            state = legacy ? cleanState(JSON.parse(legacy)) : freshState();
-        }
+        if (!localStorage.getItem(RECOVERY_KEY))
+            localStorage.setItem(RECOVERY_KEY, raw);
     }
-    catch (e) {
+    catch {}
+}
+function loadState() {
+    storageOK = true;
+    storageRecovered = false;
+    storageLoadError = '';
+    let current;
+    try {
+        current = localStorage.getItem(KEY);
+    }
+    catch (error) {
         state = freshState();
         storageOK = false;
+        storageLoadError = '浏览器拒绝读取本地存档，自动保存已暂停，现有数据不会被覆盖。';
+        return;
+    }
+    if (current) {
+        try {
+            state = cleanImportedState(JSON.parse(current));
+            return;
+        }
+        catch (error) {
+            preserveUnreadableSave(current);
+            try {
+                const backup = localStorage.getItem(BACKUP_KEY);
+                if (backup) {
+                    state = cleanImportedState(JSON.parse(backup));
+                    storageRecovered = true;
+                    storageLoadError = '当前存档校验失败，已自动恢复上一份可读备份。';
+                    return;
+                }
+            }
+            catch {}
+            state = freshState();
+            storageOK = false;
+            storageLoadError = '存档读取失败，原始数据已保留，自动保存已暂停。请从设置导入备份，或导出故障存档交给开发者恢复。';
+            return;
+        }
+    }
+    try {
+            const legacy = localStorage.getItem(V61_KEY) || localStorage.getItem(V6_KEY) || localStorage.getItem(V53_KEY) || localStorage.getItem(V5_KEY) || localStorage.getItem(V4_KEY) || localStorage.getItem(PREVIOUS_KEY) || localStorage.getItem(LEGACY_KEY);
+            state = legacy ? cleanState(JSON.parse(legacy)) : freshState();
+    }
+    catch (error) {
+        state = freshState();
+        storageOK = false;
+        storageLoadError = '旧存档读取失败，原始数据未被覆盖，自动保存已暂停。';
     }
 }
 let currentView = 'home', albumFilter = 'all', modalPreviousFocus = null, modalOnClose = null, lastPetAction = -1000, lastRest = 0, storySession = null;
 function save() {
+    if (!storageOK)
+        return false;
     syncUnifiedBonds(state);
     syncGlobalLevels(state);
     syncStoryCards();
     try {
+        const current = localStorage.getItem(KEY);
+        if (current && !storageRecovered)
+            localStorage.setItem(BACKUP_KEY, current);
         localStorage.setItem(KEY, JSON.stringify(persistedState()));
         for (const key of [V61_KEY, V6_KEY, V53_KEY, V5_KEY, V4_KEY, PREVIOUS_KEY, LEGACY_KEY])
             localStorage.removeItem(key);
         storageOK = true;
+        storageRecovered = false;
+        return true;
     }
     catch (e) {
         if (storageOK)
             toast('浏览器暂不允许保存；可在设置里导出存档。');
         storageOK = false;
+        return false;
     }
 }
 function ensureDaily() {

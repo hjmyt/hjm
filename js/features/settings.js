@@ -8,7 +8,9 @@ function showHelp() {
 function showSettings() {
     if (['running', 'countdown'].includes(game.status))
         pauseGame();
-    openModal('留住我们的排练日常', `<label class="form-label" for="nicknameInput">大家怎么称呼你？</label><div class="form-row"><input class="text-input" id="nicknameInput" maxlength="12" value="${escapeHTML(state.nickname)}" placeholder="最多 12 个字"><button class="btn primary" id="saveNickname">保存</button></div><label class="form-label" for="catNameInput">团宠的小名</label><div class="form-row"><input class="text-input" id="catNameInput" maxlength="10" value="${escapeHTML(state.catName)}"><button class="btn secondary" id="saveCatName">保存</button></div><h3>存档只属于你</h3><p>${storageOK ? '正在自动保存到这个浏览器。' : '当前浏览器限制了自动存档，请导出备份。'}第一章、第二章以及卡牌养成都包含在同一份 JSON 备份中。移动 HTML 文件、切换浏览器或清理浏览数据后，原存档可能不可用。建议重新导出一份带加密音符、羁绊和等级数据的备份；旧版本地存档会自动升级，但旧版明文备份文件不再支持导入。</p><div class="settings-actions"><button class="btn secondary small" id="exportSave">${I('download')}导出存档</button><button class="btn ghost small" id="importSave">${I('album')}导入存档</button><button class="btn ghost small" id="resetSave">重新开始</button></div><div class="modal-foot">所有音符与奖励仅为本地游戏数据，无实际货币价值。游戏不收集或上传任何个人信息。</div>`);
+    let recoveryRaw = '';
+    try { recoveryRaw = localStorage.getItem(RECOVERY_KEY) || ''; } catch {}
+    openModal('留住我们的排练日常', `<label class="form-label" for="nicknameInput">大家怎么称呼你？</label><div class="form-row"><input class="text-input" id="nicknameInput" maxlength="12" value="${escapeHTML(state.nickname)}" placeholder="最多 12 个字"><button class="btn primary" id="saveNickname">保存</button></div><label class="form-label" for="catNameInput">团宠的小名</label><div class="form-row"><input class="text-input" id="catNameInput" maxlength="10" value="${escapeHTML(state.catName)}"><button class="btn secondary" id="saveCatName">保存</button></div><h3>存档只属于你</h3><p>${storageOK ? '正在自动保存到这个浏览器。' : '检测到存档读取异常，自动保存已暂停且原始数据没有被覆盖。'}第一章、第二章以及卡牌养成都包含在同一份 JSON 备份中。移动 HTML 文件、切换浏览器或清理浏览数据后，原存档可能不可用。建议重新导出一份带加密音符、羁绊和等级数据的备份；旧版本地存档会自动升级，但旧版明文备份文件不再支持导入。</p><div class="settings-actions"><button class="btn secondary small" id="exportSave">${I('download')}导出存档</button>${recoveryRaw ? `<button class="btn secondary small" id="exportRecoverySave">${I('download')}导出故障原始存档</button>` : ''}<button class="btn ghost small" id="importSave">${I('album')}导入存档</button><button class="btn ghost small" id="resetSave">重新开始</button></div><div class="modal-foot">所有音符与奖励仅为本地游戏数据，无实际货币价值。游戏不收集或上传任何个人信息。</div>`);
     $('saveNickname').onclick = () => {
         const v = $('nicknameInput').value.trim();
         if (!v) {
@@ -32,8 +34,10 @@ function showSettings() {
         toast(`以后就叫 ${state.catName} 啦。`, true);
     };
     $('exportSave').onclick = exportSave;
+    if ($('exportRecoverySave'))
+        $('exportRecoverySave').onclick = () => { downloadBlob(new Blob([recoveryRaw], { type: 'application/json' }), `恋与哈基米_故障原始存档_${dateKey()}.json`); toast('故障原始存档已导出；请保留它用于人工恢复。', true); };
     $('importSave').onclick = () => $('importInput').click();
-    $('resetSave').onclick = () => { openModal('真的要重新相遇吗？', `<p>这会清空 V6.2 的猫咪、故事、相册、成绩、卡牌等级、邀请券、编队，以及正传周目和结局图鉴。只想重开正传，请在「乐团剧情」中重开本周目。建议先导出存档。</p><div class="settings-actions"><button class="btn ghost" id="cancelReset">还是留着吧</button><button class="btn primary" id="confirmReset">确认重新开始</button></div>`); $('cancelReset').onclick = showSettings; $('confirmReset').onclick = () => { stopGame(true); Chronicle.suspend(); state = freshState(); storySession = null; lastPetAction = 0; lastRest = 0; save(); closeModal(); renderCharacters(); $('storyPlayer').hidden = true; $('storySelect').hidden = false; route('home'); sayCat('你来啦！今天也想贴贴。'); toast('新的一页，正在等你。', true); }; };
+    $('resetSave').onclick = () => { openModal('真的要重新相遇吗？', `<p>这会清空 V6.2 的猫咪、故事、相册、成绩、卡牌等级、邀请券、编队，以及正传周目和结局图鉴。只想重开正传，请在「乐团剧情」中重开本周目。建议先导出存档。</p><div class="settings-actions"><button class="btn ghost" id="cancelReset">还是留着吧</button><button class="btn primary" id="confirmReset">确认重新开始</button></div>`); $('cancelReset').onclick = showSettings; $('confirmReset').onclick = () => { stopGame(true); Chronicle.suspend(); state = freshState(); storySession = null; lastPetAction = 0; lastRest = 0; storageOK = true; storageRecovered = true; storageLoadError = ''; save(); closeModal(); renderCharacters(); $('storyPlayer').hidden = true; $('storySelect').hidden = false; route('home'); sayCat('你来啦！今天也想贴贴。'); toast('新的一页，正在等你。', true); }; };
 }
 function downloadBlob(blob, filename) { const url = URL.createObjectURL(blob), a = document.createElement('a'); a.href = url; a.download = filename; document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 60000); }
 function exportSave() { downloadBlob(new Blob([JSON.stringify(persistedState(), null, 2)], { type: 'application/json' }), `恋与哈基米_存档_${dateKey()}.json`); toast('存档备份已生成。', true); }
@@ -53,7 +57,7 @@ async function importSave(file) {
         const obj = cleanImportedState(raw);
         openModal('恢复这份排练日记？', `<p>玩家：${escapeHTML(obj.nickname)}<br>猫咪：${escapeHTML(obj.catName)}<br>已收藏 ${obj.memories.length} 张回忆，拥有 ${obj.coins} 音符。<br>乐团 Lv.${globalOrchestraLevel(obj)} · 乐队 Lv.${globalBandLevel(obj)}<br>卡牌 ${Object.values(obj.cards.collection).filter(c => c.owned).length} / ${CARD_DEFS.length}，邀请券 ${obj.cards.tickets}。</p><p style="margin-top:12px">导入会覆盖当前完整存档。只有带有效加密音符、羁绊与等级数据的新版备份可以导入；仅恢复仍在卡册中的伙伴，已移除角色的相关数据不会重新加入。</p><div class="settings-actions"><button class="btn ghost" id="cancelImport">取消</button><button class="btn primary" id="confirmImport">恢复存档</button></div>`);
         $('cancelImport').onclick = closeModal;
-        $('confirmImport').onclick = () => { Chronicle.suspend(); stopGame(true); state = obj; save(); storySession = null; $('storyPlayer').hidden = true; $('storySelect').hidden = false; closeModal(); route('home'); sayCat('你回来啦，我一直记得你。'); toast('所有回忆，都回来啦。', true); };
+        $('confirmImport').onclick = () => { Chronicle.suspend(); stopGame(true); state = obj; storageOK = true; storageRecovered = true; storageLoadError = ''; save(); storySession = null; $('storyPlayer').hidden = true; $('storySelect').hidden = false; closeModal(); route('home'); sayCat('你回来啦，我一直记得你。'); toast('所有回忆，都回来啦。', true); };
     }
     catch (e) {
         toast(e?.message === '导入存档缺少完整的加密成长数据' ? '导入失败。' : '这份文件不是有效的游戏存档，原进度没有改变。');
