@@ -193,10 +193,10 @@ function createChronicleActivities(ctx) {
             if (b.win) {
                 r.flags.practiceWin = 1;
                 if(b.partner==='baoshi_feihong')r.flags.baoFeiPractice=1;
-                r.level++;
+                raiseOrchestraLevel();
                 const gain = claimEconomy('battle', 3, { daily: true });
                 ctx.reward('audition');
-                ctx.log(`考核合格：音符 +${gain}（每日首次 +3），乐团提升到 Lv.${r.level}；考核不增加琴技。`);
+                ctx.log(`考核合格：音符 +${gain}（每日首次 +3），乐团提升到 Lv.${globalOrchestraLevel()}；考核不增加琴技，乐队等级不随乐团考核变化。`);
             }
             else {
                 r.flags.practiceFail = 1;

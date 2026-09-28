@@ -28,7 +28,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
   scene(4,'c4_prep');const old=state.chronicle.run.journal.at(-1);old.who='lala';const before=JSON.stringify(state.chronicle);
   check('Old journal corrects Dayang',Chronicle.journalSpeaker(old,state.chronicle.run)==='大羊');check('Reading attribution does not change progress',JSON.stringify(state.chronicle)===before);
   showLalaJournal(4);check('Notebook displays corrected label',document.querySelector('.lala-journal-dialogue b').textContent==='大羊');check('Export displays corrected label',lalaJournalText(state.chronicle.run).includes('第 1 周 · 大羊'));closeModal(false);
-  check('Named musicians use cards while actual guests stay outside the pool',CARD_DEFS.some(c=>c.id==='jerry')&&CARD_DEFS.some(c=>c.id==='laodu')&&CARD_DEFS.some(c=>c.id==='xuezi')&&!CARD_DEFS.some(c=>['xiaojie','narrator','crowd'].includes(c.id)));
+  check('Named musicians use cards while actual guests stay outside the pool',CARD_DEFS.some(c=>c.id==='jerry')&&CARD_DEFS.some(c=>c.id==='laodu')&&CARD_DEFS.some(c=>c.id==='xuezi')&&CARD_DEFS.some(c=>c.id==='xiaojie')&&!CARD_DEFS.some(c=>['narrator','crowd'].includes(c.id)));
   save();return {count:checks.length,scenes:Object.values(expected).reduce((n,v)=>n+Object.keys(v).length,0)};
  });
  await page.reload();await page.evaluate(()=>route('chronicle'));assert.equal(await page.locator('#cpMain [data-speaker]').first().getAttribute('data-speaker'),'dayang');

@@ -1915,7 +1915,7 @@ const CARD_DEFS = [
     "avatarAsset": "cardYuerouAvatar",
     "icon": "music",
     "tag": "高挑 · 奶呼呼 · 可甜可盐",
-    "stars": 3,
+    "stars": 5,
     "bonus": 2,
     "active": 6,
     "subtitle": "户外全能，三分钟就能把陌生人变成下一次同行的人。",
@@ -2028,6 +2028,48 @@ const CARD_DEFS = [
     "gifts": [["chicken_beer", "炸鸡配啤酒", "gift", 10, 1, 24], ["headphones", "新耳机", "music", 10, 1, 24], ["harmony", "给他和声一次", "team", 10, 1, 24]],
     "thanks": ["“来，夜宵算我的下一轮。”", "“正好，排练时能把每一层和声听清了。”", "“这次换我站在你的声音后面。”"],
     "chronicleOnly": true
+  },
+  {
+    "id": "xiaojie",
+    "name": "小杰",
+    "rarity": "R",
+    "role": "木吉他手",
+    "group": "流行组",
+    "asset": "cardXiaojie",
+    "coverAsset": "cardXiaojieCover",
+    "avatarAsset": "cardXiaojieAvatar",
+    "icon": "music",
+    "tag": "木吉他 · 街头演奏",
+    "stars": 3,
+    "bonus": 1,
+    "active": 4,
+    "subtitle": "人群散了，他仍把排练室钥匙和没唱完的歌留在身边。",
+    "quote": "兄弟，一起把歌唱好。",
+    "identity": "木吉他手 · 流行组伙伴",
+    "seat": "木吉他",
+    "specialty": "弹唱伴奏 · 街头演奏 · 守住排练室",
+    "rival": "根音一乱就更容易紧张",
+    "profileFields": [
+      ["外形", "短乱黑发 · 矩形眼镜 · 黑色舞台装"],
+      ["乐器", "黑色木吉他"],
+      ["位置", "流行组 · 木吉他手"],
+      ["后来", "仍会带着音箱，在周末的街头继续唱歌"]
+    ],
+    "stats": [["木吉他", 76], ["弹唱", 78], ["坚持", 92], ["临场心态", 62]],
+    "statnote": "他不是最耀眼的那一个，却常常是散场后还没有离开的人。",
+    "activeName": "一起把歌唱好",
+    "activeText": "把复杂的舞台重新拉回一把木吉他与一段真诚的和声，让同队伙伴稳住下一句。",
+    "passiveName": "排练室的钥匙",
+    "passiveText": "人来人往，他依然记得开门、调音，也记得把最后一盏灯关好。",
+    "profileOnlySkills": true,
+    "extraSkills": [
+      { "name": "没有散场", "tag": "隐藏技能", "icon": "sparkles", "text": "就算乐队渐渐聚不齐，他仍会在周末接上音箱。只要歌还在响，这场演出就没有真正散场。" }
+    ],
+    "bio": "流行组的木吉他手，短乱黑发、矩形眼镜，习惯一身黑色舞台装。紧张时会把根音弹乱，但人群散去以后，他仍愿意抱着琴留下来；后来也一直带着音箱，在街头继续唱。",
+    "giftTitle": "给街头演出添一点底气",
+    "gifts": [["pick", "一盒彩色拨片", "music", 10, 1, 24], ["strings", "一套木吉他弦", "gift", 10, 1, 24], ["amp_battery", "便携音箱电池", "sun", 10, 1, 24]],
+    "thanks": ["“正好，今晚可以换一种手感。”", "“谢谢。下次排练前我就换上。”", "“电量满了，周末还能再唱几首。”"],
+    "chronicleOnly": true
   }
 ];
 
@@ -2090,7 +2132,8 @@ const COLLECTION_ORDER = [
   "jerry",
   "yuerou",
   "laodu",
-  "xuezi"
+  "xuezi",
+  "xiaojie"
 ];
 
 const STORY_CARD_ALIASES = {
@@ -2106,6 +2149,9 @@ const STORY_CARD_ALIASES = {
   ],
   "xuezi": [
     "雪子"
+  ],
+  "xiaojie": [
+    "小杰"
   ],
   "huangyx": [
     "黄奕兴"

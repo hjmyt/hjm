@@ -20,7 +20,7 @@ const path=require('node:path');
    const ordinaryGifts=CARD_DEFS.filter(c=>!c.placeholder).flatMap(c=>effectiveGifts(c).filter(g=>!isFullBondGift(g)));
    for(const c of CARD_DEFS.filter(c=>!c.placeholder))check(c.id+' gifts use the five-notes-per-bond rule',effectiveGifts(c).filter(g=>!isFullBondGift(g)).every(g=>[1,5,10].includes(g[4])&&g[3]===g[4]*5));
    check('All three ordinary gift tiers exist',BOND_RULES.giftGains.every(gain=>ordinaryGifts.some(g=>g[4]===gain)));
-   for(const id of ['jerry','yuerou','laodu','xuezi'])check(id+' receives low, medium and premium gifts',[1,5,10].every(gain=>effectiveGifts(cardDef(id)).some(g=>!isFullBondGift(g)&&g[4]===gain)));
+   for(const id of ['jerry','yuerou','laodu','xuezi','xiaojie'])check(id+' receives low, medium and premium gifts',[1,5,10].every(gain=>effectiveGifts(cardDef(id)).some(g=>!isFullBondGift(g)&&g[4]===gain)));
    goCard('lala');CardUI.gift=effectiveGifts(cardDef('lala'))[0][0];state.coins=4;feedCard();
    check('Insufficient coins change neither points nor quota',state.coins===4&&cardBond('lala')===0&&!state.cards.daily.gifts.lala);
    state.coins=30;feedCard();feedCard();feedCard();feedCard();feedCard();feedCard();

@@ -29,6 +29,7 @@ const cli = (...args) => execFileSync(process.execPath, [path.join(root, 'script
   page.on('pageerror',e=>errors.push(e.message));
   await page.route(url=>url.pathname.endsWith('/js/data/gift-keys.js'), route=>route.fulfill({contentType:'application/javascript',body:fs.readFileSync(pub,'utf8')}));
   await page.goto(pathToFileURL(path.join(root,'index.html')).href);
+  await page.locator('[data-music-enter-muted]').click();
   await page.evaluate(()=>{state.sound=false;save();});
   await page.locator('#giftBtn').click();
   await page.locator('#giftCode').fill('MEOW2026');await page.locator('#redeemGift').click();
@@ -70,6 +71,7 @@ const cli = (...args) => execFileSync(process.execPath, [path.join(root, 'script
   await page.evaluate(()=>window.dispatchEvent(new StorageEvent('storage',{key:KEY})));
   await rejected(signed(),/存档已变化/);
   await page.reload();
+  await page.locator('[data-music-enter-muted]').click();
   for(const width of [1440,390]) {
    await page.setViewportSize({width,height:1000});await page.locator('#giftBtn').click();
    await page.locator('#giftCardCode').fill(code);

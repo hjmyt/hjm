@@ -37,7 +37,7 @@
 </header>
 <section class="topline" aria-label="今日概览">
  <div class="page-heading"><div class="eyebrow" id="pageEyebrow">MUSIC, CATS &amp; LITTLE MOMENTS</div><h1 id="pageTitle">今天，也来合奏一点快乐。</h1><div class="greeting-line"><span data-icon="sun" class="tiny"></span><span id="greeting">欢迎回来，乐团新人。你的专属座位，一直为你留着。</span></div></div>
- <div class="stats"><span class="stat-pill"><span data-icon="music"></span><strong id="coinStat">30</strong><span class="stat-label">音符</span></span><span class="stat-pill"><span data-icon="album"></span><strong id="albumStat">1 / 18</strong><span class="stat-label">回忆</span></span><button class="stat-pill card-counter" data-route="cards" aria-label="打开乐团卡册"><span data-icon="cards"></span><strong id="cardCount">4 / 6</strong><span class="stat-label">卡牌</span></button></div>
+ <div class="stats"><span class="stat-pill"><span data-icon="music"></span><strong id="coinStat">30</strong><span class="stat-label">音符</span></span><span class="stat-pill level-stat"><span data-icon="team"></span><strong id="orchestraLevelStat">1</strong><span class="stat-label">乐团等级</span></span><span class="stat-pill level-stat"><span data-icon="stats"></span><strong id="bandLevelStat">1</strong><span class="stat-label">乐队等级</span></span></div>
 </section>
 <main>
 <div id="siteMusicControls" aria-label="网站背景音乐"></div>
@@ -105,26 +105,27 @@
 <!-- Classic scripts intentionally preserve file:// support. Keep dependency order; bootstrap is last. -->
 <script defer src="js/core/utils.js?v=c46c87e3565f"></script>
 <script defer src="js/ui/icons.js?v=917f32c79a18"></script>
-<script defer src="js/data/assets.js?v=04232eac6cfe"></script>
+<script defer src="js/data/assets.js?v=ac18bc6cfb2e"></script>
 <script defer src="js/data/characters.js?v=be3fb8e69e14"></script>
 <script defer src="js/data/chronicle-art.js?v=7e589e7fe712"></script>
-<script defer src="js/data/personal-routes.js?v=748f31c1969d"></script>
+<script defer src="js/data/personal-routes.js?v=937b2f6ef979"></script>
 <script defer src="js/data/fusion-routes.js?v=266d6aad49d5"></script>
 <script defer src="js/data/fusion-art.js?v=49870e49677d"></script>
 <script defer src="js/data/memories.js?v=2bc80fcf3ffd"></script>
-<script defer src="js/data/cards.js?v=576cc3a6309d"></script>
+<script defer src="js/data/cards.js?v=75dda7d63ccd"></script>
 <script defer src="js/data/stories.js?v=7b8e1b84ac47"></script>
 <script defer src="js/data/tracks.js?v=816e7da0afec"></script>
-<script defer src="js/data/chronicle.js?v=6815bfe0f6a6"></script>
+<script defer src="js/data/chronicle.js?v=fc39bbba9426"></script>
 <script defer src="js/data/chronicle-training.js?v=40d62315e815"></script>
 <script defer src="js/data/chronicle-weeks.js?v=c9c4b4ca957d"></script>
 <script defer src="js/core/economy.js?v=ab12cf5edc21"></script>
 <script defer src="js/core/bonds.js?v=f22e7f6e81a1"></script>
+<script defer src="js/core/progression.js?v=bd00884e8db6"></script>
 <script defer src="js/core/fusion-state.js?v=7c78eb89028f"></script>
-<script defer src="js/core/state.js?v=7f397970f0c9"></script>
+<script defer src="js/core/state.js?v=29e3c28516f3"></script>
 <script defer src="js/cards/state.js?v=efa0a935f5d7"></script>
 <script defer src="js/cards/model.js?v=dbf35c22613e"></script>
-<script defer src="js/cards/unlocks.js?v=d485836d93fa"></script>
+<script defer src="js/cards/unlocks.js?v=f107cc79a3aa"></script>
 <script defer src="js/cards/skills/source.js?v=c37ee5a30996"></script>
 <script defer src="js/cards/skills/qiqi.js?v=578c07ff8c4c"></script>
 <script defer src="js/cards/skills/expansion.js?v=88dc4627fa2c"></script>
@@ -136,14 +137,14 @@
 <script defer src="js/chronicle/training.js?v=388c285404c3"></script>
 <script defer src="js/chronicle/weeks.js?v=50be28dd9849"></script>
 <script defer src="js/chronicle/bar.js?v=112fa5792ca2"></script>
-<script defer src="js/chronicle/personal.js?v=7f281bbc40d0"></script>
-<script defer src="js/chronicle/persistence.js?v=7eb46dcb55b1"></script>
+<script defer src="js/chronicle/personal.js?v=f671b4bfbfaf"></script>
+<script defer src="js/chronicle/persistence.js?v=ff139779a350"></script>
 <script defer src="js/chronicle/encounters.js?v=4c9e85dcc72d"></script>
-<script defer src="js/chronicle/activities.js?v=469bfe685935"></script>
-<script defer src="js/chronicle/performance.js?v=4f048c0c867d"></script>
-<script defer src="js/chronicle/views.js?v=5200ba0e17a7"></script>
+<script defer src="js/chronicle/activities.js?v=213b242e5e80"></script>
+<script defer src="js/chronicle/performance.js?v=5e11ecc8f4f9"></script>
+<script defer src="js/chronicle/views.js?v=37fd95f9b270"></script>
 <script defer src="js/chronicle/chapters/one.js?v=7b2e864e6996"></script>
-<script defer src="js/chronicle/chapters/two.js?v=29d4aa74eb93"></script>
+<script defer src="js/chronicle/chapters/two.js?v=2b69f5d6e3f3"></script>
 <script defer src="js/chronicle/chapters/three.js?v=ab38806b43e1"></script>
 <script defer src="js/chronicle/chapters/four.js?v=74b6b6e2d2bb"></script>
 <script defer src="js/chronicle/chapters/five-six.js?v=133647810aca"></script>
@@ -154,17 +155,17 @@
 <script defer src="js/features/pet.js?v=b8723df27691"></script>
 <script defer src="js/data/gift-keys.js?v=a8649d050684"></script>
 <script defer src="js/features/gift-cards.js?v=2637d2115ed5"></script>
-<script defer src="js/features/settings.js?v=d9cbb0e3ee67"></script>
+<script defer src="js/features/settings.js?v=e52f83397e9e"></script>
 <script defer src="js/features/stories.js?v=5f9aa037672c"></script>
 <script defer src="js/features/album.js?v=f4edc61a2cae"></script>
 <script defer src="js/features/rhythm.js?v=6317afab0b8a"></script>
-<script defer src="js/features/fusion.js?v=752e9405a670"></script>
-<script defer src="js/cards/views.js?v=afe7be1a200b"></script>
+<script defer src="js/features/fusion.js?v=c9b1a0b02031"></script>
+<script defer src="js/cards/views.js?v=5476be68371e"></script>
 <script defer src="js/cards/actions.js?v=33cf6a5b4add"></script>
 <script defer src="js/cards/recruitment.js?v=e076caa8b49e"></script>
 <script defer src="js/cards/performance.js?v=c3b7f2d3f9be"></script>
 <script defer src="js/ui/common.js?v=983ee5e2a062"></script>
-<script defer src="js/ui/shell.js?v=ef4f97cc51ff"></script>
+<script defer src="js/ui/shell.js?v=2a0a8370dc7b"></script>
 <script defer src="js/app/events.js?v=4beb9064223f"></script>
 <script defer src="js/app/bootstrap.js?v=659674659542"></script>
 </body>

@@ -163,7 +163,7 @@ const { pathToFileURL } = require('node:url');
       showFusionNode('rl', 'fs_yuerou');
       check('YueRou is unlocked only when her dialogue is reached', cardOwned('yuerou') && [...document.querySelectorAll('.cp-speaker b')].some(node => node.textContent === '悦柔'));
       const yuerou = cardDef('yuerou'), yuerouDetail = renderDetailContent(yuerou, true);
-      check('YueRou card carries the supplied SR profile', yuerou.rarity === 'SR' && yuerou.stars === 3 && yuerou.profileFields.length === 4);
+      check('YueRou card carries the supplied five-star SR profile', yuerou.rarity === 'SR' && yuerou.stars === 5 && yuerou.profileFields.length === 4);
       check('YueRou special display stats preserve 999+', yuerou.stats.some(([name, value]) => name === '朋友圈点赞' && value === '999+') && yuerouDetail.includes('999+'));
       check('YueRou card includes all three supplied skills', ['三分钟好友','朋友圈风暴','周末消失术'].every(name => yuerouDetail.includes(name)));
       const yuerouGifts = effectiveGifts(yuerou).filter(gift => !isFullBondGift(gift));
@@ -178,6 +178,9 @@ const { pathToFileURL } = require('node:url');
       check('Adjacent fusion scenes no longer share a borrowed illustration', fusionSceneArt('fm', 'f2_cpgo').asset === 'fusionNode_f2_cpgo' && fusionSceneArt('fm', 'f2_aq1').asset === 'fusionNode_f2_aq1');
       state.fusion.chapter = 'ep2'; showFusionNode('ep2', 'f2_m1');
       check('Roster planning keeps its full-event artwork instead of the partial Old Du phone crop', document.querySelector('.cp-novel-art img')?.src.includes('/f2_m1.jpg'));
+      check('Fusion roster mention unlocks Xiaojie', cardOwned('xiaojie') && availableCardPool().some(card => card.id === 'xiaojie'));
+      const xiaojieLegacy = freshState(); xiaojieLegacy.fusion.runs.ep2.done.push('f2_m1');
+      check('Legacy fusion progress after the roster mention recovers Xiaojie', cleanState(xiaojieLegacy).cards.encounters.includes('xiaojie'));
       const oldDuArtFiles = {
         fs_laodu: 'fs_laodu-v2.jpg', f2_ll7rage: 'f2_ll7rage-v4.jpg',
         m_r2: 'm_r2-v2.jpg', m_r2a: 'm_r2a-v2.jpg', m_talk_ld: 'm_talk_ld-v2.jpg', m_sd_ld: 'm_sd_ld-v2.jpg',

@@ -116,7 +116,7 @@ function createChroniclePerformance(ctx) {
         l.phase = 'done';
         const win = l.score >= l.diff;
         if (win)
-            r.level++;
+            raiseOrchestraLevel();
         if (r.chapter >= 5) {
             ctx.ending(r.chapter === 6 ? (win ? 'c6_he' : 'c6_te') : !win ? 'c5_fail' : r.tech >= 20 && r.level >= 5 && r.aff.shiyuan >= 80 ? 'c5_he' : 'c5_be');
             r.scene = r.ending;

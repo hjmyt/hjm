@@ -39,7 +39,6 @@ function renderRhythmTeam() {
 
 function renderCardGlobals() {
     ensureCardDay();
-    $('cardCount').textContent = `${CARD_DEFS.filter(c => cardOwned(c.id)).length} / ${CARD_DEFS.length}`;
     renderHomeCards();
     renderRhythmTeam();
     if (currentView === 'cards')

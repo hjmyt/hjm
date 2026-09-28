@@ -626,8 +626,9 @@ const ChronicleData = {
     },
     "xiaojie": {
       "name": "小杰",
-      "tag": "流行组 · 乐手",
-      "icon": "mic"
+      "tag": "流行组 · 木吉他手",
+      "icon": "music",
+      "asset": "cardXiaojieAvatar"
     },
     "crowd": {
       "name": "团员们",

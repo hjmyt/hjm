@@ -16,6 +16,9 @@ function syncStoryCards(source = state, notify = false, recoverLegacy = false) {
     const laoduSeen = Object.values(source.fusion?.runs || {}).some(run => run?.current === 'fs_laodu' || run?.done?.includes('fs_laodu'));
     if (laoduSeen && !discovered.includes('laodu'))
         discovered.push('laodu');
+    const xiaojieFusionSeen = Object.values(source.fusion?.runs || {}).some(run => ['f2_m1', 'm_r3'].includes(run?.current) || run?.done?.some(id => ['f2_m1', 'm_r3'].includes(id)));
+    if (xiaojieFusionSeen && !discovered.includes('xiaojie'))
+        discovered.push('xiaojie');
     cards.encounterVersion = 3;
     for (const id of discovered)
         if (!cards.encounters.includes(id)) {

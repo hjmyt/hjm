@@ -1,11 +1,12 @@
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),path=require('node:path'),{pathToFileURL}=require('node:url');
 (async()=>{const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});try{const p=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(pathToFileURL(path.resolve(__dirname,'../index.html')).href);const results=await p.evaluate(()=>{
  const checks=[],check=(name,ok)=>{if(!ok)throw Error(name);checks.push(name);};state=freshState();state.sound=false;
- check('Twenty-four unique cards',CARD_DEFS.length===24&&new Set(CARD_DEFS.map(c=>c.id)).size===24);
+ check('Twenty-five unique cards',CARD_DEFS.length===25&&new Set(CARD_DEFS.map(c=>c.id)).size===25);
  check('No duplicate memory records',new Set(MEMORIES.map(m=>m.id)).size===MEMORIES.length);
  check('Unmentioned Dayang and Baoshi remain locked',!cardOwned('dayang')&&!cardOwned('baoshi')&&!availableCardPool().some(c=>['dayang','baoshi'].includes(c.id)));
  state.cards.encounters=CARD_DEFS.map(c=>c.id);save();
  check('New source rarities',cardRarity(cardDef('xiaozhou'))==='R'&&cardRarity(cardDef('lemon'))==='UR'&&['dayang','baoshi','goose','xiaota'].every(id=>cardRarity(cardDef(id))==='SSR'));
+ check('Xiaojie is a three-star R card',cardRarity(cardDef('xiaojie'))==='R'&&cardStarCount(cardDef('xiaojie'))===3);
  check('Only Bill remains placeholder',CARD_DEFS.filter(c=>c.placeholder).map(c=>c.id).join()==='bill');
  check('Bill absent from recruit pool',!availableCardPool().some(c=>c.id==='bill'));
  goCard('baoshi');check('Secret absent from locked DOM',!$('view-card').innerHTML.includes('宝石姬')&&!$('view-card').innerHTML.includes('新裙子'));

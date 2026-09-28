@@ -141,8 +141,7 @@ function createChroniclePersistence(ctx) {
         Object.assign(bonds, values);
         Object.defineProperty(bonds, 'tangshao', { configurable: true, get() { return this.tang; }, set(v) { this.tang = v; } });
         m.bonds = bonds;
-        m.run.aff = bonds;
-        for (const r of Object.values(m.slots))
+        for (const r of [m.run, ...Object.values(m.slots), m.chapter2Start, m.chapter3Start, m.chapter4Start, m.chapter5Start, m.chapter6Start].filter(Boolean))
             r.aff = bonds;
         return bonds;
     }

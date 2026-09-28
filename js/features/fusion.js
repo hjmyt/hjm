@@ -43,7 +43,8 @@ const FUSION_SPEAKERS = {
     '宝石': { name: '宝石', tag: '主唱 · 乐团伙伴', asset: 'cardBaoshi' },
     '阿齐': { name: '阿齐', tag: '贝斯手 · 融合组伙伴', icon: 'music' },
     '柠檬': { name: '柠檬', tag: '键盘手 · 乐团伙伴', asset: 'cardLemon' },
-    'Bill': { name: 'Bill', tag: '鼓手 · 乐团伙伴', asset: 'cardBill' }
+    'Bill': { name: 'Bill', tag: '鼓手 · 乐团伙伴', asset: 'cardBill' },
+    '小杰': { name: '小杰', tag: '流行组 · 木吉他手', asset: 'cardXiaojieAvatar' }
 };
 const FUSION_CARD_SPEAKER_IDS = Object.fromEntries(CARD_DEFS.flatMap(card => [card.name, ...(STORY_CARD_ALIASES[card.id] || [])].map(name => [name, card.id])));
 
@@ -215,6 +216,11 @@ function fusionEncounterSpeaker(who) {
     save();
     toast(`剧情相遇 · ${cardDef(id).name}已加入卡册`, true);
 }
+function fusionEncounterTurn(turn) {
+    fusionEncounterSpeaker(turn.who);
+    for (const id of mentionedStoryCards(turn.text, turn.who))
+        fusionEncounterSpeaker(cardDef(id)?.name);
+}
 function fusionSpeakerHTML(who, label) {
     const card = cardDef(FUSION_CARD_SPEAKER_IDS[who]);
     const person = FUSION_SPEAKERS[who] || (card ? { name: card.name, tag: `${card.role} · 乐团伙伴`, asset: card.asset } : { name: who, tag: '山丘乐手 · 融合线', icon: 'music' });
@@ -222,7 +228,7 @@ function fusionSpeakerHTML(who, label) {
 }
 function fusionDialogueHTML(turns, meta) {
     for (const turn of turns)
-        fusionEncounterSpeaker(turn.who);
+        fusionEncounterTurn(turn);
     return turns.map((line, index) => `<section class="cp-dialogue-turn ${fusionSpeakerClass(line.who)}">${fusionSpeakerHTML(line.who, index ? '回应' : meta.title)}<div class="cp-text">${escapeHTML(line.text.trim())}</div></section>`).join('');
 }
 function fusionChoiceOwnerHTML() {
@@ -247,7 +253,6 @@ function fusionSceneHTML(key, node) {
     node.lines.forEach(line => fusionEncounterSpeaker(line.who));
     if (art && unlock(art.id, false)) {
         save();
-        $('albumStat').textContent = `${MEMORIES.filter(memory => memoryVisible(memory.id)).length} / ${MEMORIES.length}`;
     }
     const artStyle = art ? ` style="--scene-art:url('${new URL(ASSETS[art.asset], document.baseURI).href}')"` : '';
     return `<article class="cp-novel ${art ? 'cp-novel-illustrated' : 'cp-novel-text-only'}" aria-label="融合线故事"${artStyle}>

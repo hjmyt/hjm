@@ -19,12 +19,12 @@ const { pathToFileURL } = require('node:url');
       state = freshState();
       state.sound = false;
       route('cards');
-      const locked = Object.fromEntries(['jerry', 'yuerou', 'laodu', 'xuezi'].map(id => {
+      const locked = Object.fromEntries(['jerry', 'yuerou', 'laodu', 'xuezi', 'xiaojie'].map(id => {
         const img = document.querySelector(`[data-card-id="${id}"] .card-cover-image`);
         return [id, img?.getAttribute('src') || ''];
       }));
 
-      for (const id of ['jerry', 'yuerou', 'laodu', 'xuezi']) {
+      for (const id of ['jerry', 'yuerou', 'laodu', 'xuezi', 'xiaojie']) {
         state.cards.encounters.push(id);
         state.cards.collection[id].owned = true;
       }
@@ -36,11 +36,12 @@ const { pathToFileURL } = require('node:url');
         jerry: document.querySelector('.mini-character[data-card-open="jerry"] .card-cover-image')?.getAttribute('src') || '',
         yuerou: document.querySelector('.mini-character[data-card-open="yuerou"] .card-cover-image')?.getAttribute('src') || '',
         laodu: document.querySelector('.mini-character[data-card-open="laodu"] .card-cover-image')?.getAttribute('src') || '',
-        xuezi: document.querySelector('.mini-character[data-card-open="xuezi"] .card-cover-image')?.getAttribute('src') || ''
+        xuezi: document.querySelector('.mini-character[data-card-open="xuezi"] .card-cover-image')?.getAttribute('src') || '',
+        xiaojie: document.querySelector('.mini-character[data-card-open="xiaojie"] .card-cover-image')?.getAttribute('src') || ''
       };
 
       route('cards');
-      const open = Object.fromEntries(['jerry', 'yuerou', 'laodu', 'xuezi'].map(id => {
+      const open = Object.fromEntries(['jerry', 'yuerou', 'laodu', 'xuezi', 'xiaojie'].map(id => {
         const img = document.querySelector(`[data-card-id="${id}"] .card-cover-image`);
         return [id, img?.getAttribute('src') || ''];
       }));
@@ -48,6 +49,7 @@ const { pathToFileURL } = require('node:url');
       renderCards();
       const avatars = [...document.querySelectorAll('.team-slot .card-avatar-image')].map(img => img.getAttribute('src'));
       avatars.push(cardImage(cardDef('xuezi'), 'avatar'));
+      avatars.push(cardImage(cardDef('xiaojie'), 'avatar'));
 
       goCard('jerry');
       const detail = { jerry: document.querySelector('.character-cover .card-full-image')?.getAttribute('src') || '' };
@@ -55,6 +57,8 @@ const { pathToFileURL } = require('node:url');
       detail.xuezi = document.querySelector('.character-cover .card-full-image')?.getAttribute('src') || '';
       goCard('laodu');
       detail.laodu = document.querySelector('.character-cover .card-full-image')?.getAttribute('src') || '';
+      goCard('xiaojie');
+      detail.xiaojie = document.querySelector('.character-cover .card-full-image')?.getAttribute('src') || '';
       const laoduCard = cardDef('laodu');
       const laoduProfile = concealCardSkills(renderDetailContent(laoduCard, true), laoduCard);
       state.affinity.laodu = 35;
@@ -64,7 +68,7 @@ const { pathToFileURL } = require('node:url');
       state.affinity.xuezi = 35;
       const xueziSkillsAt35 = concealCardSkills(renderDetailContent(xueziCard, true), xueziCard);
       const sizes = {};
-      for (const key of ['cardJerryCover', 'cardYuerouCover', 'cardLaoduCover', 'cardXueziCover', 'avatarJerry', 'cardYuerouAvatar', 'cardLaoduAvatar', 'cardXueziAvatar']) {
+      for (const key of ['cardJerryCover', 'cardYuerouCover', 'cardLaoduCover', 'cardXueziCover', 'cardXiaojieCover', 'avatarJerry', 'cardYuerouAvatar', 'cardLaoduAvatar', 'cardXueziAvatar', 'cardXiaojieAvatar']) {
         const img = new Image();
         img.src = ASSETS[key];
         await img.decode();
@@ -77,30 +81,37 @@ const { pathToFileURL } = require('node:url');
     assert.match(result.locked.yuerou, /yuerou-card-cover\.png$/);
     assert.match(result.locked.laodu, /laodu-card-cover\.png$/);
     assert.match(result.locked.xuezi, /xuezi-card-cover\.png$/);
+    assert.match(result.locked.xiaojie, /xiaojie-card-cover\.png$/);
     assert.match(result.home.feature, /jerry-card-cover\.png$/);
     assert.match(result.home.jerry, /jerry-card-cover\.png$/);
     assert.match(result.home.yuerou, /yuerou-card-cover\.png$/);
     assert.match(result.home.laodu, /laodu-card-cover\.png$/);
     assert.match(result.home.xuezi, /xuezi-card-cover\.png$/);
+    assert.match(result.home.xiaojie, /xiaojie-card-cover\.png$/);
     assert.match(result.open.jerry, /jerry-card-cover\.png$/);
     assert.match(result.open.yuerou, /yuerou-card-cover\.png$/);
     assert.match(result.open.laodu, /laodu-card-cover\.png$/);
     assert.match(result.open.xuezi, /xuezi-card-cover\.png$/);
+    assert.match(result.open.xiaojie, /xiaojie-card-cover\.png$/);
     assert(result.avatars.some(src => /jerry-avatar\.png$/.test(src)));
     assert(result.avatars.some(src => /yuerou-card-avatar\.png$/.test(src)));
     assert(result.avatars.some(src => /laodu-card-avatar\.png$/.test(src)));
     assert(result.avatars.some(src => /xuezi-card-avatar\.png$/.test(src)));
+    assert(result.avatars.some(src => /xiaojie-card-avatar\.png$/.test(src)));
     assert.match(result.detail.jerry, /jerry-portrait\.png$/);
     assert.match(result.detail.xuezi, /xuezi-portrait\.png$/);
     assert.match(result.detail.laodu, /laodu-portrait\.png$/);
+    assert.match(result.detail.xiaojie, /xiaojie-portrait\.png$/);
     assert.deepEqual(result.sizes.cardJerryCover, [900, 600]);
     assert.deepEqual(result.sizes.cardYuerouCover, [900, 600]);
     assert.deepEqual(result.sizes.cardLaoduCover, [900, 600]);
     assert.deepEqual(result.sizes.cardXueziCover, [900, 600]);
+    assert.deepEqual(result.sizes.cardXiaojieCover, [900, 600]);
     assert.deepEqual(result.sizes.avatarJerry, [600, 600]);
     assert.deepEqual(result.sizes.cardYuerouAvatar, [600, 600]);
     assert.deepEqual(result.sizes.cardLaoduAvatar, [600, 600]);
     assert.deepEqual(result.sizes.cardXueziAvatar, [600, 600]);
+    assert.deepEqual(result.sizes.cardXiaojieAvatar, [600, 600]);
     assert.deepEqual([result.xuezi.rarity, result.xuezi.stars, result.xuezi.fields], ['R', 2, 4]);
     assert.match(result.xuezi.profile, /缝针/);
     assert.match(result.xuezi.profile, /眼力见/);
@@ -128,6 +139,7 @@ const { pathToFileURL } = require('node:url');
     await page.locator('[data-card-id="yuerou"]').screenshot({ path: '/tmp/hjm-yuerou-locked-card.png' });
     await page.locator('[data-card-id="laodu"]').screenshot({ path: '/tmp/hjm-laodu-locked-card.png' });
     await page.locator('[data-card-id="xuezi"]').screenshot({ path: '/tmp/hjm-xuezi-locked-card.png' });
+    await page.locator('[data-card-id="xiaojie"]').screenshot({ path: '/tmp/hjm-xiaojie-locked-card.png' });
     await page.screenshot({ path: '/tmp/hjm-card-portrait-desktop.png', fullPage: true });
     await page.setViewportSize({ width: 390, height: 844 });
     await page.evaluate(() => route('cards'));

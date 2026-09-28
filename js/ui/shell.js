@@ -5,7 +5,8 @@ function renderGlobal() {
     syncStoryCards();
     ensureDaily();
     $('coinStat').textContent = state.coins;
-    $('albumStat').textContent = `${MEMORIES.filter(m => memoryVisible(m.id)).length} / ${MEMORIES.length}`;
+    $('orchestraLevelStat').textContent = globalOrchestraLevel();
+    $('bandLevelStat').textContent = globalBandLevel();
     $('homeAlbumText').textContent = `已珍藏 ${MEMORIES.filter(m => memoryVisible(m.id)).length} 张乐团回忆`;
     $('greeting').textContent = currentView === 'cards' ? '让每一段故事，带来一位新的合奏伙伴。' : currentView === 'rhythm' ? '选一首喜欢的曲子，让猫爪落在你的节拍上。' : `欢迎回来，${state.nickname}。你的专属座位，一直为你留着。`;
     $('soundBtn').innerHTML = I(state.sound ? 'sound' : 'mute');

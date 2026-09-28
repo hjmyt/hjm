@@ -25,11 +25,11 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
       const check = (name, value) => { if (!value) throw Error(name); checks.push(name); };
       state = freshState(); state.sound = false;
       const r = state.chronicle.run;
-      Object.assign(r, { name: '插图测试', inst: '弦乐', scene: 's_room', tech: 30, level: 5 });
+      Object.assign(r, { name: '插图测试', inst: '弦乐', scene: 's_room', tech: 30, level: 1 });
       const resources = JSON.stringify([state.coins, state.affinity, r.tech]);
       route('chronicle');
       check('Only reached illustration collected', state.memories.includes('scene_1_s_room') && !state.memories.includes('scene_1_gig'));
-      check('Stat updated immediately', document.querySelector('#albumStat').textContent.startsWith('2 /'));
+      check('Retired top counters removed', !document.querySelector('#albumStat') && !document.querySelector('#cardCount'));
       const once = state.memories.length;
       renderGlobal(); renderGlobal();
       check('Repeated rendering does not award resources or duplicate memories', state.memories.length === once && resources === JSON.stringify([state.coins, state.affinity, r.tech]));
@@ -37,9 +37,9 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
       document.querySelector('.cp-memory-link').click();
       check('Read scene opens same album image', document.querySelector('.photo-frame img').getAttribute('src') === src);
       closeModal();
-      r.scene = 's_conflict'; r.level = 1; r.rev++; renderGlobal();
+      r.scene = 's_conflict'; state.progression.orchestraLevel = 1; r.rev++; renderGlobal();
       check('No dispute art for incidental meeting', state.memories.includes('scene_1_s_conflict_meeting') && !state.memories.includes('scene_1_s_conflict'));
-      r.level = 2; r.rev++; renderGlobal();
+      state.progression.orchestraLevel = 2; r.rev++; renderGlobal();
       check('Actual dispute gets its own art', state.memories.includes('scene_1_s_conflict'));
       r.scene = 'b_live'; r.tech = 0; r.rev++; renderGlobal();
       check('Unready stage has its own preparation art', state.memories.includes('scene_1_b_live_unready') && !state.memories.includes('scene_1_b_live'));
@@ -65,10 +65,14 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
       for (const art of CHRONICLE_ART) {
         state = freshState(); state.sound = false;
         Object.assign(state.chronicle.run, {chapter:art.chapter,scene:art.scene,name:'布局测试',inst:'弦乐',level:5,tech:40,battle:{win:art.condition!=='practiceFail'}});
+        state.progression.orchestraLevel = 5;
         state.affinity.shiyuan = art.condition === 'summerUnready' ? 0 : 85;
         state.affinity.zhu = 12;
         state.chronicle.chapterEndings = {1:['debut'],2:['c2_dual'],3:['c3_he'],4:['c4_he']};
-        if (art.condition === 'incidentalMeeting') state.chronicle.run.level = 1;
+        if (art.condition === 'incidentalMeeting') {
+          state.chronicle.run.level = 1;
+          state.progression.orchestraLevel = 1;
+        }
         if (art.condition === 'performanceUnready') state.chronicle.run.tech = 0;
         if (art.condition === 'openingIncomplete') state.affinity.zhu = 0;
         if (art.condition === 'konggeStays') state.chronicle.run.flags.konggeStay = 1;
@@ -93,6 +97,7 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
           closeModal(); state.sound = false;
           const r = state.chronicle.run;
           Object.assign(r, {chapter:scene==='c6_warn'?6:scene==='c2_bar'?2:1,scene,level:5,tech:30});
+          state.progression.orchestraLevel = 5;
           r.rev++; route('chronicle');
         }, scene);
         const layout = await page.evaluate(async () => {

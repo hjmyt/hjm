@@ -14,7 +14,7 @@ function createChroniclePersonal(ctx) {
     const unlocked = () => ctx.chapterComplete(6);
     const chapterRuns = () => [ctx.M().run,...Object.values(ctx.M().slots||{}),ctx.M().chapter2Start,ctx.M().chapter3Start,ctx.M().chapter4Start,ctx.M().chapter5Start,ctx.M().chapter6Start].filter(Boolean);
     const historicFlag = key => chapterRuns().some(r=>!!r.flags?.[key]);
-    const bandLevel = () => Math.max(1,...chapterRuns().map(r=>Number(r.level)||1));
+    const bandLevel = () => globalBandLevel();
     const cpFriendPath = () => historicFlag('strGroup') && !!P().routes.shiyuan?.flags?.syFriend;
     const cpStoryStarted = () => !!P().routes.baoshi_feihong && (P().routes.baoshi_feihong.read.some(id=>id.startsWith('cp_'))||P().routes.baoshi_feihong.endings.length>0);
     const paidUnlock = id => P().unlocks?.[id]===true;
@@ -57,7 +57,7 @@ function createChroniclePersonal(ctx) {
         if(!personalPickerUnlocked()){toast('完成第六章后，才可以进入第七章个人线。');return;}
         openModal('第七章 · 选择你的故事线',`<p class="cp-caption">阿喆、十元线需完成第六章且对应角色羁绊超过 35 分；宝石×飞鸿可由融合线关键聊天直接解锁，也可按正传特殊前置开启。</p><div class="cp-personal-picker">${routes.map(r=>{
             const cp=r.id==='baoshi_feihong',bond=cp?0:cardBond(r.id),s=P().routes[r.id],open=admitted(r.id);
-            const purchased=paidUnlock(r.id),cpStatus=fusionCpUnlocked()?'融合线关键聊天已解锁 · 开启 CP 线':purchased?'已支付 10000 音符永久解锁':cpStoryStarted()?(s?.ending?'结局已收录 · 可重读':'已有进度 · 继续故事'):!historicFlag('feiSide')?'需第一章替飞鸿解围':bandLevel()<6?`乐团 Lv.${bandLevel()} / 6 · 可与乐团成员合练升级`:!cpFriendPath()?'需弦乐组＋十元友情分流；羊村乐队线为独立路线':'前置已解锁 · 开启 CP 线';
+            const purchased=paidUnlock(r.id),cpStatus=fusionCpUnlocked()?'融合线关键聊天已解锁 · 开启 CP 线':purchased?'已支付 10000 音符永久解锁':cpStoryStarted()?(s?.ending?'结局已收录 · 可重读':'已有进度 · 继续故事'):!historicFlag('feiSide')?'需第一章替飞鸿解围':bandLevel()<6?`乐队 Lv.${bandLevel()} / 6 · 升级方式尚未开放`:!cpFriendPath()?'需弦乐组＋十元友情分流；羊村乐队线为独立路线':'前置已解锁 · 开启 CP 线';
             const status=cp?cpStatus:!unlocked()?'完成第六章后开放':purchased?'已支付 10000 音符永久解锁':`羁绊 ${bond} · ${bond<=35?'还差 '+(36-bond)+' 分可进入':s?.ending?'结局已收藏 · 可继续或重读':s?'已有进度 · 继续故事':'已解锁 · 开启故事'}`;
             const canPurchase=!open&&unlocked();
             return `<div class="cp-personal-pick-row"><button class="cp-personal-pick ${open?'':'locked'}" data-cp-action="personal-select" data-cp-person="${r.id}" ${open?'':'disabled aria-disabled="true"'}><img src="${ASSETS[r.asset]}" alt="${r.name}"><span><b>${r.name}${cp?' CP 线':'个人线'}</b><em>${r.tagline}</em><small>${status}</small></span>${I(open?'arrow':'lock')}</button>${canPurchase?`<button class="btn secondary cp-personal-unlock" data-cp-action="personal-unlock" data-cp-person="${r.id}">支付 10000 音符直接解锁 <small>当前 ${state.coins}</small></button>`:''}</div>`;
@@ -227,7 +227,7 @@ function createChroniclePersonal(ctx) {
         preloadUpcomingArt(n,page);
         if(s.page!==page){s.page=page;save();}
         const art=currentArt(n,page),src=art.asset?ASSETS[art.asset]:null;
-        if(art.memory&&!state.memories.includes(art.memory)){unlock(art.memory,false);$('albumStat').textContent=`${MEMORIES.filter(m=>memoryVisible(m.id)).length} / ${MEMORIES.length}`;}
+        if(art.memory&&!state.memories.includes(art.memory))unlock(art.memory,false);
         const parts=pages[page].map(l=>{const p=character(l.who);return `<section class="cp-dialogue-turn"><div class="cp-speaker">${p.asset?`<img src="${ASSETS[p.asset]}" alt="${esc(p.name)}">`:`<span class="cp-speaker-symbol">${I(p.icon||'music')}</span>`}<div><b>${esc(p.name)}</b><small>${esc(p.tag||'此刻的故事')}</small></div></div><div class="cp-text">${esc(copy(l.text))}</div></section>`;}).join('');
         const choices=last?n.choices.map((c,i)=>`<button class="cp-choice" data-cp-action="personal-choose" data-personal-choice="${i}" data-personal-rev="${P().rev}"><span class="cp-option-n">${String(i+1).padStart(2,'0')}</span><span>${esc(copy(c.text))}</span>${I('arrow')}</button>`).join(''):`<button class="cp-choice" data-cp-action="personal-page" data-personal-rev="${P().rev}"><span class="cp-option-n">${String(page+1).padStart(2,'0')}</span><span>继续阅读<small>下一页 · ${page+2} / ${pages.length}</small></span>${I('arrow')}</button>`;
         const illustrated=src?` cp-novel-illustrated`:'';const style=src?` style="--scene-art:url('${new URL(src,document.baseURI).href}')"`:'';
@@ -240,7 +240,7 @@ function createChroniclePersonal(ctx) {
             const note=n?esc(n.locked?n.reason:'新的故事已经准备好。'):resolving?(needsScore?`主线已经走到最后一幕。还差 ${95-s.score} 点大旗值即可结算本线结局。`:'助攻已经到位，可以进入本线结局。'):'本线当前剧情已经读完；可以重读或切换其他故事线。';
             const primary=n?button('continue','继续 · '+esc(n.node.title),n.locked?'disabled':'','primary'):resolving&&!needsScore?button('resolve','进入宝石×飞鸿结局','','primary'):'';
             const support=n?.locked||needsScore?button('support','继续助攻 · 大旗 +2','','primary'):'';
-            return `<section class="cp-surface"><span class="cp-week-kicker">宝石×飞鸿 · 助攻间歇</span><h3>${config().tagline}</h3><p class="cp-caption">${note}</p><div class="cp-personal-hub-actions">${primary}${support}${button('picker','切换故事线')}</div><p class="cp-caption">大旗值 ${s.score} · 乐团 Lv.${bandLevel()}。大旗值只用于本线结局判定，不是可消费资源。羊村是第二章乐队组的独立路线，不属于本 CP 线。</p></section>`;
+            return `<section class="cp-surface"><span class="cp-week-kicker">宝石×飞鸿 · 助攻间歇</span><h3>${config().tagline}</h3><p class="cp-caption">${note}</p><div class="cp-personal-hub-actions">${primary}${support}${button('picker','切换故事线')}</div><p class="cp-caption">大旗值 ${s.score} · 乐队 Lv.${bandLevel()}。大旗值只用于本线结局判定，不是可消费资源。羊村是第二章乐队组的独立路线，不属于本 CP 线。</p></section>`;
         }
         return `<section class="cp-surface"><span class="cp-week-kicker">故事之间 · 留一点时间相处</span><h3>${config().tagline}</h3><p class="cp-caption">${n?esc(n.locked?n.reason:'新的故事已经准备好。'):'这一刻，先陪彼此待一会儿。'}</p><div class="cp-personal-hub-actions">${button('continue',n?'继续 · '+esc(n.node.title):'暂无待续剧情',!n||n.locked?'disabled':'','primary')}${id==='azhe'?button('duet','和阿喆合奏一场')+button('chat','找阿喆聊天',s.duets<2?'disabled':''):['商场商演','小乐队排练','老乐手小聚'].map((title,i)=>button('invite',(s.done['sy_act'+(i+1)]?'已赴约 · ':'赴约 · ')+title,`data-personal-event="sy_act${i+1}" ${s.done['sy_act'+(i+1)]?'disabled':''}`)).join('')}${button('practice','刻苦练琴 · 10 音符 / 琴技 +2',state.coins<10?'disabled':'')}<button class="btn secondary" data-route="cards">去卡册陪伴与投喂</button><button class="btn secondary" data-route="rhythm">免费演奏赚音符</button>${id==='shiyuan'&&s.done.sy_06done&&!s.done.sy_10?button('confess','今晚，想向她表达心意'):''}</div><p class="cp-caption">${id==='azhe'?`已合奏 ${s.duets} 场；两场后可聊天。每次合奏羁绊 +1，每日最多 10 次；合奏额度不占用聊天陪伴额度。`:`已赴约 ${['sy_act1','sy_act2','sy_act3'].filter(k=>s.done[k]).length} / 3 场 · 事业准备 ${s.focus} / 3。练琴和不同邀约积累事业准备，不直接刷取羁绊。`}<br>琴技 ${P().tech} · 音符 ${state.coins}。剧情奖励按节点只结算一次，重读不重复领取。</p></section>`;
     }
@@ -252,7 +252,7 @@ function createChroniclePersonal(ctx) {
     function personalHTML() {
         if(!admitted(P().selected))return `<section class="cp-surface"><h3>第七章 · 个人线</h3><p>完成第六章，且对应角色羁绊超过 35 分后可进入。</p>${button('picker','选择角色')}${button('leave','返回正传')}</section>`;
         const s=S();const n=getNode(P().selected,s.scene);
-        const cp=P().selected==='baoshi_feihong',record=cp?`大旗值 ${s.score} · 乐团 Lv.${bandLevel()}`:`全局羁绊 ${cardBond(P().selected)}`;
+        const cp=P().selected==='baoshi_feihong',record=cp?`大旗值 ${s.score} · 乐队 Lv.${bandLevel()}`:`全局羁绊 ${cardBond(P().selected)}`;
         return `<section class="cp-personal"><header class="cp-personal-heading"><div><span class="cp-week-kicker">CHAPTER 07 · YOUR STORY TOGETHER</span><h2>${config().name}${cp?' CP 线':'个人线'}</h2><p>${config().tagline}</p></div>${button('picker','切换故事线')}</header><div class="cp-personal-toolbar">${s.scene!=='hub'&&!s.ending?button('hub','暂歇，回到相处安排'):''}${button('restart','重读本线')}${button('leave','返回正传')}<span>自动保存 · 第 ${s.run} 次阅读</span></div>${window.StoryBgm?.controls()||''}<details class="cp-personal-details"><summary>${record} · 展开本线记录</summary><p>已读 ${s.read.length} 个场景；已收录 ${s.endings.length} / ${config().nodes.filter(n=>n.ending).length} 种结局。切换故事线和页面会保留各自进度。</p><div class="cp-personal-memories">${s.endings.map(id=>{const n=getNode(P().selected,id);return n.memory?`<button class="btn ghost" data-memory="${n.memory}">${esc(n.title)}</button>`:`<span class="label-tag">${esc(n.title)}</span>`;}).join('')}</div></details><div id="cpMain">${s.scene==='complete'&&s.ending?completionHTML():n?sceneHTML(n):hubHTML()}</div></section>`;
     }
     function personalPreview() {
