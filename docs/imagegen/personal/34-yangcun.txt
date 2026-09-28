@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。
+
+PANEL 1 (yc_sep3_page3, do not write ID): 原版羊村线剧情分镜《九月 · 分歧》第 3 幕：旁白：全排练室都在等你的表态。你忽然意识到，从什么时候开始，你的表态变得重要了。
+
+PANEL 2 (yc_oct1, do not write ID): 原版羊村线剧情分镜《十月 · 办公室》第 1 幕：旁白：十月，十元的歌友会一场接一场，排练室变成了「办公室」——来了就练，练完就走，偶尔点个外卖围一桌。 旁白：这种日子，小事最多。但你也慢慢发现，一个团的气质，恰恰是被这些小事撑起来的。
+
+PANEL 3 (yc_oct2, do not write ID): 原版羊村线剧情分镜《十月 · 小事之二》第 1 幕：旁白：十月下旬，外卖盒子堆成小山，谁都不想先扔。你用抽签决定了值日表，被全票通过——除了抽中第一天的小周。
+
+PANEL 4 (yc_oct3, do not write ID): 原版羊村线剧情分镜《十月 · 照片风波》第 1 幕：旁白：十月最后一天，风波来了。一个营销号发出一组照片：六月那晚，大鹅醉倒在山丘，柒柒「悉心照顾」。配文：「某乐队键盘手深夜买醉，全靠友人搀扶。」 旁白：评论区开始发酵。有人在扒「某乐队」是谁。你看着那些照片的角度，后背一凉——和你六月在走廊尽头看到的，一模一样。
+
+PANEL 5 (yc_oct3_page2, do not write ID): 原版羊村线剧情分镜《十月 · 照片风波》第 2 幕：十元：（电话里的声音很冷静，冷静得吓人：）「实习生。这事交给你。你说怎么处理，就怎么处理。」 旁白：你握着手机，忽然想起五月的自己——那个连海报都想糊弄过去的人。现在，一个团的声誉放在你手里。
+
+PANEL 6 (yc_nov1, do not write ID): 原版羊村线剧情分镜《十一月 · 分流》第 1 幕：旁白：十一月，天气转凉。排练室的窗上开始有雾气，乐手们练琴前要先搓手。 旁白：一天晚上，十元把你拉到走廊，递给你一杯热可可。
+
+PANEL 7 (yc_nov1_page2, do not write ID): 原版羊村线剧情分镜《十一月 · 分流》第 2 幕：十元：（压低声音：）「年底了。我问你个事——这几个月，你心里有没有一个特别的人？」 你：（你被热可可呛了一下：）「……哪种特别？」
+
+PANEL 8 (yc_nov1_page3, do not write ID): 原版羊村线剧情分镜《十一月 · 分流》第 3 幕：十元：（她笑了，眼睛弯起来：）「就是你听到这个问题时，脑子里第一个跳出来的那种。」 旁白：她拍拍你的肩：「别紧张。不管是谁，十二月，去看看吧。」

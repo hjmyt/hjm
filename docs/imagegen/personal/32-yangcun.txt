@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。
+
+PANEL 1 (yc_aug2_page2, do not write ID): 原版羊村线剧情分镜《八月 · 假弹风波》第 2 幕：大鹅：「我可以弹错，但不能对着镜头假装自己在弹。那是直播，不是演戏。」 旁白：节目组把他的退出公告写得阴阳怪气，字里行间都是「某键盘手缺乏职业精神」。有营销号跟进，评论区乌烟瘴气。群里吵成一团。
+
+PANEL 2 (yc_aug2_page3, do not write ID): 原版羊村线剧情分镜《八月 · 假弹风波》第 3 幕：REK：（在群里发了一串省略号：）「……这圈子，什么时候连真弹都成错了。」 十元：（私信你：）「你去看看他。他现在谁的消息都不回。」
+
+PANEL 3 (yc_aug3, do not write ID): 原版羊村线剧情分镜《八月 · 挽留》第 1 幕：旁白：你在琴房找到大鹅。他坐在钢琴前，没弹琴，就坐着。谱架上摊着一张音乐会的节目单，被揉皱了又抚平。 大鹅：（他抬头看你，眼睛红红的，却努力装出大人的样子：）「我没事。你回去吧，群里还需要你。」
+
+PANEL 4 (yc_aug3_page2, do not write ID): 原版羊村线剧情分镜《八月 · 挽留》第 2 幕：你：「群里的事我处理完了。现在轮到你的事。」 旁白：你说了很多。说到假弹不是清高，是底线；说到被挂不是丢人，是勋章。说到最后，他笑了，揉了揉你的头发。
+
+PANEL 5 (yc_aug3_page3, do not write ID): 原版羊村线剧情分镜《八月 · 挽留》第 3 幕：大鹅：「谢谢你。但是——我还是得退群避避风头。不是认输，是不想连累大家。」 旁白：（好感 +10。有些事，挽留改变不了方向，但能让人走得安心一点。）
+
+PANEL 6 (yc_aug4, do not write ID): 原版羊村线剧情分镜《八月 · 暴雨》第 1 幕：旁白：八月最后一场户外歌友会，天气预报说「局部有雨」——那个局部，精确地覆盖了你们的舞台。 旁白：雨点砸下来的时候，观众在跑，乐手在抢琴。你脑子里闪过的第一个画面，是清单上那卷加粗标红的防雨布。
+
+PANEL 7 (yc_aug4_page2, do not write ID): 原版羊村线剧情分镜《八月 · 暴雨》第 2 幕：旁白：三分钟后，设备全部盖严，人被挤进遮阳棚。雨幕里，大羊抱着吉他冲你喊： 大羊：「实习生！你这防雨布哪儿来的！」
+
+PANEL 8 (yc_aug4_page3, do not write ID): 原版羊村线剧情分镜《八月 · 暴雨》第 3 幕：你：「清单上写的！第三页！」 大羊：（大笑：）「行！从今天起你碰我效果器，我不骂你！」

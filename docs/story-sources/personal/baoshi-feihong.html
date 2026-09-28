@@ -331,7 +331,7 @@ h1{font-size:21px;text-align:center;letter-spacing:3px;margin:8px 0 2px}
 - 替他留意南方的演出消息（大旗+1）
 
 【yc_hold｜旗标yangcun｜羊村线 · 预留】
-旁白：（羊村线剧情待补充。乐队等级升级方式尚未开放；此线与十元线、乐队线部分重叠。占位事件，不会自动触发。）
+旁白：（羊村线剧情待补充。乐队等级可通过第一章筹备、正传演出与节奏舞台合奏提升；此线与十元线、乐队线部分重叠。占位事件，不会自动触发。）
 选项：
 - （占位）
 
@@ -475,13 +475,13 @@ function idle(){
   G.flags._hint=1;
   el('main').innerHTML='<div class="panel"><div class="txt">你的乐队等级已经够了，但这条线还进不去。<br><br>宝石×飞鸿线需要两个前置：① 第一章飞鸿被雪子挤兑时，你站出来替他说过话（旗标 feiSide）；② 从十元线分流而来——在十元的表白节点选择「不表白，只说我们继续一起组乐团吧」。<br><br>（调试：点下方按钮直接获得前置）</div><button class="btn" onclick="G.flags.feiSide=1;G.flags.syFriend=1;save();idle()">获得前置（调试用）</button></div>';return;}
  var m='<div class="panel"><div class="ins" style="margin-top:0">事件之间 · 自由行动</div>';
- if(G.level<6)m+='<button class="btn" disabled>乐队等级升级方式尚未开放</button>';
+ if(G.level<6)m+='<button class="btn" disabled>乐队 Lv.6 后开放；可通过第一章筹备、正传演出与节奏舞台成长</button>';
  m+='<button class="btn" onclick="G.cp+=2;save();idle()">山丘旁听排练（大旗+2）</button>';
  m+='<button class="btn" onclick="G.cp+=5;save();idle()">大旗 +5（调试用）</button>';
  m+='<button class="btn" onclick="if(confirm(\'清空存档重来？\')){localStorage.removeItem(SAVE_KEY);location.reload();}">清空重来</button></div>';
  el('main').innerHTML=m;}
 function doGig(){
- el('main').innerHTML='<div class="panel"><div class="txt">乐队等级升级方式尚未开放。</div><button class="btn" onclick="idle()">（继续）</button></div>';}
+ el('main').innerHTML='<div class="panel"><div class="txt">可通过第一章筹备、正传演出与节奏舞台合奏提升乐队等级。</div><button class="btn" onclick="idle()">（继续）</button></div>';}
 function check(need){if(!need)return true;for(var k in need){if(k==='cp'){if(G.cp<need[k])return false;}else if(!G.flags[k])return false;}return true;}
 window.onload=function(){load();idle();};
 window.pick=pick;window.G=G;window.idle=idle;window.doGig=doGig;

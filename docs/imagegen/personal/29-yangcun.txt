@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。
+
+PANEL 1 (yc_jun2b, do not write ID): 原版羊村线剧情分镜《六月 · 袖手》第 1 幕：旁白：你低头刷了三分钟手机。再抬头时，大鹅已经被按回椅子上，那杯酒见了底。 旁白：他趴在桌上，冲你摆了摆手，意思是你先回。那一摆，摆得你心里发空。
+
+PANEL 2 (yc_jun2b_page2, do not write ID): 原版羊村线剧情分镜《六月 · 袖手》第 2 幕：旁白：（你告诉自己这不关你的事。但那一晚，你睡得不太好。）
+
+PANEL 3 (yc_jun2, do not write ID): 原版羊村线剧情分镜《六月 · 留下的》第 1 幕：旁白：散场前，大鹅到底还是被灌了几杯——「最后一杯！」客人喊得理直气壮。 旁白：柒柒这时才站起来，冲你笑了笑，那笑容温柔得没有缝隙。
+
+PANEL 4 (yc_jun2_page2, do not write ID): 原版羊村线剧情分镜《六月 · 留下的》第 2 幕：柒柒：「你先回去吧。我来照顾他就可以了。」 大鹅：（醉意上来，含混地：）「实习生……你先回……我没事……」
+
+PANEL 5 (yc_jun2_page3, do not write ID): 原版羊村线剧情分镜《六月 · 留下的》第 3 幕：旁白：你点点头，往门口走。手握上门把的那一刻，你停住了——他说「没事」的样子，和白天说「欢迎」的样子，判若两人。
+
+PANEL 6 (yc_jun3, do not write ID): 原版羊村线剧情分镜《六月 · 看见的》第 1 幕：旁白：你轻轻带上门，故意把脚步声踩得越来越远，然后脱了鞋，折回来，把自己塞进走廊转角那摞设备箱后面。 旁白：几秒钟后，包间的门开了一条缝。柒柒探出头，扫了一眼空无一人的走廊，满意地关了门。
+
+PANEL 7 (yc_jun3_page2, do not write ID): 原版羊村线剧情分镜《六月 · 看见的》第 2 幕：旁白：你从设备箱的缝隙里看进去：她确实在照顾大鹅——递水、递纸巾、轻声细语，滴水不漏。 旁白：然后你看见她拿出手机，对着醉意朦胧的大鹅拍了几张照片，低头编辑着什么，嘴角带着笑。
+
+PANEL 8 (yc_jun3_page3, do not write ID): 原版羊村线剧情分镜《六月 · 看见的》第 3 幕：旁白：三秒后，她把手机收好，继续温柔地照顾他。一切都很好。只是你说不清哪里不对。 旁白：（你把看到的每一个细节，都记在了心里。）

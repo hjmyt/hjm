@@ -1106,6 +1106,37 @@ const CARD_DEFS = [
     ]
   },
   {
+    "id": "rek",
+    "name": "REK",
+    "rarity": "SR",
+    "role": "贝斯",
+    "group": "乐队",
+    "asset": "cardRek",
+    "coverAsset": "cardRekCover",
+    "avatarAsset": "cardRekAvatar",
+    "chronicleOnly": true,
+    "icon": "music",
+    "tag": "东莞 · 九点收琴",
+    "stars": 3,
+    "bonus": 2,
+    "active": 4,
+    "subtitle": "人可以淋雨，贝斯不能。",
+    "quote": "九点我要回东莞了——演出返场除外。",
+    "identity": "乐队贝斯手",
+    "seat": "低音声部",
+    "specialty": "Slap / 商演沟通 / 护琴",
+    "rival": "未设定",
+    "stats": [["贝斯",88],["节奏",86],["Slap",92],["护琴",99]],
+    "statnote": "背着琴蹚过暴雨，人湿透了，琴一滴没沾。",
+    "activeName": "低音推进",
+    "activeText": "准备后参与下场完整演奏的全队加成；与其他编队和技能奖励合计最多 +2 音符。",
+    "passiveName": "九点之前",
+    "passiveText": "时间观念和低音一样稳。完整达标演奏后参与正常经验与羁绊结算。",
+    "bio": "长黑发、矩形眼镜和短胡茬的成年男性贝斯手。嘴上总在算回东莞的时间，真到需要救场时从不缺席。",
+    "gifts": [["tea","三分糖奶茶","gift",5,6,18],["strings","贝斯弦","music",25,12,35],["case","防雨琴包","shield",50,15,45]],
+    "thanks": ["“三分糖，记得挺准。”","“新弦不错，今晚多练一会儿。”","“人可以湿，琴不行。这礼物实用。”"]
+  },
+  {
     "id": "qiqi",
     "name": "柒柒",
     "rarity": "SR",
@@ -2120,6 +2151,7 @@ const COLLECTION_ORDER = [
   "orange",
   "feihong",
   "dijie",
+  "rek",
   "qiqi",
   "lemon",
   "xiaozhou",
@@ -2168,6 +2200,9 @@ const STORY_CARD_ALIASES = {
   ],
   "qiqi": [
     "柒柒"
+  ],
+  "rek": [
+    "REK"
   ],
   "lemon": [
     "柠檬"

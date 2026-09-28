@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。
+
+PANEL 1 (yc_nov2, do not write ID): 原版羊村线剧情分镜《十一月 · 曼波杯报名表》第 1 幕：旁白：曼波杯决赛的报名表摆在桌上，名单那一栏空着。填谁，不填谁，全团吵了三天。这一次，你没有急着表态。 旁白：你把这八个月的东西一样一样摆出来：路演的观众数、歌友会的上座率、摇人帖的转发、每一次救场的记录。
+
+PANEL 2 (yc_nov2_page2, do not write ID): 原版羊村线剧情分镜《十一月 · 曼波杯报名表》第 2 幕：你：「宝石和飞鸿的原创 demo，我这有十一首。慢，是因为每一首都改了十几版。慢不是错。」 大羊：（盯着那叠 demo 看了很久，忽然把笔一摔：）「……行。是我短视了。名单，重写。」
+
+PANEL 3 (yc_nov2_page3, do not write ID): 原版羊村线剧情分镜《十一月 · 曼波杯报名表》第 3 幕：旁白：报名表交上去那天，宝石和飞鸿的名字在名单正中间。宝石看到表的时候别过头去，飞鸿拍了拍他的背，什么都没说。
+
+PANEL 4 (yc_nov2b, do not write ID): 原版羊村线剧情分镜《十一月 · 空出来的位置》第 1 幕：旁白：曼波杯决赛的报名表交了。名单上，没有宝石和飞鸿。 旁白：交表那天，宝石把歌词本收进背包，动作很轻，轻得像怕吵醒谁。飞鸿帮他把谱子一沓一沓码好，两个人谁都没说话。
+
+PANEL 5 (yc_nov2b_page2, do not write ID): 原版羊村线剧情分镜《十一月 · 空出来的位置》第 2 幕：旁白：走的时候，飞鸿回头看了你一眼。没有责怪。——没有责怪，才最难受。 小周：（小声：）「……排练室一下空了半排。」
+
+PANEL 6 (yc_nov2b_page3, do not write ID): 原版羊村线剧情分镜《十一月 · 空出来的位置》第 3 幕：旁白：你告诉自己这是对的决定，比赛要紧。可那天晚上，你在空荡荡的排练室坐了很久，把报名表复印件揉了，又抚平。
+
+PANEL 7 (yc_dec_band, do not write ID): 原版羊村线剧情分镜《十二月 · 曼波杯》第 1 幕：旁白：十二月，「曼波杯·大湾区青年乐队大赛」决赛之夜。后台的暖气坏了，乐手们的手都是冰的，但试音的声音一次比一次稳。 旁白：小塔在最后一遍核对鼓的固定螺丝。大羊的效果器板上贴着你写的标签。REK的贝斯包侧袋里，插着你印的应急预案。宝石和飞鸿的原创曲谱，摊开在最中间。
+
+PANEL 8 (yc_dec_band_page2, do not write ID): 原版羊村线剧情分镜《十二月 · 曼波杯》第 2 幕：十元：（她站在侧幕，忽然说：）「八个月前你连海报都不会做。」 你：「现在会了。」

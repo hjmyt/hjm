@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。
+
+PANEL 1 (yc_cp_alt, do not write ID): 原版羊村线剧情分镜《十二月 · 没说出口的》第 1 幕：旁白：你把图册塞回文件夹，装作什么都没看见。 旁白：之后一切照旧。飞鸿还是那个飞鸿：扒谱，添水，把「探鱼呗」说得理所当然。
+
+PANEL 2 (yc_cp_alt_page2, do not write ID): 原版羊村线剧情分镜《十二月 · 没说出口的》第 2 幕：旁白：只是有天散场，你走在最后，看见他在门口站了一会儿，回头望了一眼正在收麦架的宝石。就一眼。然后他伸手，关了灯。
+
+PANEL 3 (yc_cp9, do not write ID): 原版羊村线剧情分镜《十二月 · 开口》第 1 幕：旁白：你决定找飞鸿谈谈。可是怎么开口呢？这天排练完，你在他身边游荡了三圈，欲言又止。 飞鸿：（还是他先开的口，头也不抬：）「你有啥事直说吧。最近看你怪怪的。」
+
+PANEL 4 (yc_cp10, do not write ID): 原版羊村线剧情分镜《十二月 · 桂花》第 1 幕：飞鸿：（他愣了一下，随即摆手：）「哎呀，你太敏感了。」 旁白：这时，一阵风从窗户进来。楼下那株四季桂还没谢，香气随着风，幽幽地飘进来。真香，清甜。你忽然想吃桂花饼了。
+
+PANEL 5 (yc_cp10_page2, do not write ID): 原版羊村线剧情分镜《十二月 · 桂花》第 2 幕：飞鸿：（他望着窗外，却突然笑了：）「你看这桂花。太高了，也太香了。」 飞鸿：「林清玄专门写过的。」
+
+PANEL 6 (yc_cp10_page3, do not write ID): 原版羊村线剧情分镜《十二月 · 桂花》第 3 幕：旁白：你绞尽脑汁地回忆现代文学课——完了，那节课你在睡觉。
+
+PANEL 7 (yc_cp11, do not write ID): 原版羊村线剧情分镜《十二月 · 搜索》第 1 幕：飞鸿：（他点头：）「这就是我的回答。」 旁白：你吃了没文化的亏，默默打开手机浏览器，搜索：林清玄，桂花。
+
+PANEL 8 (yc_cp11_page2, do not write ID): 原版羊村线剧情分镜《十二月 · 搜索》第 2 幕：旁白：不搜不知道，一搜吓一跳——原来他写桂花，写的是它开得又高又沉默，香得那么深，却从不声张，也不指望被谁摘下来。 旁白：你盯着屏幕，忽然全懂了。

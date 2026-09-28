@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。
+
+PANEL 1 (yc_cp3_page3, do not write ID): 原版羊村线剧情分镜《十二月 · 一手素材》第 3 幕：旁白：满屏的哈哈哈里，你注意到飞鸿没说话。他平时话少，但这次不一样——他把手机，扣在了桌上。
+
+PANEL 2 (yc_cp4, do not write ID): 原版羊村线剧情分镜《十二月 · 不妙》第 1 幕：旁白：没等你问出口，飞鸿先站了起来：「我去买水。」 旁白：他走了。排练室的笑闹声，忽然显得有点远。
+
+PANEL 3 (yc_cp4_page2, do not write ID): 原版羊村线剧情分镜《十二月 · 不妙》第 2 幕：十元：（不知何时站到了你旁边，压低声音：）「你也发现了？」 旁白：你突然意识到——事情，可能不妙。
+
+PANEL 4 (yc_cp5, do not write ID): 原版羊村线剧情分镜《十二月 · 观察日记》第 1 幕：旁白：为了印证猜想，你开始了不动声色的观察。去哪儿蹲点呢？
+
+PANEL 5 (yc_cp5a, do not write ID): 原版羊村线剧情分镜《观察 · 排练室》第 1 幕：旁白：排练室。宝石练错了一个音，自己还没察觉，飞鸿的谱子已经翻回了那一页，铅笔轻轻敲了敲谱架。 旁白：宝石的水杯永远是满的。你蹲了三天，终于蹲到了那个添水的人。
+
+PANEL 6 (yc_cp5a_page2, do not write ID): 原版羊村线剧情分镜《观察 · 排练室》第 2 幕：旁白：（你在本子上记：他知道他所有的习惯，比他自己还早一步。）
+
+PANEL 7 (yc_cp5b, do not write ID): 原版羊村线剧情分镜《观察 · 歌友会散场》第 1 幕：旁白：歌友会散场，十元张罗宵夜：「吃什么？火锅还是探鱼？」 飞鸿：（脱口而出：）「探鱼呗，宝石喜欢。」
+
+PANEL 8 (yc_cp5b_page2, do not write ID): 原版羊村线剧情分镜《观察 · 歌友会散场》第 2 幕：旁白：他说完自己顿了一下，补了句：「……我是说，上回那家不错。」 旁白：你环视全桌——也只有他记得，宝石不吃香菜，所以他的蘸料碟里，从来不会出现香菜。

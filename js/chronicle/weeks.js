@@ -2,6 +2,13 @@
 
 function createChronicleWeeks(ctx) {
     const optional = {
+        1: [
+            { scene: 'c1_band_offer', week: 1, title: '一份没有做完的 Demo', claim: 'band:c1:formation-choice' },
+            { scene: 'c1_band_commit', week: 2, title: '主唱与和声的位置', requires: 'band:c1:formation-choice', claim: 'band:c1:commit-choice' },
+            { scene: 'c1_band_rehearsal', week: 3, title: '监听室里的两个声部', requires: 'band:c1:commit-choice', claim: 'band:c1:rehearsal' },
+            { scene: 'c1_band_arrangement', week: 4, title: 'Demo 的最后一种版本', requires: 'band:c1:rehearsal', claim: 'band:c1:arrangement' },
+            { scene: 'c1_band_qualification', week: 5, title: '把 Demo 带上舞台', requires: 'band:c1:arrangement', claim: 'band:c1:qualification' }
+        ],
         2: [{ scene: 'c2_boundary', week: 2, title: 'TIM 的手机', person: 'tim' }],
         3: [{ scene: 'c3_band_q', week: 2, title: '一顿筹备聚餐', person: 'qiqi' }, { scene: 'c3_band_bill', week: 5, title: '陪十元再合一遍', person: 'shiyuan' }],
         4: [{ scene: 'c4_band_lemon', week: 2, title: '柠檬的借款', person: 'lemon' }, { scene: 'c4_band_bao', week: 3, title: '空剧场里练嗓', person: 'baoshi' }]
@@ -95,7 +102,7 @@ function createChronicleWeeks(ctx) {
     function startWeekStory() {if (enterWeekStory()) ctx.changed();}
     function sideEvents() {
         const r = ctx.R();
-        return (optional[r.chapter] || []).filter(e => r.week >= e.week && cardOwned(ctx.PEOPLE[e.person].card));
+        return (optional[r.chapter] || []).filter(e => r.week >= e.week && (!e.person || cardOwned(ctx.PEOPLE[e.person].card)) && (!e.requires || levelMilestoneClaimed(e.requires)) && (!e.claim || !levelMilestoneClaimed(e.claim)));
     }
     function startSide(scene) {
         const r = ctx.R();
@@ -103,6 +110,16 @@ function createChronicleWeeks(ctx) {
         r.weekly.side.push(scene);
         r.scene = scene;
         ctx.changed();
+    }
+    function bandStoryStatus() {
+        const r = ctx.R();
+        if (r.chapter !== 1) return null;
+        const steps = optional[1], claimed = steps.filter(e => levelMilestoneClaimed(e.claim)).length;
+        const next = steps.find(e => !levelMilestoneClaimed(e.claim)) || null;
+        const available = sideEvents().find(e => e.scene.startsWith('c1_band_')) || null;
+        const opened = next ? r.weekly.side.includes(next.scene) : false;
+        const trial = next?.scene === 'c1_band_qualification' && opened;
+        return { claimed, total: steps.length, next, available, opened, trial };
     }
     function weeklyDialogue(r = ctx.R()) {
         const musical = r.chapter === 6;
@@ -118,17 +135,23 @@ function createChronicleWeeks(ctx) {
     }
     function weekStoryHTML() {
         const r=ctx.R(), n=pendingStory(r);
-        return (n ? `<section class="cp-week-story"><span class="cp-week-kicker">${front[r.chapter].includes(n)?'章节剧情':'排练间隙的故事'}</span><h3>${ctx.E(ChronicleWeeks[r.chapter][n-1].title)}</h3><p>接着上次的选择读下去，完整经历这一段故事。</p>${ctx.actionButton('week-story','继续故事','arrow','primary')}</section>` : '') + ctx.trainingHubHTML();
+        return n ? `<section class="cp-week-story"><span class="cp-week-kicker">${front[r.chapter].includes(n)?'章节剧情':'排练间隙的故事'}</span><h3>${ctx.E(ChronicleWeeks[r.chapter][n-1].title)}</h3><p>接着上次的选择读下去，完整经历这一段故事。</p>${ctx.actionButton('week-story','继续故事','arrow','primary')}</section>` : '';
     }
     function sideStoriesHTML() {
         const events = sideEvents();
-        if (!events.length) return '';
-        return `<section class="cp-week-sides"><h4>排练间隙 · 可选相遇</h4><div>${events.map(e => { const done = ctx.R().weekly.side.includes(e.scene); return ctx.actionButton('week-side', ctx.E(e.title) + (done ? ' · 已记录' : ''), done ? 'check' : 'heart', 'ghost', `data-cp-event="${e.scene}" ${done ? 'disabled' : ''}`); }).join('')}</div><p class="cp-caption">这些相遇可以晚些再看，不影响进入下一周。</p></section>`;
+        const bandSteps = ['band:c1:formation-choice', 'band:c1:commit-choice', 'band:c1:rehearsal', 'band:c1:arrangement', 'band:c1:qualification'];
+        const bandReady = ctx.R().chapter === 1 && levelMilestoneClaimed('band:c1:arrangement') && !levelMilestoneClaimed('band:c1:qualification') && ctx.R().weekly.side.includes('c1_band_qualification');
+        if (ctx.R().chapter === 1) return '';
+        if (!events.length && !bandReady) return '';
+        const lineupReady = state.cards.team.includes('baoshi') && state.cards.team.includes('feihong');
+        const trial = bandReady ? `<div class="cp-rule-note">${I('music')}乐队筹备 ${bandSteps.filter(id => levelMilestoneClaimed(id)).length} / 5 · 把宝石和飞鸿加入节奏舞台编队，完整演奏达到 C，即可完成资格试演。<div style="margin-top:12px"><button class="btn primary small" data-route="${lineupReady ? 'rhythm' : 'cards'}">${lineupReady ? '去节奏舞台试演' : '先调整宝石＋飞鸿编队'} ${I('arrow')}</button></div></div>` : '';
+        const title = ctx.R().chapter === 1 ? '第一章支线 · 宝石＋飞鸿乐队筹备' : '排练间隙 · 可选相遇';
+        return `<section class="cp-week-sides"><h4>${title}</h4><div>${events.map(e => { const done = ctx.R().weekly.side.includes(e.scene); return ctx.actionButton('week-side', ctx.E(e.title) + (done ? ' · 已记录' : ''), done ? 'check' : 'heart', 'ghost', `data-cp-event="${e.scene}" ${done ? 'disabled' : ''}`); }).join('')}</div>${trial}<p class="cp-caption">这些相遇可以晚些再看，不影响进入下一周；等级里程碑全局只结算一次。</p></section>`;
     }
     function illustrationHTML() {
         const art = chronicleSceneArt(ctx.R());
         return art ? `<figure class="cp-story-art"><img src="${ASSETS[art.asset]}" alt="${ctx.E(art.text)}" decoding="async"><figcaption>${ctx.E(art.location)}</figcaption></figure>` : '';
     }
     function weeklyHelp() { return '<p>先连贯阅读章节剧情，再进入五周训练与相处；临近演出的事件按时出现，第六周登台。每周一种训练：跟拍、记旋律、找错拍、接奏和彩排。首次报名 10 音符，完成训练琴技 +2，优秀额外 +1；失败、中断可免费继续，每章每项只奖励一次。普通加练仍为 10 音符 / 琴技 +2。已开放的训练可在演出前补练。摸底失败不阻断剧情；不足的琴技会在训练页明确提示。</p>'; }
-    return {freshWeeks,cleanWeeks,weekPlan,pendingStory,storyTransition,enterWeekStory,startWeekStory,sideEvents,startSide,weeklyDialogue,weekStoryHTML,sideStoriesHTML,illustrationHTML,weeklyHelp};
+    return {freshWeeks,cleanWeeks,weekPlan,pendingStory,storyTransition,enterWeekStory,startWeekStory,sideEvents,startSide,bandStoryStatus,weeklyDialogue,weekStoryHTML,sideStoriesHTML,illustrationHTML,weeklyHelp};
 }

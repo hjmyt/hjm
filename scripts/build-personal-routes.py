@@ -2,7 +2,7 @@
 from pathlib import Path
 import re,html,json,copy
 ROOT=Path(__file__).resolve().parents[1]
-names={'阿喆':'azhe','TIM':'tim','冰冰':'bingbing','垃垃':'lala','十元':'shiyuan','旁白':'narrator','小塔':'xiaota','大塔':'xiaota','大鹅':'goose','大羊':'dayang','黄奕兴':'huangyx','朱老师':'zhu','飞鸿':'feihong','宝石':'baoshi','雪子':'xuezi','你':'player'}
+names={'阿喆':'azhe','TIM':'tim','冰冰':'bingbing','垃垃':'lala','十元':'shiyuan','旁白':'narrator','小塔':'xiaota','大塔':'xiaota','大鹅':'goose','大羊':'dayang','黄奕兴':'huangyx','朱老师':'zhu','飞鸿':'feihong','宝石':'baoshi','雪子':'xuezi','REK':'rek','柒柒':'qiqi','小周':'xiaozhou','小英':'xiaoying','主唱':'singer','客人':'guest','你':'player'}
 result={}
 route_files={'azhe':'azhe.html','shiyuan':'shiyuan.html','baoshi_feihong':'baoshi-feihong.html'}
 for route,filename in route_files.items():
@@ -113,6 +113,49 @@ node('baoshi_feihong','cp_12c')['resolveCpEnding']=True
 node('baoshi_feihong','yc_hold')['artPrompt']='山丘酒吧温暖的空排练室，两支并排的话筒、两把靠在一起的木吉他与一架键盘，舞台灯刚亮，像一支新乐队即将开始排练；无人，无文字。'
 node('baoshi_feihong','cp_HE')['artPrompt']='夜晚摩天轮下的霓虹广场。宝石穿米白衬衫，飞鸿穿蓝灰衬衫，两个成年男性久别重逢后穿着完整地用力拥抱，眼眶微红、如释重负，行李箱放在脚边；远处十元和雪子欣慰旁观。温柔克制、非情色，不表现亲吻。'
 node('baoshi_feihong','cp_BE')['artPrompt']='两年后的山丘旧舞台，空无一人。公告栏上并排贴着两张已经泛黄但没有可读文字的演出照片，一张双人合影、一张孤独主唱的剪影；冷清舞台灯、未唱完的遗憾气氛。'
+
+# 羊村是独立的第七章乐队线。正文、对白、选项、分支与结局直接从
+# 用户提供的原始 HTML 编译；阅读器只负责把原文按最多两个发言回合分页。
+yc_hold_archive=copy.deepcopy(node('baoshi_feihong','yc_hold'))
+yc_hold_archive['asset']='personal_yc_hold'
+yc_hold_archive['memory']='cp7_yc_hold'
+result['baoshi_feihong']['nodes']=[n for n in result['baoshi_feihong']['nodes'] if n['id']!='yc_hold']
+yc_source=(ROOT/'docs/story-sources/personal/yangcun.html').read_text()
+yc_raw=html.unescape(re.search(r'<textarea id="script"[^>]*>([\s\S]*?)</textarea>',yc_source)[1])
+yc_nodes=[]
+for block in re.split(r'(?=^【)',yc_raw,flags=re.M):
+ lines=[line.strip() for line in block.splitlines() if line.strip()]
+ if not lines or not lines[0].startswith('【'):continue
+ head=re.match(r'【(.*?)】',lines[0])[1].split('｜',1)
+ n={'id':head[0].strip(),'title':head[1].strip() if len(head)>1 else '', 'sub':False,
+    'need':{'bond':0,'score':0,'flags':[]},'lines':[],'choices':[]}
+ choice_mode=False
+ for line in lines[1:]:
+  if line=='选项：':choice_mode=True;continue
+  if choice_mode and line.startswith('-'):
+   text=line[1:].strip();choice={'text':'','bond':0,'score':0,'dang':0,'aff':{},'flags':[],'next':None}
+   while True:
+    match=re.search(r'（([^（）]*)）\s*$',text)
+    if not match:break
+    effect=match[1].strip();used=True
+    score_match=re.fullmatch(r'分([+-])(\d+)',effect)
+    dang_match=re.fullmatch(r'担当([+-]\d+)',effect)
+    aff_match=re.fullmatch(r'好感(\S+?)([+-]\d+)',effect)
+    if score_match:choice['score']=(1 if score_match[1]=='+' else -1)*int(score_match[2])
+    elif dang_match:choice['dang']=int(dang_match[1])
+    elif aff_match:choice['aff'][aff_match[1]]=int(aff_match[2])
+    elif effect.startswith('记住'):choice['flags'].append(effect[2:])
+    elif effect.startswith('去'):choice['next']=effect[1:].strip()
+    else:used=False
+    if not used:break
+    text=text[:match.start()].strip()
+   choice['text']=text or '（继续）';n['choices'].append(choice);continue
+  match=re.match(r'^(.+?)：([\s\S]*)$',line)
+  if match and match[1] in names:n['lines'].append({'who':names[match[1]],'text':match[2]})
+ if not n['choices']:n['choices']=[c('（继续）')]
+ if n['id'] in ['yc_end1','yc_end2','yc_end3','yc_end4']:n['ending']={'yc_end1':'HE','yc_end2':'HE','yc_end3':'TE','yc_end4':'BE'}[n['id']]
+ yc_nodes.append(n)
+result['yangcun']={'id':'yangcun','name':'羊村','tagline':'流行组 · 五月到十二月','asset':'personal_yc_start','entry':'yc_start','preserveTurns':True,'nodes':yc_nodes}
 cp['entry']='cp_00'
 
 # The supplied prose sometimes embeds direct speech inside a narrator paragraph.
@@ -172,10 +215,10 @@ for r in result.values():
   for choice in n['choices']:
    if choice['next']=='ACT_DONE':choice['next']=None
 
-def dialogue_pages(lines):
+def dialogue_pages(lines,merge=True):
  turns=[]
  for line in lines:
-  if turns and turns[-1]['who']==line['who']:turns[-1]['text']+='\n\n'+line['text']
+  if merge and turns and turns[-1]['who']==line['who']:turns[-1]['text']+='\n\n'+line['text']
   else:turns.append(copy.deepcopy(line))
  return [turns[i:i+2] for i in range(0,len(turns),2)] or [[]]
 
@@ -221,11 +264,27 @@ for route_id in ['azhe','shiyuan']:
    if page_index>0:other_page_scenes.append({'route':route_id,'node':n['id'],'page':page_index+1,'title':n['title'],**art})
   n['pageArt']=page_art
 
+for n in result['yangcun']['nodes']:
+ pages=dialogue_pages(n['lines'],merge=False);page_art=[]
+ for page_index,page in enumerate(pages):
+  output_id=n['id'] if page_index==0 else f'{n["id"]}_page{page_index+1}'
+  speaker_names={value:key for key,value in names.items()};speaker_names.update({'narrator':'旁白','player':'你','xiaota':'小塔'})
+  excerpt=' '.join(f'{speaker_names.get(l["who"],l["who"])}：{l["text"]}' for l in page)
+  art={'id':output_id,'asset':f'personal_{output_id}','memory':f'cp7_{output_id}',
+       'text':' '.join(l['text'] for l in page)[:280],
+       'prompt':f'原版羊村线剧情分镜《{n["title"]}》第 {page_index+1} 幕：'+excerpt}
+  if output_id=='yc_cp3':
+   art['prompt']+=' 动作必须是一只手突然抓住对方穿着衣袖的前臂、靠近手肘的位置，手掌绝不相扣，不能画成牵手、握手、拥抱或暧昧互动；两人隔着桌子保持社交距离。'
+  page_art.append(art)
+ n['pageArt']=page_art
+
 (ROOT/'js/data/personal-routes.js').write_text("'use strict';\n\n// Compiled from supplied scripts; production rules are explicit in the build script.\nconst PERSONAL_ROUTES = "+json.dumps(result,ensure_ascii=False,indent=2)+";\nconst PERSONAL_NODES = Object.values(PERSONAL_ROUTES).flatMap(r=>r.nodes.map(n=>({...n,route:r.id})));\nconst PERSONAL_PAGE_ART = PERSONAL_NODES.flatMap(n=>(n.pageArt||[]).map((a,index)=>({...a,route:n.route,node:n.id,page:index+1,title:n.title})));\nObject.assign(ASSETS,Object.fromEntries([...PERSONAL_NODES.filter(n=>n.asset).map(n=>[n.asset,`assets/chronicle/personal/${n.id}.webp`]),...PERSONAL_PAGE_ART.map(a=>[a.asset,`assets/chronicle/personal/${a.id}.webp`])]));\n")
 # Every reader node gets its own panel. No character portraits substitute for scene art.
-base='''Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. Avoid giving a violin a guitar body, avoid duplicate people.\n阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：黑发成年男性贝斯手。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，短发休闲穿搭；绝不是女性。\n'''
-nodes=[n for r in result.values() if r['id']!='baoshi_feihong' for n in r['nodes']]
-cp_nodes=result['baoshi_feihong']['nodes'];plan=[]
+base='''Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.\n阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。\n'''
+nodes=[n for r in result.values() if r['id'] not in ['baoshi_feihong','yangcun'] for n in r['nodes']]
+cp_nodes=list(result['baoshi_feihong']['nodes'])
+cp_nodes.insert(next(i for i,n in enumerate(cp_nodes) if n['id']=='cp_HE'),yc_hold_archive)
+plan=[]
 groups=[(start//8+1,nodes[start:start+8]) for start in range(0,len(nodes),8)]
 groups += [(15+start//8,cp_nodes[start:start+8]) for start in range(0,len(cp_nodes),8)]
 for number,group in groups:
@@ -251,5 +310,22 @@ for start in range(0,len(other_page_scenes),8):
  for i in range(len(group),8):prompt+=f'\nPANEL {i+1}: Archive detail study, an empty warm rehearsal room with a violin case and open music pages, no characters, no readable text.\n'
  (ROOT/f'docs/imagegen/personal/{batch}.txt').write_text(prompt)
  plan.append({'batch':batch,'scenes':[{k:scene[k] for k in ['id','title','asset','memory']} for scene in group]})
+# Every visible Yangcun reader page gets a different illustration. Keeping the
+# pages in story order also makes source review and atlas QA deterministic.
+yangcun_pages=[]
+for n in result['yangcun']['nodes']:
+ for page_index,art in enumerate(n['pageArt']):
+  yangcun_pages.append({'node':n['id'],'page':page_index+1,'title':n['title'],**art})
+for start in range(0,len(yangcun_pages),8):
+ group=yangcun_pages[start:start+8];batch=f'{27+start//8:02d}-yangcun';prompt=base
+ for i,scene in enumerate(group):prompt+=f'\nPANEL {i+1} ({scene["id"]}, do not write ID): '+scene['prompt']+'\n'
+ for i in range(len(group),8):prompt+=f'\nPANEL {i+1}: Archive detail study, an empty warm rehearsal room with a keyboard, drum kit, guitar and bass cases, no characters, no readable text.\n'
+ (ROOT/f'docs/imagegen/personal/{batch}.txt').write_text(prompt)
+ plan.append({'batch':batch,'scenes':[{k:scene[k] for k in ['id','title','asset','memory']} for scene in group]})
+# Preserve previously audited one-cell corrections when rebuilding the plan.
+for batch in plan:
+ for scene in batch['scenes']:
+  if scene['id']=='cp_00b':scene.update({'sourceOverride':'assets/chronicle/personal/source/cp_00b-fixed.png','promptOverride':'docs/imagegen/personal/anatomy-fixes-2026-09-27.md'})
+  if scene['id']=='cp_10_page2':scene.update({'sourceOverride':'assets/chronicle/personal/source/cp_10_page2-fixed.png','promptOverride':'docs/imagegen/personal/anatomy-fixes-2026-09-27.md'})
 (ROOT/'docs/imagegen/personal/plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n')
 print(f'{sum(len(v["nodes"]) for v in result.values())} dialogue scenes ({len(nodes)+len(cp_nodes)+len(cp_page_scenes)+len(other_page_scenes)} illustrated pages), {len(plan)} atlases; '+', '.join(f'{k}: {len(v["nodes"])}' for k,v in result.items()))

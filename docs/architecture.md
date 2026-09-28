@@ -12,7 +12,7 @@
 | `js/core/state.js` | 存档键、初始状态、旧档清洗、读取与保存；不在加载文件时读取存档 |
 | `js/core/economy.js` | 音符规则、永久领奖记录、每日额度与迁移 |
 | `js/core/bonds.js` | 羁绊规则、全局同步、增长与领取记录 |
-| `js/core/progression.js` | 全局乐团／乐队等级、旧章节等级迁移、乐团升级与章节同步；乐队暂不配置升级入口 |
+| `js/core/progression.js` | 全局乐团／乐队等级、成员归属、一次性升级里程碑、旧章节等级迁移与章节同步 |
 | `js/core/utils.js` | DOM 查询、转义、范围约束、日期等基础工具 |
 | `js/chronicle/index.js` | 正传控制器、共享运行状态、跨模块连接与公开接口 |
 | `js/chronicle/chapters/` | 各章对白、分支与章节专属规则；第五、六章共用一个后期剧情模块 |
@@ -56,6 +56,7 @@ JS 中的图片和音频路径仍相对于页面根目录。CSS 的 `url()` 相�
 
 - `node tests/architecture.cjs`：脚本语法、入口顺序、资源完整性、`file://` 与严格 MIME 的 HTTP 加载、刷新存档、桌面和手机布局。
 - `node tests/economy.cjs`、`node tests/unified-bonds.cjs`：音符与羁绊规则。
+- `node tests/progression-levels.cjs`：第一章乐队筹备、乐队／乐团成员归属、节奏舞台等级成长与里程碑防篡改。
 - 其余章节、卡牌、音频回归见测试目录说明。
 
 本次拆分保持存档键与存档格式不变，未引入新的经济或剧情规则。
@@ -76,13 +77,15 @@ JS 中的图片和音频路径仍相对于页面根目录。CSS 的 `url()` 相�
 
 礼品卡：`js/data/gift-keys.js` 仅保存公钥；`js/features/gift-cards.js` 负责验签、兑换与表单，记录由 `js/core/economy.js` 清理和持久化；`scripts/gift-card.cjs` 在网站外保存私钥并本地签发。详见 `docs/gift-cards.md`。
 
-音符余额、全部角色与团宠羁绊、全局乐团等级和全局乐队等级在运行时仍使用直接数值；角色羁绊只有一个全局对象，`state.affinity`、`chronicle.bonds` 与各章节运行态的 `aff` 只是对同一对象的兼容引用，不维护章节副本。写入浏览器和导出备份时由 `js/core/state.js` 分别转为带随机数、字段绑定与完整性标记的轻量对称加密 `wallet`、`bondVault`、`levelVault`，并删除所有章节快照中的明文羁绊和等级字段；持久化羁绊只有一份 `bondVault`。新版浏览器存档使用独立键且只接受三组完整加密数据；旧键只用于首次读取历史本地存档，成功保存新版后会删除本项目旧键。外部文件导入同样必须包含三组有效加密数据。任一校验失败则拒绝读档。固定前端密钥只用于阻止直接编辑 JSON，不构成服务端级防作弊或真实资产保障。
+音符余额、全部角色与团宠羁绊、全局乐团等级和全局乐队等级在运行时仍使用直接数值；角色羁绊只有一个全局对象，`state.affinity`、`chronicle.bonds` 与各章节运行态的 `aff` 只是对同一对象的兼容引用，不维护章节副本。等级增长只通过 `progression.js` 的白名单里程碑结算，剧情选择、每章首次验收／正式演出、训练节点，以及节奏舞台首次取得某一评级分别去重。乐队成员固定为大鹅、小塔、大羊、宝石、雪子、飞鸿；阿喆、笛杰归乐团。
+
+写入浏览器和导出备份时由 `js/core/state.js` 分别转为带随机数、字段绑定与完整性标记的轻量对称加密 `wallet`、`bondVault`、`levelVault`，并删除所有章节快照中的明文羁绊和等级字段；持久化羁绊只有一份 `bondVault`。`levelVault` 同时校验等级和已领取里程碑，不能只删除领取记录后重复升级。新版浏览器存档使用独立键且只接受三组完整加密数据；旧键只用于首次读取历史本地存档，成功保存新版后会删除本项目旧键。外部文件导入同样必须包含三组有效加密数据。任一校验失败则拒绝读档。固定前端密钥只用于阻止直接编辑 JSON，不构成服务端级防作弊或真实资产保障。
 
 - `js/chronicle/ear.js`：视听练耳的简谱填空、音画同步与输入；题库在 `js/data/chronicle-training.js`，三轮结算和旧训练记录继续由 `training.js` 管理。
 
 ## 第七章 · 个人线
 
-`js/data/personal-routes.js` 为独立剧情目录，由 `scripts/build-personal-routes.py` 从 `docs/story-sources/personal/` 内的两份原稿提取；HTML 原稿只作为文本解析，不运行其中的原型脚本。`js/chronicle/personal.js` 通过显式工厂接入正传控制器，样式在 `styles/chronicle-personal.css`。
+`js/data/personal-routes.js` 为独立剧情目录，由 `scripts/build-personal-routes.py` 从 `docs/story-sources/personal/` 的原稿与正式改编说明生成；HTML 原稿只作为文本解析，不运行其中的原型脚本。第二章乐队组选择会永久解锁第七章羊村线，但不会截断第二章。`js/chronicle/personal.js` 通过显式工厂接入正传控制器，样式在 `styles/chronicle-personal.css`。
 
 六章的 `run`、`slots` 与原章节编号保持兼容。个人线保存在 `chronicle.personal`：当前角色与阅读状态、每角色独立的剧情节点、选择标记、已读场景、结局、相处记录，以及剧情来源的自然解锁记录 `storyUnlocks`。角色羁绊仍由全局 core 提供；阿喆、十元入口要求完成第六章且对应角色羁绊严格大于 35，宝石×飞鸿 CP 线还可由融合线关键聊天直接解锁并跳转。第七章奖励共用 `economy.claimed['chapter:7']`，不同个人线或结局不重复发放。
 

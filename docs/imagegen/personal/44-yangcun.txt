@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。
+
+PANEL 1 (yc_end2_page2, do not write ID): 原版羊村线剧情分镜《结算 · HE2 · 一家人》第 2 幕：旁白：照片里你站在最边上，手里还捏着半张后勤清单。大羊说那是你的「本体」。
+
+PANEL 2 (yc_end3, do not write ID): 原版羊村线剧情分镜《结算 · TE · 还能运营》第 1 幕：旁白：曼波杯止步半决赛。团里的矛盾公开化了几次，又和好几次。 旁白：年底的例会开到凌晨，争吵、妥协、再争吵。散会时，大羊拍了拍你的肩：「起码，我们还在一起排练。」
+
+PANEL 3 (yc_end3_page2, do not write ID): 原版羊村线剧情分镜《结算 · TE · 还能运营》第 2 幕：旁白：你收拾着会议记录，想：能把一群这么难搞的人留到现在，大概也算一种本事。
+
+PANEL 4 (yc_end4, do not write ID): 原版羊村线剧情分镜《结算 · BE · 解散》第 1 幕：旁白：曼波杯预选落选。压垮乐团的最后一根稻草，是一篇措辞激烈的退团长文。 旁白：十二月最后一个周末，GUSHI 排练室的门上贴了退租通知。你站在门口，想起五月第一天推开这扇门的样子。
+
+PANEL 5 (yc_end4_page2, do not write ID): 原版羊村线剧情分镜《结算 · BE · 解散》第 2 幕：旁白：有些事，你本来可以做得更好。你自己知道是哪几件。
+
+PANEL 6: Archive detail study, an empty warm rehearsal room with a keyboard, drum kit, guitar and bass cases, no characters, no readable text.
+
+PANEL 7: Archive detail study, an empty warm rehearsal room with a keyboard, drum kit, guitar and bass cases, no characters, no readable text.
+
+PANEL 8: Archive detail study, an empty warm rehearsal room with a keyboard, drum kit, guitar and bass cases, no characters, no readable text.

@@ -3694,5 +3694,2825 @@
     ],
     "output": "assets/chronicle/personal/sy_BE_page2.webp",
     "prompt": "docs/imagegen/personal/26-personal.txt"
+  },
+  {
+    "id": "yc_start",
+    "title": "开篇 · 咸鱼的五月",
+    "asset": "personal_yc_start",
+    "memory": "cp7_yc_start",
+    "source": "assets/chronicle/personal/source/27-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_start.webp",
+    "prompt": "docs/imagegen/personal/27-yangcun.txt"
+  },
+  {
+    "id": "yc_start_page2",
+    "title": "开篇 · 咸鱼的五月",
+    "asset": "personal_yc_start_page2",
+    "memory": "cp7_yc_start_page2",
+    "source": "assets/chronicle/personal/source/27-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_start_page2.webp",
+    "prompt": "docs/imagegen/personal/27-yangcun.txt"
+  },
+  {
+    "id": "yc_start_page3",
+    "title": "开篇 · 咸鱼的五月",
+    "asset": "personal_yc_start_page3",
+    "memory": "cp7_yc_start_page3",
+    "source": "assets/chronicle/personal/source/27-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_start_page3.webp",
+    "prompt": "docs/imagegen/personal/27-yangcun.txt"
+  },
+  {
+    "id": "yc_start_page4",
+    "title": "开篇 · 咸鱼的五月",
+    "asset": "personal_yc_start_page4",
+    "memory": "cp7_yc_start_page4",
+    "source": "assets/chronicle/personal/source/27-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_start_page4.webp",
+    "prompt": "docs/imagegen/personal/27-yangcun.txt"
+  },
+  {
+    "id": "yc_start_page5",
+    "title": "开篇 · 咸鱼的五月",
+    "asset": "personal_yc_start_page5",
+    "memory": "cp7_yc_start_page5",
+    "source": "assets/chronicle/personal/source/27-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_start_page5.webp",
+    "prompt": "docs/imagegen/personal/27-yangcun.txt"
+  },
+  {
+    "id": "yc_start_page6",
+    "title": "开篇 · 咸鱼的五月",
+    "asset": "personal_yc_start_page6",
+    "memory": "cp7_yc_start_page6",
+    "source": "assets/chronicle/personal/source/27-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_start_page6.webp",
+    "prompt": "docs/imagegen/personal/27-yangcun.txt"
+  },
+  {
+    "id": "yc_start_page7",
+    "title": "开篇 · 咸鱼的五月",
+    "asset": "personal_yc_start_page7",
+    "memory": "cp7_yc_start_page7",
+    "source": "assets/chronicle/personal/source/27-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_start_page7.webp",
+    "prompt": "docs/imagegen/personal/27-yangcun.txt"
+  },
+  {
+    "id": "yc_may1",
+    "title": "五月 · 实习生的第一道题",
+    "asset": "personal_yc_may1",
+    "memory": "cp7_yc_may1",
+    "source": "assets/chronicle/personal/source/27-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_may1.webp",
+    "prompt": "docs/imagegen/personal/27-yangcun.txt"
+  },
+  {
+    "id": "yc_may1_page2",
+    "title": "五月 · 实习生的第一道题",
+    "asset": "personal_yc_may1_page2",
+    "memory": "cp7_yc_may1_page2",
+    "source": "assets/chronicle/personal/source/28-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_may1_page2.webp",
+    "prompt": "docs/imagegen/personal/28-yangcun.txt"
+  },
+  {
+    "id": "yc_may1_page3",
+    "title": "五月 · 实习生的第一道题",
+    "asset": "personal_yc_may1_page3",
+    "memory": "cp7_yc_may1_page3",
+    "source": "assets/chronicle/personal/source/28-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_may1_page3.webp",
+    "prompt": "docs/imagegen/personal/28-yangcun.txt"
+  },
+  {
+    "id": "yc_may2",
+    "title": "五月 · 交卷",
+    "asset": "personal_yc_may2",
+    "memory": "cp7_yc_may2",
+    "source": "assets/chronicle/personal/source/28-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_may2.webp",
+    "prompt": "docs/imagegen/personal/28-yangcun.txt"
+  },
+  {
+    "id": "yc_may2_page2",
+    "title": "五月 · 交卷",
+    "asset": "personal_yc_may2_page2",
+    "memory": "cp7_yc_may2_page2",
+    "source": "assets/chronicle/personal/source/28-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_may2_page2.webp",
+    "prompt": "docs/imagegen/personal/28-yangcun.txt"
+  },
+  {
+    "id": "yc_may2_page3",
+    "title": "五月 · 交卷",
+    "asset": "personal_yc_may2_page3",
+    "memory": "cp7_yc_may2_page3",
+    "source": "assets/chronicle/personal/source/28-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_may2_page3.webp",
+    "prompt": "docs/imagegen/personal/28-yangcun.txt"
+  },
+  {
+    "id": "yc_jun1",
+    "title": "六月 · 530之夜",
+    "asset": "personal_yc_jun1",
+    "memory": "cp7_yc_jun1",
+    "source": "assets/chronicle/personal/source/28-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_jun1.webp",
+    "prompt": "docs/imagegen/personal/28-yangcun.txt"
+  },
+  {
+    "id": "yc_jun1_page2",
+    "title": "六月 · 530之夜",
+    "asset": "personal_yc_jun1_page2",
+    "memory": "cp7_yc_jun1_page2",
+    "source": "assets/chronicle/personal/source/28-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_jun1_page2.webp",
+    "prompt": "docs/imagegen/personal/28-yangcun.txt"
+  },
+  {
+    "id": "yc_jun1_page3",
+    "title": "六月 · 530之夜",
+    "asset": "personal_yc_jun1_page3",
+    "memory": "cp7_yc_jun1_page3",
+    "source": "assets/chronicle/personal/source/28-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_jun1_page3.webp",
+    "prompt": "docs/imagegen/personal/28-yangcun.txt"
+  },
+  {
+    "id": "yc_jun2b",
+    "title": "六月 · 袖手",
+    "asset": "personal_yc_jun2b",
+    "memory": "cp7_yc_jun2b",
+    "source": "assets/chronicle/personal/source/29-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_jun2b.webp",
+    "prompt": "docs/imagegen/personal/29-yangcun.txt"
+  },
+  {
+    "id": "yc_jun2b_page2",
+    "title": "六月 · 袖手",
+    "asset": "personal_yc_jun2b_page2",
+    "memory": "cp7_yc_jun2b_page2",
+    "source": "assets/chronicle/personal/source/29-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_jun2b_page2.webp",
+    "prompt": "docs/imagegen/personal/29-yangcun.txt"
+  },
+  {
+    "id": "yc_jun2",
+    "title": "六月 · 留下的",
+    "asset": "personal_yc_jun2",
+    "memory": "cp7_yc_jun2",
+    "source": "assets/chronicle/personal/source/29-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_jun2.webp",
+    "prompt": "docs/imagegen/personal/29-yangcun.txt"
+  },
+  {
+    "id": "yc_jun2_page2",
+    "title": "六月 · 留下的",
+    "asset": "personal_yc_jun2_page2",
+    "memory": "cp7_yc_jun2_page2",
+    "source": "assets/chronicle/personal/source/29-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_jun2_page2.webp",
+    "prompt": "docs/imagegen/personal/29-yangcun.txt"
+  },
+  {
+    "id": "yc_jun2_page3",
+    "title": "六月 · 留下的",
+    "asset": "personal_yc_jun2_page3",
+    "memory": "cp7_yc_jun2_page3",
+    "source": "assets/chronicle/personal/source/29-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_jun2_page3.webp",
+    "prompt": "docs/imagegen/personal/29-yangcun.txt"
+  },
+  {
+    "id": "yc_jun3",
+    "title": "六月 · 看见的",
+    "asset": "personal_yc_jun3",
+    "memory": "cp7_yc_jun3",
+    "source": "assets/chronicle/personal/source/29-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_jun3.webp",
+    "prompt": "docs/imagegen/personal/29-yangcun.txt"
+  },
+  {
+    "id": "yc_jun3_page2",
+    "title": "六月 · 看见的",
+    "asset": "personal_yc_jun3_page2",
+    "memory": "cp7_yc_jun3_page2",
+    "source": "assets/chronicle/personal/source/29-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_jun3_page2.webp",
+    "prompt": "docs/imagegen/personal/29-yangcun.txt"
+  },
+  {
+    "id": "yc_jun3_page3",
+    "title": "六月 · 看见的",
+    "asset": "personal_yc_jun3_page3",
+    "memory": "cp7_yc_jun3_page3",
+    "source": "assets/chronicle/personal/source/29-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_jun3_page3.webp",
+    "prompt": "docs/imagegen/personal/29-yangcun.txt"
+  },
+  {
+    "id": "yc_jun4",
+    "title": "六月 · 提醒",
+    "asset": "personal_yc_jun4",
+    "memory": "cp7_yc_jun4",
+    "source": "assets/chronicle/personal/source/30-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_jun4.webp",
+    "prompt": "docs/imagegen/personal/30-yangcun.txt"
+  },
+  {
+    "id": "yc_jun4_page2",
+    "title": "六月 · 提醒",
+    "asset": "personal_yc_jun4_page2",
+    "memory": "cp7_yc_jun4_page2",
+    "source": "assets/chronicle/personal/source/30-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_jun4_page2.webp",
+    "prompt": "docs/imagegen/personal/30-yangcun.txt"
+  },
+  {
+    "id": "yc_jul1",
+    "title": "七月 · 路演救场",
+    "asset": "personal_yc_jul1",
+    "memory": "cp7_yc_jul1",
+    "source": "assets/chronicle/personal/source/30-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_jul1.webp",
+    "prompt": "docs/imagegen/personal/30-yangcun.txt"
+  },
+  {
+    "id": "yc_jul1_page2",
+    "title": "七月 · 路演救场",
+    "asset": "personal_yc_jul1_page2",
+    "memory": "cp7_yc_jul1_page2",
+    "source": "assets/chronicle/personal/source/30-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_jul1_page2.webp",
+    "prompt": "docs/imagegen/personal/30-yangcun.txt"
+  },
+  {
+    "id": "yc_jul1_page3",
+    "title": "七月 · 路演救场",
+    "asset": "personal_yc_jul1_page3",
+    "memory": "cp7_yc_jul1_page3",
+    "source": "assets/chronicle/personal/source/30-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_jul1_page3.webp",
+    "prompt": "docs/imagegen/personal/30-yangcun.txt"
+  },
+  {
+    "id": "yc_jul1_page4",
+    "title": "七月 · 路演救场",
+    "asset": "personal_yc_jul1_page4",
+    "memory": "cp7_yc_jul1_page4",
+    "source": "assets/chronicle/personal/source/30-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_jul1_page4.webp",
+    "prompt": "docs/imagegen/personal/30-yangcun.txt"
+  },
+  {
+    "id": "yc_jul2",
+    "title": "七月 · 实习任务包",
+    "asset": "personal_yc_jul2",
+    "memory": "cp7_yc_jul2",
+    "source": "assets/chronicle/personal/source/30-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_jul2.webp",
+    "prompt": "docs/imagegen/personal/30-yangcun.txt"
+  },
+  {
+    "id": "yc_jul2_page2",
+    "title": "七月 · 实习任务包",
+    "asset": "personal_yc_jul2_page2",
+    "memory": "cp7_yc_jul2_page2",
+    "source": "assets/chronicle/personal/source/30-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_jul2_page2.webp",
+    "prompt": "docs/imagegen/personal/30-yangcun.txt"
+  },
+  {
+    "id": "yc_jul3",
+    "title": "七月 · 摇人帖",
+    "asset": "personal_yc_jul3",
+    "memory": "cp7_yc_jul3",
+    "source": "assets/chronicle/personal/source/31-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_jul3.webp",
+    "prompt": "docs/imagegen/personal/31-yangcun.txt"
+  },
+  {
+    "id": "yc_jul4",
+    "title": "七月 · 后勤清单",
+    "asset": "personal_yc_jul4",
+    "memory": "cp7_yc_jul4",
+    "source": "assets/chronicle/personal/source/31-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_jul4.webp",
+    "prompt": "docs/imagegen/personal/31-yangcun.txt"
+  },
+  {
+    "id": "yc_jul4_page2",
+    "title": "七月 · 后勤清单",
+    "asset": "personal_yc_jul4_page2",
+    "memory": "cp7_yc_jul4_page2",
+    "source": "assets/chronicle/personal/source/31-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_jul4_page2.webp",
+    "prompt": "docs/imagegen/personal/31-yangcun.txt"
+  },
+  {
+    "id": "yc_aug1",
+    "title": "八月 · 微妙的两个人",
+    "asset": "personal_yc_aug1",
+    "memory": "cp7_yc_aug1",
+    "source": "assets/chronicle/personal/source/31-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_aug1.webp",
+    "prompt": "docs/imagegen/personal/31-yangcun.txt"
+  },
+  {
+    "id": "yc_aug1_page2",
+    "title": "八月 · 微妙的两个人",
+    "asset": "personal_yc_aug1_page2",
+    "memory": "cp7_yc_aug1_page2",
+    "source": "assets/chronicle/personal/source/31-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_aug1_page2.webp",
+    "prompt": "docs/imagegen/personal/31-yangcun.txt"
+  },
+  {
+    "id": "yc_aug1_page3",
+    "title": "八月 · 微妙的两个人",
+    "asset": "personal_yc_aug1_page3",
+    "memory": "cp7_yc_aug1_page3",
+    "source": "assets/chronicle/personal/source/31-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_aug1_page3.webp",
+    "prompt": "docs/imagegen/personal/31-yangcun.txt"
+  },
+  {
+    "id": "yc_aug1_page4",
+    "title": "八月 · 微妙的两个人",
+    "asset": "personal_yc_aug1_page4",
+    "memory": "cp7_yc_aug1_page4",
+    "source": "assets/chronicle/personal/source/31-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_aug1_page4.webp",
+    "prompt": "docs/imagegen/personal/31-yangcun.txt"
+  },
+  {
+    "id": "yc_aug2",
+    "title": "八月 · 假弹风波",
+    "asset": "personal_yc_aug2",
+    "memory": "cp7_yc_aug2",
+    "source": "assets/chronicle/personal/source/31-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_aug2.webp",
+    "prompt": "docs/imagegen/personal/31-yangcun.txt"
+  },
+  {
+    "id": "yc_aug2_page2",
+    "title": "八月 · 假弹风波",
+    "asset": "personal_yc_aug2_page2",
+    "memory": "cp7_yc_aug2_page2",
+    "source": "assets/chronicle/personal/source/32-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_aug2_page2.webp",
+    "prompt": "docs/imagegen/personal/32-yangcun.txt"
+  },
+  {
+    "id": "yc_aug2_page3",
+    "title": "八月 · 假弹风波",
+    "asset": "personal_yc_aug2_page3",
+    "memory": "cp7_yc_aug2_page3",
+    "source": "assets/chronicle/personal/source/32-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_aug2_page3.webp",
+    "prompt": "docs/imagegen/personal/32-yangcun.txt"
+  },
+  {
+    "id": "yc_aug3",
+    "title": "八月 · 挽留",
+    "asset": "personal_yc_aug3",
+    "memory": "cp7_yc_aug3",
+    "source": "assets/chronicle/personal/source/32-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_aug3.webp",
+    "prompt": "docs/imagegen/personal/32-yangcun.txt"
+  },
+  {
+    "id": "yc_aug3_page2",
+    "title": "八月 · 挽留",
+    "asset": "personal_yc_aug3_page2",
+    "memory": "cp7_yc_aug3_page2",
+    "source": "assets/chronicle/personal/source/32-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_aug3_page2.webp",
+    "prompt": "docs/imagegen/personal/32-yangcun.txt"
+  },
+  {
+    "id": "yc_aug3_page3",
+    "title": "八月 · 挽留",
+    "asset": "personal_yc_aug3_page3",
+    "memory": "cp7_yc_aug3_page3",
+    "source": "assets/chronicle/personal/source/32-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_aug3_page3.webp",
+    "prompt": "docs/imagegen/personal/32-yangcun.txt"
+  },
+  {
+    "id": "yc_aug4",
+    "title": "八月 · 暴雨",
+    "asset": "personal_yc_aug4",
+    "memory": "cp7_yc_aug4",
+    "source": "assets/chronicle/personal/source/32-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_aug4.webp",
+    "prompt": "docs/imagegen/personal/32-yangcun.txt"
+  },
+  {
+    "id": "yc_aug4_page2",
+    "title": "八月 · 暴雨",
+    "asset": "personal_yc_aug4_page2",
+    "memory": "cp7_yc_aug4_page2",
+    "source": "assets/chronicle/personal/source/32-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_aug4_page2.webp",
+    "prompt": "docs/imagegen/personal/32-yangcun.txt"
+  },
+  {
+    "id": "yc_aug4_page3",
+    "title": "八月 · 暴雨",
+    "asset": "personal_yc_aug4_page3",
+    "memory": "cp7_yc_aug4_page3",
+    "source": "assets/chronicle/personal/source/32-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_aug4_page3.webp",
+    "prompt": "docs/imagegen/personal/32-yangcun.txt"
+  },
+  {
+    "id": "yc_sep1",
+    "title": "九月 · 中秋连轴",
+    "asset": "personal_yc_sep1",
+    "memory": "cp7_yc_sep1",
+    "source": "assets/chronicle/personal/source/33-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_sep1.webp",
+    "prompt": "docs/imagegen/personal/33-yangcun.txt"
+  },
+  {
+    "id": "yc_sep1_page2",
+    "title": "九月 · 中秋连轴",
+    "asset": "personal_yc_sep1_page2",
+    "memory": "cp7_yc_sep1_page2",
+    "source": "assets/chronicle/personal/source/33-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_sep1_page2.webp",
+    "prompt": "docs/imagegen/personal/33-yangcun.txt"
+  },
+  {
+    "id": "yc_sep1_page3",
+    "title": "九月 · 中秋连轴",
+    "asset": "personal_yc_sep1_page3",
+    "memory": "cp7_yc_sep1_page3",
+    "source": "assets/chronicle/personal/source/33-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_sep1_page3.webp",
+    "prompt": "docs/imagegen/personal/33-yangcun.txt"
+  },
+  {
+    "id": "yc_sep2",
+    "title": "九月 · 小周的小九九",
+    "asset": "personal_yc_sep2",
+    "memory": "cp7_yc_sep2",
+    "source": "assets/chronicle/personal/source/33-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_sep2.webp",
+    "prompt": "docs/imagegen/personal/33-yangcun.txt"
+  },
+  {
+    "id": "yc_sep2_page2",
+    "title": "九月 · 小周的小九九",
+    "asset": "personal_yc_sep2_page2",
+    "memory": "cp7_yc_sep2_page2",
+    "source": "assets/chronicle/personal/source/33-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_sep2_page2.webp",
+    "prompt": "docs/imagegen/personal/33-yangcun.txt"
+  },
+  {
+    "id": "yc_sep2_page3",
+    "title": "九月 · 小周的小九九",
+    "asset": "personal_yc_sep2_page3",
+    "memory": "cp7_yc_sep2_page3",
+    "source": "assets/chronicle/personal/source/33-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_sep2_page3.webp",
+    "prompt": "docs/imagegen/personal/33-yangcun.txt"
+  },
+  {
+    "id": "yc_sep3",
+    "title": "九月 · 分歧",
+    "asset": "personal_yc_sep3",
+    "memory": "cp7_yc_sep3",
+    "source": "assets/chronicle/personal/source/33-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_sep3.webp",
+    "prompt": "docs/imagegen/personal/33-yangcun.txt"
+  },
+  {
+    "id": "yc_sep3_page2",
+    "title": "九月 · 分歧",
+    "asset": "personal_yc_sep3_page2",
+    "memory": "cp7_yc_sep3_page2",
+    "source": "assets/chronicle/personal/source/33-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_sep3_page2.webp",
+    "prompt": "docs/imagegen/personal/33-yangcun.txt"
+  },
+  {
+    "id": "yc_sep3_page3",
+    "title": "九月 · 分歧",
+    "asset": "personal_yc_sep3_page3",
+    "memory": "cp7_yc_sep3_page3",
+    "source": "assets/chronicle/personal/source/34-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_sep3_page3.webp",
+    "prompt": "docs/imagegen/personal/34-yangcun.txt"
+  },
+  {
+    "id": "yc_oct1",
+    "title": "十月 · 办公室",
+    "asset": "personal_yc_oct1",
+    "memory": "cp7_yc_oct1",
+    "source": "assets/chronicle/personal/source/34-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_oct1.webp",
+    "prompt": "docs/imagegen/personal/34-yangcun.txt"
+  },
+  {
+    "id": "yc_oct2",
+    "title": "十月 · 小事之二",
+    "asset": "personal_yc_oct2",
+    "memory": "cp7_yc_oct2",
+    "source": "assets/chronicle/personal/source/34-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_oct2.webp",
+    "prompt": "docs/imagegen/personal/34-yangcun.txt"
+  },
+  {
+    "id": "yc_oct3",
+    "title": "十月 · 照片风波",
+    "asset": "personal_yc_oct3",
+    "memory": "cp7_yc_oct3",
+    "source": "assets/chronicle/personal/source/34-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_oct3.webp",
+    "prompt": "docs/imagegen/personal/34-yangcun.txt"
+  },
+  {
+    "id": "yc_oct3_page2",
+    "title": "十月 · 照片风波",
+    "asset": "personal_yc_oct3_page2",
+    "memory": "cp7_yc_oct3_page2",
+    "source": "assets/chronicle/personal/source/34-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_oct3_page2.webp",
+    "prompt": "docs/imagegen/personal/34-yangcun.txt"
+  },
+  {
+    "id": "yc_nov1",
+    "title": "十一月 · 分流",
+    "asset": "personal_yc_nov1",
+    "memory": "cp7_yc_nov1",
+    "source": "assets/chronicle/personal/source/34-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_nov1.webp",
+    "prompt": "docs/imagegen/personal/34-yangcun.txt"
+  },
+  {
+    "id": "yc_nov1_page2",
+    "title": "十一月 · 分流",
+    "asset": "personal_yc_nov1_page2",
+    "memory": "cp7_yc_nov1_page2",
+    "source": "assets/chronicle/personal/source/34-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_nov1_page2.webp",
+    "prompt": "docs/imagegen/personal/34-yangcun.txt"
+  },
+  {
+    "id": "yc_nov1_page3",
+    "title": "十一月 · 分流",
+    "asset": "personal_yc_nov1_page3",
+    "memory": "cp7_yc_nov1_page3",
+    "source": "assets/chronicle/personal/source/34-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_nov1_page3.webp",
+    "prompt": "docs/imagegen/personal/34-yangcun.txt"
+  },
+  {
+    "id": "yc_nov2",
+    "title": "十一月 · 曼波杯报名表",
+    "asset": "personal_yc_nov2",
+    "memory": "cp7_yc_nov2",
+    "source": "assets/chronicle/personal/source/35-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_nov2.webp",
+    "prompt": "docs/imagegen/personal/35-yangcun.txt"
+  },
+  {
+    "id": "yc_nov2_page2",
+    "title": "十一月 · 曼波杯报名表",
+    "asset": "personal_yc_nov2_page2",
+    "memory": "cp7_yc_nov2_page2",
+    "source": "assets/chronicle/personal/source/35-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_nov2_page2.webp",
+    "prompt": "docs/imagegen/personal/35-yangcun.txt"
+  },
+  {
+    "id": "yc_nov2_page3",
+    "title": "十一月 · 曼波杯报名表",
+    "asset": "personal_yc_nov2_page3",
+    "memory": "cp7_yc_nov2_page3",
+    "source": "assets/chronicle/personal/source/35-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_nov2_page3.webp",
+    "prompt": "docs/imagegen/personal/35-yangcun.txt"
+  },
+  {
+    "id": "yc_nov2b",
+    "title": "十一月 · 空出来的位置",
+    "asset": "personal_yc_nov2b",
+    "memory": "cp7_yc_nov2b",
+    "source": "assets/chronicle/personal/source/35-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_nov2b.webp",
+    "prompt": "docs/imagegen/personal/35-yangcun.txt"
+  },
+  {
+    "id": "yc_nov2b_page2",
+    "title": "十一月 · 空出来的位置",
+    "asset": "personal_yc_nov2b_page2",
+    "memory": "cp7_yc_nov2b_page2",
+    "source": "assets/chronicle/personal/source/35-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_nov2b_page2.webp",
+    "prompt": "docs/imagegen/personal/35-yangcun.txt"
+  },
+  {
+    "id": "yc_nov2b_page3",
+    "title": "十一月 · 空出来的位置",
+    "asset": "personal_yc_nov2b_page3",
+    "memory": "cp7_yc_nov2b_page3",
+    "source": "assets/chronicle/personal/source/35-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_nov2b_page3.webp",
+    "prompt": "docs/imagegen/personal/35-yangcun.txt"
+  },
+  {
+    "id": "yc_dec_band",
+    "title": "十二月 · 曼波杯",
+    "asset": "personal_yc_dec_band",
+    "memory": "cp7_yc_dec_band",
+    "source": "assets/chronicle/personal/source/35-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_dec_band.webp",
+    "prompt": "docs/imagegen/personal/35-yangcun.txt"
+  },
+  {
+    "id": "yc_dec_band_page2",
+    "title": "十二月 · 曼波杯",
+    "asset": "personal_yc_dec_band_page2",
+    "memory": "cp7_yc_dec_band_page2",
+    "source": "assets/chronicle/personal/source/35-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_dec_band_page2.webp",
+    "prompt": "docs/imagegen/personal/35-yangcun.txt"
+  },
+  {
+    "id": "yc_dec_band_page3",
+    "title": "十二月 · 曼波杯",
+    "asset": "personal_yc_dec_band_page3",
+    "memory": "cp7_yc_dec_band_page3",
+    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_dec_band_page3.webp",
+    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+  },
+  {
+    "id": "yc_cp1",
+    "title": "十二月 · 嗑学家",
+    "asset": "personal_yc_cp1",
+    "memory": "cp7_yc_cp1",
+    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp1.webp",
+    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+  },
+  {
+    "id": "yc_cp1_page2",
+    "title": "十二月 · 嗑学家",
+    "asset": "personal_yc_cp1_page2",
+    "memory": "cp7_yc_cp1_page2",
+    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp1_page2.webp",
+    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+  },
+  {
+    "id": "yc_cp1_page3",
+    "title": "十二月 · 嗑学家",
+    "asset": "personal_yc_cp1_page3",
+    "memory": "cp7_yc_cp1_page3",
+    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp1_page3.webp",
+    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+  },
+  {
+    "id": "yc_cp2",
+    "title": "十二月 · 恋与哈基米",
+    "asset": "personal_yc_cp2",
+    "memory": "cp7_yc_cp2",
+    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp2.webp",
+    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+  },
+  {
+    "id": "yc_cp2_page2",
+    "title": "十二月 · 恋与哈基米",
+    "asset": "personal_yc_cp2_page2",
+    "memory": "cp7_yc_cp2_page2",
+    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp2_page2.webp",
+    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+  },
+  {
+    "id": "yc_cp3",
+    "title": "十二月 · 一手素材",
+    "asset": "personal_yc_cp3",
+    "memory": "cp7_yc_cp3",
+    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp3.webp",
+    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+  },
+  {
+    "id": "yc_cp3_page2",
+    "title": "十二月 · 一手素材",
+    "asset": "personal_yc_cp3_page2",
+    "memory": "cp7_yc_cp3_page2",
+    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp3_page2.webp",
+    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+  },
+  {
+    "id": "yc_cp3_page3",
+    "title": "十二月 · 一手素材",
+    "asset": "personal_yc_cp3_page3",
+    "memory": "cp7_yc_cp3_page3",
+    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp3_page3.webp",
+    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+  },
+  {
+    "id": "yc_cp4",
+    "title": "十二月 · 不妙",
+    "asset": "personal_yc_cp4",
+    "memory": "cp7_yc_cp4",
+    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp4.webp",
+    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+  },
+  {
+    "id": "yc_cp4_page2",
+    "title": "十二月 · 不妙",
+    "asset": "personal_yc_cp4_page2",
+    "memory": "cp7_yc_cp4_page2",
+    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp4_page2.webp",
+    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+  },
+  {
+    "id": "yc_cp5",
+    "title": "十二月 · 观察日记",
+    "asset": "personal_yc_cp5",
+    "memory": "cp7_yc_cp5",
+    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp5.webp",
+    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+  },
+  {
+    "id": "yc_cp5a",
+    "title": "观察 · 排练室",
+    "asset": "personal_yc_cp5a",
+    "memory": "cp7_yc_cp5a",
+    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp5a.webp",
+    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+  },
+  {
+    "id": "yc_cp5a_page2",
+    "title": "观察 · 排练室",
+    "asset": "personal_yc_cp5a_page2",
+    "memory": "cp7_yc_cp5a_page2",
+    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp5a_page2.webp",
+    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+  },
+  {
+    "id": "yc_cp5b",
+    "title": "观察 · 歌友会散场",
+    "asset": "personal_yc_cp5b",
+    "memory": "cp7_yc_cp5b",
+    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp5b.webp",
+    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+  },
+  {
+    "id": "yc_cp5b_page2",
+    "title": "观察 · 歌友会散场",
+    "asset": "personal_yc_cp5b_page2",
+    "memory": "cp7_yc_cp5b_page2",
+    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp5b_page2.webp",
+    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+  },
+  {
+    "id": "yc_cp5c",
+    "title": "观察 · 天台",
+    "asset": "personal_yc_cp5c",
+    "memory": "cp7_yc_cp5c",
+    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp5c.webp",
+    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+  },
+  {
+    "id": "yc_cp5c_page2",
+    "title": "观察 · 天台",
+    "asset": "personal_yc_cp5c_page2",
+    "memory": "cp7_yc_cp5c_page2",
+    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp5c_page2.webp",
+    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+  },
+  {
+    "id": "yc_cp6",
+    "title": "回忆 · 中秋生日会",
+    "asset": "personal_yc_cp6",
+    "memory": "cp7_yc_cp6",
+    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp6.webp",
+    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+  },
+  {
+    "id": "yc_cp6_page2",
+    "title": "回忆 · 中秋生日会",
+    "asset": "personal_yc_cp6_page2",
+    "memory": "cp7_yc_cp6_page2",
+    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp6_page2.webp",
+    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+  },
+  {
+    "id": "yc_cp7",
+    "title": "回忆 · 烤串摊",
+    "asset": "personal_yc_cp7",
+    "memory": "cp7_yc_cp7",
+    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp7.webp",
+    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+  },
+  {
+    "id": "yc_cp7_page2",
+    "title": "回忆 · 烤串摊",
+    "asset": "personal_yc_cp7_page2",
+    "memory": "cp7_yc_cp7_page2",
+    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp7_page2.webp",
+    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+  },
+  {
+    "id": "yc_cp8",
+    "title": "十二月 · 结局图册",
+    "asset": "personal_yc_cp8",
+    "memory": "cp7_yc_cp8",
+    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp8.webp",
+    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+  },
+  {
+    "id": "yc_cp8_page2",
+    "title": "十二月 · 结局图册",
+    "asset": "personal_yc_cp8_page2",
+    "memory": "cp7_yc_cp8_page2",
+    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp8_page2.webp",
+    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+  },
+  {
+    "id": "yc_cp_alt",
+    "title": "十二月 · 没说出口的",
+    "asset": "personal_yc_cp_alt",
+    "memory": "cp7_yc_cp_alt",
+    "source": "assets/chronicle/personal/source/39-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp_alt.webp",
+    "prompt": "docs/imagegen/personal/39-yangcun.txt"
+  },
+  {
+    "id": "yc_cp_alt_page2",
+    "title": "十二月 · 没说出口的",
+    "asset": "personal_yc_cp_alt_page2",
+    "memory": "cp7_yc_cp_alt_page2",
+    "source": "assets/chronicle/personal/source/39-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp_alt_page2.webp",
+    "prompt": "docs/imagegen/personal/39-yangcun.txt"
+  },
+  {
+    "id": "yc_cp9",
+    "title": "十二月 · 开口",
+    "asset": "personal_yc_cp9",
+    "memory": "cp7_yc_cp9",
+    "source": "assets/chronicle/personal/source/39-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp9.webp",
+    "prompt": "docs/imagegen/personal/39-yangcun.txt"
+  },
+  {
+    "id": "yc_cp10",
+    "title": "十二月 · 桂花",
+    "asset": "personal_yc_cp10",
+    "memory": "cp7_yc_cp10",
+    "source": "assets/chronicle/personal/source/39-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp10.webp",
+    "prompt": "docs/imagegen/personal/39-yangcun.txt"
+  },
+  {
+    "id": "yc_cp10_page2",
+    "title": "十二月 · 桂花",
+    "asset": "personal_yc_cp10_page2",
+    "memory": "cp7_yc_cp10_page2",
+    "source": "assets/chronicle/personal/source/39-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp10_page2.webp",
+    "prompt": "docs/imagegen/personal/39-yangcun.txt"
+  },
+  {
+    "id": "yc_cp10_page3",
+    "title": "十二月 · 桂花",
+    "asset": "personal_yc_cp10_page3",
+    "memory": "cp7_yc_cp10_page3",
+    "source": "assets/chronicle/personal/source/39-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp10_page3.webp",
+    "prompt": "docs/imagegen/personal/39-yangcun.txt"
+  },
+  {
+    "id": "yc_cp11",
+    "title": "十二月 · 搜索",
+    "asset": "personal_yc_cp11",
+    "memory": "cp7_yc_cp11",
+    "source": "assets/chronicle/personal/source/39-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp11.webp",
+    "prompt": "docs/imagegen/personal/39-yangcun.txt"
+  },
+  {
+    "id": "yc_cp11_page2",
+    "title": "十二月 · 搜索",
+    "asset": "personal_yc_cp11_page2",
+    "memory": "cp7_yc_cp11_page2",
+    "source": "assets/chronicle/personal/source/39-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_cp11_page2.webp",
+    "prompt": "docs/imagegen/personal/39-yangcun.txt"
+  },
+  {
+    "id": "yc_cp12",
+    "title": "十二月 · 深香默默",
+    "asset": "personal_yc_cp12",
+    "memory": "cp7_yc_cp12",
+    "source": "assets/chronicle/personal/source/40-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp12.webp",
+    "prompt": "docs/imagegen/personal/40-yangcun.txt"
+  },
+  {
+    "id": "yc_cp12_page2",
+    "title": "十二月 · 深香默默",
+    "asset": "personal_yc_cp12_page2",
+    "memory": "cp7_yc_cp12_page2",
+    "source": "assets/chronicle/personal/source/40-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp12_page2.webp",
+    "prompt": "docs/imagegen/personal/40-yangcun.txt"
+  },
+  {
+    "id": "yc_cp12_page3",
+    "title": "十二月 · 深香默默",
+    "asset": "personal_yc_cp12_page3",
+    "memory": "cp7_yc_cp12_page3",
+    "source": "assets/chronicle/personal/source/40-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_cp12_page3.webp",
+    "prompt": "docs/imagegen/personal/40-yangcun.txt"
+  },
+  {
+    "id": "yc_dec_band2",
+    "title": "十二月 · 曼波杯 · 缺席者",
+    "asset": "personal_yc_dec_band2",
+    "memory": "cp7_yc_dec_band2",
+    "source": "assets/chronicle/personal/source/40-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_dec_band2.webp",
+    "prompt": "docs/imagegen/personal/40-yangcun.txt"
+  },
+  {
+    "id": "yc_dec_band2_page2",
+    "title": "十二月 · 曼波杯 · 缺席者",
+    "asset": "personal_yc_dec_band2_page2",
+    "memory": "cp7_yc_dec_band2_page2",
+    "source": "assets/chronicle/personal/source/40-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_dec_band2_page2.webp",
+    "prompt": "docs/imagegen/personal/40-yangcun.txt"
+  },
+  {
+    "id": "yc_dec_band2_page3",
+    "title": "十二月 · 曼波杯 · 缺席者",
+    "asset": "personal_yc_dec_band2_page3",
+    "memory": "cp7_yc_dec_band2_page3",
+    "source": "assets/chronicle/personal/source/40-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_dec_band2_page3.webp",
+    "prompt": "docs/imagegen/personal/40-yangcun.txt"
+  },
+  {
+    "id": "yc_ge1",
+    "title": "十二月 · 大鹅线",
+    "asset": "personal_yc_ge1",
+    "memory": "cp7_yc_ge1",
+    "source": "assets/chronicle/personal/source/40-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_ge1.webp",
+    "prompt": "docs/imagegen/personal/40-yangcun.txt"
+  },
+  {
+    "id": "yc_ge1_page2",
+    "title": "十二月 · 大鹅线",
+    "asset": "personal_yc_ge1_page2",
+    "memory": "cp7_yc_ge1_page2",
+    "source": "assets/chronicle/personal/source/40-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_ge1_page2.webp",
+    "prompt": "docs/imagegen/personal/40-yangcun.txt"
+  },
+  {
+    "id": "yc_ge1_page3",
+    "title": "十二月 · 大鹅线",
+    "asset": "personal_yc_ge1_page3",
+    "memory": "cp7_yc_ge1_page3",
+    "source": "assets/chronicle/personal/source/41-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_ge1_page3.webp",
+    "prompt": "docs/imagegen/personal/41-yangcun.txt"
+  },
+  {
+    "id": "yc_ge2",
+    "title": "十二月 · 大鹅线 · 结局",
+    "asset": "personal_yc_ge2",
+    "memory": "cp7_yc_ge2",
+    "source": "assets/chronicle/personal/source/41-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_ge2.webp",
+    "prompt": "docs/imagegen/personal/41-yangcun.txt"
+  },
+  {
+    "id": "yc_ge2_page2",
+    "title": "十二月 · 大鹅线 · 结局",
+    "asset": "personal_yc_ge2_page2",
+    "memory": "cp7_yc_ge2_page2",
+    "source": "assets/chronicle/personal/source/41-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_ge2_page2.webp",
+    "prompt": "docs/imagegen/personal/41-yangcun.txt"
+  },
+  {
+    "id": "yc_dy1",
+    "title": "十二月 · 大羊线",
+    "asset": "personal_yc_dy1",
+    "memory": "cp7_yc_dy1",
+    "source": "assets/chronicle/personal/source/41-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_dy1.webp",
+    "prompt": "docs/imagegen/personal/41-yangcun.txt"
+  },
+  {
+    "id": "yc_dy1_page2",
+    "title": "十二月 · 大羊线",
+    "asset": "personal_yc_dy1_page2",
+    "memory": "cp7_yc_dy1_page2",
+    "source": "assets/chronicle/personal/source/41-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_dy1_page2.webp",
+    "prompt": "docs/imagegen/personal/41-yangcun.txt"
+  },
+  {
+    "id": "yc_dy1_page3",
+    "title": "十二月 · 大羊线",
+    "asset": "personal_yc_dy1_page3",
+    "memory": "cp7_yc_dy1_page3",
+    "source": "assets/chronicle/personal/source/41-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_dy1_page3.webp",
+    "prompt": "docs/imagegen/personal/41-yangcun.txt"
+  },
+  {
+    "id": "yc_dy2",
+    "title": "十二月 · 大羊线 · 结局",
+    "asset": "personal_yc_dy2",
+    "memory": "cp7_yc_dy2",
+    "source": "assets/chronicle/personal/source/41-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_dy2.webp",
+    "prompt": "docs/imagegen/personal/41-yangcun.txt"
+  },
+  {
+    "id": "yc_dy2_page2",
+    "title": "十二月 · 大羊线 · 结局",
+    "asset": "personal_yc_dy2_page2",
+    "memory": "cp7_yc_dy2_page2",
+    "source": "assets/chronicle/personal/source/41-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_dy2_page2.webp",
+    "prompt": "docs/imagegen/personal/41-yangcun.txt"
+  },
+  {
+    "id": "yc_aq1",
+    "title": "十二月 · REK线",
+    "asset": "personal_yc_aq1",
+    "memory": "cp7_yc_aq1",
+    "source": "assets/chronicle/personal/source/42-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_aq1.webp",
+    "prompt": "docs/imagegen/personal/42-yangcun.txt"
+  },
+  {
+    "id": "yc_aq1_page2",
+    "title": "十二月 · REK线",
+    "asset": "personal_yc_aq1_page2",
+    "memory": "cp7_yc_aq1_page2",
+    "source": "assets/chronicle/personal/source/42-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_aq1_page2.webp",
+    "prompt": "docs/imagegen/personal/42-yangcun.txt"
+  },
+  {
+    "id": "yc_aq1_page3",
+    "title": "十二月 · REK线",
+    "asset": "personal_yc_aq1_page3",
+    "memory": "cp7_yc_aq1_page3",
+    "source": "assets/chronicle/personal/source/42-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_aq1_page3.webp",
+    "prompt": "docs/imagegen/personal/42-yangcun.txt"
+  },
+  {
+    "id": "yc_aq2",
+    "title": "十二月 · REK线 · 结局",
+    "asset": "personal_yc_aq2",
+    "memory": "cp7_yc_aq2",
+    "source": "assets/chronicle/personal/source/42-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_aq2.webp",
+    "prompt": "docs/imagegen/personal/42-yangcun.txt"
+  },
+  {
+    "id": "yc_ta1",
+    "title": "十二月 · 小塔线",
+    "asset": "personal_yc_ta1",
+    "memory": "cp7_yc_ta1",
+    "source": "assets/chronicle/personal/source/42-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_ta1.webp",
+    "prompt": "docs/imagegen/personal/42-yangcun.txt"
+  },
+  {
+    "id": "yc_ta1_page2",
+    "title": "十二月 · 小塔线",
+    "asset": "personal_yc_ta1_page2",
+    "memory": "cp7_yc_ta1_page2",
+    "source": "assets/chronicle/personal/source/42-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_ta1_page2.webp",
+    "prompt": "docs/imagegen/personal/42-yangcun.txt"
+  },
+  {
+    "id": "yc_ta2",
+    "title": "十二月 · 小塔线 · 结局",
+    "asset": "personal_yc_ta2",
+    "memory": "cp7_yc_ta2",
+    "source": "assets/chronicle/personal/source/42-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_ta2.webp",
+    "prompt": "docs/imagegen/personal/42-yangcun.txt"
+  },
+  {
+    "id": "yc_ta2_page2",
+    "title": "十二月 · 小塔线 · 结局",
+    "asset": "personal_yc_ta2_page2",
+    "memory": "cp7_yc_ta2_page2",
+    "source": "assets/chronicle/personal/source/42-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_ta2_page2.webp",
+    "prompt": "docs/imagegen/personal/42-yangcun.txt"
+  },
+  {
+    "id": "yc_zhou1",
+    "title": "十二月 · 小周线",
+    "asset": "personal_yc_zhou1",
+    "memory": "cp7_yc_zhou1",
+    "source": "assets/chronicle/personal/source/43-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_zhou1.webp",
+    "prompt": "docs/imagegen/personal/43-yangcun.txt"
+  },
+  {
+    "id": "yc_zhou1_page2",
+    "title": "十二月 · 小周线",
+    "asset": "personal_yc_zhou1_page2",
+    "memory": "cp7_yc_zhou1_page2",
+    "source": "assets/chronicle/personal/source/43-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_zhou1_page2.webp",
+    "prompt": "docs/imagegen/personal/43-yangcun.txt"
+  },
+  {
+    "id": "yc_zhou1_page3",
+    "title": "十二月 · 小周线",
+    "asset": "personal_yc_zhou1_page3",
+    "memory": "cp7_yc_zhou1_page3",
+    "source": "assets/chronicle/personal/source/43-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_zhou1_page3.webp",
+    "prompt": "docs/imagegen/personal/43-yangcun.txt"
+  },
+  {
+    "id": "yc_zhou2",
+    "title": "十二月 · 小周线 · 结局",
+    "asset": "personal_yc_zhou2",
+    "memory": "cp7_yc_zhou2",
+    "source": "assets/chronicle/personal/source/43-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_zhou2.webp",
+    "prompt": "docs/imagegen/personal/43-yangcun.txt"
+  },
+  {
+    "id": "yc_zhou2_page2",
+    "title": "十二月 · 小周线 · 结局",
+    "asset": "personal_yc_zhou2_page2",
+    "memory": "cp7_yc_zhou2_page2",
+    "source": "assets/chronicle/personal/source/43-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_zhou2_page2.webp",
+    "prompt": "docs/imagegen/personal/43-yangcun.txt"
+  },
+  {
+    "id": "yc_end1",
+    "title": "结算 · HE1 · 哈基米曼波",
+    "asset": "personal_yc_end1",
+    "memory": "cp7_yc_end1",
+    "source": "assets/chronicle/personal/source/43-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      447,
+      447,
+      884,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_end1.webp",
+    "prompt": "docs/imagegen/personal/43-yangcun.txt"
+  },
+  {
+    "id": "yc_end1_page2",
+    "title": "结算 · HE1 · 哈基米曼波",
+    "asset": "personal_yc_end1_page2",
+    "memory": "cp7_yc_end1_page2",
+    "source": "assets/chronicle/personal/source/43-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      890,
+      447,
+      1327,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_end1_page2.webp",
+    "prompt": "docs/imagegen/personal/43-yangcun.txt"
+  },
+  {
+    "id": "yc_end2",
+    "title": "结算 · HE2 · 一家人",
+    "asset": "personal_yc_end2",
+    "memory": "cp7_yc_end2",
+    "source": "assets/chronicle/personal/source/43-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1333,
+      447,
+      1771,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_end2.webp",
+    "prompt": "docs/imagegen/personal/43-yangcun.txt"
+  },
+  {
+    "id": "yc_end2_page2",
+    "title": "结算 · HE2 · 一家人",
+    "asset": "personal_yc_end2_page2",
+    "memory": "cp7_yc_end2_page2",
+    "source": "assets/chronicle/personal/source/44-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      3,
+      3,
+      441,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_end2_page2.webp",
+    "prompt": "docs/imagegen/personal/44-yangcun.txt"
+  },
+  {
+    "id": "yc_end3",
+    "title": "结算 · TE · 还能运营",
+    "asset": "personal_yc_end3",
+    "memory": "cp7_yc_end3",
+    "source": "assets/chronicle/personal/source/44-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      447,
+      3,
+      884,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_end3.webp",
+    "prompt": "docs/imagegen/personal/44-yangcun.txt"
+  },
+  {
+    "id": "yc_end3_page2",
+    "title": "结算 · TE · 还能运营",
+    "asset": "personal_yc_end3_page2",
+    "memory": "cp7_yc_end3_page2",
+    "source": "assets/chronicle/personal/source/44-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      890,
+      3,
+      1327,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_end3_page2.webp",
+    "prompt": "docs/imagegen/personal/44-yangcun.txt"
+  },
+  {
+    "id": "yc_end4",
+    "title": "结算 · BE · 解散",
+    "asset": "personal_yc_end4",
+    "memory": "cp7_yc_end4",
+    "source": "assets/chronicle/personal/source/44-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1333,
+      3,
+      1771,
+      441
+    ],
+    "output": "assets/chronicle/personal/yc_end4.webp",
+    "prompt": "docs/imagegen/personal/44-yangcun.txt"
+  },
+  {
+    "id": "yc_end4_page2",
+    "title": "结算 · BE · 解散",
+    "asset": "personal_yc_end4_page2",
+    "memory": "cp7_yc_end4_page2",
+    "source": "assets/chronicle/personal/source/44-yangcun.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      3,
+      447,
+      441,
+      884
+    ],
+    "output": "assets/chronicle/personal/yc_end4_page2.webp",
+    "prompt": "docs/imagegen/personal/44-yangcun.txt"
   }
 ]

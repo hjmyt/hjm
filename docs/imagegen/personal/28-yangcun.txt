@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。
+
+PANEL 1 (yc_may1_page2, do not write ID): 原版羊村线剧情分镜《五月 · 实习生的第一道题》第 2 幕：十元：（电话里：）「预算没有，要求很多。要年轻，要有梗，要让人看了想来。你看着办。」 你：（你盯着空白的画布看了两个小时，弹幕一样飘过去的全是借口：我又不是学设计的……）
+
+PANEL 2 (yc_may1_page3, do not write ID): 原版羊村线剧情分镜《五月 · 实习生的第一道题》第 3 幕：旁白：凌晨一点，排练室群里还在聊编曲。你看着那些消息，忽然有点不好意思把一张糊弄的海报发进去。
+
+PANEL 3 (yc_may2, do not write ID): 原版羊村线剧情分镜《五月 · 交卷》第 1 幕：旁白：海报发进群里的那一刻，你盯着屏幕，心跳得比等期末成绩还快。 小塔：「时间表、地址、票价，都对。二维码能扫。」
+
+PANEL 4 (yc_may2_page2, do not write ID): 原版羊村线剧情分镜《五月 · 交卷》第 2 幕：大羊：「哟，这个排版，比之前那版强多了。」 宝石：「已转发。配文：在？来看演出。」
+
+PANEL 5 (yc_may2_page3, do not write ID): 原版羊村线剧情分镜《五月 · 交卷》第 3 幕：十元：（她最后出现，只回了四个字：）「留着用吧。」 旁白：你后来才知道，「留着用吧」是十元的最高评价。那一晚你睡得格外踏实——原来把一件事做完，是这种感觉。
+
+PANEL 6 (yc_jun1, do not write ID): 原版羊村线剧情分镜《六月 · 530之夜》第 1 幕：旁白：六月，530 专场前一周，大鹅、十元和柒柒在山丘排练到深夜。你被叫去搬设备，搬完就留下来听。 旁白：柒柒是十元的朋友，做活动策划，说话永远带着笑，笑得让你想起商场里恰到好处的灯光。
+
+PANEL 7 (yc_jun1_page2, do not write ID): 原版羊村线剧情分镜《六月 · 530之夜》第 2 幕：旁白：散场时，一桌客人认出了大鹅，起哄着要他喝一杯「润润嗓子」。一杯接着一杯。大鹅笑着，耳根通红，手指在桌下绞着谱子边角。 大鹅：（小声，几乎听不见：）「我……真的不太能喝……」
+
+PANEL 8 (yc_jun1_page3, do not write ID): 原版羊村线剧情分镜《六月 · 530之夜》第 3 幕：客人：「哎——最后一杯！音乐人怎么能不给面子！」 旁白：十元去结账了。柒柒坐在旁边，笑盈盈地看着，没有阻止的意思。以前的你会低头刷手机，假装这桌跟你没关系。

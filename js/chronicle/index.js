@@ -317,6 +317,7 @@ const Chronicle = (() => {
         get startWeekStory() { return startWeekStory; },
         get sideEvents() { return sideEvents; },
         get startSide() { return startSide; },
+        get bandStoryStatus() { return bandStoryStatus; },
         get weeklyDialogue() { return weeklyDialogue; },
         get weekStoryHTML() { return weekStoryHTML; },
         get sideStoriesHTML() { return sideStoriesHTML; },
@@ -355,6 +356,8 @@ const Chronicle = (() => {
         get personalHTML() { return personalHTML; },
         get personalPreview() { return personalPreview; },
         get personalPickerUnlocked() { return personalPickerUnlocked; },
+        get unlockYangcun() { return unlockYangcun; },
+        get offerYangcun() { return offerYangcun; },
         get chapterUnlocked() { return chapterUnlocked; },
         get checkEnding() { return checkEnding; },
         get choice() { return choice; },
@@ -416,9 +419,9 @@ const Chronicle = (() => {
         get thirdTitleHTML() { return thirdTitleHTML; },
         get weekNotice() { return weekNotice; }, set weekNotice(value) { weekNotice = value; }
     };
-    const { freshPersonal, cleanPersonal, personalAction, personalHTML, personalPreview, personalPickerUnlocked, unlockFusionCp, enterFusionCp } = createChroniclePersonal(context);
+    const { freshPersonal, cleanPersonal, personalAction, personalHTML, personalPreview, personalPickerUnlocked, unlockFusionCp, enterFusionCp, unlockYangcun, offerYangcun, enterYangcun } = createChroniclePersonal(context);
     const { cleanTraining, startTraining, trainingAction, trainingTap, trainingHTML, trainingHubHTML, suspendTraining, trainingKey, mountTraining } = createChronicleTraining(context);
-    const { freshWeeks, cleanWeeks, weekPlan, pendingStory, storyTransition, enterWeekStory, startWeekStory, sideEvents, startSide, weeklyDialogue, weekStoryHTML, sideStoriesHTML, illustrationHTML, weeklyHelp } = createChronicleWeeks(context);
+    const { freshWeeks, cleanWeeks, weekPlan, pendingStory, storyTransition, enterWeekStory, startWeekStory, sideEvents, startSide, bandStoryStatus, weeklyDialogue, weekStoryHTML, sideStoriesHTML, illustrationHTML, weeklyHelp } = createChronicleWeeks(context);
     const { savedChapter, shouldCloseBar, normalizeFourthOpening, beginBarChapter, barDialogue, orderDrink, barMenuHTML, closedBarHTML, showBarClosure } = createChronicleBar(context);
     const { freshRun, fresh, isRetiredRun, isRetiredLog, cleanSingle, syncBonds, confirmRestart, restart, sourceSaveDetected, legacy, requestLegacy, safeSnapshot, clean, chapterComplete, chapterUnlocked, repairChapterCarry, previousChapter, playerIdentity, canCarryChapter, quickRun, requestChapter, startChapter } = createChroniclePersistence(context);
     const { speaker, dialogueHTML, actionButton, choicesHTML, startHTML, weekAdvanceHTML, weeklyHTML, socialHTML, partnerHTML, practiceHTML, liveResultHTML, titleHTML, mainHTML, phaseText, hudHTML, sidebarHTML, journalHTML, render, refresh, endingType, collectedEndingIds, chapterEndingIds, endingBadges, endingOverviewHTML, endingGalleryChapter, gallery, help, chapterTabs } = createChronicleViews(context);
@@ -430,5 +433,5 @@ const Chronicle = (() => {
     const { projectEvent, resolveEvent, chapterTwoDialogue, secondProgress, eventBoard, secondOutcomeText, secondResultHTML, secondTitleHTML, chapterTwoHelp } = createChronicleChaptersTwo(context);
     const { supplementalDialogue, chapterThreeDialogue, thirdTitleHTML, thirdHelp } = createChronicleChaptersThree(context);
     const { chapterFourDialogue, fourthTitleHTML, fourthHelp } = createChronicleChaptersFour(context);
-    return { fresh, clean, syncBonds, refresh, mount, suspend, sourceSaveDetected, requestLegacy, encounterIds, journalSpeaker, priorHeCount, requiredTech, unlockFusionCp, enterFusionCp };
+    return { fresh, clean, syncBonds, refresh, mount, suspend, sourceSaveDetected, requestLegacy, encounterIds, journalSpeaker, priorHeCount, requiredTech, unlockFusionCp, enterFusionCp, unlockYangcun, offerYangcun, enterYangcun };
 })();

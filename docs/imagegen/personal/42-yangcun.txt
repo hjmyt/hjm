@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。
+
+PANEL 1 (yc_aq1, do not write ID): 原版羊村线剧情分镜《十二月 · REK线》第 1 幕：旁白：十二月初，REK神秘兮兮地把你拉到一边，左右看了看，压低声音。 REK：「我问你个事。你单身吗？」
+
+PANEL 2 (yc_aq1_page2, do not write ID): 原版羊村线剧情分镜《十二月 · REK线》第 2 幕：旁白：你心里一跳。他接下来的话让你差点呛到： REK：「我表哥，人帅，多金，开录音棚的。我观察你八个月了，你人靠谱，做事有谱。我去组个局，你们见见？」
+
+PANEL 3 (yc_aq1_page3, do not write ID): 原版羊村线剧情分镜《十二月 · REK线》第 3 幕：你：「……你憋了八个月，就是要给我介绍对象？」 REK：（理直气壮：）「好男人要内部消化。这是我们东莞人的智慧。」
+
+PANEL 4 (yc_aq2, do not write ID): 原版羊村线剧情分镜《十二月 · REK线 · 结局》第 1 幕：旁白：饭局上，表哥本人比照片还夸张。更夸张的是，他全程只跟你聊了一件事：你做的那套后勤清单，从防雨布到应急预案，他想整套拿去用在自己的录音棚。 旁白：一年后，你在他的录音棚里做运营总监。REK逢人便说：「这我牵线搭桥的，我眼光好吧。」
+
+PANEL 5 (yc_ta1, do not write ID): 原版羊村线剧情分镜《十二月 · 小塔线》第 1 幕：旁白：十二月初，小塔和小英一起找到你。小英是小塔的女朋友，也是团里公认的「编外气氛组」。 小塔：（难得有点不好意思：）「这周末……跟我们回趟潮汕老家吧？我妈卤了只狮头鹅，还打了牛肉丸，小英说一定要带上你。」
+
+PANEL 6 (yc_ta1_page2, do not write ID): 原版羊村线剧情分镜《十二月 · 小塔线》第 2 幕：小英：（挽着小塔的胳膊，冲你挤挤眼：）「他天天念叨你，说没见过这么靠谱的实习生。耳朵都起茧了，我得亲眼看看是什么样的人。」
+
+PANEL 7 (yc_ta2, do not write ID): 原版羊村线剧情分镜《十二月 · 小塔线 · 结局》第 1 幕：旁白：小塔老家在海边。头天晚上，卤鹅、蚝烙、手打牛肉丸摆了满满一桌，阿姨还往你碗里舀了一勺沙茶酱，说「食饱未」。第二天，小英拉着你去逛市集，转角撞上一个正在画海的男人——画板上是整片整片的蓝。 旁白：他抬起头，说了句什么。海风太大，你没听清。但他把画送给了你，背面写着电话。
+
+PANEL 8 (yc_ta2_page2, do not write ID): 原版羊村线剧情分镜《十二月 · 小塔线 · 结局》第 2 幕：旁白：回程的车上，小英靠着小塔睡着了。你看着手里的画，忽然觉得这个冬天一点都不冷。

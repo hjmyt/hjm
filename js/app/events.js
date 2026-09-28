@@ -291,6 +291,10 @@ function bindAppEvents() {
             return closeModal();
         if (d.fusionCpEnter !== undefined)
             return Chronicle.enterFusionCp();
+        if (d.yangcunLater !== undefined)
+            return closeModal();
+        if (d.yangcunEnter !== undefined)
+            return Chronicle.enterYangcun();
         if (d.fusionPoolEnd !== undefined)
             return finishFusionPool();
         if (d.fusionRestart)

@@ -85,6 +85,12 @@ function createChronicleTraining(ctx) {
                 entry.gain=t.score>=90?3:2;
                 ctx.R().tech+=entry.gain;
                 ctx.log(`${plan().title}完成：琴技 +${entry.gain}；本章此项奖励已领取。`);
+                const chapter = ctx.R().chapter;
+                const completed = [1, 2, 3, 4, 5].filter(week => economy().training[`${chapter}:${week}`]?.gain).length;
+                if (chapter === 1 && completed >= 3 && claimOrchestraMilestone('orchestra:chapter:1:training-three'))
+                    ctx.log(`完成三项不同训练：乐团提升到 Lv.${globalOrchestraLevel()}。`);
+                if (completed === 5 && claimOrchestraMilestone(`orchestra:chapter:${chapter}:training-all`))
+                    ctx.log(`本章五项训练全部完成：乐团提升到 Lv.${globalOrchestraLevel()}。`);
             }
         }
         ctx.changed();

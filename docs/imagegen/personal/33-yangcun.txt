@@ -1,0 +1,18 @@
+Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.
+阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。
+
+PANEL 1 (yc_sep1, do not write ID): 原版羊村线剧情分镜《九月 · 中秋连轴》第 1 幕：旁白：九月，中秋三天假，三场歌友会连轴转。你负责所有的海报、签到和后勤，三天睡了十个小时。 旁白：第二场签到时，有观众认出你：「你是不是那个做海报的？我们宿舍都是看了帖子来的。」
+
+PANEL 2 (yc_sep1_page2, do not write ID): 原版羊村线剧情分镜《九月 · 中秋连轴》第 2 幕：旁白：第三场散场，乐手们在台上抱成一团。你在台下数剩下的矿泉水，忽然觉得——这大概就是「团」的感觉。 十元：（递给你一罐冰咖啡：）「辛苦了。说真的，五月那时候我没想到你能撑到现在。」
+
+PANEL 3 (yc_sep1_page3, do not write ID): 原版羊村线剧情分镜《九月 · 中秋连轴》第 3 幕：你：「我自己也没想到。」
+
+PANEL 4 (yc_sep2, do not write ID): 原版羊村线剧情分镜《九月 · 小周的小九九》第 1 幕：旁白：中秋后，大鹅的替补键盘手小周来了。技术不错，人缘一般，说话总带着一点若有若无的酸味。 旁白：这天他热情地拉着小塔：「塔哥，我表哥有个新场地，你去试试音？友情价。」
+
+PANEL 5 (yc_sep2_page2, do not write ID): 原版羊村线剧情分镜《九月 · 小周的小九九》第 2 幕：小周：「一个月才八千，还包水电。塔哥你打鼓那么费场地，这个价外面找不到的。」 旁白：你查了一下那个「友情价」——同地段市价的两倍半，还是毛坯房，合同里埋着一行小字：设备损坏照价赔偿，定价权归场地方。
+
+PANEL 6 (yc_sep2_page3, do not write ID): 原版羊村线剧情分镜《九月 · 小周的小九九》第 3 幕：旁白：小塔为人老实，已经在收拾鼓棒了。
+
+PANEL 7 (yc_sep3, do not write ID): 原版羊村线剧情分镜《九月 · 分歧》第 1 幕：旁白：九月底，一个消息砸下来：鹅、羊、塔、REK 收到「曼波杯·大湾区青年乐队大赛」的邀请——但报上去的名单里，没有宝石和飞鸿。 大羊：（他挠头，难得心虚：）「比赛要原创，他们……编曲上确实慢了点。不是不带，是下次一定。」
+
+PANEL 8 (yc_sep3_page2, do not write ID): 原版羊村线剧情分镜《九月 · 分歧》第 2 幕：REK：（低声：）「下次一定这种话，说多了会出人命的。」 旁白：宝石站在门口，抱着他的歌词本，显然是听见了。他笑了笑，说「你们加油」，转身走了。飞鸿看了你们一眼，追了出去。

@@ -108,14 +108,26 @@ function openBonds(vault) {
     }
     return values;
 }
+function levelClaimsDigest(claims) {
+    let value = 0x811c9dc5;
+    for (const char of [...claims].sort().join('\u001f')) {
+        value ^= char.charCodeAt(0);
+        value = Math.imul(value, 0x01000193) >>> 0;
+    }
+    return value;
+}
 function sealLevels(source) {
     const p = syncGlobalLevels(source);
-    return { v: 2, orchestra: sealProtectedNumber(p.orchestraLevel, 'level:orchestra'), band: sealProtectedNumber(p.bandLevel, 'level:band') };
+    const claimed = Object.keys(p.claimed).filter(id => p.claimed[id] && LEVEL_MILESTONE_SET.has(id)).sort();
+    return { v: 3, orchestra: sealProtectedNumber(p.orchestraLevel, 'level:orchestra'), band: sealProtectedNumber(p.bandLevel, 'level:band'), claimed, claimGuard: sealProtectedNumber(levelClaimsDigest(claimed), 'level:claims') };
 }
 function openLevels(vault) {
-    if (!vault || ![1, 2].includes(vault.v))
+    if (!vault || ![1, 2, 3].includes(vault.v))
         throw new Error('等级数据校验失败');
-    return { version: vault.v, orchestraLevel: openProtectedNumber(vault.orchestra, 'level:orchestra'), bandLevel: openProtectedNumber(vault.band, 'level:band') };
+    const claimed = vault.v >= 3 && Array.isArray(vault.claimed) ? vault.claimed : [];
+    if (claimed.some(id => typeof id !== 'string' || !LEVEL_MILESTONE_SET.has(id)) || new Set(claimed).size !== claimed.length || vault.v >= 3 && openProtectedNumber(vault.claimGuard, 'level:claims', 0xffffffff) !== levelClaimsDigest(claimed))
+        throw new Error('等级数据校验失败');
+    return { version: vault.v, orchestraLevel: openProtectedNumber(vault.orchestra, 'level:orchestra'), bandLevel: openProtectedNumber(vault.band, 'level:band'), claimed: Object.fromEntries(claimed.map(id => [id, true])) };
 }
 function openWallet(wallet) {
     if (!wallet || wallet.v !== 1 || !/^[0-9a-z]{1,7}$/.test(wallet.n) || !/^[0-9a-z]{7}\.[0-9a-z]{7}$/.test(wallet.c))

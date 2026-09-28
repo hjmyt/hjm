@@ -2,6 +2,11 @@
 
 // Private Chronicle feature. ctx contains live accessors to sibling features and controller state.
 function createChronicleChaptersOne(ctx) {
+    function bandStep(id, text) {
+        const gain = claimBandMilestone(id);
+        if (gain)
+            ctx.log(`${text}：乐队提升到 Lv.${globalBandLevel()}。`);
+    }
     function dialogue(run = ctx.R(), meta = state?.chronicle) {
         const weekly = ctx.weeklyDialogue(run);
         if (weekly) return weekly;
@@ -43,6 +48,12 @@ function createChronicleChaptersOne(ctx) {
                 ctx.D('feihong', '（排练散场，门口传来争执声）……我知道我音准不如人，但主唱的位置，请再考虑一下。（对面是雪子——飞鸿的情敌，也是另一个主唱人选）', ctx.choice('站出来替飞鸿说话', 's_fei1', () => { ctx.affUp('feihong', 3); G.flags.feiSide = 1; }), ctx.choice('静观其变', 's_fei2', () => ctx.darkUp('feihong', 1)));
             case 's_fei1': return ctx.D('feihong', '（愣住，然后冲你深深鞠躬）谢谢……我叫飞鸿。你的恩情，我用和声还。', ctx.choice('「一起加油吧。」', 's_endweek', () => ctx.affUp('feihong', 2)), ctx.choice('（拍拍他的肩）', 's_endweek', () => ctx.affUp('feihong', 1)));
             case 's_fei2': return ctx.D('feihong', '（他看到了你，眼神暗了一下，没说什么，转身走了。）', ctx.choice('……', 's_endweek'));
+            case 'c1_band_offer': return ctx.D('baoshi', '散场后，宝石拿着一段没有做完的 Demo 找到飞鸿。主旋律和和声都在，鼓、贝斯、吉他和键盘暂时还是导轨。\n\n飞鸿低声说：「主唱的位置已经够乱了。我的和声先删掉吧，别再给大家添麻烦。」\n宝石把耳机摘下来：「我找你录这首歌，不是为了让你随时把位置让出去。」', ctx.choice('「别拆。既然最初是两个人的版本，就把它做完。」', 'menu', () => bandStep('band:c1:formation-choice', '支持宝石与飞鸿保留乐队方案')), ctx.choice('「先按乐团总谱排，Demo 以后再说。」', 'menu'), ctx.choice('「你们先把真正介意的事说清楚。」', 'menu'));
+            case 'c1_band_commit': return ctx.D('feihong', '宝石把两支话筒并排架好，飞鸿却站在监听室门口没有进去。\n\n「我怕最后还是拖他后腿。」\n宝石隔着玻璃回了一句：「那就一起把不好听的地方改掉。别替我决定要不要你。」', ctx.choice('请他们以主唱与和声的完整编制试排', 'menu', () => bandStep('band:c1:commit-choice', '两人决定共同完成乐队 Demo')), ctx.choice('建议宝石先录独唱版本', 'menu'), ctx.choice('建议飞鸿只留下临时参考音轨', 'menu'));
+            case 'c1_band_rehearsal': return ctx.D('narrator', '第一遍副歌结束，两个声部的音都对，却挤在同一个拍点上。宝石的主旋律刚抬头，飞鸿的和声已经盖了上来。\n\n你坐在监听台前，需要指出下一遍最该调整的位置。', ctx.choice('让飞鸿的和声晚半拍进入，给主旋律留下空间', 'menu', () => bandStep('band:c1:rehearsal', '宝石与飞鸿完成首次双声部合练')), ctx.choice('把两个声部都再唱响一点', 'c1_band_rehearsal_retry'), ctx.choice('删掉和声，只保留宝石的主旋律', 'c1_band_rehearsal_retry'));
+            case 'c1_band_rehearsal_retry': return ctx.D('baoshi', '宝石按下暂停：「不是谁唱得更响的问题。主旋律和和声需要先后呼吸，才不会互相挡住。」\n\n飞鸿把副歌倒回开头，等着你重新给出监听意见。', ctx.choice('让和声晚半拍进入，再在尾音处合上', 'menu', () => bandStep('band:c1:rehearsal', '宝石与飞鸿完成首次双声部合练')));
+            case 'c1_band_arrangement': return ctx.D('baoshi', '双声部已经合稳，桌上留下三个版本：并回乐团总谱的管弦版、两边各退一步的融合版，以及保留鼓组、贝斯、吉他和键盘导轨的乐队版。\n\n这份 Demo 会决定他们接下来要走的方向。', ctx.choice('保留乐队版，让主唱与和声站在节奏声部中央', 'menu', () => bandStep('band:c1:arrangement', '乐队版 Demo 编曲完成')), ctx.choice('改成乐团总谱版本', 'menu'), ctx.choice('采用融合版本，暂不成立独立乐队方案', 'menu'));
+            case 'c1_band_qualification': return ctx.D('feihong', 'Demo 已经完成。朱老师听完，只留下一句话：「录音里能修，台上不能。把这一版带去节奏舞台，完整唱下来再谈组队。」\n\n资格试演由宝石主唱、飞鸿和声；其他声部继续使用 Demo 导轨。把两人加入编队，完整演奏达到 C，即可让乐队成长到 Lv.6。', ctx.choice('收好 Demo，准备资格试演', 'menu'));
             case 's_endweek': return ctx.D('narrator', `第 ${G.week} 周的传说，开始了。这周想怎么过？`, ctx.choice('进入本周安排', 'menu'));
             case 'gig': return ctx.D('shiyuan', '十元宣布：接到活了！商场快闪演出，第 6 周！赢了就有第一笔商演费！', ctx.choice('「交给我们。」', 'menu', () => { G.flags.gig = 1; ctx.affUp('shiyuan', 2); }), ctx.choice('「先排练再说。」', 'menu', () => { G.flags.gig = 1; }));
             case 'emo': return ctx.D('dijie', '合奏时有人连续进错拍……笛杰默默放下了笛子，眼神开始下雨。', ctx.choice('过去安慰笛杰', 'menu', () => { ctx.affUp('dijie', 2); ctx.darkUp('dijie', -1); }), ctx.choice('继续排练', 'menu', () => ctx.darkUp('dijie', 1)));

@@ -21,7 +21,11 @@ for (const script of scripts) {
   new vm.Script(fs.readFileSync(path.join(root, script.file), 'utf8'), { filename: script.file });
 }
 const applicationSource = scripts.map(script => fs.readFileSync(path.join(root, script.file), 'utf8')).join('\n');
-assert(!/\braiseBandLevel\b|\bisBandPartner\b/.test(applicationSource), 'Band level has no reused orchestra upgrade hook');
+assert(!/\bisBandPartner\b/.test(applicationSource), 'Band membership uses the single progression roster');
+for (const script of scripts.filter(script => script.file !== 'js/core/progression.js')) {
+  const source = fs.readFileSync(path.join(root, script.file), 'utf8');
+  assert(!/\braise(?:Band|Orchestra)Level\b/.test(source), 'Level growth uses claimed milestones outside progression core: ' + script.file);
+}
 for (const file of styles) assert(fs.statSync(path.join(root, file)).size > 0);
 const server = http.createServer((req, res) => {
   const file = path.resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname));
@@ -56,7 +60,7 @@ const server = http.createServer((req, res) => {
       assert.equal(loaded.size, scripts.length + styles.length, 'All split resources loaded');
       await page.evaluate(() => {
         if (!state || state.coins !== 30 || !storageOK) throw Error('Fresh state failed');
-        if (CARD_DEFS.length !== 25 || new Set(CARD_DEFS.map(c => c.id)).size !== CARD_DEFS.length) throw Error('Card catalog integrity');
+        if (CARD_DEFS.length !== 26 || new Set(CARD_DEFS.map(c => c.id)).size !== CARD_DEFS.length) throw Error('Card catalog integrity');
         if (new Set(MEMORIES.map(m => m.id)).size !== MEMORIES.length) throw Error('Memory catalog integrity');
         for (const view of ['home', 'chronicle', 'story', 'care', 'rhythm', 'album', 'cards', 'fusion']) route(view);
         state.coins = 287;
