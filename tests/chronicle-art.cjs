@@ -34,6 +34,7 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
       renderGlobal(); renderGlobal();
       check('Repeated rendering does not award resources or duplicate memories', state.memories.length === once && resources === JSON.stringify([state.coins, state.affinity, r.tech]));
       const src = document.querySelector('.cp-novel-art img').getAttribute('src');
+      check('Desktop Chronicle scene art keeps its polaroid edge', getComputedStyle(document.querySelector('.cp-novel-art')).paddingTop === '7px' && getComputedStyle(document.querySelector('.cp-novel-art img')).objectFit === 'contain');
       document.querySelector('.cp-memory-link').click();
       check('Read scene opens same album image', document.querySelector('.photo-frame img').getAttribute('src') === src);
       closeModal();
@@ -106,6 +107,8 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
           return {overflow: document.documentElement.scrollWidth > innerWidth,
             imageWidth: img.getBoundingClientRect().width, imageHeight: img.getBoundingClientRect().height,
             reservedWidth: img.getAttribute('width'), reservedHeight: img.getAttribute('height'),
+            artPadding: getComputedStyle(document.querySelector('.cp-novel-art')).paddingTop,
+            artFit: getComputedStyle(img).objectFit,
             gap: choices && text ? choices.getBoundingClientRect().top - text.getBoundingClientRect().bottom : 0,
             sidebarClosed: !document.querySelector('.cp-reader-details').open};
         });
@@ -113,7 +116,14 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
         assert(layout.imageWidth <= 301 && layout.imageHeight <= 251, `${scene} image too large at ${width}: ${JSON.stringify(layout)}`);
         assert.equal(layout.reservedWidth, '440', `${scene} reserves image width before decode`);
         assert.equal(layout.reservedHeight, '440', `${scene} reserves image height before decode`);
-        if (width === 390) assert(layout.imageWidth <= 80 && layout.imageHeight <= 80, `${scene} keeps mobile art compact: ${JSON.stringify(layout)}`);
+        if (width === 390) {
+          assert(layout.imageWidth <= 88 && layout.imageHeight <= 88, `${scene} keeps mobile art compact: ${JSON.stringify(layout)}`);
+          assert.equal(layout.artPadding, '0px', `${scene} removes mobile art edge`);
+          assert.equal(layout.artFit, 'cover', `${scene} fills mobile art frame`);
+        } else {
+          assert.equal(layout.artPadding, '7px', `${scene} keeps desktop/tablet art edge`);
+          assert.equal(layout.artFit, 'contain', `${scene} keeps desktop/tablet full composition`);
+        }
         assert(layout.gap <= 25, `${scene} excessive gap before choices`);
         assert(layout.sidebarClosed);
         if ((width === 1440 || width === 390) && ['s_room', 'zhu_offer', 'c6_warn', 'c2_bar'].includes(scene))

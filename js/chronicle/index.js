@@ -20,12 +20,10 @@ const Chronicle = (() => {
     function scrollToChapterStory() {
         if (currentView !== 'chronicle' || !matchMedia('(max-width: 720px)').matches)
             return;
-        // Switching chapters replaces the whole chronicle DOM. Wait until the new
-        // chapter has rendered and painted before locating its reading area.
-        requestAnimationFrame(() => requestAnimationFrame(() => {
-            if (currentView === 'chronicle')
-                $('cpMain')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }));
+        if ($('cpMain')?.querySelector('.cp-novel-dialogue'))
+            focusStoryDialogue('#cpMain');
+        else
+            requestAnimationFrame(() => $('cpMain')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
     }
     function changed() {
         if (R().chapter === 4 && R().scene === 'c4_bao')

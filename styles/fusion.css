@@ -35,7 +35,6 @@
 .fusion-shell .cp-novel-illustrated .cp-novel-body { grid-template-columns:minmax(0,1fr) minmax(280px,36%); }
 .fusion-shell .cp-novel .cp-novel-art { width:min(100%,340px); transform:rotate(1deg); }
 .fusion-shell .cp-novel-art button { aspect-ratio:1; }
-.fusion-shell .cp-novel .cp-novel-art img { object-fit:contain; }
 .fusion-shell .cp-novel-text-only .cp-novel-heading { margin-bottom:16px; }
 .fusion-lines .cp-dialogue-turn.narrator .cp-speaker b { color:#71839d; }
 .fusion-lines .cp-dialogue-turn.narrator .cp-speaker-symbol { background:#eef2f8; }

@@ -58,6 +58,7 @@ const { pathToFileURL } = require('node:url');
       check('Old Du stays locked before his first fusion-line mention', !cardOwned('laodu') && !availableCardPool().some(card => card.id === 'laodu'));
       check('Fusion chapter uses Chronicle reader and chapter music', !!document.querySelector('#view-fusion .cp-novel .cp-novel-dialogue') && !!document.querySelector('#view-fusion .cp-choice') && document.querySelector('[data-music-title]').textContent.includes('My Sunset'));
       check('Exact-node artwork is collected on arrival', state.memories.includes('fusion_art_hill_arrival') && document.querySelector('.cp-novel-art img')?.src.includes('hill-arrival.jpg'));
+      check('Fusion scene art uses the shared desktop polaroid rule', getComputedStyle(document.querySelector('.cp-novel-art')).paddingTop === '7px' && getComputedStyle(document.querySelector('.cp-novel-art img')).objectFit === 'contain');
       check('Route starts at the supplied opening', state.fusion.runs.rl.current === 'fs_00' && $('view-fusion').innerText.includes('又来到山丘'));
       check('Fusion reader shows at most two dialogue turns per page', document.querySelectorAll('.fusion-lines .cp-dialogue-turn').length <= 2);
       const routeLines = Object.values(FUSION_ROUTES).flat();
@@ -318,6 +319,9 @@ const { pathToFileURL } = require('node:url');
     await page.setViewportSize({ width: 390, height: 844 });
     await page.evaluate(() => { state.fusion.chapter = null; route('fusion'); });
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Fusion hub fits mobile');
+    await page.evaluate(() => { state.fusion.runs.rl = freshFusionRun(); enterFusionChapter('rl'); });
+    assert(await page.evaluate(() => getComputedStyle(document.querySelector('.cp-novel-art')).paddingTop === '0px' && getComputedStyle(document.querySelector('.cp-novel-art img')).objectFit === 'cover'), 'Fusion reader uses the shared edge-free mobile art rule');
+    await page.evaluate(() => { state.fusion.chapter = null; route('fusion'); });
     await page.evaluate(() => { state.fusion.runs.fm = freshFusionRun(); state.fusion.chapter = 'fm'; openFusionPool('story'); });
     assert(await page.evaluate(() => {
       const grid = document.querySelector('.fusion-chat-grid'), action = document.querySelector('.fusion-pool-actions');

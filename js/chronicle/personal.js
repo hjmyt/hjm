@@ -52,7 +52,7 @@ function createChroniclePersonal(ctx) {
         if(!p.routes[p.selected])p.active=false;
         return p;
     }
-    function changed() {P().rev++;ctx.changed();}
+    function changed(focusDialogue=false) {P().rev++;ctx.changed();if(focusDialogue)focusStoryDialogue('#cpMain');}
     function button(action,text,extra='',cls='secondary') {return `<button class="btn ${cls}" data-cp-action="personal-${action}" data-personal-rev="${P().rev}" ${extra}>${text}</button>`;}
     function picker() {
         if(!personalPickerUnlocked()){toast('完成第六章后，才可以进入第七章个人线。');return;}
@@ -149,9 +149,9 @@ function createChroniclePersonal(ctx) {
         if(P().selected==='yangcun'&&c.dang)s.dang+=c.dang;
         for(const flag of c.flags){s.flags[flag]=true;if(P().selected==='yangcun'&&yangcunFlagScore[flag])s.score+=yangcunFlagScore[flag];}
         s.done[n.id]=true;
-        if(n.ending){finish(n);changed();return;}
-        if(n.placeholder){move('hub');changed();return;}
-        if(n.resolveCpEnding){s.flags.cpReady=true;move(s.score>=95?(['push1','push2','push3','push4'].filter(f=>s.flags[f]).length>=3?'cp_HE':'cp_BE'):'hub');changed();return;}
+        if(n.ending){finish(n);changed(true);return;}
+        if(n.placeholder){move('hub');changed(true);return;}
+        if(n.resolveCpEnding){s.flags.cpReady=true;move(s.score>=95?(['push1','push2','push3','push4'].filter(f=>s.flags[f]).length>=3?'cp_HE':'cp_BE'):'hub');changed(true);return;}
         if(n.id.startsWith('sy_act')){
             const count=['sy_act1','sy_act2','sy_act3'].filter(id=>s.done[id]).length;
             s.flags.acts2=count>=2;s.focus=Math.min(3,Math.max(s.focus,count));
@@ -165,7 +165,7 @@ function createChroniclePersonal(ctx) {
         else if(c.next)move(c.next);
         else if(n.companion)move('hub');
         else advance();
-        changed();
+        changed(true);
     }
     function restart() {
         const old=S(),fresh=freshRoute(P().selected);fresh.run=old.run+1;fresh.endings=[...old.endings];
@@ -183,7 +183,7 @@ function createChroniclePersonal(ctx) {
         if(kind==='choose'){choose(Number(btn?.dataset.personalChoice));return;}
         if(kind==='page'){
             const pages=dialoguePages(getNode(P().selected,s.scene));
-            if(s.page<pages.length-1){s.page++;changed();}
+            if(s.page<pages.length-1){s.page++;changed(true);}
             return;
         }
         if(kind==='hub'){if(!s.ending){if(getNode(P().selected,s.scene)){s.resume=s.scene;s.resumePage=s.page;}move('hub');}changed();return;}
@@ -215,7 +215,7 @@ function createChroniclePersonal(ctx) {
         if(who==='xuezi')return {name:'雪子',tag:'键盘手 · 山丘的男性老友',icon:'music',asset:'cardXueziAvatar'};
         if(who==='rek')return {name:'REK',tag:'贝斯手 · 乐队成员',icon:'music',asset:'cardRekAvatar'};
         if(who==='ta')return {name:'大塔',tag:'乐团成员',icon:'music'};
-        if(who==='player')return {name:ctx.R().name||'你',tag:'你的回应',icon:'heart'};
+        if(who==='player')return {name:P().selected==='yangcun'?'你':ctx.R().name||'你',tag:'你的回应',icon:'heart'};
         return ctx.person(who);
     }
     function copy(text) {return text.replace(/\{\{inst\}\}/g,ctx.R().inst||'小提琴').replace(/\{\{reply\}\}/g,S().reply||'一起向前冲！');}
@@ -274,7 +274,7 @@ function createChroniclePersonal(ctx) {
         const visibleChoices=P().selected==='yangcun'&&['yc_cp5a','yc_cp5b','yc_cp5c'].includes(n.id)?n.choices.filter(c=>!c.next||!s.done[c.next]):n.choices;
         const choices=last?(visibleChoices.length?visibleChoices:n.choices.slice(-1)).map((c)=>{const i=n.choices.indexOf(c);return `<button class="cp-choice" data-cp-action="personal-choose" data-personal-choice="${i}" data-personal-rev="${P().rev}"><span class="cp-option-n">${String(i+1).padStart(2,'0')}</span><span>${esc(copy(c.text))}</span>${I('arrow')}</button>`;}).join(''):`<button class="cp-choice" data-cp-action="personal-page" data-personal-rev="${P().rev}"><span class="cp-option-n">${String(page+1).padStart(2,'0')}</span><span>继续阅读<small>下一页 · ${page+2} / ${pages.length}</small></span>${I('arrow')}</button>`;
         const illustrated=src?` cp-novel-illustrated`:'';const style=src?` style="--scene-art:url('${new URL(src,document.baseURI).href}')"`:'';
-        return `<article class="cp-novel cp-personal-novel${illustrated}"${style}><header class="cp-novel-top"><span>第七章 · ${config().name}${P().selected==='baoshi_feihong'?' CP 线':P().selected==='yangcun'?'线':'个人线'}</span><span>${esc(n.title)}${pages.length>1?` · ${page+1}/${pages.length}`:''}</span></header><div class="cp-novel-body">${artHTML(n,page)}<div class="cp-novel-dialogue">${parts}${last&&n.id==='sy_juggle'?'<label class="cp-personal-reply">回复她的动态（可选，20 字内）<input class="text-input" id="cpPersonalReply" maxlength="20" placeholder="一起向前冲！"></label>':''}<div class="cp-choices">${choices}</div></div></div></article>`;
+        return `<article class="cp-novel cp-personal-novel${illustrated}" data-personal-route="${esc(P().selected)}"${style}><header class="cp-novel-top"><span>第七章 · ${config().name}${P().selected==='baoshi_feihong'?' CP 线':P().selected==='yangcun'?'线':'个人线'}</span><span>${esc(n.title)}${pages.length>1?` · ${page+1}/${pages.length}`:''}</span></header><div class="cp-novel-body">${artHTML(n,page)}<div class="cp-novel-dialogue">${parts}${last&&n.id==='sy_juggle'?'<label class="cp-personal-reply">回复她的动态（可选，20 字内）<input class="text-input" id="cpPersonalReply" maxlength="20" placeholder="一起向前冲！"></label>':''}<div class="cp-choices">${choices}</div></div></div></article>`;
     }
     function hubHTML() {
         const s=S(),n=nextMain(),id=P().selected;

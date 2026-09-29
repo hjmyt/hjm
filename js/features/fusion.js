@@ -125,6 +125,7 @@ function enterFusionChapter(key) {
         run.current = FUSION_ROUTES[key][0].id;
     save();
     renderFusion();
+    focusStoryDialogue('#view-fusion');
     syncStoryMusic();
 }
 function fusionSpeakerClass(who) {
@@ -376,6 +377,7 @@ function showFusionNode(key, id) {
     run.flags.poolHub = false;
     save();
     renderFusion();
+    focusStoryDialogue('#view-fusion');
 }
 function fusionResult() {
     const run = fusionRun('fm');
@@ -445,6 +447,7 @@ function continueFusionPage() {
     run.page = clamp((run.page || 0) + 1, 0, Math.max(0, fusionPages(node).length - 1));
     save();
     renderFusion();
+    focusStoryDialogue('#view-fusion');
 }
 function openFusionChats() {
     const run = fusionRun('ep2');

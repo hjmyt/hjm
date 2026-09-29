@@ -86,7 +86,8 @@
   .cp-novel-illustrated .cp-novel-body { grid-template-columns: minmax(0,1fr) 88px; gap: 10px 12px; }
   .cp-novel-heading { justify-content: flex-start; text-align: left; gap: 4px 12px; }
   .cp-novel-heading h3 { font-size: 22px; }
-  .cp-novel .cp-novel-art { justify-self: end; width: 88px; padding: 4px 4px 0; transform: none; }
+  .cp-novel .cp-novel-art { justify-self: end; width: 88px; padding: 0; overflow: hidden; background: #eee8e4; transform: none; }
+  .cp-novel .cp-novel-art img { object-fit: cover; }
   .cp-novel .cp-novel-art figcaption { display: none; }
   .cp-novel-dialogue { padding: 16px; border-radius: 13px; }
   .cp-novel-dialogue .cp-text { font-size: 14px; line-height: 1.9; margin-top: 12px; }
