@@ -35,7 +35,7 @@ const assert=require('node:assert/strict');
   setup(100,false);
   Chronicle.unlockFusionCp();check('Fusion choice unlocks only the CP chapter-seven entry before chapter six',P().storyUnlocks.baoshi_feihong&& !document.querySelector('[data-cp-action="personal-picker"]').disabled);
   reload();check('Fusion CP unlock survives save cleaning before chapter six',P().storyUnlocks.baoshi_feihong===true);
-  await action('picker');check('Early fusion unlock enables CP route but keeps regular personal routes locked',!document.querySelector('[data-cp-person="baoshi_feihong"]').disabled&&document.querySelector('[data-cp-person="azhe"]').disabled&&$('modalContent').textContent.includes('融合线关键聊天已解锁'));closeModal(false);
+  await action('picker');check('Early fusion unlock enables CP route but keeps regular personal routes locked',!document.querySelector('[data-cp-person="baoshi_feihong"]').disabled&&document.querySelector('[data-cp-person="azhe"]').disabled&&$('modalContent').textContent.includes('特殊剧情已解锁'));closeModal(false);
   Chronicle.enterFusionCp();check('Fusion CP unlock enters the actual CP opening without chapter six',P().active&&P().selected==='baoshi_feihong'&&S().scene==='cp_00');
   setup(100,false);
   await forged('personal-select',{cpPerson:'azhe'});check('Direct entry blocked before six',!P().active);
@@ -118,14 +118,36 @@ const assert=require('node:assert/strict');
   setup();Object.assign(state.chronicle.run,{level:6,flags:{feiSide:1,baoFeiPractice:1,yangcun:1}});state.progression.bandLevel=6;await action('picker');check('Yangcun band path unlocks only its independent route',document.querySelector('[data-cp-person="baoshi_feihong"]').disabled&&!document.querySelector('[data-cp-person="yangcun"]').disabled&&document.querySelector('#modalContent').textContent.includes('第二章乐队组已解锁'));closeModal(false);await forged('personal-select',{cpPerson:'baoshi_feihong'});check('Band path cannot directly enter CP route',!P().active);
   check('Yangcun source migration keeps all authored nodes and unique per-page art',PERSONAL_ROUTES.yangcun.nodes.length===57&&PERSONAL_ROUTES.yangcun.nodes.reduce((sum,n)=>sum+n.pageArt.length,0)===141&&new Set(PERSONAL_ROUTES.yangcun.nodes.flatMap(n=>n.pageArt.map(a=>a.asset))).size===141);
   check('Yangcun opening keeps supplied source text exactly',PERSONAL_ROUTES.yangcun.nodes[0].lines[0].text==='你是一个大学生，读自媒体运营。专业课你坐在倒数第二排——倒数第一排睡觉的那位，是你室友。');
+  check('Yangcun source chat pools retain all seven authored months',YANGCUN_CHAT.poolLabels.length===7&&Object.keys(YANGCUN_CHAT.chatLines).join('|')==='大鹅|大羊|小塔|REK|宝石|飞鸿|小周');
   check('REK is locked before his actual Yangcun mention',!state.cards.collection.rek.owned);
   state.chronicle.run.name='Jerry';await select('yangcun');check('Yangcun enters its supplied opening',P().selected==='yangcun'&&S().scene==='yc_start'&&document.querySelectorAll('.cp-dialogue-turn').length<=2);
   go('yc_may1');await action('page');check('Yangcun player remains anonymous instead of inheriting Fusion Jerry',[...document.querySelectorAll('.cp-speaker b')].map(e=>e.textContent).join('|')==='十元|你');
   check('Yangcun scene art keeps the desktop polaroid edge',getComputedStyle(document.querySelector('.cp-novel-art')).paddingTop==='7px'&&getComputedStyle(document.querySelector('.cp-novel-art img')).objectFit==='contain');
   go('yc_start');
   await action('page');check('REK remains locked before the mention page',!state.cards.collection.rek.owned);await action('page');check('REK unlocks when the reader first reaches his mention',state.cards.collection.rek.owned&&state.cards.collection.rek.copies===1);
-  const ycVisited=[];for(let step=0;step<70&&S().scene!=='complete';step++){ycVisited.push(S().scene);check('Yangcun screen has art and at most two original turns '+S().scene,!!document.querySelector('.cp-novel-art img')&&document.querySelectorAll('.cp-dialogue-turn').length<=2);await choose(S().scene==='yc_jun2'||S().scene==='yc_sep3'?1:0);}
-  check('Yangcun authored main band path reaches a real ending',S().scene==='complete'&&ycVisited.includes('yc_dec_band')&&ycVisited.length>15);closeModal(false);
+  go('yc_may2');await choose(0);check('May story enters the monthly contacts page',S().scene==='chat'&&S().month===0&&$('cpMain').textContent.includes('本月有四次聊天机会')&&document.querySelectorAll('.cp-yc-contact').length===6);
+  const gooseBefore=cardBond('goose');await click('[data-cp-action="personal-yc-add"][data-personal-chat="goose"]');check('Adding a contact gives the authored one-time bond',cardBond('goose')===gooseBefore+2&&S().chatContacts.goose&&S().chatMessage.added);
+  reload();check('Monthly contact result and counters survive save cleaning',S().scene==='chat'&&S().chatMessage?.id==='goose'&&S().chatContacts.goose);await action('yc-chat-back');
+  const savedRandom=Math.random;Math.random=()=>.9;
+  for(let i=0;i<4;i++){await click('[data-cp-action="personal-yc-chat"][data-personal-chat="goose"]');check('Chat result consumes one of four monthly slots '+(i+1),S().chatSpent[0]===i+1&&S().chatMessage?.id==='goose');await action('yc-chat-back');}
+  Math.random=savedRandom;
+  check('Four chats add the authored base bond to the global character value',cardBond('goose')===gooseBefore+22&&document.querySelector('[data-personal-chat="goose"]').disabled);
+  await forged('personal-yc-chat',{personalChat:'goose'});check('A fifth chat in the same month cannot award or consume again',cardBond('goose')===gooseBefore+22&&S().chatSpent[0]===4);
+  await action('yc-next');check('Leaving May advances to the June story without losing chat history',S().scene==='yc_jun1'&&S().month===1&&S().chatSpent[0]===4);
+  await action('restart');await action('confirm-restart');
+  const ycVisited=[],ycChatMonths=[];for(let step=0;step<100&&S().scene!=='complete';step++){
+   ycVisited.push(S().scene);
+   if(S().scene==='chat'){ycChatMonths.push(S().month);await action('yc-next');continue;}
+   check('Yangcun screen has art and at most two original turns '+S().scene,!!document.querySelector('.cp-novel-art img')&&document.querySelectorAll('.cp-dialogue-turn').length<=2);
+   await choose(S().scene==='yc_jun2'||S().scene==='yc_sep3'?1:0);
+  }
+  check('Every authored month reaches its own contacts page',ycChatMonths.join(',')==='0,1,2,3,4,5,6');
+  check('Yangcun authored main band path reaches a real ending',S().scene==='complete'&&ycVisited.includes('yc_dec_band')&&ycVisited.length>22);closeModal(false);
+  setup();state.chronicle.run.flags.yangcun=1;applyBondValue('baoshi',50);applyBondValue('feihong',50);await select('yangcun');S().month=6;go('chat');await action('yc-next');check('Baoshi and Feihong exact combined 100 unlocks CP with a jump prompt',S().scene==='yc_cp1'&&P().storyUnlocks.baoshi_feihong&&!$('modalBackdrop').hidden&&$('modalTitle').textContent.includes('宝石×飞鸿 CP 线已解锁')&&!!document.querySelector('[data-fusion-cp-enter]')&&!!document.querySelector('[data-fusion-cp-later]'));await click('[data-fusion-cp-later]');check('Choosing later keeps the saved Yangcun December CP branch',P().selected==='yangcun'&&S().scene==='yc_cp1'&&$('modalBackdrop').hidden);reload();check('Yangcun CP unlock and December branch survive save cleaning',P().storyUnlocks.baoshi_feihong&&P().selected==='yangcun'&&S().scene==='yc_cp1');await action('picker');check('Yangcun bond routing permanently unlocks the independent CP card',!document.querySelector('[data-cp-person="baoshi_feihong"]').disabled&&$('modalContent').textContent.includes('特殊剧情已解锁'));closeModal(false);
+  setup();state.chronicle.run.flags.yangcun=1;applyBondValue('baoshi',60);applyBondValue('feihong',40);await select('yangcun');S().month=6;go('chat');await action('yc-next');await click('[data-fusion-cp-enter]');check('Yangcun unlock prompt jumps into the independent CP opening',P().selected==='baoshi_feihong'&&S().scene==='cp_00'&&P().storyUnlocks.baoshi_feihong);
+  setup();state.chronicle.run.flags.yangcun=1;applyBondValue('goose',50);await select('yangcun');S().month=6;go('chat');await action('yc-next');check('A highest bond of exactly 50 stays on the band route',S().scene==='yc_dec_band');
+  setup();state.chronicle.run.flags.yangcun=1;applyBondValue('goose',51);applyBondValue('dayang',52);await select('yangcun');S().month=6;go('chat');await action('yc-next');check('The unique highest musician above 50 enters that character route',S().scene==='yc_dy1');
+  setup();state.chronicle.run.flags.yangcun=1;await select('yangcun');go('yc_sep3');const previousYangcunSave=JSON.parse(JSON.stringify(state));for(const key of ['month','chatSpent','chatContacts','chatSeen','chatReactions','chatMessage'])delete previousYangcunSave.chronicle.personal.routes.yangcun[key];state=cleanState(previousYangcunSave);route('chronicle');check('Previous Yangcun saves infer their month without rebuilding progress',S().scene==='yc_sep3'&&S().month===4&&Object.keys(S().chatSpent).length===0);
   setup(0);state.coins=10000;await action('picker');await click('[data-cp-action="personal-unlock"][data-cp-person="yangcun"]');closeModal(false);await select('yangcun');check('Ten-thousand-note Yangcun unlock bypasses chapter-two prerequisite',state.coins===0&&P().active&&S().scene==='yc_start'&&!state.chronicle.run.flags.yangcun);
   setup();Object.assign(state.chronicle.run,{level:6,flags:{feiSide:1,strGroup:1}});state.progression.bandLevel=6;await select('shiyuan');S().flags.syFriend=true;P().rev++;renderGlobal();await select('baoshi_feihong');S().score=93;S().flags={cpReady:true,push1:true,push2:true,push3:true};S().done=Object.fromEntries(PERSONAL_ROUTES.baoshi_feihong.nodes.filter(n=>!n.sub&&!n.ending).map(n=>[n.id,true]));S().scene='hub';P().rev++;renderGlobal();check('Low final banner never falls into Yangcun placeholder',document.querySelector('#cpMain').textContent.includes('还差 2 点大旗值')&&!document.querySelector('#cpMain').textContent.includes('羊村线待续'));await action('support');check('Final support resolves CP ending',S().scene==='cp_HE');
   P().active=false;Object.assign(state.chronicle.run,{scene:'menu',level:5,flags:{feiSide:1,c4bao:1}});Object.assign(state.progression,{orchestraLevel:5,bandLevel:5});state.chronicle.run.rev++;renderGlobal();await click('[data-cp-action="ensemble"]');await click('[data-cp-action="partner"][data-cp-person="baoshi_feihong"]');
@@ -144,11 +166,13 @@ const assert=require('node:assert/strict');
  assert(mobileFocus.scrollY>0&&mobileFocus.delta<50&&mobileFocus.choicesBottom<=mobileFocus.navTop,`Mobile personal navigation centers dialogue and keeps choices above fixed nav: ${JSON.stringify(mobileFocus)}`);
  await page.evaluate(()=>{personalTest.go('sy_i3');save();});
  await page.reload();assert(await page.evaluate(()=>state.chronicle.personal.active&&state.chronicle.personal.routes.shiyuan.scene==='sy_i3'),'Actual browser refresh preserves progress');
+ await page.evaluate(()=>{closeModal(false);state=freshState();state.sound=false;state.chronicle.completedChapters=[1,2,3,4,5,6];Object.assign(state.chronicle.run,{chapter:6,ch:6,name:'测试玩家',inst:'长笛',scene:'c6_intro',tech:24,flags:{yangcun:1}});save();route('chronicle');Chronicle.enterYangcun();const s=state.chronicle.personal.routes.yangcun;s.scene='chat';s.month=0;state.chronicle.personal.rev++;renderGlobal();});
  for(const width of [1440,768,390,320]){
   await page.setViewportSize({width,height:1000});
   await page.evaluate(()=>{closeModal(false);route('chronicle');});
   await page.screenshot({path:'/tmp/hjm-personal-'+width+'.png',fullPage:true});
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Personal reader overflow '+width+' doc='+await page.evaluate(()=>document.documentElement.scrollWidth)+' '+JSON.stringify(await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>e.getBoundingClientRect().right>innerWidth+.5).map(e=>({cls:e.className,right:e.getBoundingClientRect().right})).slice(0,40))));
+  assert.equal(await page.locator('.cp-yc-contact').count(),6,'Yangcun May contacts at '+width);
   await page.screenshot({path:'/tmp/hjm-personal-'+width+'.png',fullPage:true});
  }
  const assets=await page.evaluate(()=>[...PERSONAL_NODES.filter(n=>n.asset).map(n=>ASSETS[n.asset]),...PERSONAL_PAGE_ART.map(a=>ASSETS[a.asset])]);

@@ -66,6 +66,8 @@ function renderSourceSkills(c) {
         html += `<div class="source-warning">羁绊成长不会结束人物线。涉及远行的决定，请在剧情中谨慎选择。</div>` + hiddenSkillBlock('lemon', '<h4>危险羁绊 · BE 缅北直通车</h4><p>他会热情邀请你「出国挣大钱」，下飞机的地方没有键盘，只有围墙。保持距离，各生欢喜。</p>');
     if (c.id === 'baoshi')
         html += hiddenSkillBlock('baoshi', '<h4>隐藏身份 · 宝石姬</h4><p>柜子的最深处，挂着一个他亲手打理的衣橱。某些夜晚，他会以「宝石姬」的身份站上另一个舞台——台下的人疯狂尖叫，台上的「她」笑得比谁都自在。少年音配裙子，是他藏得最深的秘密，也是最真的自己。</p><button class="btn secondary small" data-source-action="baoshi-memory">收藏这一面的舞台</button>');
+    if (c.id === 'dayang')
+        html += hiddenSkillBlock('dayang', '<h4>隐藏技能 · 镭射眼</h4><p>有人抢走他的 SOLO 时触发。大羊会用一道几乎有实体感的目光锁定对方，直到那段 SOLO 还回来。</p>');
     return `<section class="profile-panel"><h3 class="panel-title">${I('sparkles')}技能</h3><div class="skill-list">${html}</div></section>`;
 }
 function onSourceGift(c, g) {

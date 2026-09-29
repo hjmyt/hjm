@@ -122,6 +122,28 @@ yc_hold_archive['memory']='cp7_yc_hold'
 result['baoshi_feihong']['nodes']=[n for n in result['baoshi_feihong']['nodes'] if n['id']!='yc_hold']
 yc_source=(ROOT/'docs/story-sources/personal/yangcun.html').read_text()
 yc_raw=html.unescape(re.search(r'<textarea id="script"[^>]*>([\s\S]*?)</textarea>',yc_source)[1])
+
+def js_var_literal(source,name):
+ marker=f'var {name}='
+ start=source.index(marker)+len(marker)
+ opening=source[start]
+ closing={"{":"}","[":"]"}[opening]
+ depth=0;quote=None;escaped=False
+ for index in range(start,len(source)):
+  char=source[index]
+  if quote:
+   if escaped:escaped=False
+   elif char=='\\':escaped=True
+   elif char==quote:quote=None
+   continue
+  if char in "'\"`":quote=char;continue
+  if char==opening:depth+=1
+  elif char==closing:
+   depth-=1
+   if depth==0:return source[start:index+1]
+ raise ValueError(f'Unclosed JavaScript literal: {name}')
+
+yc_chat_literals={name:js_var_literal(yc_source,name) for name in ['POOL_LABELS','CHAT_LINES','RANDOM_EVENTS','MONTH_LINES','CONT_LINES','REACT_LINES','ADD_LINES']}
 yc_nodes=[]
 for block in re.split(r'(?=^【)',yc_raw,flags=re.M):
  lines=[line.strip() for line in block.splitlines() if line.strip()]
@@ -278,7 +300,16 @@ for n in result['yangcun']['nodes']:
   page_art.append(art)
  n['pageArt']=page_art
 
-(ROOT/'js/data/personal-routes.js').write_text("'use strict';\n\n// Compiled from supplied scripts; production rules are explicit in the build script.\nconst PERSONAL_ROUTES = "+json.dumps(result,ensure_ascii=False,indent=2)+";\nconst PERSONAL_NODES = Object.values(PERSONAL_ROUTES).flatMap(r=>r.nodes.map(n=>({...n,route:r.id})));\nconst PERSONAL_PAGE_ART = PERSONAL_NODES.flatMap(n=>(n.pageArt||[]).map((a,index)=>({...a,route:n.route,node:n.id,page:index+1,title:n.title})));\nObject.assign(ASSETS,Object.fromEntries([...PERSONAL_NODES.filter(n=>n.asset).map(n=>[n.asset,`assets/chronicle/personal/${n.id}.webp`]),...PERSONAL_PAGE_ART.map(a=>[a.asset,`assets/chronicle/personal/${a.id}.webp`])]));\n")
+yc_chat_js="\nconst YANGCUN_CHAT = Object.freeze({\n"+",\n".join([
+ "  poolLabels: "+yc_chat_literals['POOL_LABELS'],
+ "  chatLines: "+yc_chat_literals['CHAT_LINES'],
+ "  randomEvents: "+yc_chat_literals['RANDOM_EVENTS'],
+ "  monthLines: "+yc_chat_literals['MONTH_LINES'],
+ "  continuationLines: "+yc_chat_literals['CONT_LINES'],
+ "  reactionLines: "+yc_chat_literals['REACT_LINES'],
+ "  addLines: "+yc_chat_literals['ADD_LINES']
+])+"\n});\n"
+(ROOT/'js/data/personal-routes.js').write_text("'use strict';\n\n// Compiled from supplied scripts; production rules are explicit in the build script.\nconst PERSONAL_ROUTES = "+json.dumps(result,ensure_ascii=False,indent=2)+";\nconst PERSONAL_NODES = Object.values(PERSONAL_ROUTES).flatMap(r=>r.nodes.map(n=>({...n,route:r.id})));\nconst PERSONAL_PAGE_ART = PERSONAL_NODES.flatMap(n=>(n.pageArt||[]).map((a,index)=>({...a,route:n.route,node:n.id,page:index+1,title:n.title})));\nObject.assign(ASSETS,Object.fromEntries([...PERSONAL_NODES.filter(n=>n.asset).map(n=>[n.asset,`assets/chronicle/personal/${n.id}.webp`]),...PERSONAL_PAGE_ART.map(a=>[a.asset,`assets/chronicle/personal/${a.id}.webp`])]));\n"+yc_chat_js)
 # Every reader node gets its own panel. No character portraits substitute for scene art.
 base='''Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.\n阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：气质像女明星的中国成年女性，精致亮眼、优雅长发、时髦而得体的穿搭，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。\n'''
 nodes=[n for r in result.values() if r['id'] not in ['baoshi_feihong','yangcun'] for n in r['nodes']]

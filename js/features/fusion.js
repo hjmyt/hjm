@@ -41,7 +41,7 @@ const FUSION_SPEAKERS = {
     'TIM': { name: 'TIM', tag: '小提琴手 · 乐团伙伴', asset: 'cardTim' },
     '十元': { name: '十元', tag: '乐团团长 · 小提琴', asset: 'cardShiyuan' },
     '宝石': { name: '宝石', tag: '主唱 · 乐团伙伴', asset: 'cardBaoshi' },
-    '阿齐': { name: '阿齐', tag: '贝斯手 · 融合组伙伴', icon: 'music' },
+    '阿齐': { name: '阿齐', tag: '融合贝斯手 · 左手黑手套', asset: 'cardAqiAvatar' },
     '柠檬': { name: '柠檬', tag: '键盘手 · 乐团伙伴', asset: 'cardLemon' },
     'Bill': { name: 'Bill', tag: '鼓手 · 乐团伙伴', asset: 'cardBill' },
     '小杰': { name: '小杰', tag: '流行组 · 木吉他手', asset: 'cardXiaojieAvatar' }

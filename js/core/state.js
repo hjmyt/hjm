@@ -95,17 +95,17 @@ function sealBonds(source) {
     const values = { cat: sealProtectedNumber(source.cat.aff, 'bond:cat') };
     for (const card of CARD_DEFS)
         values[card.id] = sealProtectedNumber(source.affinity[card.id] || 0, 'bond:' + card.id);
-    return { v: 2, values };
+    return { v: 3, values };
 }
 function openBonds(vault) {
-    if (!vault || ![1, 2].includes(vault.v) || !vault.values || typeof vault.values !== 'object')
+    if (!vault || ![1, 2, 3].includes(vault.v) || !vault.values || typeof vault.values !== 'object')
         throw new Error('羁绊数据校验失败');
     const values = { cat: openProtectedNumber(vault.values.cat, 'bond:cat') };
     for (const card of CARD_DEFS) {
-        // Bond vault v1 shipped before Xiaojie and REK. Their missing tokens are
-        // valid only in v1; v2 requires the complete roster so deleting an
-        // existing protected value still fails validation.
-        const legacyAddition = vault.v === 1 && ['xiaojie', 'rek'].includes(card.id);
+        // Bond vault v1 shipped before Xiaojie and REK; v1/v2 both predate Aqi.
+        // Only those known roster additions may be absent. A current v3 vault
+        // still rejects any missing protected value as possible tampering.
+        const legacyAddition = vault.values[card.id] === undefined && ((vault.v === 1 && ['xiaojie', 'rek', 'aqi'].includes(card.id)) || (vault.v === 2 && card.id === 'aqi'));
         values[card.id] = legacyAddition && vault.values[card.id] === undefined
             ? 0
             : openProtectedNumber(vault.values[card.id], 'bond:' + card.id);

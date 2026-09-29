@@ -31,6 +31,24 @@
 .cp-personal-novel .cp-novel-art { align-self:center; }
 .cp-personal-novel .cp-speaker { margin-bottom:14px; }
 .cp-personal .cp-caption { line-height:1.9; }
+.cp-yc-chat-body { max-width:980px; margin:22px auto 0; }
+.cp-yc-chat-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; padding-bottom:18px; border-bottom:1px solid rgba(141,114,83,.18); }
+.cp-yc-chat-heading h3 { margin:8px 0 6px; font-size:clamp(22px,3vw,32px); color:#343b4b; }
+.cp-yc-chat-heading p { margin:0; color:#7e8798; line-height:1.75; }
+.cp-yc-chat-heading > strong { flex:0 0 auto; color:#b27f55; font-size:36px; font-weight:600; }
+.cp-yc-chat-heading > strong small { font-size:13px; color:#9b8d82; }
+.cp-yc-contact-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:20px 0; }
+.cp-yc-contact { display:flex; align-items:center; gap:12px; min-width:0; padding:12px; border:1px solid #e5d9cb; border-radius:15px; background:rgba(255,253,249,.86); color:#4e5361; text-align:left; cursor:pointer; }
+.cp-yc-contact:hover:not(:disabled) { border-color:#c6a27e; box-shadow:0 8px 22px rgba(100,76,54,.08); }
+.cp-yc-contact.not-added { border-style:dashed; background:rgba(252,249,244,.55); }
+.cp-yc-contact:disabled { opacity:.58; cursor:default; }
+.cp-yc-contact img,.cp-yc-contact > .cp-speaker-symbol { width:48px; height:54px; flex:0 0 48px; border-radius:10px; object-fit:cover; object-position:top; }
+.cp-yc-contact > span:not(.cp-speaker-symbol) { min-width:0; flex:1; }
+.cp-yc-contact b,.cp-yc-contact small { display:block; }
+.cp-yc-contact b { margin-bottom:5px; font-size:15px; color:#434957; }
+.cp-yc-contact small { overflow:hidden; color:#8d8177; line-height:1.5; text-overflow:ellipsis; white-space:nowrap; }
+.cp-yc-contact > svg { width:17px; height:17px; flex:0 0 auto; color:#b28a65; }
+.cp-yc-chat-result { margin:18px 0 0; padding:12px 14px; border-radius:12px; background:#f7f1e8; color:#8c6a4b; font-size:13px; line-height:1.7; }
 @media(max-width:840px){
  .cp-personal-novel.cp-novel-illustrated .cp-novel-body { grid-template-columns:minmax(0,1fr) clamp(100px,22vw,148px); grid-template-areas:'heading art' 'dialogue dialogue'; }
 }
@@ -44,4 +62,9 @@
  .cp-personal-heading > .btn { font-size:12px; padding:10px; flex-shrink:0; }
  .cp-personal-toolbar > span { margin-left:0; width:100%; }
  .cp-personal-hub-actions { grid-template-columns:1fr; }
+ .cp-yc-chat-body { margin-top:14px; }
+ .cp-yc-chat-heading { align-items:center; gap:12px; }
+ .cp-yc-chat-heading p { font-size:12px; }
+ .cp-yc-chat-heading > strong { font-size:28px; }
+ .cp-yc-contact-grid { grid-template-columns:1fr; gap:9px; }
 }
