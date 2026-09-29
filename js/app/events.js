@@ -217,6 +217,10 @@ function bindAppEvents() {
         if (!b || b.disabled)
             return;
         const d = b.dataset;
+        if (d.dialogueCard)
+            return showDialogueCard(d.dialogueCard);
+        if (d.dialogueClose !== undefined)
+            return closeModal();
         if (d.cardOpen)
             return goCard(d.cardOpen);
         if (d.cardFeedOpen)

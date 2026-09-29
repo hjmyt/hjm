@@ -27,6 +27,27 @@ const cardDef = id => CARD_DEFS.find(c => c.id === id);
 // Dedicated crops take precedence so responsive containers cannot cut off a face.
 const cardAssetKey = (card, usage = 'cover') => usage === 'full' ? card.asset : usage === 'avatar' ? (card.avatarAsset || card.coverAsset || card.asset) : (card.coverAsset || card.asset);
 const cardImage = (card, usage = 'cover') => ASSETS[cardAssetKey(card, usage)];
+const cardByAsset = asset => CARD_DEFS.find(card => [card.asset, card.coverAsset, card.avatarAsset].includes(asset));
+const cardThumbnail = (card, usage = 'cover', width = usage === 'avatar' ? 192 : 360) => {
+    if (!card?.id || card.placeholder)
+        return cardImage(card, usage);
+    const folder = usage === 'avatar' ? 'avatars' : 'cards';
+    return `assets/thumbs/${folder}/${width}/${card.id}.webp`;
+};
+const cardThumbnailByAsset = (asset, usage = 'avatar', width = usage === 'avatar' ? 192 : 360) => {
+    const card = cardByAsset(asset);
+    return card ? cardThumbnail(card, usage, width) : ASSETS[asset];
+};
+function dialogueAvatarHTML({ card = null, asset = null, name = '', icon = 'music', alt = '' }) {
+    card ||= cardByAsset(asset);
+    if (!asset && !card)
+        return `<span class="cp-speaker-symbol">${I(icon)}</span>`;
+    const src = card ? cardThumbnail(card, 'avatar') : cardThumbnailByAsset(asset);
+    const image = `<img src="${src}" alt="${escapeHTML(alt || `${name}的虚拟插画`)}" decoding="async">`;
+    if (!card)
+        return image;
+    return `<button type="button" class="cp-speaker-avatar" data-dialogue-card="${card.id}" aria-label="查看${escapeHTML(card.name)}的人物卡牌" title="点击查看人物卡牌">${image}</button>`;
+}
 const cardRarity = c => c.id === 'xiaozhou' && sourceCast().xiaozhou.solos >= 3 ? 'SR' : c.rarity;
 const cardStarCount = c => c.id === 'xiaozhou' && sourceCast().xiaozhou.solos >= 3 ? 3 : c.stars;
 const cardOwned = id => cardAvailable(id) && !!state.cards.collection[id]?.owned;

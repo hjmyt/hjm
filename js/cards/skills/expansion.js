@@ -128,7 +128,7 @@ function startPraise() {
         toast('编队里还需要至少另一位伙伴，才能指定鼓励对象。');
         return;
     }
-    openModal('十元：这一次，没你不行！', `<p>选择一位同队伙伴。该角色展示属性和个人基础音符奖励 +25%，直到下一次有命中的演奏结算；emo 会立即解除。会替换已准备的主动技能。</p><div class="replace-list">${others.map(id => { const c = cardDef(id); return `<button class="replace-option" data-shiyuan-target="${id}"><img class="card-avatar-image" src="${cardImage(c, 'avatar')}" alt="${c.name}的虚拟立绘"><span><strong>${c.name}</strong><small>${id === 'dijie' && expansion().dijie.emo ? '恢复 emo + ' : ''}没你不行 · 下场的鼓励对象</small></span>${I('heart')}</button>`; }).join('')}</div>`);
+    openModal('十元：这一次，没你不行！', `<p>选择一位同队伙伴。该角色展示属性和个人基础音符奖励 +25%，直到下一次有命中的演奏结算；emo 会立即解除。会替换已准备的主动技能。</p><div class="replace-list">${others.map(id => { const c = cardDef(id); return `<button class="replace-option" data-shiyuan-target="${id}"><img class="card-avatar-image" src="${cardThumbnail(c, 'avatar')}" alt="${c.name}的虚拟立绘" decoding="async"><span><strong>${c.name}</strong><small>${id === 'dijie' && expansion().dijie.emo ? '恢复 emo + ' : ''}没你不行 · 下场的鼓励对象</small></span>${I('heart')}</button>`; }).join('')}</div>`);
 }
 function assignPraise(id) {
     if (!state.cards.team.includes('shiyuan') || !state.cards.team.includes(id) || id === 'shiyuan')

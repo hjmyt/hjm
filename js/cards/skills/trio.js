@@ -207,7 +207,7 @@ function prepareKongge() {
         return;
     }
     const others = state.cards.team.filter(id => id !== 'kongge');
-    openModal('首席的乐句设计 · 选择搭档', `<p>根据原卡标注的节奏判断，不用其他属性替代节奏。准备会替换当前主动技能。</p><div class="replace-list">${others.map(id => { const c = cardDef(id), r = sourceRhythm(id); return `<button class="replace-option" data-trio-kongge-target="${id}" ${r === null ? 'disabled' : ''}><img class="card-avatar-image" src="${cardImage(c, 'avatar')}" alt="${c.name}的虚拟立绘"><span><strong>${c.name} · ${r === null ? '未标注节奏' : '节奏 ' + r}</strong><small>${r === null ? '原卡未提供，无法判断效果' : r >= 85 ? '加成：展示属性与个人基础奖励 +30%' : '注意：结算时剩余合奏精力减半'}</small></span>${I(r !== null && r >= 85 ? 'sparkles' : 'music')}</button>`; }).join('') || '<p>先在编队里加入另一位伙伴。</p>'}</div><p class="trio-tiny-rule">阿喆 88、TIM 88 可获得正向加成；十元 35、叶思阳 80 会触发心态波动。两种预览不会修改进度。</p><button class="btn ghost small" data-route="cards">返回编队</button>`);
+    openModal('首席的乐句设计 · 选择搭档', `<p>根据原卡标注的节奏判断，不用其他属性替代节奏。准备会替换当前主动技能。</p><div class="replace-list">${others.map(id => { const c = cardDef(id), r = sourceRhythm(id); return `<button class="replace-option" data-trio-kongge-target="${id}" ${r === null ? 'disabled' : ''}><img class="card-avatar-image" src="${cardThumbnail(c, 'avatar')}" alt="${c.name}的虚拟立绘" decoding="async"><span><strong>${c.name} · ${r === null ? '未标注节奏' : '节奏 ' + r}</strong><small>${r === null ? '原卡未提供，无法判断效果' : r >= 85 ? '加成：展示属性与个人基础奖励 +30%' : '注意：结算时剩余合奏精力减半'}</small></span>${I(r !== null && r >= 85 ? 'sparkles' : 'music')}</button>`; }).join('') || '<p>先在编队里加入另一位伙伴。</p>'}</div><p class="trio-tiny-rule">阿喆 88、TIM 88 可获得正向加成；十元 35、叶思阳 80 会触发心态波动。两种预览不会修改进度。</p><button class="btn ghost small" data-route="cards">返回编队</button>`);
 }
 function chooseKonggeTarget(id) {
     if (!state.cards.team.includes('kongge') || !state.cards.team.includes(id) || id === 'kongge' || sourceRhythm(id) === null)
@@ -225,7 +225,7 @@ function mountTrioNotice() {
     const el = document.createElement('div');
     el.id = 'trioNotice';
     el.className = 'trio-notice';
-    el.innerHTML = `<div class="trio-notice-head"><strong>弦乐新席 · 三位伙伴已到场</strong><small>V6 · 虚拟立绘 / 专属互动 / 自动解锁</small></div><div class="trio-new-grid">${[['tim', '国企人的下班合奏'], ['yeshiyang', '副团长的关怀'], ['kongge', '首席的四拍练习']].map(([id, sub]) => { const c = cardDef(id); return `<button class="trio-new-card" data-card-open="${id}"><img class="card-avatar-image" src="${cardImage(c, 'avatar')}" alt="${c.name}的虚拟立绘"><span><b>${c.name} <small style="display:inline">${cardRarity(c)}</small></b><small>${sub}</small></span></button>`; }).join('')}</div>`;
+    el.innerHTML = `<div class="trio-notice-head"><strong>弦乐新席 · 三位伙伴已到场</strong><small>V6 · 虚拟立绘 / 专属互动 / 自动解锁</small></div><div class="trio-new-grid">${[['tim', '国企人的下班合奏'], ['yeshiyang', '副团长的关怀'], ['kongge', '首席的四拍练习']].map(([id, sub]) => { const c = cardDef(id); return `<button class="trio-new-card" data-card-open="${id}"><img class="card-avatar-image" src="${cardThumbnail(c, 'avatar')}" alt="${c.name}的虚拟立绘" decoding="async"><span><b>${c.name} <small style="display:inline">${cardRarity(c)}</small></b><small>${sub}</small></span></button>`; }).join('')}</div>`;
     anchor.insertAdjacentElement('afterend', el);
 }
 let ChiefTrial = null;

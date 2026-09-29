@@ -15,7 +15,8 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
    scene(+ch,id);check(ch+':'+id+' speakers '+wanted,voices()===wanted);
    for(const el of document.querySelectorAll('#cpMain [data-speaker]')){
     const id=el.dataset.speaker,c=cardDef(id==='tangshao'?'tang':id),img=el.querySelector('img');
-    check(ch+':'+id+' correct portrait',c?img?.getAttribute('src')===cardImage(c,'avatar'):!img);
+    check(ch+':'+id+' correct portrait',c?img?.getAttribute('src')===cardThumbnail(c,'avatar'):!img);
+    if(c)check(ch+':'+id+' portrait opens card',el.querySelector('[data-dialogue-card]')?.dataset.dialogueCard===c.id);
    }
    const e=state.chronicle.run.journal.at(-1),text=e.text;check(ch+':'+id+' journal names',Chronicle.journalSpeaker({...e,who:'lala'},state.chronicle.run)===[...document.querySelectorAll('#cpMain [data-speaker] b')].map(e=>e.textContent).join(' / '));check('Journal content unchanged',e.text===text);
   }
@@ -32,6 +33,12 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
   save();return {count:checks.length,scenes:Object.values(expected).reduce((n,v)=>n+Object.keys(v).length,0)};
  });
  await page.reload();await page.evaluate(()=>route('chronicle'));assert.equal(await page.locator('#cpMain [data-speaker]').first().getAttribute('data-speaker'),'dayang');
+ await page.locator('#cpMain [data-dialogue-card="dayang"]').click();
+ assert.equal(await page.locator('#modalTitle').textContent(),'大羊 · 人物卡牌');
+ assert(await page.locator('.dialogue-card-cover>.cover-art').getAttribute('src').then(src=>src.includes('dayang-card.webp')),'Preview uses the full character card');
+ assert.equal(await page.locator('.cp-avatar-card-hint').count(),0,'Dialogue avatar has no extra card badge');
+ assert.equal(await page.locator('.dialogue-card-cover [data-card-open="dayang"]').textContent().then(t=>t.trim().includes('查看完整卡牌')),true);
+ await page.locator('#closeModal').click();
  await page.locator('#cpMain').screenshot({path:'/tmp/hjm-dayang-speaker.png'});
  await page.setViewportSize({width:390,height:844});
  for(const [ch,id] of [[1,'after_practice'],[2,'c2_tim_a'],[2,'c2_head'],[2,'c2_kong_c'],[3,'c3_bill_b'],[4,'c4_bao'],[4,'c4_qiqi_a']]){

@@ -23,7 +23,7 @@ function lalaCoverBonus(ids = state.cards.team, section = lalaState().cover) {
 }
 function lalaJianpuBonus(ids = state.cards.team) { return ids.includes('lala') && ids.includes('dijie') && lalaState().transcribed ? 2 : 0; }
 function lalaEntryHTML() {
-    return `<section class="lala-entry"><img src="${ASSETS.cardLala}" alt="垃垃的可爱虚拟头像"><div><span class="eyebrow">NEW · OUR STORYTELLER</span><h3>垃垃，正式加入卡册。</h3><p>二提 · 三提补位 · 乐团剧情原稿提供者</p></div><div class="lala-actions"><button class="btn primary small" data-card-open="lala">${I('violin')}认识垃垃</button><button class="btn ghost small" data-lala-action="journal">${I('album')}垃垃手记</button></div></section>`;
+    return `<section class="lala-entry"><img src="${cardThumbnail(cardDef('lala'), 'avatar')}" alt="垃垃的可爱虚拟头像" decoding="async"><div><span class="eyebrow">NEW · OUR STORYTELLER</span><h3>垃垃，正式加入卡册。</h3><p>二提 · 三提补位 · 乐团剧情原稿提供者</p></div><div class="lala-actions"><button class="btn primary small" data-card-open="lala">${I('violin')}认识垃垃</button><button class="btn ghost small" data-lala-action="journal">${I('album')}垃垃手记</button></div></section>`;
 }
 function mountLalaEntry() {
     if (!$('lalaHomeEntry')) {
@@ -70,7 +70,7 @@ function showLalaScore() {
     if (['running', 'countdown'].includes(game.status))
         pauseGame();
     const done = lalaState().transcribed;
-    openModal('垃垃的简谱小课堂', `<div class="lala-modal-head"><img src="${ASSETS.cardLala}" alt="垃垃的虚拟头像"><div><span class="eyebrow">A LITTLE HELP, A FULLER HARMONY</span><h3>换一种记谱，一样能好好合奏。</h3><p>“先跟着我数四拍，再把这一句吹出来。”</p></div></div><p>内置练习示例：C 大调，4/4 拍。每个音一拍；两种记谱表达的是同一段旋律。</p>${lalaScoreSVG()}<div class="lala-number-score"><span>1 = C　4/4</span><strong>3　4　5　3　│　4　5　6　5　‖</strong><small>每个数字都是一拍，先慢慢数，再连成一句。</small></div><p>她把乐谱上的旋律写成笛杰熟悉的数字，再一起核对音高与节奏。对她而言，音乐素养不只用来拉好自己的声部，也能让伙伴更有底气。</p><div class="lala-actions" style="margin-top:18px"><button class="btn primary" data-lala-action="keep-score" ${done ? 'disabled' : ''}>${I('check')}${done ? '这张简谱已经收好' : '收好这张简谱'}</button><button class="btn ghost" data-lala-action="score-audio">${I('play')}听听这两小节</button></div><div class="modal-foot">首次收好：垃垃羁绊分 +2、笛杰羁绊分 +2，两人各 +10 经验；解锁「谱上的温柔」。之后两人同队完成有命中的演奏，参与全队加成，达标时合计最多 +2 音符。不是任意乐谱自动转写功能。</div>`);
+    openModal('垃垃的简谱小课堂', `<div class="lala-modal-head"><img src="${cardThumbnail(cardDef('lala'), 'avatar')}" alt="垃垃的虚拟头像" decoding="async"><div><span class="eyebrow">A LITTLE HELP, A FULLER HARMONY</span><h3>换一种记谱，一样能好好合奏。</h3><p>“先跟着我数四拍，再把这一句吹出来。”</p></div></div><p>内置练习示例：C 大调，4/4 拍。每个音一拍；两种记谱表达的是同一段旋律。</p>${lalaScoreSVG()}<div class="lala-number-score"><span>1 = C　4/4</span><strong>3　4　5　3　│　4　5　6　5　‖</strong><small>每个数字都是一拍，先慢慢数，再连成一句。</small></div><p>她把乐谱上的旋律写成笛杰熟悉的数字，再一起核对音高与节奏。对她而言，音乐素养不只用来拉好自己的声部，也能让伙伴更有底气。</p><div class="lala-actions" style="margin-top:18px"><button class="btn primary" data-lala-action="keep-score" ${done ? 'disabled' : ''}>${I('check')}${done ? '这张简谱已经收好' : '收好这张简谱'}</button><button class="btn ghost" data-lala-action="score-audio">${I('play')}听听这两小节</button></div><div class="modal-foot">首次收好：垃垃羁绊分 +2、笛杰羁绊分 +2，两人各 +10 经验；解锁「谱上的温柔」。之后两人同队完成有命中的演奏，参与全队加成，达标时合计最多 +2 音符。不是任意乐谱自动转写功能。</div>`);
 }
 function keepLalaScore() {
     if (!cardOwned('lala') || lalaState().transcribed)
@@ -163,7 +163,7 @@ function lalaRecapHTML() {
     const r = state.chronicle.run;
     if (!r.name || r.scene === 'start')
         return '';
-    return `<section class="lala-recap" aria-label="垃垃的续章引路"><img src="${ASSETS.cardLala}" alt="垃垃虚拟头像"><div><span class="eyebrow">续章引路 · 上回说到……</span><h3>欢迎回来，故事就在这里等你。</h3><p>${lalaSummary(r).slice(0, 4).map(escapeHTML).join('<br>')}</p><div class="lala-actions"><button class="btn secondary small" data-lala-action="journal">查看完整手记</button><button class="btn ghost small" data-lala-action="dismiss-recap">接着往下读</button></div></div></section>`;
+    return `<section class="lala-recap" aria-label="垃垃的续章引路"><img src="${cardThumbnail(cardDef('lala'), 'avatar')}" alt="垃垃虚拟头像" decoding="async"><div><span class="eyebrow">续章引路 · 上回说到……</span><h3>欢迎回来，故事就在这里等你。</h3><p>${lalaSummary(r).slice(0, 4).map(escapeHTML).join('<br>')}</p><div class="lala-actions"><button class="btn secondary small" data-lala-action="journal">查看完整手记</button><button class="btn ghost small" data-lala-action="dismiss-recap">接着往下读</button></div></div></section>`;
 }
 function lalaJournalText(r) {
     const lines = ['垃垃手记 · ' + lalaChapterTitle(r?.chapter || 1), '乐团正传剧情原稿：垃垃', '仅整理本地已发生的剧情，不含未读分支。', '', ...lalaSummary(r), '', '—— 已读片段 ——'];
@@ -190,7 +190,7 @@ function showLalaJournal(ch = state.chronicle.run.chapter, recapOnly = false) {
     LalaUI.journalChapter = ch;
     const r = lalaRun(ch), E = escapeHTML;
     const tabs = `<div class="lala-journal-tabs">${[1, 2, 3, 4, 5, 6].map(n => `<button class="btn ghost small ${n === ch ? 'lala-selected' : ''}" data-lala-journal="${n}" ${!lalaRun(n) ? 'disabled' : ''}>${lalaChapterTitle(n)}</button>`).join('')}</div>`;
-    const head = `<div class="lala-modal-head"><img src="${ASSETS.cardLala}" alt="垃垃虚拟头像"><div><span class="eyebrow">${recapOnly ? '续章引路 · 上回说到……' : 'ORCHESTRA NOTEBOOK'}</span><h3>${lalaChapterTitle(ch)}</h3><p>把走过的每一页，好好收在这里。</p></div></div>`;
+    const head = `<div class="lala-modal-head"><img src="${cardThumbnail(cardDef('lala'), 'avatar')}" alt="垃垃虚拟头像" decoding="async"><div><span class="eyebrow">${recapOnly ? '续章引路 · 上回说到……' : 'ORCHESTRA NOTEBOOK'}</span><h3>${lalaChapterTitle(ch)}</h3><p>把走过的每一页，好好收在这里。</p></div></div>`;
     const summary = `<div class="lala-notebook-summary">${lalaSummary(r).map(t => `<p>${E(t)}</p>`).join('')}</div>`;
     const rel = r ? Object.entries(r.aff || {}).filter(([, n]) => n > 0).map(([id, n]) => `<span>${E(id === 'tangshao' ? '汤少' : cardDef(id)?.name || id)} <b>${n}</b></span>`).join('') : '';
     const journal = (r?.journal || []).slice().reverse();

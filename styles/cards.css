@@ -977,6 +977,90 @@ body {
   color:#3a3b42;
   border:1px solid #ead5a4
 }
+.modal.dialogue-card-modal {
+  width:min(430px,100%);
+  max-height:none;
+  padding:0;
+  overflow:visible;
+  border:0;
+  border-radius:25px;
+  background:transparent;
+  box-shadow:0 24px 90px #17223966
+}
+.dialogue-card-modal .modal-header {
+  position:absolute;
+  z-index:8;
+  top:-10px;
+  right:-10px;
+  margin:0
+}
+.dialogue-card-modal .modal-header h2 {
+  position:absolute;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  clip-path:inset(50%)
+}
+.dialogue-card-modal .modal-header .icon-btn {
+  width:34px;
+  height:34px;
+  color:#526177;
+  border-color:#dce3ed;
+  background:#fffffff2;
+  backdrop-filter:blur(8px)
+}
+.dialogue-card-modal .dialogue-card-cover {
+  position:relative;
+  top:auto;
+  width:100%;
+  height:min(88dvh,720px);
+  min-height:0;
+  border-radius:24px
+}
+.dialogue-card-modal .dialogue-card-cover>.cover-art {
+  object-position:center 24%
+}
+.dialogue-card-modal .dialogue-card-cover .cover-content {
+  padding:190px 28px 27px
+}
+.dialogue-card-modal .dialogue-card-cover .cover-actions .btn {
+  padding-inline:10px
+}
+@media(max-width:560px) {
+  .modal-backdrop:has(.dialogue-card-modal) {
+    padding:14px
+  }
+  .modal.dialogue-card-modal {
+    width:min(390px,100%)
+  }
+  .dialogue-card-modal .modal-header {
+    top:-7px;
+    right:-7px
+  }
+  .dialogue-card-modal .dialogue-card-cover {
+    height:min(90dvh,700px);
+    border-radius:22px
+  }
+  .dialogue-card-modal .dialogue-card-cover .cover-top {
+    padding:24px
+  }
+  .dialogue-card-modal .dialogue-card-cover .cover-rarity {
+    font-size:38px
+  }
+  .dialogue-card-modal .dialogue-card-cover .cover-content {
+    padding:150px 23px 22px
+  }
+  .dialogue-card-modal .dialogue-card-cover .cover-content .cover-name {
+    font-size:32px
+  }
+  .dialogue-card-modal .dialogue-card-cover .cover-actions {
+    gap:7px
+  }
+  .dialogue-card-modal .dialogue-card-cover .cover-actions .btn {
+    min-height:39px;
+    font-size:10px
+  }
+}
 .cover-form {
   margin-top:11px;
   width:100%;

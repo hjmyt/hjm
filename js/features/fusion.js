@@ -225,7 +225,7 @@ function fusionEncounterTurn(turn) {
 function fusionSpeakerHTML(who, label) {
     const card = cardDef(FUSION_CARD_SPEAKER_IDS[who]);
     const person = FUSION_SPEAKERS[who] || (card ? { name: card.name, tag: `${card.role} · 乐团伙伴`, asset: card.asset } : { name: who, tag: '山丘乐手 · 融合线', icon: 'music' });
-    return `<div class="cp-speaker" data-speaker="${escapeHTML(who)}">${person.asset ? `<img src="${ASSETS[person.asset]}" alt="${escapeHTML(person.name)}的虚拟插画">` : `<span class="cp-speaker-symbol">${I(person.icon)}</span>`}<div><b>${escapeHTML(person.name)}</b><small>${escapeHTML(person.tag)}</small></div><span class="cp-scene-label">${escapeHTML(label)}</span></div>`;
+    return `<div class="cp-speaker" data-speaker="${escapeHTML(who)}">${dialogueAvatarHTML({ card, asset: person.asset, name: person.name, icon: person.icon })}<div><b>${escapeHTML(person.name)}</b><small>${escapeHTML(person.tag)}</small></div><span class="cp-scene-label">${escapeHTML(label)}</span></div>`;
 }
 function fusionDialogueHTML(turns, meta) {
     for (const turn of turns)
@@ -233,7 +233,7 @@ function fusionDialogueHTML(turns, meta) {
     return turns.map((line, index) => `<section class="cp-dialogue-turn ${fusionSpeakerClass(line.who)}">${fusionSpeakerHTML(line.who, index ? '回应' : meta.title)}<div class="cp-text">${escapeHTML(line.text.trim())}</div></section>`).join('');
 }
 function fusionChoiceOwnerHTML() {
-    return `<div class="fusion-choice-owner"><img src="${ASSETS.avatarJerry}" alt="Jerry 的头像"><span><b>Jerry</b><small>选择回应</small></span></div>`;
+    return `<div class="fusion-choice-owner"><img src="${cardThumbnail(cardDef('jerry'), 'avatar')}" alt="Jerry 的头像" decoding="async"><span><b>Jerry</b><small>选择回应</small></span></div>`;
 }
 function fusionChoicesHTML(node, page, pageCount) {
     if (page < pageCount - 1)

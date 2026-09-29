@@ -24,6 +24,28 @@ function goCard(id, feed = false) {
         requestAnimationFrame(() => $('cardFeeding')?.scrollIntoView({ behavior: 'smooth', block: 'center' }));
 }
 
+function showDialogueCard(id) {
+    const c = cardDef(id);
+    if (!c)
+        return;
+    const level = cardLevel(id), bond = cardBond(id);
+    const tag = c.id === 'jerry' ? c.mbti : c.tag.split(' · ')[0];
+    const sub = c.id === 'jerry' ? `现代音乐人 · 「${c.subtitle}」` : `${c.role} · ${c.tag.split(' · ')[1] || '乐团伙伴'}`;
+    openModal(`${c.name} · 人物卡牌`, `<article class="character-cover dialogue-card-cover rarity-${cardRarity(c).toLowerCase()}">
+      <img class="cover-art card-full-image" src="${cardImage(c, 'full')}" alt="${escapeHTML(c.name)}完整人物卡牌" decoding="async">
+      <div class="cover-top"><div class="cover-rarity">${cardRarity(c)}<small>ORCHESTRA · MEMBER</small></div><span class="cover-tag">${escapeHTML(tag)}</span></div>
+      <div class="cover-content">
+        <div class="cover-name">${escapeHTML(cardName(c))}</div>
+        <div class="cover-sub">${escapeHTML(sub)}</div>
+        <div class="cover-signature">MUSIC BRINGS US CLOSER</div>
+        <blockquote>“${escapeHTML(c.quote)}”</blockquote>
+        <div class="cover-bottom-stats"><span class="stars">${cardStars(c)}</span><span><b>${level}</b> / 60 级</span><span>♡ ${bond}</span></div>
+        <div class="cover-actions"><button class="btn cover-main" data-card-open="${c.id}">${I('cards')}查看完整卡牌</button><button class="btn" data-dialogue-close>${I('back')}继续剧情</button></div>
+      </div>
+    </article>`);
+    $('modalBackdrop').querySelector('.modal').classList.add('dialogue-card-modal');
+}
+
 function selectCard(id) {
     if (!cardDef(id))
         return;
@@ -167,7 +189,7 @@ function toggleTeam(id) {
         return;
     }
     if (team.length >= 3) {
-        openModal('这一次，换谁上台？', `<p>编队最多 3 位。选择一位替换为 <strong>${c.name}</strong>，只是轮换，不会丢失角色或羁绊分。</p><div class="replace-list">${team.map(old => { const x = cardDef(old); return `<button class="replace-option" data-card-replace-old="${old}" data-card-replace-new="${id}"><img class="card-avatar-image" src="${cardImage(x, 'avatar')}" alt="${x.name}"><span><strong>${x.name} → ${c.name}</strong><small>${x.role} · 参与全队加成，合计最多 +2 ♪</small></span>${I('repeat')}</button>`; }).join('')}</div>`);
+        openModal('这一次，换谁上台？', `<p>编队最多 3 位。选择一位替换为 <strong>${c.name}</strong>，只是轮换，不会丢失角色或羁绊分。</p><div class="replace-list">${team.map(old => { const x = cardDef(old); return `<button class="replace-option" data-card-replace-old="${old}" data-card-replace-new="${id}"><img class="card-avatar-image" src="${cardThumbnail(x, 'avatar')}" alt="${x.name}" decoding="async"><span><strong>${x.name} → ${c.name}</strong><small>${x.role} · 参与全队加成，合计最多 +2 ♪</small></span>${I('repeat')}</button>`; }).join('')}</div>`);
         return;
     }
     team.push(id);

@@ -36,7 +36,7 @@ function openModal(title, html, onClose = null) {
     $('closeModal').focus();
 }
 function closeModal(restore = true) {
-    $('modalBackdrop').querySelector('.modal').classList.remove('summon-modal');
+    $('modalBackdrop').querySelector('.modal').classList.remove('summon-modal', 'dialogue-card-modal');
     $('modalBackdrop').hidden = true;
     document.body.style.overflow = '';
     const fn = modalOnClose;

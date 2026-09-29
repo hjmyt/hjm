@@ -58,7 +58,7 @@ function renderAlbum() {
         if (!open)
             return `<button class="memory-card locked" data-memory="${m.id}" aria-label="未解锁的回忆"><div class="chapter-lock-art">${I('lock')}</div><h3>未解锁的回忆</h3><p>在故事与相处中慢慢发现</p></button>`;
         const index = MEMORIES.indexOf(m) + 1;
-        return `<button class="memory-card ${open ? '' : 'locked'}" data-memory="${m.id}" aria-label="${open ? '查看回忆' : '未解锁'}：${m.title}。${open ? m.sub : m.rule}"><div class="memory-index">NO. ${String(index).padStart(2, '0')}</div><div class="memory-img"><img loading="lazy" decoding="async" src="${ASSETS[m.asset]}" alt="${open ? m.title : '尚未解锁的回忆'}">${open ? '' : `<span class="lock-cover">${I('lock')}等待被点亮</span>`}</div><h3>${m.title}</h3><p>${open ? m.sub : m.rule}</p></button>`;
+        return `<button class="memory-card ${open ? '' : 'locked'}" data-memory="${m.id}" aria-label="${open ? '查看回忆' : '未解锁'}：${m.title}。${open ? m.sub : m.rule}"><div class="memory-index">NO. ${String(index).padStart(2, '0')}</div><div class="memory-img"><img loading="lazy" decoding="async" fetchpriority="low" src="${ASSETS[m.asset]}" alt="${open ? m.title : '尚未解锁的回忆'}">${open ? '' : `<span class="lock-cover">${I('lock')}等待被点亮</span>`}</div><h3>${m.title}</h3><p>${open ? m.sub : m.rule}</p></button>`;
     }).join('') || '<div class="album-empty">还没有这类回忆，去和大家相遇吧。</div>';
     $$('[data-filter]').forEach(b => b.classList.toggle('active', b.dataset.filter === albumFilter));
 }
