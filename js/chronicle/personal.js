@@ -10,9 +10,10 @@ function createChroniclePersonal(ctx) {
         ['baoshi','宝石'],['feihong','飞鸿'],['xiaozhou','小周']
     ];
     const yangcunName = Object.fromEntries(yangcunChatCast);
+    const yangcunId = Object.fromEntries(yangcunChatCast.map(([id,name])=>[name,id]));
     const yangcunNextMonth = ['yc_jun1','yc_jul1','yc_aug1','yc_sep1','yc_oct1','yc_nov1'];
     const getNode = (id, scene) => PERSONAL_ROUTES[id]?.nodes.find(n => n.id === scene);
-    const freshRoute = id => ({scene:PERSONAL_ROUTES[id]?.entry||(id==='azhe'?'azhe_01':'sy_01'),page:0,flags:{},done:{},resume:null,resumePage:0,read:[],ending:null,endings:[],run:1,duets:0,chatIndex:0,focus:0,score:id==='baoshi_feihong'?10:0,dang:0,previewed:null,reply:'',month:0,chatSpent:{},chatContacts:{},chatSeen:{},chatReactions:{},chatMessage:null});
+    const freshRoute = id => ({scene:PERSONAL_ROUTES[id]?.entry||(id==='azhe'?'azhe_01':'sy_01'),page:0,flags:{},done:{},resume:null,resumePage:0,read:[],ending:null,endings:[],run:1,duets:0,chatIndex:0,focus:0,score:id==='baoshi_feihong'?10:0,dang:0,previewed:null,reply:'',month:0,aff:{},chatSpent:{},chatContacts:{},chatSeen:{},chatReactions:{},chatMessage:null});
     const freshPersonal = () => ({active:false,selected:null,rev:0,tech:20,unlocks:{},storyUnlocks:{},routes:{}});
     const P = () => ctx.M().personal || (ctx.M().personal=freshPersonal());
     const S = () => P().routes[P().selected];
@@ -60,6 +61,7 @@ function createChroniclePersonal(ctx) {
             s.focus=ctx.nInt(a.focus,0,0,3);s.score=ctx.nInt(a.score,r.id==='baoshi_feihong'?10:0,-9999,9999);s.dang=ctx.nInt(a.dang,0,-9999,9999);s.previewed=a.previewed===s.ending?s.ending:null;s.reply=ctx.str(a.reply,20);
             if(r.id==='yangcun'){
                 s.month=inferYangcunMonth(a);
+                s.aff=Object.fromEntries(yangcunChatCast.map(([id])=>[id,ctx.nInt(a.aff?.[id],0,0,99999)]).filter(([,value])=>value));
                 s.chatSpent=Object.fromEntries(Array.from({length:7},(_,i)=>[i,ctx.nInt(a.chatSpent?.[i],0,0,4)]).filter(([,count])=>count));
                 s.chatContacts=Object.fromEntries(yangcunChatCast.filter(([id])=>a.chatContacts?.[id]===true||a.chatContacts?.[id]===1).map(([id])=>[id,true]));
                 for(const [id] of yangcunChatCast){
@@ -74,12 +76,17 @@ function createChroniclePersonal(ctx) {
         return p;
     }
     function changed(focusDialogue=false) {P().rev++;ctx.changed();if(focusDialogue)focusStoryDialogue('#cpMain');}
+    function focusPersonalStory() {
+        if(currentView!=='chronicle'||!matchMedia('(max-width: 720px)').matches)return;
+        if($('cpMain')?.querySelector('.cp-novel-dialogue'))focusStoryDialogue('#cpMain');
+        else requestAnimationFrame(()=>$('cpMain')?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'}));
+    }
     function button(action,text,extra='',cls='secondary') {return `<button class="btn ${cls}" data-cp-action="personal-${action}" data-personal-rev="${P().rev}" ${extra}>${text}</button>`;}
     function picker() {
         if(!personalPickerUnlocked()){toast('完成第六章后，才可以进入第七章个人线。');return;}
-        openModal('第七章 · 选择你的故事线',`<p class="cp-caption">个人线需完成第六章且对应角色羁绊超过 35 分；宝石×飞鸿可由融合线关键聊天，或羊村线羁绊分流解锁；羊村线可由第二章乐队组解锁。完成第六章后，所有未解锁故事线均可支付 10000 音符永久开启。</p><div class="cp-personal-picker">${routes.map(r=>{
+        openModal('第七章 · 选择你的故事线',`<p class="cp-caption">个人线需完成第六章且对应角色羁绊超过 35 分；宝石×飞鸿可由融合线关键聊天，或羊村线本周目好感分流解锁；羊村线可由第二章乐队组解锁。完成第六章后，所有未解锁故事线均可支付 10000 音符永久开启。</p><div class="cp-personal-picker">${routes.map(r=>{
             const cp=r.id==='baoshi_feihong',yc=r.id==='yangcun',bond=cp||yc?0:cardBond(r.id),s=P().routes[r.id],open=admitted(r.id);
-            const purchased=paidUnlock(r.id),cpStatus=fusionCpUnlocked()?'特殊剧情已解锁 · 开启 CP 线':purchased?'已支付 10000 音符永久解锁':cpStoryStarted()?(s?.ending?'结局已收录 · 可重读':'已有进度 · 继续故事'):!historicFlag('feiSide')?'需第一章替飞鸿解围；或在羊村线将两人羁绊合计升至 100':bandLevel()<6?`乐队 Lv.${bandLevel()} / 6；或在羊村线将两人羁绊合计升至 100`:!cpFriendPath()?'需弦乐组＋十元友情分流；也可由羊村线羁绊分流解锁':'前置已解锁 · 开启 CP 线';
+            const purchased=paidUnlock(r.id),cpStatus=fusionCpUnlocked()?'特殊剧情已解锁 · 开启 CP 线':purchased?'已支付 10000 音符永久解锁':cpStoryStarted()?(s?.ending?'结局已收录 · 可重读':'已有进度 · 继续故事'):!historicFlag('feiSide')?'需第一章替飞鸿解围；或在羊村线将两人本周目好感合计升至 100':bandLevel()<6?`乐队 Lv.${bandLevel()} / 6；或在羊村线将两人本周目好感合计升至 100`:!cpFriendPath()?'需弦乐组＋十元友情分流；也可由羊村线好感分流解锁':'前置已解锁 · 开启 CP 线';
             const ycStatus=yangcunStoryUnlocked()?'第二章乐队组已解锁 · 开启羊村线':purchased?'已支付 10000 音符永久解锁':'需第二章达到乐队 Lv.6 并选择羊村';
             const status=cp?cpStatus:yc?ycStatus:!unlocked()?'完成第六章后开放':purchased?'已支付 10000 音符永久解锁':`羁绊 ${bond} · ${bond<=35?'还差 '+(36-bond)+' 分可进入':s?.ending?'结局已收藏 · 可继续或重读':s?'已有进度 · 继续故事':'已解锁 · 开启故事'}`;
             const canPurchase=!open&&unlocked();
@@ -97,7 +104,7 @@ function createChroniclePersonal(ctx) {
         ctx.suspend();const p=P();p.selected=id;p.active=true;
         p.routes[id]??=freshRoute(id);
         if(!Object.keys(p.routes).some(k=>k!==id))p.tech=Math.max(p.tech,ctx.R().tech);
-        closeModal(false);changed();route('chronicle');
+        closeModal(false);changed();route('chronicle');focusPersonalStory();
     }
     function unlockFusionCp() {
         const first=!fusionCpUnlocked();
@@ -112,7 +119,7 @@ function createChroniclePersonal(ctx) {
         move('yc_cp1');
         const first=unlockFusionCp();
         if(!first)changed(true);
-        openModal(first?'宝石×飞鸿 CP 线已解锁':'宝石×飞鸿 CP 线', `<p>${first?'宝石与飞鸿的羁绊合计达到 100，这条独立 CP 故事线已经永久开启。':'这条独立 CP 故事线已经开启，可以随时继续。'}</p><p style="margin-top:12px">羊村线进度已经保存。你可以留在羊村线继续十二月的原剧情分支，也可以现在跳转到独立的宝石×飞鸿 CP 篇章；稍后也能从「乐团正传 → 第七章」进入。</p><div class="settings-actions"><button class="btn secondary" data-fusion-cp-later>继续羊村线</button><button class="btn primary" data-fusion-cp-enter>进入 CP 篇章 ${I('arrow')}</button></div>`);
+        openModal(first?'宝石×飞鸿 CP 线已解锁':'宝石×飞鸿 CP 线', `<p>${first?'本周目中宝石与飞鸿的好感合计达到 100，这条独立 CP 故事线已经永久开启。':'这条独立 CP 故事线已经开启，可以随时继续。'}</p><p style="margin-top:12px">羊村线进度已经保存。你可以留在羊村线继续十二月的原剧情分支，也可以现在跳转到独立的宝石×飞鸿 CP 篇章；稍后也能从「乐团正传 → 第七章」进入。</p><div class="settings-actions"><button class="btn secondary" data-fusion-cp-later>继续羊村线</button><button class="btn primary" data-fusion-cp-enter>进入 CP 篇章 ${I('arrow')}</button></div>`);
     }
     function unlockYangcun() {
         const first=!P().storyUnlocks?.yangcun;
@@ -179,29 +186,31 @@ function createChroniclePersonal(ctx) {
     function openYangcunChat() {const s=S();syncYangcunContacts();s.scene='chat';s.page=0;s.chatMessage=null;}
     function addYangcunContact(id) {
         const s=S(),name=yangcunName[id];if(!name||s.chatContacts[id]||id==='xiaozhou'&&s.month<4)return;
-        s.chatContacts[id]=true;const gained=grantBond(id,2,{key:`plot:7:yangcun:wx:${id}`});
-        s.chatMessage={id,text:YANGCUN_CHAT.addLines[name]||`你添加了${name}的微信。`,note:`已添加微信${gained?` · 羁绊 +${gained}`:''}`,added:true};changed(true);
+        s.chatContacts[id]=true;s.aff[id]=(s.aff[id]||0)+2;
+        const gained=grantBond(id,2,{key:`plot:7:yangcun:wx:${id}`});
+        s.chatMessage={id,text:YANGCUN_CHAT.addLines[name]||`你添加了${name}的微信。`,note:`已添加微信 · 好感 +2 · ${gained?`羁绊 +${gained}`:'羁绊奖励已领取'}`,added:true};changed(true);
     }
     function chatYangcun(id) {
         const s=S(),spent=s.chatSpent[s.month]||0;if(!yangcunName[id]||!s.chatContacts[id]||spent>=4||id==='xiaozhou'&&s.month<4)return;
         const result=nextYangcunChat(id),slot=spent;s.chatSpent[s.month]=slot+1;
-        const gained=grantBond(id,5+result.aff,{key:`plot:7:yangcun:chat:${s.month}:${slot}`});
+        const affection=5+result.aff;s.aff[id]=(s.aff[id]||0)+affection;
+        const gained=grantBond(id,5,{key:`plot:7:yangcun:chat:${s.month}:${slot}`});
         s.dang+=result.dang;s.score+=result.score;
-        const extras=[gained?`羁绊 +${gained}`:'本次羁绊已结算',result.dang?`担当 +${result.dang}`:'',result.score?`乐队积分 +${result.score}`:''].filter(Boolean).join(' · ');
+        const extras=[`好感 +${affection}`,gained?`羁绊 +${gained}`:'羁绊奖励已领取',result.dang?`担当 +${result.dang}`:'',result.score?`乐队积分 +${result.score}`:''].filter(Boolean).join(' · ');
         s.chatMessage={id,text:result.text,note:`${result.note} · ${extras}`,added:false};changed(true);
     }
     function nextYangcunMonth() {
         const s=S();s.chatMessage=null;
         if(s.month<6){const next=yangcunNextMonth[s.month];s.month++;move(next);}
-        else if(cardBond('baoshi')+cardBond('feihong')>=100){offerYangcunCp();return;}
+        else if((s.aff.baoshi||0)+(s.aff.feihong||0)>=100){offerYangcunCp();return;}
         else move(yangcunDecemberScene());
         changed(true);
     }
     function yangcunDecemberScene() {
         const candidates=[['goose','yc_ge1'],['dayang','yc_dy1'],['xiaota','yc_ta1'],['rek','yc_aq1'],['baoshi',null],['feihong',null],['xiaozhou','yc_zhou1']]
-            .map(([id,scene])=>({id,scene,bond:cardBond(id)}));
-        const best=candidates.reduce((winner,item)=>item.bond>winner.bond?item:winner,candidates[0]);
-        return best.bond>50&&best.scene?best.scene:(S().flags.splitYes?'yc_dec_band2':'yc_dec_band');
+            .map(([id,scene])=>({id,scene,aff:S().aff[id]||0}));
+        const best=candidates.reduce((winner,item)=>item.aff>winner.aff?item:winner,candidates[0]);
+        return best.aff>50&&best.scene?best.scene:(S().flags.splitYes?'yc_dec_band2':'yc_dec_band');
     }
     function resolveYangcunNext(n,c) {
         if(c.next==='NEXT')return 'chat';
@@ -218,7 +227,12 @@ function createChroniclePersonal(ctx) {
         else if(P().selected!=='baoshi_feihong'&&c.bond>0)grantBond(P().selected,c.bond,{key:`plot:7:${P().selected}:${n.id}`});
         if(['baoshi_feihong','yangcun'].includes(P().selected)&&c.score)s.score+=c.score;
         if(P().selected==='yangcun'&&c.dang)s.dang+=c.dang;
-        for(const flag of c.flags){s.flags[flag]=true;if(P().selected==='yangcun'&&yangcunFlagScore[flag])s.score+=yangcunFlagScore[flag];}
+        if(P().selected==='yangcun')for(const [name,amount] of Object.entries(c.aff||{})){const id=yangcunId[name];if(id)s.aff[id]=Math.max(0,(s.aff[id]||0)+amount);}
+        for(const flag of c.flags){
+            s.flags[flag]=true;
+            if(P().selected==='yangcun'&&yangcunFlagScore[flag])s.score+=yangcunFlagScore[flag];
+            if(P().selected==='yangcun'&&flag==='geHold')s.aff.goose=(s.aff.goose||0)+10;
+        }
         s.done[n.id]=true;
         if(n.ending){finish(n);changed(true);return;}
         if(n.placeholder){move('hub');changed(true);return;}
@@ -269,7 +283,7 @@ function createChroniclePersonal(ctx) {
             const resume=s.resume,resumePage=s.resumePage,n=nextMain();if(n&&!n.locked){move(n.node.id,n.node.id===resume?resumePage:0);changed();}return;
         }
         if(kind==='restart'){
-            openModal('重新阅读'+config().name+'个人线？',`<p>重选这条线的剧情。全局羁绊、相册、已收藏结局与领奖记录都会保留；另一位角色的进度不受影响。</p><div class="settings-actions">${button('confirm-restart','从头阅读','','primary')}</div>`);return;
+            openModal('重新阅读'+config().name+'个人线？',`<p>重选这条线的剧情。${P().selected==='yangcun'?'本周目好感、月份和聊天次数会清零；':' '}全局羁绊、相册、已收藏结局与领奖记录都会保留；另一条故事线的进度不受影响。</p><div class="settings-actions">${button('confirm-restart','从头阅读','','primary')}</div>`);return;
         }
         if(kind==='confirm-restart'){restart();return;}
         if(s.scene!=='hub'||s.ending)return;
@@ -341,9 +355,9 @@ function createChroniclePersonal(ctx) {
         }
         const contacts=yangcunChatCast.filter(([id])=>id!=='xiaozhou'||month>=4).map(([id,name])=>{
             const card=cardDef(id),asset=card?cardImage(card,'avatar'):null,added=s.chatContacts[id];
-            return `<button class="cp-yc-contact ${added?'':'not-added'}" data-cp-action="personal-${added?'yc-chat':'yc-add'}" data-personal-chat="${id}" data-personal-rev="${P().rev}" ${added&&left===0?'disabled':''}>${asset?`<img src="${asset}" alt="${esc(name)}">`:`<span class="cp-speaker-symbol">${I('music')}</span>`}<span><b>${esc(name)}</b><small>${added?`全局羁绊 ${cardBond(id)}${left?` · 点击聊天`:' · 本月次数已用完'}`:'＋ 添加微信'}</small></span>${I(added?'arrow':'plus')}</button>`;
+            return `<button class="cp-yc-contact ${added?'':'not-added'}" data-cp-action="personal-${added?'yc-chat':'yc-add'}" data-personal-chat="${id}" data-personal-rev="${P().rev}" ${added&&left===0?'disabled':''}>${asset?`<img src="${asset}" alt="${esc(name)}">`:`<span class="cp-speaker-symbol">${I('music')}</span>`}<span><b>${esc(name)}</b><small>${added?`本周目好感 ${s.aff[id]||0} · 全局羁绊 ${cardBond(id)}${left?' · 点击聊天':' · 本月次数已用完'}`:'＋ 添加微信'}</small></span>${I(added?'arrow':'plus')}</button>`;
         }).join('');
-        return `<article class="cp-novel cp-yc-chat"><header class="cp-novel-top"><span>第七章 · 羊村线</span><span>${esc(label)} · 微信</span></header><div class="cp-yc-chat-body cp-novel-dialogue"><div class="cp-yc-chat-heading"><div><span class="cp-week-kicker">MONTHLY CONTACTS</span><h3>今晚找谁聊天？</h3><p>本月有四次聊天机会。聊天会写入全局羁绊，并影响十一月后的故事分流。</p></div><strong>${left}<small> / 4 次</small></strong></div><div class="cp-yc-contact-grid">${contacts}</div><div class="cp-choices"><button class="cp-choice" data-cp-action="personal-yc-next" data-personal-rev="${P().rev}"><span class="cp-option-n">→</span><span>${month<6?'结束本月，进入下个月':'聊完了，看看十二月的答案'}<small>${spent<4?`也可以保留剩余 ${left} 次机会`:'本月四次聊天已完成'}</small></span>${I('arrow')}</button></div></div></article>`;
+        return `<article class="cp-novel cp-yc-chat"><header class="cp-novel-top"><span>第七章 · 羊村线</span><span>${esc(label)} · 微信</span></header><div class="cp-yc-chat-body cp-novel-dialogue"><div class="cp-yc-chat-heading"><div><span class="cp-week-kicker">MONTHLY CONTACTS</span><h3>今晚找谁聊天？</h3><p>本月有四次聊天机会，同时增加本周目好感与全局羁绊。重开后好感清零，羁绊奖励不重复。</p></div><strong>${left}<small> / 4 次</small></strong></div><div class="cp-yc-contact-grid">${contacts}</div><div class="cp-choices"><button class="cp-choice" data-cp-action="personal-yc-next" data-personal-rev="${P().rev}"><span class="cp-option-n">→</span><span>${month<6?'结束本月，进入下个月':'聊完了，看看十二月的答案'}<small>${spent<4?`也可以保留剩余 ${left} 次机会`:'本月四次聊天已完成'}</small></span>${I('arrow')}</button></div></div></article>`;
     }
     function artHTML(n,page) {
         const art=currentArt(n,page);if(!art.asset)return '';
@@ -387,11 +401,17 @@ function createChroniclePersonal(ctx) {
         const art=n.asset&&n.memory?`<button data-memory="${n.memory}" class="cp-personal-ending-art"><img src="${ASSETS[n.asset]}" alt="${esc(n.title)}"></button>`:'';
         return `<section class="cp-surface cp-personal-complete"><div class="cp-ending-hero"><span class="cp-overline">${n.ending} · PERSONAL STORY</span><h3>${esc(n.title)}</h3><p>这段故事已经完成，进度与结局已保存。</p></div>${art}<p class="cp-caption">第七章首次完成奖励 15 音符、1 张邀请券；更换故事线或结局不叠加领取。</p><div class="cp-personal-hub-actions">${button('picker','选择另一条故事线','','primary')}${button('restart','从头重选这条线')}${button('leave','返回六章正传')}</div></section>`;
     }
+    function yangcunAffectionHTML(s) {
+        const items=yangcunChatCast.map(([id,name])=>`<span class="cp-yc-affection" data-yc-affection="${id}"><b>${esc(name)}</b><strong>${s.aff[id]||0}</strong></span>`).join('');
+        return `<div class="cp-yc-affection-panel"><div class="cp-yc-affection-heading"><b>本周目角色好感</b></div><div class="cp-yc-affection-grid">${items}</div></div>`;
+    }
     function personalHTML() {
         if(!admitted(P().selected))return `<section class="cp-surface"><h3>第七章 · 个人线</h3><p>完成第六章，且对应角色羁绊超过 35 分后可进入。</p>${button('picker','选择角色')}${button('leave','返回正传')}</section>`;
         const s=S();const n=getNode(P().selected,s.scene);
-        const cp=P().selected==='baoshi_feihong',yc=P().selected==='yangcun',record=cp?`大旗值 ${s.score} · 乐队 Lv.${bandLevel()}`:yc?`乐队积分 ${s.score} · 担当值 ${s.dang} · 乐队 Lv.${bandLevel()}`:`全局羁绊 ${cardBond(P().selected)}`;
-        return `<section class="cp-personal"><header class="cp-personal-heading"><div><span class="cp-week-kicker">CHAPTER 07 · YOUR STORY TOGETHER</span><h2>${config().name}${cp?' CP 线':yc?'线':'个人线'}</h2><p>${config().tagline}</p></div>${button('picker','切换故事线')}</header><div class="cp-personal-toolbar">${s.scene!=='hub'&&!s.ending?button('hub','暂歇，回到相处安排'):''}${button('restart','重读本线')}${button('leave','返回正传')}<span>自动保存 · 第 ${s.run} 次阅读</span></div>${window.StoryBgm?.controls()||''}<details class="cp-personal-details"><summary>${record} · 展开本线记录</summary><p>已读 ${s.read.length} 个场景；已收录 ${s.endings.length} / ${config().nodes.filter(n=>n.ending).length} 种结局。切换故事线和页面会保留各自进度。</p><div class="cp-personal-memories">${s.endings.map(id=>{const n=getNode(P().selected,id);return n.memory?`<button class="btn ghost" data-memory="${n.memory}">${esc(n.title)}</button>`:`<span class="label-tag">${esc(n.title)}</span>`;}).join('')}</div></details><div id="cpMain">${s.scene==='complete'&&s.ending?completionHTML():yc&&s.scene==='chat'?yangcunChatHTML():n?sceneHTML(n):hubHTML()}</div></section>`;
+        const cp=P().selected==='baoshi_feihong',yc=P().selected==='yangcun';
+        const ycLeader=yc?yangcunChatCast.reduce((best,[id,name])=>(s.aff[id]||0)>(s.aff[best.id]||0)?{id,name}:best,{id:yangcunChatCast[0][0],name:yangcunChatCast[0][1]}):null;
+        const record=cp?`大旗值 ${s.score} · 乐队 Lv.${bandLevel()}`:yc?`最高好感：${ycLeader.name} ${s.aff[ycLeader.id]||0}`:`全局羁绊 ${cardBond(P().selected)}`;
+        return `<section class="cp-personal"><header class="cp-personal-heading"><div><span class="cp-week-kicker">CHAPTER 07 · YOUR STORY TOGETHER</span><h2>${config().name}${cp?' CP 线':yc?'线':'个人线'}</h2><p>${config().tagline}</p></div>${button('picker','切换故事线')}</header><div class="cp-personal-toolbar">${s.scene!=='hub'&&!s.ending?button('hub','暂歇，回到相处安排'):''}${button('restart','重读本线')}${button('leave','返回正传')}<span>自动保存 · 第 ${s.run} 次阅读</span></div>${window.StoryBgm?.controls()||''}<details class="cp-personal-details"><summary>${record} · ${yc?'展开好感明细':'展开本线记录'}</summary>${yc?yangcunAffectionHTML(s):''}<p>已读 ${s.read.length} 个场景；已收录 ${s.endings.length} / ${config().nodes.filter(n=>n.ending).length} 种结局。切换故事线和页面会保留各自进度。</p><div class="cp-personal-memories">${s.endings.map(id=>{const n=getNode(P().selected,id);return n.memory?`<button class="btn ghost" data-memory="${n.memory}">${esc(n.title)}</button>`:`<span class="label-tag">${esc(n.title)}</span>`;}).join('')}</div></details><div id="cpMain">${s.scene==='complete'&&s.ending?completionHTML():yc&&s.scene==='chat'?yangcunChatHTML():n?sceneHTML(n):hubHTML()}</div></section>`;
     }
     function personalPreview() {
         const s=S();if(!P().active||!s||s.scene!=='complete'||!s.ending||s.previewed===s.ending||!$('modalBackdrop').hidden)return;

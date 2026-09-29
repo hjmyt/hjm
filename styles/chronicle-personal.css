@@ -18,6 +18,16 @@
 .cp-personal-details { border:1px solid #e1e7f0; border-radius:12px; margin:18px 0; padding:14px 18px; font-size:13px; color:#73849c; }
 .cp-personal-details summary { cursor:pointer; }
 .cp-personal-details p { margin:12px 0; line-height:1.8; }
+.cp-personal-memories { display:flex; align-items:center; flex-wrap:wrap; gap:12px; }
+.cp-personal-memories:empty { display:none; }
+.cp-yc-affection-panel { margin:14px 0 4px; padding:14px; border-radius:12px; background:rgba(248,244,240,.72); }
+.cp-yc-affection-heading { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin-bottom:12px; }
+.cp-yc-affection-heading b { color:#5e6676; font-size:14px; }
+.cp-yc-affection-heading small { color:#9a8878; }
+.cp-yc-affection-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(110px,1fr)); gap:8px; }
+.cp-yc-affection { display:flex; align-items:center; justify-content:space-between; gap:8px; min-width:0; padding:9px 11px; border:1px solid rgba(178,138,101,.2); border-radius:10px; background:rgba(255,255,255,.78); }
+.cp-yc-affection b { overflow:hidden; color:#6c7280; font-weight:500; text-overflow:ellipsis; white-space:nowrap; }
+.cp-yc-affection strong { color:#b27f55; font-size:16px; font-variant-numeric:tabular-nums; }
 .cp-personal-hub-actions { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin:24px 0; }
 .cp-personal-hub-actions .btn { white-space:normal; line-height:1.7; }
 .cp-personal-hub-actions .primary { grid-column:1/-1; }
@@ -61,6 +71,9 @@
  .cp-personal-heading h2 { font-size:25px; }
  .cp-personal-heading > .btn { font-size:12px; padding:10px; flex-shrink:0; }
  .cp-personal-toolbar > span { margin-left:0; width:100%; }
+ .cp-personal-details { padding:12px; }
+ .cp-yc-affection-heading { align-items:flex-start; flex-direction:column; gap:4px; }
+ .cp-yc-affection-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
  .cp-personal-hub-actions { grid-template-columns:1fr; }
  .cp-yc-chat-body { margin-top:14px; }
  .cp-yc-chat-heading { align-items:center; gap:12px; }
