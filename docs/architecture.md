@@ -52,6 +52,8 @@ JS 中的图片和音频路径仍相对于页面根目录。CSS 的 `url()` 相�
 
 卡牌原图仍由 `cardImage(card, usage)` 按 `cover`、`avatar`、`full` 选择安全构图；首页小卡、卡册列表和对白头像改由 `cardThumbnail` 选择 `assets/thumbs/` 下的 360、720、192 px 派生图，详情页继续使用原图。新增或替换人物图片后运行 `node scripts/build-card-thumbnails.cjs` 重建缩略图；Bill 的 SVG 占位卡保持矢量资源，不生成 WebP 派生图。
 
+`js/cards/preload.js` 在人物进入对白、用户悬停、聚焦或按下卡牌入口时预加载完整立绘，并在快速网络的空闲时段按顺序预热其余人物；省流量和 2G/3G 环境会缩小范围。HTTP(S) 部署同时注册根目录 `sw.js`，以 stale-while-revalidate 持久缓存同源图片；`file://` 直开自动跳过 Service Worker。
+
 首页 JS/CSS 引用包含 `?v=内容哈希`。修改后运行 `node scripts/version-assets.cjs` 更新引用，发布时同时上传首页与资源；`--check` 检查版本是否过期，architecture 回归也会执行此检查。参数不改变经典脚本的顺序或 `defer` 行为，不影响 file:// 加载及存档。首页自身的缓存需由部署端通过 `Cache-Control: no-cache` 控制，详见 README 的发布说明。
 
 ## 验证

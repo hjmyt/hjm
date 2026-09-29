@@ -43,6 +43,8 @@ function dialogueAvatarHTML({ card = null, asset = null, name = '', icon = 'musi
     if (!asset && !card)
         return `<span class="cp-speaker-symbol">${I(icon)}</span>`;
     const src = card ? cardThumbnail(card, 'avatar') : cardThumbnailByAsset(asset);
+    if (card)
+        preloadCardFull(card.id, 'high');
     const image = `<img src="${src}" alt="${escapeHTML(alt || `${name}的虚拟插画`)}" decoding="async">`;
     if (!card)
         return image;

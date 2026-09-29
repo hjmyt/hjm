@@ -13,6 +13,15 @@ function bindAppEvents() {
         renderGlobal();
         toast('深夜吧台已解锁 · 调酒 96', true);
     });
+    const warmCardFromEvent = e => {
+        const target = e.target.closest?.('[data-dialogue-card],[data-card-open]');
+        const id = target?.dataset.dialogueCard || target?.dataset.cardOpen;
+        if (id)
+            preloadCardFull(id, 'high');
+    };
+    document.addEventListener('pointerover', warmCardFromEvent, { passive: true });
+    document.addEventListener('pointerdown', warmCardFromEvent, { passive: true });
+    document.addEventListener('focusin', warmCardFromEvent);
     document.addEventListener('click', e => {
         const b = e.target.closest('button');
         if (!b || b.disabled)
