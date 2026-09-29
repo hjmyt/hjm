@@ -292,7 +292,9 @@ function createChroniclePersonal(ctx) {
         if(who==='xuezi')return {name:'雪子',tag:'键盘手 · 山丘的男性老友',icon:'music',asset:'cardXueziAvatar'};
         if(who==='rek')return {name:'REK',tag:'贝斯手 · 乐队成员',icon:'music',asset:'cardRekAvatar'};
         if(who==='ta')return {name:'大塔',tag:'乐团成员',icon:'music'};
-        if(who==='player')return {name:P().selected==='yangcun'?'你':ctx.R().name||'你',tag:'你的回应',icon:'heart'};
+        // Personal routes keep their original anonymous second-person viewpoint.
+        // Jerry is the fixed player identity only inside the standalone Fusion line.
+        if(who==='player')return {name:'你',tag:'你的回应',icon:'heart'};
         return ctx.person(who);
     }
     function copy(text) {return text.replace(/\{\{inst\}\}/g,ctx.R().inst||'小提琴').replace(/\{\{reply\}\}/g,S().reply||'一起向前冲！');}

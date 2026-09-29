@@ -86,6 +86,8 @@ const assert=require('node:assert/strict');
   check('All exam flags and authored career',S().flags.q1&&S().flags.q2&&S().flags.q3&&S().flags.startup&&S().flags.pdHelp);
   check('Reply uses escaped text',!document.querySelector('#cpMain img[src="x"]'));
   const heRead=[...S().read];await finish();check('Only visited alternatives collected',!state.memories.includes('cp7_sy_q1_bad')&&state.memories.includes('cp7_sy_q1_ok'));
+  setup();state.chronicle.run.name='Jerry';await select('shiyuan');go('sy_BE_ge');
+  check('Shiyuan player remains anonymous instead of inheriting Fusion Jerry',document.querySelector('.cp-speaker b')?.textContent==='你'&&!document.querySelector('#cpMain').textContent.includes('Jerry'));
   // Question-specific feedback is correct, subsequent question does not repeat the old question.
   setup();await select('shiyuan');go('sy_q2');await choose(1);check('Question two incorrect feedback',S().scene==='sy_q2_bad'&&$('cpMain').textContent.includes('C、E、G'));await choose(0);await choose(0);check('Question two advances to third',S().scene==='sy_q3');
   for(const [id,flags,bond,expected] of [
