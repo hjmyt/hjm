@@ -34,7 +34,7 @@ Jerry 固定为短乱黑发、矩形眼镜、黑色上衣、蓝色牛仔裤的�
 
 ## 参考图
 
-- `assets/jerry-portrait.png`
+- `assets/jerry-portrait.webp`
 - `assets/cardLala.webp`
 - `assets/shiyuan-portrait-v2.webp`
 - `assets/dayang-portrait.webp`

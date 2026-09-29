@@ -2,8 +2,8 @@
 
 ## 角色基准
 
-- 老杜立绘：`assets/laodu-portrait.png`
-- Jerry 立绘：`assets/jerry-portrait.png`
+- 老杜立绘：`assets/laodu-portrait.webp`
+- Jerry 立绘：`assets/jerry-portrait.webp`
 - 固定特征：老杜为成熟稳重的男性萨克斯手，短卷深发、黑框眼镜、轻微胡茬、黑色西装与花纹长围巾；乐器始终是结构完整的金色萨克斯。
 - Jerry 固定特征：黑色短乱发、黑框眼镜、黑色短袖衬衫；仅在剧情明确有他参与时入画。
 

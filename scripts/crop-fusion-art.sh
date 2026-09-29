@@ -98,7 +98,7 @@ crop_grid_1536 "$root/assets/fusion/source/fusion-nodes-shared-fixes.png" \
   f2_cpgo-v2 f2_aq1-v2 fusion-qa-keyboard fusion-qa-sax fusion-qa-call fusion-qa-bow fusion-qa-lala fusion-qa-room
 
 # Old Du identity pass. Both source sheets were generated as exact 4 x 2
-# grids from the canonical portrait in assets/laodu-portrait.png. Versioned
+# grids from the canonical portrait in assets/laodu-portrait.webp. Versioned
 # outputs avoid stale browser caches after the earlier generic illustrations.
 crop_grid_1774 "$root/assets/fusion/source/fusion-nodes-laodu-01.png" \
   fs_laodu-v2 fs_07-v3 f2_m1-v2 f2_ll7rage-v4 \

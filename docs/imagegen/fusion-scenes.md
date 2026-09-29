@@ -6,7 +6,7 @@
 - 用户提供的篇章入口源图：`assets/fusion/source/fusion-original-8up.png`
 - 逐剧情八合一源图：原有母图以及 `fusion-nodes-complete-01.png` 至 `fusion-nodes-complete-07.png`、`fusion-nodes-shared-fixes.png`。补全批次的审计、提示词与逐格映射见 `docs/imagegen/fusion-completion-2026-09-28.md`。
 - 成图：`assets/fusion/scenes/`
-- 生成方式：内置图像生成工具。所有人物以卡牌立绘为唯一形象基准；十元以 `assets/shiyuan-portrait-v2.webp`、大鹅以 `assets/goose-portrait.webp`、悦柔以 `assets/yuerou-portrait.png` 为准，Jerry、垃垃、笛杰、大羊和宝石同样以各自卡牌资源为准。
+- 生成方式：内置图像生成工具。所有人物以卡牌立绘为唯一形象基准；十元以 `assets/shiyuan-portrait-v2.webp`、大鹅以 `assets/goose-portrait.webp`、悦柔以 `assets/yuerou-portrait.webp` 为准，Jerry、垃垃、笛杰、大羊和宝石同样以各自卡牌资源为准。
 - 绑定目录：`js/data/fusion-art.js`。112 个剧情节点都有插图绑定；逐台词分页时持续显示当前剧情节点的方形镜头，到达节点时自动收藏。
 - 三张篇章入口横幅直接从用户提供的原八合一图裁切，不使用正文方形镜头。
 

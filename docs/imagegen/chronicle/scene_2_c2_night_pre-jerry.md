@@ -2,7 +2,7 @@
 
 - 生成方式：内置 Imagegen，精确局部替换。
 - 编辑目标：`assets/chronicle/scenes/scene_2_c2_night_pre.webp`
-- Jerry 参考：`assets/jerry-portrait.png`
+- Jerry 参考：`assets/jerry-portrait.webp`
 - 保留的八合一原图：`assets/chronicle/scenes/source/07-missing-undercurrents.png` 第 7 格。
 - 最终覆盖源：`assets/chronicle/scenes/source/scene_2_c2_night_pre-jerry.png`
 
