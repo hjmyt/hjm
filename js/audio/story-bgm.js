@@ -47,7 +47,13 @@ window.StoryBgm = (() => {
     if (/_he$/.test(c.scene || '') || /_he$/.test(c.ending || '')) return 'stage';
     return ({1: 'chapterOne', 2: 'chapter', 3: 'starlight', 4: 'stage', 5: 'starlight', 6: 'musical'})[c.chapter] || 'daily';
   }
-  function allowed() {return entered && !!key && enabled && context.sound && !document.hidden && !['live_play','training'].includes(context.scene);}
+  let cinematicHolds = 0;
+  function allowed() {return !cinematicHolds && entered && !!key && enabled && context.sound && !document.hidden && !['live_play','training'].includes(context.scene);}
+  function hold() {
+    cinematicHolds++;pause();
+    let released = false;
+    return () => {if (released) return;released = true;cinematicHolds--;sync();};
+  }
   function persist() {try {localStorage.setItem(storageKey, JSON.stringify({enabled, volume}));} catch {}}
   function level(fade = false) {
     if (gain) {const t = audioContext.currentTime;gain.gain.cancelScheduledValues(t);gain.gain.setValueAtTime(fade ? 0 : gain.gain.value, t);gain.gain.linearRampToValueAtTime(volume, t + (fade ? .8 : .1));}
@@ -114,5 +120,5 @@ window.StoryBgm = (() => {
   document.addEventListener('visibilitychange', () => {sync();});
   window.addEventListener('pagehide', pause);window.addEventListener('pageshow', () => sync());
   audio.addEventListener('error', () => {if (!key || !allowed()) return;failed = true;pending = false;paint();});
-  return {sync, controls};
+  return {sync, controls, hold};
 })();

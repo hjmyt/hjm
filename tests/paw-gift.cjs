@@ -65,7 +65,7 @@ const { pathToFileURL } = require('node:url');
         await page.evaluate(() => {
             state = freshState(); state.sound = true; state.coins = 100;
             state.cards.encounters = CARD_DEFS.map(c => c.id);
-            goCard('jerry'); chooseCardGift(effectiveGifts(cardDef('jerry'))[0][0]);
+            goCard('jerry'); chooseCardGift('quiet');
         });
         await page.locator('#cardFeedBtn').click();
         await page.waitForFunction(() => synthNodes.size > 0);

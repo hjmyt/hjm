@@ -77,7 +77,7 @@ const cardGifts = c => {
 };
 const isFullBondGift = g => g?.[0] === 'full_bond';
 function giftChoiceDisabled(c, g, used) {
-    return isFullBondGift(g) ? cardBond(c.id) >= 100 : used >= BOND_RULES.giftsPerDay;
+    return !isFullBondGift(g) && used >= BOND_RULES.giftsPerDay;
 }
 function giftFeedDisabled(c, g, used) {
     return !g || giftChoiceDisabled(c, g, used) || state.coins < g[3];
@@ -86,13 +86,11 @@ function giftEffectText(g) {
     return isFullBondGift(g) ? '羁绊直达 100 · 不限每日次数' : `羁绊分 +${g[4]}`;
 }
 function cardGiftHint(c, g, used) {
-    if (isFullBondGift(g) && cardBond(c.id) >= 100)
-        return '羁绊已达 100，无需再使用满心礼盒。';
     if (g && !isFullBondGift(g) && used >= BOND_RULES.giftsPerDay)
         return '今日普通投喂已满五次；满心礼盒仍可使用。';
     if (!g)
-        return '选择一份心意，再点击投喂。满心礼盒消耗 10000 音符，羁绊直达 100，不占普通投喂次数。';
-    return (isFullBondGift(g) ? '消耗 10000 音符，羁绊直接提升到 100，不占用、不受每日五次限制。' : `这份心意：${g[3]} 音符、羁绊分 +${g[4]}、经验 +${g[5]}。`) + (state.coins < g[3] ? '音符不足，先读故事或完成演奏吧。' : '');
+        return '选择一份心意，再点击投喂。满心礼盒消耗 200 音符，羁绊直达 100，满分后仍可投喂但不再增加羁绊，不占普通投喂次数。';
+    return (isFullBondGift(g) ? '消耗 200 音符，羁绊直接提升到 100，满分后仍可投喂但不再增加羁绊，不占用、不受每日五次限制。' : `这份心意：${g[3]} 音符、羁绊分 +${g[4]}、经验 +${g[5]}。`) + (state.coins < g[3] ? '音符不足，先读故事或完成演奏吧。' : '');
 }
 function renderGiftChoices(c, gifts, used) {
     return gifts.map(g => `<button class="gift-choice ${isFullBondGift(g) ? 'full-bond-gift' : ''} ${CardUI.gift === g[0] ? 'selected' : ''}" data-card-gift="${g[0]}" aria-pressed="${CardUI.gift === g[0]}" ${giftChoiceDisabled(c, g, used) ? 'disabled' : ''}>${I(g[2])}<span>${g[1]}</span><small>${g[3]} ♪ · ${giftEffectText(g)}</small></button>`).join('');

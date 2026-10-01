@@ -1,6 +1,6 @@
 'use strict';
 
-const BOND_RULES = Object.freeze({ hidden: 35, notesPerBond: 5, giftCost: 5, giftGain: 1, giftGains: Object.freeze([1, 5, 10]), maxSingleGain: 10, giftsPerDay: 5, dailyCompanion: 1, dailyPerformance: 10, fullGiftCost: 10000 });
+const BOND_RULES = Object.freeze({ hidden: 35, notesPerBond: 5, giftCost: 5, giftGain: 1, giftGains: Object.freeze([1, 5, 10]), maxSingleGain: 10, giftsPerDay: 5, dailyCompanion: 1, dailyPerformance: 10, fullGiftCost: 200 });
 function freshBondProgress() { return { version: 1, claimed: {}, daily: { date: dateKey(), counts: {} } }; }
 function cleanBondProgress(raw) {
     const d = freshBondProgress();
@@ -45,12 +45,13 @@ function grantBond(id, amount, { key = null, daily = false } = {}) {
 }
 // Only the paid full-bond gift bypasses ordinary per-interaction growth limits.
 function purchaseFullBond(id) {
-    if (!cardOwned(id) || cardDef(id)?.placeholder || cardBond(id) >= 100 || state.coins < BOND_RULES.fullGiftCost)
+    if (!cardOwned(id) || cardDef(id)?.placeholder || state.coins < BOND_RULES.fullGiftCost)
         return 0;
     if (id === 'lemon' && sourceCast().lemon.ended)
         return 0;
     state.coins -= BOND_RULES.fullGiftCost;
-    return applyBondValue(id, 100);
+    applyBondValue(id, Math.max(100, cardBond(id)));
+    return true;
 }
 function applyBondValue(id, after) {
     const before = id === 'cat' ? state.cat.aff : state.affinity[id] || 0;

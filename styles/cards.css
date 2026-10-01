@@ -3579,3 +3579,13 @@ body {
     margin-left:0
   }
 }
+
+/* Gift delivery settles into the existing bond meter. */
+.feeding-progress.is-bond-growing .progress-fill {
+  box-shadow:0 0 12px rgba(81,132,255,.65);
+}
+.feeding-progress.is-bond-growing .progress-label > :last-child,
+.feeding-progress.is-bond-growing .trio-profile-value > strong {
+  color:var(--primary, #5184ff);
+  font-variant-numeric:tabular-nums;
+}

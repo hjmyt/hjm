@@ -64,6 +64,7 @@ function selectCard(id) {
 }
 
 function chooseCardGift(key) {
+    if (key === 'full_bond') preloadGiftDragon();
     ensureCardDay();
     const c = cardDef(CardUI.detailId || state.cards.selected);
     if (!c)
@@ -98,21 +99,18 @@ function feedCard() {
     }
     const used = state.cards.daily.gifts[c.id] || 0;
     if (isFullBondGift(g)) {
-        if (cardBond(c.id) >= 100) {
-            toast('羁绊已达 100，无需再使用满心礼盒。');
-            return;
-        }
         if (state.coins < BOND_RULES.fullGiftCost) {
-            toast('满心礼盒需要 10000 音符，当前音符不足。');
+            toast('满心礼盒需要 200 音符，当前音符不足。');
             return;
         }
+        const before = cardBond(c.id);
         if (!purchaseFullBond(c.id))
             return;
         CardUI.response = '“这份心意，我会一直记得。”';
-        save();
+        const saved = save();
         renderGlobal();
+        if (saved) playCardGiftEffect(c, g, before);
         toast('满心礼盒已送出 · 羁绊分已达 100 · 普通投喂次数不变', true);
-        playPetSound('feed');
         return;
     }
     if (used >= BOND_RULES.giftsPerDay) {
@@ -141,7 +139,57 @@ function feedCard() {
     CardUI.response = c.thanks?.[index] || ['“谢谢，你也记得照顾好自己。”', '“下次排练，就用这一份。”', '“要不要坐下来，一起吃？”', '“它好像很喜欢你呢。”'][index];
     const saved = save();
     renderGlobal();
-    if (saved) PawGift.play({ target: document.querySelector('#view-card .character-cover'), origin: $('cardFeedBtn'), name: cardName(c),
+    if (saved) playCardGiftEffect(c, g, before);
+    toast(`心意收到 · ${'羁绊分'} +${cardBond(c.id) - before} · 经验 +${state.cards.collection[c.id].xp - xpBefore}${grew ? ` · 升到 Lv.${cardLevel(c.id)}！` : ''}`, true);
+}
+
+// Presentation only: the real bond is saved before either animation starts.
+let cancelGiftBondProgress = () => {};
+function prepareGiftBondProgress(c, before) {
+    cancelGiftBondProgress();
+    const after = cardBond(c.id), panel = document.querySelector('#cardFeeding .feeding-progress');
+    const fill = panel?.querySelector('.progress-fill');
+    const value = panel?.querySelector('.progress-label > :last-child, .trio-profile-value > strong');
+    if (!fill || !value || !Number.isFinite(before) || after <= before || document.hidden || matchMedia('(prefers-reduced-motion: reduce)').matches) return () => {};
+    let frame = 0, finished = false, started = false;
+    const originalTransition = fill.style.transition;
+    fill.style.transition = 'none';
+    function draw(amount) {
+        value.textContent = `${Math.round(amount)} / 100`;
+        fill.style.width = `${Math.min(100, amount)}%`;
+    }
+    function finish() {
+        if (finished) return;
+        finished = true; cancelAnimationFrame(frame);
+        draw(after); fill.style.transition = originalTransition;
+        panel.classList.remove('is-bond-growing');
+        document.removeEventListener('visibilitychange', hide);
+    }
+    function hide() { if (document.hidden) finish(); }
+    document.addEventListener('visibilitychange', hide);
+    cancelGiftBondProgress = finish;
+    draw(before);
+    return () => {
+        if (finished || started) return;
+        started = true;
+        if (!panel.isConnected || document.hidden) { finish(); return; }
+        const start = performance.now();
+        panel.classList.add('is-bond-growing');
+        function tick(now) {
+            if (!panel.isConnected || document.hidden) { finish(); return; }
+            const t = Math.min(1, (now - start) / 1400);
+            draw(before + (after - before) * (1 - Math.pow(1 - t, 3)));
+            if (t < 1) frame = requestAnimationFrame(tick);
+            else finish();
+        }
+        frame = requestAnimationFrame(tick);
+    };
+}
+
+function playCardGiftEffect(c, g, before) {
+    GiftEffects.stop();
+    const onEnd = prepareGiftBondProgress(c, before);
+    GiftEffects.play({ onEnd, characterId: c.id, giftId: g[0], giftName: g[1], target: document.querySelector('#view-card .character-cover'), origin: $('cardFeedBtn'), name: cardName(c),
         audio: { enabled: () => state.sound, getAudio: async () => {
             const context = await ensureAudio();
             return context ? { context, output: audioMaster,
@@ -150,7 +198,6 @@ function feedCard() {
             } : null;
         } }
     });
-    toast(`心意收到 · ${'羁绊分'} +${cardBond(c.id) - before} · 经验 +${state.cards.collection[c.id].xp - xpBefore}${grew ? ` · 升到 Lv.${cardLevel(c.id)}！` : ''}`, true);
 }
 
 function trainCard(id) {

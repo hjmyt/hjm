@@ -23,9 +23,9 @@ const PawGift = (() => {
       <g fill="none" stroke="#fffaf0" stroke-linecap="round" opacity=".75" stroke-width="2"><path d="m37 133 9 5m-6 4 9 4m-1 23 9-2m123 2 10-5m-6-9 12-5M69 216l7 14m2-17 7 15m68 15 7-14m-3 35 7-12"/></g>
       <path d="M78 204Q120 222 162 204" fill="none" stroke="#e2bbaa" stroke-width="2" opacity=".35"/></svg>`;
     function stop() { if (cleanup) cleanup(); }
-    function play({ target, name = '', origin, audio = null } = {}) {
+    function play({ target, name = '', origin, audio = null, onEnd }  = {}) {
         stop();
-        if (document.hidden) return;
+        if (document.hidden) { onEnd?.(); return; }
         const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
         const r = target?.getBoundingClientRect();
         const visible = r && r.bottom > 80 && r.top < innerHeight - 100;
@@ -93,6 +93,7 @@ const PawGift = (() => {
             document.removeEventListener('visibilitychange', hide);
             window.removeEventListener('resize', stop); window.removeEventListener('wheel', stop); window.removeEventListener('touchmove', stop);
             cleanup = null;
+            onEnd?.();
         };
         document.addEventListener('visibilitychange', hide);
         window.addEventListener('resize', stop); window.addEventListener('wheel', stop, { passive: true }); window.addEventListener('touchmove', stop, { passive: true });
