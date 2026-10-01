@@ -106,3 +106,6 @@ crop_grid_1774 "$root/assets/fusion/source/fusion-nodes-laodu-01.png" \
 crop_grid_1774 "$root/assets/fusion/source/fusion-nodes-laodu-02.png" \
   f2_ldp1-v2 f2_ldp2-v2 f2_ldp2a-v2 f2_ldp2b-v2 \
   f2_ldp3-v2 f2_ldp3a-v2 fusion-qa-laodu-jam f2_ldnight-v2
+
+# Canonical Baoshi/Feihong portrait refresh, including corrected Jerry scenes.
+python3 "$root/scripts/crop-baoshi-feihong-art.py" --kind fusion

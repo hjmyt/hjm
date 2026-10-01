@@ -3,6 +3,7 @@
 Requires ffmpeg and numpy. Never changes the recording or original MIDI.
 """
 import hashlib
+import importlib.util
 import json
 from pathlib import Path
 import struct
@@ -194,7 +195,12 @@ def build():
         pair=[0,1] if e['kind']=='kick' else [2,3]
         lane=pair[easy_alternation[e['kind']]%2];easy_alternation[e['kind']]+=1
         simple.append([e['time'],lane])
+    spec = importlib.util.spec_from_file_location('hard', ROOT/'scripts/rhythm-hard-chart.py')
+    hard = importlib.util.module_from_spec(spec); spec.loader.exec_module(hard)
+    normal, hard_report = hard.build_hard_chart(simple, unique, times, bands, fine_times, fine_bands)
     track['charts']={'gentle':simple,'normal':normal}
+    track['scoreIds']={'normal':'love-hakimi-op-comfortable-rhythm-v3'}
+    track['legacyScoreIds']=list(dict.fromkeys([*track.get('legacyScoreIds',[]),'love-hakimi-op-audible-rhythm-v2']))
     track['chartVersion']='full-drums-v1'
     track['duration']=float(duration)
     track['name']='恋与哈基米（编曲 · 垃垃）'
@@ -204,12 +210,12 @@ def build():
     track['gentle']=track['normal']=round(bpm,1)
     track.pop('midiAlignment',None)
     track['drumAlignment']={'bpm':round(bpm,3),'phaseSeconds':round(phase,6),'segments':segments}
-    track['desc']='从原曲 00:00 到完整尾声，跟着鼓点演奏。'
+    track['desc']='从原曲 00:00 到完整尾声，跟随鼓点与短音节奏演奏。'
     output=json.dumps(track,ensure_ascii=False,indent=2)
     import re
     output=re.sub(r'\[\s+([\d.]+),\s+([0-3])\s+\]',r'[\1, \2]',output)
     js.write_text(text[:start]+marker+'. Percussion chart; rebuild with scripts/build-op-drum-chart.py.\nTRACKS.push('+output+');\n')
-    report={'sourceMidiSha256':hashlib.sha256(MIDI.read_bytes()).hexdigest(),'sourceAudioSha256':hashlib.sha256(AUDIO.read_bytes()).hexdigest(),'ppq':ppq,'midiTempos':tempos,'audioSourceStart':track['audioSourceStart'],'chartSourceStart':track['sourceStart'],'chartDuration':duration,'chartBasis':'audio-percussion','bpm':round(bpm,3),'phaseSeconds':round(phase,6),'segments':segments,'maxLocalSnapSeconds':.1,'onsetWindowSamples':512,'onsetHopSamples':44,'sampleRate':22050,'counts':{'gentle':len(simple),'normal':len(normal)},'events':unique}
+    report={'sourceMidiSha256':hashlib.sha256(MIDI.read_bytes()).hexdigest(),'sourceAudioSha256':hashlib.sha256(AUDIO.read_bytes()).hexdigest(),'ppq':ppq,'midiTempos':tempos,'audioSourceStart':track['audioSourceStart'],'chartSourceStart':track['sourceStart'],'chartDuration':duration,'chartBasis':'audio-percussion','bpm':round(bpm,3),'phaseSeconds':round(phase,6),'segments':segments,'maxLocalSnapSeconds':.1,'onsetWindowSamples':512,'onsetHopSamples':44,'sampleRate':22050,'counts':{'gentle':len(simple),'normal':len(normal)},'events':unique,'hardRevision':hard_report}
     (ROOT/'docs/rhythm-op-drum-alignment.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
-    print(json.dumps({k:v for k,v in report.items() if k!='events'},indent=2))
+    print(json.dumps({k:v for k,v in report.items() if k not in ('events', 'hardRevision')},indent=2))
 if __name__=='__main__':build()

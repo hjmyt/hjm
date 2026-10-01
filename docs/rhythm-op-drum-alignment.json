@@ -288,7 +288,7 @@
   "sampleRate": 22050,
   "counts": {
     "gentle": 353,
-    "normal": 684
+    "normal": 403
   },
   "events": [
     {
@@ -9867,5 +9867,512 @@
       "mid": 1.8889,
       "high": 1.5334
     }
-  ]
+  ],
+  "hardRevision": {
+    "version": "comfortable-rhythm-v3",
+    "added": 50,
+    "sixteenths": 0,
+    "events": [
+      {
+        "time": 2.854,
+        "band": "high",
+        "audioOnset": 2.853651,
+        "anchorMidpoint": 2.856644,
+        "subdivision": 8,
+        "strength": 1.1709,
+        "contrast": 4.3288,
+        "attackStrength": 1.8058
+      },
+      {
+        "time": 4.953,
+        "band": "high",
+        "audioOnset": 4.95288,
+        "anchorMidpoint": 4.95288,
+        "subdivision": 8,
+        "strength": 1.065,
+        "contrast": 4.1361,
+        "attackStrength": 1.6571
+      },
+      {
+        "time": 9.562,
+        "band": "high",
+        "audioOnset": 9.562404,
+        "anchorMidpoint": 9.566395,
+        "subdivision": 8,
+        "strength": 1.2961,
+        "contrast": 4.6813,
+        "attackStrength": 2.231
+      },
+      {
+        "time": 13.344,
+        "band": "low",
+        "audioOnset": 13.34381,
+        "anchorMidpoint": 13.336825,
+        "subdivision": 8,
+        "strength": 1.1508,
+        "contrast": 6.5897,
+        "attackStrength": 0.8794
+      },
+      {
+        "time": 15.854,
+        "band": "high",
+        "audioOnset": 15.854104,
+        "anchorMidpoint": 15.853107,
+        "subdivision": 8,
+        "strength": 1.2757,
+        "contrast": 7.6165,
+        "attackStrength": 1.5582
+      },
+      {
+        "time": 19.206,
+        "band": "high",
+        "audioOnset": 19.206485,
+        "anchorMidpoint": 19.20449,
+        "subdivision": 8,
+        "strength": 1.2831,
+        "contrast": 6.5544,
+        "attackStrength": 1.6414
+      },
+      {
+        "time": 21.3,
+        "band": "high",
+        "audioOnset": 21.299728,
+        "anchorMidpoint": 21.299728,
+        "subdivision": 8,
+        "strength": 1.6354,
+        "contrast": 9.2537,
+        "attackStrength": 2.2015
+      },
+      {
+        "time": 24.65,
+        "band": "high",
+        "audioOnset": 24.650113,
+        "anchorMidpoint": 24.653106,
+        "subdivision": 8,
+        "strength": 1.6003,
+        "contrast": 8.4127,
+        "attackStrength": 1.6726
+      },
+      {
+        "time": 28.843,
+        "band": "high",
+        "audioOnset": 28.842585,
+        "anchorMidpoint": 28.84059,
+        "subdivision": 8,
+        "strength": 1.357,
+        "contrast": 4.783,
+        "attackStrength": 1.5683
+      },
+      {
+        "time": 31.355,
+        "band": "high",
+        "audioOnset": 31.354875,
+        "anchorMidpoint": 31.356871,
+        "subdivision": 8,
+        "strength": 1.8052,
+        "contrast": 9.653,
+        "attackStrength": 2.1944
+      },
+      {
+        "time": 35.543,
+        "band": "high",
+        "audioOnset": 35.543356,
+        "anchorMidpoint": 35.544354,
+        "subdivision": 8,
+        "strength": 1.4113,
+        "contrast": 6.9724,
+        "attackStrength": 1.6523
+      },
+      {
+        "time": 37.659,
+        "band": "low",
+        "audioOnset": 37.658549,
+        "anchorMidpoint": 37.639592,
+        "subdivision": 8,
+        "strength": 1.5992,
+        "contrast": 6.6432,
+        "attackStrength": 1.2545
+      },
+      {
+        "time": 42.659,
+        "band": "high",
+        "audioOnset": 42.659184,
+        "anchorMidpoint": 42.661179,
+        "subdivision": 8,
+        "strength": 1.8384,
+        "contrast": 15.7075,
+        "attackStrength": 2.9725
+      },
+      {
+        "time": 44.754,
+        "band": "high",
+        "audioOnset": 44.754422,
+        "anchorMidpoint": 44.75542,
+        "subdivision": 8,
+        "strength": 1.3878,
+        "contrast": 6.9594,
+        "attackStrength": 1.915
+      },
+      {
+        "time": 47.686,
+        "band": "high",
+        "audioOnset": 47.68576,
+        "anchorMidpoint": 47.684762,
+        "subdivision": 8,
+        "strength": 1.0528,
+        "contrast": 3.7836,
+        "attackStrength": 1.627
+      },
+      {
+        "time": 49.775,
+        "band": "high",
+        "audioOnset": 49.775011,
+        "anchorMidpoint": 49.775012,
+        "subdivision": 8,
+        "strength": 1.2422,
+        "contrast": 4.9546,
+        "attackStrength": 1.8294
+      },
+      {
+        "time": 51.878,
+        "band": "low",
+        "audioOnset": 51.878231,
+        "anchorMidpoint": 51.865261,
+        "subdivision": 8,
+        "strength": 1.2514,
+        "contrast": 3.7773,
+        "attackStrength": 1.9073
+      },
+      {
+        "time": 58.126,
+        "band": "high",
+        "audioOnset": 58.126032,
+        "anchorMidpoint": 58.125034,
+        "subdivision": 8,
+        "strength": 1.1627,
+        "contrast": 4.1761,
+        "attackStrength": 1.7084
+      },
+      {
+        "time": 60.628,
+        "band": "high",
+        "audioOnset": 60.628345,
+        "anchorMidpoint": 60.631338,
+        "subdivision": 8,
+        "strength": 1.361,
+        "contrast": 4.8829,
+        "attackStrength": 1.7848
+      },
+      {
+        "time": 63.135,
+        "band": "high",
+        "audioOnset": 63.134649,
+        "anchorMidpoint": 63.138639,
+        "subdivision": 8,
+        "strength": 1.3017,
+        "contrast": 5.3322,
+        "attackStrength": 1.5303
+      },
+      {
+        "time": 66.05,
+        "band": "high",
+        "audioOnset": 66.050023,
+        "anchorMidpoint": 66.05102,
+        "subdivision": 8,
+        "strength": 1.1178,
+        "contrast": 5.0753,
+        "attackStrength": 1.3842
+      },
+      {
+        "time": 68.145,
+        "band": "low",
+        "audioOnset": 68.145261,
+        "anchorMidpoint": 68.136281,
+        "subdivision": 8,
+        "strength": 1.5053,
+        "contrast": 8.9474,
+        "attackStrength": 1.8754
+      },
+      {
+        "time": 70.217,
+        "band": "high",
+        "audioOnset": 70.216553,
+        "anchorMidpoint": 70.219547,
+        "subdivision": 8,
+        "strength": 1.0838,
+        "contrast": 4.6481,
+        "attackStrength": 1.1587
+      },
+      {
+        "time": 72.302,
+        "band": "high",
+        "audioOnset": 72.301814,
+        "anchorMidpoint": 72.301814,
+        "subdivision": 8,
+        "strength": 1.6037,
+        "contrast": 6.9123,
+        "attackStrength": 1.8749
+      },
+      {
+        "time": 74.812,
+        "band": "low",
+        "audioOnset": 74.812109,
+        "anchorMidpoint": 74.800136,
+        "subdivision": 8,
+        "strength": 1.3785,
+        "contrast": 8.5227,
+        "attackStrength": 1.5243
+      },
+      {
+        "time": 77.296,
+        "band": "high",
+        "audioOnset": 77.296463,
+        "anchorMidpoint": 77.298458,
+        "subdivision": 8,
+        "strength": 1.3975,
+        "contrast": 6.0172,
+        "attackStrength": 1.5568
+      },
+      {
+        "time": 79.396,
+        "band": "low",
+        "audioOnset": 79.395692,
+        "anchorMidpoint": 79.383719,
+        "subdivision": 8,
+        "strength": 1.2866,
+        "contrast": 6.0895,
+        "attackStrength": 1.8061
+      },
+      {
+        "time": 83.139,
+        "band": "low",
+        "audioOnset": 83.139184,
+        "anchorMidpoint": 83.127211,
+        "subdivision": 8,
+        "strength": 2.2283,
+        "contrast": 7.6822,
+        "attackStrength": 1.8389
+      },
+      {
+        "time": 86.051,
+        "band": "low",
+        "audioOnset": 86.050567,
+        "anchorMidpoint": 86.042585,
+        "subdivision": 8,
+        "strength": 1.7868,
+        "contrast": 9.7267,
+        "attackStrength": 2.0902
+      },
+      {
+        "time": 88.128,
+        "band": "low",
+        "audioOnset": 88.127846,
+        "anchorMidpoint": 88.119864,
+        "subdivision": 8,
+        "strength": 1.7728,
+        "contrast": 6.5907,
+        "attackStrength": 2.5495
+      },
+      {
+        "time": 91.434,
+        "band": "high",
+        "audioOnset": 91.434331,
+        "anchorMidpoint": 91.437324,
+        "subdivision": 8,
+        "strength": 1.3813,
+        "contrast": 5.4969,
+        "attackStrength": 1.8403
+      },
+      {
+        "time": 94.344,
+        "band": "high",
+        "audioOnset": 94.343719,
+        "anchorMidpoint": 94.343718,
+        "subdivision": 8,
+        "strength": 1.3955,
+        "contrast": 5.8265,
+        "attackStrength": 1.7047
+      },
+      {
+        "time": 97.247,
+        "band": "high",
+        "audioOnset": 97.24712,
+        "anchorMidpoint": 97.250113,
+        "subdivision": 8,
+        "strength": 1.3977,
+        "contrast": 5.6636,
+        "attackStrength": 1.891
+      },
+      {
+        "time": 99.747,
+        "band": "low",
+        "audioOnset": 99.747438,
+        "anchorMidpoint": 99.736463,
+        "subdivision": 8,
+        "strength": 1.6105,
+        "contrast": 6.1591,
+        "attackStrength": 2.5202
+      },
+      {
+        "time": 103.066,
+        "band": "low",
+        "audioOnset": 103.065896,
+        "anchorMidpoint": 103.056916,
+        "subdivision": 8,
+        "strength": 1.6514,
+        "contrast": 6.6314,
+        "attackStrength": 2.5002
+      },
+      {
+        "time": 105.135,
+        "band": "low",
+        "audioOnset": 105.135193,
+        "anchorMidpoint": 105.125215,
+        "subdivision": 8,
+        "strength": 1.6012,
+        "contrast": 7.0285,
+        "attackStrength": 2.2515
+      },
+      {
+        "time": 117.126,
+        "band": "low",
+        "audioOnset": 117.125941,
+        "anchorMidpoint": 117.114966,
+        "subdivision": 8,
+        "strength": 1.7071,
+        "contrast": 5.7002,
+        "attackStrength": 2.9979
+      },
+      {
+        "time": 119.602,
+        "band": "low",
+        "audioOnset": 119.602313,
+        "anchorMidpoint": 119.59034,
+        "subdivision": 8,
+        "strength": 1.9169,
+        "contrast": 8.0803,
+        "attackStrength": 2.646
+      },
+      {
+        "time": 124.543,
+        "band": "high",
+        "audioOnset": 124.543084,
+        "anchorMidpoint": 124.542086,
+        "subdivision": 8,
+        "strength": 1.6538,
+        "contrast": 8.0233,
+        "attackStrength": 1.6758
+      },
+      {
+        "time": 127.433,
+        "band": "high",
+        "audioOnset": 127.432517,
+        "anchorMidpoint": 127.430521,
+        "subdivision": 8,
+        "strength": 1.5624,
+        "contrast": 8.6766,
+        "attackStrength": 1.9052
+      },
+      {
+        "time": 129.496,
+        "band": "high",
+        "audioOnset": 129.495828,
+        "anchorMidpoint": 129.49483,
+        "subdivision": 8,
+        "strength": 1.377,
+        "contrast": 5.4209,
+        "attackStrength": 1.5858
+      },
+      {
+        "time": 131.557,
+        "band": "high",
+        "audioOnset": 131.557143,
+        "anchorMidpoint": 131.560136,
+        "subdivision": 8,
+        "strength": 1.4608,
+        "contrast": 6.4669,
+        "attackStrength": 1.8776
+      },
+      {
+        "time": 133.634,
+        "band": "low",
+        "audioOnset": 133.634422,
+        "anchorMidpoint": 133.624444,
+        "subdivision": 8,
+        "strength": 1.2522,
+        "contrast": 4.3191,
+        "attackStrength": 3.1564
+      },
+      {
+        "time": 136.52,
+        "band": "low",
+        "audioOnset": 136.519864,
+        "anchorMidpoint": 136.508889,
+        "subdivision": 8,
+        "strength": 2.2146,
+        "contrast": 13.4024,
+        "attackStrength": 3.1737
+      },
+      {
+        "time": 138.984,
+        "band": "high",
+        "audioOnset": 138.984263,
+        "anchorMidpoint": 138.983266,
+        "subdivision": 8,
+        "strength": 1.2723,
+        "contrast": 6.4605,
+        "attackStrength": 1.6918
+      },
+      {
+        "time": 141.044,
+        "band": "high",
+        "audioOnset": 141.043583,
+        "anchorMidpoint": 141.045578,
+        "subdivision": 8,
+        "strength": 1.5759,
+        "contrast": 6.2918,
+        "attackStrength": 1.798
+      },
+      {
+        "time": 143.101,
+        "band": "high",
+        "audioOnset": 143.100907,
+        "anchorMidpoint": 143.105895,
+        "subdivision": 8,
+        "strength": 1.4554,
+        "contrast": 5.8107,
+        "attackStrength": 2.729
+      },
+      {
+        "time": 145.166,
+        "band": "high",
+        "audioOnset": 145.166213,
+        "anchorMidpoint": 145.166213,
+        "subdivision": 8,
+        "strength": 1.5588,
+        "contrast": 6.4554,
+        "attackStrength": 1.5432
+      },
+      {
+        "time": 147.226,
+        "band": "high",
+        "audioOnset": 147.225533,
+        "anchorMidpoint": 147.228526,
+        "subdivision": 8,
+        "strength": 1.3668,
+        "contrast": 6.6241,
+        "attackStrength": 2.6943
+      },
+      {
+        "time": 149.712,
+        "band": "low",
+        "audioOnset": 149.711882,
+        "anchorMidpoint": 149.700907,
+        "subdivision": 8,
+        "strength": 1.2746,
+        "contrast": 5.5705,
+        "attackStrength": 3.085
+      }
+    ]
+  }
 }

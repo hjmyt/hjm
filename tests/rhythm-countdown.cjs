@@ -10,6 +10,7 @@ const {pathToFileURL}=require('node:url');
    const context=await browser.newContext();const page=await context.newPage();
    page.on('pageerror',e=>errors.push(e.message));
    await page.goto(pathToFileURL(path.resolve(__dirname,'../index.html')).href);
+   await page.locator('[data-music-enter]').click();
    await page.locator('.nav-btn[data-route="rhythm"]').click();
    await page.locator('#trackSelect').selectOption(track);
    await page.evaluate(()=>{

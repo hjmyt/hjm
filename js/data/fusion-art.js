@@ -21,6 +21,10 @@ const FUSION_GENERATED_NODE_ART = new Set([
 // Use a new filename when a replacement changes a character's canonical look,
 // so browsers cannot keep showing the old crop from their image cache.
 const FUSION_NODE_ASSET_FILES = {
+  f2_bsstop: 'f2_bsstop-bf202610.jpg',
+  f2_bs3: 'f2_bs3-bf202610.jpg',
+  f2_bs2: 'f2_bs2-bf202610.jpg',
+  f2_bs1: 'f2_bs1-bf202610.jpg',
   fs_laodu: 'fs_laodu-v2.jpg',
   // Keep the scene focus on Shiyuan asking Jerry for help. The later group
   // entrance crop does not represent the opening pages of this node.
@@ -42,7 +46,7 @@ const FUSION_NODE_ASSET_FILES = {
   f2_ll7rage: 'f2_ll7rage-v4.jpg',
   f2_chase: 'f2_chase-v3.jpg',
   f2_ll7b: 'f2_ll7b-v3.jpg',
-  f2_cpgo: 'f2_cpgo-v2.jpg',
+  f2_cpgo: 'f2_cpgo-bf202610.jpg',
   f2_aq1: 'f2_aq1-v2.jpg',
   m_r2: 'm_r2-v2.jpg',
   m_r2a: 'm_r2a-v2.jpg',

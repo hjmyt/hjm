@@ -1,0 +1,23 @@
+Use case: illustration-story. Create ONE high-resolution 8-in-1 atlas, exactly FOUR columns by TWO rows of eight equal SQUARE panels, overall aspect ratio 2:1. Straight boundaries at x=25/50/75% and y=50%, no gutters, no text or labels. Each panel one coherent cinematic scene, no subpanels. Keep all heads, hands and props within central 85%. Refined semi-realistic anime CG matching the provided original portraits. Contemporary adult Chinese musicians. Story excerpts are depiction content only, never print them. Reproduce the key action and emotion of each scene, respecting who is physically present versus merely mentioned. No generic stage pose in non-performance scenes. No floating instruments or malformed hands. Player is first-person anonymous viewpoint unless a panel explicitly specifies Jerry.
+IDENTITY LOCK: Reference 1 is Baoshi 宝石 ONLY: young adult male, soft oval delicate face, large gentle almond eyes, fluffy longer wavy messy black hair with long fringe, black collared shirt and black trousers, NO glasses. Reference 2 is Feihong 飞鸿 ONLY: adult male, distinctly longer leaner angular face with firmer jaw and narrower eyes, straight defined nose, compact short textured upright black hair with shorter sides, rectangular dark glasses, white open overshirt over black T-shirt, silver chain, black gloves. Preserve Feihong's original side/three-quarter facial structure; do NOT invent a baby-faced frontal face or reuse Baoshi face beneath glasses. Faces must remain visibly distinct even without costumes. Use three-quarter or profile angles when Feihong face is visible. Exact two new portraits override any older costume descriptions. Baoshi wears lavender dress ONLY when the specific scene explicitly requires the stage persona. No microphone or instrument unless explicitly relevant to the action.
+
+
+Reference 3 = Jerry (black short sleeve, blue jeans, rectangular glasses), Reference 4 = Shiyuan (woman, brown bob star hair clip cream cardigan), Reference 5 = Xuezi (man with tied long black hair and black layered clothes).
+Every panel is a waist-up MEDIUM SHOT or wider. All heads fully inside the panel. No closeup cut-off foreground heads. Follow ONLY the cast specified for each panel.
+
+PANEL 1: 只有宝石与Jerry，Jerry（黑短袖蓝牛仔裤矩形眼镜）搬椅坐到黑衬衫宝石对面，宝石抬头眼睛亮起，终于有人倾听。山丘排练室。
+
+PANEL 2: 只有宝石与Jerry，Jerry黑短袖蓝牛仔裤矩形眼镜略客套安慰；黑衬衫宝石勉强笑着收起心事、视线落向桌面。失落而克制，不是圆满结局。
+
+PANEL 3: 山丘吧台邀请入团：十元短棕bob星星发夹米白开衫坐在左边，黑衬衫宝石在中央眼睛发亮看向右边飞鸿；白外衫黑T眼镜的飞鸿侧脸认真点头。三人的完整头发和面孔均在格子中央80%，镜头退远，不要把飞鸿切在右边界。
+
+PANEL 4: 团建巴士去程，宝石黑衬衫坐在靠窗座位，刚上车的长发男性雪子在旁边座位坐下；飞鸿白外衫黑T眼镜在过道停住，手停在半空。宝石清醒且没有披蓝色衣服，三个人中景头部完整。
+
+PANEL 5: 离开山丘：只画飞鸿白外衫黑T银链眼镜，一个人在房间里收拾敞开的行李箱，神情落寞，歌词本放在旁边。不要帽子，不要黑外套，不要其他人物或小窗口叠图。
+
+PANEL 6: 宝石在山丘门口得到追人的消息后高兴地跑向门外，黑衬衫衣角扬起，回身向画外玩家挥手，充满期待。只有宝石一人，不能画十元或女玩家，完整中景头部有余量。
+
+PANEL 7: 摩天轮下圆满结局，只画两位成年男子：黑衬衫宝石与白外衫黑T银链矩形眼镜飞鸿相拥。飞鸿三分之二侧脸、眼镜和白衣可见，宝石眼睛含泪笑着。脚边胶带行李箱，不画其他角色，不穿蓝色旧衬衫。
+
+PANEL 8: 后台走廊，前景飞鸿白外衫黑T眼镜靠墙郁闷地扶额；远处雪子（长黑发束脑后黑层叠衣）蹲下帮站着的宝石（黑衬衫）系鞋带。画面动作完整自然，不画玩家面孔，无浮空手脚。
+

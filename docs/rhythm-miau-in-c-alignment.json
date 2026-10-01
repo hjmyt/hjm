@@ -1,0 +1,5335 @@
+{
+  "sourceAudioSha256": "e9b4ba2db982aef301416e5978b1f148bc5a5cf637b4ae1b9296efd520ec3502",
+  "playbackAudioSha256": "35bf71c75f0a1acfd5a82d2355234a36828a8afcd4c716f85da1aa5eb8e71959",
+  "sourceDuration": 132.25337868480725,
+  "chartDuration": 129.753,
+  "chartBasis": "audio-percussion",
+  "countIn": 3,
+  "leadIn": 2.5,
+  "bpm": 125.0,
+  "segments": [
+    {
+      "time": 2.0,
+      "beatIndex": 3,
+      "anchorTime": 1.912,
+      "bpm": 125.1
+    },
+    {
+      "time": 6.0,
+      "beatIndex": 12,
+      "anchorTime": 6.228547,
+      "bpm": 125.1
+    },
+    {
+      "time": 10.0,
+      "beatIndex": 20,
+      "anchorTime": 10.065477,
+      "bpm": 125.1
+    },
+    {
+      "time": 14.0,
+      "beatIndex": 28,
+      "anchorTime": 13.902408,
+      "bpm": 124.9
+    },
+    {
+      "time": 18.0,
+      "beatIndex": 37,
+      "anchorTime": 18.222866,
+      "bpm": 124.9
+    },
+    {
+      "time": 22.0,
+      "beatIndex": 45,
+      "anchorTime": 22.062941,
+      "bpm": 125.1
+    },
+    {
+      "time": 26.0,
+      "beatIndex": 53,
+      "anchorTime": 25.902871,
+      "bpm": 125.1
+    },
+    {
+      "time": 30.0,
+      "beatIndex": 62,
+      "anchorTime": 30.222418,
+      "bpm": 124.9
+    },
+    {
+      "time": 34.0,
+      "beatIndex": 70,
+      "anchorTime": 34.062493,
+      "bpm": 124.9
+    },
+    {
+      "time": 38.0,
+      "beatIndex": 78,
+      "anchorTime": 37.905567,
+      "bpm": 124.9
+    },
+    {
+      "time": 42.0,
+      "beatIndex": 87,
+      "anchorTime": 42.226026,
+      "bpm": 125.1
+    },
+    {
+      "time": 46.0,
+      "beatIndex": 95,
+      "anchorTime": 46.065956,
+      "bpm": 125.1
+    },
+    {
+      "time": 50.0,
+      "beatIndex": 103,
+      "anchorTime": 49.905887,
+      "bpm": 125.1
+    },
+    {
+      "time": 54.0,
+      "beatIndex": 112,
+      "anchorTime": 54.225433,
+      "bpm": 124.9
+    },
+    {
+      "time": 58.0,
+      "beatIndex": 120,
+      "anchorTime": 58.065508,
+      "bpm": 124.9
+    },
+    {
+      "time": 62.0,
+      "beatIndex": 128,
+      "anchorTime": 61.905582,
+      "bpm": 124.9
+    },
+    {
+      "time": 66.0,
+      "beatIndex": 137,
+      "anchorTime": 66.226041,
+      "bpm": 125.1
+    },
+    {
+      "time": 70.0,
+      "beatIndex": 145,
+      "anchorTime": 70.065972,
+      "bpm": 124.9
+    },
+    {
+      "time": 74.0,
+      "beatIndex": 153,
+      "anchorTime": 73.906046,
+      "bpm": 124.9
+    },
+    {
+      "time": 78.0,
+      "beatIndex": 162,
+      "anchorTime": 78.226505,
+      "bpm": 125.1
+    },
+    {
+      "time": 82.0,
+      "beatIndex": 170,
+      "anchorTime": 82.066435,
+      "bpm": 124.9
+    },
+    {
+      "time": 86.0,
+      "beatIndex": 178,
+      "anchorTime": 85.90351,
+      "bpm": 125.1
+    },
+    {
+      "time": 90.0,
+      "beatIndex": 187,
+      "anchorTime": 90.223057,
+      "bpm": 125.1
+    },
+    {
+      "time": 94.0,
+      "beatIndex": 195,
+      "anchorTime": 94.062987,
+      "bpm": 125.1
+    },
+    {
+      "time": 98.0,
+      "beatIndex": 203,
+      "anchorTime": 97.902917,
+      "bpm": 124.9
+    },
+    {
+      "time": 102.0,
+      "beatIndex": 212,
+      "anchorTime": 102.223376,
+      "bpm": 124.9
+    },
+    {
+      "time": 106.0,
+      "beatIndex": 220,
+      "anchorTime": 106.063451,
+      "bpm": 124.9
+    },
+    {
+      "time": 110.0,
+      "beatIndex": 228,
+      "anchorTime": 109.903525,
+      "bpm": 124.9
+    },
+    {
+      "time": 114.0,
+      "beatIndex": 237,
+      "anchorTime": 114.223984,
+      "bpm": 125.1
+    },
+    {
+      "time": 118.0,
+      "beatIndex": 245,
+      "anchorTime": 118.063914,
+      "bpm": 124.9
+    },
+    {
+      "time": 122.0,
+      "beatIndex": 253,
+      "anchorTime": 121.906989,
+      "bpm": 124.9
+    },
+    {
+      "time": 126.0,
+      "beatIndex": 262,
+      "anchorTime": 126.230448,
+      "bpm": 124.9
+    },
+    {
+      "time": 130.0,
+      "beatIndex": 270,
+      "anchorTime": 130.067522,
+      "bpm": 125.3
+    }
+  ],
+  "counts": {
+    "gentle": 252,
+    "normal": 289
+  },
+  "events": [
+    {
+      "time": 0.62,
+      "audioOnset": 3.119546,
+      "gridTime": 3.111041,
+      "beatIndex": 5.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.766,
+      "attackStrength": 0.9057
+    },
+    {
+      "time": 1.118,
+      "audioOnset": 3.618413,
+      "gridTime": 3.590657,
+      "beatIndex": 6.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.5721,
+      "attackStrength": 1.1961
+    },
+    {
+      "time": 2.06,
+      "audioOnset": 4.560272,
+      "gridTime": 4.54989,
+      "beatIndex": 8.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.8869,
+      "attackStrength": 1.1677
+    },
+    {
+      "time": 2.541,
+      "audioOnset": 5.041179,
+      "gridTime": 5.029506,
+      "beatIndex": 9.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.9148,
+      "attackStrength": 1.2476
+    },
+    {
+      "time": 3.02,
+      "audioOnset": 5.520091,
+      "gridTime": 5.509123,
+      "beatIndex": 10.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.8696,
+      "attackStrength": 1.862
+    },
+    {
+      "time": 3.978,
+      "audioOnset": 6.477914,
+      "gridTime": 6.468355,
+      "beatIndex": 12.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.7395,
+      "attackStrength": 0.9464
+    },
+    {
+      "time": 4.459,
+      "audioOnset": 6.958821,
+      "gridTime": 6.947971,
+      "beatIndex": 13.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.4164,
+      "attackStrength": 0.6645
+    },
+    {
+      "time": 4.938,
+      "audioOnset": 7.437732,
+      "gridTime": 7.427588,
+      "beatIndex": 14.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.4112,
+      "attackStrength": 0.8578
+    },
+    {
+      "time": 5.9,
+      "audioOnset": 8.399546,
+      "gridTime": 8.38682,
+      "beatIndex": 16.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.8722,
+      "attackStrength": 1.0469
+    },
+    {
+      "time": 6.378,
+      "audioOnset": 8.878458,
+      "gridTime": 8.866436,
+      "beatIndex": 17.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.9224,
+      "attackStrength": 1.0017
+    },
+    {
+      "time": 6.859,
+      "audioOnset": 9.359365,
+      "gridTime": 9.346053,
+      "beatIndex": 18.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.9022,
+      "attackStrength": 1.0076
+    },
+    {
+      "time": 7.819,
+      "audioOnset": 10.319184,
+      "gridTime": 10.305285,
+      "beatIndex": 20.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.804,
+      "attackStrength": 0.948
+    },
+    {
+      "time": 8.3,
+      "audioOnset": 10.800091,
+      "gridTime": 10.784902,
+      "beatIndex": 21.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.8303,
+      "attackStrength": 0.8994
+    },
+    {
+      "time": 8.799,
+      "audioOnset": 11.298957,
+      "gridTime": 11.264518,
+      "beatIndex": 22.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.5643,
+      "attackStrength": 1.2082
+    },
+    {
+      "time": 9.02,
+      "audioOnset": 11.520454,
+      "gridTime": 11.504326,
+      "beatIndex": 23.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 3.304,
+      "attackStrength": 3.1754
+    },
+    {
+      "time": 9.501,
+      "audioOnset": 12.001361,
+      "gridTime": 11.983942,
+      "beatIndex": 24.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2845,
+      "attackStrength": 3.1195
+    },
+    {
+      "time": 9.741,
+      "audioOnset": 12.240816,
+      "gridTime": 12.223751,
+      "beatIndex": 24.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.8495,
+      "attackStrength": 1.1782
+    },
+    {
+      "time": 9.98,
+      "audioOnset": 12.480272,
+      "gridTime": 12.463559,
+      "beatIndex": 25.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.7238,
+      "attackStrength": 3.0938
+    },
+    {
+      "time": 10.22,
+      "audioOnset": 12.719728,
+      "gridTime": 12.703367,
+      "beatIndex": 25.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 2.1297,
+      "attackStrength": 1.2587
+    },
+    {
+      "time": 10.461,
+      "audioOnset": 12.961179,
+      "gridTime": 12.943175,
+      "beatIndex": 26.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.6809,
+      "attackStrength": 3.2076
+    },
+    {
+      "time": 10.701,
+      "audioOnset": 13.200635,
+      "gridTime": 13.182983,
+      "beatIndex": 26.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.894,
+      "attackStrength": 1.8451
+    },
+    {
+      "time": 10.94,
+      "audioOnset": 13.440091,
+      "gridTime": 13.422792,
+      "beatIndex": 27.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.817,
+      "attackStrength": 1.2611
+    },
+    {
+      "time": 11.182,
+      "audioOnset": 13.681542,
+      "gridTime": 13.6626,
+      "beatIndex": 27.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.9564,
+      "attackStrength": 1.3663
+    },
+    {
+      "time": 11.421,
+      "audioOnset": 13.920998,
+      "gridTime": 13.902408,
+      "beatIndex": 28.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.895,
+      "attackStrength": 1.4221
+    },
+    {
+      "time": 11.658,
+      "audioOnset": 14.158458,
+      "gridTime": 14.142433,
+      "beatIndex": 28.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 2.4137,
+      "attackStrength": 1.9755
+    },
+    {
+      "time": 11.902,
+      "audioOnset": 14.401905,
+      "gridTime": 14.382459,
+      "beatIndex": 29.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.6767,
+      "attackStrength": 2.0475
+    },
+    {
+      "time": 12.139,
+      "audioOnset": 14.639365,
+      "gridTime": 14.622484,
+      "beatIndex": 29.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 2.864,
+      "attackStrength": 2.3464
+    },
+    {
+      "time": 12.381,
+      "audioOnset": 14.880816,
+      "gridTime": 14.86251,
+      "beatIndex": 30.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.593,
+      "attackStrength": 2.6486
+    },
+    {
+      "time": 12.62,
+      "audioOnset": 15.120272,
+      "gridTime": 15.102535,
+      "beatIndex": 30.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.2791,
+      "attackStrength": 2.3618
+    },
+    {
+      "time": 12.862,
+      "audioOnset": 15.361723,
+      "gridTime": 15.342561,
+      "beatIndex": 31.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 3.7535,
+      "attackStrength": 4.327
+    },
+    {
+      "time": 13.341,
+      "audioOnset": 15.840635,
+      "gridTime": 15.822612,
+      "beatIndex": 32.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.0585,
+      "attackStrength": 3.3901
+    },
+    {
+      "time": 13.586,
+      "audioOnset": 16.086077,
+      "gridTime": 16.062637,
+      "beatIndex": 32.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.2164,
+      "attackStrength": 1.9092
+    },
+    {
+      "time": 13.822,
+      "audioOnset": 16.321542,
+      "gridTime": 16.302662,
+      "beatIndex": 33.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.6497,
+      "attackStrength": 2.3185
+    },
+    {
+      "time": 14.057,
+      "audioOnset": 16.557007,
+      "gridTime": 16.542688,
+      "beatIndex": 33.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.9471,
+      "attackStrength": 1.217
+    },
+    {
+      "time": 14.3,
+      "audioOnset": 16.800454,
+      "gridTime": 16.782713,
+      "beatIndex": 34.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3102,
+      "attackStrength": 3.556
+    },
+    {
+      "time": 14.538,
+      "audioOnset": 17.037914,
+      "gridTime": 17.022739,
+      "beatIndex": 34.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.5743,
+      "attackStrength": 1.6567
+    },
+    {
+      "time": 14.781,
+      "audioOnset": 17.281361,
+      "gridTime": 17.262764,
+      "beatIndex": 35.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.8681,
+      "attackStrength": 2.9486
+    },
+    {
+      "time": 15.26,
+      "audioOnset": 17.760272,
+      "gridTime": 17.742815,
+      "beatIndex": 36.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.0266,
+      "attackStrength": 2.5237
+    },
+    {
+      "time": 15.498,
+      "audioOnset": 17.997732,
+      "gridTime": 17.982841,
+      "beatIndex": 36.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.6502,
+      "attackStrength": 1.2794
+    },
+    {
+      "time": 15.741,
+      "audioOnset": 18.241179,
+      "gridTime": 18.222866,
+      "beatIndex": 37.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.4389,
+      "attackStrength": 2.7318
+    },
+    {
+      "time": 15.979,
+      "audioOnset": 18.478639,
+      "gridTime": 18.462871,
+      "beatIndex": 37.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.9104,
+      "attackStrength": 2.7419
+    },
+    {
+      "time": 16.22,
+      "audioOnset": 18.720091,
+      "gridTime": 18.702875,
+      "beatIndex": 38.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.043,
+      "attackStrength": 2.563
+    },
+    {
+      "time": 16.46,
+      "audioOnset": 18.959546,
+      "gridTime": 18.94288,
+      "beatIndex": 38.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3528,
+      "attackStrength": 1.247
+    },
+    {
+      "time": 16.701,
+      "audioOnset": 19.200998,
+      "gridTime": 19.182885,
+      "beatIndex": 39.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.5822,
+      "attackStrength": 2.5951
+    },
+    {
+      "time": 17.18,
+      "audioOnset": 19.679909,
+      "gridTime": 19.662894,
+      "beatIndex": 40.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.7663,
+      "attackStrength": 2.7718
+    },
+    {
+      "time": 17.419,
+      "audioOnset": 19.919365,
+      "gridTime": 19.902899,
+      "beatIndex": 40.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.1449,
+      "attackStrength": 1.7868
+    },
+    {
+      "time": 17.661,
+      "audioOnset": 20.160816,
+      "gridTime": 20.142903,
+      "beatIndex": 41.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.9296,
+      "attackStrength": 2.3729
+    },
+    {
+      "time": 17.9,
+      "audioOnset": 20.400272,
+      "gridTime": 20.382908,
+      "beatIndex": 41.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.7775,
+      "attackStrength": 1.5201
+    },
+    {
+      "time": 18.14,
+      "audioOnset": 20.639728,
+      "gridTime": 20.622913,
+      "beatIndex": 42.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.9331,
+      "attackStrength": 3.2109
+    },
+    {
+      "time": 18.379,
+      "audioOnset": 20.879184,
+      "gridTime": 20.862918,
+      "beatIndex": 42.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.8605,
+      "attackStrength": 1.7418
+    },
+    {
+      "time": 18.623,
+      "audioOnset": 21.12263,
+      "gridTime": 21.102922,
+      "beatIndex": 43.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.5745,
+      "attackStrength": 2.7742
+    },
+    {
+      "time": 18.858,
+      "audioOnset": 21.358095,
+      "gridTime": 21.342927,
+      "beatIndex": 43.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 0.8934,
+      "attackStrength": 0.9192
+    },
+    {
+      "time": 19.102,
+      "audioOnset": 21.601542,
+      "gridTime": 21.582932,
+      "beatIndex": 44.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2491,
+      "attackStrength": 2.1558
+    },
+    {
+      "time": 19.349,
+      "audioOnset": 21.84898,
+      "gridTime": 21.822936,
+      "beatIndex": 44.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.1371,
+      "attackStrength": 2.0383
+    },
+    {
+      "time": 19.582,
+      "audioOnset": 22.082449,
+      "gridTime": 22.062941,
+      "beatIndex": 45.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.6126,
+      "attackStrength": 3.0489
+    },
+    {
+      "time": 19.818,
+      "audioOnset": 22.317914,
+      "gridTime": 22.302937,
+      "beatIndex": 45.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.5443,
+      "attackStrength": 2.511
+    },
+    {
+      "time": 20.059,
+      "audioOnset": 22.559365,
+      "gridTime": 22.542932,
+      "beatIndex": 46.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.6589,
+      "attackStrength": 3.9118
+    },
+    {
+      "time": 20.305,
+      "audioOnset": 22.804807,
+      "gridTime": 22.782928,
+      "beatIndex": 46.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.1678,
+      "attackStrength": 1.4793
+    },
+    {
+      "time": 20.54,
+      "audioOnset": 23.040272,
+      "gridTime": 23.022923,
+      "beatIndex": 47.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3818,
+      "attackStrength": 1.4179
+    },
+    {
+      "time": 21.021,
+      "audioOnset": 23.521179,
+      "gridTime": 23.502915,
+      "beatIndex": 48.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.0272,
+      "attackStrength": 2.5363
+    },
+    {
+      "time": 21.259,
+      "audioOnset": 23.758639,
+      "gridTime": 23.74291,
+      "beatIndex": 48.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.7592,
+      "attackStrength": 1.0402
+    },
+    {
+      "time": 21.5,
+      "audioOnset": 24.000091,
+      "gridTime": 23.982906,
+      "beatIndex": 49.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.5738,
+      "attackStrength": 2.4942
+    },
+    {
+      "time": 21.74,
+      "audioOnset": 24.239546,
+      "gridTime": 24.222902,
+      "beatIndex": 49.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 2.0365,
+      "attackStrength": 1.0214
+    },
+    {
+      "time": 21.981,
+      "audioOnset": 24.480998,
+      "gridTime": 24.462897,
+      "beatIndex": 50.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.5448,
+      "attackStrength": 2.5703
+    },
+    {
+      "time": 22.218,
+      "audioOnset": 24.718458,
+      "gridTime": 24.702893,
+      "beatIndex": 50.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.7864,
+      "attackStrength": 1.0061
+    },
+    {
+      "time": 22.462,
+      "audioOnset": 24.961905,
+      "gridTime": 24.942889,
+      "beatIndex": 51.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.789,
+      "attackStrength": 2.7248
+    },
+    {
+      "time": 22.941,
+      "audioOnset": 25.440816,
+      "gridTime": 25.42288,
+      "beatIndex": 52.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3335,
+      "attackStrength": 2.2734
+    },
+    {
+      "time": 23.18,
+      "audioOnset": 25.680272,
+      "gridTime": 25.662875,
+      "beatIndex": 52.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.6976,
+      "attackStrength": 0.9317
+    },
+    {
+      "time": 23.422,
+      "audioOnset": 25.921723,
+      "gridTime": 25.902871,
+      "beatIndex": 53.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.809,
+      "attackStrength": 2.5838
+    },
+    {
+      "time": 23.659,
+      "audioOnset": 26.159184,
+      "gridTime": 26.142846,
+      "beatIndex": 53.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 2.7613,
+      "attackStrength": 2.2345
+    },
+    {
+      "time": 23.901,
+      "audioOnset": 26.400635,
+      "gridTime": 26.382821,
+      "beatIndex": 54.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.5838,
+      "attackStrength": 2.7632
+    },
+    {
+      "time": 24.158,
+      "audioOnset": 26.65805,
+      "gridTime": 26.622796,
+      "beatIndex": 54.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.4548,
+      "attackStrength": 1.2029
+    },
+    {
+      "time": 24.382,
+      "audioOnset": 26.881542,
+      "gridTime": 26.86277,
+      "beatIndex": 55.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 3.2128,
+      "attackStrength": 2.5934
+    },
+    {
+      "time": 24.86,
+      "audioOnset": 27.360454,
+      "gridTime": 27.34272,
+      "beatIndex": 56.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.1001,
+      "attackStrength": 2.5175
+    },
+    {
+      "time": 25.1,
+      "audioOnset": 27.599909,
+      "gridTime": 27.582695,
+      "beatIndex": 56.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.7751,
+      "attackStrength": 1.1596
+    },
+    {
+      "time": 25.341,
+      "audioOnset": 27.841361,
+      "gridTime": 27.82267,
+      "beatIndex": 57.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.6725,
+      "attackStrength": 3.1812
+    },
+    {
+      "time": 25.581,
+      "audioOnset": 28.080816,
+      "gridTime": 28.062645,
+      "beatIndex": 57.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 2.2597,
+      "attackStrength": 1.287
+    },
+    {
+      "time": 25.818,
+      "audioOnset": 28.318277,
+      "gridTime": 28.302619,
+      "beatIndex": 58.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.8229,
+      "attackStrength": 2.0191
+    },
+    {
+      "time": 26.06,
+      "audioOnset": 28.559728,
+      "gridTime": 28.542594,
+      "beatIndex": 58.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.9452,
+      "attackStrength": 1.7716
+    },
+    {
+      "time": 26.305,
+      "audioOnset": 28.80517,
+      "gridTime": 28.782569,
+      "beatIndex": 59.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.3462,
+      "attackStrength": 0.6
+    },
+    {
+      "time": 26.78,
+      "audioOnset": 29.280091,
+      "gridTime": 29.262519,
+      "beatIndex": 60.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.6652,
+      "attackStrength": 0.8366
+    },
+    {
+      "time": 27.261,
+      "audioOnset": 29.760998,
+      "gridTime": 29.742468,
+      "beatIndex": 61.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.6683,
+      "attackStrength": 0.8323
+    },
+    {
+      "time": 27.742,
+      "audioOnset": 30.241905,
+      "gridTime": 30.222418,
+      "beatIndex": 62.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.894,
+      "attackStrength": 1.2607
+    },
+    {
+      "time": 28.221,
+      "audioOnset": 30.720816,
+      "gridTime": 30.702427,
+      "beatIndex": 63.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 3.2049,
+      "attackStrength": 3.5473
+    },
+    {
+      "time": 28.7,
+      "audioOnset": 31.199728,
+      "gridTime": 31.182437,
+      "beatIndex": 64.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.7965,
+      "attackStrength": 2.7459
+    },
+    {
+      "time": 28.947,
+      "audioOnset": 31.447166,
+      "gridTime": 31.422441,
+      "beatIndex": 64.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.9114,
+      "attackStrength": 1.5431
+    },
+    {
+      "time": 29.183,
+      "audioOnset": 31.68263,
+      "gridTime": 31.662446,
+      "beatIndex": 65.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.6302,
+      "attackStrength": 2.3205
+    },
+    {
+      "time": 29.42,
+      "audioOnset": 31.920091,
+      "gridTime": 31.902451,
+      "beatIndex": 65.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.6118,
+      "attackStrength": 1.2794
+    },
+    {
+      "time": 29.66,
+      "audioOnset": 32.159546,
+      "gridTime": 32.142456,
+      "beatIndex": 66.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3816,
+      "attackStrength": 3.0673
+    },
+    {
+      "time": 29.897,
+      "audioOnset": 32.397007,
+      "gridTime": 32.38246,
+      "beatIndex": 66.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.4759,
+      "attackStrength": 1.635
+    },
+    {
+      "time": 30.14,
+      "audioOnset": 32.640454,
+      "gridTime": 32.622465,
+      "beatIndex": 67.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.6084,
+      "attackStrength": 2.8438
+    },
+    {
+      "time": 30.621,
+      "audioOnset": 33.121361,
+      "gridTime": 33.102474,
+      "beatIndex": 68.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.052,
+      "attackStrength": 2.1513
+    },
+    {
+      "time": 30.861,
+      "audioOnset": 33.360816,
+      "gridTime": 33.342479,
+      "beatIndex": 68.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3799,
+      "attackStrength": 1.1094
+    },
+    {
+      "time": 31.1,
+      "audioOnset": 33.600272,
+      "gridTime": 33.582484,
+      "beatIndex": 69.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.2617,
+      "attackStrength": 2.3822
+    },
+    {
+      "time": 31.34,
+      "audioOnset": 33.839728,
+      "gridTime": 33.822488,
+      "beatIndex": 69.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.579,
+      "attackStrength": 2.4448
+    },
+    {
+      "time": 31.581,
+      "audioOnset": 34.081179,
+      "gridTime": 34.062493,
+      "beatIndex": 70.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2504,
+      "attackStrength": 2.6348
+    },
+    {
+      "time": 31.835,
+      "audioOnset": 34.334603,
+      "gridTime": 34.302685,
+      "beatIndex": 70.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.4691,
+      "attackStrength": 1.232
+    },
+    {
+      "time": 32.06,
+      "audioOnset": 34.560091,
+      "gridTime": 34.542877,
+      "beatIndex": 71.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.4602,
+      "attackStrength": 2.0296
+    },
+    {
+      "time": 32.541,
+      "audioOnset": 35.040998,
+      "gridTime": 35.023262,
+      "beatIndex": 72.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.2263,
+      "attackStrength": 1.8309
+    },
+    {
+      "time": 32.78,
+      "audioOnset": 35.280454,
+      "gridTime": 35.263454,
+      "beatIndex": 72.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.7609,
+      "attackStrength": 1.6062
+    },
+    {
+      "time": 33.022,
+      "audioOnset": 35.521905,
+      "gridTime": 35.503646,
+      "beatIndex": 73.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.6705,
+      "attackStrength": 2.4232
+    },
+    {
+      "time": 33.259,
+      "audioOnset": 35.759365,
+      "gridTime": 35.743838,
+      "beatIndex": 73.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 2.1459,
+      "attackStrength": 1.6054
+    },
+    {
+      "time": 33.501,
+      "audioOnset": 36.000816,
+      "gridTime": 35.98403,
+      "beatIndex": 74.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.0371,
+      "attackStrength": 3.2222
+    },
+    {
+      "time": 33.74,
+      "audioOnset": 36.240272,
+      "gridTime": 36.224222,
+      "beatIndex": 74.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.852,
+      "attackStrength": 1.9797
+    },
+    {
+      "time": 33.982,
+      "audioOnset": 36.481723,
+      "gridTime": 36.464414,
+      "beatIndex": 75.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.4749,
+      "attackStrength": 2.4551
+    },
+    {
+      "time": 34.217,
+      "audioOnset": 36.717188,
+      "gridTime": 36.704606,
+      "beatIndex": 75.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 0.9522,
+      "attackStrength": 0.9601
+    },
+    {
+      "time": 34.461,
+      "audioOnset": 36.960635,
+      "gridTime": 36.944798,
+      "beatIndex": 76.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.8434,
+      "attackStrength": 2.4286
+    },
+    {
+      "time": 34.7,
+      "audioOnset": 37.200091,
+      "gridTime": 37.184991,
+      "beatIndex": 76.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.7677,
+      "attackStrength": 1.6296
+    },
+    {
+      "time": 34.94,
+      "audioOnset": 37.439546,
+      "gridTime": 37.425183,
+      "beatIndex": 77.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.778,
+      "attackStrength": 2.5634
+    },
+    {
+      "time": 35.181,
+      "audioOnset": 37.680998,
+      "gridTime": 37.665375,
+      "beatIndex": 77.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 2.5586,
+      "attackStrength": 1.7107
+    },
+    {
+      "time": 35.42,
+      "audioOnset": 37.920454,
+      "gridTime": 37.905567,
+      "beatIndex": 78.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3838,
+      "attackStrength": 3.2135
+    },
+    {
+      "time": 35.672,
+      "audioOnset": 38.171882,
+      "gridTime": 38.145592,
+      "beatIndex": 78.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.8543,
+      "attackStrength": 2.5594
+    },
+    {
+      "time": 35.901,
+      "audioOnset": 38.401361,
+      "gridTime": 38.385618,
+      "beatIndex": 79.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.4777,
+      "attackStrength": 2.4546
+    },
+    {
+      "time": 36.382,
+      "audioOnset": 38.882268,
+      "gridTime": 38.865669,
+      "beatIndex": 80.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.7152,
+      "attackStrength": 3.0793
+    },
+    {
+      "time": 36.624,
+      "audioOnset": 39.123719,
+      "gridTime": 39.105694,
+      "beatIndex": 80.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3302,
+      "attackStrength": 1.5112
+    },
+    {
+      "time": 36.863,
+      "audioOnset": 39.363175,
+      "gridTime": 39.34572,
+      "beatIndex": 81.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.2267,
+      "attackStrength": 2.6964
+    },
+    {
+      "time": 37.099,
+      "audioOnset": 39.598639,
+      "gridTime": 39.585745,
+      "beatIndex": 81.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 2.0187,
+      "attackStrength": 1.6261
+    },
+    {
+      "time": 37.34,
+      "audioOnset": 39.840091,
+      "gridTime": 39.825771,
+      "beatIndex": 82.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3596,
+      "attackStrength": 2.8837
+    },
+    {
+      "time": 37.58,
+      "audioOnset": 40.079546,
+      "gridTime": 40.065796,
+      "beatIndex": 82.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.6456,
+      "attackStrength": 1.8037
+    },
+    {
+      "time": 37.821,
+      "audioOnset": 40.320998,
+      "gridTime": 40.305822,
+      "beatIndex": 83.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.529,
+      "attackStrength": 2.8746
+    },
+    {
+      "time": 38.06,
+      "audioOnset": 40.560454,
+      "gridTime": 40.545848,
+      "beatIndex": 83.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.2619,
+      "attackStrength": 1.5885
+    },
+    {
+      "time": 38.302,
+      "audioOnset": 40.801905,
+      "gridTime": 40.785873,
+      "beatIndex": 84.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.75,
+      "attackStrength": 2.409
+    },
+    {
+      "time": 38.539,
+      "audioOnset": 41.039365,
+      "gridTime": 41.025898,
+      "beatIndex": 84.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.4336,
+      "attackStrength": 1.3784
+    },
+    {
+      "time": 38.783,
+      "audioOnset": 41.282812,
+      "gridTime": 41.265924,
+      "beatIndex": 85.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.23,
+      "attackStrength": 2.5445
+    },
+    {
+      "time": 39.018,
+      "audioOnset": 41.518277,
+      "gridTime": 41.505949,
+      "beatIndex": 85.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.4023,
+      "attackStrength": 2.657
+    },
+    {
+      "time": 39.262,
+      "audioOnset": 41.761723,
+      "gridTime": 41.745975,
+      "beatIndex": 86.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.7567,
+      "attackStrength": 2.8382
+    },
+    {
+      "time": 39.499,
+      "audioOnset": 41.999184,
+      "gridTime": 41.986,
+      "beatIndex": 86.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3664,
+      "attackStrength": 1.3436
+    },
+    {
+      "time": 39.741,
+      "audioOnset": 42.240635,
+      "gridTime": 42.226026,
+      "beatIndex": 87.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.5465,
+      "attackStrength": 2.4935
+    },
+    {
+      "time": 40.226,
+      "audioOnset": 42.725533,
+      "gridTime": 42.706017,
+      "beatIndex": 88.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.6033,
+      "attackStrength": 2.6841
+    },
+    {
+      "time": 40.461,
+      "audioOnset": 42.960998,
+      "gridTime": 42.946013,
+      "beatIndex": 88.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.8559,
+      "attackStrength": 1.8117
+    },
+    {
+      "time": 40.702,
+      "audioOnset": 43.202449,
+      "gridTime": 43.186008,
+      "beatIndex": 89.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.7563,
+      "attackStrength": 2.4218
+    },
+    {
+      "time": 40.942,
+      "audioOnset": 43.441905,
+      "gridTime": 43.426004,
+      "beatIndex": 89.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 2.6425,
+      "attackStrength": 1.9481
+    },
+    {
+      "time": 41.183,
+      "audioOnset": 43.683356,
+      "gridTime": 43.666,
+      "beatIndex": 90.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.9883,
+      "attackStrength": 3.0126
+    },
+    {
+      "time": 41.421,
+      "audioOnset": 43.920816,
+      "gridTime": 43.905995,
+      "beatIndex": 90.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.3178,
+      "attackStrength": 2.3496
+    },
+    {
+      "time": 41.66,
+      "audioOnset": 44.160272,
+      "gridTime": 44.145991,
+      "beatIndex": 91.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.5273,
+      "attackStrength": 1.2392
+    },
+    {
+      "time": 41.902,
+      "audioOnset": 44.401723,
+      "gridTime": 44.385987,
+      "beatIndex": 91.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.3151,
+      "attackStrength": 1.5346
+    },
+    {
+      "time": 42.155,
+      "audioOnset": 44.655147,
+      "gridTime": 44.625982,
+      "beatIndex": 92.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.3462,
+      "attackStrength": 1.6243
+    },
+    {
+      "time": 42.395,
+      "audioOnset": 44.894603,
+      "gridTime": 44.865978,
+      "beatIndex": 92.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.8028,
+      "attackStrength": 2.3096
+    },
+    {
+      "time": 42.624,
+      "audioOnset": 45.124082,
+      "gridTime": 45.105973,
+      "beatIndex": 93.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.2245,
+      "attackStrength": 1.9491
+    },
+    {
+      "time": 42.862,
+      "audioOnset": 45.361542,
+      "gridTime": 45.345969,
+      "beatIndex": 93.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 2.6642,
+      "attackStrength": 2.6654
+    },
+    {
+      "time": 43.101,
+      "audioOnset": 45.600998,
+      "gridTime": 45.585965,
+      "beatIndex": 94.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.4749,
+      "attackStrength": 2.6915
+    },
+    {
+      "time": 43.338,
+      "audioOnset": 45.838458,
+      "gridTime": 45.82596,
+      "beatIndex": 94.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.8709,
+      "attackStrength": 2.3555
+    },
+    {
+      "time": 43.582,
+      "audioOnset": 46.081905,
+      "gridTime": 46.065956,
+      "beatIndex": 95.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.41,
+      "attackStrength": 2.7209
+    },
+    {
+      "time": 43.819,
+      "audioOnset": 46.319365,
+      "gridTime": 46.305952,
+      "beatIndex": 95.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.0062,
+      "attackStrength": 1.9578
+    },
+    {
+      "time": 44.061,
+      "audioOnset": 46.560816,
+      "gridTime": 46.545947,
+      "beatIndex": 96.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3505,
+      "attackStrength": 3.6903
+    },
+    {
+      "time": 44.298,
+      "audioOnset": 46.798277,
+      "gridTime": 46.785943,
+      "beatIndex": 96.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.6812,
+      "attackStrength": 1.5291
+    },
+    {
+      "time": 44.542,
+      "audioOnset": 47.041723,
+      "gridTime": 47.025939,
+      "beatIndex": 97.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.0265,
+      "attackStrength": 2.3426
+    },
+    {
+      "time": 44.779,
+      "audioOnset": 47.279184,
+      "gridTime": 47.265934,
+      "beatIndex": 97.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.9095,
+      "attackStrength": 2.1482
+    },
+    {
+      "time": 45.019,
+      "audioOnset": 47.518639,
+      "gridTime": 47.50593,
+      "beatIndex": 98.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2968,
+      "attackStrength": 3.3405
+    },
+    {
+      "time": 45.258,
+      "audioOnset": 47.758095,
+      "gridTime": 47.745926,
+      "beatIndex": 98.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.8597,
+      "attackStrength": 2.604
+    },
+    {
+      "time": 45.5,
+      "audioOnset": 47.999546,
+      "gridTime": 47.985922,
+      "beatIndex": 99.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.4668,
+      "attackStrength": 3.3679
+    },
+    {
+      "time": 45.739,
+      "audioOnset": 48.239002,
+      "gridTime": 48.225917,
+      "beatIndex": 99.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3107,
+      "attackStrength": 2.0756
+    },
+    {
+      "time": 45.978,
+      "audioOnset": 48.478458,
+      "gridTime": 48.465913,
+      "beatIndex": 100.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.9688,
+      "attackStrength": 3.2298
+    },
+    {
+      "time": 46.218,
+      "audioOnset": 48.717914,
+      "gridTime": 48.705909,
+      "beatIndex": 100.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.7417,
+      "attackStrength": 2.7583
+    },
+    {
+      "time": 46.461,
+      "audioOnset": 48.961361,
+      "gridTime": 48.945904,
+      "beatIndex": 101.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.4075,
+      "attackStrength": 2.4399
+    },
+    {
+      "time": 46.699,
+      "audioOnset": 49.198821,
+      "gridTime": 49.1859,
+      "beatIndex": 101.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.7716,
+      "attackStrength": 2.4102
+    },
+    {
+      "time": 46.94,
+      "audioOnset": 49.440272,
+      "gridTime": 49.425896,
+      "beatIndex": 102.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.9711,
+      "attackStrength": 3.0051
+    },
+    {
+      "time": 47.18,
+      "audioOnset": 49.679728,
+      "gridTime": 49.665891,
+      "beatIndex": 102.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3915,
+      "attackStrength": 1.5364
+    },
+    {
+      "time": 47.419,
+      "audioOnset": 49.919184,
+      "gridTime": 49.905887,
+      "beatIndex": 103.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.4919,
+      "attackStrength": 3.3382
+    },
+    {
+      "time": 47.9,
+      "audioOnset": 50.400091,
+      "gridTime": 50.385837,
+      "beatIndex": 104.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.5683,
+      "attackStrength": 2.4014
+    },
+    {
+      "time": 48.14,
+      "audioOnset": 50.639546,
+      "gridTime": 50.625811,
+      "beatIndex": 104.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.4139,
+      "attackStrength": 1.9189
+    },
+    {
+      "time": 48.381,
+      "audioOnset": 50.880998,
+      "gridTime": 50.865786,
+      "beatIndex": 105.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.776,
+      "attackStrength": 3.2585
+    },
+    {
+      "time": 48.618,
+      "audioOnset": 51.118458,
+      "gridTime": 51.105761,
+      "beatIndex": 105.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 2.3013,
+      "attackStrength": 2.8276
+    },
+    {
+      "time": 48.86,
+      "audioOnset": 51.359909,
+      "gridTime": 51.345736,
+      "beatIndex": 106.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.1882,
+      "attackStrength": 3.9899
+    },
+    {
+      "time": 49.099,
+      "audioOnset": 51.599365,
+      "gridTime": 51.58571,
+      "beatIndex": 106.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.1195,
+      "attackStrength": 2.8186
+    },
+    {
+      "time": 49.341,
+      "audioOnset": 51.840816,
+      "gridTime": 51.825685,
+      "beatIndex": 107.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.188,
+      "attackStrength": 3.3433
+    },
+    {
+      "time": 49.578,
+      "audioOnset": 52.078277,
+      "gridTime": 52.06566,
+      "beatIndex": 107.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.2813,
+      "attackStrength": 2.176
+    },
+    {
+      "time": 49.82,
+      "audioOnset": 52.319728,
+      "gridTime": 52.305635,
+      "beatIndex": 108.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.9168,
+      "attackStrength": 3.2968
+    },
+    {
+      "time": 50.059,
+      "audioOnset": 52.559184,
+      "gridTime": 52.54561,
+      "beatIndex": 108.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.5856,
+      "attackStrength": 1.5695
+    },
+    {
+      "time": 50.303,
+      "audioOnset": 52.80263,
+      "gridTime": 52.785584,
+      "beatIndex": 109.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.5622,
+      "attackStrength": 2.7969
+    },
+    {
+      "time": 50.538,
+      "audioOnset": 53.038095,
+      "gridTime": 53.025559,
+      "beatIndex": 109.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.3513,
+      "attackStrength": 1.238
+    },
+    {
+      "time": 50.78,
+      "audioOnset": 53.279546,
+      "gridTime": 53.265534,
+      "beatIndex": 110.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 3.1432,
+      "attackStrength": 4.2146
+    },
+    {
+      "time": 51.019,
+      "audioOnset": 53.519002,
+      "gridTime": 53.505509,
+      "beatIndex": 110.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.1594,
+      "attackStrength": 3.1278
+    },
+    {
+      "time": 51.26,
+      "audioOnset": 53.760454,
+      "gridTime": 53.745483,
+      "beatIndex": 111.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2963,
+      "attackStrength": 3.103
+    },
+    {
+      "time": 51.5,
+      "audioOnset": 53.999909,
+      "gridTime": 53.985458,
+      "beatIndex": 111.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.0336,
+      "attackStrength": 1.9102
+    },
+    {
+      "time": 51.739,
+      "audioOnset": 54.239365,
+      "gridTime": 54.225433,
+      "beatIndex": 112.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.9918,
+      "attackStrength": 3.8792
+    },
+    {
+      "time": 51.981,
+      "audioOnset": 54.480816,
+      "gridTime": 54.465438,
+      "beatIndex": 112.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.8243,
+      "attackStrength": 2.647
+    },
+    {
+      "time": 52.22,
+      "audioOnset": 54.720272,
+      "gridTime": 54.705442,
+      "beatIndex": 113.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.205,
+      "attackStrength": 2.8551
+    },
+    {
+      "time": 52.464,
+      "audioOnset": 54.963719,
+      "gridTime": 54.945447,
+      "beatIndex": 113.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.9941,
+      "attackStrength": 1.8198
+    },
+    {
+      "time": 52.699,
+      "audioOnset": 55.199184,
+      "gridTime": 55.185452,
+      "beatIndex": 114.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.8452,
+      "attackStrength": 2.5615
+    },
+    {
+      "time": 52.939,
+      "audioOnset": 55.438639,
+      "gridTime": 55.425456,
+      "beatIndex": 114.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.4292,
+      "attackStrength": 1.5284
+    },
+    {
+      "time": 53.18,
+      "audioOnset": 55.680091,
+      "gridTime": 55.665461,
+      "beatIndex": 115.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.4234,
+      "attackStrength": 3.3279
+    },
+    {
+      "time": 53.42,
+      "audioOnset": 55.919546,
+      "gridTime": 55.905466,
+      "beatIndex": 115.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.1437,
+      "attackStrength": 1.8669
+    },
+    {
+      "time": 53.661,
+      "audioOnset": 56.160998,
+      "gridTime": 56.145471,
+      "beatIndex": 116.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.1713,
+      "attackStrength": 3.694
+    },
+    {
+      "time": 53.9,
+      "audioOnset": 56.400454,
+      "gridTime": 56.385475,
+      "beatIndex": 116.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.5986,
+      "attackStrength": 1.9916
+    },
+    {
+      "time": 54.142,
+      "audioOnset": 56.641905,
+      "gridTime": 56.62548,
+      "beatIndex": 117.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.2071,
+      "attackStrength": 3.6365
+    },
+    {
+      "time": 54.381,
+      "audioOnset": 56.881361,
+      "gridTime": 56.865485,
+      "beatIndex": 117.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.7222,
+      "attackStrength": 3.0886
+    },
+    {
+      "time": 54.621,
+      "audioOnset": 57.120816,
+      "gridTime": 57.105489,
+      "beatIndex": 118.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2927,
+      "attackStrength": 2.3348
+    },
+    {
+      "time": 54.858,
+      "audioOnset": 57.358277,
+      "gridTime": 57.345494,
+      "beatIndex": 118.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3405,
+      "attackStrength": 1.298
+    },
+    {
+      "time": 55.102,
+      "audioOnset": 57.601723,
+      "gridTime": 57.585499,
+      "beatIndex": 119.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.5936,
+      "attackStrength": 2.6834
+    },
+    {
+      "time": 55.341,
+      "audioOnset": 57.841179,
+      "gridTime": 57.825503,
+      "beatIndex": 119.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 0.9209,
+      "attackStrength": 2.0394
+    },
+    {
+      "time": 55.581,
+      "audioOnset": 58.080635,
+      "gridTime": 58.065508,
+      "beatIndex": 120.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.7095,
+      "attackStrength": 3.1925
+    },
+    {
+      "time": 55.82,
+      "audioOnset": 58.320091,
+      "gridTime": 58.305513,
+      "beatIndex": 120.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.2121,
+      "attackStrength": 2.4668
+    },
+    {
+      "time": 56.062,
+      "audioOnset": 58.561542,
+      "gridTime": 58.545517,
+      "beatIndex": 121.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.8156,
+      "attackStrength": 3.1314
+    },
+    {
+      "time": 56.301,
+      "audioOnset": 58.800998,
+      "gridTime": 58.785522,
+      "beatIndex": 121.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 2.3774,
+      "attackStrength": 2.2415
+    },
+    {
+      "time": 56.54,
+      "audioOnset": 59.040454,
+      "gridTime": 59.025526,
+      "beatIndex": 122.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.0508,
+      "attackStrength": 3.1406
+    },
+    {
+      "time": 56.78,
+      "audioOnset": 59.279909,
+      "gridTime": 59.265531,
+      "beatIndex": 122.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.1956,
+      "attackStrength": 2.9854
+    },
+    {
+      "time": 57.021,
+      "audioOnset": 59.521361,
+      "gridTime": 59.505536,
+      "beatIndex": 123.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.4713,
+      "attackStrength": 2.3564
+    },
+    {
+      "time": 57.263,
+      "audioOnset": 59.762812,
+      "gridTime": 59.74554,
+      "beatIndex": 123.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.2012,
+      "attackStrength": 1.4393
+    },
+    {
+      "time": 57.5,
+      "audioOnset": 60.000272,
+      "gridTime": 59.985545,
+      "beatIndex": 124.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.2883,
+      "attackStrength": 1.2424
+    },
+    {
+      "time": 57.738,
+      "audioOnset": 60.237732,
+      "gridTime": 60.22555,
+      "beatIndex": 124.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 2.2821,
+      "attackStrength": 3.2091
+    },
+    {
+      "time": 57.979,
+      "audioOnset": 60.479184,
+      "gridTime": 60.465554,
+      "beatIndex": 125.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.0144,
+      "attackStrength": 2.6179
+    },
+    {
+      "time": 58.219,
+      "audioOnset": 60.718639,
+      "gridTime": 60.705559,
+      "beatIndex": 125.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.5046,
+      "attackStrength": 3.0869
+    },
+    {
+      "time": 58.46,
+      "audioOnset": 60.960091,
+      "gridTime": 60.945564,
+      "beatIndex": 126.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.0658,
+      "attackStrength": 3.197
+    },
+    {
+      "time": 58.7,
+      "audioOnset": 61.199546,
+      "gridTime": 61.185568,
+      "beatIndex": 126.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.7901,
+      "attackStrength": 2.1669
+    },
+    {
+      "time": 58.941,
+      "audioOnset": 61.440998,
+      "gridTime": 61.425573,
+      "beatIndex": 127.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3984,
+      "attackStrength": 3.1944
+    },
+    {
+      "time": 59.422,
+      "audioOnset": 61.921905,
+      "gridTime": 61.905582,
+      "beatIndex": 128.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.4655,
+      "attackStrength": 2.4609
+    },
+    {
+      "time": 59.663,
+      "audioOnset": 62.163356,
+      "gridTime": 62.145608,
+      "beatIndex": 128.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3443,
+      "attackStrength": 1.44
+    },
+    {
+      "time": 59.903,
+      "audioOnset": 62.402812,
+      "gridTime": 62.385633,
+      "beatIndex": 129.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.7114,
+      "attackStrength": 2.4037
+    },
+    {
+      "time": 60.14,
+      "audioOnset": 62.640272,
+      "gridTime": 62.625659,
+      "beatIndex": 129.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.8367,
+      "attackStrength": 1.7271
+    },
+    {
+      "time": 60.382,
+      "audioOnset": 62.881723,
+      "gridTime": 62.865684,
+      "beatIndex": 130.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.7747,
+      "attackStrength": 2.8608
+    },
+    {
+      "time": 60.619,
+      "audioOnset": 63.119184,
+      "gridTime": 63.10571,
+      "beatIndex": 130.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.6566,
+      "attackStrength": 1.8872
+    },
+    {
+      "time": 60.863,
+      "audioOnset": 63.36263,
+      "gridTime": 63.345735,
+      "beatIndex": 131.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.2305,
+      "attackStrength": 2.7292
+    },
+    {
+      "time": 61.342,
+      "audioOnset": 63.841542,
+      "gridTime": 63.825786,
+      "beatIndex": 132.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.6736,
+      "attackStrength": 2.0822
+    },
+    {
+      "time": 61.577,
+      "audioOnset": 64.077007,
+      "gridTime": 64.065811,
+      "beatIndex": 132.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3991,
+      "attackStrength": 1.1646
+    },
+    {
+      "time": 61.822,
+      "audioOnset": 64.322449,
+      "gridTime": 64.305837,
+      "beatIndex": 133.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.3323,
+      "attackStrength": 2.5628
+    },
+    {
+      "time": 62.06,
+      "audioOnset": 64.559909,
+      "gridTime": 64.545862,
+      "beatIndex": 133.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.6537,
+      "attackStrength": 2.5552
+    },
+    {
+      "time": 62.301,
+      "audioOnset": 64.801361,
+      "gridTime": 64.785888,
+      "beatIndex": 134.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2791,
+      "attackStrength": 2.6373
+    },
+    {
+      "time": 62.541,
+      "audioOnset": 65.040816,
+      "gridTime": 65.025914,
+      "beatIndex": 134.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.4217,
+      "attackStrength": 1.384
+    },
+    {
+      "time": 62.782,
+      "audioOnset": 65.282268,
+      "gridTime": 65.265939,
+      "beatIndex": 135.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 3.042,
+      "attackStrength": 2.7617
+    },
+    {
+      "time": 63.263,
+      "audioOnset": 65.763175,
+      "gridTime": 65.74599,
+      "beatIndex": 136.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.7137,
+      "attackStrength": 2.6973
+    },
+    {
+      "time": 63.501,
+      "audioOnset": 66.000635,
+      "gridTime": 65.986015,
+      "beatIndex": 136.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.5067,
+      "attackStrength": 1.8047
+    },
+    {
+      "time": 63.744,
+      "audioOnset": 66.244082,
+      "gridTime": 66.226041,
+      "beatIndex": 137.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.6412,
+      "attackStrength": 2.7151
+    },
+    {
+      "time": 63.982,
+      "audioOnset": 66.481542,
+      "gridTime": 66.466037,
+      "beatIndex": 137.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 2.2947,
+      "attackStrength": 1.7394
+    },
+    {
+      "time": 64.221,
+      "audioOnset": 66.720998,
+      "gridTime": 66.706032,
+      "beatIndex": 138.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.8675,
+      "attackStrength": 3.426
+    },
+    {
+      "time": 64.46,
+      "audioOnset": 66.960454,
+      "gridTime": 66.946028,
+      "beatIndex": 138.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.3229,
+      "attackStrength": 1.9943
+    },
+    {
+      "time": 64.702,
+      "audioOnset": 67.201905,
+      "gridTime": 67.186024,
+      "beatIndex": 139.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.171,
+      "attackStrength": 2.6007
+    },
+    {
+      "time": 64.911,
+      "audioOnset": 67.411429,
+      "gridTime": 67.426019,
+      "beatIndex": 139.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 0.8807,
+      "attackStrength": 0.8069
+    },
+    {
+      "time": 65.183,
+      "audioOnset": 67.682812,
+      "gridTime": 67.666015,
+      "beatIndex": 140.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.8104,
+      "attackStrength": 2.3873
+    },
+    {
+      "time": 65.43,
+      "audioOnset": 67.930249,
+      "gridTime": 67.906011,
+      "beatIndex": 140.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.5403,
+      "attackStrength": 1.7089
+    },
+    {
+      "time": 65.662,
+      "audioOnset": 68.161723,
+      "gridTime": 68.146006,
+      "beatIndex": 141.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.6062,
+      "attackStrength": 2.6355
+    },
+    {
+      "time": 65.899,
+      "audioOnset": 68.399184,
+      "gridTime": 68.386002,
+      "beatIndex": 141.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.2928,
+      "attackStrength": 1.4071
+    },
+    {
+      "time": 66.141,
+      "audioOnset": 68.640635,
+      "gridTime": 68.625998,
+      "beatIndex": 142.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.1086,
+      "attackStrength": 3.1639
+    },
+    {
+      "time": 66.378,
+      "audioOnset": 68.878095,
+      "gridTime": 68.865994,
+      "beatIndex": 142.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.8375,
+      "attackStrength": 1.869
+    },
+    {
+      "time": 66.622,
+      "audioOnset": 69.121542,
+      "gridTime": 69.105989,
+      "beatIndex": 143.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3926,
+      "attackStrength": 2.9355
+    },
+    {
+      "time": 66.863,
+      "audioOnset": 69.362993,
+      "gridTime": 69.345985,
+      "beatIndex": 143.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.1837,
+      "attackStrength": 1.9504
+    },
+    {
+      "time": 67.098,
+      "audioOnset": 69.598458,
+      "gridTime": 69.585981,
+      "beatIndex": 144.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.7643,
+      "attackStrength": 2.9923
+    },
+    {
+      "time": 67.34,
+      "audioOnset": 69.839909,
+      "gridTime": 69.825976,
+      "beatIndex": 144.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.6804,
+      "attackStrength": 1.5129
+    },
+    {
+      "time": 67.579,
+      "audioOnset": 70.079365,
+      "gridTime": 70.065972,
+      "beatIndex": 145.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.3566,
+      "attackStrength": 2.9933
+    },
+    {
+      "time": 67.819,
+      "audioOnset": 70.318821,
+      "gridTime": 70.305977,
+      "beatIndex": 145.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.9031,
+      "attackStrength": 2.9809
+    },
+    {
+      "time": 68.06,
+      "audioOnset": 70.560272,
+      "gridTime": 70.545981,
+      "beatIndex": 146.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2507,
+      "attackStrength": 3.0101
+    },
+    {
+      "time": 68.298,
+      "audioOnset": 70.797732,
+      "gridTime": 70.785986,
+      "beatIndex": 146.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.943,
+      "attackStrength": 3.2703
+    },
+    {
+      "time": 68.541,
+      "audioOnset": 71.041179,
+      "gridTime": 71.025991,
+      "beatIndex": 147.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.4288,
+      "attackStrength": 2.7533
+    },
+    {
+      "time": 68.779,
+      "audioOnset": 71.278639,
+      "gridTime": 71.265995,
+      "beatIndex": 147.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.2553,
+      "attackStrength": 1.5595
+    },
+    {
+      "time": 69.02,
+      "audioOnset": 71.520091,
+      "gridTime": 71.506,
+      "beatIndex": 148.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.5668,
+      "attackStrength": 2.3332
+    },
+    {
+      "time": 69.258,
+      "audioOnset": 71.757551,
+      "gridTime": 71.746004,
+      "beatIndex": 148.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.592,
+      "attackStrength": 1.5881
+    },
+    {
+      "time": 69.501,
+      "audioOnset": 72.000998,
+      "gridTime": 71.986009,
+      "beatIndex": 149.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.9699,
+      "attackStrength": 2.6806
+    },
+    {
+      "time": 69.738,
+      "audioOnset": 72.238458,
+      "gridTime": 72.226014,
+      "beatIndex": 149.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 2.2439,
+      "attackStrength": 2.4702
+    },
+    {
+      "time": 69.982,
+      "audioOnset": 72.481905,
+      "gridTime": 72.466018,
+      "beatIndex": 150.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.8308,
+      "attackStrength": 3.1073
+    },
+    {
+      "time": 70.223,
+      "audioOnset": 72.723356,
+      "gridTime": 72.706023,
+      "beatIndex": 150.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3748,
+      "attackStrength": 1.5461
+    },
+    {
+      "time": 70.461,
+      "audioOnset": 72.960816,
+      "gridTime": 72.946027,
+      "beatIndex": 151.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.0552,
+      "attackStrength": 2.5484
+    },
+    {
+      "time": 70.94,
+      "audioOnset": 73.439728,
+      "gridTime": 73.426037,
+      "beatIndex": 152.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.7385,
+      "attackStrength": 2.0997
+    },
+    {
+      "time": 71.179,
+      "audioOnset": 73.679184,
+      "gridTime": 73.666041,
+      "beatIndex": 152.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.1531,
+      "attackStrength": 1.6475
+    },
+    {
+      "time": 71.423,
+      "audioOnset": 73.92263,
+      "gridTime": 73.906046,
+      "beatIndex": 153.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.8201,
+      "attackStrength": 2.6971
+    },
+    {
+      "time": 71.666,
+      "audioOnset": 74.166077,
+      "gridTime": 74.146072,
+      "beatIndex": 153.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 2.0896,
+      "attackStrength": 1.5516
+    },
+    {
+      "time": 71.9,
+      "audioOnset": 74.399546,
+      "gridTime": 74.386097,
+      "beatIndex": 154.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.1448,
+      "attackStrength": 3.287
+    },
+    {
+      "time": 72.141,
+      "audioOnset": 74.640998,
+      "gridTime": 74.626123,
+      "beatIndex": 154.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.9073,
+      "attackStrength": 1.9752
+    },
+    {
+      "time": 72.38,
+      "audioOnset": 74.880454,
+      "gridTime": 74.866148,
+      "beatIndex": 155.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.545,
+      "attackStrength": 1.4555
+    },
+    {
+      "time": 72.622,
+      "audioOnset": 75.121905,
+      "gridTime": 75.106173,
+      "beatIndex": 155.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.3912,
+      "attackStrength": 1.5977
+    },
+    {
+      "time": 72.861,
+      "audioOnset": 75.361361,
+      "gridTime": 75.346199,
+      "beatIndex": 156.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.1546,
+      "attackStrength": 1.2708
+    },
+    {
+      "time": 73.101,
+      "audioOnset": 75.600816,
+      "gridTime": 75.586225,
+      "beatIndex": 156.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 2.1811,
+      "attackStrength": 1.7883
+    },
+    {
+      "time": 73.342,
+      "audioOnset": 75.842268,
+      "gridTime": 75.82625,
+      "beatIndex": 157.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.9337,
+      "attackStrength": 1.9478
+    },
+    {
+      "time": 73.582,
+      "audioOnset": 76.081723,
+      "gridTime": 76.066276,
+      "beatIndex": 157.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 3.2437,
+      "attackStrength": 2.2272
+    },
+    {
+      "time": 73.821,
+      "audioOnset": 76.321179,
+      "gridTime": 76.306301,
+      "beatIndex": 158.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2581,
+      "attackStrength": 2.5764
+    },
+    {
+      "time": 74.063,
+      "audioOnset": 76.56263,
+      "gridTime": 76.546327,
+      "beatIndex": 158.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.6505,
+      "attackStrength": 2.3833
+    },
+    {
+      "time": 74.302,
+      "audioOnset": 76.802086,
+      "gridTime": 76.786352,
+      "beatIndex": 159.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.9731,
+      "attackStrength": 2.4637
+    },
+    {
+      "time": 74.781,
+      "audioOnset": 77.280998,
+      "gridTime": 77.266403,
+      "beatIndex": 160.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.8172,
+      "attackStrength": 2.4371
+    },
+    {
+      "time": 75.018,
+      "audioOnset": 77.518458,
+      "gridTime": 77.506428,
+      "beatIndex": 160.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.6412,
+      "attackStrength": 1.3383
+    },
+    {
+      "time": 75.26,
+      "audioOnset": 77.759909,
+      "gridTime": 77.746454,
+      "beatIndex": 161.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.0926,
+      "attackStrength": 2.4181
+    },
+    {
+      "time": 75.497,
+      "audioOnset": 77.99737,
+      "gridTime": 77.98648,
+      "beatIndex": 161.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.5607,
+      "attackStrength": 1.1999
+    },
+    {
+      "time": 75.741,
+      "audioOnset": 78.240816,
+      "gridTime": 78.226505,
+      "beatIndex": 162.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.6264,
+      "attackStrength": 2.8433
+    },
+    {
+      "time": 75.978,
+      "audioOnset": 78.478277,
+      "gridTime": 78.466501,
+      "beatIndex": 162.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.6372,
+      "attackStrength": 1.529
+    },
+    {
+      "time": 76.222,
+      "audioOnset": 78.721723,
+      "gridTime": 78.706496,
+      "beatIndex": 163.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.6968,
+      "attackStrength": 3.3743
+    },
+    {
+      "time": 76.461,
+      "audioOnset": 78.961179,
+      "gridTime": 78.946492,
+      "beatIndex": 163.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 0.8956,
+      "attackStrength": 1.3376
+    },
+    {
+      "time": 76.703,
+      "audioOnset": 79.20263,
+      "gridTime": 79.186487,
+      "beatIndex": 164.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.8322,
+      "attackStrength": 2.3878
+    },
+    {
+      "time": 76.946,
+      "audioOnset": 79.446077,
+      "gridTime": 79.426483,
+      "beatIndex": 164.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.5541,
+      "attackStrength": 1.7828
+    },
+    {
+      "time": 77.182,
+      "audioOnset": 79.681542,
+      "gridTime": 79.666479,
+      "beatIndex": 165.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.227,
+      "attackStrength": 2.5739
+    },
+    {
+      "time": 77.419,
+      "audioOnset": 79.919002,
+      "gridTime": 79.906474,
+      "beatIndex": 165.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.175,
+      "attackStrength": 2.7417
+    },
+    {
+      "time": 77.662,
+      "audioOnset": 80.162449,
+      "gridTime": 80.14647,
+      "beatIndex": 166.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.6485,
+      "attackStrength": 3.207
+    },
+    {
+      "time": 77.91,
+      "audioOnset": 80.409887,
+      "gridTime": 80.386466,
+      "beatIndex": 166.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3521,
+      "attackStrength": 1.7625
+    },
+    {
+      "time": 78.141,
+      "audioOnset": 80.641361,
+      "gridTime": 80.626461,
+      "beatIndex": 167.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.1354,
+      "attackStrength": 2.5034
+    },
+    {
+      "time": 78.62,
+      "audioOnset": 81.120272,
+      "gridTime": 81.106453,
+      "beatIndex": 168.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.4968,
+      "attackStrength": 2.1597
+    },
+    {
+      "time": 78.86,
+      "audioOnset": 81.359728,
+      "gridTime": 81.346448,
+      "beatIndex": 168.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.2833,
+      "attackStrength": 1.9811
+    },
+    {
+      "time": 79.101,
+      "audioOnset": 81.601179,
+      "gridTime": 81.586444,
+      "beatIndex": 169.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.9083,
+      "attackStrength": 2.1891
+    },
+    {
+      "time": 79.337,
+      "audioOnset": 81.836644,
+      "gridTime": 81.826439,
+      "beatIndex": 169.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.8382,
+      "attackStrength": 1.3581
+    },
+    {
+      "time": 79.58,
+      "audioOnset": 82.080091,
+      "gridTime": 82.066435,
+      "beatIndex": 170.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.042,
+      "attackStrength": 2.9219
+    },
+    {
+      "time": 79.82,
+      "audioOnset": 82.319546,
+      "gridTime": 82.306252,
+      "beatIndex": 170.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.9115,
+      "attackStrength": 1.891
+    },
+    {
+      "time": 80.061,
+      "audioOnset": 82.560998,
+      "gridTime": 82.546069,
+      "beatIndex": 171.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3249,
+      "attackStrength": 2.4929
+    },
+    {
+      "time": 80.3,
+      "audioOnset": 82.800454,
+      "gridTime": 82.785887,
+      "beatIndex": 171.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 0.952,
+      "attackStrength": 1.953
+    },
+    {
+      "time": 80.542,
+      "audioOnset": 83.041905,
+      "gridTime": 83.025704,
+      "beatIndex": 172.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.2048,
+      "attackStrength": 2.3851
+    },
+    {
+      "time": 80.787,
+      "audioOnset": 83.287347,
+      "gridTime": 83.265521,
+      "beatIndex": 172.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.6249,
+      "attackStrength": 1.817
+    },
+    {
+      "time": 81.021,
+      "audioOnset": 83.520816,
+      "gridTime": 83.505338,
+      "beatIndex": 173.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.1911,
+      "attackStrength": 2.8194
+    },
+    {
+      "time": 81.258,
+      "audioOnset": 83.758277,
+      "gridTime": 83.745155,
+      "beatIndex": 173.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 2.4336,
+      "attackStrength": 1.9518
+    },
+    {
+      "time": 81.502,
+      "audioOnset": 84.001723,
+      "gridTime": 83.984972,
+      "beatIndex": 174.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.1978,
+      "attackStrength": 2.918
+    },
+    {
+      "time": 81.749,
+      "audioOnset": 84.249161,
+      "gridTime": 84.22479,
+      "beatIndex": 174.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.1261,
+      "attackStrength": 2.4714
+    },
+    {
+      "time": 81.981,
+      "audioOnset": 84.480635,
+      "gridTime": 84.464607,
+      "beatIndex": 175.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2838,
+      "attackStrength": 1.9531
+    },
+    {
+      "time": 82.462,
+      "audioOnset": 84.961542,
+      "gridTime": 84.944241,
+      "beatIndex": 176.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.7136,
+      "attackStrength": 1.9811
+    },
+    {
+      "time": 82.697,
+      "audioOnset": 85.197007,
+      "gridTime": 85.184058,
+      "beatIndex": 176.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.6343,
+      "attackStrength": 1.3308
+    },
+    {
+      "time": 82.94,
+      "audioOnset": 85.440454,
+      "gridTime": 85.423876,
+      "beatIndex": 177.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2138,
+      "attackStrength": 2.3696
+    },
+    {
+      "time": 83.178,
+      "audioOnset": 85.677914,
+      "gridTime": 85.663693,
+      "beatIndex": 177.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.6763,
+      "attackStrength": 1.0799
+    },
+    {
+      "time": 83.419,
+      "audioOnset": 85.919365,
+      "gridTime": 85.90351,
+      "beatIndex": 178.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3988,
+      "attackStrength": 2.9128
+    },
+    {
+      "time": 83.659,
+      "audioOnset": 86.158821,
+      "gridTime": 86.143485,
+      "beatIndex": 178.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.5988,
+      "attackStrength": 1.5788
+    },
+    {
+      "time": 83.9,
+      "audioOnset": 86.400272,
+      "gridTime": 86.38346,
+      "beatIndex": 179.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.5693,
+      "attackStrength": 2.9128
+    },
+    {
+      "time": 84.391,
+      "audioOnset": 86.891156,
+      "gridTime": 86.863409,
+      "beatIndex": 180.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.6277,
+      "attackStrength": 2.6824
+    },
+    {
+      "time": 84.637,
+      "audioOnset": 87.136599,
+      "gridTime": 87.103384,
+      "beatIndex": 180.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.3361,
+      "attackStrength": 1.928
+    },
+    {
+      "time": 84.862,
+      "audioOnset": 87.362086,
+      "gridTime": 87.343359,
+      "beatIndex": 181.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.838,
+      "attackStrength": 2.5101
+    },
+    {
+      "time": 85.1,
+      "audioOnset": 87.599546,
+      "gridTime": 87.583334,
+      "beatIndex": 181.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3617,
+      "attackStrength": 2.5846
+    },
+    {
+      "time": 85.341,
+      "audioOnset": 87.840998,
+      "gridTime": 87.823309,
+      "beatIndex": 182.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.9178,
+      "attackStrength": 2.5513
+    },
+    {
+      "time": 85.588,
+      "audioOnset": 88.088435,
+      "gridTime": 88.063283,
+      "beatIndex": 182.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 0.971,
+      "attackStrength": 1.7341
+    },
+    {
+      "time": 85.824,
+      "audioOnset": 88.3239,
+      "gridTime": 88.303258,
+      "beatIndex": 183.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.547,
+      "attackStrength": 2.6561
+    },
+    {
+      "time": 86.301,
+      "audioOnset": 88.800816,
+      "gridTime": 88.783208,
+      "beatIndex": 184.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.8895,
+      "attackStrength": 2.037
+    },
+    {
+      "time": 86.54,
+      "audioOnset": 89.040272,
+      "gridTime": 89.023183,
+      "beatIndex": 184.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.8748,
+      "attackStrength": 1.7881
+    },
+    {
+      "time": 86.782,
+      "audioOnset": 89.281723,
+      "gridTime": 89.263158,
+      "beatIndex": 185.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.885,
+      "attackStrength": 2.4898
+    },
+    {
+      "time": 87.023,
+      "audioOnset": 89.523175,
+      "gridTime": 89.503132,
+      "beatIndex": 185.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.9218,
+      "attackStrength": 1.3229
+    },
+    {
+      "time": 87.261,
+      "audioOnset": 89.760635,
+      "gridTime": 89.743107,
+      "beatIndex": 186.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.6842,
+      "attackStrength": 3.2734
+    },
+    {
+      "time": 87.5,
+      "audioOnset": 90.000091,
+      "gridTime": 89.983082,
+      "beatIndex": 186.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.9117,
+      "attackStrength": 1.898
+    },
+    {
+      "time": 87.742,
+      "audioOnset": 90.241542,
+      "gridTime": 90.223057,
+      "beatIndex": 187.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.6724,
+      "attackStrength": 1.1009
+    },
+    {
+      "time": 87.981,
+      "audioOnset": 90.480998,
+      "gridTime": 90.463053,
+      "beatIndex": 187.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.7101,
+      "attackStrength": 1.2754
+    },
+    {
+      "time": 88.22,
+      "audioOnset": 90.720454,
+      "gridTime": 90.703048,
+      "beatIndex": 188.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.1017,
+      "attackStrength": 1.7725
+    },
+    {
+      "time": 88.46,
+      "audioOnset": 90.959909,
+      "gridTime": 90.943044,
+      "beatIndex": 188.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.0716,
+      "attackStrength": 1.3872
+    },
+    {
+      "time": 88.701,
+      "audioOnset": 91.201361,
+      "gridTime": 91.18304,
+      "beatIndex": 189.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.4227,
+      "attackStrength": 2.3579
+    },
+    {
+      "time": 88.941,
+      "audioOnset": 91.440816,
+      "gridTime": 91.423035,
+      "beatIndex": 189.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.2008,
+      "attackStrength": 2.1578
+    },
+    {
+      "time": 89.18,
+      "audioOnset": 91.680272,
+      "gridTime": 91.663031,
+      "beatIndex": 190.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.7958,
+      "attackStrength": 3.0262
+    },
+    {
+      "time": 89.422,
+      "audioOnset": 91.921723,
+      "gridTime": 91.903026,
+      "beatIndex": 190.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.9294,
+      "attackStrength": 2.3466
+    },
+    {
+      "time": 89.661,
+      "audioOnset": 92.161179,
+      "gridTime": 92.143022,
+      "beatIndex": 191.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 3.2636,
+      "attackStrength": 3.0736
+    },
+    {
+      "time": 89.901,
+      "audioOnset": 92.400635,
+      "gridTime": 92.383018,
+      "beatIndex": 191.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.4287,
+      "attackStrength": 2.2417
+    },
+    {
+      "time": 90.14,
+      "audioOnset": 92.640091,
+      "gridTime": 92.623013,
+      "beatIndex": 192.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.4085,
+      "attackStrength": 2.877
+    },
+    {
+      "time": 90.38,
+      "audioOnset": 92.879546,
+      "gridTime": 92.863009,
+      "beatIndex": 192.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.0337,
+      "attackStrength": 1.6929
+    },
+    {
+      "time": 90.621,
+      "audioOnset": 93.120998,
+      "gridTime": 93.103004,
+      "beatIndex": 193.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.1448,
+      "attackStrength": 2.9289
+    },
+    {
+      "time": 90.858,
+      "audioOnset": 93.358458,
+      "gridTime": 93.343,
+      "beatIndex": 193.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.8421,
+      "attackStrength": 2.4687
+    },
+    {
+      "time": 91.1,
+      "audioOnset": 93.599909,
+      "gridTime": 93.582996,
+      "beatIndex": 194.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2214,
+      "attackStrength": 3.7922
+    },
+    {
+      "time": 91.339,
+      "audioOnset": 93.839365,
+      "gridTime": 93.822991,
+      "beatIndex": 194.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.7888,
+      "attackStrength": 2.5145
+    },
+    {
+      "time": 91.579,
+      "audioOnset": 94.078821,
+      "gridTime": 94.062987,
+      "beatIndex": 195.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2148,
+      "attackStrength": 3.1083
+    },
+    {
+      "time": 91.818,
+      "audioOnset": 94.318277,
+      "gridTime": 94.302983,
+      "beatIndex": 195.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.3484,
+      "attackStrength": 2.0633
+    },
+    {
+      "time": 92.06,
+      "audioOnset": 94.559728,
+      "gridTime": 94.542978,
+      "beatIndex": 196.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.0739,
+      "attackStrength": 2.6082
+    },
+    {
+      "time": 92.297,
+      "audioOnset": 94.797188,
+      "gridTime": 94.782974,
+      "beatIndex": 196.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.7795,
+      "attackStrength": 1.5241
+    },
+    {
+      "time": 92.541,
+      "audioOnset": 95.040635,
+      "gridTime": 95.02297,
+      "beatIndex": 197.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.882,
+      "attackStrength": 2.6457
+    },
+    {
+      "time": 92.778,
+      "audioOnset": 95.278095,
+      "gridTime": 95.262965,
+      "beatIndex": 197.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.765,
+      "attackStrength": 3.1089
+    },
+    {
+      "time": 93.02,
+      "audioOnset": 95.519546,
+      "gridTime": 95.502961,
+      "beatIndex": 198.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2561,
+      "attackStrength": 2.7708
+    },
+    {
+      "time": 93.259,
+      "audioOnset": 95.759002,
+      "gridTime": 95.742956,
+      "beatIndex": 198.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.6487,
+      "attackStrength": 2.2931
+    },
+    {
+      "time": 93.5,
+      "audioOnset": 96.000454,
+      "gridTime": 95.982952,
+      "beatIndex": 199.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.4575,
+      "attackStrength": 2.8699
+    },
+    {
+      "time": 93.74,
+      "audioOnset": 96.239909,
+      "gridTime": 96.222948,
+      "beatIndex": 199.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.0789,
+      "attackStrength": 1.8016
+    },
+    {
+      "time": 93.979,
+      "audioOnset": 96.479365,
+      "gridTime": 96.462943,
+      "beatIndex": 200.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.2573,
+      "attackStrength": 2.812
+    },
+    {
+      "time": 94.221,
+      "audioOnset": 96.720816,
+      "gridTime": 96.702939,
+      "beatIndex": 200.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.3081,
+      "attackStrength": 2.2094
+    },
+    {
+      "time": 94.462,
+      "audioOnset": 96.962268,
+      "gridTime": 96.942935,
+      "beatIndex": 201.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.0648,
+      "attackStrength": 3.0727
+    },
+    {
+      "time": 94.7,
+      "audioOnset": 97.199728,
+      "gridTime": 97.18293,
+      "beatIndex": 201.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.9887,
+      "attackStrength": 2.6389
+    },
+    {
+      "time": 94.939,
+      "audioOnset": 97.439184,
+      "gridTime": 97.422926,
+      "beatIndex": 202.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2012,
+      "attackStrength": 3.6474
+    },
+    {
+      "time": 95.179,
+      "audioOnset": 97.678639,
+      "gridTime": 97.662921,
+      "beatIndex": 202.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.88,
+      "attackStrength": 2.7799
+    },
+    {
+      "time": 95.42,
+      "audioOnset": 97.920091,
+      "gridTime": 97.902917,
+      "beatIndex": 203.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.8842,
+      "attackStrength": 2.961
+    },
+    {
+      "time": 95.66,
+      "audioOnset": 98.159546,
+      "gridTime": 98.142943,
+      "beatIndex": 203.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.4909,
+      "attackStrength": 2.1211
+    },
+    {
+      "time": 95.899,
+      "audioOnset": 98.399002,
+      "gridTime": 98.382968,
+      "beatIndex": 204.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.9014,
+      "attackStrength": 2.8274
+    },
+    {
+      "time": 96.14,
+      "audioOnset": 98.640454,
+      "gridTime": 98.622994,
+      "beatIndex": 204.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.3569,
+      "attackStrength": 2.0887
+    },
+    {
+      "time": 96.382,
+      "audioOnset": 98.881905,
+      "gridTime": 98.863019,
+      "beatIndex": 205.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.7482,
+      "attackStrength": 3.1178
+    },
+    {
+      "time": 96.621,
+      "audioOnset": 99.121361,
+      "gridTime": 99.103044,
+      "beatIndex": 205.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 3.1887,
+      "attackStrength": 3.0325
+    },
+    {
+      "time": 96.859,
+      "audioOnset": 99.358821,
+      "gridTime": 99.34307,
+      "beatIndex": 206.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.6229,
+      "attackStrength": 4.0917
+    },
+    {
+      "time": 97.098,
+      "audioOnset": 99.598277,
+      "gridTime": 99.583095,
+      "beatIndex": 206.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.0269,
+      "attackStrength": 2.785
+    },
+    {
+      "time": 97.34,
+      "audioOnset": 99.839728,
+      "gridTime": 99.823121,
+      "beatIndex": 207.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.259,
+      "attackStrength": 2.4485
+    },
+    {
+      "time": 97.579,
+      "audioOnset": 100.079184,
+      "gridTime": 100.063147,
+      "beatIndex": 207.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.4876,
+      "attackStrength": 1.8813
+    },
+    {
+      "time": 97.821,
+      "audioOnset": 100.320635,
+      "gridTime": 100.303172,
+      "beatIndex": 208.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.0791,
+      "attackStrength": 2.3208
+    },
+    {
+      "time": 98.058,
+      "audioOnset": 100.558095,
+      "gridTime": 100.543198,
+      "beatIndex": 208.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.8721,
+      "attackStrength": 1.7479
+    },
+    {
+      "time": 98.302,
+      "audioOnset": 100.801542,
+      "gridTime": 100.783223,
+      "beatIndex": 209.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.5436,
+      "attackStrength": 2.942
+    },
+    {
+      "time": 98.539,
+      "audioOnset": 101.039002,
+      "gridTime": 101.023249,
+      "beatIndex": 209.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.7826,
+      "attackStrength": 2.3145
+    },
+    {
+      "time": 98.78,
+      "audioOnset": 101.280454,
+      "gridTime": 101.263274,
+      "beatIndex": 210.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.5718,
+      "attackStrength": 3.6884
+    },
+    {
+      "time": 99.02,
+      "audioOnset": 101.519909,
+      "gridTime": 101.503299,
+      "beatIndex": 210.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.7485,
+      "attackStrength": 2.3164
+    },
+    {
+      "time": 99.259,
+      "audioOnset": 101.759365,
+      "gridTime": 101.743325,
+      "beatIndex": 211.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3248,
+      "attackStrength": 3.1176
+    },
+    {
+      "time": 99.499,
+      "audioOnset": 101.998821,
+      "gridTime": 101.983351,
+      "beatIndex": 211.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.2831,
+      "attackStrength": 2.1864
+    },
+    {
+      "time": 99.738,
+      "audioOnset": 102.238277,
+      "gridTime": 102.223376,
+      "beatIndex": 212.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.9707,
+      "attackStrength": 2.7498
+    },
+    {
+      "time": 99.978,
+      "audioOnset": 102.477732,
+      "gridTime": 102.463381,
+      "beatIndex": 212.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.9497,
+      "attackStrength": 1.5539
+    },
+    {
+      "time": 100.219,
+      "audioOnset": 102.719184,
+      "gridTime": 102.703385,
+      "beatIndex": 213.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.3753,
+      "attackStrength": 2.7647
+    },
+    {
+      "time": 100.463,
+      "audioOnset": 102.96263,
+      "gridTime": 102.94339,
+      "beatIndex": 213.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 3.4639,
+      "attackStrength": 3.092
+    },
+    {
+      "time": 100.7,
+      "audioOnset": 103.200091,
+      "gridTime": 103.183395,
+      "beatIndex": 214.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.4234,
+      "attackStrength": 2.7499
+    },
+    {
+      "time": 100.94,
+      "audioOnset": 103.439546,
+      "gridTime": 103.423399,
+      "beatIndex": 214.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.9655,
+      "attackStrength": 2.448
+    },
+    {
+      "time": 101.179,
+      "audioOnset": 103.679002,
+      "gridTime": 103.663404,
+      "beatIndex": 215.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.53,
+      "attackStrength": 2.3994
+    },
+    {
+      "time": 101.42,
+      "audioOnset": 103.920454,
+      "gridTime": 103.903409,
+      "beatIndex": 215.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.1261,
+      "attackStrength": 1.7168
+    },
+    {
+      "time": 101.66,
+      "audioOnset": 104.159909,
+      "gridTime": 104.143414,
+      "beatIndex": 216.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.2406,
+      "attackStrength": 2.725
+    },
+    {
+      "time": 101.901,
+      "audioOnset": 104.401361,
+      "gridTime": 104.383418,
+      "beatIndex": 216.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.3709,
+      "attackStrength": 2.3463
+    },
+    {
+      "time": 102.141,
+      "audioOnset": 104.640816,
+      "gridTime": 104.623423,
+      "beatIndex": 217.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.8189,
+      "attackStrength": 3.179
+    },
+    {
+      "time": 102.378,
+      "audioOnset": 104.878277,
+      "gridTime": 104.863428,
+      "beatIndex": 217.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 2.3141,
+      "attackStrength": 2.7169
+    },
+    {
+      "time": 102.62,
+      "audioOnset": 105.119728,
+      "gridTime": 105.103432,
+      "beatIndex": 218.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.5085,
+      "attackStrength": 3.8454
+    },
+    {
+      "time": 102.859,
+      "audioOnset": 105.359184,
+      "gridTime": 105.343437,
+      "beatIndex": 218.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.0282,
+      "attackStrength": 2.7421
+    },
+    {
+      "time": 103.101,
+      "audioOnset": 105.600635,
+      "gridTime": 105.583442,
+      "beatIndex": 219.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.4106,
+      "attackStrength": 1.9228
+    },
+    {
+      "time": 103.34,
+      "audioOnset": 105.840091,
+      "gridTime": 105.823446,
+      "beatIndex": 219.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.494,
+      "attackStrength": 2.1976
+    },
+    {
+      "time": 103.58,
+      "audioOnset": 106.079546,
+      "gridTime": 106.063451,
+      "beatIndex": 220.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.9086,
+      "attackStrength": 2.0782
+    },
+    {
+      "time": 103.821,
+      "audioOnset": 106.320998,
+      "gridTime": 106.303456,
+      "beatIndex": 220.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 2.0825,
+      "attackStrength": 1.9503
+    },
+    {
+      "time": 104.06,
+      "audioOnset": 106.560454,
+      "gridTime": 106.54346,
+      "beatIndex": 221.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2192,
+      "attackStrength": 2.4711
+    },
+    {
+      "time": 104.3,
+      "audioOnset": 106.799909,
+      "gridTime": 106.783465,
+      "beatIndex": 221.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 3.4868,
+      "attackStrength": 3.5471
+    },
+    {
+      "time": 104.539,
+      "audioOnset": 107.039365,
+      "gridTime": 107.02347,
+      "beatIndex": 222.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2788,
+      "attackStrength": 3.1976
+    },
+    {
+      "time": 104.781,
+      "audioOnset": 107.280816,
+      "gridTime": 107.263474,
+      "beatIndex": 222.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.3848,
+      "attackStrength": 2.9089
+    },
+    {
+      "time": 105.02,
+      "audioOnset": 107.520272,
+      "gridTime": 107.503479,
+      "beatIndex": 223.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3845,
+      "attackStrength": 2.8423
+    },
+    {
+      "time": 105.258,
+      "audioOnset": 107.757732,
+      "gridTime": 107.743483,
+      "beatIndex": 223.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 0.9794,
+      "attackStrength": 1.8312
+    },
+    {
+      "time": 105.501,
+      "audioOnset": 108.001179,
+      "gridTime": 107.983488,
+      "beatIndex": 224.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.902,
+      "attackStrength": 2.0029
+    },
+    {
+      "time": 105.739,
+      "audioOnset": 108.238639,
+      "gridTime": 108.223493,
+      "beatIndex": 224.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.5299,
+      "attackStrength": 1.496
+    },
+    {
+      "time": 105.98,
+      "audioOnset": 108.480091,
+      "gridTime": 108.463497,
+      "beatIndex": 225.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2252,
+      "attackStrength": 2.7573
+    },
+    {
+      "time": 106.22,
+      "audioOnset": 108.719546,
+      "gridTime": 108.703502,
+      "beatIndex": 225.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.8912,
+      "attackStrength": 2.0057
+    },
+    {
+      "time": 106.459,
+      "audioOnset": 108.959002,
+      "gridTime": 108.943506,
+      "beatIndex": 226.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2244,
+      "attackStrength": 3.6064
+    },
+    {
+      "time": 106.698,
+      "audioOnset": 109.198458,
+      "gridTime": 109.183511,
+      "beatIndex": 226.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.5329,
+      "attackStrength": 2.4156
+    },
+    {
+      "time": 106.94,
+      "audioOnset": 109.439909,
+      "gridTime": 109.423516,
+      "beatIndex": 227.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.394,
+      "attackStrength": 3.214
+    },
+    {
+      "time": 107.179,
+      "audioOnset": 109.679365,
+      "gridTime": 109.66352,
+      "beatIndex": 227.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.1812,
+      "attackStrength": 2.1724
+    },
+    {
+      "time": 107.421,
+      "audioOnset": 109.920816,
+      "gridTime": 109.903525,
+      "beatIndex": 228.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.7327,
+      "attackStrength": 2.3653
+    },
+    {
+      "time": 107.658,
+      "audioOnset": 110.158277,
+      "gridTime": 110.143551,
+      "beatIndex": 228.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.6189,
+      "attackStrength": 1.658
+    },
+    {
+      "time": 107.902,
+      "audioOnset": 110.401723,
+      "gridTime": 110.383576,
+      "beatIndex": 229.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.4402,
+      "attackStrength": 3.1209
+    },
+    {
+      "time": 108.139,
+      "audioOnset": 110.639184,
+      "gridTime": 110.623602,
+      "beatIndex": 229.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.922,
+      "attackStrength": 3.5504
+    },
+    {
+      "time": 108.379,
+      "audioOnset": 110.878639,
+      "gridTime": 110.863627,
+      "beatIndex": 230.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.204,
+      "attackStrength": 2.5528
+    },
+    {
+      "time": 108.618,
+      "audioOnset": 111.118095,
+      "gridTime": 111.103652,
+      "beatIndex": 230.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.8582,
+      "attackStrength": 1.7922
+    },
+    {
+      "time": 108.862,
+      "audioOnset": 111.361542,
+      "gridTime": 111.343678,
+      "beatIndex": 231.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.71,
+      "attackStrength": 2.4805
+    },
+    {
+      "time": 109.099,
+      "audioOnset": 111.599002,
+      "gridTime": 111.583703,
+      "beatIndex": 231.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 0.8683,
+      "attackStrength": 1.5263
+    },
+    {
+      "time": 109.34,
+      "audioOnset": 111.840454,
+      "gridTime": 111.823729,
+      "beatIndex": 232.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.7703,
+      "attackStrength": 2.1346
+    },
+    {
+      "time": 109.58,
+      "audioOnset": 112.079909,
+      "gridTime": 112.063755,
+      "beatIndex": 232.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 2.1901,
+      "attackStrength": 1.8151
+    },
+    {
+      "time": 109.821,
+      "audioOnset": 112.321361,
+      "gridTime": 112.30378,
+      "beatIndex": 233.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.1518,
+      "attackStrength": 3.6049
+    },
+    {
+      "time": 110.061,
+      "audioOnset": 112.560816,
+      "gridTime": 112.543806,
+      "beatIndex": 233.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 2.1106,
+      "attackStrength": 2.4186
+    },
+    {
+      "time": 110.302,
+      "audioOnset": 112.802268,
+      "gridTime": 112.783831,
+      "beatIndex": 234.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3673,
+      "attackStrength": 3.9652
+    },
+    {
+      "time": 110.54,
+      "audioOnset": 113.039728,
+      "gridTime": 113.023857,
+      "beatIndex": 234.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.8985,
+      "attackStrength": 2.6026
+    },
+    {
+      "time": 110.779,
+      "audioOnset": 113.279184,
+      "gridTime": 113.263882,
+      "beatIndex": 235.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.3364,
+      "attackStrength": 2.8209
+    },
+    {
+      "time": 111.021,
+      "audioOnset": 113.520635,
+      "gridTime": 113.503907,
+      "beatIndex": 235.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.5463,
+      "attackStrength": 1.9729
+    },
+    {
+      "time": 111.26,
+      "audioOnset": 113.760091,
+      "gridTime": 113.743933,
+      "beatIndex": 236.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.1135,
+      "attackStrength": 2.1044
+    },
+    {
+      "time": 111.5,
+      "audioOnset": 113.999546,
+      "gridTime": 113.983958,
+      "beatIndex": 236.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.1088,
+      "attackStrength": 1.6701
+    },
+    {
+      "time": 111.741,
+      "audioOnset": 114.240998,
+      "gridTime": 114.223984,
+      "beatIndex": 237.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.7724,
+      "attackStrength": 2.7257
+    },
+    {
+      "time": 111.978,
+      "audioOnset": 114.478458,
+      "gridTime": 114.46398,
+      "beatIndex": 237.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.6843,
+      "attackStrength": 2.2857
+    },
+    {
+      "time": 112.22,
+      "audioOnset": 114.719909,
+      "gridTime": 114.703975,
+      "beatIndex": 238.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.4781,
+      "attackStrength": 3.5212
+    },
+    {
+      "time": 112.457,
+      "audioOnset": 114.95737,
+      "gridTime": 114.943971,
+      "beatIndex": 238.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.9806,
+      "attackStrength": 2.2542
+    },
+    {
+      "time": 112.701,
+      "audioOnset": 115.200816,
+      "gridTime": 115.183966,
+      "beatIndex": 239.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.4247,
+      "attackStrength": 2.7008
+    },
+    {
+      "time": 112.938,
+      "audioOnset": 115.438277,
+      "gridTime": 115.423962,
+      "beatIndex": 239.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.2874,
+      "attackStrength": 1.7961
+    },
+    {
+      "time": 113.18,
+      "audioOnset": 115.679728,
+      "gridTime": 115.663958,
+      "beatIndex": 240.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.8373,
+      "attackStrength": 2.2916
+    },
+    {
+      "time": 113.417,
+      "audioOnset": 115.917188,
+      "gridTime": 115.903953,
+      "beatIndex": 240.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.661,
+      "attackStrength": 1.8103
+    },
+    {
+      "time": 113.661,
+      "audioOnset": 116.160635,
+      "gridTime": 116.143949,
+      "beatIndex": 241.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2386,
+      "attackStrength": 2.8563
+    },
+    {
+      "time": 113.898,
+      "audioOnset": 116.398095,
+      "gridTime": 116.383945,
+      "beatIndex": 241.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.9404,
+      "attackStrength": 2.1923
+    },
+    {
+      "time": 114.14,
+      "audioOnset": 116.639546,
+      "gridTime": 116.62394,
+      "beatIndex": 242.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3904,
+      "attackStrength": 2.9309
+    },
+    {
+      "time": 114.379,
+      "audioOnset": 116.879002,
+      "gridTime": 116.863936,
+      "beatIndex": 242.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.5753,
+      "attackStrength": 2.3082
+    },
+    {
+      "time": 114.62,
+      "audioOnset": 117.120454,
+      "gridTime": 117.103932,
+      "beatIndex": 243.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.4445,
+      "attackStrength": 3.0567
+    },
+    {
+      "time": 114.86,
+      "audioOnset": 117.359909,
+      "gridTime": 117.343927,
+      "beatIndex": 243.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.2265,
+      "attackStrength": 2.3132
+    },
+    {
+      "time": 115.099,
+      "audioOnset": 117.599365,
+      "gridTime": 117.583923,
+      "beatIndex": 244.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 1.785,
+      "attackStrength": 2.1895
+    },
+    {
+      "time": 115.337,
+      "audioOnset": 117.836825,
+      "gridTime": 117.823918,
+      "beatIndex": 244.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.6909,
+      "attackStrength": 1.5232
+    },
+    {
+      "time": 115.58,
+      "audioOnset": 118.080272,
+      "gridTime": 118.063914,
+      "beatIndex": 245.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.3847,
+      "attackStrength": 2.8297
+    },
+    {
+      "time": 115.818,
+      "audioOnset": 118.317732,
+      "gridTime": 118.304106,
+      "beatIndex": 245.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.9668,
+      "attackStrength": 3.2298
+    },
+    {
+      "time": 116.063,
+      "audioOnset": 118.563175,
+      "gridTime": 118.544298,
+      "beatIndex": 246.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.3605,
+      "attackStrength": 3.258
+    },
+    {
+      "time": 116.299,
+      "audioOnset": 118.798639,
+      "gridTime": 118.784491,
+      "beatIndex": 246.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.082,
+      "attackStrength": 2.0267
+    },
+    {
+      "time": 116.542,
+      "audioOnset": 119.042086,
+      "gridTime": 119.024683,
+      "beatIndex": 247.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.7108,
+      "attackStrength": 2.8372
+    },
+    {
+      "time": 116.78,
+      "audioOnset": 119.279546,
+      "gridTime": 119.264875,
+      "beatIndex": 247.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 0.8578,
+      "attackStrength": 1.4356
+    },
+    {
+      "time": 117.019,
+      "audioOnset": 119.519002,
+      "gridTime": 119.505067,
+      "beatIndex": 248.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.8752,
+      "attackStrength": 1.9876
+    },
+    {
+      "time": 117.26,
+      "audioOnset": 119.760454,
+      "gridTime": 119.745259,
+      "beatIndex": 248.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.0658,
+      "attackStrength": 1.6467
+    },
+    {
+      "time": 117.502,
+      "audioOnset": 120.001905,
+      "gridTime": 119.985451,
+      "beatIndex": 249.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.0597,
+      "attackStrength": 3.5501
+    },
+    {
+      "time": 117.739,
+      "audioOnset": 120.239365,
+      "gridTime": 120.225644,
+      "beatIndex": 249.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 2.1427,
+      "attackStrength": 2.3767
+    },
+    {
+      "time": 117.981,
+      "audioOnset": 120.480816,
+      "gridTime": 120.465836,
+      "beatIndex": 250.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.4456,
+      "attackStrength": 3.9322
+    },
+    {
+      "time": 118.218,
+      "audioOnset": 120.718277,
+      "gridTime": 120.706028,
+      "beatIndex": 250.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 1.9572,
+      "attackStrength": 2.8717
+    },
+    {
+      "time": 118.46,
+      "audioOnset": 120.959728,
+      "gridTime": 120.94622,
+      "beatIndex": 251.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.5658,
+      "attackStrength": 1.8142
+    },
+    {
+      "time": 118.699,
+      "audioOnset": 121.199184,
+      "gridTime": 121.186412,
+      "beatIndex": 251.5,
+      "main": false,
+      "kind": "snare",
+      "strength": 1.5249,
+      "attackStrength": 2.1437
+    },
+    {
+      "time": 118.941,
+      "audioOnset": 121.440635,
+      "gridTime": 121.426605,
+      "beatIndex": 252.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.7765,
+      "attackStrength": 1.9251
+    },
+    {
+      "time": 119.182,
+      "audioOnset": 121.682086,
+      "gridTime": 121.666797,
+      "beatIndex": 252.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.1673,
+      "attackStrength": 1.9167
+    },
+    {
+      "time": 119.42,
+      "audioOnset": 121.919546,
+      "gridTime": 121.906989,
+      "beatIndex": 253.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.4461,
+      "attackStrength": 2.0222
+    },
+    {
+      "time": 119.661,
+      "audioOnset": 122.160998,
+      "gridTime": 122.147181,
+      "beatIndex": 253.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 3.238,
+      "attackStrength": 3.2636
+    },
+    {
+      "time": 119.9,
+      "audioOnset": 122.400454,
+      "gridTime": 122.387373,
+      "beatIndex": 254.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 2.5407,
+      "attackStrength": 2.9552
+    },
+    {
+      "time": 120.14,
+      "audioOnset": 122.639909,
+      "gridTime": 122.627566,
+      "beatIndex": 254.5,
+      "main": false,
+      "kind": "hat",
+      "strength": 2.0969,
+      "attackStrength": 2.8862
+    },
+    {
+      "time": 120.381,
+      "audioOnset": 122.881361,
+      "gridTime": 122.867758,
+      "beatIndex": 255.0,
+      "main": true,
+      "kind": "snare",
+      "strength": 2.2765,
+      "attackStrength": 2.1439
+    },
+    {
+      "time": 121.1,
+      "audioOnset": 123.599728,
+      "gridTime": 123.588334,
+      "beatIndex": 256.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.2368,
+      "attackStrength": 0.856
+    },
+    {
+      "time": 121.581,
+      "audioOnset": 124.080635,
+      "gridTime": 124.068718,
+      "beatIndex": 257.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.3903,
+      "attackStrength": 0.8782
+    },
+    {
+      "time": 122.081,
+      "audioOnset": 124.581497,
+      "gridTime": 124.549103,
+      "beatIndex": 258.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.4472,
+      "attackStrength": 1.1429
+    },
+    {
+      "time": 123.023,
+      "audioOnset": 125.523356,
+      "gridTime": 125.509872,
+      "beatIndex": 260.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.5856,
+      "attackStrength": 0.9417
+    },
+    {
+      "time": 123.5,
+      "audioOnset": 126.000272,
+      "gridTime": 125.990256,
+      "beatIndex": 261.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.2792,
+      "attackStrength": 0.9251
+    },
+    {
+      "time": 123.756,
+      "audioOnset": 126.255692,
+      "gridTime": 126.230448,
+      "beatIndex": 262.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.1022,
+      "attackStrength": 0.7238
+    },
+    {
+      "time": 123.999,
+      "audioOnset": 126.499138,
+      "gridTime": 126.470265,
+      "beatIndex": 262.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.3718,
+      "attackStrength": 1.3636
+    },
+    {
+      "time": 124.941,
+      "audioOnset": 127.440998,
+      "gridTime": 127.429534,
+      "beatIndex": 264.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.4496,
+      "attackStrength": 1.3122
+    },
+    {
+      "time": 125.42,
+      "audioOnset": 127.919909,
+      "gridTime": 127.909168,
+      "beatIndex": 265.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.4139,
+      "attackStrength": 1.1881
+    },
+    {
+      "time": 125.901,
+      "audioOnset": 128.400816,
+      "gridTime": 128.388802,
+      "beatIndex": 266.5,
+      "main": false,
+      "kind": "kick",
+      "strength": 1.3518,
+      "attackStrength": 1.8403
+    },
+    {
+      "time": 126.154,
+      "audioOnset": 128.65424,
+      "gridTime": 128.628619,
+      "beatIndex": 267.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.2174,
+      "attackStrength": 0.8893
+    },
+    {
+      "time": 126.619,
+      "audioOnset": 129.119184,
+      "gridTime": 129.108253,
+      "beatIndex": 268.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.127,
+      "attackStrength": 0.693
+    },
+    {
+      "time": 127.102,
+      "audioOnset": 129.602086,
+      "gridTime": 129.587888,
+      "beatIndex": 269.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.2487,
+      "attackStrength": 0.8307
+    },
+    {
+      "time": 127.581,
+      "audioOnset": 130.080998,
+      "gridTime": 130.067522,
+      "beatIndex": 270.0,
+      "main": true,
+      "kind": "kick",
+      "strength": 1.5625,
+      "attackStrength": 1.1796
+    }
+  ],
+  "hardRevision": {
+    "version": "comfortable-rhythm-v3",
+    "added": 37,
+    "sixteenths": 0,
+    "events": [
+      {
+        "time": 11.674,
+        "band": "low",
+        "audioOnset": 14.174422,
+        "anchorMidpoint": 14.161452,
+        "subdivision": 8,
+        "strength": 1.5732,
+        "contrast": 10.6251,
+        "attackStrength": 1.598
+      },
+      {
+        "time": 14.536,
+        "band": "high",
+        "audioOnset": 17.035918,
+        "anchorMidpoint": 17.040907,
+        "subdivision": 8,
+        "strength": 1.5328,
+        "contrast": 18.6773,
+        "attackStrength": 2.1488
+      },
+      {
+        "time": 18.377,
+        "band": "high",
+        "audioOnset": 20.877188,
+        "anchorMidpoint": 20.881179,
+        "subdivision": 8,
+        "strength": 1.4797,
+        "contrast": 14.9273,
+        "attackStrength": 2.2746
+      },
+      {
+        "time": 23.677,
+        "band": "low",
+        "audioOnset": 26.177143,
+        "anchorMidpoint": 26.161179,
+        "subdivision": 8,
+        "strength": 1.3824,
+        "contrast": 10.9683,
+        "attackStrength": 1.7369
+      },
+      {
+        "time": 26.06,
+        "band": "low",
+        "audioOnset": 28.559728,
+        "anchorMidpoint": 28.561723,
+        "subdivision": 8,
+        "strength": 1.2621,
+        "contrast": 5.1493,
+        "attackStrength": 1.0993
+      },
+      {
+        "time": 28.937,
+        "band": "high",
+        "audioOnset": 31.437188,
+        "anchorMidpoint": 31.441179,
+        "subdivision": 8,
+        "strength": 1.3824,
+        "contrast": 19.5288,
+        "attackStrength": 1.7408
+      },
+      {
+        "time": 31.338,
+        "band": "high",
+        "audioOnset": 33.837732,
+        "anchorMidpoint": 33.840725,
+        "subdivision": 8,
+        "strength": 1.5898,
+        "contrast": 23.3515,
+        "attackStrength": 2.6834
+      },
+      {
+        "time": 35.658,
+        "band": "high",
+        "audioOnset": 38.157914,
+        "anchorMidpoint": 38.160908,
+        "subdivision": 8,
+        "strength": 1.5853,
+        "contrast": 17.0477,
+        "attackStrength": 2.5782
+      },
+      {
+        "time": 38.058,
+        "band": "high",
+        "audioOnset": 40.558458,
+        "anchorMidpoint": 40.561452,
+        "subdivision": 8,
+        "strength": 1.1736,
+        "contrast": 5.5049,
+        "attackStrength": 2.3182
+      },
+      {
+        "time": 40.457,
+        "band": "high",
+        "audioOnset": 42.957007,
+        "anchorMidpoint": 42.963991,
+        "subdivision": 8,
+        "strength": 1.2042,
+        "contrast": 6.8335,
+        "attackStrength": 1.8673
+      },
+      {
+        "time": 43.35,
+        "band": "low",
+        "audioOnset": 45.850431,
+        "anchorMidpoint": 45.841451,
+        "subdivision": 8,
+        "strength": 1.1886,
+        "contrast": 11.1844,
+        "attackStrength": 2.65
+      },
+      {
+        "time": 45.737,
+        "band": "high",
+        "audioOnset": 48.237007,
+        "anchorMidpoint": 48.239002,
+        "subdivision": 8,
+        "strength": 1.2841,
+        "contrast": 9.0401,
+        "attackStrength": 2.4555
+      },
+      {
+        "time": 48.138,
+        "band": "high",
+        "audioOnset": 50.637551,
+        "anchorMidpoint": 50.640545,
+        "subdivision": 8,
+        "strength": 1.6828,
+        "contrast": 28.6791,
+        "attackStrength": 2.123
+      },
+      {
+        "time": 51.017,
+        "band": "high",
+        "audioOnset": 53.517007,
+        "anchorMidpoint": 53.52,
+        "subdivision": 8,
+        "strength": 1.5273,
+        "contrast": 16.5658,
+        "attackStrength": 2.7372
+      },
+      {
+        "time": 54.377,
+        "band": "high",
+        "audioOnset": 56.87737,
+        "anchorMidpoint": 56.88136,
+        "subdivision": 8,
+        "strength": 1.6335,
+        "contrast": 30.3611,
+        "attackStrength": 2.7459
+      },
+      {
+        "time": 56.778,
+        "band": "high",
+        "audioOnset": 59.277914,
+        "anchorMidpoint": 59.280907,
+        "subdivision": 8,
+        "strength": 1.5014,
+        "contrast": 14.1115,
+        "attackStrength": 2.5734
+      },
+      {
+        "time": 59.657,
+        "band": "high",
+        "audioOnset": 62.15737,
+        "anchorMidpoint": 62.162358,
+        "subdivision": 8,
+        "strength": 1.2358,
+        "contrast": 7.792,
+        "attackStrength": 1.882
+      },
+      {
+        "time": 62.058,
+        "band": "high",
+        "audioOnset": 64.557914,
+        "anchorMidpoint": 64.561905,
+        "subdivision": 8,
+        "strength": 1.6005,
+        "contrast": 17.7816,
+        "attackStrength": 2.841
+      },
+      {
+        "time": 64.937,
+        "band": "high",
+        "audioOnset": 67.43737,
+        "anchorMidpoint": 67.442358,
+        "subdivision": 8,
+        "strength": 1.0561,
+        "contrast": 7.1734,
+        "attackStrength": 2.0103
+      },
+      {
+        "time": 68.298,
+        "band": "high",
+        "audioOnset": 70.797732,
+        "anchorMidpoint": 70.800725,
+        "subdivision": 8,
+        "strength": 1.7192,
+        "contrast": 22.7325,
+        "attackStrength": 2.8773
+      },
+      {
+        "time": 71.177,
+        "band": "high",
+        "audioOnset": 73.677188,
+        "anchorMidpoint": 73.681179,
+        "subdivision": 8,
+        "strength": 1.4011,
+        "contrast": 18.2046,
+        "attackStrength": 1.8065
+      },
+      {
+        "time": 73.594,
+        "band": "low",
+        "audioOnset": 76.093696,
+        "anchorMidpoint": 76.081724,
+        "subdivision": 8,
+        "strength": 2.799,
+        "contrast": 17.9693,
+        "attackStrength": 2.6563
+      },
+      {
+        "time": 76.938,
+        "band": "high",
+        "audioOnset": 79.438095,
+        "anchorMidpoint": 79.442086,
+        "subdivision": 8,
+        "strength": 1.0751,
+        "contrast": 5.4822,
+        "attackStrength": 2.2207
+      },
+      {
+        "time": 81.737,
+        "band": "high",
+        "audioOnset": 84.237188,
+        "anchorMidpoint": 84.241179,
+        "subdivision": 8,
+        "strength": 1.5832,
+        "contrast": 20.4227,
+        "attackStrength": 2.4225
+      },
+      {
+        "time": 85.096,
+        "band": "high",
+        "audioOnset": 87.595556,
+        "anchorMidpoint": 87.601542,
+        "subdivision": 8,
+        "strength": 1.2265,
+        "contrast": 6.1043,
+        "attackStrength": 2.5531
+      },
+      {
+        "time": 89.418,
+        "band": "high",
+        "audioOnset": 91.917732,
+        "anchorMidpoint": 91.920726,
+        "subdivision": 8,
+        "strength": 1.4543,
+        "contrast": 29.0865,
+        "attackStrength": 2.241
+      },
+      {
+        "time": 92.778,
+        "band": "high",
+        "audioOnset": 95.278095,
+        "anchorMidpoint": 95.280091,
+        "subdivision": 8,
+        "strength": 1.7103,
+        "contrast": 34.2059,
+        "attackStrength": 2.8864
+      },
+      {
+        "time": 97.096,
+        "band": "high",
+        "audioOnset": 99.596281,
+        "anchorMidpoint": 99.599275,
+        "subdivision": 8,
+        "strength": 1.5371,
+        "contrast": 16.5931,
+        "attackStrength": 2.6925
+      },
+      {
+        "time": 99.497,
+        "band": "high",
+        "audioOnset": 101.996825,
+        "anchorMidpoint": 101.998821,
+        "subdivision": 8,
+        "strength": 1.3229,
+        "contrast": 9.768,
+        "attackStrength": 2.3732
+      },
+      {
+        "time": 101.897,
+        "band": "high",
+        "audioOnset": 104.39737,
+        "anchorMidpoint": 104.400362,
+        "subdivision": 8,
+        "strength": 1.448,
+        "contrast": 21.8723,
+        "attackStrength": 1.9246
+      },
+      {
+        "time": 104.312,
+        "band": "low",
+        "audioOnset": 106.811882,
+        "anchorMidpoint": 106.799909,
+        "subdivision": 8,
+        "strength": 2.2149,
+        "contrast": 14.7708,
+        "attackStrength": 2.3789
+      },
+      {
+        "time": 107.177,
+        "band": "high",
+        "audioOnset": 109.67737,
+        "anchorMidpoint": 109.680363,
+        "subdivision": 8,
+        "strength": 1.2773,
+        "contrast": 10.0974,
+        "attackStrength": 2.2752
+      },
+      {
+        "time": 109.59,
+        "band": "low",
+        "audioOnset": 112.089887,
+        "anchorMidpoint": 112.080907,
+        "subdivision": 8,
+        "strength": 1.6463,
+        "contrast": 13.6716,
+        "attackStrength": 2.4962
+      },
+      {
+        "time": 112.471,
+        "band": "low",
+        "audioOnset": 114.971338,
+        "anchorMidpoint": 114.960363,
+        "subdivision": 8,
+        "strength": 1.6342,
+        "contrast": 6.8838,
+        "attackStrength": 2.0272
+      },
+      {
+        "time": 114.858,
+        "band": "high",
+        "audioOnset": 117.357914,
+        "anchorMidpoint": 117.35991,
+        "subdivision": 8,
+        "strength": 1.2621,
+        "contrast": 8.8527,
+        "attackStrength": 2.2686
+      },
+      {
+        "time": 117.27,
+        "band": "low",
+        "audioOnset": 119.770431,
+        "anchorMidpoint": 119.760453,
+        "subdivision": 8,
+        "strength": 1.4983,
+        "contrast": 13.9277,
+        "attackStrength": 2.3432
+      },
+      {
+        "time": 119.665,
+        "band": "low",
+        "audioOnset": 122.164989,
+        "anchorMidpoint": 122.16,
+        "subdivision": 8,
+        "strength": 2.3278,
+        "contrast": 12.9121,
+        "attackStrength": 2.5856
+      }
+    ]
+  },
+  "introEvents": [
+    {
+      "time": 0.697,
+      "audioOnset": 3.19737,
+      "strength": 0.302021
+    },
+    {
+      "time": 1.118,
+      "audioOnset": 3.618413,
+      "strength": 0.29108
+    },
+    {
+      "time": 1.701,
+      "audioOnset": 4.201088,
+      "strength": 0.464758
+    },
+    {
+      "time": 2.539,
+      "audioOnset": 5.039184,
+      "strength": 0.319885
+    },
+    {
+      "time": 3.02,
+      "audioOnset": 5.520091,
+      "strength": 0.462867
+    },
+    {
+      "time": 4.018,
+      "audioOnset": 6.517823,
+      "strength": 0.346917
+    },
+    {
+      "time": 4.459,
+      "audioOnset": 6.958821,
+      "strength": 0.202945
+    },
+    {
+      "time": 4.978,
+      "audioOnset": 7.477642,
+      "strength": 0.379963
+    },
+    {
+      "time": 5.594,
+      "audioOnset": 8.09424,
+      "strength": 0.31071
+    },
+    {
+      "time": 6.402,
+      "audioOnset": 8.902404,
+      "strength": 0.301554
+    },
+    {
+      "time": 6.881,
+      "audioOnset": 9.381315,
+      "strength": 0.316506
+    },
+    {
+      "time": 7.46,
+      "audioOnset": 9.96,
+      "strength": 0.249683
+    },
+    {
+      "time": 7.897,
+      "audioOnset": 10.397007,
+      "strength": 0.302001
+    },
+    {
+      "time": 8.378,
+      "audioOnset": 10.877914,
+      "strength": 0.289794
+    }
+  ]
+}

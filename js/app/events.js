@@ -141,6 +141,7 @@ function bindAppEvents() {
             return;
         const selected = Number(e.target.value);
         game.track = Number.isInteger(selected) && TRACKS[selected] ? selected : 0;
+        game.mode = 'gentle';
         stopGame(true);
     };
     $('rhythmGuide').onclick = () => {

@@ -84,6 +84,27 @@ const server = http.createServer((req, res) => {
     assert.equal(png.readUInt32BE(16), 900);
     const item = manifest.find(m => m.id === 'cp_audition');
     assert.equal(png.readUInt32BE(20), Math.round(820 * (item.crop[3] - item.crop[1]) / (item.crop[2] - item.crop[0])) + 246);
+    // Direct HTML opening really taints the canvas: offer the same artwork for download.
+    const local = await browser.newPage();
+    await local.goto(require('node:url').pathToFileURL(path.join(root, 'index.html')).href);
+    await local.evaluate(async () => {
+      state.memories.push('cp6_he');
+      showMemory('cp6_he');
+      await saveMemoryPhoto(MEMORIES.find(m => m.id === 'cp6_he'));
+    });
+    assert(await local.getByText('浏览器限制了纪念图合成。', { exact: false }).count());
+    const original = local.locator('#modalBackdrop a[download]');
+    const source = catalog.ASSETS[catalog.MEMORIES.find(m => m.id === 'cp6_he').asset];
+    assert.equal(await original.getAttribute('href'), source);
+    // Chromium opens file:// links rather than honoring the download attribute.
+    const originalWindow = local.waitForEvent('popup');
+    await original.evaluate(a => a.click());
+    const openedOriginal = await originalWindow;
+    await openedOriginal.waitForLoadState();
+    assert.equal(openedOriginal.url(), require('node:url').pathToFileURL(path.join(root, source)).href);
+    assert(await openedOriginal.locator('img').evaluate(async img => { await img.decode(); return img.naturalWidth > 0; }));
+    await openedOriginal.close();
+    await local.close();
     assert.deepEqual(errors, []);
     console.log(`PASS: ${catalog.MEMORIES.length} image mappings, 64 original crops, locked guards, save compatibility, desktop/mobile thumbnail/detail and PNG download.`);
   } finally { await browser.close(); await new Promise(resolve => server.close(resolve)); }

@@ -132,8 +132,40 @@
     "chapter": 1,
     "scene": "s_conflict",
     "title": "散场后的争执",
-    "asset": "assets/chronicle/scenes/scene_1_s_conflict.webp",
-    "source": "assets/chronicle/scenes/source/02-rehearsal.png",
+    "asset": "assets/chronicle/scenes/scene_1_s_conflict-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-19-qa-202610.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-19-qa.txt"
+  },
+  {
+    "id": "scene_1_s_fei1",
+    "chapter": 1,
+    "scene": "s_fei1",
+    "title": "用和声还给你",
+    "asset": "assets/chronicle/scenes/scene_1_s_fei1-bf202610.webp",
+    "source": "assets/chronicle/personal/source/bf-14-202610.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-14.txt"
+  },
+  {
+    "id": "scene_1_s_fei2",
+    "chapter": 1,
+    "scene": "s_fei2",
+    "title": "没有说完的话",
+    "asset": "assets/chronicle/scenes/scene_1_s_fei2-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-15-202610.png",
     "panel": 1,
     "crop": [
       2,
@@ -141,39 +173,7 @@
       442,
       442
     ],
-    "prompt": "docs/imagegen/chronicle/02-rehearsal.txt"
-  },
-  {
-    "id": "scene_1_s_fei1",
-    "chapter": 1,
-    "scene": "s_fei1",
-    "title": "用和声还给你",
-    "asset": "assets/chronicle/scenes/scene_1_s_fei1.webp",
-    "source": "assets/chronicle/scenes/source/02-rehearsal.png",
-    "panel": 2,
-    "crop": [
-      446,
-      2,
-      885,
-      442
-    ],
-    "prompt": "docs/imagegen/chronicle/02-rehearsal.txt"
-  },
-  {
-    "id": "scene_1_s_fei2",
-    "chapter": 1,
-    "scene": "s_fei2",
-    "title": "没有说完的话",
-    "asset": "assets/chronicle/scenes/scene_1_s_fei2.webp",
-    "source": "assets/chronicle/scenes/source/02-rehearsal.png",
-    "panel": 3,
-    "crop": [
-      889,
-      2,
-      1328,
-      442
-    ],
-    "prompt": "docs/imagegen/chronicle/02-rehearsal.txt"
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-15.txt"
   },
   {
     "id": "scene_1_practice_partner",
@@ -452,16 +452,16 @@
     "chapter": 4,
     "scene": "c4_bao",
     "title": "我帮你唱和声",
-    "asset": "assets/chronicle/scenes/scene_4_c4_bao.webp",
-    "source": "assets/chronicle/scenes/source/04-theatre.png",
-    "panel": 5,
+    "asset": "assets/chronicle/scenes/scene_4_c4_bao-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-15-202610.png",
+    "panel": 2,
     "crop": [
-      2,
       446,
-      442,
-      885
+      2,
+      885,
+      442
     ],
-    "prompt": "docs/imagegen/chronicle/04-theatre.txt"
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-15.txt"
   },
   {
     "id": "scene_4_c4_band_zhou",
@@ -548,16 +548,16 @@
     "chapter": 5,
     "scene": "c5_band_bao",
     "title": "纸袋里露出的布料",
-    "asset": "assets/chronicle/scenes/scene_5_c5_band_bao.webp",
-    "source": "assets/chronicle/scenes/source/06-character-fixes.png",
-    "panel": 5,
+    "asset": "assets/chronicle/scenes/scene_5_c5_band_bao-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-19-qa-202610.png",
+    "panel": 6,
     "crop": [
-      2,
       446,
-      442,
+      446,
+      885,
       885
     ],
-    "prompt": "docs/imagegen/chronicle/06-character-fixes.txt"
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-19-qa.txt"
   },
   {
     "id": "scene_5_weekly_prep",
@@ -1604,32 +1604,32 @@
     "chapter": 4,
     "scene": "c4_he",
     "title": "返场时一起鞠躬",
-    "asset": "assets/chronicle/scenes/scene_4_c4_he.webp",
-    "source": "assets/chronicle/scenes/source/14-story-completion.png",
-    "panel": 2,
+    "asset": "assets/chronicle/scenes/scene_4_c4_he-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-19-qa-202610.png",
+    "panel": 4,
     "crop": [
-      358,
+      1332,
       2,
-      885,
+      1772,
       442
     ],
-    "prompt": "docs/imagegen/chronicle/14-story-completion.txt"
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-19-qa.txt"
   },
   {
     "id": "scene_4_c4_te",
     "chapter": 4,
     "scene": "c4_te",
     "title": "谢幕后的心事",
-    "asset": "assets/chronicle/scenes/scene_4_c4_te.webp",
-    "source": "assets/chronicle/scenes/source/14-story-completion.png",
-    "panel": 3,
+    "asset": "assets/chronicle/scenes/scene_4_c4_te-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-19-qa-202610.png",
+    "panel": 5,
     "crop": [
-      889,
       2,
-      1328,
-      442
+      446,
+      442,
+      885
     ],
-    "prompt": "docs/imagegen/chronicle/14-story-completion.txt"
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-19-qa.txt"
   },
   {
     "id": "scene_4_c4_fail",
@@ -1700,32 +1700,32 @@
     "chapter": 4,
     "scene": "c4_bao_a",
     "title": "像洗过的天空",
-    "asset": "assets/chronicle/scenes/scene_4_c4_bao_a.webp",
-    "source": "assets/chronicle/scenes/source/14-story-completion.png",
-    "panel": 8,
+    "asset": "assets/chronicle/scenes/scene_4_c4_bao_a-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-15-202610.png",
+    "panel": 6,
     "crop": [
-      1332,
       446,
-      1772,
+      446,
+      885,
       885
     ],
-    "prompt": "docs/imagegen/chronicle/14-story-completion.txt"
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-15.txt"
   },
   {
     "id": "scene_4_c4_bao_b",
     "chapter": 4,
     "scene": "c4_bao_b",
     "title": "我站他旁边就行",
-    "asset": "assets/chronicle/scenes/scene_4_c4_bao_b.webp",
-    "source": "assets/chronicle/scenes/source/15-story-completion.png",
-    "panel": 1,
+    "asset": "assets/chronicle/scenes/scene_4_c4_bao_b-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-15-202610.png",
+    "panel": 7,
     "crop": [
-      2,
-      2,
-      442,
-      442
+      889,
+      446,
+      1328,
+      885
     ],
-    "prompt": "docs/imagegen/chronicle/15-story-completion.txt"
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-15.txt"
   },
   {
     "id": "scene_4_c4_qiqi_a",
@@ -1844,8 +1844,24 @@
     "chapter": 4,
     "scene": "b4_bao_a",
     "title": "把心情也唱进去",
-    "asset": "assets/chronicle/scenes/scene_4_b4_bao_a.webp",
-    "source": "assets/chronicle/scenes/source/16-story-completion.png",
+    "asset": "assets/chronicle/scenes/scene_4_b4_bao_a-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-15-202610.png",
+    "panel": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-15.txt"
+  },
+  {
+    "id": "scene_4_b4_bao_b",
+    "chapter": 4,
+    "scene": "b4_bao_b",
+    "title": "半瓶蜂蜜水",
+    "asset": "assets/chronicle/scenes/scene_4_b4_bao_b-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-16-202610.png",
     "panel": 1,
     "crop": [
       2,
@@ -1853,23 +1869,7 @@
       442,
       442
     ],
-    "prompt": "docs/imagegen/chronicle/16-story-completion.txt"
-  },
-  {
-    "id": "scene_4_b4_bao_b",
-    "chapter": 4,
-    "scene": "b4_bao_b",
-    "title": "半瓶蜂蜜水",
-    "asset": "assets/chronicle/scenes/scene_4_b4_bao_b.webp",
-    "source": "assets/chronicle/scenes/source/16-story-completion.png",
-    "panel": 2,
-    "crop": [
-      446,
-      2,
-      885,
-      442
-    ],
-    "prompt": "docs/imagegen/chronicle/16-story-completion.txt"
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-16.txt"
   },
   {
     "id": "scene_4_c4_band_lemon",
@@ -1892,16 +1892,16 @@
     "chapter": 4,
     "scene": "c4_band_bao",
     "title": "空剧场里的回声",
-    "asset": "assets/chronicle/scenes/scene_4_c4_band_bao.webp",
-    "source": "assets/chronicle/scenes/source/16-story-completion.png",
-    "panel": 4,
+    "asset": "assets/chronicle/scenes/scene_4_c4_band_bao-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-16-202610.png",
+    "panel": 2,
     "crop": [
-      1332,
+      446,
       2,
-      1772,
+      885,
       442
     ],
-    "prompt": "docs/imagegen/chronicle/16-story-completion.txt"
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-16.txt"
   },
   {
     "id": "scene_4_b_live",
@@ -2260,8 +2260,8 @@
     "chapter": 1,
     "scene": "s_conflict",
     "title": "在门口擦肩而过",
-    "asset": "assets/chronicle/scenes/scene_1_s_conflict_meeting.webp",
-    "source": "assets/chronicle/scenes/source/19-story-completion.png",
+    "asset": "assets/chronicle/scenes/scene_1_s_conflict_meeting-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-16-202610.png",
     "panel": 3,
     "crop": [
       889,
@@ -2269,7 +2269,7 @@
       1328,
       442
     ],
-    "prompt": "docs/imagegen/chronicle/19-story-completion.txt"
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-16.txt"
   },
   {
     "id": "scene_5_c5_intro_wind",

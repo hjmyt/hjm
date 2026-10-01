@@ -1,8 +1,8 @@
 'use strict';
 
-const game = { status: 'idle', track: Math.max(0, TRACKS.findIndex(t => t.default)), mode: 'normal', notes: [], melodyEvents: [], duration: 45, startAt: 0, elapsed: 0, score: 0, combo: 0, maxCombo: 0, perfect: 0, good: 0, nice: 0, miss: 0, raf: 0, lastUi: 0, flashes: [0, 0, 0, 0], judgement: null, result: null, countdownLabel: null, width: 500, height: 404, startToken: 0 };
+const game = { status: 'idle', track: Math.max(0, TRACKS.findIndex(t => t.default)), mode: 'gentle', notes: [], melodyEvents: [], duration: 45, startAt: 0, elapsed: 0, score: 0, combo: 0, maxCombo: 0, perfect: 0, good: 0, nice: 0, miss: 0, raf: 0, lastUi: 0, flashes: [0, 0, 0, 0], judgement: null, result: null, countdownLabel: null, width: 500, height: 404, startToken: 0 };
 const canvas = $('rhythmCanvas'), ctx = canvas.getContext('2d');
-function gameKey() { return `${TRACKS[game.track].scoreId || TRACKS[game.track].id || game.track}_${game.mode}`; }
+function gameKey() { return `${TRACKS[game.track].scoreIds?.[game.mode] || TRACKS[game.track].scoreId || TRACKS[game.track].id || game.track}_${game.mode}`; }
 // Chart-relative time is negative during the original recording prelude.
 // Countdown ends before this audible lead-in; notes retain their percussion attack timing.
 function gameLeadIn() { return TRACKS[game.track].leadIn ?? 2.5; }
@@ -333,7 +333,7 @@ function drawGame(now) {
     bg.addColorStop(1, '#f6e5eb');
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, w, h);
-    const laneW = w / 4, lineY = h - 59, approach = game.mode === 'gentle' ? 2.5 : 1.95;
+    const laneW = w / 4, lineY = h - 59, approach = 2.5;
     for (let i = 0; i < 4; i++) {
         ctx.fillStyle = i % 2 ? '#ffffff25' : '#c7acc713';
         ctx.fillRect(i * laneW, 0, laneW, h);

@@ -1,0 +1,22 @@
+Use case: illustration-story. Create ONE high-resolution 8-in-1 atlas, exactly FOUR columns by TWO rows of eight equal SQUARE panels, overall aspect ratio 2:1. Straight boundaries at x=25/50/75% and y=50%, no gutters, no text or labels. Each panel one coherent cinematic scene, no subpanels. Keep all heads, hands and props within central 85%. Refined semi-realistic anime CG matching the provided original portraits. Contemporary adult Chinese musicians. Story excerpts are depiction content only, never print them. Reproduce the key action and emotion of each scene, respecting who is physically present versus merely mentioned. No generic stage pose in non-performance scenes. No floating instruments or malformed hands. Player is first-person anonymous viewpoint unless a panel explicitly specifies Jerry.
+IDENTITY LOCK: Reference 1 is Baoshi 宝石 ONLY: young adult male, soft oval delicate face, large gentle almond eyes, fluffy longer wavy messy black hair with long fringe, black collared shirt and black trousers, NO glasses. Reference 2 is Feihong 飞鸿 ONLY: adult male, distinctly longer leaner angular face with firmer jaw and narrower eyes, straight defined nose, compact short textured upright black hair with shorter sides, rectangular dark glasses, white open overshirt over black T-shirt, silver chain, black gloves. Preserve Feihong's original side/three-quarter facial structure; do NOT invent a baby-faced frontal face or reuse Baoshi face beneath glasses. Faces must remain visibly distinct even without costumes. Use three-quarter or profile angles when Feihong face is visible. Exact two new portraits override any older costume descriptions. Baoshi wears lavender dress ONLY when the specific scene explicitly requires the stage persona. No microphone or instrument unless explicitly relevant to the action.
+Reference 3 = 十元, preserve exact appearance, gender and clothing.
+
+PANEL 1: 演出散场街边，十元拿手机张罗宵夜，飞鸿自然抬手建议，宝石在旁边笑着。三人中景，没有食物遮脸。
+
+PANEL 2: 夜宵鱼锅店双人桌，飞鸿侧脸略尴尬地给宝石递无香菜的蘸碟，宝石开心接过。两人，桌上鱼锅。
+
+PANEL 3: 有风的天台，飞鸿独自把宝石的黑外套从栏杆收起叠齐，自己仍是白外衫黑T眼镜。中景，楼梯口在后。
+
+PANEL 4: 天台观察笔记，匿名玩家一只握笔的手在前景，飞鸿抱叠好的黑外套走下楼梯的背影在后。无玩家脸，无文字。
+
+PANEL 5: 飞鸿生日会，宝石拿麦兴奋让飞鸿许愿，飞鸿在点着蜡烛的蛋糕后侧脸微笑却有心事。只有两人，无文字横幅。
+
+PANEL 6: 生日蛋糕桌边，飞鸿侧脸吃一小口蛋糕，眼神偷偷落向旁边宝石又移开，宝石仍笑着。两位成年男子。
+
+PANEL 7: 夜晚烤串摊，宝石自然把半把烤肉串分给飞鸿，飞鸿看着递来的串停顿两秒，神情复杂，只有两人。
+
+PANEL 8: 烤串摊，宝石开玩笑轻捶飞鸿上臂，飞鸿嘴角微扬，手里仍认真拿着宝石给的烤串。两人正常手臂，没有打架。
+
+
+FINAL FRAMING: keep full heads and hair inside central 85% of EVERY panel. One moment per panel. Do NOT borrow supporting character hair or clothes for either protagonist. Feihong always wears his NEW WHITE overshirt, BLACK T, glasses and silver chain except explicitly removing the overshirt on the bus. No old blue-gray shirt. Distinct faces: Baoshi delicate softer large eyes, Feihong leaner longer face, narrow eyes and firm jaw, exact reference profile.

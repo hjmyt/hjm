@@ -43,8 +43,8 @@
   },
   {
     "id": "feihong",
-    "asset": "assets/album/feihong.webp",
-    "source": "assets/album/source/01-daily.png",
+    "asset": "assets/album/feihong-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-16-202610.png",
     "panel": 4,
     "crop": [
       1332,
@@ -52,7 +52,7 @@
       1772,
       442
     ],
-    "prompt": "docs/imagegen/album-01-daily.txt",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-16.txt",
     "scene": "Feihong, the man in blue denim reference, confidently chooses a passage at his microphone; an ORANGE tabby rubs his leg. Show BOTH singer and cat."
   },
   {
@@ -393,8 +393,8 @@
   },
   {
     "id": "baoshi_secret",
-    "asset": "assets/album/baoshi_secret.webp",
-    "source": "assets/album/source/04-friends.png",
+    "asset": "assets/album/baoshi_secret-bf202610.webp",
+    "source": "assets/chronicle/scenes/source/bf-16-202610.png",
     "panel": 5,
     "crop": [
       2,
@@ -402,7 +402,7 @@
       442,
       885
     ],
-    "prompt": "docs/imagegen/album-04-friends.txt",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-16.txt",
     "scene": "Baoshi, the soft-featured black-haired adult male singer reference, joyfully performs in an elegant lavender stage dress as his feminine stage persona, microphone and stage lights, no caricature."
   },
   {

@@ -32,7 +32,7 @@ const cardThumbnail = (card, usage = 'cover', width = usage === 'avatar' ? 192 :
     if (!card?.id || card.placeholder)
         return cardImage(card, usage);
     const folder = usage === 'avatar' ? 'avatars' : 'cards';
-    return `assets/thumbs/${folder}/${width}/${card.id}.webp`;
+    return `assets/thumbs/${folder}/${width}/${card.id}.webp${card.imageVersion ? `?v=${encodeURIComponent(card.imageVersion)}` : ''}`;
 };
 const cardThumbnailByAsset = (asset, usage = 'avatar', width = usage === 'avatar' ? 192 : 360) => {
     const card = cardByAsset(asset);

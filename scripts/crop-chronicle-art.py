@@ -39,3 +39,7 @@ for group in plan:
 (ROOT / 'docs/imagegen/chronicle/art.json').write_text(
     json.dumps(list(manifest.values()), ensure_ascii=False, indent=2) + '\n')
 print(f'Cropped {len(manifest)} distinct scene illustrations.')
+
+# Apply the canonical 2026-10 eight-panel portrait refresh after historical crops.
+import runpy
+runpy.run_path(str(ROOT / "scripts/crop-baoshi-feihong-art.py"))["rebuild"]("chronicle")

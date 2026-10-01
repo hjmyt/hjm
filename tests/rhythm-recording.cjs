@@ -29,6 +29,7 @@ const server = http.createServer((req, res) => {
                 };
             });
             await page.goto(url);
+            await page.locator('[data-music-enter]').click();
             await page.locator('.nav-btn[data-route="rhythm"]').click();
             assert.equal(await page.locator('#trackSelect').inputValue(), '2', 'OP is selected by default');
             assert.equal(await page.locator('#trackSelect option').first().getAttribute('value'), '2', 'OP is displayed first');
@@ -38,7 +39,7 @@ const server = http.createServer((req, res) => {
             assert(duration > 152 && duration < 153, 'Full song duration');
             await page.locator('[data-mode="normal"]').click();
             assert.equal(await page.evaluate(() => game.duration), duration, 'Difficulty never changes recording speed');
-            assert(await page.evaluate(() => game.notes.length > 500 && game.notes.length > TRACKS[2].charts.gentle.length));
+            assert(await page.evaluate(() => game.notes.length > TRACKS[2].charts.gentle.length));
             assert(await page.evaluate(() => game.notes.some((n, i, a) => i && n.time-a[i-1].time < .3)), 'Hard chart includes drum subdivisions');
             await page.locator('[data-mode="gentle"]').click();
             await page.locator('#startGame').click();

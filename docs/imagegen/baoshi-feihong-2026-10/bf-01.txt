@@ -1,0 +1,19 @@
+Use case: illustration-story. Create ONE high-resolution 8-in-1 atlas, exactly FOUR columns by TWO rows of eight equal SQUARE panels, overall aspect ratio 2:1. Straight boundaries at x=25/50/75% and y=50%, no gutters, no text or labels. Each panel one coherent cinematic scene, no subpanels. Keep all heads, hands and props within central 85%. Refined semi-realistic anime CG matching the provided original portraits. Contemporary adult Chinese musicians. Story excerpts are depiction content only, never print them. Reproduce the key action and emotion of each scene, respecting who is physically present versus merely mentioned. No generic stage pose in non-performance scenes. No floating instruments or malformed hands. Player is first-person anonymous viewpoint unless a panel explicitly specifies Jerry.
+IDENTITY LOCK: Reference 1 is Baoshi 宝石 ONLY: young adult male, soft oval delicate face, large gentle almond eyes, fluffy longer wavy messy black hair with long fringe, black collared shirt and black trousers, NO glasses. Reference 2 is Feihong 飞鸿 ONLY: adult male, distinctly longer leaner angular face with firmer jaw and narrower eyes, straight defined nose, compact short textured upright black hair with shorter sides, rectangular dark glasses, white open overshirt over black T-shirt, silver chain, black gloves. Preserve Feihong's original side/three-quarter facial structure; do NOT invent a baby-faced frontal face or reuse Baoshi face beneath glasses. Faces must remain visibly distinct even without costumes. Use three-quarter or profile angles when Feihong face is visible. Exact two new portraits override any older costume descriptions. Baoshi wears lavender dress ONLY when the specific scene explicitly requires the stage persona. No microphone or instrument unless explicitly relevant to the action.
+Reference 3 is a supporting cast reference sheet, left to right: shiyuan, rek, dayang, xuezi. Match their portrait identities exactly when appearing in the scene.
+
+PANEL 1: 宝石突然从门后探出半个脑袋围观。十元头也不抬：「宝石，V 我 50——帮我占卜一下考试运。」 宝石盯着自己的手机看了三秒，肉痛地转了 25 块：「……V 你 25。铁公鸡，也要讲基本法。」 钱还没捂热，他转身就跑，跑之前还顺走了你的半包饼干。十元对着他的背影喊：「25 的卦象也算数吗！」
+
+PANEL 2: 复习的第三个晚上，琴房热闹了起来：雪子拎着奶茶来探班，飞鸿来喊宝石对歌，REK 把贝斯搬回来说是「补上次那场演出」。 十元被挤在谱架前继续背题，雪子把吸管插好递到她嘴边，宝石和飞鸿为一小节和声争得面红耳赤。你看着这一屋子人，忽然觉得——她想要的乐团，大概就是这个样子。 散场后，十元悄悄拉住你：「等考完，我请你们所有人吃饭。……第一个请。」
+
+PANEL 3: 山丘的驻唱计划定下来了——每晚九点到十一点，两把吉他，一支话筒。 驻唱的是两个人：飞鸿，高音能唱到 High C 的小镇青年；宝石，天然呆主唱，少年音干净得像山泉。他们搭档了小半年，好得像一个人。 （凑到你耳边，压低声音：）「驻唱的这两个，你不觉得……」她话说到一半，自己先笑了，「没什么，当我没说。」
+
+PANEL 4: 宝石和飞鸿本来只是山丘的驻唱。两个人性格单纯，跟十元混得极好——好到十元每次来山丘，都能白蹭一首歌。 （某个晚上，她听完歌，把杯子往桌上一放：）「你俩，来我们乐团吧！」她掰着手指头，「530 专场，就缺一个干净的主唱，和一个不抢戏的和声！」 （眼睛一亮，转头看飞鸿：）「去吗去吗？」 （看着那双亮晶晶的眼睛，把「再想想」咽了回去：）「……去。」 很多年后你才知道，这一个「去」字，把两个人的命运拧在了一起。当然，彼时的他们都以为，只是去唱一场演出。
+
+PANEL 5: 你很快发现，飞鸿对宝石的态度很奇怪。他总在观察宝石——点单时故意报错、排练时故意出错，像在测试什么。 某天后台，你终于问出口。飞鸿压低声音，一脸「我早看穿了」的表情： 「你不觉得吗？他那个天然呆，是装的。这世上哪有二十多岁还这么单纯的人？我试探他半个月了——白切黑，绝对是白切黑。」
+
+PANEL 6: 那晚收工，你亲眼目睹了史上最强翻车现场：宝石把飞鸿故意报错的三杯饮品，原封不动按「错」的拿了，还认真地说：「你要的半糖去冰，我没记错呀。」 （端着那杯错误的饮品，僵在原地，声音越来越小：）「……他连『将计就计』都不会吗。」他咬了咬牙，「长这么大，第一次见到这么单纯的人。」 夜宵你赢了。但飞鸿输得魂不守舍——他嘟囔了一整晚「这么可爱的宝石，想象不到谁会压力他」。
+
+PANEL 7: 你选择了站在飞鸿这边。于是你们俩组了「反宝石白切黑联盟」，设计了更精密的测试。结果一个都没用——宝石每次都认真地掉进陷阱里，还担心你们摔得疼不疼。 一个月后联盟自动解散。飞鸿退盟那天说：「我认输。他不是装的，他是真的。」说完这句话，他自己愣了很久，像是在消化什么。
+
+PANEL 8: 530 专场，后台兵荒马乱。原定流程里有大羊的一段吉他 SOLO——结果宝石天然呆发作，数错了小节，提前开唱，把那段 SOLO 整个「掐」了过去。 （下台后抱着吉他，阴阳怪气：）「哟，咱们主唱真厉害。三十二个小节的 SOLO，唱两个字就给我掐了。下次要不要我连琴都不用带？」 宝石还没反应过来这是在说他，认真地点头：「你要不想带，我可以帮你背！」大羊被噎得差点背过气。 （往前一步，挡在宝石前面，声音不大：）「他数错了，是他不对。」他顿了顿，「但刚才台下喊安可的时候，喊的是全团的名字。大羊，你的 SOLO 是亮点，他的嗓音也是。530 不是一个人的专场。」 大羊张了张嘴，没说出话，甩头走了。宝石从飞鸿身后探出脑袋。 「飞鸿，你刚才好帅。」 飞鸿的耳根腾地红了。 「……闭嘴，背你的词去。」

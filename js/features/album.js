@@ -74,8 +74,13 @@ function showMemory(id) {
     $('saveMemoryPhoto').onclick = () => saveMemoryPhoto(m);
 }
 async function saveMemoryPhoto(m) {
+    let imageLoaded = false;
     try {
         const img = new Image();
+        // Local files display normally but cannot be exported through a canvas.
+        // HTTP images may also be served by a CDN; request CORS permission first.
+        if (location.protocol !== 'file:')
+            img.crossOrigin = 'anonymous';
         await new Promise((resolve, reject) => {
             img.onload = resolve;
             img.onerror = reject;
@@ -83,6 +88,7 @@ async function saveMemoryPhoto(m) {
             if (img.complete && img.naturalWidth)
                 resolve();
         });
+        imageLoaded = true;
         const w = 900, artH = clamp(Math.round(820 / (img.width / img.height)), 265, 1100), cv = document.createElement('canvas');
         cv.width = w;
         cv.height = artH + 246;
@@ -102,16 +108,20 @@ async function saveMemoryPhoto(m) {
         cx.fillText(`${state.nickname} 的排练日记 · ${dateKey()}`, 56, artH + 145);
         cx.font = '15px Georgia';
         cx.fillText('LOVE & HAKIMI — A LITTLE MUSIC, A LITTLE LOVE', 56, artH + 187);
-        cv.toBlob(blob => {
-            if (!blob) {
-                toast('生成纪念图失败，请重试。');
-                return;
-            }
-            downloadBlob(blob, `恋与哈基米_${m.title}.png`);
-            toast('纪念图已生成。', true);
-        }, 'image/png');
+        const blob = await new Promise((resolve, reject) => cv.toBlob(result => {
+            if (result) resolve(result);
+            else reject(new Error('Empty image export'));
+        }, 'image/png'));
+        downloadBlob(blob, `恋与哈基米_${m.title}.png`);
+        toast('纪念图已生成。', true);
     }
     catch (e) {
-        toast('这次照片没有洗出来，再试一次吧。');
+        if (e.name === 'SecurityError' || location.protocol === 'file:' && imageLoaded) {
+            const src = ASSETS[m.asset];
+            const extension = new URL(src, location.href).pathname.split('.').pop();
+            openModal('保存回忆原图', `<div class="photo-frame"><img src="${escapeHTML(src)}" alt="${escapeHTML(m.title)}"><h3>${escapeHTML(m.title)}</h3></div><p class="memory-description">浏览器限制了纪念图合成。你仍可保存完整原图：点击下方按钮，或长按图片（电脑上右键）保存。</p><div style="text-align:center"><a class="btn primary" href="${escapeHTML(src)}" download="${escapeHTML(`恋与哈基米_${m.title}.${extension}`)}" target="_blank" rel="noopener">${I('download')}保存原图</a></div>`);
+            return;
+        }
+        toast(imageLoaded ? '纪念图生成失败，请重试或在图片上长按／右键保存原图。' : '原图加载失败，请检查网络后重试。');
     }
 }

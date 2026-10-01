@@ -1680,20 +1680,20 @@
     "title": "乱入 · V我50",
     "asset": "personal_sy_i2",
     "memory": "cp7_sy_i2",
-    "source": "assets/chronicle/personal/source/11-personal.png",
+    "source": "assets/chronicle/personal/source/bf-01-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 4,
+    "cell": 1,
     "crop": [
-      1333,
-      3,
-      1771,
-      441
+      2,
+      2,
+      442,
+      442
     ],
-    "output": "assets/chronicle/personal/sy_i2.webp",
-    "prompt": "docs/imagegen/personal/11-personal.txt"
+    "output": "assets/chronicle/personal/sy_i2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-01.txt"
   },
   {
     "id": "sy_q3",
@@ -1720,20 +1720,20 @@
     "title": "山丘三宝 · 探班",
     "asset": "personal_sy_i3",
     "memory": "cp7_sy_i3",
-    "source": "assets/chronicle/personal/source/11-personal.png",
+    "source": "assets/chronicle/personal/source/bf-01-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 6,
+    "cell": 2,
     "crop": [
-      447,
-      447,
-      884,
-      884
+      446,
+      2,
+      885,
+      442
     ],
-    "output": "assets/chronicle/personal/sy_i3.webp",
-    "prompt": "docs/imagegen/personal/11-personal.txt"
+    "output": "assets/chronicle/personal/sy_i3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-01.txt"
   },
   {
     "id": "sy_qdone",
@@ -2128,20 +2128,20 @@
     "title": "入线 · 山丘的驻唱",
     "asset": "personal_cp_00",
     "memory": "cp7_cp_00",
-    "source": "assets/chronicle/personal/source/15-personal.png",
+    "source": "assets/chronicle/personal/source/bf-01-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 1,
+    "cell": 3,
     "crop": [
-      3,
-      3,
-      441,
-      441
+      889,
+      2,
+      1328,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_00.webp",
-    "prompt": "docs/imagegen/personal/15-personal.txt"
+    "output": "assets/chronicle/personal/cp_00-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-01.txt"
   },
   {
     "id": "cp_00b",
@@ -2150,460 +2150,460 @@
     "memory": "cp7_cp_00b",
     "sourceOverride": "assets/chronicle/personal/source/cp_00b-fixed.png",
     "promptOverride": "docs/imagegen/personal/anatomy-fixes-2026-09-27.md",
-    "source": "assets/chronicle/personal/source/cp_00b-fixed.png",
+    "source": "assets/fusion/source/bf-17-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": "override",
+    "cell": 3,
     "crop": [
-      0,
-      0,
-      437,
-      438
+      889,
+      2,
+      1328,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_00b.webp",
-    "prompt": "docs/imagegen/personal/anatomy-fixes-2026-09-27.md"
+    "output": "assets/chronicle/personal/cp_00b-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-17.txt"
   },
   {
     "id": "cp_01",
     "title": "相熟 · 白切黑计划",
     "asset": "personal_cp_01",
     "memory": "cp7_cp_01",
-    "source": "assets/chronicle/personal/source/15-personal.png",
+    "source": "assets/chronicle/personal/source/bf-01-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 3,
+    "cell": 5,
     "crop": [
-      890,
-      3,
-      1327,
-      441
+      2,
+      446,
+      442,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_01.webp",
-    "prompt": "docs/imagegen/personal/15-personal.txt"
+    "output": "assets/chronicle/personal/cp_01-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-01.txt"
   },
   {
     "id": "cp_01b",
     "title": "相熟 · 白切黑计划",
     "asset": "personal_cp_01b",
     "memory": "cp7_cp_01b",
-    "source": "assets/chronicle/personal/source/15-personal.png",
+    "source": "assets/chronicle/personal/source/bf-01-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 4,
+    "cell": 6,
     "crop": [
-      1333,
-      3,
-      1771,
-      441
+      446,
+      446,
+      885,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_01b.webp",
-    "prompt": "docs/imagegen/personal/15-personal.txt"
+    "output": "assets/chronicle/personal/cp_01b-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-01.txt"
   },
   {
     "id": "cp_01c",
     "title": "相熟 · 白切黑计划",
     "asset": "personal_cp_01c",
     "memory": "cp7_cp_01c",
-    "source": "assets/chronicle/personal/source/15-personal.png",
+    "source": "assets/chronicle/personal/source/bf-01-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 5,
+    "cell": 7,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      889,
+      446,
+      1328,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_01c.webp",
-    "prompt": "docs/imagegen/personal/15-personal.txt"
+    "output": "assets/chronicle/personal/cp_01c-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-01.txt"
   },
   {
     "id": "cp_00c",
     "title": "530 · 被掐掉的SOLO",
     "asset": "personal_cp_00c",
     "memory": "cp7_cp_00c",
-    "source": "assets/chronicle/personal/source/15-personal.png",
+    "source": "assets/chronicle/personal/source/bf-18-qa-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 6,
+    "cell": 1,
     "crop": [
-      447,
-      447,
-      884,
-      884
+      2,
+      2,
+      442,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_00c.webp",
-    "prompt": "docs/imagegen/personal/15-personal.txt"
+    "output": "assets/chronicle/personal/cp_00c-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-18-qa.txt"
   },
   {
     "id": "cp_02",
     "title": "互动 · 铁公鸡请客",
     "asset": "personal_cp_02",
     "memory": "cp7_cp_02",
-    "source": "assets/chronicle/personal/source/15-personal.png",
+    "source": "assets/chronicle/personal/source/bf-02-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 7,
+    "cell": 1,
     "crop": [
-      890,
-      447,
-      1327,
-      884
+      2,
+      2,
+      442,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_02.webp",
-    "prompt": "docs/imagegen/personal/15-personal.txt"
+    "output": "assets/chronicle/personal/cp_02-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-02.txt"
   },
   {
     "id": "cp_03x",
     "title": "心疼 · 牛排与捉迷藏",
     "asset": "personal_cp_03x",
     "memory": "cp7_cp_03x",
-    "source": "assets/chronicle/personal/source/15-personal.png",
+    "source": "assets/chronicle/personal/source/bf-02-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 8,
+    "cell": 2,
     "crop": [
-      1333,
-      447,
-      1771,
-      884
+      446,
+      2,
+      885,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_03x.webp",
-    "prompt": "docs/imagegen/personal/15-personal.txt"
+    "output": "assets/chronicle/personal/cp_03x-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-02.txt"
   },
   {
     "id": "cp_03",
     "title": "相知 · 柠檬水",
     "asset": "personal_cp_03",
     "memory": "cp7_cp_03",
-    "source": "assets/chronicle/personal/source/16-personal.png",
+    "source": "assets/chronicle/personal/source/bf-02-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 1,
+    "cell": 3,
     "crop": [
-      3,
-      3,
-      441,
-      441
+      889,
+      2,
+      1328,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_03.webp",
-    "prompt": "docs/imagegen/personal/16-personal.txt"
+    "output": "assets/chronicle/personal/cp_03-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-02.txt"
   },
   {
     "id": "cp_03b",
     "title": "相知 · 柠檬水",
     "asset": "personal_cp_03b",
     "memory": "cp7_cp_03b",
-    "source": "assets/chronicle/personal/source/16-personal.png",
+    "source": "assets/chronicle/personal/source/bf-02-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 2,
+    "cell": 4,
     "crop": [
-      447,
-      3,
-      884,
-      441
+      1332,
+      2,
+      1772,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_03b.webp",
-    "prompt": "docs/imagegen/personal/16-personal.txt"
+    "output": "assets/chronicle/personal/cp_03b-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-02.txt"
   },
   {
     "id": "cp_04",
     "title": "雪子 · 铁三角",
     "asset": "personal_cp_04",
     "memory": "cp7_cp_04",
-    "source": "assets/chronicle/personal/source/16-personal.png",
+    "source": "assets/chronicle/personal/source/bf-02-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 3,
+    "cell": 5,
     "crop": [
-      890,
-      3,
-      1327,
-      441
+      2,
+      446,
+      442,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_04.webp",
-    "prompt": "docs/imagegen/personal/16-personal.txt"
+    "output": "assets/chronicle/personal/cp_04-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-02.txt"
   },
   {
     "id": "cp_04talk",
     "title": "雪子言叶",
     "asset": "personal_cp_04talk",
     "memory": "cp7_cp_04talk",
-    "source": "assets/chronicle/personal/source/16-personal.png",
+    "source": "assets/chronicle/personal/source/bf-18-qa-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 4,
+    "cell": 6,
     "crop": [
-      1333,
-      3,
-      1771,
-      441
+      446,
+      446,
+      885,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_04talk.webp",
-    "prompt": "docs/imagegen/personal/16-personal.txt"
+    "output": "assets/chronicle/personal/cp_04talk-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-18-qa.txt"
   },
   {
     "id": "cp_05",
     "title": "非醋 · 鞋带",
     "asset": "personal_cp_05",
     "memory": "cp7_cp_05",
-    "source": "assets/chronicle/personal/source/16-personal.png",
+    "source": "assets/fusion/source/bf-17-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 5,
+    "cell": 8,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      1332,
+      446,
+      1772,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_05.webp",
-    "prompt": "docs/imagegen/personal/16-personal.txt"
+    "output": "assets/chronicle/personal/cp_05-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-17.txt"
   },
   {
     "id": "cp_06",
     "title": "团建 · 巴士",
     "asset": "personal_cp_06",
     "memory": "cp7_cp_06",
-    "source": "assets/chronicle/personal/source/16-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 6,
-    "crop": [
-      447,
-      447,
-      884,
-      884
-    ],
-    "output": "assets/chronicle/personal/cp_06.webp",
-    "prompt": "docs/imagegen/personal/16-personal.txt"
-  },
-  {
-    "id": "cp_07",
-    "title": "悸动 · 摩天轮",
-    "asset": "personal_cp_07",
-    "memory": "cp7_cp_07",
-    "source": "assets/chronicle/personal/source/16-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 7,
-    "crop": [
-      890,
-      447,
-      1327,
-      884
-    ],
-    "output": "assets/chronicle/personal/cp_07.webp",
-    "prompt": "docs/imagegen/personal/16-personal.txt"
-  },
-  {
-    "id": "cp_08",
-    "title": "挑明前夜 · 递刀",
-    "asset": "personal_cp_08",
-    "memory": "cp7_cp_08",
-    "source": "assets/chronicle/personal/source/16-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 8,
-    "crop": [
-      1333,
-      447,
-      1771,
-      884
-    ],
-    "output": "assets/chronicle/personal/cp_08.webp",
-    "prompt": "docs/imagegen/personal/16-personal.txt"
-  },
-  {
-    "id": "cp_08b",
-    "title": "挑明前夜 · 递刀",
-    "asset": "personal_cp_08b",
-    "memory": "cp7_cp_08b",
-    "source": "assets/chronicle/personal/source/17-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 1,
-    "crop": [
-      3,
-      3,
-      441,
-      441
-    ],
-    "output": "assets/chronicle/personal/cp_08b.webp",
-    "prompt": "docs/imagegen/personal/17-personal.txt"
-  },
-  {
-    "id": "cp_08c",
-    "title": "挑明前夜 · 递刀",
-    "asset": "personal_cp_08c",
-    "memory": "cp7_cp_08c",
-    "source": "assets/chronicle/personal/source/17-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 2,
-    "crop": [
-      447,
-      3,
-      884,
-      441
-    ],
-    "output": "assets/chronicle/personal/cp_08c.webp",
-    "prompt": "docs/imagegen/personal/17-personal.txt"
-  },
-  {
-    "id": "cp_09",
-    "title": "误解 · 无心的话最疼",
-    "asset": "personal_cp_09",
-    "memory": "cp7_cp_09",
-    "source": "assets/chronicle/personal/source/17-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 3,
-    "crop": [
-      890,
-      3,
-      1327,
-      441
-    ],
-    "output": "assets/chronicle/personal/cp_09.webp",
-    "prompt": "docs/imagegen/personal/17-personal.txt"
-  },
-  {
-    "id": "cp_10",
-    "title": "离开 · 行李箱",
-    "asset": "personal_cp_10",
-    "memory": "cp7_cp_10",
-    "source": "assets/chronicle/personal/source/17-personal.png",
+    "source": "assets/fusion/source/bf-17-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 4,
     "crop": [
-      1333,
-      3,
-      1771,
-      441
+      1332,
+      2,
+      1772,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_10.webp",
-    "prompt": "docs/imagegen/personal/17-personal.txt"
+    "output": "assets/chronicle/personal/cp_06-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-17.txt"
   },
   {
-    "id": "cp_11",
-    "title": "开窍 · 日子不对劲",
-    "asset": "personal_cp_11",
-    "memory": "cp7_cp_11",
-    "source": "assets/chronicle/personal/source/17-personal.png",
+    "id": "cp_07",
+    "title": "悸动 · 摩天轮",
+    "asset": "personal_cp_07",
+    "memory": "cp7_cp_07",
+    "source": "assets/chronicle/personal/source/bf-03-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_07-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-03.txt"
+  },
+  {
+    "id": "cp_08",
+    "title": "挑明前夜 · 递刀",
+    "asset": "personal_cp_08",
+    "memory": "cp7_cp_08",
+    "source": "assets/chronicle/personal/source/bf-03-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_08-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-03.txt"
+  },
+  {
+    "id": "cp_08b",
+    "title": "挑明前夜 · 递刀",
+    "asset": "personal_cp_08b",
+    "memory": "cp7_cp_08b",
+    "source": "assets/chronicle/personal/source/bf-03-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_08b-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-03.txt"
+  },
+  {
+    "id": "cp_08c",
+    "title": "挑明前夜 · 递刀",
+    "asset": "personal_cp_08c",
+    "memory": "cp7_cp_08c",
+    "source": "assets/chronicle/personal/source/bf-03-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_08c-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-03.txt"
+  },
+  {
+    "id": "cp_09",
+    "title": "误解 · 无心的话最疼",
+    "asset": "personal_cp_09",
+    "memory": "cp7_cp_09",
+    "source": "assets/chronicle/personal/source/bf-03-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 5,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      2,
+      446,
+      442,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_11.webp",
-    "prompt": "docs/imagegen/personal/17-personal.txt"
+    "output": "assets/chronicle/personal/cp_09-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-03.txt"
   },
   {
-    "id": "cp_12",
-    "title": "火葬场 · 最后一推",
-    "asset": "personal_cp_12",
-    "memory": "cp7_cp_12",
-    "source": "assets/chronicle/personal/source/17-personal.png",
+    "id": "cp_10",
+    "title": "离开 · 行李箱",
+    "asset": "personal_cp_10",
+    "memory": "cp7_cp_10",
+    "source": "assets/fusion/source/bf-17-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 6,
+    "cell": 5,
     "crop": [
-      447,
-      447,
-      884,
-      884
+      2,
+      446,
+      442,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_12.webp",
-    "prompt": "docs/imagegen/personal/17-personal.txt"
+    "output": "assets/chronicle/personal/cp_10-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-17.txt"
   },
   {
-    "id": "cp_12b",
-    "title": "火葬场 · 最后一推",
-    "asset": "personal_cp_12b",
-    "memory": "cp7_cp_12b",
-    "source": "assets/chronicle/personal/source/17-personal.png",
+    "id": "cp_11",
+    "title": "开窍 · 日子不对劲",
+    "asset": "personal_cp_11",
+    "memory": "cp7_cp_11",
+    "source": "assets/chronicle/personal/source/bf-03-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 7,
     "crop": [
-      890,
-      447,
-      1327,
-      884
+      889,
+      446,
+      1328,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_12b.webp",
-    "prompt": "docs/imagegen/personal/17-personal.txt"
+    "output": "assets/chronicle/personal/cp_11-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-03.txt"
   },
   {
-    "id": "cp_12c",
+    "id": "cp_12",
     "title": "火葬场 · 最后一推",
-    "asset": "personal_cp_12c",
-    "memory": "cp7_cp_12c",
-    "source": "assets/chronicle/personal/source/17-personal.png",
+    "asset": "personal_cp_12",
+    "memory": "cp7_cp_12",
+    "source": "assets/chronicle/personal/source/bf-03-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 8,
     "crop": [
-      1333,
-      447,
-      1771,
-      884
+      1332,
+      446,
+      1772,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_12c.webp",
-    "prompt": "docs/imagegen/personal/17-personal.txt"
+    "output": "assets/chronicle/personal/cp_12-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-03.txt"
+  },
+  {
+    "id": "cp_12b",
+    "title": "火葬场 · 最后一推",
+    "asset": "personal_cp_12b",
+    "memory": "cp7_cp_12b",
+    "source": "assets/fusion/source/bf-17-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "output": "assets/chronicle/personal/cp_12b-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-17.txt"
+  },
+  {
+    "id": "cp_12c",
+    "title": "火葬场 · 最后一推",
+    "asset": "personal_cp_12c",
+    "memory": "cp7_cp_12c",
+    "source": "assets/chronicle/personal/source/bf-04-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_12c-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-04.txt"
   },
   {
     "id": "yc_hold",
@@ -2630,400 +2630,400 @@
     "title": "HE · 爱我还是他",
     "asset": "personal_cp_HE",
     "memory": "cp7_cp_HE",
-    "source": "assets/chronicle/personal/source/18-personal.png",
+    "source": "assets/fusion/source/bf-17-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 2,
+    "cell": 7,
     "crop": [
-      447,
-      3,
-      884,
-      441
+      889,
+      446,
+      1328,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_HE.webp",
-    "prompt": "docs/imagegen/personal/18-personal.txt"
+    "output": "assets/chronicle/personal/cp_HE-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-17.txt"
   },
   {
     "id": "cp_BE",
     "title": "BE · 没有他的歌友会",
     "asset": "personal_cp_BE",
     "memory": "cp7_cp_BE",
-    "source": "assets/chronicle/personal/source/18-personal.png",
+    "source": "assets/chronicle/personal/source/bf-04-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 3,
+    "cell": 4,
     "crop": [
-      890,
-      3,
-      1327,
-      441
+      1332,
+      2,
+      1772,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_BE.webp",
-    "prompt": "docs/imagegen/personal/18-personal.txt"
+    "output": "assets/chronicle/personal/cp_BE-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-04.txt"
   },
   {
     "id": "cp_00b_page2",
     "title": "入队 · 530的邀请",
     "asset": "personal_cp_00b_page2",
     "memory": "cp7_cp_00b_page2",
-    "source": "assets/chronicle/personal/source/19-personal.png",
+    "source": "assets/chronicle/personal/source/bf-04-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 1,
+    "cell": 5,
     "crop": [
-      3,
-      3,
-      441,
-      441
+      2,
+      446,
+      442,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_00b_page2.webp",
-    "prompt": "docs/imagegen/personal/19-personal.txt"
+    "output": "assets/chronicle/personal/cp_00b_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-04.txt"
   },
   {
     "id": "cp_00b_page3",
     "title": "入队 · 530的邀请",
     "asset": "personal_cp_00b_page3",
     "memory": "cp7_cp_00b_page3",
-    "source": "assets/chronicle/personal/source/19-personal.png",
+    "source": "assets/chronicle/personal/source/bf-04-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 2,
+    "cell": 6,
     "crop": [
-      447,
-      3,
-      884,
-      441
+      446,
+      446,
+      885,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_00b_page3.webp",
-    "prompt": "docs/imagegen/personal/19-personal.txt"
+    "output": "assets/chronicle/personal/cp_00b_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-04.txt"
   },
   {
     "id": "cp_01b_page2",
     "title": "相熟 · 白切黑计划",
     "asset": "personal_cp_01b_page2",
     "memory": "cp7_cp_01b_page2",
-    "source": "assets/chronicle/personal/source/19-personal.png",
+    "source": "assets/chronicle/personal/source/bf-04-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 3,
+    "cell": 7,
     "crop": [
-      890,
-      3,
-      1327,
-      441
+      889,
+      446,
+      1328,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_01b_page2.webp",
-    "prompt": "docs/imagegen/personal/19-personal.txt"
+    "output": "assets/chronicle/personal/cp_01b_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-04.txt"
   },
   {
     "id": "cp_00c_page2",
     "title": "530 · 被掐掉的SOLO",
     "asset": "personal_cp_00c_page2",
     "memory": "cp7_cp_00c_page2",
-    "source": "assets/chronicle/personal/source/19-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 4,
-    "crop": [
-      1333,
-      3,
-      1771,
-      441
-    ],
-    "output": "assets/chronicle/personal/cp_00c_page2.webp",
-    "prompt": "docs/imagegen/personal/19-personal.txt"
-  },
-  {
-    "id": "cp_00c_page3",
-    "title": "530 · 被掐掉的SOLO",
-    "asset": "personal_cp_00c_page3",
-    "memory": "cp7_cp_00c_page3",
-    "source": "assets/chronicle/personal/source/19-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 5,
-    "crop": [
-      3,
-      447,
-      441,
-      884
-    ],
-    "output": "assets/chronicle/personal/cp_00c_page3.webp",
-    "prompt": "docs/imagegen/personal/19-personal.txt"
-  },
-  {
-    "id": "cp_00c_page4",
-    "title": "530 · 被掐掉的SOLO",
-    "asset": "personal_cp_00c_page4",
-    "memory": "cp7_cp_00c_page4",
-    "source": "assets/chronicle/personal/source/19-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 6,
-    "crop": [
-      447,
-      447,
-      884,
-      884
-    ],
-    "output": "assets/chronicle/personal/cp_00c_page4.webp",
-    "prompt": "docs/imagegen/personal/19-personal.txt"
-  },
-  {
-    "id": "cp_02_page2",
-    "title": "互动 · 铁公鸡请客",
-    "asset": "personal_cp_02_page2",
-    "memory": "cp7_cp_02_page2",
-    "source": "assets/chronicle/personal/source/19-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 7,
-    "crop": [
-      890,
-      447,
-      1327,
-      884
-    ],
-    "output": "assets/chronicle/personal/cp_02_page2.webp",
-    "prompt": "docs/imagegen/personal/19-personal.txt"
-  },
-  {
-    "id": "cp_03x_page2",
-    "title": "心疼 · 牛排与捉迷藏",
-    "asset": "personal_cp_03x_page2",
-    "memory": "cp7_cp_03x_page2",
-    "source": "assets/chronicle/personal/source/19-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 8,
-    "crop": [
-      1333,
-      447,
-      1771,
-      884
-    ],
-    "output": "assets/chronicle/personal/cp_03x_page2.webp",
-    "prompt": "docs/imagegen/personal/19-personal.txt"
-  },
-  {
-    "id": "cp_03x_page3",
-    "title": "心疼 · 牛排与捉迷藏",
-    "asset": "personal_cp_03x_page3",
-    "memory": "cp7_cp_03x_page3",
-    "source": "assets/chronicle/personal/source/20-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 1,
-    "crop": [
-      3,
-      3,
-      441,
-      441
-    ],
-    "output": "assets/chronicle/personal/cp_03x_page3.webp",
-    "prompt": "docs/imagegen/personal/20-personal.txt"
-  },
-  {
-    "id": "cp_03x_page4",
-    "title": "心疼 · 牛排与捉迷藏",
-    "asset": "personal_cp_03x_page4",
-    "memory": "cp7_cp_03x_page4",
-    "source": "assets/chronicle/personal/source/20-personal.png",
+    "source": "assets/chronicle/personal/source/bf-18-qa-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 2,
     "crop": [
-      447,
-      3,
-      884,
-      441
+      446,
+      2,
+      885,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_03x_page4.webp",
-    "prompt": "docs/imagegen/personal/20-personal.txt"
+    "output": "assets/chronicle/personal/cp_00c_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-18-qa.txt"
   },
   {
-    "id": "cp_04_page2",
-    "title": "雪子 · 铁三角",
-    "asset": "personal_cp_04_page2",
-    "memory": "cp7_cp_04_page2",
-    "source": "assets/chronicle/personal/source/20-personal.png",
+    "id": "cp_00c_page3",
+    "title": "530 · 被掐掉的SOLO",
+    "asset": "personal_cp_00c_page3",
+    "memory": "cp7_cp_00c_page3",
+    "source": "assets/chronicle/personal/source/bf-05-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_00c_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-05.txt"
+  },
+  {
+    "id": "cp_00c_page4",
+    "title": "530 · 被掐掉的SOLO",
+    "asset": "personal_cp_00c_page4",
+    "memory": "cp7_cp_00c_page4",
+    "source": "assets/chronicle/personal/source/bf-05-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_00c_page4-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-05.txt"
+  },
+  {
+    "id": "cp_02_page2",
+    "title": "互动 · 铁公鸡请客",
+    "asset": "personal_cp_02_page2",
+    "memory": "cp7_cp_02_page2",
+    "source": "assets/chronicle/personal/source/bf-05-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 3,
     "crop": [
-      890,
-      3,
-      1327,
-      441
+      889,
+      2,
+      1328,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_04_page2.webp",
-    "prompt": "docs/imagegen/personal/20-personal.txt"
+    "output": "assets/chronicle/personal/cp_02_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-05.txt"
   },
   {
-    "id": "cp_04talk_page2",
-    "title": "雪子言叶",
-    "asset": "personal_cp_04talk_page2",
-    "memory": "cp7_cp_04talk_page2",
-    "source": "assets/chronicle/personal/source/20-personal.png",
+    "id": "cp_03x_page2",
+    "title": "心疼 · 牛排与捉迷藏",
+    "asset": "personal_cp_03x_page2",
+    "memory": "cp7_cp_03x_page2",
+    "source": "assets/chronicle/personal/source/bf-05-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 4,
     "crop": [
-      1333,
-      3,
-      1771,
-      441
+      1332,
+      2,
+      1772,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_04talk_page2.webp",
-    "prompt": "docs/imagegen/personal/20-personal.txt"
+    "output": "assets/chronicle/personal/cp_03x_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-05.txt"
   },
   {
-    "id": "cp_04talk_page3",
-    "title": "雪子言叶",
-    "asset": "personal_cp_04talk_page3",
-    "memory": "cp7_cp_04talk_page3",
-    "source": "assets/chronicle/personal/source/20-personal.png",
+    "id": "cp_03x_page3",
+    "title": "心疼 · 牛排与捉迷藏",
+    "asset": "personal_cp_03x_page3",
+    "memory": "cp7_cp_03x_page3",
+    "source": "assets/chronicle/personal/source/bf-05-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 5,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      2,
+      446,
+      442,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_04talk_page3.webp",
-    "prompt": "docs/imagegen/personal/20-personal.txt"
+    "output": "assets/chronicle/personal/cp_03x_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-05.txt"
   },
   {
-    "id": "cp_05_page2",
-    "title": "非醋 · 鞋带",
-    "asset": "personal_cp_05_page2",
-    "memory": "cp7_cp_05_page2",
-    "source": "assets/chronicle/personal/source/20-personal.png",
+    "id": "cp_03x_page4",
+    "title": "心疼 · 牛排与捉迷藏",
+    "asset": "personal_cp_03x_page4",
+    "memory": "cp7_cp_03x_page4",
+    "source": "assets/chronicle/personal/source/bf-05-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 6,
     "crop": [
-      447,
-      447,
-      884,
-      884
+      446,
+      446,
+      885,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_05_page2.webp",
-    "prompt": "docs/imagegen/personal/20-personal.txt"
+    "output": "assets/chronicle/personal/cp_03x_page4-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-05.txt"
   },
   {
-    "id": "cp_06_page2",
-    "title": "团建 · 巴士",
-    "asset": "personal_cp_06_page2",
-    "memory": "cp7_cp_06_page2",
-    "source": "assets/chronicle/personal/source/20-personal.png",
+    "id": "cp_04_page2",
+    "title": "雪子 · 铁三角",
+    "asset": "personal_cp_04_page2",
+    "memory": "cp7_cp_04_page2",
+    "source": "assets/chronicle/personal/source/bf-05-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 7,
     "crop": [
-      890,
-      447,
-      1327,
-      884
+      889,
+      446,
+      1328,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_06_page2.webp",
-    "prompt": "docs/imagegen/personal/20-personal.txt"
+    "output": "assets/chronicle/personal/cp_04_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-05.txt"
   },
   {
-    "id": "cp_06_page3",
-    "title": "团建 · 巴士",
-    "asset": "personal_cp_06_page3",
-    "memory": "cp7_cp_06_page3",
-    "source": "assets/chronicle/personal/source/20-personal.png",
+    "id": "cp_04talk_page2",
+    "title": "雪子言叶",
+    "asset": "personal_cp_04talk_page2",
+    "memory": "cp7_cp_04talk_page2",
+    "source": "assets/chronicle/personal/source/bf-05-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 8,
     "crop": [
-      1333,
-      447,
-      1771,
-      884
+      1332,
+      446,
+      1772,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_06_page3.webp",
-    "prompt": "docs/imagegen/personal/20-personal.txt"
+    "output": "assets/chronicle/personal/cp_04talk_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-05.txt"
+  },
+  {
+    "id": "cp_04talk_page3",
+    "title": "雪子言叶",
+    "asset": "personal_cp_04talk_page3",
+    "memory": "cp7_cp_04talk_page3",
+    "source": "assets/chronicle/personal/source/bf-06-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_04talk_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-06.txt"
+  },
+  {
+    "id": "cp_05_page2",
+    "title": "非醋 · 鞋带",
+    "asset": "personal_cp_05_page2",
+    "memory": "cp7_cp_05_page2",
+    "source": "assets/chronicle/personal/source/bf-06-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_05_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-06.txt"
+  },
+  {
+    "id": "cp_06_page2",
+    "title": "团建 · 巴士",
+    "asset": "personal_cp_06_page2",
+    "memory": "cp7_cp_06_page2",
+    "source": "assets/chronicle/personal/source/bf-18-qa-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "output": "assets/chronicle/personal/cp_06_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-18-qa.txt"
+  },
+  {
+    "id": "cp_06_page3",
+    "title": "团建 · 巴士",
+    "asset": "personal_cp_06_page3",
+    "memory": "cp7_cp_06_page3",
+    "source": "assets/chronicle/personal/source/bf-06-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_06_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-06.txt"
   },
   {
     "id": "cp_06_page4",
     "title": "团建 · 巴士",
     "asset": "personal_cp_06_page4",
     "memory": "cp7_cp_06_page4",
-    "source": "assets/chronicle/personal/source/21-personal.png",
+    "source": "assets/chronicle/personal/source/bf-06-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 1,
+    "cell": 5,
     "crop": [
-      3,
-      3,
-      441,
-      441
+      2,
+      446,
+      442,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_06_page4.webp",
-    "prompt": "docs/imagegen/personal/21-personal.txt"
+    "output": "assets/chronicle/personal/cp_06_page4-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-06.txt"
   },
   {
     "id": "cp_08_page2",
     "title": "挑明前夜 · 递刀",
     "asset": "personal_cp_08_page2",
     "memory": "cp7_cp_08_page2",
-    "source": "assets/chronicle/personal/source/23-personal-fix.png",
+    "source": "assets/chronicle/personal/source/bf-06-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 1,
+    "cell": 6,
     "crop": [
-      3,
-      3,
-      441,
-      441
+      446,
+      446,
+      885,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_08_page2.webp",
-    "prompt": "docs/imagegen/personal/23-personal-fix.txt",
+    "output": "assets/chronicle/personal/cp_08_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-06.txt",
     "corrected": true
   },
   {
@@ -3031,60 +3031,60 @@
     "title": "误解 · 无心的话最疼",
     "asset": "personal_cp_09_page2",
     "memory": "cp7_cp_09_page2",
-    "source": "assets/chronicle/personal/source/21-personal.png",
+    "source": "assets/chronicle/personal/source/bf-06-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 3,
+    "cell": 7,
     "crop": [
-      890,
-      3,
-      1327,
-      441
+      889,
+      446,
+      1328,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_09_page2.webp",
-    "prompt": "docs/imagegen/personal/21-personal.txt"
+    "output": "assets/chronicle/personal/cp_09_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-06.txt"
   },
   {
     "id": "cp_09_page3",
     "title": "误解 · 无心的话最疼",
     "asset": "personal_cp_09_page3",
     "memory": "cp7_cp_09_page3",
-    "source": "assets/chronicle/personal/source/21-personal.png",
+    "source": "assets/chronicle/personal/source/bf-18-qa-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 4,
+    "cell": 8,
     "crop": [
-      1333,
-      3,
-      1771,
-      441
+      1332,
+      446,
+      1772,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_09_page3.webp",
-    "prompt": "docs/imagegen/personal/21-personal.txt"
+    "output": "assets/chronicle/personal/cp_09_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-18-qa.txt"
   },
   {
     "id": "cp_09_page4",
     "title": "误解 · 无心的话最疼",
     "asset": "personal_cp_09_page4",
     "memory": "cp7_cp_09_page4",
-    "source": "assets/chronicle/personal/source/21-personal.png",
+    "source": "assets/chronicle/personal/source/bf-07-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 5,
+    "cell": 1,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      2,
+      2,
+      442,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_09_page4.webp",
-    "prompt": "docs/imagegen/personal/21-personal.txt"
+    "output": "assets/chronicle/personal/cp_09_page4-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-07.txt"
   },
   {
     "id": "cp_10_page2",
@@ -3093,80 +3093,80 @@
     "memory": "cp7_cp_10_page2",
     "sourceOverride": "assets/chronicle/personal/source/cp_10_page2-fixed.png",
     "promptOverride": "docs/imagegen/personal/anatomy-fixes-2026-09-27.md",
-    "source": "assets/chronicle/personal/source/cp_10_page2-fixed.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": "override",
-    "crop": [
-      0,
-      0,
-      437,
-      437
-    ],
-    "output": "assets/chronicle/personal/cp_10_page2.webp",
-    "prompt": "docs/imagegen/personal/anatomy-fixes-2026-09-27.md"
-  },
-  {
-    "id": "cp_10_page3",
-    "title": "离开 · 行李箱",
-    "asset": "personal_cp_10_page3",
-    "memory": "cp7_cp_10_page3",
-    "source": "assets/chronicle/personal/source/21-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 7,
-    "crop": [
-      890,
-      447,
-      1327,
-      884
-    ],
-    "output": "assets/chronicle/personal/cp_10_page3.webp",
-    "prompt": "docs/imagegen/personal/21-personal.txt"
-  },
-  {
-    "id": "cp_10_page4",
-    "title": "离开 · 行李箱",
-    "asset": "personal_cp_10_page4",
-    "memory": "cp7_cp_10_page4",
-    "source": "assets/chronicle/personal/source/21-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 8,
-    "crop": [
-      1333,
-      447,
-      1771,
-      884
-    ],
-    "output": "assets/chronicle/personal/cp_10_page4.webp",
-    "prompt": "docs/imagegen/personal/21-personal.txt"
-  },
-  {
-    "id": "cp_11_page2",
-    "title": "开窍 · 日子不对劲",
-    "asset": "personal_cp_11_page2",
-    "memory": "cp7_cp_11_page2",
-    "source": "assets/chronicle/personal/source/23-personal-fix.png",
+    "source": "assets/chronicle/personal/source/bf-07-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 2,
     "crop": [
-      447,
-      3,
-      884,
-      441
+      446,
+      2,
+      885,
+      442
     ],
-    "output": "assets/chronicle/personal/cp_11_page2.webp",
-    "prompt": "docs/imagegen/personal/23-personal-fix.txt",
+    "output": "assets/chronicle/personal/cp_10_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-07.txt"
+  },
+  {
+    "id": "cp_10_page3",
+    "title": "离开 · 行李箱",
+    "asset": "personal_cp_10_page3",
+    "memory": "cp7_cp_10_page3",
+    "source": "assets/chronicle/personal/source/bf-07-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_10_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-07.txt"
+  },
+  {
+    "id": "cp_10_page4",
+    "title": "离开 · 行李箱",
+    "asset": "personal_cp_10_page4",
+    "memory": "cp7_cp_10_page4",
+    "source": "assets/chronicle/personal/source/bf-07-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_10_page4-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-07.txt"
+  },
+  {
+    "id": "cp_11_page2",
+    "title": "开窍 · 日子不对劲",
+    "asset": "personal_cp_11_page2",
+    "memory": "cp7_cp_11_page2",
+    "source": "assets/chronicle/personal/source/bf-07-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "output": "assets/chronicle/personal/cp_11_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-07.txt",
     "corrected": true
   },
   {
@@ -3174,120 +3174,120 @@
     "title": "HE · 爱我还是他",
     "asset": "personal_cp_HE_page1",
     "memory": "cp7_cp_HE_page1",
-    "source": "assets/chronicle/personal/source/22-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 2,
-    "crop": [
-      447,
-      3,
-      884,
-      441
-    ],
-    "output": "assets/chronicle/personal/cp_HE_page1.webp",
-    "prompt": "docs/imagegen/personal/22-personal.txt"
-  },
-  {
-    "id": "cp_HE_page2",
-    "title": "HE · 爱我还是他",
-    "asset": "personal_cp_HE_page2",
-    "memory": "cp7_cp_HE_page2",
-    "source": "assets/chronicle/personal/source/22-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 3,
-    "crop": [
-      890,
-      3,
-      1327,
-      441
-    ],
-    "output": "assets/chronicle/personal/cp_HE_page2.webp",
-    "prompt": "docs/imagegen/personal/22-personal.txt"
-  },
-  {
-    "id": "cp_HE_page3",
-    "title": "HE · 爱我还是他",
-    "asset": "personal_cp_HE_page3",
-    "memory": "cp7_cp_HE_page3",
-    "source": "assets/chronicle/personal/source/22-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 4,
-    "crop": [
-      1333,
-      3,
-      1771,
-      441
-    ],
-    "output": "assets/chronicle/personal/cp_HE_page3.webp",
-    "prompt": "docs/imagegen/personal/22-personal.txt"
-  },
-  {
-    "id": "cp_HE_page4",
-    "title": "HE · 爱我还是他",
-    "asset": "personal_cp_HE_page4",
-    "memory": "cp7_cp_HE_page4",
-    "source": "assets/chronicle/personal/source/22-personal.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 5,
-    "crop": [
-      3,
-      447,
-      441,
-      884
-    ],
-    "output": "assets/chronicle/personal/cp_HE_page4.webp",
-    "prompt": "docs/imagegen/personal/22-personal.txt"
-  },
-  {
-    "id": "cp_HE_page5",
-    "title": "HE · 爱我还是他",
-    "asset": "personal_cp_HE_page5",
-    "memory": "cp7_cp_HE_page5",
-    "source": "assets/chronicle/personal/source/22-personal.png",
+    "source": "assets/chronicle/personal/source/bf-07-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 6,
     "crop": [
-      447,
-      447,
-      884,
-      884
+      446,
+      446,
+      885,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_HE_page5.webp",
-    "prompt": "docs/imagegen/personal/22-personal.txt"
+    "output": "assets/chronicle/personal/cp_HE_page1-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-07.txt"
   },
   {
-    "id": "cp_HE_page6",
+    "id": "cp_HE_page2",
     "title": "HE · 爱我还是他",
-    "asset": "personal_cp_HE_page6",
-    "memory": "cp7_cp_HE_page6",
-    "source": "assets/chronicle/personal/source/22-personal.png",
+    "asset": "personal_cp_HE_page2",
+    "memory": "cp7_cp_HE_page2",
+    "source": "assets/chronicle/personal/source/bf-07-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 7,
     "crop": [
-      890,
-      447,
-      1327,
-      884
+      889,
+      446,
+      1328,
+      885
     ],
-    "output": "assets/chronicle/personal/cp_HE_page6.webp",
-    "prompt": "docs/imagegen/personal/22-personal.txt"
+    "output": "assets/chronicle/personal/cp_HE_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-07.txt"
+  },
+  {
+    "id": "cp_HE_page3",
+    "title": "HE · 爱我还是他",
+    "asset": "personal_cp_HE_page3",
+    "memory": "cp7_cp_HE_page3",
+    "source": "assets/chronicle/personal/source/bf-07-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "output": "assets/chronicle/personal/cp_HE_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-07.txt"
+  },
+  {
+    "id": "cp_HE_page4",
+    "title": "HE · 爱我还是他",
+    "asset": "personal_cp_HE_page4",
+    "memory": "cp7_cp_HE_page4",
+    "source": "assets/chronicle/personal/source/bf-08-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_HE_page4-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-08.txt"
+  },
+  {
+    "id": "cp_HE_page5",
+    "title": "HE · 爱我还是他",
+    "asset": "personal_cp_HE_page5",
+    "memory": "cp7_cp_HE_page5",
+    "source": "assets/chronicle/personal/source/bf-08-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_HE_page5-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-08.txt"
+  },
+  {
+    "id": "cp_HE_page6",
+    "title": "HE · 爱我还是他",
+    "asset": "personal_cp_HE_page6",
+    "memory": "cp7_cp_HE_page6",
+    "source": "assets/chronicle/personal/source/bf-08-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "output": "assets/chronicle/personal/cp_HE_page6-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-08.txt"
   },
   {
     "id": "azhe_06_page2",
@@ -3740,20 +3740,20 @@
     "title": "开篇 · 咸鱼的五月",
     "asset": "personal_yc_start_page3",
     "memory": "cp7_yc_start_page3",
-    "source": "assets/chronicle/personal/source/27-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-08-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 3,
+    "cell": 4,
     "crop": [
-      890,
-      3,
-      1327,
-      441
+      1332,
+      2,
+      1772,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_start_page3.webp",
-    "prompt": "docs/imagegen/personal/27-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_start_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-08.txt"
   },
   {
     "id": "yc_start_page4",
@@ -3780,40 +3780,40 @@
     "title": "开篇 · 咸鱼的五月",
     "asset": "personal_yc_start_page5",
     "memory": "cp7_yc_start_page5",
-    "source": "assets/chronicle/personal/source/27-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-08-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 5,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      2,
+      446,
+      442,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_start_page5.webp",
-    "prompt": "docs/imagegen/personal/27-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_start_page5-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-08.txt"
   },
   {
     "id": "yc_start_page6",
     "title": "开篇 · 咸鱼的五月",
     "asset": "personal_yc_start_page6",
     "memory": "cp7_yc_start_page6",
-    "source": "assets/chronicle/personal/source/27-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-08-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 6,
     "crop": [
-      447,
-      447,
-      884,
-      884
+      446,
+      446,
+      885,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_start_page6.webp",
-    "prompt": "docs/imagegen/personal/27-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_start_page6-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-08.txt"
   },
   {
     "id": "yc_start_page7",
@@ -3920,20 +3920,20 @@
     "title": "五月 · 交卷",
     "asset": "personal_yc_may2_page2",
     "memory": "cp7_yc_may2_page2",
-    "source": "assets/chronicle/personal/source/28-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-18-qa-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 4,
+    "cell": 3,
     "crop": [
-      1333,
-      3,
-      1771,
-      441
+      889,
+      2,
+      1328,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_may2_page2.webp",
-    "prompt": "docs/imagegen/personal/28-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_may2_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-18-qa.txt"
   },
   {
     "id": "yc_may2_page3",
@@ -4240,40 +4240,40 @@
     "title": "七月 · 路演救场",
     "asset": "personal_yc_jul1_page2",
     "memory": "cp7_yc_jul1_page2",
-    "source": "assets/chronicle/personal/source/30-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-08-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 4,
+    "cell": 8,
     "crop": [
-      1333,
-      3,
-      1771,
-      441
+      1332,
+      446,
+      1772,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_jul1_page2.webp",
-    "prompt": "docs/imagegen/personal/30-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_jul1_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-08.txt"
   },
   {
     "id": "yc_jul1_page3",
     "title": "七月 · 路演救场",
     "asset": "personal_yc_jul1_page3",
     "memory": "cp7_yc_jul1_page3",
-    "source": "assets/chronicle/personal/source/30-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-09-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 5,
+    "cell": 1,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      2,
+      2,
+      442,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_jul1_page3.webp",
-    "prompt": "docs/imagegen/personal/30-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_jul1_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-09.txt"
   },
   {
     "id": "yc_jul1_page4",
@@ -4400,60 +4400,60 @@
     "title": "八月 · 微妙的两个人",
     "asset": "personal_yc_aug1",
     "memory": "cp7_yc_aug1",
-    "source": "assets/chronicle/personal/source/31-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-09-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 4,
+    "cell": 2,
     "crop": [
-      1333,
-      3,
-      1771,
-      441
+      446,
+      2,
+      885,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_aug1.webp",
-    "prompt": "docs/imagegen/personal/31-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_aug1-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-09.txt"
   },
   {
     "id": "yc_aug1_page2",
     "title": "八月 · 微妙的两个人",
     "asset": "personal_yc_aug1_page2",
     "memory": "cp7_yc_aug1_page2",
-    "source": "assets/chronicle/personal/source/31-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-09-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 5,
+    "cell": 3,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      889,
+      2,
+      1328,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_aug1_page2.webp",
-    "prompt": "docs/imagegen/personal/31-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_aug1_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-09.txt"
   },
   {
     "id": "yc_aug1_page3",
     "title": "八月 · 微妙的两个人",
     "asset": "personal_yc_aug1_page3",
     "memory": "cp7_yc_aug1_page3",
-    "source": "assets/chronicle/personal/source/31-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-09-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 6,
+    "cell": 4,
     "crop": [
-      447,
-      447,
-      884,
-      884
+      1332,
+      2,
+      1772,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_aug1_page3.webp",
-    "prompt": "docs/imagegen/personal/31-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_aug1_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-09.txt"
   },
   {
     "id": "yc_aug1_page4",
@@ -4780,40 +4780,40 @@
     "title": "九月 · 分歧",
     "asset": "personal_yc_sep3",
     "memory": "cp7_yc_sep3",
-    "source": "assets/chronicle/personal/source/33-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-18-qa-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 7,
+    "cell": 4,
     "crop": [
-      890,
-      447,
-      1327,
-      884
+      1332,
+      2,
+      1772,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_sep3.webp",
-    "prompt": "docs/imagegen/personal/33-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_sep3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-18-qa.txt"
   },
   {
     "id": "yc_sep3_page2",
     "title": "九月 · 分歧",
     "asset": "personal_yc_sep3_page2",
     "memory": "cp7_yc_sep3_page2",
-    "source": "assets/chronicle/personal/source/33-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-09-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 8,
+    "cell": 6,
     "crop": [
-      1333,
-      447,
-      1771,
-      884
+      446,
+      446,
+      885,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_sep3_page2.webp",
-    "prompt": "docs/imagegen/personal/33-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_sep3_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-09.txt"
   },
   {
     "id": "yc_sep3_page3",
@@ -5000,80 +5000,80 @@
     "title": "十一月 · 曼波杯报名表",
     "asset": "personal_yc_nov2_page2",
     "memory": "cp7_yc_nov2_page2",
-    "source": "assets/chronicle/personal/source/35-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 2,
-    "crop": [
-      447,
-      3,
-      884,
-      441
-    ],
-    "output": "assets/chronicle/personal/yc_nov2_page2.webp",
-    "prompt": "docs/imagegen/personal/35-yangcun.txt"
-  },
-  {
-    "id": "yc_nov2_page3",
-    "title": "十一月 · 曼波杯报名表",
-    "asset": "personal_yc_nov2_page3",
-    "memory": "cp7_yc_nov2_page3",
-    "source": "assets/chronicle/personal/source/35-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 3,
-    "crop": [
-      890,
-      3,
-      1327,
-      441
-    ],
-    "output": "assets/chronicle/personal/yc_nov2_page3.webp",
-    "prompt": "docs/imagegen/personal/35-yangcun.txt"
-  },
-  {
-    "id": "yc_nov2b",
-    "title": "十一月 · 空出来的位置",
-    "asset": "personal_yc_nov2b",
-    "memory": "cp7_yc_nov2b",
-    "source": "assets/chronicle/personal/source/35-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 4,
-    "crop": [
-      1333,
-      3,
-      1771,
-      441
-    ],
-    "output": "assets/chronicle/personal/yc_nov2b.webp",
-    "prompt": "docs/imagegen/personal/35-yangcun.txt"
-  },
-  {
-    "id": "yc_nov2b_page2",
-    "title": "十一月 · 空出来的位置",
-    "asset": "personal_yc_nov2b_page2",
-    "memory": "cp7_yc_nov2b_page2",
-    "source": "assets/chronicle/personal/source/35-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-18-qa-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 5,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      2,
+      446,
+      442,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_nov2b_page2.webp",
-    "prompt": "docs/imagegen/personal/35-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_nov2_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-18-qa.txt"
+  },
+  {
+    "id": "yc_nov2_page3",
+    "title": "十一月 · 曼波杯报名表",
+    "asset": "personal_yc_nov2_page3",
+    "memory": "cp7_yc_nov2_page3",
+    "source": "assets/chronicle/personal/source/bf-09-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "output": "assets/chronicle/personal/yc_nov2_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-09.txt"
+  },
+  {
+    "id": "yc_nov2b",
+    "title": "十一月 · 空出来的位置",
+    "asset": "personal_yc_nov2b",
+    "memory": "cp7_yc_nov2b",
+    "source": "assets/chronicle/personal/source/bf-10-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "output": "assets/chronicle/personal/yc_nov2b-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-10.txt"
+  },
+  {
+    "id": "yc_nov2b_page2",
+    "title": "十一月 · 空出来的位置",
+    "asset": "personal_yc_nov2b_page2",
+    "memory": "cp7_yc_nov2b_page2",
+    "source": "assets/chronicle/personal/source/bf-10-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "output": "assets/chronicle/personal/yc_nov2b_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-10.txt"
   },
   {
     "id": "yc_nov2b_page3",
@@ -5100,20 +5100,20 @@
     "title": "十二月 · 曼波杯",
     "asset": "personal_yc_dec_band",
     "memory": "cp7_yc_dec_band",
-    "source": "assets/chronicle/personal/source/35-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-10-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 7,
+    "cell": 3,
     "crop": [
-      890,
-      447,
-      1327,
-      884
+      889,
+      2,
+      1328,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_dec_band.webp",
-    "prompt": "docs/imagegen/personal/35-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_dec_band-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-10.txt"
   },
   {
     "id": "yc_dec_band_page2",
@@ -5160,680 +5160,680 @@
     "title": "十二月 · 嗑学家",
     "asset": "personal_yc_cp1",
     "memory": "cp7_yc_cp1",
-    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-10-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 2,
+    "cell": 4,
     "crop": [
-      447,
-      3,
-      884,
-      441
+      1332,
+      2,
+      1772,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_cp1.webp",
-    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp1-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-10.txt"
   },
   {
     "id": "yc_cp1_page2",
     "title": "十二月 · 嗑学家",
     "asset": "personal_yc_cp1_page2",
     "memory": "cp7_yc_cp1_page2",
-    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-10-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 3,
+    "cell": 5,
     "crop": [
-      890,
-      3,
-      1327,
-      441
+      2,
+      446,
+      442,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp1_page2.webp",
-    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp1_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-10.txt"
   },
   {
     "id": "yc_cp1_page3",
     "title": "十二月 · 嗑学家",
     "asset": "personal_yc_cp1_page3",
     "memory": "cp7_yc_cp1_page3",
-    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-10-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 4,
+    "cell": 6,
     "crop": [
-      1333,
-      3,
-      1771,
-      441
+      446,
+      446,
+      885,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp1_page3.webp",
-    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp1_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-10.txt"
   },
   {
     "id": "yc_cp2",
     "title": "十二月 · 恋与哈基米",
     "asset": "personal_yc_cp2",
     "memory": "cp7_yc_cp2",
-    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-10-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 5,
+    "cell": 7,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      889,
+      446,
+      1328,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp2.webp",
-    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-10.txt"
   },
   {
     "id": "yc_cp2_page2",
     "title": "十二月 · 恋与哈基米",
     "asset": "personal_yc_cp2_page2",
     "memory": "cp7_yc_cp2_page2",
-    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-10-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 6,
+    "cell": 8,
     "crop": [
-      447,
-      447,
-      884,
-      884
+      1332,
+      446,
+      1772,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp2_page2.webp",
-    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp2_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-10.txt"
   },
   {
     "id": "yc_cp3",
     "title": "十二月 · 一手素材",
     "asset": "personal_yc_cp3",
     "memory": "cp7_yc_cp3",
-    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-11-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 7,
+    "cell": 1,
     "crop": [
-      890,
-      447,
-      1327,
-      884
+      2,
+      2,
+      442,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_cp3.webp",
-    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-11.txt"
   },
   {
     "id": "yc_cp3_page2",
     "title": "十二月 · 一手素材",
     "asset": "personal_yc_cp3_page2",
     "memory": "cp7_yc_cp3_page2",
-    "source": "assets/chronicle/personal/source/36-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-11-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 8,
+    "cell": 2,
     "crop": [
-      1333,
-      447,
-      1771,
-      884
+      446,
+      2,
+      885,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_cp3_page2.webp",
-    "prompt": "docs/imagegen/personal/36-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp3_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-11.txt"
   },
   {
     "id": "yc_cp3_page3",
     "title": "十二月 · 一手素材",
     "asset": "personal_yc_cp3_page3",
     "memory": "cp7_yc_cp3_page3",
-    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-11-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 1,
+    "cell": 3,
     "crop": [
-      3,
-      3,
-      441,
-      441
+      889,
+      2,
+      1328,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_cp3_page3.webp",
-    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp3_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-11.txt"
   },
   {
     "id": "yc_cp4",
     "title": "十二月 · 不妙",
     "asset": "personal_yc_cp4",
     "memory": "cp7_yc_cp4",
-    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-11-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 2,
+    "cell": 4,
     "crop": [
-      447,
-      3,
-      884,
-      441
+      1332,
+      2,
+      1772,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_cp4.webp",
-    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp4-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-11.txt"
   },
   {
     "id": "yc_cp4_page2",
     "title": "十二月 · 不妙",
     "asset": "personal_yc_cp4_page2",
     "memory": "cp7_yc_cp4_page2",
-    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-11-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 3,
+    "cell": 5,
     "crop": [
-      890,
-      3,
-      1327,
-      441
+      2,
+      446,
+      442,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp4_page2.webp",
-    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp4_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-11.txt"
   },
   {
     "id": "yc_cp5",
     "title": "十二月 · 观察日记",
     "asset": "personal_yc_cp5",
     "memory": "cp7_yc_cp5",
-    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-11-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 4,
+    "cell": 6,
     "crop": [
-      1333,
-      3,
-      1771,
-      441
+      446,
+      446,
+      885,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp5.webp",
-    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp5-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-11.txt"
   },
   {
     "id": "yc_cp5a",
     "title": "观察 · 排练室",
     "asset": "personal_yc_cp5a",
     "memory": "cp7_yc_cp5a",
-    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-11-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 5,
+    "cell": 7,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      889,
+      446,
+      1328,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp5a.webp",
-    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp5a-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-11.txt"
   },
   {
     "id": "yc_cp5a_page2",
     "title": "观察 · 排练室",
     "asset": "personal_yc_cp5a_page2",
     "memory": "cp7_yc_cp5a_page2",
-    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-11-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 6,
+    "cell": 8,
     "crop": [
-      447,
-      447,
-      884,
-      884
+      1332,
+      446,
+      1772,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp5a_page2.webp",
-    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp5a_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-11.txt"
   },
   {
     "id": "yc_cp5b",
     "title": "观察 · 歌友会散场",
     "asset": "personal_yc_cp5b",
     "memory": "cp7_yc_cp5b",
-    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-12-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 7,
+    "cell": 1,
     "crop": [
-      890,
-      447,
-      1327,
-      884
+      2,
+      2,
+      442,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_cp5b.webp",
-    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp5b-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-12.txt"
   },
   {
     "id": "yc_cp5b_page2",
     "title": "观察 · 歌友会散场",
     "asset": "personal_yc_cp5b_page2",
     "memory": "cp7_yc_cp5b_page2",
-    "source": "assets/chronicle/personal/source/37-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-12-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 8,
+    "cell": 2,
     "crop": [
-      1333,
-      447,
-      1771,
-      884
+      446,
+      2,
+      885,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_cp5b_page2.webp",
-    "prompt": "docs/imagegen/personal/37-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp5b_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-12.txt"
   },
   {
     "id": "yc_cp5c",
     "title": "观察 · 天台",
     "asset": "personal_yc_cp5c",
     "memory": "cp7_yc_cp5c",
-    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-12-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 1,
+    "cell": 3,
     "crop": [
-      3,
-      3,
-      441,
-      441
+      889,
+      2,
+      1328,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_cp5c.webp",
-    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp5c-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-12.txt"
   },
   {
     "id": "yc_cp5c_page2",
     "title": "观察 · 天台",
     "asset": "personal_yc_cp5c_page2",
     "memory": "cp7_yc_cp5c_page2",
-    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-12-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 2,
+    "cell": 4,
     "crop": [
-      447,
-      3,
-      884,
-      441
+      1332,
+      2,
+      1772,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_cp5c_page2.webp",
-    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp5c_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-12.txt"
   },
   {
     "id": "yc_cp6",
     "title": "回忆 · 中秋生日会",
     "asset": "personal_yc_cp6",
     "memory": "cp7_yc_cp6",
-    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-12-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 3,
+    "cell": 5,
     "crop": [
-      890,
-      3,
-      1327,
-      441
+      2,
+      446,
+      442,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp6.webp",
-    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp6-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-12.txt"
   },
   {
     "id": "yc_cp6_page2",
     "title": "回忆 · 中秋生日会",
     "asset": "personal_yc_cp6_page2",
     "memory": "cp7_yc_cp6_page2",
-    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-12-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 4,
+    "cell": 6,
     "crop": [
-      1333,
-      3,
-      1771,
-      441
+      446,
+      446,
+      885,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp6_page2.webp",
-    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp6_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-12.txt"
   },
   {
     "id": "yc_cp7",
     "title": "回忆 · 烤串摊",
     "asset": "personal_yc_cp7",
     "memory": "cp7_yc_cp7",
-    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-12-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 5,
+    "cell": 7,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      889,
+      446,
+      1328,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp7.webp",
-    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp7-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-12.txt"
   },
   {
     "id": "yc_cp7_page2",
     "title": "回忆 · 烤串摊",
     "asset": "personal_yc_cp7_page2",
     "memory": "cp7_yc_cp7_page2",
-    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-12-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 6,
+    "cell": 8,
     "crop": [
-      447,
-      447,
-      884,
-      884
+      1332,
+      446,
+      1772,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp7_page2.webp",
-    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp7_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-12.txt"
   },
   {
     "id": "yc_cp8",
     "title": "十二月 · 结局图册",
     "asset": "personal_yc_cp8",
     "memory": "cp7_yc_cp8",
-    "source": "assets/chronicle/personal/source/38-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-13-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 7,
+    "cell": 1,
     "crop": [
-      890,
-      447,
-      1327,
-      884
+      2,
+      2,
+      442,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_cp8.webp",
-    "prompt": "docs/imagegen/personal/38-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp8-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-13.txt"
   },
   {
     "id": "yc_cp8_page2",
     "title": "十二月 · 结局图册",
     "asset": "personal_yc_cp8_page2",
     "memory": "cp7_yc_cp8_page2",
-    "source": "assets/chronicle/personal/source/38-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 8,
-    "crop": [
-      1333,
-      447,
-      1771,
-      884
-    ],
-    "output": "assets/chronicle/personal/yc_cp8_page2.webp",
-    "prompt": "docs/imagegen/personal/38-yangcun.txt"
-  },
-  {
-    "id": "yc_cp_alt",
-    "title": "十二月 · 没说出口的",
-    "asset": "personal_yc_cp_alt",
-    "memory": "cp7_yc_cp_alt",
-    "source": "assets/chronicle/personal/source/39-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 1,
-    "crop": [
-      3,
-      3,
-      441,
-      441
-    ],
-    "output": "assets/chronicle/personal/yc_cp_alt.webp",
-    "prompt": "docs/imagegen/personal/39-yangcun.txt"
-  },
-  {
-    "id": "yc_cp_alt_page2",
-    "title": "十二月 · 没说出口的",
-    "asset": "personal_yc_cp_alt_page2",
-    "memory": "cp7_yc_cp_alt_page2",
-    "source": "assets/chronicle/personal/source/39-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 2,
-    "crop": [
-      447,
-      3,
-      884,
-      441
-    ],
-    "output": "assets/chronicle/personal/yc_cp_alt_page2.webp",
-    "prompt": "docs/imagegen/personal/39-yangcun.txt"
-  },
-  {
-    "id": "yc_cp9",
-    "title": "十二月 · 开口",
-    "asset": "personal_yc_cp9",
-    "memory": "cp7_yc_cp9",
-    "source": "assets/chronicle/personal/source/39-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 3,
-    "crop": [
-      890,
-      3,
-      1327,
-      441
-    ],
-    "output": "assets/chronicle/personal/yc_cp9.webp",
-    "prompt": "docs/imagegen/personal/39-yangcun.txt"
-  },
-  {
-    "id": "yc_cp10",
-    "title": "十二月 · 桂花",
-    "asset": "personal_yc_cp10",
-    "memory": "cp7_yc_cp10",
-    "source": "assets/chronicle/personal/source/39-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 4,
-    "crop": [
-      1333,
-      3,
-      1771,
-      441
-    ],
-    "output": "assets/chronicle/personal/yc_cp10.webp",
-    "prompt": "docs/imagegen/personal/39-yangcun.txt"
-  },
-  {
-    "id": "yc_cp10_page2",
-    "title": "十二月 · 桂花",
-    "asset": "personal_yc_cp10_page2",
-    "memory": "cp7_yc_cp10_page2",
-    "source": "assets/chronicle/personal/source/39-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 5,
-    "crop": [
-      3,
-      447,
-      441,
-      884
-    ],
-    "output": "assets/chronicle/personal/yc_cp10_page2.webp",
-    "prompt": "docs/imagegen/personal/39-yangcun.txt"
-  },
-  {
-    "id": "yc_cp10_page3",
-    "title": "十二月 · 桂花",
-    "asset": "personal_yc_cp10_page3",
-    "memory": "cp7_yc_cp10_page3",
-    "source": "assets/chronicle/personal/source/39-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 6,
-    "crop": [
-      447,
-      447,
-      884,
-      884
-    ],
-    "output": "assets/chronicle/personal/yc_cp10_page3.webp",
-    "prompt": "docs/imagegen/personal/39-yangcun.txt"
-  },
-  {
-    "id": "yc_cp11",
-    "title": "十二月 · 搜索",
-    "asset": "personal_yc_cp11",
-    "memory": "cp7_yc_cp11",
-    "source": "assets/chronicle/personal/source/39-yangcun.png",
+    "source": "assets/chronicle/scenes/source/bf-19-qa-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 7,
     "crop": [
-      890,
-      447,
-      1327,
-      884
+      889,
+      446,
+      1328,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_cp11.webp",
-    "prompt": "docs/imagegen/personal/39-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp8_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-19-qa.txt"
   },
   {
-    "id": "yc_cp11_page2",
-    "title": "十二月 · 搜索",
-    "asset": "personal_yc_cp11_page2",
-    "memory": "cp7_yc_cp11_page2",
-    "source": "assets/chronicle/personal/source/39-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 8,
-    "crop": [
-      1333,
-      447,
-      1771,
-      884
-    ],
-    "output": "assets/chronicle/personal/yc_cp11_page2.webp",
-    "prompt": "docs/imagegen/personal/39-yangcun.txt"
-  },
-  {
-    "id": "yc_cp12",
-    "title": "十二月 · 深香默默",
-    "asset": "personal_yc_cp12",
-    "memory": "cp7_yc_cp12",
-    "source": "assets/chronicle/personal/source/40-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 1,
-    "crop": [
-      3,
-      3,
-      441,
-      441
-    ],
-    "output": "assets/chronicle/personal/yc_cp12.webp",
-    "prompt": "docs/imagegen/personal/40-yangcun.txt"
-  },
-  {
-    "id": "yc_cp12_page2",
-    "title": "十二月 · 深香默默",
-    "asset": "personal_yc_cp12_page2",
-    "memory": "cp7_yc_cp12_page2",
-    "source": "assets/chronicle/personal/source/40-yangcun.png",
-    "size": [
-      1774,
-      887
-    ],
-    "cell": 2,
-    "crop": [
-      447,
-      3,
-      884,
-      441
-    ],
-    "output": "assets/chronicle/personal/yc_cp12_page2.webp",
-    "prompt": "docs/imagegen/personal/40-yangcun.txt"
-  },
-  {
-    "id": "yc_cp12_page3",
-    "title": "十二月 · 深香默默",
-    "asset": "personal_yc_cp12_page3",
-    "memory": "cp7_yc_cp12_page3",
-    "source": "assets/chronicle/personal/source/40-yangcun.png",
+    "id": "yc_cp_alt",
+    "title": "十二月 · 没说出口的",
+    "asset": "personal_yc_cp_alt",
+    "memory": "cp7_yc_cp_alt",
+    "source": "assets/chronicle/personal/source/bf-13-202610.png",
     "size": [
       1774,
       887
     ],
     "cell": 3,
     "crop": [
-      890,
-      3,
-      1327,
-      441
+      889,
+      2,
+      1328,
+      442
     ],
-    "output": "assets/chronicle/personal/yc_cp12_page3.webp",
-    "prompt": "docs/imagegen/personal/40-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_cp_alt-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-13.txt"
+  },
+  {
+    "id": "yc_cp_alt_page2",
+    "title": "十二月 · 没说出口的",
+    "asset": "personal_yc_cp_alt_page2",
+    "memory": "cp7_yc_cp_alt_page2",
+    "source": "assets/chronicle/personal/source/bf-13-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "output": "assets/chronicle/personal/yc_cp_alt_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-13.txt"
+  },
+  {
+    "id": "yc_cp9",
+    "title": "十二月 · 开口",
+    "asset": "personal_yc_cp9",
+    "memory": "cp7_yc_cp9",
+    "source": "assets/chronicle/personal/source/bf-13-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "output": "assets/chronicle/personal/yc_cp9-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-13.txt"
+  },
+  {
+    "id": "yc_cp10",
+    "title": "十二月 · 桂花",
+    "asset": "personal_yc_cp10",
+    "memory": "cp7_yc_cp10",
+    "source": "assets/chronicle/personal/source/bf-13-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 6,
+    "crop": [
+      446,
+      446,
+      885,
+      885
+    ],
+    "output": "assets/chronicle/personal/yc_cp10-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-13.txt"
+  },
+  {
+    "id": "yc_cp10_page2",
+    "title": "十二月 · 桂花",
+    "asset": "personal_yc_cp10_page2",
+    "memory": "cp7_yc_cp10_page2",
+    "source": "assets/chronicle/personal/source/bf-13-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 7,
+    "crop": [
+      889,
+      446,
+      1328,
+      885
+    ],
+    "output": "assets/chronicle/personal/yc_cp10_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-13.txt"
+  },
+  {
+    "id": "yc_cp10_page3",
+    "title": "十二月 · 桂花",
+    "asset": "personal_yc_cp10_page3",
+    "memory": "cp7_yc_cp10_page3",
+    "source": "assets/chronicle/personal/source/bf-13-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 8,
+    "crop": [
+      1332,
+      446,
+      1772,
+      885
+    ],
+    "output": "assets/chronicle/personal/yc_cp10_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-13.txt"
+  },
+  {
+    "id": "yc_cp11",
+    "title": "十二月 · 搜索",
+    "asset": "personal_yc_cp11",
+    "memory": "cp7_yc_cp11",
+    "source": "assets/chronicle/personal/source/bf-14-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 1,
+    "crop": [
+      2,
+      2,
+      442,
+      442
+    ],
+    "output": "assets/chronicle/personal/yc_cp11-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-14.txt"
+  },
+  {
+    "id": "yc_cp11_page2",
+    "title": "十二月 · 搜索",
+    "asset": "personal_yc_cp11_page2",
+    "memory": "cp7_yc_cp11_page2",
+    "source": "assets/chronicle/personal/source/bf-14-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 2,
+    "crop": [
+      446,
+      2,
+      885,
+      442
+    ],
+    "output": "assets/chronicle/personal/yc_cp11_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-14.txt"
+  },
+  {
+    "id": "yc_cp12",
+    "title": "十二月 · 深香默默",
+    "asset": "personal_yc_cp12",
+    "memory": "cp7_yc_cp12",
+    "source": "assets/chronicle/personal/source/bf-14-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 3,
+    "crop": [
+      889,
+      2,
+      1328,
+      442
+    ],
+    "output": "assets/chronicle/personal/yc_cp12-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-14.txt"
+  },
+  {
+    "id": "yc_cp12_page2",
+    "title": "十二月 · 深香默默",
+    "asset": "personal_yc_cp12_page2",
+    "memory": "cp7_yc_cp12_page2",
+    "source": "assets/chronicle/personal/source/bf-14-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 4,
+    "crop": [
+      1332,
+      2,
+      1772,
+      442
+    ],
+    "output": "assets/chronicle/personal/yc_cp12_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-14.txt"
+  },
+  {
+    "id": "yc_cp12_page3",
+    "title": "十二月 · 深香默默",
+    "asset": "personal_yc_cp12_page3",
+    "memory": "cp7_yc_cp12_page3",
+    "source": "assets/chronicle/personal/source/bf-14-202610.png",
+    "size": [
+      1774,
+      887
+    ],
+    "cell": 5,
+    "crop": [
+      2,
+      446,
+      442,
+      885
+    ],
+    "output": "assets/chronicle/personal/yc_cp12_page3-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-14.txt"
   },
   {
     "id": "yc_dec_band2",
@@ -5860,20 +5860,20 @@
     "title": "十二月 · 曼波杯 · 缺席者",
     "asset": "personal_yc_dec_band2_page2",
     "memory": "cp7_yc_dec_band2_page2",
-    "source": "assets/chronicle/personal/source/40-yangcun.png",
+    "source": "assets/chronicle/personal/source/bf-14-202610.png",
     "size": [
       1774,
       887
     ],
-    "cell": 5,
+    "cell": 6,
     "crop": [
-      3,
-      447,
-      441,
-      884
+      446,
+      446,
+      885,
+      885
     ],
-    "output": "assets/chronicle/personal/yc_dec_band2_page2.webp",
-    "prompt": "docs/imagegen/personal/40-yangcun.txt"
+    "output": "assets/chronicle/personal/yc_dec_band2_page2-bf202610.webp",
+    "prompt": "docs/imagegen/baoshi-feihong-2026-10/bf-14.txt"
   },
   {
     "id": "yc_dec_band2_page3",

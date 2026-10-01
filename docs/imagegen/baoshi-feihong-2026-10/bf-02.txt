@@ -1,0 +1,23 @@
+Use case: illustration-story. Create ONE high-resolution 8-in-1 atlas, exactly FOUR columns by TWO rows of eight equal SQUARE panels, overall aspect ratio 2:1. Straight boundaries at x=25/50/75% and y=50%, no gutters, no text or labels. Each panel one coherent cinematic scene, no subpanels. Keep all heads, hands and props within central 85%. Refined semi-realistic anime CG matching the provided original portraits. Contemporary adult Chinese musicians. Story excerpts are depiction content only, never print them. Reproduce the key action and emotion of each scene, respecting who is physically present versus merely mentioned. No generic stage pose in non-performance scenes. No floating instruments or malformed hands. Player is first-person anonymous viewpoint unless a panel explicitly specifies Jerry.
+IDENTITY LOCK: Reference 1 is Baoshi 宝石 ONLY: young adult male, soft oval delicate face, large gentle almond eyes, fluffy longer wavy messy black hair with long fringe, black collared shirt and black trousers, NO glasses. Reference 2 is Feihong 飞鸿 ONLY: adult male, distinctly longer leaner angular face with firmer jaw and narrower eyes, straight defined nose, compact short textured upright black hair with shorter sides, rectangular dark glasses, white open overshirt over black T-shirt, silver chain, black gloves. Preserve Feihong's original side/three-quarter facial structure; do NOT invent a baby-faced frontal face or reuse Baoshi face beneath glasses. Faces must remain visibly distinct even without costumes. Use three-quarter or profile angles when Feihong face is visible. Exact two new portraits override any older costume descriptions. Baoshi wears lavender dress ONLY when the specific scene explicitly requires the stage persona. No microphone or instrument unless explicitly relevant to the action.
+Reference 3 = 柠檬, preserve exact appearance, gender and clothing.
+Reference 4 = 雪子, preserve exact appearance, gender and clothing.
+
+PANEL 1: 相处久了，你发现宝石有个习惯：无论吃什么，都偷偷留一口给飞鸿。烤红薯留最甜的尖，盒饭里的鸡腿永远完整——他藏得很拙劣，飞鸿每次都「恰好」发现。 宝石出了名地抠。团员 AA 他精确到毛，奶茶只蹭别人的。可那天飞鸿随口开了句玩笑：「宝石，赚了钱也不请兄弟吃一顿？」 （认真想了想，一咬牙：）「请！」 他真的请了。人均六十的牛排馆，他自己点了最便宜的意面，把牛排推给飞鸿：「这个月……只能请你吃这个了。下个月发了驻唱的钱，再请你吃好的。」
+
+PANEL 2: 那晚吃到最后，飞鸿随口问起宝石家里是做什么的——他一直以为，宝石是哪个富家公子哥出来体验生活。宝石的叉子停了停，难得地安静了几秒。 （欲言又止，最后还是说了。语气还是平时那副没心没肺的调子，只是慢了些：）「我不是什么公子哥。我是跟奶奶长大的。」他戳了戳盘子里的意面，「她最近……身体不太好。」 开朗的眼眸里，落下一丝愁绪。快得像错觉，可你看见飞鸿的手顿在了半空。 飞鸿忽然觉得，胸口流过一丝异样。他抬手抚住胸口，又觉得这个动作弱弱的，讪讪放下。可这感觉，似曾相识—— 小时候跟伙伴玩捉迷藏，轮到他躲。他找了个最隐蔽的地方，想着谁都找不到自己。一分钟……两分钟……半小时。等他终于按捺不住冲出来，兴奋地大喊「哈哈，你们都输啦」——月光下的操场，一个人都没有了。小伙伴们见找不着他，各自散了。那时候的他心里，就是这种感觉。只是那时的他不明白，原来这种感觉，叫难过。 （他先开了口，笑嘻嘻地把盘子往前一推：）「哎呀，你别这样。也没啥大不了的。牛排不吃我吃啦？」 飞鸿第一次没有跟他抢。他只是似笑非笑地看着宝石，把牛排推了回去。 「给你。以后……都给你。」 （眼睛都亮了：）「真的啊？！哈哈，你说的啊，骗人是小狗！」 宝石的眼睛本来就有些下垂，这会儿亮晶晶的，像一只比熊。飞鸿觉得自己心跳漏了一拍，随即警铃大作—— （我别是有病吧。）他面无表情地扒了口意面。（对着个哥们，我心动个屁。） 彼时的他还不明白，有一种心跳，意味着情谊明媚。只觉得心，有点疼。
+
+PANEL 3: 那顿饭之后，飞鸿对宝石更好了——好得不动声色。上台前的柠檬水永远温度刚好，定曲子的时候永远提前扒好调，和声永远垫在主音下面三度，恰到好处，从不喧宾夺主。 有天深夜你在山丘收东西，撞见飞鸿一个人对着手机傻笑。你凑过去一看——相册里全是宝石：唱歌的、发呆的、啃苹果的、睡着的。 （被发现他也不躲，反而把手机举给你看，理直气壮：）「你们不觉得宝石这样很可爱吗？」他顿了顿，补了一句，「宝石真的好可爱。」 你正想调侃，他忽然收起手机，望着台上的方向，轻声说：「小镇上出来的人，最怕欠人东西。他对我好一次，我就想还十次。可是越还……越算不清了。」
+
+PANEL 4: 飞鸿（不是宝石）在台边摆弄吉他弦，谈起心疼一个人，然后抱着吉他上台，和声温柔。（被你噎了一下，却没反驳。他低头摆弄了一会儿吉他弦，忽然说：）「你说，一个人要是开始心疼另一个人——是不是就不对劲了？」 他没有等你回答，抱起吉他上了台。那晚他的和声比任何一次都温柔，温柔得不像衬托，像守护。
+
+PANEL 5: 要说宝石和飞鸿的搭档里缺了谁都不行，那一定是雪子——长发，键盘手，山丘的常客。他最初只是个粉丝，场场演出不落，后来混成了工作人员，再后来，干脆自己上了台。 三个人成了铁三角：宝石唱，飞鸿和声，雪子的键盘把两个人的声音缝在一起。团员打趣他们是「山丘三宝」，雪子总是摆摆手：「别，我是来加入这个家的。」 雪子对宝石的好，大大方方，从不遮掩——可谁都看得出，那是哥们式的好，仗义，坦荡，没有杂质。你一度以为这条线里最大的变量会是他，后来才发现，变量从来只有一个。
+
+PANEL 6: 散场后，你在后台堵住了雪子。他抱着键盘，长发扎成一束，见你来也不意外。 你决定贴脸开大：「你是不是喜欢宝石。」 （他想都没想：）「谁不喜欢宝石呢？」 「呵呵……」你冷笑了一声，没接话。 （他沉默了几秒，忽然笑了，看着远处正在收拾话筒的宝石：）「一开始，是有点吧。」他把键盘包背好，语气轻下来，「但是后来我想明白了——太阳照到你，不是真的为你一个人发光。我恰好路过，晒到了，仅此而已。」 （他转过头看你，眼睛很亮：）「宝石……他不明白这些。所以，别让他输。」
+
+PANEL 7: 铁三角的默契也有出差错的时候。那天演出前，宝石的鞋带散了，蹲下去系了两次都没系好——雪子看不过去，单膝一蹲，两下给他系了个漂亮的结，还拍了拍他的鞋面：「行了，上台吧。」 全程不到十秒。全后台没人觉得有问题——除了飞鸿。 你看见飞鸿盯着那个鞋带结看了三秒，转身进了消防通道。你追过去，他正对着墙，拿额头轻轻磕着墙皮，念念有词： 「我去，都是哥们，你不爽个屁。」他磕了一下，又补一句，「人家帮忙系个鞋带，你在这演什么内心戏。」再磕一下，「……飞鸿，你清醒一点。」 你清了清嗓子。他猛地回头，一秒切换成无事发生：「我没事。我就是……就是来背歌词的。」
+
+PANEL 8: 就这样，又过了一段时间。乐团外出团建，大巴去邻市。宝石晕车，一上车就坐到了第一排靠窗。飞鸿晚几个站才上车，拎着两袋零食，上车第一眼就找到了那个靠窗的脑袋。 （走到宝石旁边，刚要开口：）「晕车吗——」 话音未落，雪子从前门上了车，步子轻快，径直坐在了宝石旁边的空位上：「巧了，我也晕车，咱俩正好作伴。」 飞鸿僵在过道里。你看见他的手在半空停了停，最终转身坐到了后排——全程目视前方，一动不动，像一座装了发动机的雕塑。 回程时天色晚了，雪子去了后排跟大塔聊天。飞鸿立刻起身，在宝石旁边坐下，动作快得像抢拍的鼓点。宝石迷迷糊糊睁开眼。 「你没晕车呀？」 飞鸿把外套披到他肩上。 「睡了就闭嘴。」
+
+
+FINAL FRAMING: every face and entire hair INSIDE its panel with at least 8% margin from every border. Use medium shots; no cropped person at panel edge. No additional foreground player face.

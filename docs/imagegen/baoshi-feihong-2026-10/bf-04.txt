@@ -1,0 +1,24 @@
+Use case: illustration-story. Create ONE high-resolution 8-in-1 atlas, exactly FOUR columns by TWO rows of eight equal SQUARE panels, overall aspect ratio 2:1. Straight boundaries at x=25/50/75% and y=50%, no gutters, no text or labels. Each panel one coherent cinematic scene, no subpanels. Keep all heads, hands and props within central 85%. Refined semi-realistic anime CG matching the provided original portraits. Contemporary adult Chinese musicians. Story excerpts are depiction content only, never print them. Reproduce the key action and emotion of each scene, respecting who is physically present versus merely mentioned. No generic stage pose in non-performance scenes. No floating instruments or malformed hands. Player is first-person anonymous viewpoint unless a panel explicitly specifies Jerry.
+IDENTITY LOCK: Reference 1 is Baoshi 宝石 ONLY: young adult male, soft oval delicate face, large gentle almond eyes, fluffy longer wavy messy black hair with long fringe, black collared shirt and black trousers, NO glasses. Reference 2 is Feihong 飞鸿 ONLY: adult male, distinctly longer leaner angular face with firmer jaw and narrower eyes, straight defined nose, compact short textured upright black hair with shorter sides, rectangular dark glasses, white open overshirt over black T-shirt, silver chain, black gloves. Preserve Feihong's original side/three-quarter facial structure; do NOT invent a baby-faced frontal face or reuse Baoshi face beneath glasses. Faces must remain visibly distinct even without costumes. Use three-quarter or profile angles when Feihong face is visible. Exact two new portraits override any older costume descriptions. Baoshi wears lavender dress ONLY when the specific scene explicitly requires the stage persona. No microphone or instrument unless explicitly relevant to the action.
+Reference 3 = 十元, preserve exact appearance, gender and clothing.
+Reference 4 = 大羊, preserve exact appearance, gender and clothing.
+Reference 5 = 雪子, preserve exact appearance, gender and clothing.
+
+PANEL 1: （他怔了两秒，忽然眼睛一亮：「市歌友会……他的新乐队，受邀演出，对不对？」你用力点头。他转身就跑，跑到门口又折回来，用力抱了你一下：）「等我好消息！」 他冲出去的那扇门，被风带得来回晃。你忽然想起飞鸿走那天，这扇门也这么晃过。原来有些门，进进出出，都是同一些人。
+
+PANEL 2: 宝石的眼神暗了一下，但很快又亮起来：「没关系，我自己找。一个城市一个城市地找。」 他走后的第三个月，你从十元那里听说：他在南边每个Livehouse门口都唱过那首《爱我还是他》。只是没有一个门口，站着那个人。
+
+PANEL 3: 夜晚摩天轮下的霓虹广场。宝石穿米白衬衫，飞鸿穿蓝灰衬衫，两个成年男性久别重逢后穿着完整地用力拥抱，眼眶微红、如释重负，行李箱放在脚边；远处十元和雪子欣慰旁观。温柔克制、非情色，不表现亲吻。
+
+PANEL 4: 两年后的山丘旧舞台，空无一人。公告栏上并排贴着两张已经泛黄但没有可读文字的演出照片，一张双人合影、一张孤独主唱的剪影；冷清舞台灯、未唱完的遗憾气氛。
+
+PANEL 5: 剧情分镜《入队 · 530的邀请》的第 2 幕：（眼睛一亮，转头看飞鸿：）「去吗去吗？」 （看着那双亮晶晶的眼睛，把「再想想」咽了回去：）「……去。」
+
+PANEL 6: 剧情分镜《入队 · 530的邀请》的第 3 幕：很多年后你才知道，这一个「去」字，把两个人的命运拧在了一起。当然，彼时的他们都以为，只是去唱一场演出。
+
+PANEL 7: 剧情分镜《相熟 · 白切黑计划》的第 2 幕：夜宵你赢了。但飞鸿输得魂不守舍——他嘟囔了一整晚「这么可爱的宝石，想象不到谁会压力他」。
+
+PANEL 8: 剧情分镜《530 · 被掐掉的SOLO》的第 2 幕：宝石还没反应过来这是在说他，认真地点头：「你要不想带，我可以帮你背！」大羊被噎得差点背过气。 （往前一步，挡在宝石前面，声音不大：）「他数错了，是他不对。」他顿了顿，「但刚才台下喊安可的时候，喊的是全团的名字。大羊，你的 SOLO 是亮点，他的嗓音也是。530 不是一个人的专场。」
+
+
+FINAL FRAMING: every face and entire hair INSIDE its panel with at least 8% margin from every border. Use medium shots; no cropped person at panel edge. No additional foreground player face.

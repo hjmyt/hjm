@@ -123,9 +123,6 @@ function feedCard() {
         toast('音符不够啦，读故事或演奏就能获得。');
         return;
     }
-    const btn = $('cardFeedBtn');
-    if (btn)
-        heartBurst(btn, 6);
     state.coins -= g[3];
     state.cards.daily.gifts[c.id] = used + 1;
     const before = cardBond(c.id), xpBefore = state.cards.collection[c.id].xp;
@@ -142,10 +139,18 @@ function feedCard() {
     onTrioGift(c, g);
     onSourceGift(c, g);
     CardUI.response = c.thanks?.[index] || ['“谢谢，你也记得照顾好自己。”', '“下次排练，就用这一份。”', '“要不要坐下来，一起吃？”', '“它好像很喜欢你呢。”'][index];
-    save();
+    const saved = save();
     renderGlobal();
+    if (saved) PawGift.play({ target: document.querySelector('#view-card .character-cover'), origin: $('cardFeedBtn'), name: cardName(c),
+        audio: { enabled: () => state.sound, getAudio: async () => {
+            const context = await ensureAudio();
+            return context ? { context, output: audioMaster,
+                track: source => { synthNodes.add(source); clearTimeout(bridgeIdleTimer); },
+                untrack: source => { synthNodes.delete(source); releaseAudioBridge(); }
+            } : null;
+        } }
+    });
     toast(`心意收到 · ${'羁绊分'} +${cardBond(c.id) - before} · 经验 +${state.cards.collection[c.id].xp - xpBefore}${grew ? ` · 升到 Lv.${cardLevel(c.id)}！` : ''}`, true);
-    playPetSound('feed');
 }
 
 function trainCard(id) {

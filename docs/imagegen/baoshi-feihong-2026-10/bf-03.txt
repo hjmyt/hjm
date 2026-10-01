@@ -1,0 +1,24 @@
+Use case: illustration-story. Create ONE high-resolution 8-in-1 atlas, exactly FOUR columns by TWO rows of eight equal SQUARE panels, overall aspect ratio 2:1. Straight boundaries at x=25/50/75% and y=50%, no gutters, no text or labels. Each panel one coherent cinematic scene, no subpanels. Keep all heads, hands and props within central 85%. Refined semi-realistic anime CG matching the provided original portraits. Contemporary adult Chinese musicians. Story excerpts are depiction content only, never print them. Reproduce the key action and emotion of each scene, respecting who is physically present versus merely mentioned. No generic stage pose in non-performance scenes. No floating instruments or malformed hands. Player is first-person anonymous viewpoint unless a panel explicitly specifies Jerry.
+IDENTITY LOCK: Reference 1 is Baoshi 宝石 ONLY: young adult male, soft oval delicate face, large gentle almond eyes, fluffy longer wavy messy black hair with long fringe, black collared shirt and black trousers, NO glasses. Reference 2 is Feihong 飞鸿 ONLY: adult male, distinctly longer leaner angular face with firmer jaw and narrower eyes, straight defined nose, compact short textured upright black hair with shorter sides, rectangular dark glasses, white open overshirt over black T-shirt, silver chain, black gloves. Preserve Feihong's original side/three-quarter facial structure; do NOT invent a baby-faced frontal face or reuse Baoshi face beneath glasses. Faces must remain visibly distinct even without costumes. Use three-quarter or profile angles when Feihong face is visible. Exact two new portraits override any older costume descriptions. Baoshi wears lavender dress ONLY when the specific scene explicitly requires the stage persona. No microphone or instrument unless explicitly relevant to the action.
+Reference 3 = 十元, preserve exact appearance, gender and clothing.
+Reference 4 = 柠檬, preserve exact appearance, gender and clothing.
+Reference 5 = 雪子, preserve exact appearance, gender and clothing.
+
+PANEL 1: 歌友会大获成功。散场后十元提议去坐摩天轮，说要「团建收尾」。然后她拉着你和众人，在轿厢分配上做了这辈子最精彩的一次调度——宝石和飞鸿，单独一个轿厢。 你隔着玻璃看见：小小的轿厢里，宝石贴着窗看夜景，飞鸿看着他。城市的灯一点点升上来，落到两个人的眼睛里。 下来的时候，宝石的脸有点红，说是闷的。飞鸿走在他后面半步，手一直虚虚地护在他身后，护了一路，什么也没碰。 （凑过来跟你咬耳朵，眼睛亮晶晶：）「看到没有！那个半步！那个虚护！」
+
+PANEL 2: 歌友会之后，飞鸿变得很奇怪。他排练老走神，看宝石的眼神像看一道解不出来的和弦。周四深夜，他把你约到山丘后门，抽了半根烟——他不会抽，呛得直咳嗽。 （终于开口：）「我受不了了。」他盯着自己的鞋尖，「雪子天天在他旁边，他还傻乎乎地什么都感觉不到。我……我想跟他挑明。」 他抬起头，眼睛里全是血丝，和一点不肯承认的怕。 「你帮我看看，我机会大吗？」
+
+PANEL 3: 飞鸿深吸一口气，点了点头：「那我就说了。输也输个明白。」 他转身要走，又回头，很认真地补了一句：「到时候不管成不成，都谢谢你——这段时间，全团就你在真心帮我们。」
+
+PANEL 4: 飞鸿沉默了。他把那根没抽完的烟摁灭，笑了笑：「也是。他那种性格，万一被吓跑了……」 「再等等吧。」他说。可你听得出来，这个「等」字，每说一次就更薄一层。
+
+PANEL 5: 周五演出后，飞鸿把宝石约到了天台。你躲在楼梯间，掐着大旗值偷听。 （他的声音在抖，却还在笑：）「宝石，我跟你说件事。我……我可能，不止想当朋友。」 （长久的沉默。然后是他一贯清澈的声音，认认真真：）「飞鸿，你当然不只是朋友呀。你是我最重要的搭档。」 （他又想了想，语气轻快：）「你是不是最近压力太大了？这样，你要是谈对象了，我帮你把关！我跟你说，我认识一个女生特别好，你要不要考虑——」 「你是真不明白，」他的声音低下去，「还是假不明白。」 宝石愣住了。他被飞鸿的眼神直愣愣地看着，半天，轻轻地说。 （淡淡地：）「……我们都是男生，不是吗？」 你听见什么东西碎掉的声音。飞鸿下意识地握着拳，再开口时，语气已经平得听不出波澜。 「……哎呦，跟你开个玩笑，看你吓得。」他越过宝石往楼下走。走了两步，又回过头，挤出一个笑。 「宝石，晚安。」
+
+PANEL 6: 第二天，飞鸿开始收拾行李。他辞了驻唱，买了回老家的票。你走之前问他去哪，他说南边，「找个能唱歌的地方」。 山丘门口，雪子拦住了他。你远远看着，只看见雪子说了很久，最后伸出手——不是挽留，是击掌。 （后来雪子转述给你听：）「我对他说：我光明正大，但不趁人之危。你这一走，我输得心服口服，可我还是会喜欢他——这不妨碍我瞧不起逃兵。」他顿了顿，「他骂我多管闲事。然后行李箱的拉杆，断了。」 上车前，飞鸿给宝石发了最后一条消息。你看到宝石的手机屏幕亮起，只有一行字： 「在你想明白之前，我都不会见你了。」 宝石盯着那行字，愣愣的，一动不动。你走过去，他抬起头，你才发现他脸上全是泪。 「宝石，你哭了呀？」他莫名其妙地抬手摸了摸脸：「是吗……我不知道。它自己流下来的。」
+
+PANEL 7: 飞鸿走后的第一周，宝石一切如常。第二周，他开始在演出前发呆——柠檬水没人准备了，温度总是不对。 第三周，定新歌的时候，他对着谱子坐了两个小时，才发现没人提前帮他扒好调。第四周，他的和声自己唱，唱到一半忽然停下来：「这个音……以前飞鸿会垫在下面。」 第五周的深夜，你收到宝石的消息，只有一句话：「原来他唱歌那么好听，比我好。可是他从来没抢过我一句。」 第六周，你看见他翻出旧手机相册——不知道哪来的，满满全是这两年的照片：他唱歌，他在笑，他在看飞鸿。而每张照片的边缘，都有半张侧脸，永远朝着他。 （他坐在舞台边，喃喃自语：）「他说，想明白之前不见我……那如果我一直想不明白呢？」
+
+PANEL 8: 第七周，宝石来找你。他把头发抓成了鸟窝，眼睛亮得吓人，像是终于烧穿了某层壳： （他深吸一口气：）「我想到明白是什么了。我要把他追回来。」他顿了顿，声音忽然软下来，「可是……我不知道他还在不在原地。你能帮我吗？」
+
+
+FINAL FRAMING: every face and entire hair INSIDE its panel with at least 8% margin from every border. Use medium shots; no cropped person at panel edge. No additional foreground player face.

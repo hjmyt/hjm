@@ -10727,7 +10727,7 @@ const PERSONAL_ROUTES = {
 };
 const PERSONAL_NODES = Object.values(PERSONAL_ROUTES).flatMap(r=>r.nodes.map(n=>({...n,route:r.id})));
 const PERSONAL_PAGE_ART = PERSONAL_NODES.flatMap(n=>(n.pageArt||[]).map((a,index)=>({...a,route:n.route,node:n.id,page:index+1,title:n.title})));
-Object.assign(ASSETS,Object.fromEntries([...PERSONAL_NODES.filter(n=>n.asset).map(n=>[n.asset,`assets/chronicle/personal/${n.id}.webp`]),...PERSONAL_PAGE_ART.map(a=>[a.asset,`assets/chronicle/personal/${a.id}.webp`])]));
+Object.assign(ASSETS,Object.fromEntries([...PERSONAL_NODES.filter(n=>n.asset).map(n=>[n.asset,ASSETS[n.asset]||`assets/chronicle/personal/${n.id}.webp`]),...PERSONAL_PAGE_ART.map(a=>[a.asset,ASSETS[a.asset]||`assets/chronicle/personal/${a.id}.webp`])]));
 
 const YANGCUN_CHAT = Object.freeze({
   poolLabels: ['五月的晚上','六月·演出间隙','七月·夏夜','八月·梅雨季','九月·中秋后','十月·深夜','十一月·初雪前'],

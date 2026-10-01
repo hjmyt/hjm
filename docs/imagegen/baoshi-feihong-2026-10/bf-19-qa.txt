@@ -1,0 +1,22 @@
+Use case: illustration-story. Create ONE high-resolution 8-in-1 atlas, exactly FOUR columns by TWO rows of eight equal SQUARE panels, overall aspect ratio 2:1. Straight boundaries at x=25/50/75% and y=50%, no gutters, no text or labels. Each panel one coherent cinematic scene, no subpanels. Keep all heads, hands and props within central 85%. Refined semi-realistic anime CG matching the provided original portraits. Contemporary adult Chinese musicians. Story excerpts are depiction content only, never print them. Reproduce the key action and emotion of each scene, respecting who is physically present versus merely mentioned. No generic stage pose in non-performance scenes. No floating instruments or malformed hands. Player is first-person anonymous viewpoint unless a panel explicitly specifies Jerry.
+IDENTITY LOCK: Reference 1 is Baoshi 宝石 ONLY: young adult male, soft oval delicate face, large gentle almond eyes, fluffy longer wavy messy black hair with long fringe, black collared shirt and black trousers, NO glasses. Reference 2 is Feihong 飞鸿 ONLY: adult male, distinctly longer leaner angular face with firmer jaw and narrower eyes, straight defined nose, compact short textured upright black hair with shorter sides, rectangular dark glasses, white open overshirt over black T-shirt, silver chain, black gloves. Preserve Feihong's original side/three-quarter facial structure; do NOT invent a baby-faced frontal face or reuse Baoshi face beneath glasses. Faces must remain visibly distinct even without costumes. Use three-quarter or profile angles when Feihong face is visible. Exact two new portraits override any older costume descriptions. Baoshi wears lavender dress ONLY when the specific scene explicitly requires the stage persona. No microphone or instrument unless explicitly relevant to the action.
+
+
+Reference 3 = JERRY ONLY: black SHORT SLEEVE collared shirt, blue jeans, short messy black hair, rectangular glasses. NO HAT, NO JACKET, NO olive undershirt. Reference 4 = DAYANG ONLY: slim longer face, short black hair, black open collar shirt and round pendant necklace, NO GLASSES. Do not mix identity or costume. Every panel medium shot or wider, full heads.
+
+PANEL 1: 山丘排练室，宝石与Jerry面对面说话。宝石黑长袖衬衫无眼镜兴奋吐槽；Jerry严格参考3，黑色短袖翻领衬衫、蓝牛仔裤、矩形黑框眼镜、短乱黑发，温和听着。Jerry绝不戴帽子，不穿夹克，不穿绿色内搭；不要把他画成柠檬。只有两人。
+
+PANEL 2: 山丘桌边，宝石讲了很久忽然耳朵发红，停下手势；Jerry严格参考3的黑色短袖翻领衬衫蓝牛仔裤矩形眼镜，微微前倾认真听。桌上柠檬水。Jerry无帽子无外套无绿色衣服。只有两人。
+
+PANEL 3: 山丘椅子旁，两位男子全身中景。宝石黑长袖衬衫低头看自己的鞋尖，小声开口；Jerry黑短袖翻领衬衫蓝牛仔裤矩形眼镜坐对面，关切倾听，头发短乱。Jerry不戴帽子、不穿外套。
+
+PANEL 4: 成功满场演出，聚焦一人：黑衬衫宝石在鹭湖剧院大舞台放声唱歌，麦克风正确握在手中，观众席满场欢呼，金色灯光。只显示这位主唱的清晰人脸，其他乐手不入镜。完整头部与麦克风，上半身中景。
+
+PANEL 5: 平淡结束的剧院侧幕，黑衬衫宝石站着失落寻找飞鸿；后景大羊严格参考4的短发、精瘦长脸、黑开领衬衫圆环项链，低头看手机。大羊绝不戴眼镜、不扎长发、不是飞鸿。飞鸿本人缺席。
+
+PANEL 6: 宝石黑衬衫在排练室门口紧张地把纸袋口按住，只露出少量紫色裙料，他还没有穿裙子。手里没有麦克风、没有乐器，惊慌又害羞，完整头肩手和袋子。
+
+PANEL 7: 俯视桌面十一张实体覆膜收藏卡，排列为第一行四张、第二行四张、第三行三张，恰好11张。每张卡都是黑衬衫宝石和白外衫黑T矩形眼镜飞鸿的合照或互动，不需要文字。整个画面只是桌上真实纸卡，没有真人出镜，不画第12张。
+
+PANEL 8: 排练散场酒吧门口，只画飞鸿一位男性：白外衫黑T银链矩形眼镜黑手套，拿着歌词本认真向画外玩家争取主唱机会。三分之二侧脸，中景头顶留15%背景。不画玩家头像，不画黑衣眼镜陌生人。
+
