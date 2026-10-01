@@ -3,6 +3,8 @@
 // Chapter seven keeps one independent attempt per character, alongside the six chapter saves.
 // Relationships and rewards always use the global core ledgers.
 function createChroniclePersonal(ctx) {
+    let embraceVisitShown = false;
+    const resetPersonalPreview = () => { embraceVisitShown = false; };
     const preloadedPersonalArt = new Map();
     const routes = Object.values(PERSONAL_ROUTES);
     const yangcunChatCast = [
@@ -267,6 +269,7 @@ function createChroniclePersonal(ctx) {
         if(!P().active||!admitted(P().selected)||!S())return;
         if(btn?.dataset.personalRev!==undefined&&Number(btn.dataset.personalRev)!==P().rev)return;
         const s=S();
+        if(kind==='cinematic'){if(cinematicReached())showEmbrace();return;}
         if(kind==='yc-add'){addYangcunContact(btn?.dataset.personalChat);return;}
         if(kind==='yc-chat'){chatYangcun(btn?.dataset.personalChat);return;}
         if(kind==='yc-chat-back'){s.chatMessage=null;changed(true);return;}
@@ -379,7 +382,7 @@ function createChroniclePersonal(ctx) {
         const visibleChoices=P().selected==='yangcun'&&['yc_cp5a','yc_cp5b','yc_cp5c'].includes(n.id)?n.choices.filter(c=>!c.next||!s.done[c.next]):n.choices;
         const choices=last?(visibleChoices.length?visibleChoices:n.choices.slice(-1)).map((c)=>{const i=n.choices.indexOf(c);return `<button class="cp-choice" data-cp-action="personal-choose" data-personal-choice="${i}" data-personal-rev="${P().rev}"><span class="cp-option-n">${String(i+1).padStart(2,'0')}</span><span>${esc(copy(c.text))}</span>${I('arrow')}</button>`;}).join(''):`<button class="cp-choice" data-cp-action="personal-page" data-personal-rev="${P().rev}"><span class="cp-option-n">${String(page+1).padStart(2,'0')}</span><span>继续阅读<small>下一页 · ${page+2} / ${pages.length}</small></span>${I('arrow')}</button>`;
         const illustrated=src?` cp-novel-illustrated`:'';const style=src?` style="--scene-art:url('${new URL(src,document.baseURI).href}')"`:'';
-        return `<article class="cp-novel cp-personal-novel${illustrated}" data-personal-route="${esc(P().selected)}"${style}><header class="cp-novel-top"><span>第七章 · ${config().name}${P().selected==='baoshi_feihong'?' CP 线':P().selected==='yangcun'?'线':'个人线'}</span><span>${esc(n.title)}${pages.length>1?` · ${page+1}/${pages.length}`:''}</span></header><div class="cp-novel-body">${artHTML(n,page)}<div class="cp-novel-dialogue">${parts}${last&&n.id==='sy_juggle'?'<label class="cp-personal-reply">回复她的动态（可选，20 字内）<input class="text-input" id="cpPersonalReply" maxlength="20" placeholder="一起向前冲！"></label>':''}<div class="cp-choices">${choices}</div></div></div></article>`;
+        return `<article class="cp-novel cp-personal-novel${illustrated}" data-personal-route="${esc(P().selected)}"${style}><header class="cp-novel-top"><span>第七章 · ${config().name}${P().selected==='baoshi_feihong'?' CP 线':P().selected==='yangcun'?'线':'个人线'}</span><span>${esc(n.title)}${pages.length>1?` · ${page+1}/${pages.length}`:''}</span></header><div class="cp-novel-body">${artHTML(n,page)}<div class="cp-novel-dialogue">${parts}${last&&n.id==='sy_juggle'?'<label class="cp-personal-reply">回复她的动态（可选，20 字内）<input class="text-input" id="cpPersonalReply" maxlength="20" placeholder="一起向前冲！"></label>':''}<div class="cp-choices">${choices}</div>${n.id===CP_HE_CINEMATIC.scene&&page>=CP_HE_CINEMATIC.page?button('cinematic','重看摩天轮拥抱','','ghost'):''}</div></div></article>`;
     }
     function hubHTML() {
         const s=S(),n=nextMain(),id=P().selected;
@@ -399,7 +402,7 @@ function createChroniclePersonal(ctx) {
     function completionHTML() {
         const s=S(),n=getNode(P().selected,s.ending);
         const art=n.asset&&n.memory?`<button data-memory="${n.memory}" class="cp-personal-ending-art"><img src="${ASSETS[n.asset]}" alt="${esc(n.title)}"></button>`:'';
-        return `<section class="cp-surface cp-personal-complete"><div class="cp-ending-hero"><span class="cp-overline">${n.ending} · PERSONAL STORY</span><h3>${esc(n.title)}</h3><p>这段故事已经完成，进度与结局已保存。</p></div>${art}<p class="cp-caption">第七章首次完成奖励 15 音符、1 张邀请券；更换故事线或结局不叠加领取。</p><div class="cp-personal-hub-actions">${button('picker','选择另一条故事线','','primary')}${button('restart','从头重选这条线')}${button('leave','返回六章正传')}</div></section>`;
+        return `<section class="cp-surface cp-personal-complete"><div class="cp-ending-hero"><span class="cp-overline">${n.ending} · PERSONAL STORY</span><h3>${esc(n.title)}</h3><p>这段故事已经完成，进度与结局已保存。</p></div>${art}${P().selected===CP_HE_CINEMATIC.route&&s.ending===CP_HE_CINEMATIC.scene?button('cinematic','重看摩天轮拥抱','','secondary'):''}<p class="cp-caption">第七章首次完成奖励 15 音符、1 张邀请券；更换故事线或结局不叠加领取。</p><div class="cp-personal-hub-actions">${button('picker','选择另一条故事线','','primary')}${button('restart','从头重选这条线')}${button('leave','返回六章正传')}</div></section>`;
     }
     function yangcunAffectionHTML(s) {
         const items=yangcunChatCast.map(([id,name])=>`<span class="cp-yc-affection" data-yc-affection="${id}"><b>${esc(name)}</b><strong>${s.aff[id]||0}</strong></span>`).join('');
@@ -413,9 +416,34 @@ function createChroniclePersonal(ctx) {
         const record=cp?`大旗值 ${s.score} · 乐队 Lv.${bandLevel()}`:yc?`最高好感：${ycLeader.name} ${s.aff[ycLeader.id]||0}`:`全局羁绊 ${cardBond(P().selected)}`;
         return `<section class="cp-personal"><header class="cp-personal-heading"><div><span class="cp-week-kicker">CHAPTER 07 · YOUR STORY TOGETHER</span><h2>${config().name}${cp?' CP 线':yc?'线':'个人线'}</h2><p>${config().tagline}</p></div>${button('picker','切换故事线')}</header><div class="cp-personal-toolbar">${s.scene!=='hub'&&!s.ending?button('hub','暂歇，回到相处安排'):''}${button('restart','重读本线')}${button('leave','返回正传')}<span>自动保存 · 第 ${s.run} 次阅读</span></div>${window.StoryBgm?.controls()||''}<details class="cp-personal-details"><summary>${record} · ${yc?'展开好感明细':'展开本线记录'}</summary>${yc?yangcunAffectionHTML(s):''}<p>已读 ${s.read.length} 个场景；已收录 ${s.endings.length} / ${config().nodes.filter(n=>n.ending).length} 种结局。切换故事线和页面会保留各自进度。</p><div class="cp-personal-memories">${s.endings.map(id=>{const n=getNode(P().selected,id);return n.memory?`<button class="btn ghost" data-memory="${n.memory}">${esc(n.title)}</button>`:`<span class="label-tag">${esc(n.title)}</span>`;}).join('')}</div></details><div id="cpMain">${s.scene==='complete'&&s.ending?completionHTML():yc&&s.scene==='chat'?yangcunChatHTML():n?sceneHTML(n):hubHTML()}</div></section>`;
     }
-    function personalPreview() {
-        const s=S();if(!P().active||!s||s.scene!=='complete'||!s.ending||s.previewed===s.ending||!$('modalBackdrop').hidden)return;
-        const memory=getNode(P().selected,s.ending).memory;s.previewed=s.ending;save();if(memory)showMemory(memory);
+    function cinematicReached() {
+        const s=S();return P().active&&P().selected===CP_HE_CINEMATIC.route&&s&&
+            (s.scene===CP_HE_CINEMATIC.scene&&s.page>=CP_HE_CINEMATIC.page||s.ending===CP_HE_CINEMATIC.scene);
     }
-    return {freshPersonal,cleanPersonal,personalAction,personalHTML,personalPreview,personalPickerUnlocked,unlockFusionCp,enterFusionCp,unlockYangcun,offerYangcun,enterYangcun};
+    function showEmbrace() {
+        let dispose=()=>{};
+        openModal(CP_HE_CINEMATIC.title,'',()=>{dispose();$('modalBackdrop').querySelector('.modal').classList.remove('story-cinematic-modal');});
+        $('modalBackdrop').querySelector('.modal').classList.add('story-cinematic-modal');
+        dispose=StoryCinematic.mount($('modalContent'),{src:ASSETS[CP_HE_CINEMATIC.asset],videoSrc:CP_HE_CINEMATIC.video,musicHTML:window.StoryBgm?.controls()||'',onClose:()=>closeModal()});
+        syncStoryMusic();
+    }
+    function personalPreview() {
+        const s=S();
+        const embraceEnding=P().active&&P().selected===CP_HE_CINEMATIC.route&&s?.scene==='complete'&&s.ending===CP_HE_CINEMATIC.scene;
+        if(!embraceEnding)resetPersonalPreview();
+        if(!P().active||!s||s.scene!=='complete'||!s.ending||!$('modalBackdrop').hidden)return;
+        if(embraceEnding){
+            // Only suppress ordinary rerenders during this visit, never a later entry.
+            if(embraceVisitShown)return;
+            embraceVisitShown=true;
+            if(s.previewed!==s.ending){s.previewed=s.ending;save();}
+            showEmbrace();
+            return;
+        }
+        if(s.previewed===s.ending)return;
+        const memory=getNode(P().selected,s.ending).memory;
+        s.previewed=s.ending;save();
+        if(memory)showMemory(memory);
+    }
+    return {freshPersonal,cleanPersonal,personalAction,personalHTML,personalPreview,resetPersonalPreview,personalPickerUnlocked,unlockFusionCp,enterFusionCp,unlockYangcun,offerYangcun,enterYangcun};
 }

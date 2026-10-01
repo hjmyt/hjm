@@ -302,7 +302,8 @@ function createChroniclePersistence(ctx) {
                 r.name = first.name;
                 r.inst = first.inst;
             }
-        if(!chapterComplete(6,d))d.personal.active=false;
+        const specialRoute=['baoshi_feihong','yangcun'].includes(d.personal.selected)&&d.personal.storyUnlocks[d.personal.selected]===true;
+        if(!chapterComplete(6,d)&&!specialRoute)d.personal.active=false;
         syncBonds(d);
         return d;
     }

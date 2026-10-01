@@ -31,7 +31,7 @@ for (const item of manifest) {
         const img = new Image(); img.src = row.output; await img.decode();
       }
       return rows.length;
-    }, manifest);
+    }, manifest.map(row => row.id === 'cp_HE_page5' && row.kind === 'personal' ? {...row, output: 'assets/chronicle/personal/cp-he-embrace-cinematic-202610.webp'} : row));
     assert.equal(bound, expected.size);
     for (const width of [1440, 390]) {
       await page.setViewportSize({ width, height: 1000 });

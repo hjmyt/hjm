@@ -1,0 +1,51 @@
+{
+  "sourceCommit": "740338e",
+  "description": "Produced by the unmodified previous createChroniclePersonal.cleanPersonal; pre-cinematic route at HE page five.",
+  "personal": {
+    "active": true,
+    "selected": "baoshi_feihong",
+    "rev": 17,
+    "tech": 31,
+    "unlocks": {},
+    "storyUnlocks": {
+      "baoshi_feihong": true
+    },
+    "routes": {
+      "baoshi_feihong": {
+        "scene": "cp_HE",
+        "page": 4,
+        "flags": {
+          "push1": true,
+          "push2": true,
+          "push3": true
+        },
+        "done": {
+          "cp_00": true
+        },
+        "resume": null,
+        "resumePage": 0,
+        "read": [
+          "cp_00",
+          "cp_HE"
+        ],
+        "ending": null,
+        "endings": [],
+        "run": 2,
+        "duets": 0,
+        "chatIndex": 0,
+        "focus": 0,
+        "score": 101,
+        "dang": 0,
+        "previewed": null,
+        "reply": "",
+        "month": 0,
+        "aff": {},
+        "chatSpent": {},
+        "chatContacts": {},
+        "chatSeen": {},
+        "chatReactions": {},
+        "chatMessage": null
+      }
+    }
+  }
+}

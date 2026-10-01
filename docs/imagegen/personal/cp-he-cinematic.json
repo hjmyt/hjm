@@ -1,0 +1,11 @@
+{
+  "id": "cp_HE_page5",
+  "asset": "personal_cp_HE_page5",
+  "memory": "cp7_cp_HE_page5",
+  "source": "assets/chronicle/personal/source/cp-he-embrace-cinematic-202610.png",
+  "output": "assets/chronicle/personal/cp-he-embrace-cinematic-202610.webp",
+  "size": [1536, 1024],
+  "crop": [0, 0, 1536, 1024],
+  "prompt": "docs/imagegen/personal/cp-he-cinematic.md",
+  "replacesDisplayOf": "assets/chronicle/personal/cp_HE_page5-bf202610.webp"
+}

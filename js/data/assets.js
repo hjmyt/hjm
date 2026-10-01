@@ -60,7 +60,7 @@ const ASSETS = {
   "personal_cp_HE_page2": "assets/chronicle/personal/cp_HE_page2-bf202610.webp",
   "personal_cp_HE_page3": "assets/chronicle/personal/cp_HE_page3-bf202610.webp",
   "personal_cp_HE_page4": "assets/chronicle/personal/cp_HE_page4-bf202610.webp",
-  "personal_cp_HE_page5": "assets/chronicle/personal/cp_HE_page5-bf202610.webp",
+  "personal_cp_HE_page5": "assets/chronicle/personal/cp-he-embrace-cinematic-202610.webp",
   "personal_cp_HE_page6": "assets/chronicle/personal/cp_HE_page6-bf202610.webp",
   "personal_yc_start_page3": "assets/chronicle/personal/yc_start_page3-bf202610.webp",
   "personal_yc_start_page5": "assets/chronicle/personal/yc_start_page5-bf202610.webp",

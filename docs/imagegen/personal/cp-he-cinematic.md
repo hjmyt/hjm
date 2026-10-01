@@ -1,15 +1,33 @@
-> 2026-10-01 更新：本页旧服装提示词仅作历史记录。当前摩天轮 HE 已改用新立绘八合一裁切，宝石黑衬衫、飞鸿白外衫黑 T 与矩形眼镜；当前来源见 `../baoshi-feihong-2026-10/art.json` 中 `cp_HE_page5`。音乐设置保留。
+# 宝石 × 飞鸿 · 摩天轮 HE 大屏演出（2026-10-01）
 
-# 宝石 × 飞鸿 · 摩天轮 HE 大屏演出
+## 当前形象与复核
 
-角色核对：宝石为成年男性，柔和清秀的脸、稍长蓬松微卷黑发，米白衬衫／白色内搭；飞鸿为成年男性，短乱黑发、温柔的脸，蓝灰色衬衫／白色内搭。没有眼镜或发饰。本节点没有演奏，不携带麦克风或乐器。完整人物立绘是身份基准，现有 cp_HE_page5.webp 是拥抱姿势和场景参考。
+唯一身份基准为用户新原图 `assets/characters/source/baoshi-2026-10.png` 与 `feihong-2026-10.png`。宝石：成年男性、柔和脸型、蓬松略长黑发、黑色衬衫、无眼镜。飞鸿：成年男性、较短利落黑发、矩形深色眼镜、白外衫／黑 T／银链／黑手套；采用原图侧转面孔，不能将宝石的脸加眼镜替代。无演奏，不携带乐器或麦克风。
 
-使用内置 image_gen，参考图依次为现有拥抱图、宝石完整立绘、飞鸿完整立绘。新图保存为独立高清资源，不覆盖原始八合一图或裁切坐标。cp_HE_page5 的回忆 ID 保留，剧情、演出、相册与下载共享升级后的图片入口。
+内置 image_gen，生成后修正头顶留白。最终核对：两人身份、服装与眼镜正确；拥抱手臂衔接自然，宝石裸手、飞鸿黑手套；头发完整且有头顶留白；仅两人，旅行箱与摩天轮均可见。成图 1536×1024。
 
-## 提示词
+## 提示词（最终采用的新形象版本）
 
-Create a high-resolution cinematic illustrated game CG based on the three references. Reference 1 is the exact scene and pose/composition to refine, reference 2 is Baoshi's identity and costume, reference 3 is Feihong's identity and costume. Preserve both adult male characters faithfully. Baoshi has slightly longer tousled wavy black hair and a delicate gentle face, an ivory loose shirt over a white undershirt. Feihong has shorter tousled black hair and a gentle masculine face, a blue-gray shirt over a white T-shirt. They embrace tightly and tenderly at night beneath a glowing ferris wheel after a long separation. Baoshi faces the viewer in three-quarter view, eyes closed in relief, arms around Feihong's shoulders and back. Feihong's back is toward the viewer, his head against Baoshi's shoulder. Keep both heads fully visible, correct natural intertwined arms and hands, clothing intact. A wheeled suitcase with taped handle is at their feet. The ferris wheel is in the rear right, warm city bokeh and pink-gold neon behind. Match the refined semi-realistic anime illustration style of the original portraits. Rich but gentle cinematic lighting, fine hair and fabric detail, intimate and emotionally sincere. Wide 3:2 composition, couple in center with safe margins above hair and to both sides, frame from thighs up, suitcase partly visible lower right. No other people, no text, no watermark, no microphones, no instruments, no glasses. Do not crop heads, do not change character identities. This is a full-screen romantic HE illustration, not a poster. Target 1536x1024 or higher.
+Create one premium high-resolution romantic game CG, 1536x1024 landscape. Reference 1: Baoshi identity. Reference 2: Feihong identity. Reference 3: current story scene, pose and emotion. Both are ADULT MEN and must remain clearly different people. Baoshi has a soft delicate face, fluffy slightly long black hair and long fringe, BLACK button-up shirt and black trousers, NO glasses. Feihong has shorter neat black hair, narrower eyes and a more defined nose and jaw, DARK RECTANGULAR GLASSES, WHITE open overshirt over BLACK T-shirt, SILVER CHAIN necklace and BLACK gloves. Feihong must match the SIDE-TURNED face in reference 2, NOT Baoshi's face with glasses. At night under a glowing pink-gold ferris wheel, they embrace tightly after a long separation. Use reference 3 as pose inspiration, but frame them fully with ample headroom: Feihong left in a three-quarter profile, glasses visible, Baoshi right with eyes closed in relief, head resting against Feihong, their arms wrapping naturally around each other. Anatomically correct hands: Baoshi's bare hand around Feihong's back, Feihong's black gloved hand gently holding Baoshi's shoulder or back. Framed from mid thighs upward, couple central, wheeled suitcase with taped handle at lower right, ferris wheel behind right, warm city bokeh reflected on wet pavement. Match portraits' refined detailed anime illustration, beautiful face anatomy, fine layered hair and fabric, cinematic warm rim light and muted violet night shadows. Safe margins above both heads and around arms. No other people, no text, no logos, no microphones/instruments, no kissing. No old ivory shirt for Baoshi or blue-gray shirt for Feihong. The embrace is the focal point, intimate and relieved, complete clothes.
 
-## 用户提供的音乐
+参考图顺序：两张用户新原图，再使用 `assets/chronicle/personal/cp_HE_page5-bf202610.webp` 作为姿势与环境参考。
 
-原件：`assets/bgm/source/baoshi-feihong-ferris-wheel.mp3`。播放件：`assets/bgm/baoshi-feihong-ferris-wheel.mp3`。约 208.96 秒，用户指定用于此剧情。ffmpeg 仅复制原音频流并去除封面／元数据，不裁切或重新编码；不推定公共领域授权。
+### 构图修正
+
+Edit only the camera framing of this illustration. Keep the EXACT two adult men, distinct face identities, embracing pose, clothes (glasses man with white overshirt, black T-shirt, silver chain and black glove; other man black shirt, no glasses), lighting, style and ferris-wheel setting. The taller man's hair is currently clipped by the top edge: zoom out the whole scene about 15 percent and recompose to put BOTH COMPLETE HAIRSTYLES entirely inside the picture with at least 90 pixels of night sky ABOVE THE HIGHEST HAIR in a 1536x1024 landscape image. Do not make heads larger. Keep the couple centered, body framing to mid thighs, suitcase on the right, same natural arms and hands. No text. Prioritize ample empty headroom. Preserve current illustration details and identity.
+
+## 原件与重建
+
+清单见同目录 `cp-he-cinematic.json`。单张高清原件独立留存；历史八合一原图、旧裁切与 `baoshi-feihong-2026-10/art.json` 均保留，不覆盖。原八合一重建仍可生成历史图片，但当前 `personal_cp_HE_page5` 指向本高清资源，剧情、演出、相册和下载共用；回忆 ID 不变。
+
+```sh
+python3 -c "from PIL import Image; Image.open('assets/chronicle/personal/source/cp-he-embrace-cinematic-202610.png').convert('RGB').save('assets/chronicle/personal/cp-he-embrace-cinematic-202610.webp', quality=94)"
+```
+
+## 用户指定音乐
+
+原件：`assets/bgm/source/baoshi-feihong-ferris-wheel.mp3`。播放件：`assets/bgm/baoshi-feihong-ferris-wheel.mp3`。约 208.96 秒。ffmpeg 只复制原音频流并去除封面与元数据，不裁切、不重新编码。用户指定用于本剧情，不推定公共领域授权。通过统一 StoryBgm 播放，遵循总静音、配乐开关、音量和后台暂停；拥抱页进入后开始，从后续页面到完成页不重启。
+
+## 用户视频替换（2026-10-01）
+
+拥抱演出改用用户提供的 `/Users/hxj/Downloads/生成10秒浪费视频.mp4`（960×720，约 10 秒），保留原视频画面、无重编码，使用 `ffmpeg -map 0:v:0 -c:v copy -an -movflags +faststart` 输出 `assets/chronicle/personal/cp-he-embrace-loop-202610.mp4`。输出仅含视频轨，静音播放一次后显示原拥抱插图；原摩天轮 MP3 继续作为独立 BGM。静态插图仍用作加载封面和回忆相册。

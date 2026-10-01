@@ -34,3 +34,7 @@
 通过 `economy`（94）、`unified-bonds`（115）、`architecture`、`chronicle-art`（484）、`album-art`（658 资源映射）、`fusion-line`（635）、`personal-routes`（905）、`source-cards`（33）、`card-portrait-safety` 及 `character-art-refresh`。个人线／融合线旧测试的直接立绘地址断言已对齐统一头像入口；HE 和融合分支断言对齐新的资源路径。
 
 `node scripts/version-assets.cjs --check` 通过。再次运行本次裁切脚本后，130 张输出图片和最终清单的 SHA-256 均不变。浏览器复核采用独立 Chromium 上下文，不读取玩家日常浏览器存档。
+
+## 摩天轮 HE 高清演出补充
+
+2026-10-01，`personal_cp_HE_page5` 的当前显示资源升级为单张 1536×1024 高清拥抱图，仍使用上述新人物形象。原八合一与裁切保留为历史来源；新原件、完整构图坐标与提示词见 `../personal/cp-he-cinematic.json` 和 `.md`。原裁切脚本继续重建历史图，不覆盖高清原件；剧情、演出、相册和下载共同使用更新后的资源键。

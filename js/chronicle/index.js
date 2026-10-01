@@ -417,7 +417,7 @@ const Chronicle = (() => {
         get thirdTitleHTML() { return thirdTitleHTML; },
         get weekNotice() { return weekNotice; }, set weekNotice(value) { weekNotice = value; }
     };
-    const { freshPersonal, cleanPersonal, personalAction, personalHTML, personalPreview, personalPickerUnlocked, unlockFusionCp, enterFusionCp, unlockYangcun, offerYangcun, enterYangcun } = createChroniclePersonal(context);
+    const { freshPersonal, cleanPersonal, personalAction, personalHTML, personalPreview, resetPersonalPreview, personalPickerUnlocked, unlockFusionCp, enterFusionCp, unlockYangcun, offerYangcun, enterYangcun } = createChroniclePersonal(context);
     const { cleanTraining, startTraining, trainingAction, trainingTap, trainingHTML, trainingHubHTML, suspendTraining, trainingKey, mountTraining } = createChronicleTraining(context);
     const { freshWeeks, cleanWeeks, weekPlan, pendingStory, storyTransition, enterWeekStory, startWeekStory, sideEvents, startSide, bandStoryStatus, weeklyDialogue, weekStoryHTML, sideStoriesHTML, illustrationHTML, weeklyHelp } = createChronicleWeeks(context);
     const { savedChapter, shouldCloseBar, normalizeFourthOpening, beginBarChapter, barDialogue, orderDrink, barMenuHTML, closedBarHTML, showBarClosure } = createChronicleBar(context);
@@ -431,5 +431,5 @@ const Chronicle = (() => {
     const { projectEvent, resolveEvent, chapterTwoDialogue, secondProgress, eventBoard, secondOutcomeText, secondResultHTML, secondTitleHTML, chapterTwoHelp } = createChronicleChaptersTwo(context);
     const { supplementalDialogue, chapterThreeDialogue, thirdTitleHTML, thirdHelp } = createChronicleChaptersThree(context);
     const { chapterFourDialogue, fourthTitleHTML, fourthHelp } = createChronicleChaptersFour(context);
-    return { fresh, clean, syncBonds, refresh, mount, suspend, sourceSaveDetected, requestLegacy, encounterIds, journalSpeaker, priorHeCount, requiredTech, unlockFusionCp, enterFusionCp, unlockYangcun, offerYangcun, enterYangcun };
+    return { fresh, clean, syncBonds, refresh, resetPersonalPreview, mount, suspend, sourceSaveDetected, requestLegacy, encounterIds, journalSpeaker, priorHeCount, requiredTech, unlockFusionCp, enterFusionCp, unlockYangcun, offerYangcun, enterYangcun };
 })();

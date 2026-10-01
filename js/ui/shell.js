@@ -34,12 +34,13 @@ function syncStoryMusic() {
         $('storyMusicControls').innerHTML = window.StoryBgm?.controls() || '';
     const personal=state.chronicle.personal, personalRun=personal?.active?personal.routes[personal.selected]:null;
     const fusionChapter = currentView === 'fusion' ? state.fusion.chapter : null;
-    window.StoryBgm?.sync({ view: currentView, sound: state.sound, character: storySession?.id, chapter: personalRun?7:r.chapter, scene: currentView === 'chronicle' ? (personalRun?.scene||r.scene) : '', ending: currentView === 'chronicle' ? (personalRun?.ending||r.ending) : null, closed: !!r.bar?.closed, fusionChapter, fusionEnded: !!(fusionChapter && state.fusion.runs[fusionChapter]?.ended) });
+    window.StoryBgm?.sync({ view: currentView, sound: state.sound, character: storySession?.id, chapter: personalRun?7:r.chapter, personalRoute: personal?.active?personal.selected:null, personalPage: personalRun?.page||0, scene: currentView === 'chronicle' ? (personalRun?.scene||r.scene) : '', ending: currentView === 'chronicle' ? (personalRun?.ending||r.ending) : null, closed: !!r.bar?.closed, fusionChapter, fusionEnded: !!(fusionChapter && state.fusion.runs[fusionChapter]?.ended) });
 }
 function renderDaily() { const labels = [['pet', '陪猫咪玩一次'], ['story', '读一段故事'], ['rhythm', '完整演奏达到 C']]; $('dailyItems').innerHTML = labels.map(([k, t]) => `<span class="task ${state.daily[k] ? 'done' : ''}"><span class="task-dot">${state.daily[k] ? I('check') : ''}</span>${t}</span>`).join(''); const all = labels.every(([k]) => state.daily[k]); $('dailyClaim').disabled = !all || state.daily.claimed; $('dailyClaim').textContent = state.daily.claimed ? '今日礼物已领取' : '10 ♪ + 1 邀请券'; }
 function markDaily(k) { ensureDaily(); state.daily[k] = true; }
 function route(name) {
     PawGift.stop();
+    if ($('modalBackdrop').querySelector('.story-cinematic-modal')) closeModal(false);
     if (!['home', 'cards', 'card', 'care', 'story', 'chronicle', 'fusion', 'rhythm', 'album'].includes(name))
         return;
     if (name === 'fusion' && (!cardOwned('jerry') || cardBond('jerry') <= 20)) {
@@ -50,6 +51,7 @@ function route(name) {
         Chronicle.suspend();
     if (currentView === 'rhythm' && name !== 'rhythm' && ['running', 'countdown'].includes(game.status))
         pauseGame();
+    Chronicle.resetPersonalPreview();
     const previousView = currentView;
     if (name === 'chronicle' && previousView !== 'chronicle')
         LalaUI.recap = hiddenSkillReady('lala') && lalaState().autoRecap && !!state.chronicle.run.name && state.chronicle.run.scene !== 'start';

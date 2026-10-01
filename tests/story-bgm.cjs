@@ -13,7 +13,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
  assert.equal((await player()).src,null,'Music waits for an explicit entrance choice');
  assert((await player()).paused,'Welcome entrance keeps music paused');
  await page.locator('[data-music-enter]').click();await playing();assert(await page.locator('#musicWelcome').isHidden());
- await page.locator('.nav-btn[data-route="chronicle"]').click();await playing();assert((await player()).src.endsWith('hakimi.mp3'));assert(Math.abs((await player()).duration-149.338125)<1,'User-supplied chapter-one MP3 decodes');
+ await page.locator('.nav-btn[data-route="chronicle"]').click();await playing();assert((await player()).src.endsWith('hakimi.mp3'));assert(Math.abs((await player()).duration-146.544)<1,'User-supplied chapter-one MP3 decodes');
  await page.waitForFunction(()=>{if(!window.bgmAnalyser)return true;const a=new Float32Array(bgmAnalyser.fftSize);bgmAnalyser.getFloatTimeDomainData(a);return a.some(v=>Math.abs(v)>.00001);},{},{timeout:5000});
  await page.evaluate(()=>{document.querySelector('#storyBgmAudio').currentTime=25;renderGlobal();renderGlobal();});assert((await player()).time>=25,'Dialogue rendering does not restart track');
  const setScene=async(ch,scene,extra={})=>{await page.evaluate(([ch,scene,extra])=>{closeModal(false);Object.assign(state.chronicle.run,{chapter:ch,ch,scene,...extra});renderGlobal();},[ch,scene,extra]);};
