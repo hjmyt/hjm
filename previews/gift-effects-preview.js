@@ -54,7 +54,7 @@ function syncGifts(selected) {
 }
 function syncPreview() {
     GiftEffects.stop();
-    if (giftSelect.value === 'full_bond') preloadGiftDragon();
+    GiftEffects.preload({ characterId: characterSelect.value, giftId: giftSelect.value });
     const c = CARD_DEFS.find(c => c.id === characterSelect.value), binding = giftEffectFor(c.id, giftSelect.value);
     document.getElementById('character-image').src = '../' + cardImage(c, 'full');
     document.getElementById('character-image').alt = `${c.name}完整立绘`;

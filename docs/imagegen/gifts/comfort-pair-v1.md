@@ -89,6 +89,10 @@ Premium gift motifs: elegant silver-violet and muted rose light ribbon wrapping 
 - `assets/effects/baoshi-comfort-v1.mp4`：用户《宝石的安慰.mp4》，用于飞鸿。
 - `assets/effects/feihong-comfort-v1.mp4`：用户《飞鸿的安慰.mp4》，用于宝石。
 - 对应 `*-comfort-alpha-v2.webm`：720×1280、24 fps、241 帧，VP9 Alpha 与原声转 Opus。
-- `python3 scripts/build-comfort-alpha.py`：按绿色色差建立背景／人物内部／轮廓过渡区，轮廓使用附近前景与背景颜色反解透明度和去底色污染，补充橄榄绿溢色抑制；保留内部黑衣、黑发原色，不靠扩大整体透明度去边。v1 保留作历史对照，当前加载 v2。
+- `python3 scripts/build-comfort-alpha.py`：按绿色色差建立背景／人物内部／轮廓过渡区，轮廓使用附近前景与背景颜色反解透明度和去底色污染，补充橄榄绿溢色抑制；保留内部黑衣、黑发原色，不靠扩大整体透明度去边。v1 保留作历史对照，v2 是去底母版；实际加载小体积 `*-comfort-delivery-v1.webm`／`.mov`，后者用于 Apple WebKit 的 HEVC Alpha。
 - `python3 tests/comfort-alpha.py`：四个时刻的实际解码透明度、黑发／衣服／手套与皮肤保留。
 - `node tests/comfort-gifts.cjs`：双方专属入口与角色隔离、100/+30、边界／回滚／刷新，以及实际游戏送达和透明视频播放。
+
+## 手机发布版
+
+使用 `scripts/build-gift-delivery.py` 从已确认透明母版生成 480×854 的 VP9 Alpha WebM 与 HEVC Alpha MOV；iPhone／iPad／Apple WebKit 使用 MOV。它们保留原声和时间轴，MOV 元数据前置（faststart）。旧 WebM 在部分 Apple 解码器中可播放但丢失 Alpha，会出现黑色矩形，不能只凭 canPlayType 判定透明兼容。实际体积见 `delivery-sizes.json`。预载只针对当前所选礼物，播放复用同一视频元素。

@@ -51,7 +51,7 @@ const pairs=[['feihong','baoshi_comfort','宝石的安慰'],['baoshi','feihong_c
   assert.equal(await page.locator('#character').inputValue(),id);assert.equal(await page.locator('#gift').inputValue(),gift);await page.locator('#replay').click();
   await page.waitForFunction(()=>document.querySelector('.gift-encore-video')?.currentTime>3);
   assert.equal(await page.locator('.gift-ritual-title span').textContent(),name);
-  assert(await page.locator('.gift-encore-video').evaluate((v,gift)=>v.currentSrc.includes(gift.split('_')[0]+'-comfort-alpha')&&v.webkitAudioDecodedByteCount>0&&!v.muted,gift));
+  assert(await page.locator('.gift-encore-video').evaluate((v,gift)=>v.currentSrc.includes(gift.split('_')[0]+'-comfort-delivery')&&v.webkitAudioDecodedByteCount>0&&!v.muted,gift));
   const box=await page.locator('.gift-encore-video').boundingBox();assert(box.x>=-1&&box.y>=-1&&box.x+box.width<=width+1&&box.y+box.height<=901);
   await page.screenshot({path:`/tmp/hjm-${gift}-${width}.png`});
   if(width===1280){await page.waitForSelector('.is-ritual-delivered');await page.waitForSelector('.gift-performance',{state:'detached'});}else{await page.locator('.gift-dragon-skip').click();}

@@ -92,3 +92,6 @@
 
 - `node tests/comfort-gifts.cjs`：双向安慰专属礼物、100 音符／+30、赠送方向、全局同步、每日限制、满羁绊与旧值、保存失败回滚／刷新、游戏角色送达、file／HTTP 透明视频与真实音轨、桌面／手机、跳过／后台／重播／失败回退／减少动态效果。
 - `python3 tests/comfort-alpha.py`：两段安慰视频在四个时刻的背景透明、黑发黑衣黑手套原色与不透明度、皮肤保留和音轨；需要 numpy、scipy、ffmpeg/libvpx-vp9。
+
+- `node tests/gift-media.cjs`：iPhone／内嵌浏览器／iPad 桌面模式／Mac Safari 的 HEVC 选择、其他平台 VP9 选择、预载元素复用与释放、不透明解码阻止展示、file 兼容、播放包体积及 MOV/MP4 faststart。
+- `swift -module-cache-path /tmp/hjm-swift-cache tests/gift-apple-alpha.swift http://127.0.0.1:8766/previews/gift-effects.html`：macOS 真正 WKWebView 的三段 HEVC Alpha 播放与像素透明／主体不透明校验；先在仓库根目录启动本地静态服务器。运行时短暂打开测试窗口并自动关闭，需非沙箱执行。此测试不等同于 iPhone 真机验证。

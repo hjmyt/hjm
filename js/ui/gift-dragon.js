@@ -67,7 +67,7 @@ function startGiftDragonArtwork(host, { stop, onReady }) {
 
 // User-generated film includes its own synchronized soundtrack. Native media
 // audio also works on file://, where MediaElementSource can become silent.
-const JADE_DRAGON_VIDEO = new URL('../../assets/effects/jade-dragon-v3.mp4', document.currentScript.src).href;
+const JADE_DRAGON_VIDEO = new URL('../../assets/effects/jade-dragon-delivery-v1.mp4', document.currentScript.src).href;
 function startGiftDragon(host, { stop, onReady, audio, target, origin }) {
     let active = true, fallback = false, frame = 0;
     let stopArtwork = () => {}, releaseMusic = () => {};
@@ -77,7 +77,7 @@ function startGiftDragon(host, { stop, onReady, audio, target, origin }) {
     host.querySelector('.gift-scene').setAttribute('aria-hidden', 'true');
     const stage = document.createElement('div'); stage.className = 'gift-dragon-film';
     stage.setAttribute('aria-hidden', 'true');
-    const video = document.createElement('video'); video.className = 'gift-dragon-video';
+    const video = GiftMedia.acquire(JADE_DRAGON_VIDEO); video.className = 'gift-dragon-video';
     video.playsInline = true; video.preload = 'auto'; video.controls = false; video.loop = false;
     video.setAttribute('playsinline', ''); video.disablePictureInPicture = true;
     video.muted = !audio?.enabled(); video.volume = .85;
@@ -137,7 +137,7 @@ function startGiftDragon(host, { stop, onReady, audio, target, origin }) {
     });
     retry.addEventListener('click', play);
     releaseMusic = window.StoryBgm?.hold?.() || (() => {});
-    video.src = JADE_DRAGON_VIDEO;
+    if (video.src !== JADE_DRAGON_VIDEO) video.src = JADE_DRAGON_VIDEO;
     play(); frame = requestAnimationFrame(watch);
     return () => {
         active = false; cancelAnimationFrame(frame);

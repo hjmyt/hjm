@@ -67,7 +67,7 @@ Full object shown from a slightly elevated three-quarter frontal view, complete 
 
 用户提供 `/Users/hxj/Downloads/心动安可.mp4`，原样复制至 `assets/effects/heartfelt-encore-v1.mp4`。720×1280，H.264/AAC，约 10.08 秒，3,290,255 字节。已接入所有非占位角色的可用礼物，200 音符／+50，共用每日投喂额度；原提示词与参考图保留。
 
-游戏播放版为 `assets/effects/heartfelt-encore-alpha-v3.webm`（VP9 alpha + Opus）。原始 MP4 及早期透明派生保留用于对照。
+去底母版为 `assets/effects/heartfelt-encore-alpha-v3.webm`（VP9 alpha + Opus），实际游戏使用 `heartfelt-encore-delivery-v1.webm`（Chromium/Firefox）或 `heartfelt-encore-delivery-v1.mov`（Apple WebKit / iPhone HEVC Alpha）。原始 MP4 及早期透明派生保留用于对照。
 
 ## 透明处理 v3：保留主体暗部
 

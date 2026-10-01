@@ -62,7 +62,7 @@ const root=path.resolve(__dirname,'..');
   assert.equal(await page.locator('.gift-ritual-box').count(),1);await page.screenshot({path:`/tmp/hjm-encore-box-${width}.png`});
   await page.waitForFunction(()=>document.querySelector('.gift-encore-video')?.currentTime>4);
   assert(await page.locator('.gift-encore-video').evaluate(v=>v.currentSrc.endsWith('.webm')),'Uses genuine alpha video');
-  assert(await page.locator('.gift-encore-video').evaluate(v=>v.videoWidth===720&&v.webkitAudioDecodedByteCount>0&&!v.muted));
+  assert(await page.locator('.gift-encore-video').evaluate(v=>v.videoWidth===480&&v.webkitAudioDecodedByteCount>0&&!v.muted));
   const bounds=await page.locator('.gift-encore-video').boundingBox();assert(bounds.x>=0&&bounds.y>=0&&bounds.x+bounds.width<=width+1&&bounds.y+bounds.height<=901);
   await page.screenshot({path:`/tmp/hjm-encore-${width}.png`});
   await page.waitForSelector('.is-encore-delivery',{timeout:10000});await page.waitForSelector('.gift-performance',{state:'detached',timeout:4000});

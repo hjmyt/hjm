@@ -1,9 +1,11 @@
 'use strict';
 
-const ENCORE_VIDEO = new URL('../../assets/effects/heartfelt-encore-alpha-v3.webm', document.currentScript.src).href;
+const ENCORE_VIDEO = new URL('../../assets/effects/heartfelt-encore-delivery-v1.webm', document.currentScript.src).href;
+const ENCORE_APPLE_VIDEO = new URL('../../assets/effects/heartfelt-encore-delivery-v1.mov', document.currentScript.src).href;
 const ENCORE_POSTER = new URL('../../assets/effects/heartfelt-encore-v1.png', document.currentScript.src).href;
 const COMFORT_FILMS = Object.fromEntries(Object.values(COMFORT_GIFTS).map(g => [g.giver, {
-    video: new URL(`../../assets/effects/${g.giver}-comfort-alpha-v2.webm`, document.currentScript.src).href,
+    video: new URL(`../../assets/effects/${g.giver}-comfort-delivery-v1.webm`, document.currentScript.src).href,
+    apple: new URL(`../../assets/effects/${g.giver}-comfort-delivery-v1.mov`, document.currentScript.src).href,
     poster: new URL(`../../assets/effects/${g.giver}-comfort-v1.png`, document.currentScript.src).href,
     name: g.name, opening: '打开一份安心', reveal: g.name,
     color: g.variant === 'warm' ? '#ffe0ae' : '#e1ceff'
@@ -12,14 +14,15 @@ function startGiftComfort(host, options, giver) {
     host.classList.add('gift-performance-encore', `gift-comfort-${giver}`);
     return startGiftEncore(host, { ...options, film: COMFORT_FILMS[giver] });
 }
-function startGiftEncore(host, { stop, audio, target, origin, film = { video: ENCORE_VIDEO, poster: ENCORE_POSTER, name: '心动安可' } }) {
+function startGiftEncore(host, { stop, audio, target, origin, film = { video: ENCORE_VIDEO, apple: ENCORE_APPLE_VIDEO, poster: ENCORE_POSTER, name: '心动安可' } }) {
     let active = true, frame = 0, timer = 0, blocked = false, failed = false, ending = false;
     let lastTime = -1, lastProgress = performance.now(), stopSound = () => {};
     const releaseMusic = window.StoryBgm?.hold?.() || (() => {});
     host.removeAttribute('aria-hidden');
     const stage = document.createElement('div'); stage.className = 'gift-encore-stage';
     const aperture = document.createElement('div'); aperture.className = 'gift-dragon-aperture';
-    const video = document.createElement('video'); video.className = 'gift-encore-video';
+    const src = GiftMedia.source(film.video, film.apple);
+    const video = GiftMedia.acquire(src); video.className = 'gift-encore-video';
     video.playsInline = true; video.setAttribute('playsinline', ''); video.preload = 'auto';
     video.disablePictureInPicture = true; video.setAttribute('aria-hidden', 'true');
     video.muted = !audio?.enabled(); video.volume = .85;
@@ -66,9 +69,15 @@ function startGiftEncore(host, { stop, audio, target, origin, film = { video: EN
     }
     const escape = event => {if (event.key === 'Escape') stop();};
     document.addEventListener('keydown',escape); retry.addEventListener('click',play);
-    video.addEventListener('playing',()=>{if(active && !failed){blocked=false;status.hidden=true;retry.hidden=true;host.classList.add('is-encore-ready');}});
+    video.addEventListener('playing',()=>{
+        if (!active || failed) return;
+        if (!GiftMedia.hasAlpha(video)) { fail(); return; }
+        blocked=false;status.hidden=true;retry.hidden=true;host.classList.add('is-encore-ready');
+    });
     video.addEventListener('ended',finish); video.addEventListener('error',fail);
-    video.src = film.video; play(); frame = requestAnimationFrame(watch);
+    if (src) { if (video.src !== src) video.src = src; play(); }
+    else queueMicrotask(fail);
+    frame = requestAnimationFrame(watch);
     return () => {
         active=false;clearTimeout(timer);cancelAnimationFrame(frame);stopSound();ritual.destroy();
         document.removeEventListener('keydown',escape);

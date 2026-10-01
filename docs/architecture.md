@@ -137,14 +137,16 @@ JS 中的图片和音频路径仍相对于页面根目录。CSS 的 `url()` 相�
 
 送礼演出第三版：`js/ui/gift-atmosphere.js` 使用单个 Canvas 绘制彗星、丝带光轨、音弦、极光、火星、水波、舞台光束；桌面最多 80 个解析粒子、手机 48 个，像素倍率最多 2，不使用全屏闪白或震屏。主题通过 `motion` 显式选择氛围。主演出约 4.3 秒，取消时统一释放 Canvas 帧、DOM 与音频；减少动态效果不创建 Canvas。新增物件按实际礼物区分琴弦／连接线、烧烤／牛排、门票／下班券／音箱电池、丝带／盘扣／口袋巾等。
 
-2026-10-01 满心礼盒视频升级：`gift-dragon.js` 播放用户提供的 `assets/effects/jade-dragon-v3.mp4`（720×1280，约 10.08 秒，H.264/AAC，原文件无转码）。画面完整 contain，使用视频自带音轨与媒体时间驱动结尾回执，ended 后淡出；不再叠加合成音效。原生媒体声音兼容 file/HTTP，遵循调用方总静音。演出通过 `StoryBgm.hold()` 暂停背景音乐，结束／取消后按当前设置恢复。加载失败或连续 10 秒无进度回退旧青玉龙分层动效；自动播放被阻止时提供点击播放入口。跳过、Escape、切页、后台、滚动与重播释放视频和声音；减少动态效果仅显示简洁回执。原主视觉和提示词仍保留在 `docs/imagegen/gifts/`。
+2026-10-01 满心礼盒视频升级：`gift-dragon.js` 播放由用户原始 `assets/effects/jade-dragon-v3.mp4` 派生的 `jade-dragon-delivery-v1.mp4`（480×854，约 10.08 秒，H.264/AAC + faststart，原文件保留）。画面完整 contain，使用视频自带音轨与媒体时间驱动结尾回执，ended 后淡出；不再叠加合成音效。原生媒体声音兼容 file/HTTP，遵循调用方总静音。演出通过 `StoryBgm.hold()` 暂停背景音乐，结束／取消后按当前设置恢复。加载失败或连续 10 秒无进度回退旧青玉龙分层动效；自动播放被阻止时提供点击播放入口。跳过、Escape、切页、后台、滚动与重播释放视频和声音；减少动态效果仅显示简洁回执。原主视觉和提示词仍保留在 `docs/imagegen/gifts/`。
 
 满心礼盒连贯演出：`createGiftRitual` 以视频媒体时间控制青玉礼盒入场、盒盖开启与云门展开；视频以柔化边缘的云门融入半透明场景，不再全屏遮盖页面。视频 ended 后转入 2.4 秒送达段，Canvas 流光从盒口飞向调用方传入的实际角色卡牌位置，卡牌描边亮起后显示回执。仅展示反馈，不二次结算羁绊或修改存档。原声从开盒起连续播放，卡顿时开盒／云门跟随媒体时钟停留；取消统一释放盒子、粒子、描边、视频与背景音乐 hold。
 
 送礼羁绊进度：`feedCard` 在实际扣款与保存前记录原羁绊，保存成功后由 `playCardGiftEffect` 保持投喂进度条原值；礼物／猫爪演出结束或跳过时通过 `onEnd` 回调，数字与进度条在 1.4 秒内同步增长到结算值。此动画仅修改展示，不再次结算；节点移除、切页或后台时清理，减少动态效果直接显示实际值，已满及历史超上限值不虚增。
 
-心动安可：`cards/model.js` 统一追加全员礼物 `heartfelt_encore`，价格与增长在 `BOND_RULES`，`purchaseHeartfeltEncore` 负责专用 +50 结算及共享投喂次数；actions 保存成功后才触发演出，失败恢复原状态。`ui/gift-encore.js` 使用由用户原 MP4 派生的 VP9/Opus 透明 WebM（`heartfelt-encore-alpha-v3.webm`），去除黑底后直接叠加当前页面，按视频 ended 接爱心送达；结束后复用既有羁绊进度动画。原生音轨遵循总静音，演出暂停 BGM，跳过／切页统一清理。旧档沿用现有羁绊和投喂次数结构，无新增保存字段。
+心动安可：`cards/model.js` 统一追加全员礼物 `heartfelt_encore`，价格与增长在 `BOND_RULES`，`purchaseHeartfeltEncore` 负责专用 +50 结算及共享投喂次数；actions 保存成功后才触发演出，失败恢复原状态。`ui/gift-encore.js` 使用由透明母版派生的小体积 `heartfelt-encore-delivery-v1.webm`／`.mov`（按浏览器选择 VP9 Alpha 或 HEVC Alpha），去除黑底后直接叠加当前页面，按视频 ended 接爱心送达；结束后复用既有羁绊进度动画。原生音轨遵循总静音，演出暂停 BGM，跳过／切页统一清理。旧档沿用现有羁绊和投喂次数结构，无新增保存字段。
 
 心动安可与满心礼盒共用 `createGiftRitual` 开盒及角色送达流程；前者采用粉金礼盒、音乐舞台与爱心，后者保留青玉游龙。两者都以媒体时间驱动入场和展开，真实 ended 后收尾，最后触发已保存羁绊的进度展示。
 
 双向安慰礼物：`data/gift-effects.js` 的 `COMFORT_GIFTS` 按收礼角色配置名称、赠礼者及色系，`cards/model.js` 仅向对应角色追加，`core/bonds.js` 的 `purchaseComfortGift` 校验角色与礼物匹配后共用付费羁绊结算。`ui/gift-encore.js` 将媒体、海报与仪式标题参数化，安慰礼物与心动安可共用媒体播放、声音、回退、释放和送达逻辑。两段绿色背景 MP4 通过 `scripts/build-comfort-alpha.py` 派生 VP9 alpha + Opus WebM；保留黑衣黑发，不使用 screen 混合。`previews/gift-effects.html?effect=baoshi_comfort`／`?effect=feihong_comfort` 提供无扣款预览。
+
+`ui/gift-media.js` 位于两个视频演出控制器之前：按 Apple WebKit／iOS／iPad 桌面模式选择 HEVC Alpha，其余选择 VP9 Alpha；在 revealing 前抽查解码后透明角像素，发现不透明则回退海报。file:// 无法读回像素时保留按平台原生格式播放。选中礼物通过 `GiftEffects.preload` 只准备一个视频，实际播放 acquire 复用该元素，切换礼物、后台及 60 秒闲置清理预载。避免为预载而先下载整段 Blob，也不一次预载所有礼物。发布必须包含对应 MOV/WebM/MP4、`gift-media.js` 及更新后的 index.html；重新生成用 `scripts/build-gift-delivery.py`，保持旧母版不覆盖。

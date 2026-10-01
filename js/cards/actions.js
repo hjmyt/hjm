@@ -64,7 +64,6 @@ function selectCard(id) {
 }
 
 function chooseCardGift(key) {
-    if (key === 'full_bond') preloadGiftDragon();
     ensureCardDay();
     const c = cardDef(CardUI.detailId || state.cards.selected);
     if (!c)
@@ -72,6 +71,7 @@ function chooseCardGift(key) {
     const selected = effectiveGifts(c).find(g => g[0] === key);
     if (!selected)
         return;
+    GiftEffects.preload({ characterId: c.id, giftId: key });
     CardUI.gift = key;
     $$('[data-card-gift]').forEach(b => { b.classList.toggle('selected', b.dataset.cardGift === key); b.setAttribute('aria-pressed', b.dataset.cardGift === key ? 'true' : 'false'); });
     const used = state.cards.daily.gifts[c.id] || 0, b = $('cardFeedBtn');

@@ -31,7 +31,7 @@ const root = path.resolve(__dirname, '..');
             await page.screenshot({path:`/tmp/hjm-dragon-open-${width}.png`});
             await page.waitForFunction(()=>document.querySelector('video.gift-dragon-video')?.currentTime>3);
             const media=await page.locator('.gift-dragon-video').evaluate(v=>({width:v.videoWidth,height:v.videoHeight,duration:v.duration,muted:v.muted,audio:v.webkitAudioDecodedByteCount,fit:getComputedStyle(v).objectFit}));
-            assert.equal(media.width,720); assert.equal(media.height,1280); assert(media.duration>10 && media.duration<10.2);
+            assert.equal(media.width,480); assert.equal(media.height,854); assert(media.duration>10 && media.duration<10.2);
             assert(!media.muted && media.audio>0); assert.equal(media.fit,'contain');
             const bounds=await page.locator('.gift-dragon-video').boundingBox();
             assert(bounds.x>=0 && bounds.y>=0 && bounds.width<=width && bounds.height<=900,'Video element fits viewport without intrinsic-size overflow');

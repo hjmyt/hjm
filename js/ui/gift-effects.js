@@ -2,6 +2,16 @@
 
 const GiftEffects = (() => {
     let cleanup = null;
+    function preload({ characterId, giftId } = {}) {
+        const binding = giftEffectFor(characterId, giftId);
+        let src = null;
+        if (binding?.theme === 'full') src = JADE_DRAGON_VIDEO;
+        if (binding?.theme === 'encore') src = GiftMedia.source(ENCORE_VIDEO, ENCORE_APPLE_VIDEO);
+        if (binding?.theme === 'comfort') {
+            const film = COMFORT_FILMS[binding.giver]; src = GiftMedia.source(film.video, film.apple);
+        }
+        GiftMedia.prepare(src);
+    }
     function stop() { if (cleanup) cleanup(); PawGift.stop(); }
     function play({ characterId, giftId, giftName = '', ...options } = {}) {
         stop();
@@ -62,5 +72,5 @@ const GiftEffects = (() => {
         document.addEventListener('visibilitychange', hide);
         window.addEventListener('resize', stop); window.addEventListener('wheel', stop, { passive: true }); window.addEventListener('touchmove', stop, { passive: true });
     }
-    return { play, stop };
+    return { play, stop, preload };
 })();
