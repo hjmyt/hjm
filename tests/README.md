@@ -90,7 +90,7 @@
 
 - `python3 tests/encore-alpha.py`：抽查心动安可透明视频多个时刻的外围暗紫残底、亮部不透明度、边缘颜色校正、黑键不透明度和原色，防止去底误删乐器暗部；需要 ffmpeg/libvpx-vp9。
 
-- `node tests/comfort-gifts.cjs`：双向安慰专属礼物、100 音符／+30、赠送方向、全局同步、每日限制、满羁绊与旧值、保存失败回滚／刷新、完整场景 MP4 与透明视频按方向分别解码、原声音轨、游戏角色送达、桌面／手机、跳过／后台／重播／失败回退／减少动态效果。
+- `node tests/comfort-gifts.cjs`：双向安慰专属礼物、100 音符／+30、赠送方向、全局同步、每日限制、满羁绊与旧值、保存失败回滚／刷新、双向完整场景 MP4、原声音轨、游戏角色送达、桌面／手机、跳过／后台／重播／失败回退／减少动态效果。
 - `python3 tests/comfort-alpha.py`：两段安慰视频在四个时刻的背景透明、黑发黑衣黑手套原色与不透明度、皮肤保留和音轨；需要 numpy、scipy、ffmpeg/libvpx-vp9。
 
 - `node tests/gift-media.cjs`：iPhone／内嵌浏览器／iPad 桌面模式／Mac Safari 的 HEVC 选择、其他平台 VP9 选择、预载元素复用与释放、不透明解码阻止展示、file 兼容、播放包体积及 MOV/MP4 faststart。

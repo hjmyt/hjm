@@ -12,5 +12,12 @@
     "posterBytes": 54858,
     "delivery": "baoshi-comfort-full-v2-delivery.mp4",
     "poster": "baoshi-comfort-full-v2-poster.jpg"
+  },
+  "feihong-comfort": {
+    "sourceBytes": 3239495,
+    "deliveryBytes": 1361783,
+    "posterBytes": 50675,
+    "delivery": "feihong-comfort-full-v2-delivery.mp4",
+    "poster": "feihong-comfort-full-v2-poster.jpg"
   }
 }

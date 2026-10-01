@@ -3,12 +3,12 @@
 const ENCORE_VIDEO = new URL('../../assets/effects/heartfelt-encore-full-v2-delivery.mp4', document.currentScript.src).href;
 const ENCORE_POSTER = new URL('../../assets/effects/heartfelt-encore-full-v2-poster.jpg', document.currentScript.src).href;
 const COMFORT_FILMS = Object.fromEntries(Object.values(COMFORT_GIFTS).map(g => [g.giver, {
-    video: new URL(g.giver === 'baoshi' ? '../../assets/effects/baoshi-comfort-full-v2-delivery.mp4' : `../../assets/effects/${g.giver}-comfort-delivery-v1.webm`, document.currentScript.src).href,
-    apple: new URL(g.giver === 'baoshi' ? '../../assets/effects/baoshi-comfort-full-v2-delivery.mp4' : `../../assets/effects/${g.giver}-comfort-delivery-v1.mov`, document.currentScript.src).href,
-    poster: new URL(g.giver === 'baoshi' ? '../../assets/effects/baoshi-comfort-full-v2-poster.jpg' : `../../assets/effects/${g.giver}-comfort-v1.png`, document.currentScript.src).href,
+    video: new URL(`../../assets/effects/${g.giver}-comfort-full-v2-delivery.mp4`, document.currentScript.src).href,
+    apple: new URL(`../../assets/effects/${g.giver}-comfort-full-v2-delivery.mp4`, document.currentScript.src).href,
+    poster: new URL(`../../assets/effects/${g.giver}-comfort-full-v2-poster.jpg`, document.currentScript.src).href,
     name: g.name, opening: '打开一份安心', reveal: g.name,
     color: g.variant === 'warm' ? '#ffe0ae' : '#e1ceff',
-    fullBackground: g.giver === 'baoshi'
+    fullBackground: true
 }]));
 function startGiftComfort(host, options, giver) {
     host.classList.add('gift-performance-encore', `gift-comfort-${giver}`);

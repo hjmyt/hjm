@@ -56,8 +56,8 @@ const pairs=[['feihong','baoshi_comfort','宝石的安慰'],['baoshi','feihong_c
   assert.equal(await page.locator('#character').inputValue(),id);assert.equal(await page.locator('#gift').inputValue(),gift);await page.locator('#replay').click();
   await page.waitForFunction(()=>document.querySelector('.gift-encore-video')?.currentTime>3);
   assert.equal(await page.locator('.gift-ritual-title span').textContent(),name);
-  assert(await page.locator('.gift-encore-video').evaluate((v,gift)=>v.currentSrc.includes(gift==='baoshi_comfort'?'baoshi-comfort-full-v2-delivery.mp4':'feihong-comfort-delivery-v1.webm')&&v.webkitAudioDecodedByteCount>0&&!v.muted,gift));
-  assert.equal(await page.locator('.gift-performance').evaluate(e=>e.classList.contains('is-gift-full-background')),gift==='baoshi_comfort');
+  assert(await page.locator('.gift-encore-video').evaluate((v,gift)=>v.currentSrc.includes((gift==='baoshi_comfort'?'baoshi':'feihong')+'-comfort-full-v2-delivery.mp4')&&v.webkitAudioDecodedByteCount>0&&!v.muted,gift));
+  assert(await page.locator('.gift-performance').evaluate(e=>e.classList.contains('is-gift-full-background')),'Both comfort films use blended full-scene delivery');
   const box=await page.locator('.gift-encore-video').boundingBox();assert(box.x>=-1&&box.y>=-1&&box.x+box.width<=width+1&&box.y+box.height<=901);
   await page.screenshot({path:`/tmp/hjm-${gift}-${width}.png`});
   if(width===1280){await page.waitForSelector('.is-ritual-delivered');await page.waitForSelector('.gift-performance',{state:'detached'});}else{await page.locator('.gift-dragon-skip').click();}
@@ -75,9 +75,9 @@ const pairs=[['feihong','baoshi_comfort','宝石的安慰'],['baoshi','feihong_c
   await page.goto(`http://127.0.0.1:${server.address().port}/previews/gift-effects.html?effect=${gift}`);await page.locator('#replay').click();
   await page.evaluate(async()=>{window.ac=new AudioContext();await ac.resume();window.m=ac.createAnalyser();m.fftSize=2048;ac.createMediaElementSource(document.querySelector('.gift-encore-video')).connect(m);m.connect(ac.destination);window.level=()=>{const a=new Float32Array(2048);m.getFloatTimeDomainData(a);return Math.max(...a.map(Math.abs));};});
   await page.waitForFunction(()=>level()>.001);await page.waitForFunction(()=>document.querySelector('.gift-encore-video').currentTime>1);
-  assert.equal(await page.evaluate(()=>{const c=document.createElement('canvas');c.width=720;c.height=1280;const x=c.getContext('2d');x.drawImage(document.querySelector('.gift-encore-video'),0,0);return x.getImageData(20,20,1,1).data[3];}),gift==='baoshi_comfort'?255:0);
+  assert.equal(await page.evaluate(()=>{const c=document.createElement('canvas');c.width=720;c.height=1280;const x=c.getContext('2d');x.drawImage(document.querySelector('.gift-encore-video'),0,0);return x.getImageData(20,20,1,1).data[3];}),255);
   await page.evaluate(()=>GiftEffects.stop());await page.waitForTimeout(100);assert(await page.evaluate(()=>level()<.0001));await page.evaluate(()=>ac.close());
  }
- assert.deepEqual(errors,[]);console.log('PASS: both comfort gifts, recipient isolation, 100/+30, cap/history/daily, save rollback/reload, full-scene/alpha media and audio by direction, game delivery/bond progress, desktop/mobile, mute/skip/replay/background/fallback/reduced.');
+ assert.deepEqual(errors,[]);console.log('PASS: both comfort gifts, recipient isolation, 100/+30, cap/history/daily, save rollback/reload, full-scene MP4 and audio in both directions, game delivery/bond progress, desktop/mobile, mute/skip/replay/background/fallback/reduced.');
  }finally{await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exitCode=1;});
