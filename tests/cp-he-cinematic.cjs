@@ -61,14 +61,25 @@ const server = http.createServer((req, res) => {
             const t = await page.evaluate(() => document.getElementById('storyBgmAudio').currentTime);
             await page.evaluate(() => { renderGlobal(); renderGlobal(); });
             assert(await page.evaluate(t => document.getElementById('storyBgmAudio').currentTime >= t, t), 'Rerender does not restart BGM');
-            for (const [width, height] of [[1440, 1000], [390, 844], [844, 390]]) {
+            for (const [width, height] of [[1440, 1000], [320, 480], [375, 560], [390, 664], [430, 760], [390, 844], [844, 390]]) {
                 await page.setViewportSize({ width, height });
+                await page.evaluate(() => new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))));
+                if (width <= 720) {
+                    await page.evaluate(() => { const story = document.querySelector('.cinematic-story'); story.scrollTop = story.scrollHeight; });
+                    assert(await page.evaluate(() => {
+                        const story = document.querySelector('.cinematic-story'), footer = document.querySelector('.cinematic-footer').getBoundingClientRect();
+                        const last = document.querySelector('.cinematic-credit').getBoundingClientRect();
+                        return last.bottom <= footer.top && last.top >= story.getBoundingClientRect().top && story.clientHeight > 100 && footer.bottom <= innerHeight + 1;
+                    }), `All final text reachable above controls at ${width}x${height}`);
+                    await page.evaluate(() => { document.querySelector('.cinematic-story').scrollTop = 0; });
+                }
                 await page.locator('.story-cinematic').screenshot({ path: `/tmp/cp-he-cinematic-${width}.png` });
                 assert(await page.evaluate(() => {
                     const picture = document.querySelector('.cinematic-picture video'), close = document.querySelector('[data-cinematic-close]').getBoundingClientRect();
                     return document.documentElement.scrollWidth <= innerWidth && getComputedStyle(picture).objectFit === 'contain' && close.bottom <= innerHeight && close.left >= 0;
                 }), `Safe full composition and controls ${width}`);
             }
+            await page.locator('[data-cinematic-replay]').click();
             await page.locator('.cinematic-music [data-music-toggle]').click();
             assert(await page.evaluate(() => document.getElementById('storyBgmAudio').paused));
             await page.locator('.cinematic-music [data-music-toggle]').click();
