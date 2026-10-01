@@ -7,7 +7,7 @@ const {pathToFileURL}=require('node:url');
 const root=path.resolve(__dirname,'..');
 const pairs=[['feihong','baoshi_comfort','宝石的安慰'],['baoshi','feihong_comfort','飞鸿的安慰']];
 (async()=>{
- const server=http.createServer((req,res)=>{const file=path.join(root,new URL(req.url,'http://local').pathname);fs.readFile(file,(err,data)=>{if(err){res.writeHead(404);res.end();return;}res.setHeader('Content-Type',({'.html':'text/html','.js':'text/javascript','.css':'text/css','.webm':'video/webm'})[path.extname(file)]||'application/octet-stream');res.end(data);});});
+ const server=http.createServer((req,res)=>{const file=path.join(root,new URL(req.url,'http://local').pathname);fs.readFile(file,(err,data)=>{if(err){res.writeHead(404);res.end();return;}res.setHeader('Content-Type',({'.html':'text/html','.js':'text/javascript','.css':'text/css','.webm':'video/webm','.mp4':'video/mp4'})[path.extname(file)]||'application/octet-stream');res.end(data);});});
  await new Promise(r=>server.listen(0,'127.0.0.1',r));
  const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});
  try{
@@ -46,12 +46,18 @@ const pairs=[['feihong','baoshi_comfort','宝石的安慰'],['baoshi','feihong_c
  const target=await page.locator('#view-card .character-cover').boundingBox(),halo=await page.locator('.gift-ritual-target').boundingBox();assert(Math.abs(target.x-halo.x)<1&&Math.abs(target.y-halo.y)<1);
  await page.waitForSelector('.gift-performance',{state:'detached'});await page.waitForFunction(()=>!document.querySelector('.is-bond-growing'));
  assert.equal(await page.locator('#cardFeeding .progress-fill').evaluate(e=>parseFloat(e.style.width)),30);assert.equal(await page.evaluate(()=>state.coins),400);
+ await page.setViewportSize({width:390,height:844});await page.goto(pathToFileURL(path.join(root,'index.html')).href);await page.locator('[data-music-enter-muted]').click();
+ await page.evaluate(()=>{state=freshState();state.sound=false;state.coins=200;state.cards.encounters=CARD_DEFS.map(c=>c.id);save();goCard('feihong');chooseCardGift('baoshi_comfort');feedCard();});
+ await page.waitForFunction(()=>document.querySelector('.gift-encore-video')?.currentTime>4);await page.screenshot({path:'/tmp/hjm-comfort-game-390.png'});
+ assert(await page.locator('.gift-performance').evaluate(e=>e.classList.contains('is-gift-full-background')),'Live phone page receives blended full-scene comfort gift');
+ const phone=await page.locator('.gift-encore-video').boundingBox();assert(phone.x>=0&&phone.y>=0&&phone.x+phone.width<=391&&phone.y+phone.height<=845);await page.evaluate(()=>GiftEffects.stop());
  for(const width of [1280,390])for(const [id,gift,name] of pairs){
   await page.setViewportSize({width,height:900});await page.goto(pathToFileURL(path.join(root,'previews/gift-effects.html')).href+'?effect='+gift);
   assert.equal(await page.locator('#character').inputValue(),id);assert.equal(await page.locator('#gift').inputValue(),gift);await page.locator('#replay').click();
   await page.waitForFunction(()=>document.querySelector('.gift-encore-video')?.currentTime>3);
   assert.equal(await page.locator('.gift-ritual-title span').textContent(),name);
-  assert(await page.locator('.gift-encore-video').evaluate((v,gift)=>v.currentSrc.includes(gift.split('_')[0]+'-comfort-delivery')&&v.webkitAudioDecodedByteCount>0&&!v.muted,gift));
+  assert(await page.locator('.gift-encore-video').evaluate((v,gift)=>v.currentSrc.includes(gift==='baoshi_comfort'?'baoshi-comfort-full-v2-delivery.mp4':'feihong-comfort-delivery-v1.webm')&&v.webkitAudioDecodedByteCount>0&&!v.muted,gift));
+  assert.equal(await page.locator('.gift-performance').evaluate(e=>e.classList.contains('is-gift-full-background')),gift==='baoshi_comfort');
   const box=await page.locator('.gift-encore-video').boundingBox();assert(box.x>=-1&&box.y>=-1&&box.x+box.width<=width+1&&box.y+box.height<=901);
   await page.screenshot({path:`/tmp/hjm-${gift}-${width}.png`});
   if(width===1280){await page.waitForSelector('.is-ritual-delivered');await page.waitForSelector('.gift-performance',{state:'detached'});}else{await page.locator('.gift-dragon-skip').click();}
@@ -63,15 +69,15 @@ const pairs=[['feihong','baoshi_comfort','宝石的安慰'],['baoshi','feihong_c
  await page.goto(pathToFileURL(path.join(root,'previews/gift-effects.html')).href+'?effect=feihong_comfort');await page.locator('#replay').click();
  await page.evaluate(()=>document.querySelector('.gift-encore-video').dispatchEvent(new Event('error')));await page.waitForSelector('.gift-encore-poster:not([hidden])');await page.waitForSelector('.gift-performance',{state:'detached'});
  await page.emulateMedia({reducedMotion:'reduce'});await page.locator('#stage-replay').click();assert.equal(await page.locator('.gift-encore-video').count(),0);assert.equal(await page.locator('.gift-comfort-art').count(),1);await page.evaluate(()=>GiftEffects.stop());
- // Both films decode real alpha and audible soundtrack over HTTP.
+ // Both films decode the expected background mode and audible soundtrack over HTTP.
  await page.emulateMedia({reducedMotion:'no-preference'});
  for(const [,gift] of pairs){
   await page.goto(`http://127.0.0.1:${server.address().port}/previews/gift-effects.html?effect=${gift}`);await page.locator('#replay').click();
   await page.evaluate(async()=>{window.ac=new AudioContext();await ac.resume();window.m=ac.createAnalyser();m.fftSize=2048;ac.createMediaElementSource(document.querySelector('.gift-encore-video')).connect(m);m.connect(ac.destination);window.level=()=>{const a=new Float32Array(2048);m.getFloatTimeDomainData(a);return Math.max(...a.map(Math.abs));};});
   await page.waitForFunction(()=>level()>.001);await page.waitForFunction(()=>document.querySelector('.gift-encore-video').currentTime>1);
-  assert.equal(await page.evaluate(()=>{const c=document.createElement('canvas');c.width=720;c.height=1280;const x=c.getContext('2d');x.drawImage(document.querySelector('.gift-encore-video'),0,0);return x.getImageData(20,20,1,1).data[3];}),0);
+  assert.equal(await page.evaluate(()=>{const c=document.createElement('canvas');c.width=720;c.height=1280;const x=c.getContext('2d');x.drawImage(document.querySelector('.gift-encore-video'),0,0);return x.getImageData(20,20,1,1).data[3];}),gift==='baoshi_comfort'?255:0);
   await page.evaluate(()=>GiftEffects.stop());await page.waitForTimeout(100);assert(await page.evaluate(()=>level()<.0001));await page.evaluate(()=>ac.close());
  }
- assert.deepEqual(errors,[]);console.log('PASS: both comfort gifts, recipient isolation, 100/+30, cap/history/daily, save rollback/reload, game delivery/bond progress, file/HTTP alpha/audio, desktop/mobile, mute/skip/replay/background/fallback/reduced.');
+ assert.deepEqual(errors,[]);console.log('PASS: both comfort gifts, recipient isolation, 100/+30, cap/history/daily, save rollback/reload, full-scene/alpha media and audio by direction, game delivery/bond progress, desktop/mobile, mute/skip/replay/background/fallback/reduced.');
  }finally{await browser.close();await new Promise(r=>server.close(r));}
 })().catch(e=>{console.error(e);process.exitCode=1;});

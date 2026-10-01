@@ -198,3 +198,25 @@
 .gift-comfort-baoshi .gift-ritual-title { color:#ffe6be; }
 .gift-comfort-feihong .gift-ritual-box { filter:hue-rotate(100deg) drop-shadow(0 12px 25px #3d265e80); }
 .gift-comfort-feihong .gift-ritual-title { color:#e8ddff; }
+
+/* Full-scene gift films dissolve into the live game instead of reading as a player. */
+.is-gift-full-background .gift-dragon-aperture { top:47%; width:min(96vw,52.3vh); height:min(170.7vw,93vh); }
+.is-gift-full-background .gift-encore-stage .gift-encore-video,
+.is-gift-full-background .gift-encore-poster {
+    -webkit-mask-image:radial-gradient(ellipse 50% 65% at 50% 48%,#000 40%,#0009 70%,transparent 100%);
+    mask-image:radial-gradient(ellipse 50% 65% at 50% 48%,#000 40%,#0009 70%,transparent 100%);
+}
+.is-gift-full-background .gift-encore-poster { width:min(96vw,52.3vh); height:min(170.7vw,93vh); }
+.is-gift-full-background .gift-ritual-veil {
+    background:radial-gradient(ellipse at 50% 44%,#fff3f51a,#f6ebf520 54%,#e1d8ea45 100%);
+    backdrop-filter:blur(2px) saturate(1.08);
+}
+.is-gift-full-background .gift-ritual-box { filter:drop-shadow(0 16px 24px #553e6b38) saturate(.9); }
+.is-gift-full-background .gift-ritual-title { text-shadow:0 2px 18px #65547665; }
+.is-gift-full-background .gift-ritual-target { border-color:#fff0cf; box-shadow:0 0 30px #efc8ff,inset 0 0 26px #fff0cf55; }
+.is-gift-full-background .gift-encore-status { color:#fff4f6; text-shadow:0 2px 14px #30213c; }
+.is-gift-full-background .gift-encore-stage .gift-encore-video { filter:saturate(1.04) contrast(1.015); }
+.is-gift-full-background .gift-encore-stage::after {
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(ellipse at 50% 48%,transparent 47%,#eee6f012 76%,#e4d8ed38 100%);
+}

@@ -6,9 +6,9 @@ const GiftEffects = (() => {
         const binding = giftEffectFor(characterId, giftId);
         let src = null;
         if (binding?.theme === 'full') src = JADE_DRAGON_VIDEO;
-        if (binding?.theme === 'encore') src = GiftMedia.source(ENCORE_VIDEO, ENCORE_APPLE_VIDEO);
+        if (binding?.theme === 'encore') src = ENCORE_VIDEO;
         if (binding?.theme === 'comfort') {
-            const film = COMFORT_FILMS[binding.giver]; src = GiftMedia.source(film.video, film.apple);
+            const film = COMFORT_FILMS[binding.giver]; src = film.fullBackground ? film.video : GiftMedia.source(film.video, film.apple);
         }
         GiftMedia.prepare(src);
     }

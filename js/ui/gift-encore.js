@@ -1,27 +1,28 @@
 'use strict';
 
-const ENCORE_VIDEO = new URL('../../assets/effects/heartfelt-encore-delivery-v1.webm', document.currentScript.src).href;
-const ENCORE_APPLE_VIDEO = new URL('../../assets/effects/heartfelt-encore-delivery-v1.mov', document.currentScript.src).href;
-const ENCORE_POSTER = new URL('../../assets/effects/heartfelt-encore-v1.png', document.currentScript.src).href;
+const ENCORE_VIDEO = new URL('../../assets/effects/heartfelt-encore-full-v2-delivery.mp4', document.currentScript.src).href;
+const ENCORE_POSTER = new URL('../../assets/effects/heartfelt-encore-full-v2-poster.jpg', document.currentScript.src).href;
 const COMFORT_FILMS = Object.fromEntries(Object.values(COMFORT_GIFTS).map(g => [g.giver, {
-    video: new URL(`../../assets/effects/${g.giver}-comfort-delivery-v1.webm`, document.currentScript.src).href,
-    apple: new URL(`../../assets/effects/${g.giver}-comfort-delivery-v1.mov`, document.currentScript.src).href,
-    poster: new URL(`../../assets/effects/${g.giver}-comfort-v1.png`, document.currentScript.src).href,
+    video: new URL(g.giver === 'baoshi' ? '../../assets/effects/baoshi-comfort-full-v2-delivery.mp4' : `../../assets/effects/${g.giver}-comfort-delivery-v1.webm`, document.currentScript.src).href,
+    apple: new URL(g.giver === 'baoshi' ? '../../assets/effects/baoshi-comfort-full-v2-delivery.mp4' : `../../assets/effects/${g.giver}-comfort-delivery-v1.mov`, document.currentScript.src).href,
+    poster: new URL(g.giver === 'baoshi' ? '../../assets/effects/baoshi-comfort-full-v2-poster.jpg' : `../../assets/effects/${g.giver}-comfort-v1.png`, document.currentScript.src).href,
     name: g.name, opening: '打开一份安心', reveal: g.name,
-    color: g.variant === 'warm' ? '#ffe0ae' : '#e1ceff'
+    color: g.variant === 'warm' ? '#ffe0ae' : '#e1ceff',
+    fullBackground: g.giver === 'baoshi'
 }]));
 function startGiftComfort(host, options, giver) {
     host.classList.add('gift-performance-encore', `gift-comfort-${giver}`);
     return startGiftEncore(host, { ...options, film: COMFORT_FILMS[giver] });
 }
-function startGiftEncore(host, { stop, audio, target, origin, film = { video: ENCORE_VIDEO, apple: ENCORE_APPLE_VIDEO, poster: ENCORE_POSTER, name: '心动安可' } }) {
+function startGiftEncore(host, { stop, audio, target, origin, film = { video: ENCORE_VIDEO, poster: ENCORE_POSTER, name: '心动安可', fullBackground: true } }) {
     let active = true, frame = 0, timer = 0, blocked = false, failed = false, ending = false;
     let lastTime = -1, lastProgress = performance.now(), stopSound = () => {};
     const releaseMusic = window.StoryBgm?.hold?.() || (() => {});
     host.removeAttribute('aria-hidden');
+    if (film.fullBackground) host.classList.add('is-gift-full-background');
     const stage = document.createElement('div'); stage.className = 'gift-encore-stage';
     const aperture = document.createElement('div'); aperture.className = 'gift-dragon-aperture';
-    const src = GiftMedia.source(film.video, film.apple);
+    const src = film.fullBackground ? film.video : GiftMedia.source(film.video, film.apple);
     const video = GiftMedia.acquire(src); video.className = 'gift-encore-video';
     video.playsInline = true; video.setAttribute('playsinline', ''); video.preload = 'auto';
     video.disablePictureInPicture = true; video.setAttribute('aria-hidden', 'true');
@@ -71,7 +72,7 @@ function startGiftEncore(host, { stop, audio, target, origin, film = { video: EN
     document.addEventListener('keydown',escape); retry.addEventListener('click',play);
     video.addEventListener('playing',()=>{
         if (!active || failed) return;
-        if (!GiftMedia.hasAlpha(video)) { fail(); return; }
+        if (!film.fullBackground && !GiftMedia.hasAlpha(video)) { fail(); return; }
         blocked=false;status.hidden=true;retry.hidden=true;host.classList.add('is-encore-ready');
     });
     video.addEventListener('ended',finish); video.addEventListener('error',fail);

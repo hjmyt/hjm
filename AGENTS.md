@@ -137,3 +137,4 @@
 - 安慰视频的发丝绿边需要同时修正透明度与混入的绿幕颜色；不能只检查远离人物的背景是否透明。当前 v2 使用轮廓过渡区的前／背景颜色估计与反解，并抑制残余橄榄绿；须在浅色与深色页面、多个时刻放大发丝缝隙检查，同时保留主体黑衣／手套与原始金色发丝高光。
 
 - 手机透明兼容与加载：不能把 VP9/WebM“能播放”当作“支持透明”；iPhone／iPad（含桌面模式与内嵌浏览器）及 Apple WebKit 使用 HEVC Alpha MOV，其他支持的浏览器使用 VP9 Alpha WebM。`js/ui/gift-media.js` 负责格式选择、播放前真实透明像素检查、不透明解码回退透明海报，以及只预载当前选中礼物并复用视频元素。播放用 480×854 压缩派生，原始／去底母版保留；MP4/MOV 必须 faststart，禁止再次让手机直接下载 720p 的大体积透明母版。新素材通过 `scripts/build-gift-delivery.py` 生成，大小报告 `docs/imagegen/gifts/delivery-sizes.json`。回归必须含 Apple 原生或真正 WebKit 的透明解码，Chromium 手机模拟不能代表 iPhone。
+- 若生成素材自带明亮完整场景背景且设计目标是游戏内场景融合，可保留不透明背景，使用 480×854 H.264/AAC faststart MP4；通过媒体时钟联动开盒、柔边遮罩、浅色游戏氛围层、粒子、角色卡送达与羁绊回执，不做全屏硬切或矩形播放器框，也不把不透明 MP4 错当透明视频验证。当前安可与「宝石安慰飞鸿」按 `scripts/build-gift-full-scene.py` 压缩，报告见 `docs/imagegen/gifts/full-scene-delivery-sizes.json`；保留原片，并以桌面和手机游戏截图检查融合效果。

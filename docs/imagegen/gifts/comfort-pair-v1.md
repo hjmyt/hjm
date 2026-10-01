@@ -96,3 +96,9 @@ Premium gift motifs: elegant silver-violet and muted rose light ribbon wrapping 
 ## 手机发布版
 
 使用 `scripts/build-gift-delivery.py` 从已确认透明母版生成 480×854 的 VP9 Alpha WebM 与 HEVC Alpha MOV；iPhone／iPad／Apple WebKit 使用 MOV。它们保留原声和时间轴，MOV 元数据前置（faststart）。旧 WebM 在部分 Apple 解码器中可播放但丢失 Alpha，会出现黑色矩形，不能只凭 canPlayType 判定透明兼容。实际体积见 `delivery-sizes.json`。预载只针对当前所选礼物，播放复用同一视频元素。
+
+## 宝石安慰飞鸿：明亮完整场景版 v2（2026-10-02）
+
+用户提供新片 `宝石安慰飞鸿.mp4`。画面中黑衬衫男子安慰白外衫、戴眼镜男子，对应「宝石的安慰」赠予飞鸿；只替换此方向，飞鸿安慰宝石仍保留原有透明素材。新片自带浅色演出环境，不做绿幕抠像或去黑，避免损伤黑发和黑衣。
+
+原片保存在 `assets/effects/baoshi-comfort-full-v2-source.mp4`：720×1280、H.264/AAC、24 fps、10.08 秒、1,783,989 字节。实际播放 `baoshi-comfort-full-v2-delivery.mp4` 为 480×854 H.264/AAC faststart（约 0.82 MiB），静态错误回退为 54 KiB JPEG。与安可 v2 一样，通过开盒时钟、柔边场景融合、银紫与暖金礼物层、真实角色卡送达和羁绊回执组成完整游戏演出。完整源片、压缩脚本与体积清单见 `scripts/build-gift-full-scene.py` 和 `docs/imagegen/gifts/full-scene-delivery-sizes.json`。

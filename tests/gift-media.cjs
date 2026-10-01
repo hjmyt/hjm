@@ -51,4 +51,16 @@ for(const [stem,row]of Object.entries(sizes)){
         assert(moov>=0&&mdat>moov,name+' starts playback before the full download');
     }
 }
+const fullScene=JSON.parse(fs.readFileSync(path.join(root,'docs/imagegen/gifts/full-scene-delivery-sizes.json')));
+for(const row of Object.values(fullScene)){
+    for(const filename of [row.delivery,row.poster]){
+        const bytes=fs.readFileSync(path.join(root,'assets/effects',filename));
+        assert(bytes.length<row.sourceBytes*.8,filename+' should be smaller than the source');
+        if(filename.endsWith('.mp4')){
+            let offset=0,moov=-1,mdat=-1;
+            while(offset+8<=bytes.length){const size=bytes.readUInt32BE(offset),type=bytes.toString('ascii',offset+4,offset+8);if(type==='moov')moov=offset;if(type==='mdat')mdat=offset;if(size<8)break;offset+=size;}
+            assert(moov>=0&&mdat>moov,filename+' faststart metadata precedes media data');
+        }
+    }
+}
 console.log('PASS: Apple/Chrome/embedded/iPad routing, single-clip preload reuse and cleanup, opaque-alpha guard, file compatibility, smaller assets and faststart.');

@@ -1,0 +1,16 @@
+{
+  "heartfelt-encore": {
+    "sourceBytes": 2476850,
+    "deliveryBytes": 1158716,
+    "posterBytes": 75393,
+    "delivery": "heartfelt-encore-full-v2-delivery.mp4",
+    "poster": "heartfelt-encore-full-v2-poster.jpg"
+  },
+  "baoshi-comfort": {
+    "sourceBytes": 1783989,
+    "deliveryBytes": 858268,
+    "posterBytes": 54858,
+    "delivery": "baoshi-comfort-full-v2-delivery.mp4",
+    "poster": "baoshi-comfort-full-v2-poster.jpg"
+  }
+}

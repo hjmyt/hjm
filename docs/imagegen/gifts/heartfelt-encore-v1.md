@@ -76,3 +76,11 @@ Full object shown from a slightly elevated three-quarter frontal view, complete 
 `python3 tests/encore-alpha.py` 检查第 1、4、6、8 秒的外围暗紫底透明度、亮部保留、边缘颜色校正，以及黑键 alpha 与原色。浏览器回归仍覆盖真正的透明解码、手机／桌面游戏页面、原声、播放结束及取消。
 
 游戏运行时叠加当前页面，并共用粉金开盒、粒子、角色送达和羁绊数字／进度条动画。媒体不支持或加载失败时回退透明主视觉。
+
+## 明亮完整场景版 v2（2026-10-02）
+
+用户提供新成片 `安可.mp4`，采用粉金猫爪舞台与明亮演出场景，不再去底。源片为 720×1280、H.264/AAC、24 fps、10.08 秒、2,476,850 字节，保存在 `assets/effects/heartfelt-encore-full-v2-source.mp4`。游戏使用 480×854 H.264/AAC faststart 版 `heartfelt-encore-full-v2-delivery.mp4`（约 1.11 MiB）及 74 KiB 的 JPEG 静帧海报。
+
+运行 `python3 scripts/build-gift-full-scene.py` 可由 `/Users/hxj/Downloads/安可.mp4` 与双人安慰片源重建压缩版及海报。实测视频时长不变，保留成片音轨；体积报告为 `docs/imagegen/gifts/full-scene-delivery-sizes.json`。
+
+新片仍沿用实际游戏开盒、播放时钟、浅色氛围层、柔边融合、程序粒子及爱心送达当前收礼角色卡牌；羁绊与进度条只按已保存数值增长。素材带完整背景，因此按普通 MP4 解码，不执行 Alpha 像素校验；宽屏及手机画面都以柔边显示，不能出现播放器边框或直角海报框。加载失败使用同一新场景的静态海报。
