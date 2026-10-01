@@ -12,12 +12,12 @@ const path = require('node:path');
   const meter=()=>page.evaluate(()=>({text:document.querySelector('#cardFeeding .feeding-progress .progress-label > :last-child, #cardFeeding .feeding-progress .trio-profile-value > strong')?.textContent,width:parseFloat(document.querySelector('#cardFeeding .progress-fill')?.style.width),bond:cardBond(CardUI.detailId),coins:state.coins}));
   async function feed(id,gift,bond=0) { await page.evaluate(({id,gift,bond})=>{GiftEffects.stop();state=freshState();state.sound=false;state.coins=1000;state.cards.encounters=CARD_DEFS.map(c=>c.id);state.affinity[id]=bond;goCard(id);chooseCardGift(gift);feedCard();},{id,gift,bond}); }
   await feed('shiyuan','full_bond');
-  assert.equal((await meter()).width,0);assert.equal((await meter()).bond,100);assert.equal((await meter()).coins,800);
+  assert.equal((await meter()).width,0);assert.equal((await meter()).bond,100);assert.equal((await meter()).coins,650);
   await page.waitForFunction(()=>document.querySelector('.is-bond-growing'),{},{timeout:25000});
   await page.waitForTimeout(350);
   const middle=await meter();assert(middle.width>0&&middle.width<100);assert.notEqual(middle.text,'100 / 100');
   await page.waitForFunction(()=>!document.querySelector('.is-bond-growing'));
-  assert.equal((await meter()).text,'100 / 100');assert.equal((await meter()).coins,800);
+  assert.equal((await meter()).text,'100 / 100');assert.equal((await meter()).coins,650);
   await feed('shiyuan','bouquet',10);assert.equal((await meter()).width,10);
   await page.waitForFunction(()=>document.querySelector('.is-bond-growing'));
   await page.waitForFunction(()=>!document.querySelector('.is-bond-growing'));

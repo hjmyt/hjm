@@ -164,3 +164,37 @@
 .gift-performance-full.is-ritual-delivered .gift-receipt { opacity:1; }
 .is-dragon-ritual .gift-jade-loading { background:transparent; top:auto; bottom:17%; height:24px; font:12px/1.5 system-ui; letter-spacing:2px; }
 .is-dragon-ritual .gift-dragon-skip,.is-dragon-ritual .gift-dragon-resume { z-index:2; }
+/* Alpha films composite their subjects directly over the current game. */
+.gift-encore-video,.gift-encore-poster { position:absolute; left:50%; top:48%; transform:translate(-50%,-50%); width:min(96vw,48.375vh); height:min(170.66vw,86vh); object-fit:contain; opacity:0; transition:opacity .55s; }
+.gift-encore-video { mix-blend-mode:normal; }
+.is-encore-ready .gift-encore-video,.is-encore-ready .gift-encore-poster { opacity:1; }
+.gift-performance-encore:not(.is-reduced) .gift-art-shell,.gift-performance-encore .gift-local-glow,.gift-performance-encore .gift-orbit,.gift-performance-encore .gift-particles { display:none; }
+.gift-performance-encore:not(.is-reduced) .gift-scene { animation:none; left:50%; top:auto; bottom:max(95px,10%); width:min(90vw,390px); height:70px; margin:0; transform:translateX(-50%); z-index:1; }
+.gift-performance-encore:not(.is-reduced) .gift-receipt { top:0; opacity:0; animation:none; background:linear-gradient(125deg,#45274bf0,#24182ff0); border-color:#eac39380; transition:opacity .4s; }
+.gift-performance-encore:not(.is-reduced) .gift-receipt strong { color:#ffe4ec; }
+.gift-performance-encore:not(.is-reduced) .gift-receipt small,.gift-performance-encore:not(.is-reduced) .gift-receipt-kicker { color:#ebccdc; }
+.gift-encore-status { position:absolute; top:48%; left:0; width:100%; text-align:center; color:#ffe1f1; font:16px/1.6 'Songti SC',serif; }
+.is-encore-delivery .gift-encore-video { opacity:0; }
+.gift-performance-encore.is-encore-delivery .gift-receipt { opacity:1; transition-delay:.8s; }
+
+/* Shared gift ritual, recolored for the Encore stage. */
+.gift-encore-stage { position:absolute; inset:0; }
+.gift-encore-stage .gift-encore-video { left:0; top:0; width:100%; height:100%; transform:none; mix-blend-mode:normal; mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 9%,#000 95%,transparent); mask-composite:intersect; }
+.gift-performance-encore .gift-ritual-box { filter:hue-rotate(135deg) drop-shadow(0 15px 25px #3a0e36aa); }
+.gift-performance-encore .gift-ritual-veil { background:radial-gradient(ellipse at 50% 46%,#512a52aa,#160b21f5 74%); }
+.gift-performance-encore .gift-ritual-title { color:#ffe3f0; text-shadow:0 2px 16px #4b103a; }
+.gift-performance-encore .gift-ritual-title span { color:#f5cbe0; }
+.gift-performance-encore .gift-ritual-target { border-color:#ffe4c1; box-shadow:0 0 28px #ffa5d5,inset 0 0 32px #ffb1d577; }
+.gift-performance-encore.is-encore-delivery .gift-receipt { opacity:0; transition-delay:0s; }
+.gift-performance-encore.is-ritual-delivered .gift-receipt,.gift-performance-encore.is-encore-fallback .gift-receipt { opacity:1; }
+.gift-performance-encore .gift-encore-status { top:auto; bottom:16%; font-size:12px; }
+
+/* Comfort keeps faces and dark costumes solid; only the outer crop is feathered. */
+.gift-comfort-art { width:100%; height:100%; object-fit:contain; }
+.gift-performance-comfort .gift-encore-stage .gift-encore-video { mask-image:linear-gradient(to right,transparent,#000 2%,#000 98%,transparent),linear-gradient(to bottom,transparent,#000 3%,#000 89%,transparent); }
+.gift-performance-comfort .gift-ritual-veil { background:radial-gradient(ellipse at 50% 46%,#66506b70,#211829ba 85%); }
+.gift-performance-comfort .gift-ritual-title { top:6%; }
+.gift-comfort-baoshi .gift-ritual-box { filter:hue-rotate(225deg) drop-shadow(0 12px 25px #67402280); }
+.gift-comfort-baoshi .gift-ritual-title { color:#ffe6be; }
+.gift-comfort-feihong .gift-ritual-box { filter:hue-rotate(100deg) drop-shadow(0 12px 25px #3d265e80); }
+.gift-comfort-feihong .gift-ritual-title { color:#e8ddff; }

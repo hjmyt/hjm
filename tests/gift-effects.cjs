@@ -20,10 +20,15 @@ const url = file => pathToFileURL(path.resolve(__dirname, '..', file)).href;
             return count;
         });
         const themes = await page.evaluate(() => Object.keys(GIFT_EFFECT_THEMES));
-        assert.equal(themes.length, 24);
+        assert.equal(themes.length, 26);
         for (const theme of themes) {
             await page.locator(`[data-theme="${theme}"]`).click();
             await page.locator('#replay').click();
+            if (theme === 'encore' || theme === 'comfort') {
+                await page.waitForFunction(() => document.querySelector('.gift-encore-video')?.currentTime > .2);
+                assert(await page.locator('.gift-encore-video').evaluate(v => !v.muted && v.webkitAudioDecodedByteCount > 0));
+                await page.evaluate(() => GiftEffects.stop()); continue;
+            }
             if (theme === 'full') {
                 await page.waitForFunction(() => document.querySelector('.gift-dragon-video')?.currentTime > .2);
                 assert(await page.locator('.gift-dragon-video').evaluate(v => !v.muted && v.webkitAudioDecodedByteCount > 0));
@@ -70,8 +75,8 @@ const url = file => pathToFileURL(path.resolve(__dirname, '..', file)).href;
             if (JSON.stringify(state) !== after) throw Error('Visual replay changes save');
             route('home'); if (document.querySelector('.gift-performance')) throw Error('Navigation cleanup');
             goCard('shiyuan'); chooseCardGift('full_bond'); const quota = state.cards.daily.gifts.shiyuan; const funds = state.coins; feedCard();
-            if (!document.querySelector('[data-gift-effect="full"]') || state.coins !== funds - 200 || cardBond('shiyuan') !== 100 || state.cards.daily.gifts.shiyuan !== quota) throw Error('Full gift payment/effect');
-            GiftEffects.stop(); feedCard(); if (!document.querySelector('[data-gift-effect="full"]') || state.coins !== funds - 400 || cardBond('shiyuan') !== 100 || state.cards.daily.gifts.shiyuan !== quota) throw Error('Full gift repeat');
+            if (!document.querySelector('[data-gift-effect="full"]') || state.coins !== funds - 350 || cardBond('shiyuan') !== 100 || state.cards.daily.gifts.shiyuan !== quota) throw Error('Full gift payment/effect');
+            GiftEffects.stop(); feedCard(); if (!document.querySelector('[data-gift-effect="full"]') || state.coins !== funds - 700 || cardBond('shiyuan') !== 100 || state.cards.daily.gifts.shiyuan !== quota) throw Error('Full gift repeat');
             goCard('jerry'); chooseCardGift('quiet'); feedCard(); if (!document.querySelector('.paw-gift')) throw Error('Paw fallback');
             GiftEffects.stop(); state.coins = 0; chooseCardGift('coffee'); feedCard();
             if (document.querySelector('.paw-gift,.gift-performance')) throw Error('Insufficient funds played effect');
@@ -81,6 +86,6 @@ const url = file => pathToFileURL(path.resolve(__dirname, '..', file)).href;
             return true;
         });
         assert(result); assert.deepEqual(errors, []);
-        console.log(`PASS: ${count} exact gift mappings, 24 visual themes, fallback, desktop/mobile, reduced motion, payment/cap/save failure, full gift and navigation cleanup.`);
+        console.log(`PASS: ${count} exact gift mappings, 26 visual themes, fallback, desktop/mobile, reduced motion, payment/cap/save failure, full gift and navigation cleanup.`);
     } finally { await browser.close(); }
 })().catch(e => { console.error(e); process.exitCode = 1; });

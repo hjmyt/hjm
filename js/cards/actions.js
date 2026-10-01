@@ -98,9 +98,24 @@ function feedCard() {
         return;
     }
     const used = state.cards.daily.gifts[c.id] || 0;
+    if (isEncoreGift(g) || isComfortGift(g)) {
+        if (used >= BOND_RULES.giftsPerDay) { toast('今天已收到了五份心意，明天再来吧。'); return; }
+        if (state.coins < g[3]) { toast(`${g[1]}需要 ${g[3]} 音符，当前音符不足。`); return; }
+        if (!storageOK) { toast('存档暂不可保存，请先恢复存档后再送礼。'); return; }
+        const before = cardBond(c.id), snapshot = JSON.parse(JSON.stringify(state));
+        if (!(isComfortGift(g) ? purchaseComfortGift(c.id, g[0]) : purchaseHeartfeltEncore(c.id))) return;
+        if (!save()) {
+            state = snapshot; renderGlobal();
+            toast(`${g[1]}未保存，已撤回本次扣款和羁绊，请先恢复存档。`); return;
+        }
+        CardUI.response = isComfortGift(g) ? (c.id === 'feihong' ? '“有宝石在，好像真的能松一口气了。”' : '“谢谢飞鸿……让我再靠一会儿吧。”') : '“这一场安可，我想和你一起听。”';
+        renderGlobal(); playCardGiftEffect(c, g, before);
+        toast(`${g[1]}已送达 · 羁绊分 +${cardBond(c.id) - before} · 今日投喂 ${used + 1}/${BOND_RULES.giftsPerDay}`, true);
+        return;
+    }
     if (isFullBondGift(g)) {
         if (state.coins < BOND_RULES.fullGiftCost) {
-            toast('满心礼盒需要 200 音符，当前音符不足。');
+            toast('满心礼盒需要 350 音符，当前音符不足。');
             return;
         }
         const before = cardBond(c.id);

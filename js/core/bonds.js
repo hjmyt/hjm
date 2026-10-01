@@ -1,6 +1,6 @@
 'use strict';
 
-const BOND_RULES = Object.freeze({ hidden: 35, notesPerBond: 5, giftCost: 5, giftGain: 1, giftGains: Object.freeze([1, 5, 10]), maxSingleGain: 10, giftsPerDay: 5, dailyCompanion: 1, dailyPerformance: 10, fullGiftCost: 200 });
+const BOND_RULES = Object.freeze({ hidden: 35, notesPerBond: 5, giftCost: 5, giftGain: 1, giftGains: Object.freeze([1, 5, 10]), maxSingleGain: 10, giftsPerDay: 5, dailyCompanion: 1, dailyPerformance: 10, fullGiftCost: 350, encoreGiftCost: 200, encoreGiftGain: 50, comfortGiftCost: 100, comfortGiftGain: 30 });
 function freshBondProgress() { return { version: 1, claimed: {}, daily: { date: dateKey(), counts: {} } }; }
 function cleanBondProgress(raw) {
     const d = freshBondProgress();
@@ -43,7 +43,7 @@ function grantBond(id, amount, { key = null, daily = false } = {}) {
     const after = Math.max(before, Math.min(100, before + Math.min(BOND_RULES.maxSingleGain, Math.floor(amount))));
     return applyBondValue(id, after);
 }
-// Only the paid full-bond gift bypasses ordinary per-interaction growth limits.
+// Explicit paid special gifts bypass the ordinary per-interaction growth limit.
 function purchaseFullBond(id) {
     if (!cardOwned(id) || cardDef(id)?.placeholder || state.coins < BOND_RULES.fullGiftCost)
         return 0;
@@ -51,6 +51,26 @@ function purchaseFullBond(id) {
         return 0;
     state.coins -= BOND_RULES.fullGiftCost;
     applyBondValue(id, Math.max(100, cardBond(id)));
+    return true;
+}
+function purchaseHeartfeltEncore(id) {
+    return purchasePaidBondGift(id, BOND_RULES.encoreGiftCost, BOND_RULES.encoreGiftGain);
+}
+function purchaseComfortGift(id, giftId) {
+    if (COMFORT_GIFTS[id]?.id !== giftId) return false;
+    return purchasePaidBondGift(id, BOND_RULES.comfortGiftCost, BOND_RULES.comfortGiftGain);
+}
+function purchasePaidBondGift(id, cost, gain) {
+    ensureCardDay();
+    if (!storageOK || !cardOwned(id) || cardDef(id)?.placeholder || state.coins < cost)
+        return false;
+    if (id === 'lemon' && sourceCast().lemon.ended) return false;
+    const used = state.cards.daily.gifts[id] || 0;
+    if (used >= BOND_RULES.giftsPerDay) return false;
+    state.coins -= cost;
+    state.cards.daily.gifts[id] = used + 1;
+    const before = cardBond(id);
+    applyBondValue(id, Math.max(before, Math.min(100, before + gain)));
     return true;
 }
 function applyBondValue(id, after) {

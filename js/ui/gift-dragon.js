@@ -89,7 +89,7 @@ function startGiftDragon(host, { stop, onReady, audio, target, origin }) {
     retry.className = 'gift-dragon-resume'; retry.textContent = '点击播放游龙演出'; retry.hidden = true;
     const aperture = document.createElement('div'); aperture.className = 'gift-dragon-aperture';
     aperture.append(video); stage.append(aperture); host.prepend(stage); host.append(status, skip, retry);
-    const ritual = createDragonRitual(host, { target, origin, aperture, stop });
+    const ritual = createGiftRitual(host, { target, origin, aperture, stop });
     const escape = event => { if (event.key === 'Escape') stop(); };
     document.addEventListener('keydown', escape); skip.addEventListener('click', stop);
     function unload() {
@@ -148,13 +148,14 @@ function startGiftDragon(host, { stop, onReady, audio, target, origin }) {
 
 // The media clock drives the opening and portal; only the delivery uses a
 // separate clock after ended. No reward or save state is touched here.
-function createDragonRitual(host, { target, origin, aperture, stop }) {
+function createGiftRitual(host, { target, origin, aperture, stop, variant = 'dragon', giftName, openingTitle, revealTitle, color }) {
+    const encore = variant === 'encore', tint = color || (encore ? '#ffd1e7' : '#b8ffe7');
     const width = innerWidth, height = innerHeight;
     const cx = width / 2, boxY = height * .73;
     const rect = target?.getBoundingClientRect(), from = origin?.getBoundingClientRect();
     const visible = rect && rect.bottom > 0 && rect.top < height && rect.right > 0 && rect.left < width;
-    const tx = visible ? Math.max(32, Math.min(width - 32, rect.left + rect.width / 2)) : cx;
-    const ty = visible ? Math.max(64, Math.min(height - 120, rect.top + rect.height * .65)) : height * .46;
+    let tx = visible ? Math.max(32, Math.min(width - 32, rect.left + rect.width / 2)) : cx;
+    let ty = visible ? Math.max(64, Math.min(height - 120, rect.top + rect.height * .65)) : height * .46;
     const ox = from ? Math.max(0, Math.min(width, from.left + from.width / 2)) : cx;
     const oy = from ? Math.max(0, Math.min(height, from.top + from.height / 2)) : height + 60;
     let finishedAt = null, alive = true;
@@ -180,8 +181,8 @@ function createDragonRitual(host, { target, origin, aperture, stop }) {
     <path d="M160 93C89 89 107 29 137 58L160 93C224 95 218 37 186 59Z" fill="none" stroke="url(#ritual-silver)" stroke-width="9"/>
     <circle cx="160" cy="94" r="11" fill="#caffea" stroke="#fff5d3" stroke-width="2"/></g></svg>`;
     const label = document.createElement('div'); label.className = 'gift-ritual-title';
-    const kicker = document.createElement('span'); kicker.textContent = '满 心 礼 盒';
-    const title = document.createElement('strong'); title.textContent = '一盒心意 · 唤醒游龙';
+    const kicker = document.createElement('span'); kicker.textContent = giftName || (encore ? '心 动 安 可' : '满 心 礼 盒');
+    const title = document.createElement('strong'); title.textContent = encore ? '一盒心意 · 为你安可' : '一盒心意 · 唤醒游龙';
     label.append(kicker, title);
     const canvas = document.createElement('canvas'); canvas.className = 'gift-ritual-particles';
     const ctx = canvas.getContext('2d'), dpr = Math.min(devicePixelRatio || 1, 2);
@@ -194,7 +195,7 @@ function createDragonRitual(host, { target, origin, aperture, stop }) {
     const lid = box.querySelector('.gift-ritual-lid'), core = box.querySelector('.gift-ritual-core');
     const clamp = n => Math.max(0, Math.min(1, n));
     const ease = n => 1 - (1 - clamp(n)) ** 3;
-    const dot = (x, y, r, alpha, color = '#b8ffe7') => {
+    const dot = (x, y, r, alpha, color = tint) => {
         if (!ctx) return;
         ctx.globalAlpha = clamp(alpha); ctx.fillStyle = color; ctx.beginPath(); ctx.arc(x, y, r, 0, Math.PI * 2); ctx.fill();
     };
@@ -215,29 +216,36 @@ function createDragonRitual(host, { target, origin, aperture, stop }) {
         lid.style.transform = `translate(${-22 * opening}px,${-88 * opening}px) rotate(${-13 * opening}deg)`;
         lid.style.opacity = String(1 - .85 * reveal); core.style.opacity = String(opening);
         label.style.opacity = String(delivery >= 0 ? 0 : t < 1.5 ? entrance : 1 - ease((t - 7) / 1));
-        title.textContent = t < 1.5 ? '一盒心意 · 唤醒游龙' : '青霄御龙';
+        title.textContent = t < 1.5 ? (openingTitle || (encore ? '一盒心意 · 为你安可' : '一盒心意 · 唤醒游龙')) : (revealTitle || (encore ? '心动安可' : '青霄御龙'));
         if (ctx) { ctx.setTransform(dpr, 0, 0, dpr, 0, 0); ctx.clearRect(0, 0, width, height); }
         // An expanding seal at the box mouth, then continuous ascending motes.
         if (ctx && delivery < 0) {
             ctx.save();ctx.translate(cx, boxY - 30);ctx.scale(1,.26);
             for (let i = 0; i < 3; i++) {
-                ctx.globalAlpha = (.5 - i * .12) * entrance; ctx.strokeStyle = i === 1 ? '#d5bafa' : '#9affd5'; ctx.lineWidth = 1.6;
+                ctx.globalAlpha = (.5 - i * .12) * entrance; ctx.strokeStyle = i === 1 ? '#d5bafa' : tint; ctx.lineWidth = 1.6;
                 ctx.beginPath();ctx.ellipse(0,0,65 + opening * 85 + i * 24,65 + opening * 85 + i * 24,t * .3,0,Math.PI * 2);ctx.stroke();
             } ctx.restore();
             const count = width < 600 ? 42 : 70;
             for (let i=0;i<count;i++) {
                 const p=(t*.17+i/count)%1, a=i*2.399+t*.65;
                 const spread=(22+p*Math.min(width*.36,260))*opening;
-                dot(cx+Math.cos(a)*spread,boxY-30-p*height*.7,1+i%3*.55,Math.sin(p*Math.PI)*entrance*.75,i%5?'#b8ffe7':'#e8caff');
+                dot(cx+Math.cos(a)*spread,boxY-30-p*height*.7,1+i%3*.55,Math.sin(p*Math.PI)*entrance*.75,i%5?tint:'#e8caff');
             }
             // Light rises from the opening into the portal rather than cutting to a frame.
             if (t > .65 && t < 3.2) {
                 ctx.globalAlpha = Math.sin(clamp((t-.65)/2.55)*Math.PI)*.45;
-                const beam=ctx.createLinearGradient(0,boxY,0,height*.15);beam.addColorStop(0,'#d9fff0');beam.addColorStop(1,'#8affde00');
+                const beam=ctx.createLinearGradient(0,boxY,0,height*.15);beam.addColorStop(0,tint);beam.addColorStop(1,'#8affde00');
                 ctx.fillStyle=beam;ctx.beginPath();ctx.moveTo(cx-22,boxY-35);ctx.lineTo(cx-110,height*.17);ctx.lineTo(cx+110,height*.17);ctx.lineTo(cx+22,boxY-35);ctx.fill();
             }
         }
         if (delivery >= 0) {
+            // Images and responsive panels can settle after the gift was sent.
+            const live = target?.isConnected ? target.getBoundingClientRect() : null;
+            if (live && live.bottom > 0 && live.top < height) {
+                tx = Math.max(32, Math.min(width - 32, live.left + live.width / 2));
+                ty = Math.max(64, Math.min(height - 120, live.top + live.height * .65));
+                halo.style.cssText = `left:${live.left}px;top:${live.top}px;width:${live.width}px;height:${live.height}px`;
+            }
             const p = ease(delivery / 1.05);
             const bx = cx + (tx - cx) * p, by = boxY + (ty - boxY) * p - Math.sin(p * Math.PI) * height * .2;
             if (delivery < 1.1) {
@@ -245,7 +253,9 @@ function createDragonRitual(host, { target, origin, aperture, stop }) {
                     const q = clamp(p - i * .012), x = cx + (tx - cx) * q, y = boxY + (ty - boxY) * q - Math.sin(q * Math.PI) * height * .2;
                     dot(x,y,Math.max(1,7-i*.22),(1-i/26)*.8);
                 }
-                dot(bx,by,12,.12); dot(bx,by,5,1,'#f3fff5');
+                dot(bx,by,12,.12);
+                if (encore && ctx) {ctx.globalAlpha=1;ctx.fillStyle=tint;ctx.font='28px system-ui';ctx.textAlign='center';ctx.textBaseline='middle';ctx.fillText('♥',bx,by);}
+                else dot(bx,by,5,1,'#f3fff5');
             }
             const bloom = clamp((delivery - .65) / .85);
             halo.style.opacity = String(Math.sin(bloom * Math.PI) * .95);

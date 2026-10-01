@@ -1,5 +1,11 @@
 'use strict';
 
+// Keyed by recipient. The giver determines the film, never the current card.
+const COMFORT_GIFTS = Object.freeze({
+    feihong: Object.freeze({ id: 'baoshi_comfort', name: '宝石的安慰', giver: 'baoshi', variant: 'warm' }),
+    baoshi: Object.freeze({ id: 'feihong_comfort', name: '飞鸿的安慰', giver: 'feihong', variant: 'cool' })
+});
+
 // Explicit character + gift IDs. No reward, save data, or text inference here.
 const GIFT_EFFECT_THEMES = {
     coffee: { title: '留一杯温柔', colors: ['#eac99a', '#ad784f'], notes: [659.25, 783.99, 987.77], wave: 'sine', motion: 'ember' },
@@ -25,6 +31,8 @@ const GIFT_EFFECT_THEMES = {
     concert: { title: '今夜，舞台属于你', colors: ['#e0c1ff', '#7ae6ee'], notes: [523.25, 659.25, 783.99, 1046.5], wave: 'triangle', motion: 'stage' },
     notebook: { title: '写下属于你的下一页', colors: ['#f4dfb2', '#aea5ef'], notes: [523.25, 698.46, 1046.5], wave: 'sine', motion: 'string' },
     cocktail: { title: '拾光，在杯中流转', colors: ['#ffd09f', '#e38bad'], notes: [880, 1318.5, 1760], wave: 'sine', motion: 'water' },
+    encore: { title: '心动安可 · 为你闪耀', colors: ['#ffb5db', '#b695ef'], notes: [523.25, 659.25, 783.99], wave: 'sine', motion: 'encore' },
+    comfort: { title: '此刻有我 · 安心相伴', colors: ['#f8d7ba', '#b8a0db'], notes: [261.63, 329.63, 392], wave: 'sine', motion: 'encore' },
     full: { title: '青霄御龙 · 满心相伴', colors: ['#b7ffea', '#b9a2e3'], notes: [1046.5, 1318.5, 1568, 2093], wave: 'sine', motion: 'dragon' }
 };
 const GIFT_EFFECT_BINDINGS = {
@@ -220,6 +228,9 @@ for (const [id, gifts] of Object.entries(GIFT_EFFECT_ADDITIONS)) {
 function giftEffectFor(characterId, giftId) {
     const character = CARD_DEFS.find(c => c.id === characterId);
     if (!character || character.placeholder) return null;
+    const comfort = COMFORT_GIFTS[characterId];
+    if (comfort?.id === giftId) return { theme: 'comfort', title: comfort.name, variant: comfort.variant, giver: comfort.giver };
+    if (giftId === 'heartfelt_encore') return { theme: 'encore', title: '心动安可' };
     if (giftId === 'full_bond') return { theme: 'full', title: '满心礼盒' };
     if (!(character.gifts || []).some(g => g[0] === giftId)) return null;
     return GIFT_EFFECT_BINDINGS[characterId]?.[giftId] || null;

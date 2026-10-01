@@ -23,6 +23,8 @@ const descriptions = {
     score: '纸页托起一段旋律，音符从五线谱中升起，组成温柔的大三和弦。',
     headphones: '金属与软垫浮现柔光，两侧声波随低音律动，留下一片安静。',
     beer: '两杯琥珀色酒液相向轻碰，泡沫与气泡上浮，清脆碰杯声落下。',
+    encore: '粉金礼盒开盖，猫爪音乐舞台从盒中展开，琴键、鼓点与追光为你安可；爱心回到收礼角色，点亮羁绊。',
+    comfort: '礼盒打开，宝石与飞鸿的安慰化作一段温柔陪伴。人物以透明背景融入当前页面，最后由爱心飞向收礼角色。',
     full: '青玉礼盒蓄光开启，游龙从云门腾空。龙归时化作心意流光，落向收礼角色，点亮满心相伴。'
 };
 const characterSelect = document.getElementById('character'), giftSelect = document.getElementById('gift');
@@ -45,7 +47,8 @@ for (const c of CARD_DEFS.filter(c => !c.placeholder)) characterSelect.add(new O
 function syncGifts(selected) {
     giftSelect.replaceChildren();
     const c = CARD_DEFS.find(c => c.id === characterSelect.value);
-    for (const g of [...(c.gifts || []), ['full_bond', '满心礼盒']]) giftSelect.add(new Option(g[1], g[0]));
+    const comfort = COMFORT_GIFTS[c.id];
+    for (const g of [...(c.gifts || []), ...(comfort ? [[comfort.id, comfort.name]] : []), ['heartfelt_encore', '心动安可'], ['full_bond', '满心礼盒']]) giftSelect.add(new Option(g[1], g[0]));
     if (selected) giftSelect.value = selected;
     syncPreview();
 }
@@ -81,7 +84,9 @@ Object.entries(GIFT_EFFECT_THEMES).forEach(([theme, config], i) => {
     b.append(number, document.createTextNode(config.title));
     b.addEventListener('click', () => {
         let pair = ['shiyuan', 'full_bond'];
-        if (theme !== 'full') for (const [id, gifts] of Object.entries(GIFT_EFFECT_BINDINGS)) {
+        if (theme === 'encore') pair = ['shiyuan', 'heartfelt_encore'];
+        if (theme === 'comfort') pair = ['feihong', 'baoshi_comfort'];
+        if (!['full', 'encore', 'comfort'].includes(theme)) for (const [id, gifts] of Object.entries(GIFT_EFFECT_BINDINGS)) {
             const gift = Object.keys(gifts).find(key => gifts[key].theme === theme);
             if (gift) { pair = [id, gift]; break; }
         }
@@ -90,7 +95,13 @@ Object.entries(GIFT_EFFECT_THEMES).forEach(([theme, config], i) => {
 });
 document.getElementById('theme-count').textContent = `${Object.keys(GIFT_EFFECT_THEMES).length} 种专属演出`;
 const count = Object.values(GIFT_EFFECT_BINDINGS).reduce((sum, gifts) => sum + Object.keys(gifts).length, 0);
-document.getElementById('coverage').textContent = `${count} 份普通礼物已绑定专属演出 · 所有可投喂角色的满心礼盒共用开盒演出 · 其余默认猫爪送心`;
+document.getElementById('coverage').textContent = `${count} 份普通礼物已绑定专属演出 · 全员可送心动安可与满心礼盒 · 其余默认猫爪送心`;
 characterSelect.value = 'shiyuan'; syncGifts('full_bond');
 
 if (new URLSearchParams(location.search).get('effect') === 'full') { characterSelect.value = 'shiyuan'; syncGifts('full_bond'); }
+
+if (new URLSearchParams(location.search).get('effect') === 'encore') { characterSelect.value = 'shiyuan'; syncGifts('heartfelt_encore'); }
+
+for (const [id, gift] of Object.entries(COMFORT_GIFTS)) {
+    if (new URLSearchParams(location.search).get('effect') === gift.id) { characterSelect.value = id; syncGifts(gift.id); }
+}
