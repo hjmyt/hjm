@@ -233,6 +233,8 @@ function bindAppEvents() {
             return closeModal();
         if (d.cardOpen)
             return goCard(d.cardOpen);
+        if (d.cardUnlock)
+            return unlockCardWithNotes(d.cardUnlock);
         if (d.cardFeedOpen)
             return goCard(d.cardFeedOpen, true);
         if (d.cardSelect)

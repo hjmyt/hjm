@@ -1,7 +1,7 @@
 'use strict';
 
 const BAND_MEMBER_IDS = Object.freeze(['goose', 'xiaota', 'dayang', 'rek', 'baoshi', 'xuezi', 'feihong']);
-const ORCHESTRA_MEMBER_IDS = Object.freeze(['tang', 'azhe', 'shiyuan', 'lala', 'tim', 'yeshiyang', 'kongge', 'dijie', 'qiqi', 'lemon', 'xiaozhou', 'bill']);
+const ORCHESTRA_MEMBER_IDS = Object.freeze(['tang', 'azhe', 'shiyuan', 'lala', 'tim', 'yeshiyang', 'kongge', 'dijie', 'qiqi', 'lemon', 'xiaozhou', 'bill', 'bingbing']);
 const LEVEL_RANKS = Object.freeze(['C', 'B', 'A', 'S']);
 const LEVEL_MILESTONE_IDS = Object.freeze([
     'band:c1:formation-choice', 'band:c1:commit-choice', 'band:c1:rehearsal', 'band:c1:arrangement', 'band:c1:qualification',

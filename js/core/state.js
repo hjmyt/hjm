@@ -95,17 +95,16 @@ function sealBonds(source) {
     const values = { cat: sealProtectedNumber(source.cat.aff, 'bond:cat') };
     for (const card of CARD_DEFS)
         values[card.id] = sealProtectedNumber(source.affinity[card.id] || 0, 'bond:' + card.id);
-    return { v: 3, values };
+    return { v: 4, values };
 }
 function openBonds(vault) {
-    if (!vault || ![1, 2, 3].includes(vault.v) || !vault.values || typeof vault.values !== 'object')
+    if (!vault || ![1, 2, 3, 4].includes(vault.v) || !vault.values || typeof vault.values !== 'object')
         throw new Error('羁绊数据校验失败');
     const values = { cat: openProtectedNumber(vault.values.cat, 'bond:cat') };
     for (const card of CARD_DEFS) {
-        // Bond vault v1 shipped before Xiaojie and REK; v1/v2 both predate Aqi.
-        // Only those known roster additions may be absent. A current v3 vault
-        // still rejects any missing protected value as possible tampering.
-        const legacyAddition = vault.values[card.id] === undefined && ((vault.v === 1 && ['xiaojie', 'rek', 'aqi'].includes(card.id)) || (vault.v === 2 && card.id === 'aqi'));
+        // Explicit roster migrations: v1 predates Xiaojie/REK, v2 predates Aqi,
+        // and v3 predates Bingbing. Missing existing/current values still fail.
+        const legacyAddition = vault.values[card.id] === undefined && ((vault.v === 1 && ['xiaojie', 'rek', 'aqi'].includes(card.id)) || (vault.v === 2 && card.id === 'aqi') || (vault.v <= 3 && card.id === 'bingbing'));
         values[card.id] = legacyAddition && vault.values[card.id] === undefined
             ? 0
             : openProtectedNumber(vault.values[card.id], 'bond:' + card.id);
@@ -126,7 +125,7 @@ function sealLevels(source) {
     return { v: 3, orchestra: sealProtectedNumber(p.orchestraLevel, 'level:orchestra'), band: sealProtectedNumber(p.bandLevel, 'level:band'), claimed, claimGuard: sealProtectedNumber(levelClaimsDigest(claimed), 'level:claims') };
 }
 function openLevels(vault) {
-    if (!vault || ![1, 2, 3].includes(vault.v))
+    if (!vault || ![1, 2, 3, 4].includes(vault.v))
         throw new Error('等级数据校验失败');
     const claimed = vault.v >= 3 && Array.isArray(vault.claimed) ? vault.claimed : [];
     if (claimed.some(id => typeof id !== 'string' || !LEVEL_MILESTONE_SET.has(id)) || new Set(claimed).size !== claimed.length || vault.v >= 3 && openProtectedNumber(vault.claimGuard, 'level:claims', 0xffffffff) !== levelClaimsDigest(claimed))
@@ -200,6 +199,14 @@ function cleanState(obj) {
     d.cards = cleanCards(obj.cards);
     d.fusion = cleanFusion(obj.fusion);
     d.chronicle = Chronicle.clean(obj.chronicle);
+    const personalEnded = Object.values(d.chronicle.personal?.routes || {}).some(run => run.endings?.length);
+    if (personalEnded) {
+        d.economy.claimed['personal:first-ending'] = true;
+        if (!d.chronicle.chapterSeven?.endings?.length && (!obj.chronicle?.chapterSeven || Number(obj.chronicle?.version || 0) < 3))
+            delete d.economy.claimed['chapter:7'];
+    }
+    if (d.chronicle.chapterSeven?.endings?.length)
+        d.economy.claimed['chapter:7'] = true;
     if (obj.bondVault) {
         const bonds = openBonds(obj.bondVault);
         d.affinity = Object.fromEntries(CARD_DEFS.map(card => [card.id, bonds[card.id]]));

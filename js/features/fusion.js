@@ -28,7 +28,7 @@ const FUSION_FM_POOL_LINES = {
 };
 const FUSION_FM_POOL = ['老杜', '大羊', '笛杰', '阿齐', '宝石', '垃垃', '十元'];
 const FUSION_SPEAKERS = {
-    '旁白': { name: '旁白', tag: '融合线 · 故事叙述', icon: 'album' },
+    '旁白': { name: '旁白', tag: '融合线 · 故事叙述', icon: 'album', asset: 'avatarNarrator' },
     '你': { name: 'Jerry', tag: '现代音乐人 · 编曲', asset: 'avatarJerry' },
     'Jerry': { name: 'Jerry', tag: '现代音乐人 · 编曲', asset: 'avatarJerry' },
     'jerry': { name: 'Jerry', tag: '现代音乐人 · 编曲', asset: 'avatarJerry' },

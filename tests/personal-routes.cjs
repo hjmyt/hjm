@@ -30,20 +30,42 @@ const assert=require('node:assert/strict');
    check('Known personal speaker '+n.id,n.lines.every(l=>['narrator','player','bingbing','xuezi','rek','crowd','guest','singer','xiaoying',...ChronicleData.PERSON_IDS].includes(l.who)));
   }
   for(const route of Object.values(PERSONAL_ROUTES))for(const n of route.nodes){const turns=[];for(const l of n.lines){if(!route.preserveTurns&&turns.at(-1)?.who===l.who)turns.at(-1).text+=' '+l.text;else turns.push({...l});}check('Every personal dialogue page has dedicated art '+route.id+':'+n.id,n.pageArt.length===Math.ceil(turns.length/2)&&n.pageArt.every(a=>a.asset&&a.memory));}
-  setup(100,false);check('Chapter seven disabled before six',document.querySelector('[data-cp-action="personal-picker"]').disabled);
+  closeModal(false);state=freshState();state.sound=false;save();route('chronicle');
+  const freshChapter=JSON.stringify(state.chronicle),freshNotes=state.coins;
+  const pickerTile=document.querySelector('[data-cp-action="personal-picker"]');
+  check('Fresh save exposes the story picker without a chapter lock',!pickerTile.disabled&&!pickerTile.classList.contains('locked')&&pickerTile.textContent.includes('查看路线与解锁条件'));
+  await action('picker');check('Fresh save opens all story choices with their existing route requirements',!$('modalBackdrop').hidden&&document.querySelectorAll('.cp-personal-pick').length===Object.keys(PERSONAL_ROUTES).length&&[...document.querySelectorAll('.cp-personal-pick')].every(b=>b.disabled));
+  check('Opening the picker preserves story progress and notes',JSON.stringify(state.chronicle)===freshChapter&&state.coins===freshNotes);
+  reload();await action('picker');check('Picker remains available after save cleaning',!$('modalBackdrop').hidden);closeModal(false);
+  setup(100,false);await action('picker');check('Picker opens before chapter six is completed',!$('modalBackdrop').hidden);closeModal(false);
   Object.assign(state.chronicle.run,{chapter:2,ch:2,scene:'c2_night',flags:{}});state.progression.bandLevel=6;state.chronicle.run.rev++;renderGlobal();await click('[data-cp-choice="1"]');await wait();check('Second-chapter Yangcun choice unlocks route and offers jump',state.chronicle.run.scene==='c2_yangcun'&&P().storyUnlocks.yangcun&&!$('modalBackdrop').hidden&&!!document.querySelector('[data-yangcun-enter]')&&!!document.querySelector('[data-yangcun-later]'));await click('[data-yangcun-later]');await click('[data-cp-choice="0"]');check('Declining jump continues the original second chapter',state.chronicle.run.scene==='c2_head'&&!P().active);
-  setup(100,false);
-  Chronicle.unlockFusionCp();check('Fusion choice unlocks only the CP chapter-seven entry before chapter six',P().storyUnlocks.baoshi_feihong&& !document.querySelector('[data-cp-action="personal-picker"]').disabled);
+  setup(35,false);
+  Chronicle.unlockFusionCp();check('Fusion choice unlocks only the CP personal-story entry before chapter six',P().storyUnlocks.baoshi_feihong&& !document.querySelector('[data-cp-action="personal-picker"]').disabled);
   reload();check('Fusion CP unlock survives save cleaning before chapter six',P().storyUnlocks.baoshi_feihong===true);
   await action('picker');check('Early fusion unlock enables CP route but keeps regular personal routes locked',!document.querySelector('[data-cp-person="baoshi_feihong"]').disabled&&document.querySelector('[data-cp-person="azhe"]').disabled&&$('modalContent').textContent.includes('特殊剧情已解锁'));closeModal(false);
   Chronicle.enterFusionCp();check('Fusion CP unlock enters the actual CP opening without chapter six',P().active&&P().selected==='baoshi_feihong'&&S().scene==='cp_00');
-  setup(100,false);
-  await forged('personal-select',{cpPerson:'azhe'});check('Direct entry blocked before six',!P().active);
+  for(const id of ['azhe','shiyuan']){
+   closeModal(false);state=freshState();state.sound=false;applyBondValue(id,35);save();route('chronicle');
+   await action('picker');check('35 stays locked without chapter six '+id,document.querySelector(`[data-cp-person="${id}"]`).disabled&&!$('modalContent').textContent.includes('第六章'));closeModal(false);
+   await forged('personal-select',{cpPerson:id});check('Execution preserves bond gate before chapter six '+id,!P().active);
+   applyBondValue(id,36);await select(id);check('36 enters directly from chapter one '+id,P().active&&P().selected===id&&state.chronicle.run.chapter===1);
+   reload();check('Natural entry survives cleaning before chapter six '+id,P().active&&P().selected===id);
+  }
+  for(const id of Object.keys(PERSONAL_ROUTES)){
+   closeModal(false);state=freshState();state.sound=false;state.coins=349;save();route('chronicle');
+   await action('picker');const shortButton=document.querySelector(`[data-cp-action="personal-unlock"][data-cp-person="${id}"]`);
+   check('Insufficient-note purchase is disabled '+id,shortButton.disabled&&shortButton.getAttribute('aria-disabled')==='true');
+   await forged('personal-unlock',{cpPerson:id});check('Forged early purchase still requires enough notes '+id,state.coins===349&&!P().unlocks[id]);closeModal(false);
+   state.coins=350;await action('picker');await click(`[data-cp-action="personal-unlock"][data-cp-person="${id}"]`);closeModal(false);
+   check('Every route can be purchased from chapter one '+id,state.coins===0&&P().unlocks[id]&&state.chronicle.run.chapter===1);
+   await select(id);const earlyScene=S().scene;reload();check('Paid early route survives cleaning '+id,P().active&&P().selected===id&&S().scene===earlyScene);
+   await forged('personal-unlock',{cpPerson:id});check('Repeated early purchase never charges again '+id,state.coins===0);closeModal(false);
+  }
   setup(35);await action('picker');check('35 boundary stays locked',document.querySelector('[data-cp-person="azhe"]').disabled);
   await forged('personal-select',{cpPerson:'azhe'});check('Execution rechecks 35',!P().active);closeModal(false);
-  setup(35);state.coins=9999;await action('picker');await click('[data-cp-action="personal-unlock"][data-cp-person="azhe"]');check('Insufficient direct unlock never charges',state.coins===9999&&!P().unlocks.azhe);closeModal(false);
-  state.coins=10007;await action('picker');await click('[data-cp-action="personal-unlock"][data-cp-person="azhe"]');check('Ten-thousand-note unlock is exact and does not change bond',state.coins===7&&P().unlocks.azhe&&cardBond('azhe')===35);closeModal(false);reload();check('Paid personal unlock survives save cleaning',P().unlocks.azhe===true);await select('azhe');check('Paid unlock bypasses bond gate',P().active&&S().scene==='azhe_01');check('Regular personal-route art keeps the desktop polaroid edge',getComputedStyle(document.querySelector('.cp-novel-art')).paddingTop==='7px'&&getComputedStyle(document.querySelector('.cp-novel-art img')).objectFit==='contain');
-  setup(0);state.coins=10000;await action('picker');await click('[data-cp-action="personal-unlock"][data-cp-person="baoshi_feihong"]');closeModal(false);await select('baoshi_feihong');check('Paid CP unlock bypasses special prerequisites',state.coins===0&&P().active&&S().scene==='cp_00'&&!state.chronicle.run.flags.feiSide);
+  setup(35);state.coins=349;await action('picker');const insufficient=document.querySelector('[data-cp-action="personal-unlock"][data-cp-person="azhe"]');check('Insufficient direct unlock is visibly disabled',insufficient.disabled&&getComputedStyle(insufficient).cursor==='not-allowed'&&Number(getComputedStyle(insufficient).opacity)<1);await forged('personal-unlock',{cpPerson:'azhe'});check('Insufficient direct unlock never charges',state.coins===349&&!P().unlocks.azhe);closeModal(false);
+  state.coins=357;await action('picker');const affordable=document.querySelector('[data-cp-action="personal-unlock"][data-cp-person="azhe"]');check('Affordable direct unlock stays enabled',!affordable.disabled);await click('[data-cp-action="personal-unlock"][data-cp-person="azhe"]');check('350-note unlock is exact and does not change bond',state.coins===7&&P().unlocks.azhe&&cardBond('azhe')===35);closeModal(false);reload();check('Paid personal unlock survives save cleaning',P().unlocks.azhe===true);await select('azhe');check('Paid unlock bypasses bond gate',P().active&&S().scene==='azhe_01');check('Regular personal-route art keeps the desktop polaroid edge',getComputedStyle(document.querySelector('.cp-novel-art')).paddingTop==='7px'&&getComputedStyle(document.querySelector('.cp-novel-art img')).objectFit==='contain');
+  setup(0);state.coins=350;await action('picker');await click('[data-cp-action="personal-unlock"][data-cp-person="baoshi_feihong"]');closeModal(false);await select('baoshi_feihong');check('Paid CP unlock bypasses special prerequisites',state.coins===0&&P().active&&S().scene==='cp_00'&&!state.chronicle.run.flags.feiSide);
   applyBondValue('azhe',36);await select('azhe');check('36 enters actual dialogue',S().scene==='azhe_01'&&P().active);
   check('Reading collects only actual scene',state.memories.includes('cp7_azhe_01')&&!state.memories.includes('cp7_azhe_01c'));
   const before=cardBond('azhe');await choose(0);check('Key choice adds global five',cardBond('azhe')===before+5&&S().scene==='azhe_01b');
@@ -53,7 +75,7 @@ const assert=require('node:assert/strict');
   const chapter=JSON.stringify({...state.chronicle.run,rev:0,aff:{}});applyBondValue('shiyuan',40);await select('shiyuan');await choose(0);const syScene=S().scene;
   await select('azhe');check('Character progress independent',S().scene==='azhe_01b'&&P().routes.shiyuan.scene===syScene);
   check('Sixth chapter stays intact',JSON.stringify({...state.chronicle.run,rev:0,aff:{}})===chapter);
-  reload();check('Reload retains branch and chapter seven',P().active&&S().scene==='azhe_01b');
+  reload();check('Reload retains branch and personal story',P().active&&S().scene==='azhe_01b');
   await action('restart');await action('confirm-restart');await choose(0);check('Re-reading never farms bond',cardBond('azhe')===before+8);
   await action('hub');state.coins=9;P().rev++;renderGlobal();const tech=P().tech;await forged('personal-practice');check('Insufficient notes forbid practice',P().tech===tech&&state.coins===9);
   state.coins=10;P().rev++;renderGlobal();await action('practice');check('Paid practice cost and growth',state.coins===0&&P().tech===tech+2);
@@ -65,9 +87,9 @@ const assert=require('node:assert/strict');
     await choose(id==='azhe_06'&&target==='azhe_BE_note'?2:id==='azhe_07b'?(target==='azhe_TE'?0:1):0);
    }
    check('Full Azhe route reaches '+target,S().scene===target);const notes=state.coins,tickets=state.cards.tickets;await finish();
-   check('First chapter-seven payout '+target,state.coins===notes+15&&state.cards.tickets===tickets+1);
-   reload();check('Chapter seven receipt survives cleaner',state.economy.claimed['chapter:7']&&S().scene==='complete'&&$('modalBackdrop').hidden);
-   await select('shiyuan');go('sy_BE_ge');await finish();check('Other character cannot repay chapter seven',state.coins===notes+15&&state.cards.tickets===tickets+1);ended.push(target);
+   check('First personal-story payout '+target,state.coins===notes+15&&state.cards.tickets===tickets+1);
+   reload();check('Personal story receipt survives cleaner',state.economy.claimed['personal:first-ending']&&S().scene==='complete'&&$('modalBackdrop').hidden);
+   await select('shiyuan');go('sy_BE_ge');await finish();check('Other character cannot repay personal-story reward',state.coins===notes+15&&state.cards.tickets===tickets+1);ended.push(target);
   }
   // Complete source branches through UI: stable support path, three distinct invites, exam and career.
   setup();await select('shiyuan');await choose(0);await choose(1);check('First storm waits for invitations',S().scene==='hub');
@@ -112,7 +134,7 @@ const assert=require('node:assert/strict');
   await choose(1);check('Low banner choice pauses at support hub',S().scene==='hub'&&S().score===11);await action('support');await action('continue');check('Listening support reaches next CP scene',S().scene==='cp_00b');
   check('Long personal scenes use continuation pages before choices',document.querySelectorAll('.cp-dialogue-turn').length<=2&&!!document.querySelector('[data-cp-action="personal-page"]')&&!document.querySelector('[data-personal-choice]'));
   await action('page');await action('hub');await action('continue');check('Pause and continue restore the same dialogue page',S().scene==='cp_00b'&&S().page===1&&document.querySelectorAll('.cp-dialogue-turn').length<=2);
-  go('cp_00c');check('SOLO scene attributes first page to narrator and Dayang',[...document.querySelectorAll('.cp-speaker b')].map(e=>e.textContent).join('|')==='旁白|大羊');await action('page');check('SOLO scene attributes Baoshi and Feihong dialogue',document.querySelector('#cpMain').textContent.includes('宝石')&&document.querySelector('#cpMain').textContent.includes('飞鸿')&&!document.querySelector('#cpMain').textContent.includes('旁白'));
+  go('cp_00c');check('SOLO scene attributes first page to narrator and Dayang',[...document.querySelectorAll('.cp-speaker b')].map(e=>e.textContent).join('|')==='旁白|大羊');const narratorSpeaker=document.querySelector('.cp-dialogue-turn .cp-speaker');check('Personal-route narration reuses the global decorative avatar',narratorSpeaker?.querySelector('img')?.getAttribute('src')===ASSETS.avatarNarrator&&!narratorSpeaker.querySelector('[data-dialogue-card]'));await action('page');check('SOLO scene attributes Baoshi and Feihong dialogue',document.querySelector('#cpMain').textContent.includes('宝石')&&document.querySelector('#cpMain').textContent.includes('飞鸿')&&!document.querySelector('#cpMain').textContent.includes('旁白'));
   S().score=200;S().flags={push1:true,push2:true,push3:true};go('cp_12b');await choose(0);check('Three assist flags resolve CP HE',S().scene==='cp_HE');
   const heImages=[];for(let i=0;i<6;i++){await wait();const img=document.querySelector('.cp-novel-art img');heImages.push(img?.getAttribute('src'));check('HE page art is visible '+(i+1),!!img&&img.complete&&img.naturalWidth>0&&img.getBoundingClientRect().width>0);if(i<5)await action('page');}
   check('HE uses six distinct page illustrations including the kiss',new Set(heImages).size===6&&heImages[3]===ASSETS.personal_cp_HE_page4&&state.memories.includes('cp7_cp_HE_page4'));
@@ -152,7 +174,7 @@ const assert=require('node:assert/strict');
   setup();state.chronicle.run.flags.yangcun=1;await select('yangcun');S().aff.goose=50;S().month=6;go('chat');await action('yc-next');check('A highest run affection of exactly 50 stays on the band route',S().scene==='yc_dec_band');
   setup();state.chronicle.run.flags.yangcun=1;await select('yangcun');Object.assign(S().aff,{goose:51,dayang:52});S().month=6;go('chat');await action('yc-next');check('The unique highest run affection above 50 enters that character route',S().scene==='yc_dy1');
   setup();state.chronicle.run.flags.yangcun=1;await select('yangcun');go('yc_sep3');const previousYangcunSave=JSON.parse(JSON.stringify(state));for(const key of ['month','aff','chatSpent','chatContacts','chatSeen','chatReactions','chatMessage'])delete previousYangcunSave.chronicle.personal.routes.yangcun[key];state=cleanState(previousYangcunSave);route('chronicle');check('Previous Yangcun saves infer their month and initialize only new fields',S().scene==='yc_sep3'&&S().month===4&&Object.keys(S().aff).length===0&&Object.keys(S().chatSpent).length===0);
-  setup(0);state.coins=10000;await action('picker');await click('[data-cp-action="personal-unlock"][data-cp-person="yangcun"]');closeModal(false);await select('yangcun');check('Ten-thousand-note Yangcun unlock bypasses chapter-two prerequisite',state.coins===0&&P().active&&S().scene==='yc_start'&&!state.chronicle.run.flags.yangcun);
+  setup(0);state.coins=350;await action('picker');await click('[data-cp-action="personal-unlock"][data-cp-person="yangcun"]');closeModal(false);await select('yangcun');check('350-note Yangcun unlock bypasses chapter-two prerequisite',state.coins===0&&P().active&&S().scene==='yc_start'&&!state.chronicle.run.flags.yangcun);
   setup();Object.assign(state.chronicle.run,{level:6,flags:{feiSide:1,strGroup:1}});state.progression.bandLevel=6;await select('shiyuan');S().flags.syFriend=true;P().rev++;renderGlobal();await select('baoshi_feihong');S().score=93;S().flags={cpReady:true,push1:true,push2:true,push3:true};S().done=Object.fromEntries(PERSONAL_ROUTES.baoshi_feihong.nodes.filter(n=>!n.sub&&!n.ending).map(n=>[n.id,true]));S().scene='hub';P().rev++;renderGlobal();check('Low final banner never falls into Yangcun placeholder',document.querySelector('#cpMain').textContent.includes('还差 2 点大旗值')&&!document.querySelector('#cpMain').textContent.includes('羊村线待续'));await action('support');check('Final support resolves CP ending',S().scene==='cp_HE');
   P().active=false;Object.assign(state.chronicle.run,{scene:'menu',level:5,flags:{feiSide:1,c4bao:1}});Object.assign(state.progression,{orchestraLevel:5,bandLevel:5});state.chronicle.run.rev++;renderGlobal();await click('[data-cp-action="ensemble"]');await click('[data-cp-action="partner"][data-cp-person="baoshi_feihong"]');
   const random=Math.random;Math.random=()=>0;while(state.chronicle.run.scene==='practice_turn')await click('[data-cp-action="battle"][data-cp-battle="stable"]');Math.random=random;
@@ -187,6 +209,12 @@ const assert=require('node:assert/strict');
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Personal reader overflow '+width+' doc='+await page.evaluate(()=>document.documentElement.scrollWidth)+' '+JSON.stringify(await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>e.getBoundingClientRect().right>innerWidth+.5).map(e=>({cls:e.className,right:e.getBoundingClientRect().right})).slice(0,40))));
   assert.equal(await page.locator('.cp-yc-contact').count(),6,'Yangcun May contacts at '+width);
   await page.screenshot({path:'/tmp/hjm-personal-'+width+'.png',fullPage:true});
+ }
+ for(const id of await page.evaluate(()=>Object.keys(PERSONAL_ROUTES))){
+  await page.evaluate(id=>{closeModal(false);state=freshState();state.sound=false;state.chronicle.personal.unlocks[id]=true;save();route('chronicle');},id);
+  await page.evaluate(id=>{const b=document.createElement('button');b.dataset.cpAction='personal-select';b.dataset.cpPerson=id;document.body.append(b);b.click();b.remove();},id);
+  await page.reload();
+  assert(await page.evaluate(id=>state.chronicle.personal.active&&state.chronicle.personal.selected===id&&state.chronicle.run.chapter===1,id),'Actual refresh retains early route '+id);
  }
  const assets=await page.evaluate(()=>[...PERSONAL_NODES.filter(n=>n.asset).map(n=>ASSETS[n.asset]),...PERSONAL_PAGE_ART.map(a=>ASSETS[a.asset])]);
  assert.equal(new Set(assets).size,323,'Unique route illustrations');

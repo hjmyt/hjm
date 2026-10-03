@@ -7,6 +7,7 @@ const GiftEffects = (() => {
         let src = null;
         if (binding?.theme === 'full') src = JADE_DRAGON_VIDEO;
         if (binding?.theme === 'encore') src = ENCORE_VIDEO;
+        if (binding?.theme === 'transformation') src = QIQI_TRANSFORMATION_FILM.video;
         if (binding?.theme === 'comfort') {
             const film = COMFORT_FILMS[binding.giver]; src = film.fullBackground ? film.video : GiftMedia.source(film.video, film.apple);
         }
@@ -19,7 +20,7 @@ const GiftEffects = (() => {
         if (!binding || !GIFT_EFFECT_THEMES[binding.theme]) { PawGift.play(options); return; }
         if (document.hidden) { options.onEnd?.(); return; }
         const theme = GIFT_EFFECT_THEMES[binding.theme];
-        const cinematic = ['full', 'encore', 'comfort'].includes(binding.theme);
+        const cinematic = ['full', 'encore', 'comfort', 'transformation'].includes(binding.theme);
         const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
         const r = options.target?.getBoundingClientRect();
         const size = Math.min(390, innerWidth - 24, innerHeight - 130);
@@ -59,7 +60,7 @@ const GiftEffects = (() => {
             timer = setTimeout(stop, reduced ? 1500 : failed ? 1800 : binding.theme === 'full' ? 7600 : 4300);
         };
         const mediaOptions = { stop, audio: options.audio, target: options.target, origin: options.origin };
-        const stopAtmosphere = reduced ? () => {} : (binding.theme === 'comfort' ? startGiftComfort(el, mediaOptions, binding.giver) : binding.theme === 'encore' ? startGiftEncore(el, mediaOptions) : binding.theme === 'full' ? startGiftDragon(el, { ...mediaOptions, onReady: begin }) : startGiftAtmosphere(el, { theme, x, y, size }));
+        const stopAtmosphere = reduced ? () => {} : (binding.theme === 'comfort' ? startGiftComfort(el, mediaOptions, binding.giver) : binding.theme === 'transformation' ? startGiftTransformation(el, mediaOptions) : binding.theme === 'encore' ? startGiftEncore(el, mediaOptions) : binding.theme === 'full' ? startGiftDragon(el, { ...mediaOptions, onReady: begin }) : startGiftAtmosphere(el, { theme, x, y, size }));
         if (reduced || !cinematic) begin();
         const hide = () => { if (document.hidden) stop(); };
         cleanup = () => {

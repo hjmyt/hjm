@@ -15,8 +15,9 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
    scene(+ch,id);check(ch+':'+id+' speakers '+wanted,voices()===wanted);
    for(const el of document.querySelectorAll('#cpMain [data-speaker]')){
     const id=el.dataset.speaker,c=cardDef(id==='tangshao'?'tang':id),img=el.querySelector('img');
-    check(ch+':'+id+' correct portrait',c?img?.getAttribute('src')===cardThumbnail(c,'avatar'):!img);
+    check(ch+':'+id+' correct portrait',c?img?.getAttribute('src')===cardThumbnail(c,'avatar'):id==='narrator'?img?.getAttribute('src')===ASSETS.avatarNarrator:!img);
     if(c)check(ch+':'+id+' portrait opens card',el.querySelector('[data-dialogue-card]')?.dataset.dialogueCard===c.id);
+    if(id==='narrator')check(ch+': narrator portrait is decorative',!el.querySelector('[data-dialogue-card]'));
    }
    const e=state.chronicle.run.journal.at(-1),text=e.text;check(ch+':'+id+' journal names',Chronicle.journalSpeaker({...e,who:'lala'},state.chronicle.run)===[...document.querySelectorAll('#cpMain [data-speaker] b')].map(e=>e.textContent).join(' / '));check('Journal content unchanged',e.text===text);
   }

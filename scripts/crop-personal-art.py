@@ -68,3 +68,4 @@ print(f'Rebuilt {len(manifest)} illustrations from preserved atlases.')
 # Apply the canonical 2026-10 eight-panel portrait refresh after historical crops.
 import runpy
 runpy.run_path(str(ROOT / "scripts/crop-baoshi-feihong-art.py"))["rebuild"]("personal", partial=args.partial)
+runpy.run_path(str(ROOT / "scripts/crop-bingbing-art.py"))["rebuild"](partial=args.partial)

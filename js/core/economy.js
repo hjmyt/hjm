@@ -1,6 +1,30 @@
 'use strict';
 
-const ECONOMY_RULES = Object.freeze({ start: 30, practice: 10, gift: 5, story: 3, daily: 10, bonusCap: 2, fullRuns: 3 });
+const ECONOMY_RULES = Object.freeze({ start: 30, practice: 10, gift: 5, story: 3, daily: 10, bonusCap: 2, fullRuns: 3, cardUnlock: 50, cardUnlockBond: 3, personalRouteUnlock: 350 });
+
+// Reuse permanent card ownership and the existing bond reward ledger. No new save fields.
+function purchaseCardUnlock(id) {
+    const c = cardDef(id);
+    if (!c || c.placeholder) return { ok: false, reason: '这位伙伴的档案待补充，暂不支持音符解锁。' };
+    if (cardAvailable(id))
+        return { ok: false, reason: '这位伙伴已解锁，无需再次消耗音符。' };
+    if (!storageOK) return { ok: false, reason: '存档暂时无法保存，请先恢复保存后再解锁。' };
+    if (state.coins < ECONOMY_RULES.cardUnlock)
+        return { ok: false, reason: `音符不足，还差 ${ECONOMY_RULES.cardUnlock - state.coins} 音符；可免费演奏赚取。` };
+    const snapshot = JSON.parse(JSON.stringify(state));
+    state.coins -= ECONOMY_RULES.cardUnlock;
+    state.cards.encounters.push(id);
+    state.cards.collection[id].owned = true;
+    state.cards.collection[id].copies = Math.max(1, state.cards.collection[id].copies);
+    const gain = grantBond(id, ECONOMY_RULES.cardUnlockBond, { key: `special:card-unlock:${id}` });
+    if (!save()) {
+        state = snapshot;
+        syncUnifiedBonds(state);
+        syncGlobalLevels(state);
+        return { ok: false, reason: '保存失败，本次解锁、扣款与羁绊增长已撤回。' };
+    }
+    return { ok: true, gain };
+}
 // C / B / A / S. Song and difficulty premiums are base rewards, separate from
 // the existing shared +2 cap for team and active skills.
 const RHYTHM_REWARDS = Object.freeze({
@@ -18,7 +42,7 @@ function cleanEconomy(obj) {
     if (!obj || typeof obj !== 'object')
         return d;
     for (const [k, v] of Object.entries(obj.claimed || {}))
-        if (v === true && /^(chapter:[1-7]|plot:[1-6]:[a-z0-9_]+|tech:[1-6]:[a-z0-9_]+|audition)$/.test(k))
+        if (v === true && /^(chapter:[1-7]|personal:first-ending|plot:(?:[1-6]|personal):[a-z0-9_:]+|tech:[1-6]:[a-z0-9_]+|audition)$/.test(k))
             d.claimed[k] = true;
     for (const [key, item] of Object.entries(obj.training || {})) {
         if (/^[1-6]:[1-5]$/.test(key) && item?.paid === true)
@@ -46,8 +70,11 @@ function seedLegacyEconomy(d) {
     }
     for (const ch of d.chronicle.completedChapters || [])
         d.economy.claimed['chapter:' + ch] = true;
-    if (Object.values(d.chronicle.personal?.routes || {}).some(r => r.endings?.length))
-        d.economy.claimed['chapter:7'] = true;
+    if (Object.values(d.chronicle.personal?.routes || {}).some(r => r.endings?.length)) {
+        d.economy.claimed['personal:first-ending'] = true;
+        if (!d.chronicle.chapterSeven?.endings?.length)
+            delete d.economy.claimed['chapter:7'];
+    }
     if (d.chronicle.claimed.includes('audition'))
         d.economy.claimed.audition = true;
     for (const r of [d.chronicle.run, ...Object.values(d.chronicle.slots)]) {

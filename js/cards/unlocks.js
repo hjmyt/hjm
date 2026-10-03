@@ -6,7 +6,7 @@ function mentionedStoryCards(text = '', who = '') {
     return CARD_DEFS.filter(c => c.id === speaker || STORY_CARD_ALIASES[c.id].some(name => name === 'TIM' ? /\bTIM\b/i.test(text) : name.toLowerCase() === 'bill' ? /\bBill\b/i.test(text) : text.includes(name))).map(c => c.id);
 }
 function cardAvailable(id, source = state) { return source.cards.encounters.includes(id); }
-function chapterLockText() { return '剧情提到这位伙伴时自动解锁'; }
+function chapterLockText(id) { return cardDef(id)?.placeholder ? '档案待补充，随剧情保留卡位' : `剧情相遇免费解锁，或使用 ${ECONOMY_RULES.cardUnlock} 音符`; }
 function syncStoryCards(source = state, notify = false, recoverLegacy = false) {
     const cards = source.cards, newIds = [];
     const discovered = Chronicle.encounterIds(source.chronicle, recoverLegacy || cards.encounterVersion !== 3);
@@ -22,6 +22,30 @@ function syncStoryCards(source = state, notify = false, recoverLegacy = false) {
     const aqiFusionSeen = Object.values(source.fusion?.runs || {}).some(run => ['f2_aq1', 'f2_aq2', 'f2_aq3', 'f2_slap'].includes(run?.current) || run?.done?.some(id => ['f2_aq1', 'f2_aq2', 'f2_aq3', 'f2_slap'].includes(id)));
     if (aqiFusionSeen && !discovered.includes('aqi'))
         discovered.push('aqi');
+    // Recover only pages proven visible, never later mentions on an unread page.
+    for (const [routeId, run] of Object.entries(source.chronicle?.personal?.routes || {})) {
+        for (const node of PERSONAL_ROUTES[routeId]?.nodes || []) {
+            const turns = [];
+            for (const line of node.lines || []) {
+                if (!PERSONAL_ROUTES[routeId].preserveTurns && turns.at(-1)?.who === line.who) turns.at(-1).text += '\n' + line.text;
+                else turns.push({...line});
+            }
+            const seen = run.done?.[node.id] ? turns : run.read?.includes(node.id) ? turns.slice(0, run.scene === node.id ? (run.page + 1) * 2 : 2) : [];
+            if (seen.some(line => mentionedStoryCards(line.text, line.who).includes('bingbing')) && !discovered.includes('bingbing')) discovered.push('bingbing');
+        }
+    }
+    const seven = source.chronicle?.chapterSeven;
+    if (seven) {
+        for (const node of CHAPTER_SEVEN.nodes) {
+            const turns = [];
+            for (const line of node.lines || []) {
+                if (turns.at(-1)?.who === line.who) turns.at(-1).text += '\n' + line.text;
+                else turns.push({...line});
+            }
+            const seen = seven.done?.[node.id] ? turns : seven.read?.includes(node.id) ? turns.slice(0, seven.scene === node.id ? (seven.page + 1) * 2 : 2) : [];
+            if (seen.some(line => mentionedStoryCards(line.text, line.who).includes('bingbing')) && !discovered.includes('bingbing')) discovered.push('bingbing');
+        }
+    }
     cards.encounterVersion = 3;
     for (const id of discovered)
         if (!cards.encounters.includes(id)) {

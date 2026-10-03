@@ -1,0 +1,7 @@
+{
+  "azhe_08": {
+    "source": "assets/chronicle/personal/source/azhe_08-bingbing-bow-v2.png",
+    "output": "assets/chronicle/personal/azhe_08-bingbing-bow-v2.webp",
+    "prompt": "docs/imagegen/bingbing-2026-10/bow-fix-prompt.txt"
+  }
+}

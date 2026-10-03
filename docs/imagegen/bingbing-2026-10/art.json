@@ -1,0 +1,70 @@
+[
+  {
+    "id": "azhe_03",
+    "source": "assets/chronicle/personal/source/bingbing-202610.png",
+    "cell": 1,
+    "size": [
+      1254,
+      1254
+    ],
+    "crop": [
+      0,
+      0,
+      627,
+      627
+    ],
+    "output": "assets/chronicle/personal/azhe_03-bingbing-202610.webp",
+    "prompt": "docs/imagegen/bingbing-2026-10/story-prompt.txt"
+  },
+  {
+    "id": "azhe_03b",
+    "source": "assets/chronicle/personal/source/bingbing-202610.png",
+    "cell": 2,
+    "size": [
+      1254,
+      1254
+    ],
+    "crop": [
+      627,
+      0,
+      1254,
+      627
+    ],
+    "output": "assets/chronicle/personal/azhe_03b-bingbing-202610.webp",
+    "prompt": "docs/imagegen/bingbing-2026-10/story-prompt.txt"
+  },
+  {
+    "id": "azhe_08",
+    "source": "assets/chronicle/personal/source/azhe_08-bingbing-bow-v2.png",
+    "output": "assets/chronicle/personal/azhe_08-bingbing-bow-v2.webp",
+    "prompt": "docs/imagegen/bingbing-2026-10/bow-fix-prompt.txt",
+    "cell": "override",
+    "size": [
+      1254,
+      1254
+    ],
+    "crop": [
+      0,
+      0,
+      1254,
+      1254
+    ]
+  },
+  {
+    "id": "sy_r1b",
+    "source": "assets/chronicle/personal/source/bingbing-202610.png",
+    "cell": 4,
+    "size": [
+      1254,
+      1254
+    ],
+    "crop": [
+      627,
+      627,
+      1254,
+      1254
+    ],
+    "output": "assets/chronicle/personal/sy_r1b-bingbing-202610.webp",
+    "prompt": "docs/imagegen/bingbing-2026-10/story-prompt.txt"
+  }
+]

@@ -45,3 +45,16 @@ function awardCardPerformance(hits) {
         unlock('card_band');
     return extra;
 }
+
+// One roll per captured performance; rerenders and repeated finish calls cannot reroll.
+function applyBingbingScore(complete, hits, random = Math.random) {
+    const run = game.cardRun;
+    if (!run || run.bingbingRolled || !complete || hits <= 0) return;
+    run.bingbingRolled = true;
+    if (run.prepared?.id !== 'bingbing' || !run.ids.includes('bingbing') || !cardOwned('bingbing')) return;
+    run.bingbingBurst = random() < .35;
+    if (run.bingbingBurst) {
+        run.bingbingBaseScore = game.score;
+        game.score *= 2;
+    }
+}

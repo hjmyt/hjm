@@ -74,10 +74,11 @@ const cardGifts = c => {
     return gifts.map((g, index) => {
         const gain = normalGiftGain(g, index, gifts);
         return [g[0], g[1], g[2], gain * BOND_RULES.notesPerBond, gain, g[5]];
-    }).filter(g => !(c.id === 'zhu' && g[0] === 'night' && (!state.cards.zhuNight || !hiddenSkillReady('zhu'))) && !(c.id === 'baoshi' && g[0] === 'dress' && !hiddenSkillReady('baoshi'))).concat(c.placeholder ? [] : [...(comfort ? [[comfort.id, comfort.name, 'heart', BOND_RULES.comfortGiftCost, BOND_RULES.comfortGiftGain, 0]] : []), ['heartfelt_encore', '心动安可', 'music', BOND_RULES.encoreGiftCost, BOND_RULES.encoreGiftGain, 0], ['full_bond', '满心礼盒', 'gift', BOND_RULES.fullGiftCost, 0, 0]]);
+    }).filter(g => !(c.id === 'zhu' && g[0] === 'night' && (!state.cards.zhuNight || !hiddenSkillReady('zhu'))) && !(c.id === 'baoshi' && g[0] === 'dress' && !hiddenSkillReady('baoshi'))).concat(c.placeholder ? [] : [...(comfort ? [[comfort.id, comfort.name, 'heart', BOND_RULES.comfortGiftCost, BOND_RULES.comfortGiftGain, 0]] : []), ...(c.id === 'qiqi' ? [[QIQI_TRANSFORMATION_GIFT.id, QIQI_TRANSFORMATION_GIFT.name, 'star', BOND_RULES.qiqiGiftCost, BOND_RULES.qiqiGiftGain, 0]] : []), ['heartfelt_encore', '心动安可', 'music', BOND_RULES.encoreGiftCost, BOND_RULES.encoreGiftGain, 0], ['full_bond', '满心礼盒', 'gift', BOND_RULES.fullGiftCost, 0, 0]]);
 };
 const isEncoreGift = g => g?.[0] === 'heartfelt_encore';
 const isComfortGift = g => !!g && Object.values(COMFORT_GIFTS).some(item => item.id === g[0]);
+const isQiqiTransformationGift = g => g?.[0] === QIQI_TRANSFORMATION_GIFT.id;
 const isFullBondGift = g => g?.[0] === 'full_bond';
 function giftChoiceDisabled(c, g, used) {
     return !isFullBondGift(g) && used >= BOND_RULES.giftsPerDay;
@@ -93,7 +94,7 @@ function cardGiftHint(c, g, used) {
         return '今日普通投喂已满五次；满心礼盒仍可使用。';
     if (!g)
         return '选择一份心意，再点击投喂。满心礼盒消耗 350 音符，羁绊直达 100，满分后仍可投喂但不再增加羁绊，不占普通投喂次数。';
-    if (isEncoreGift(g) || isComfortGift(g)) return `${g[1]}：${g[3]} 音符，羁绊 +${g[4]}（最高 100），占用今日 1 次投喂；满分后仍会扣款，不再增加羁绊。` + (state.coins < g[3] ? '音符不足。' : '');
+    if (isEncoreGift(g) || isComfortGift(g) || isQiqiTransformationGift(g)) return `${g[1]}：${g[3]} 音符，羁绊 +${g[4]}（最高 100），占用今日 1 次投喂；满分后仍会扣款，不再增加羁绊。` + (state.coins < g[3] ? '音符不足。' : '');
     return (isFullBondGift(g) ? '消耗 350 音符，羁绊直接提升到 100，满分后仍可投喂但不再增加羁绊，不占用、不受每日五次限制。' : `这份心意：${g[3]} 音符、羁绊分 +${g[4]}、经验 +${g[5]}。`) + (state.coins < g[3] ? '音符不足，先读故事或完成演奏吧。' : '');
 }
 function renderGiftChoices(c, gifts, used) {

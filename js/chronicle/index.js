@@ -138,6 +138,7 @@ const Chronicle = (() => {
     const spoken = (who, text) => ({ who, text });
     const D = (who, text, ...choices) => { const parts = Array.isArray(text) ? text : [spoken(who, text)]; return { who: parts[0].who, text: parts.map(p => p.text).join('\n\n'), parts, choices }; };
     function dispatch(action, btn) {
+        if (action.startsWith('chapter-seven-')) return sevenAction(action, btn);
         if (M().personal?.active && !action.startsWith('personal-') && !['switch-chapter','ending-chapter'].includes(action)) return;
         if (action === 'bar-continue') {
             if (R().scene !== 'shanqiu_closed')
@@ -174,7 +175,7 @@ const Chronicle = (() => {
         if (action === 'switch-chapter') {
             const chapter = Number(btn?.dataset.cpChapter);
             requestChapter(chapter);
-            if ([1, 2, 3, 4, 5, 6].includes(chapter) && chapterUnlocked(chapter))
+            if ([1, 2, 3, 4, 5, 6, 7].includes(chapter) && chapterUnlocked(chapter))
                 scrollToChapterStory();
             return;
         }
@@ -243,7 +244,7 @@ const Chronicle = (() => {
     function isThree() { return R().chapter === 3; }
     function isFour() { return R().chapter === 4; }
     function endingKeys(ch = R().chapter) { return Object.keys(ENDINGS).filter(id => ENDINGS[id].chapter === ch || id === 'shadow' && ch <= 4); }
-    function chapterName(ch = R().chapter) { return ch === 6 ? '第六章 · 开幕之夜' : ch === 5 ? '第五章 · 夏天的形状' : ch === 4 ? '第四章 · 剧场之夜' : ch === 3 ? '第三章 · 星光530' : ch === 2 ? '第二章 · 暗涌' : '第一章 · 入团试炼'; }
+    function chapterName(ch = R().chapter) { return ch === 7 ? '第七章 · 后山丘时代' : ch === 6 ? '第六章 · 开幕之夜' : ch === 5 ? '第五章 · 夏天的形状' : ch === 4 ? '第四章 · 剧场之夜' : ch === 3 ? '第三章 · 星光530' : ch === 2 ? '第二章 · 暗涌' : '第一章 · 入团试炼'; }
     function requiredTech(r = R()) { return r.chapter === 6 ? 20 : r.chapter === 5 ? 18 : r.chapter === 4 ? 15 : r.chapter >= 2 ? 14 : 12; }
     function stageName(r = R()) { return r.chapter === 6 ? '音乐剧《拾光》首演' : r.chapter === 5 ? '夏日音乐节' : r.chapter === 4 ? '6.7 剧场之夜' : r.chapter === 3 ? '530 陶喆专场' : r.chapter === 2 ? '独立路演' : '商场快闪'; }
     function liveDifficulty(r = R()) {
@@ -351,9 +352,12 @@ const Chronicle = (() => {
         get chapterComplete() { return chapterComplete; },
         get freshPersonal() { return freshPersonal; },
         get cleanPersonal() { return cleanPersonal; },
+        get freshSeven() { return freshSeven; },
+        get cleanSeven() { return cleanSeven; },
+        get enterSeven() { return enterSeven; },
+        get sevenHTML() { return sevenHTML; },
         get personalHTML() { return personalHTML; },
         get personalPreview() { return personalPreview; },
-        get personalPickerUnlocked() { return personalPickerUnlocked; },
         get unlockYangcun() { return unlockYangcun; },
         get offerYangcun() { return offerYangcun; },
         get chapterUnlocked() { return chapterUnlocked; },
@@ -417,7 +421,8 @@ const Chronicle = (() => {
         get thirdTitleHTML() { return thirdTitleHTML; },
         get weekNotice() { return weekNotice; }, set weekNotice(value) { weekNotice = value; }
     };
-    const { freshPersonal, cleanPersonal, personalAction, personalHTML, personalPreview, resetPersonalPreview, personalPickerUnlocked, unlockFusionCp, enterFusionCp, unlockYangcun, offerYangcun, enterYangcun } = createChroniclePersonal(context);
+    const { freshPersonal, cleanPersonal, personalAction, personalHTML, personalPreview, resetPersonalPreview, unlockFusionCp, enterFusionCp, unlockYangcun, offerYangcun, enterYangcun } = createChroniclePersonal(context);
+    const { freshSeven, cleanSeven, enterSeven, sevenAction, sevenHTML } = createChronicleSeven(context);
     const { cleanTraining, startTraining, trainingAction, trainingTap, trainingHTML, trainingHubHTML, suspendTraining, trainingKey, mountTraining } = createChronicleTraining(context);
     const { freshWeeks, cleanWeeks, weekPlan, pendingStory, storyTransition, enterWeekStory, startWeekStory, sideEvents, startSide, bandStoryStatus, weeklyDialogue, weekStoryHTML, sideStoriesHTML, illustrationHTML, weeklyHelp } = createChronicleWeeks(context);
     const { savedChapter, shouldCloseBar, normalizeFourthOpening, beginBarChapter, barDialogue, orderDrink, barMenuHTML, closedBarHTML, showBarClosure } = createChronicleBar(context);

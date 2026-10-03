@@ -11,6 +11,7 @@ SOURCES = {
     'heartfelt-encore': (Path('/Users/hxj/Downloads/安可.mp4'), 7.4),
     'baoshi-comfort': (Path('/Users/hxj/Downloads/宝石安慰飞鸿.mp4'), 8.1),
     'feihong-comfort': (Path('/Users/hxj/Downloads/飞鸿的安慰1.mp4'), 8.1),
+    'qiqi-transformation': (Path('/Users/hxj/Downloads/红色柒柒华丽变装视频生成.mp4'), 8.1),
 }
 
 

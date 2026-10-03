@@ -23,6 +23,7 @@ const { pathToFileURL } = require('node:url');
       Object.assign(legacy.chronicle.run, { chapter: 2, ch: 2, name: '旧档', scene: 'menu', flags: { strGroup: 1 } });
       check('Reached chapter two legacy saves recover Jerry', cleanState(legacy).cards.encounters.includes('jerry'));
       check('Latest supplied trilogy was compiled', FUSION_ROUTES.rl.length === 20 && FUSION_ROUTES.ep2.length === 32 && FUSION_ROUTES.fm.length === 60);
+      check('Fusion narration reuses the global decorative avatar', FUSION_SPEAKERS['旁白']?.asset === 'avatarNarrator' && fusionSpeakerHTML('旁白', '测试').includes(ASSETS.avatarNarrator) && !fusionSpeakerHTML('旁白', '测试').includes('data-dialogue-card'));
       const emojiPattern = /[\u{1F300}-\u{1FAFF}]/u;
       check('Casual fusion chat messages use visible emoji', FUSION_CHAT_POOL.every(([name, message]) => name === '阿齐' || emojiPattern.test(message)));
       check('Chapter-two contact uses A-Qi and the requested Dongguan line', FUSION_CHAT_POOL.some(([name, message]) => name === '阿齐' && message === '九点了，我要回东莞了') && !FUSION_CHAT_POOL.some(([name]) => name === 'REK'));

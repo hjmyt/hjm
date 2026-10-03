@@ -19,5 +19,12 @@
     "posterBytes": 50675,
     "delivery": "feihong-comfort-full-v2-delivery.mp4",
     "poster": "feihong-comfort-full-v2-poster.jpg"
+  },
+  "qiqi-transformation": {
+    "sourceBytes": 4580886,
+    "deliveryBytes": 1842531,
+    "posterBytes": 54917,
+    "delivery": "qiqi-transformation-full-v2-delivery.mp4",
+    "poster": "qiqi-transformation-full-v2-poster.jpg"
   }
 }

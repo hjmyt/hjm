@@ -2,6 +2,11 @@
 
 const ENCORE_VIDEO = new URL('../../assets/effects/heartfelt-encore-full-v2-delivery.mp4', document.currentScript.src).href;
 const ENCORE_POSTER = new URL('../../assets/effects/heartfelt-encore-full-v2-poster.jpg', document.currentScript.src).href;
+const QIQI_TRANSFORMATION_FILM = {
+    video: new URL('../../assets/effects/qiqi-transformation-full-v2-delivery.mp4', document.currentScript.src).href,
+    poster: new URL('../../assets/effects/qiqi-transformation-full-v2-poster.jpg', document.currentScript.src).href,
+    name: '柒柒的华丽变装', opening: '礼盒开启 · 红金流光', reveal: '华丽变装 · 舞台登场', ritualTitle: '华丽登场 · 心意送达', color: '#ffd2ad', fullBackground: true
+};
 const COMFORT_FILMS = Object.fromEntries(Object.values(COMFORT_GIFTS).map(g => [g.giver, {
     video: new URL(`../../assets/effects/${g.giver}-comfort-full-v2-delivery.mp4`, document.currentScript.src).href,
     apple: new URL(`../../assets/effects/${g.giver}-comfort-full-v2-delivery.mp4`, document.currentScript.src).href,
@@ -13,6 +18,10 @@ const COMFORT_FILMS = Object.fromEntries(Object.values(COMFORT_GIFTS).map(g => [
 function startGiftComfort(host, options, giver) {
     host.classList.add('gift-performance-encore', `gift-comfort-${giver}`);
     return startGiftEncore(host, { ...options, film: COMFORT_FILMS[giver] });
+}
+function startGiftTransformation(host, options) {
+    host.classList.add('gift-performance-encore', 'gift-qiqi-transformation');
+    return startGiftEncore(host, { ...options, film: QIQI_TRANSFORMATION_FILM });
 }
 function startGiftEncore(host, { stop, audio, target, origin, film = { video: ENCORE_VIDEO, poster: ENCORE_POSTER, name: '心动安可', fullBackground: true } }) {
     let active = true, frame = 0, timer = 0, blocked = false, failed = false, ending = false;
@@ -33,7 +42,7 @@ function startGiftEncore(host, { stop, audio, target, origin, film = { video: EN
     const retry = document.createElement('button'); retry.type = 'button'; retry.className = 'gift-dragon-resume'; retry.textContent = `点击开启${film.name}`; retry.hidden = true;
     aperture.append(video); stage.append(aperture);
     host.prepend(stage,poster); host.append(status,skip,retry);
-    const ritual = createGiftRitual(host, { target, origin, aperture, stop, variant: 'encore', giftName: film.name, openingTitle: film.opening, revealTitle: film.reveal, color: film.color });
+    const ritual = createGiftRitual(host, { target, origin, aperture, stop, variant: 'encore', giftName: film.name, openingTitle: film.opening, revealTitle: film.ritualTitle || film.reveal, color: film.color });
     function finish() {
         if (!active || ending) return;
         ending = true; host.classList.add('is-encore-delivery');

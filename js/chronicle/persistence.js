@@ -7,7 +7,7 @@ function createChroniclePersistence(ctx) {
             aff: Object.fromEntries(ctx.PERSON_IDS.map(k => [k, 0])), dark: { feihong: 0, dijie: 0 },
             bar: { order: null, returnTo: null, closed: false, closureSeen: false }, flags: {}, scene: 'start', rev: 0, log: [], journal: [], battle: null, live: null, chat: 'lala', ending: null, previewedEnding: null, legacyEnded: false };
     }
-    function fresh() { return { personal: ctx.freshPersonal(), version: 2, runNo: 1, claimed: [], endings: [], chapterEndings: {}, completedChapters: [], bonds: Object.fromEntries(ctx.PERSON_IDS.map(k => [k, 0])), slots: {}, chapter2Start: null, chapter3Start: null, chapter4Start: null, chapter5Start: null, chapter6Start: null, run: freshRun() }; }
+    function fresh() { return { chapterSeven: ctx.freshSeven(), personal: ctx.freshPersonal(), version: 3, runNo: 1, claimed: [], endings: [], chapterEndings: {}, completedChapters: [], bonds: Object.fromEntries(ctx.PERSON_IDS.map(k => [k, 0])), slots: {}, chapter2Start: null, chapter3Start: null, chapter4Start: null, chapter5Start: null, chapter6Start: null, run: freshRun() }; }
     // V6: retire the former relationship-penalty branch. Do not reset valid progress.
     // Old identifiers below are migration-only; unknown history entries are filtered by the catalogs.
     function isRetiredRun(a) {
@@ -260,6 +260,7 @@ function createChroniclePersistence(ctx) {
     function safeSnapshot(r) { return JSON.parse(JSON.stringify(r)); }
     function clean(obj) {
         const d = cleanSingle(obj);
+        d.chapterSeven=ctx.cleanSeven(obj?.chapterSeven);
         d.personal=ctx.cleanPersonal(obj?.personal);
         d.slots = {};
         for (const id of ['1', '2', '3', '4', '5', '6']) {
@@ -282,7 +283,7 @@ function createChroniclePersistence(ctx) {
         }
         d.endings = ctx.collectedEndingIds(d);
         d.claimed = [...new Set([...d.claimed, ...d.endings])];
-        d.completedChapters = [...new Set([...(Array.isArray(obj?.completedChapters) ? obj.completedChapters : []), ...d.endings.map(id => ctx.ENDINGS[id].chapter), ...[d.run, ...Object.values(d.slots)].filter(r => r.ending || r.legacyEnded).map(r => r.chapter)])].filter(ch => [1, 2, 3, 4, 5, 6].includes(ch));
+        d.completedChapters = [...new Set([...(Array.isArray(obj?.completedChapters) ? obj.completedChapters : []), ...d.endings.map(id => ctx.ENDINGS[id].chapter), ...[d.run, ...Object.values(d.slots)].filter(r => r.ending || r.legacyEnded).map(r => r.chapter), ...(d.chapterSeven.endings.length ? [7] : [])])].filter(ch => [1, 2, 3, 4, 5, 6, 7].includes(ch));
         d.bonds = obj?.bonds || {};
         repairChapterCarry(d);
         if (!chapterUnlocked(d.run.chapter, d)) {
@@ -302,13 +303,11 @@ function createChroniclePersistence(ctx) {
                 r.name = first.name;
                 r.inst = first.inst;
             }
-        const specialRoute=['baoshi_feihong','yangcun'].includes(d.personal.selected)&&d.personal.storyUnlocks[d.personal.selected]===true;
-        if(!chapterComplete(6,d)&&!specialRoute)d.personal.active=false;
         syncBonds(d);
         return d;
     }
-    function chapterComplete(ch, m = ctx.M()) { return (m.completedChapters || []).includes(ch) || m.endings.some(id => ctx.ENDINGS[id]?.chapter === ch) || [m.run, ...Object.values(m.slots)].some(r => r.chapter === ch && (!!r.ending || r.legacyEnded)); }
-    function chapterUnlocked(ch, m = ctx.M()) { return [1, 2, 3, 4, 5, 6].includes(ch) && Array.from({ length: ch - 1 }, (_, i) => i + 1).every(n => chapterComplete(n, m)); }
+    function chapterComplete(ch, m = ctx.M()) { return ch === 7 ? !!m.chapterSeven?.endings?.length : (m.completedChapters || []).includes(ch) || m.endings.some(id => ctx.ENDINGS[id]?.chapter === ch) || [m.run, ...Object.values(m.slots)].some(r => r.chapter === ch && (!!r.ending || r.legacyEnded)); }
+    function chapterUnlocked(ch, m = ctx.M()) { return [1, 2, 3, 4, 5, 6, 7].includes(ch) && Array.from({ length: ch - 1 }, (_, i) => i + 1).every(n => chapterComplete(n, m)); }
     // Rebase old direct-experience saves once, preserving gains/losses earned in that chapter.
     function repairChapterCarry(m) {
         for (const r of [m.run, ...Object.values(m.slots), ...Array.from({ length: 5 }, (_, i) => m['chapter' + (i + 2) + 'Start'])].filter(Boolean)) {
@@ -362,7 +361,8 @@ function createChroniclePersistence(ctx) {
         return r;
     }
     function requestChapter(ch) {
-        if([1,2,3,4,5,6].includes(ch)&&chapterUnlocked(ch)&&ctx.M().personal?.active){ctx.M().personal.active=false;ctx.changed();}
+        if (ch === 7) { ctx.enterSeven(); return; }
+        if([1,2,3,4,5,6].includes(ch)&&chapterUnlocked(ch)&&(ctx.M().personal?.active||ctx.M().chapterSeven?.active)){ctx.M().personal.active=false;ctx.M().chapterSeven.active=false;ctx.changed();}
         repairChapterCarry(ctx.M());
         syncBonds();
         if (![1, 2, 3, 4, 5, 6].includes(ch) || ch === ctx.R().chapter)

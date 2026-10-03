@@ -3,6 +3,86 @@
 // Static catalog. Runtime rules and save state belong in core/ and feature modules.
 const CARD_DEFS = [
   {
+  "id": "bingbing",
+  "name": "冰冰",
+  "rarity": "SSR",
+  "stars": 6,
+  "role": "大提琴 / 钢琴 / 小提琴",
+  "group": "弦乐",
+  "asset": "cardBingbing",
+  "coverAsset": "cardBingbingCover",
+  "avatarAsset": "cardBingbingAvatar",
+  "imageVersion": "bb20261002",
+  "icon": "music",
+  "tag": "全团女神",
+  "pronoun": "她",
+  "bonus": 2,
+  "active": 1,
+  "chronicleOnly": true,
+  "subtitle": "聚光灯落下，她与大提琴坐在舞台中央。",
+  "quote": "把这一段拉好，今晚的高光属于大家。",
+  "identity": "大提琴手 · 全团女神",
+  "seat": "大提琴 · 聚光灯 C 位",
+  "specialty": "大提琴 / 钢琴 / 小提琴",
+  "bio": "长黑发间别着白色花饰，垂坠耳饰映着舞台的光。她抱着大提琴坐在中央，精致亮眼，也能在钢琴与小提琴之间自如切换。银色保时捷 911 是她的座驾，音乐才是她最耀眼的名片。",
+  "profileFields": [
+    [
+      "身份",
+      "大提琴手 · 全团女神"
+    ],
+    [
+      "位置",
+      "大提琴 · 聚光灯 C 位"
+    ],
+    [
+      "擅长",
+      "大提琴 / 钢琴 / 小提琴"
+    ]
+  ],
+  "stats": [
+    [
+      "STAT",
+      "S000"
+    ]
+  ],
+  "statnote": "S000（富婆级别）· 人物设定展示，不是消费货币。",
+  "activeName": "爆金币",
+  "activeText": "准备后，下次完整且有手动命中的节奏演奏有 35% 概率让本场得分翻倍，并绽放金色音符。准确率、评级、基础最佳成绩与音符奖励仍按原始演奏结算；每场只判定一次。",
+  "passiveName": "聚光灯 C 位",
+  "passiveText": "入队参与演奏加成，与主动技能合计最多 +2 音符，仅限每日前 3 场完整达标演奏。",
+  "gifts": [
+    [
+      "rosin",
+      "大提琴松香",
+      "music",
+      5,
+      1,
+      0
+    ],
+    [
+      "flowers",
+      "白色花束",
+      "heart",
+      25,
+      5,
+      0
+    ],
+    [
+      "score",
+      "三重奏新谱",
+      "album",
+      50,
+      10,
+      0
+    ]
+  ],
+  "thanks": [
+    "“谢谢，下次的长音会更温柔。”",
+    "“正好和今天的发饰相配。”",
+    "“大提琴、钢琴、小提琴，我们一起试试？”"
+  ]
+},
+  {
     "id": "tang",
     "name": "汤少",
     "rarity": "SSR",
@@ -2183,6 +2263,7 @@ const COLLECTION_ORDER = [
   "tang",
   "lala",
   "azhe",
+  "bingbing",
   "shiyuan",
   "zhu",
   "tim",
@@ -2210,6 +2291,7 @@ const COLLECTION_ORDER = [
 ];
 
 const STORY_CARD_ALIASES = {
+  "bingbing": ["冰冰"],
   "jerry": [
     "Jerry",
     "jerry"

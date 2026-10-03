@@ -5,7 +5,7 @@ function goCard(id, feed = false) {
     if (!c)
         return;
     if (!cardAvailable(id)) {
-        toast(chapterLockText(id));
+        showCardUnlock(id);
         return;
     }
     if (!$('modalBackdrop').hidden)
@@ -22,6 +22,23 @@ function goCard(id, feed = false) {
     route('card');
     if (feed)
         requestAnimationFrame(() => $('cardFeeding')?.scrollIntoView({ behavior: 'smooth', block: 'center' }));
+}
+
+function showCardUnlock(id) {
+    const c = cardDef(id);
+    if (!c) return;
+    openModal(`${c.name} · 等待相遇`, `<p>${chapterLockText(id)}。</p>${cardUnlockOffer(c)}<button class="btn secondary" data-route="chronicle">继续剧情 · 免费解锁 ${I('arrow')}</button>`);
+}
+
+function unlockCardWithNotes(id) {
+    const result = purchaseCardUnlock(id);
+    if (!result.ok) {
+        renderGlobal();
+        toast(result.reason);
+        return;
+    }
+    goCard(id);
+    toast(`${cardDef(id).name}已加入卡册 · 消耗 ${ECONOMY_RULES.cardUnlock} 音符 · 羁绊分 +${result.gain}`, true);
 }
 
 function showDialogueCard(id) {
@@ -98,17 +115,18 @@ function feedCard() {
         return;
     }
     const used = state.cards.daily.gifts[c.id] || 0;
-    if (isEncoreGift(g) || isComfortGift(g)) {
+    if (isEncoreGift(g) || isComfortGift(g) || isQiqiTransformationGift(g)) {
         if (used >= BOND_RULES.giftsPerDay) { toast('今天已收到了五份心意，明天再来吧。'); return; }
         if (state.coins < g[3]) { toast(`${g[1]}需要 ${g[3]} 音符，当前音符不足。`); return; }
         if (!storageOK) { toast('存档暂不可保存，请先恢复存档后再送礼。'); return; }
         const before = cardBond(c.id), snapshot = JSON.parse(JSON.stringify(state));
-        if (!(isComfortGift(g) ? purchaseComfortGift(c.id, g[0]) : purchaseHeartfeltEncore(c.id))) return;
+        const purchased = isComfortGift(g) ? purchaseComfortGift(c.id, g[0]) : isQiqiTransformationGift(g) ? purchaseQiqiTransformationGift(c.id, g[0]) : purchaseHeartfeltEncore(c.id);
+        if (!purchased) return;
         if (!save()) {
             state = snapshot; renderGlobal();
             toast(`${g[1]}未保存，已撤回本次扣款和羁绊，请先恢复存档。`); return;
         }
-        CardUI.response = isComfortGift(g) ? (c.id === 'feihong' ? '“有宝石在，好像真的能松一口气了。”' : '“谢谢飞鸿……让我再靠一会儿吧。”') : '“这一场安可，我想和你一起听。”';
+        CardUI.response = isComfortGift(g) ? (c.id === 'feihong' ? '“有宝石在，好像真的能松一口气了。”' : '“谢谢飞鸿……让我再靠一会儿吧。”') : isQiqiTransformationGift(g) ? '“这身新造型，就在舞台上和你分享吧。”' : '“这一场安可，我想和你一起听。”';
         renderGlobal(); playCardGiftEffect(c, g, before);
         toast(`${g[1]}已送达 · 羁绊分 +${cardBond(c.id) - before} · 今日投喂 ${used + 1}/${BOND_RULES.giftsPerDay}`, true);
         return;
@@ -301,8 +319,8 @@ function prepareCardSkill(id) {
         toast('主动技能已取消准备。');
     }
     else {
-        state.cards.prepared = { id, amount: c.active, token: Date.now() };
-        toast(`${c.activeName}已准备 · 下场达标演奏参与全队加成，合计最多 +2 ♪`, true);
+        state.cards.prepared = { id, amount: id === 'bingbing' ? 0 : c.active, token: Date.now() };
+        toast(id === 'bingbing' ? '爆金币已准备 · 下场完整演奏有 35% 概率得分翻倍' : `${c.activeName}已准备 · 下场达标演奏参与全队加成，合计最多 +2 ♪`, true);
     }
     save();
     renderGlobal();

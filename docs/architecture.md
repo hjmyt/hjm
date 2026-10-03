@@ -21,6 +21,7 @@
 | `js/chronicle/performance.js` | 正传五段演出、暂停、判定和结局结算 |
 | `js/chronicle/encounters.js` | 已读剧情、相遇识别、旧剧情解锁补齐与手记 |
 | `js/chronicle/bar.js` | 山丘酒单、停业、请客等剧情流程 |
+| `js/chronicle/seven.js` | 正传第七章的分页阅读、分支、结局、冰冰相遇与独立存档 |
 | `js/chronicle/views.js` | 正传页面、周常面板、结局图鉴和规则说明 |
 | `js/cards/` | 卡册模型、卡牌存档、解锁、页面、培养操作、招募和演奏结算 |
 | `js/cards/skills/` | 各组角色的独立技能与成长行为 |
@@ -83,17 +84,17 @@ JS 中的图片和音频路径仍相对于页面根目录。CSS 的 `url()` 相�
 
 音符余额、全部角色与团宠羁绊、全局乐团等级和全局乐队等级在运行时仍使用直接数值；角色羁绊只有一个全局对象，`state.affinity`、`chronicle.bonds` 与六章运行态的 `aff` 只是对同一对象的兼容引用，不维护章节羁绊副本。羊村线的 `chronicle.personal.routes.yangcun.aff` 是明确例外：它表示当前重读周目的剧情好感，只参与十二月分流，不是羁绊兼容引用。等级增长只通过 `progression.js` 的白名单里程碑结算，剧情选择、每章首次验收／正式演出、训练节点，以及节奏舞台首次取得某一评级分别去重。乐队成员固定为大鹅、小塔、大羊、宝石、雪子、飞鸿；阿喆、笛杰归乐团。
 
-写入浏览器和导出备份时由 `js/core/state.js` 分别转为带随机数、字段绑定与完整性标记的轻量对称加密 `wallet`、`bondVault`、`levelVault`，并删除所有章节快照中的明文羁绊和等级字段；持久化羁绊只有一份 `bondVault`。`bondVault` 使用显式版本迁移：v1 可补齐后来加入的小杰、REK 与阿齐，v2 只可补齐后来加入的阿齐，当前 v3 要求角色表完整；迁移只初始化新增角色为 0，不影响原有角色羁绊。`levelVault` 同时校验等级和已领取里程碑，不能只删除领取记录后重复升级。新版浏览器存档使用独立键且只接受三组完整加密数据；旧键只用于首次读取历史本地存档，成功保存新版后会删除本项目旧键。每次成功保存前保留上一份可读浏览器备份；当前存档校验失败时优先恢复备份，同时单独保留故障原文。若没有可读备份则暂停所有自动保存，绝不以新档覆盖故障存档。外部文件导入同样必须包含三组有效加密数据。固定前端密钥只用于阻止直接编辑 JSON，不构成服务端级防作弊或真实资产保障。
+写入浏览器和导出备份时由 `js/core/state.js` 分别转为带随机数、字段绑定与完整性标记的轻量对称加密 `wallet`、`bondVault`、`levelVault`，并删除所有章节快照中的明文羁绊和等级字段；持久化羁绊只有一份 `bondVault`。`bondVault` 使用显式版本迁移：v1 可补齐后来加入的小杰、REK 与阿齐，v2 只可补齐后来加入的阿齐，v3 可补齐后来加入的冰冰，当前 v4 要求角色表完整；迁移只初始化新增角色为 0，不影响原有角色羁绊。`levelVault` 同时校验等级和已领取里程碑，不能只删除领取记录后重复升级。新版浏览器存档使用独立键且只接受三组完整加密数据；旧键只用于首次读取历史本地存档，成功保存新版后会删除本项目旧键。每次成功保存前保留上一份可读浏览器备份；当前存档校验失败时优先恢复备份，同时单独保留故障原文。若没有可读备份则暂停所有自动保存，绝不以新档覆盖故障存档。外部文件导入同样必须包含三组有效加密数据。固定前端密钥只用于阻止直接编辑 JSON，不构成服务端级防作弊或真实资产保障。
 
 - `js/chronicle/ear.js`：视听练耳的简谱填空、音画同步与输入；题库在 `js/data/chronicle-training.js`，三轮结算和旧训练记录继续由 `training.js` 管理。
 
 ## 第七章 · 个人线
 
-`js/data/personal-routes.js` 为独立剧情目录，由 `scripts/build-personal-routes.py` 从 `docs/story-sources/personal/` 的原稿与正式改编说明生成；HTML 原稿只作为文本解析，不运行其中的原型脚本。羊村原稿中的五月至十一月聊天池也由构建脚本提取为 `YANGCUN_CHAT`：每月正文结束后进入四次聊天机会，同时结算本周目好感和角色唯一的全局羁绊。好感随羊村线重开清零并可重新培养；全局羁绊使用永久键，同一聊天跨周目只结算一次。十一月聊天后按宝石＋飞鸿本周目好感合计值或最高角色本周目好感分流；两人好感合计达到 100 时永久解锁独立 CP 线，先保存羊村十二月分支，再弹窗让玩家选择留在羊村线或立即跳转，交互与融合线解锁一致。第二章乐队组选择会永久解锁第七章羊村线，但不会截断第二章。`js/chronicle/personal.js` 通过显式工厂接入正传控制器，样式在 `styles/chronicle-personal.css`。
+`js/data/personal-routes.js` 为独立剧情目录，由 `scripts/build-personal-routes.py` 从 `docs/story-sources/personal/` 的原稿与正式改编说明生成；HTML 原稿只作为文本解析，不运行其中的原型脚本。羊村原稿中的五月至十一月聊天池也由构建脚本提取为 `YANGCUN_CHAT`：每月正文结束后进入四次聊天机会，同时结算本周目好感和角色唯一的全局羁绊。好感随羊村线重开清零并可重新培养；全局羁绊使用永久键，同一聊天跨周目只结算一次。十一月聊天后按宝石＋飞鸿本周目好感合计值或最高角色本周目好感分流；两人好感合计达到 100 时永久解锁独立 CP 线，先保存羊村十二月分支，再弹窗让玩家选择留在羊村线或立即跳转，交互与融合线解锁一致。第二章乐队组选择会永久解锁个人故事中的羊村线，但不会截断第二章。`js/chronicle/personal.js` 通过显式工厂接入正传控制器，样式在 `styles/chronicle-personal.css`。
 
-六章的 `run`、`slots` 与原章节编号保持兼容。个人线保存在 `chronicle.personal`：当前角色与阅读状态、每角色独立的剧情节点、选择标记、已读场景、结局、相处记录，以及剧情来源的自然解锁记录 `storyUnlocks`。角色羁绊仍由全局 core 提供；阿喆、十元入口要求完成第六章且对应角色羁绊严格大于 35，宝石×飞鸿 CP 线还可由融合线关键聊天直接解锁并跳转。第七章奖励共用 `economy.claimed['chapter:7']`，不同个人线或结局不重复发放。
+前六章的 `run`、`slots` 与原章节编号保持兼容。正传第七章单独保存在 `chronicle.chapterSeven`，完成第六章后开放；其 `chapter:7` 奖励与个人故事分离。个人线保存在 `chronicle.personal`：当前角色与阅读状态、每角色独立的剧情节点、选择标记、已读场景、结局、相处记录，以及剧情来源的自然解锁记录 `storyUnlocks`。个人故事位于章节列表末尾且不计作第七章，选择按钮始终可点击，新档即可查看各路线与解锁条件；打开选择弹窗不改变剧情进度或解锁路线。角色羁绊仍由全局 core 提供；阿喆、十元入口要求对应角色羁绊严格大于 35；所有路线也可支付 350 音符永久解锁，实际进入和付费均不要求第六章进度，宝石×飞鸿 CP 线还可由融合线关键聊天直接解锁并跳转。个人故事奖励使用 `economy.claimed['personal:first-ending']`，不同路线或结局不重复发放。
 
-个人线插图按每个阅读节点单独绑定，回忆 ID 为 `cp7_<节点>`；只按实际已读记录收藏和补齐。8 合 1 原图在 `assets/chronicle/personal/source/`，提示词、清单与坐标在 `docs/imagegen/personal/`，运行 `python3 scripts/crop-personal-art.py` 重建全部裁图。
+个人线插图按每个阅读节点单独绑定，保留兼容回忆 ID `cp7_<节点>`；只按实际已读记录收藏和补齐。8 合 1 原图在 `assets/chronicle/personal/source/`，提示词、清单与坐标在 `docs/imagegen/personal/`，运行 `python3 scripts/crop-personal-art.py` 重建全部裁图。正传第七章数据由 `scripts/build-chapter-seven.cjs` 从归档 HTML 生成到 `js/data/chapter-seven.js`；194 个分页回忆、25 张八合一提示词与裁切计划位于 `docs/imagegen/chapter-seven/`。
 
 ## 原曲节奏试玩
 
@@ -125,7 +126,7 @@ JS 中的图片和音频路径仍相对于页面根目录。CSS 的 `url()` 相�
 
 高清图使用新人物立绘，资源索引和提示词见 `docs/imagegen/personal/cp-he-cinematic.json` / `.md`。独立预览 `previews/cp-he-cinematic.html` 复用视觉模块，不读取或修改游戏存档。
 
-读档同时保留由特殊剧情提前解锁的 CP／羊村线激活状态；常规个人线仍需第六章前置。否则原有通用的“第六章未完成则退出个人线”判断会使早期解锁线路在刷新时意外返回正传。
+读档保留个人线、CP／羊村线的激活状态与独立进度，不按第六章完成情况退出路线；展示与实际操作继续校验各路线的羁绊、剧情或永久付费解锁条件。
 
 手机端拥抱演出按可见视口高度适配：中间剧情区支持纵向触摸滚动，画面最多占视口高度 34%，底部配乐与操作区独立保留空间；显示滑动提示，正文末尾留出阅读余量。窗口尺寸变化时同步 visualViewport 高度，关闭时移除监听。
 
@@ -150,3 +151,5 @@ JS 中的图片和音频路径仍相对于页面根目录。CSS 的 `url()` 相�
 双向安慰礼物：`data/gift-effects.js` 的 `COMFORT_GIFTS` 按收礼角色配置名称、赠礼者及色系，`cards/model.js` 仅向对应角色追加，`core/bonds.js` 的 `purchaseComfortGift` 校验角色与礼物匹配后共用付费羁绊结算。`ui/gift-encore.js` 将媒体、海报与仪式标题参数化，安慰礼物与心动安可共用媒体播放、声音、回退、释放和送达逻辑。两段绿色背景 MP4 通过 `scripts/build-comfort-alpha.py` 派生 VP9 alpha + Opus WebM；保留黑衣黑发，不使用 screen 混合。`previews/gift-effects.html?effect=baoshi_comfort`／`?effect=feihong_comfort` 提供无扣款预览。
 
 `ui/gift-media.js` 位于两个视频演出控制器之前：按 Apple WebKit／iOS／iPad 桌面模式选择 HEVC Alpha，其余选择 VP9 Alpha；在 revealing 前抽查解码后透明角像素，发现不透明则回退海报。file:// 无法读回像素时保留按平台原生格式播放。选中礼物通过 `GiftEffects.preload` 只准备一个视频，实际播放 acquire 复用该元素，切换礼物、后台及 60 秒闲置清理预载。避免为预载而先下载整段 Blob，也不一次预载所有礼物。发布必须包含对应 MOV/WebM/MP4、`gift-media.js` 及更新后的 index.html；重新生成用 `scripts/build-gift-delivery.py`，保持旧母版不覆盖。
+
+冰冰的卡牌与四处个人线插图见 `docs/imagegen/bingbing-2026-10/README.md`。图片安全裁切通过 `scripts/crop-bingbing-art.py` 重建；冰冰与其他正式角色共用剧情免费相遇和 50 音符解锁入口，音符解锁为对应角色增加 3 全局羁绊。节奏舞台的爆金币只在单场结算执行一次得分加倍，基础成绩与音符判定保持原始分数。

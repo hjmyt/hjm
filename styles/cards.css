@@ -623,6 +623,7 @@ body {
 .collection-grid {
   display:grid;
   grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:stretch;
   gap:22px
 }
 .collect-card {
@@ -642,6 +643,7 @@ body {
   box-shadow:0 0 0 2px #83a7f4
 }
 .collect-card .collect-art-button {
+  flex-shrink:0;
   border:0;
   width:100%;
   padding:0;
@@ -740,6 +742,18 @@ body {
 }
 .collect-info {
   padding:17px 19px
+}
+.card-unlock-offer {
+  margin:12px 0
+}
+.card-unlock-offer .btn {
+  width:100%;
+  white-space:normal
+}
+.card-unlock-offer p {
+  margin:8px 0;
+  font-size:11px;
+  line-height:1.7
 }
 .collect-meta {
   display:flex;
@@ -3589,3 +3603,13 @@ body {
   color:var(--primary, #5184ff);
   font-variant-numeric:tabular-nums;
 }
+
+/* Bingbing's score-only celebration stays inside the result panel. */
+.game-overlay:has(.bingbing-burst){justify-content:flex-start;overflow-y:auto;overscroll-behavior:contain}
+.game-overlay:has(.bingbing-burst)>*{flex-shrink:0}
+.bingbing-burst{position:relative;isolation:isolate;margin:12px auto;padding:14px;border:1px solid #d7ad55;border-radius:16px;background:linear-gradient(120deg,#fff8e1,#fff0cd);color:#79501c;overflow:hidden}
+.bingbing-burst strong,.bingbing-burst span{display:block;position:relative;z-index:1}
+.bingbing-burst span{font-size:12px;margin-top:5px}
+.bingbing-burst i{position:absolute;left:calc(var(--burst-i)*8%);bottom:0;width:26px;height:26px;line-height:24px;border-radius:50%;border:1px solid #d99820;background:linear-gradient(135deg,#fff0a1,#e9ab36);color:#9b6111;font-size:19px;font-style:normal;pointer-events:none;animation:bingbing-gold 1.6s ease-out both;animation-delay:calc(var(--burst-i)*.04s)}
+@keyframes bingbing-gold{from{opacity:0;transform:translateY(20px) rotate(0)}30%{opacity:1}to{opacity:0;transform:translateY(-100px) rotate(140deg)}}
+@media(prefers-reduced-motion:reduce){.bingbing-burst i{display:none}}

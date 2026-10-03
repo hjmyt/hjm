@@ -3,6 +3,7 @@
 使用 Node.js 与 Playwright Chromium。可通过 `PLAYWRIGHT_CHROMIUM_EXECUTABLE` 指定本机 Chromium 可执行文件。
 
 - `node tests/chapter-unlocks.cjs`：对话解锁、招募、旧存档、移动端。
+- `node tests/card-note-unlocks.cjs`：全员 50 音符解锁与对应角色羁绊 +3、余额边界、重复点击、占位卡、剧情免费解锁、羁绊上限、旧档与刷新、保存失败回滚、桌面和手机入口、已解锁与锁定卡混排的紧凑布局。
 - `node tests/chapter-three.cjs`：第二章补充、第三章分支与结局、章节切换、导入、柒柒技能。
 - `node tests/chapter-four.cjs`：第四章主线与回应、人物按剧情解锁、周常、剧场门槛与结局、继承/重开、原版存档兼容、隐藏预告与移动端。
 - `node tests/source-cards.cjs`：新卡稀有度、小周成长、羁绊隐藏、柠檬安全成长与主动结局、小塔救场、持久化、图片相对路径与加载。
@@ -55,7 +56,7 @@
 
 - `node tests/chronicle-training-scroll.cjs`：320/390/1440 屏宽下真实触控与点击，播放、重听、试听、填音、提交、下一轮及播放结束保留当前滚动位置，播放中手动滚动不被覆盖，切页正常回顶。Chromium 手机模拟不能替代 iPhone 真机验证。
 
-- `node tests/personal-routes.cjs`：第六章前置与 35/36 边界、个人线／CP 线／羊村线全部图节点与跳转、第二章羊村自动解锁和继续正传、10000 音符永久解锁、羊村原稿 57 节点／141 屏独立插图、五月至十一月每月四次聊天及本周目好感 50／100 分流边界、好感重开清零与重新培养、好感达标后的 CP 永久解锁／留在本线／立即跳转弹窗、全局羁绊跨周目永久去重与存档清洗、REK 遭遇解锁、完整结局流程、奖励去重、实际刷新和四种屏宽。
+- `node tests/personal-routes.cjs`：新档故事线选择入口常开、进入／付费／读档不受第六章限制与 35/36 边界、个人线／CP 线／羊村线全部图节点与跳转、第二章羊村自动解锁和继续正传、350 音符永久解锁、羊村原稿 57 节点／141 屏独立插图、五月至十一月每月四次聊天及本周目好感 50／100 分流边界、好感重开清零与重新培养、好感达标后的 CP 永久解锁／留在本线／立即跳转弹窗、全局羁绊跨周目永久去重与存档清洗、REK 遭遇解锁、完整结局流程、奖励去重、实际刷新和四种屏宽。
 
 - `node tests/rhythm-recording.cjs`：OP 全曲鼓点谱的 file/HTTP 原曲播放、两档原速谱面、媒体时钟同步、倒计时不绘制下落音符/首拍完整入场/入场暂停恢复、真实键盘/触控、暂停/切页/后台/静音、完整演奏结算去重、最佳成绩刷新、加载失败重试与合成曲回退。
 
@@ -91,7 +92,10 @@
 - `python3 tests/encore-alpha.py`：抽查心动安可透明视频多个时刻的外围暗紫残底、亮部不透明度、边缘颜色校正、黑键不透明度和原色，防止去底误删乐器暗部；需要 ffmpeg/libvpx-vp9。
 
 - `node tests/comfort-gifts.cjs`：双向安慰专属礼物、100 音符／+30、赠送方向、全局同步、每日限制、满羁绊与旧值、保存失败回滚／刷新、双向完整场景 MP4、原声音轨、游戏角色送达、桌面／手机、跳过／后台／重播／失败回退／减少动态效果。
+- `node tests/qiqi-transformation.cjs`：柒柒专属变装礼物、50 音符／+10、每日额度、满羁绊、保存失败回滚、压缩场景视频与原声、桌面／手机送达和羁绊回执。
 - `python3 tests/comfort-alpha.py`：两段安慰视频在四个时刻的背景透明、黑发黑衣黑手套原色与不透明度、皮肤保留和音轨；需要 numpy、scipy、ffmpeg/libvpx-vp9。
 
 - `node tests/gift-media.cjs`：iPhone／内嵌浏览器／iPad 桌面模式／Mac Safari 的 HEVC 选择、其他平台 VP9 选择、预载元素复用与释放、不透明解码阻止展示、file 兼容、播放包体积及 MOV/MP4 faststart。
 - `swift -module-cache-path /tmp/hjm-swift-cache tests/gift-apple-alpha.swift http://127.0.0.1:8766/previews/gift-effects.html`：macOS 真正 WKWebView 的三段 HEVC Alpha 播放与像素透明／主体不透明校验；先在仓库根目录启动本地静态服务器。运行时短暂打开测试窗口并自动关闭，需非沙箱执行。此测试不等同于 iPhone 真机验证。
+
+- `node tests/bingbing.cjs`：冰冰剧情免费／音符解锁、上一版 v3 真实存档迁移、技能 35% 边界与重复结算保护、四张剧情图与相册映射，以及桌面／手机六种人物卡入口。

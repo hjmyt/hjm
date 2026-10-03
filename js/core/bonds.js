@@ -1,6 +1,6 @@
 'use strict';
 
-const BOND_RULES = Object.freeze({ hidden: 35, notesPerBond: 5, giftCost: 5, giftGain: 1, giftGains: Object.freeze([1, 5, 10]), maxSingleGain: 10, giftsPerDay: 5, dailyCompanion: 1, dailyPerformance: 10, fullGiftCost: 350, encoreGiftCost: 200, encoreGiftGain: 50, comfortGiftCost: 100, comfortGiftGain: 30 });
+const BOND_RULES = Object.freeze({ hidden: 35, notesPerBond: 5, giftCost: 5, giftGain: 1, giftGains: Object.freeze([1, 5, 10]), maxSingleGain: 10, giftsPerDay: 5, dailyCompanion: 1, dailyPerformance: 10, fullGiftCost: 350, encoreGiftCost: 200, encoreGiftGain: 50, comfortGiftCost: 100, comfortGiftGain: 30, qiqiGiftCost: 50, qiqiGiftGain: 10 });
 function freshBondProgress() { return { version: 1, claimed: {}, daily: { date: dateKey(), counts: {} } }; }
 function cleanBondProgress(raw) {
     const d = freshBondProgress();
@@ -59,6 +59,10 @@ function purchaseHeartfeltEncore(id) {
 function purchaseComfortGift(id, giftId) {
     if (COMFORT_GIFTS[id]?.id !== giftId) return false;
     return purchasePaidBondGift(id, BOND_RULES.comfortGiftCost, BOND_RULES.comfortGiftGain);
+}
+function purchaseQiqiTransformationGift(id, giftId) {
+    if (id !== 'qiqi' || giftId !== QIQI_TRANSFORMATION_GIFT.id) return false;
+    return purchasePaidBondGift(id, BOND_RULES.qiqiGiftCost, BOND_RULES.qiqiGiftGain);
 }
 function purchasePaidBondGift(id, cost, gain) {
     ensureCardDay();

@@ -7,11 +7,11 @@ function costLabel(n) { const p = recruitCost(n); return [p.tickets ? `${p.ticke
 function showRecruit() {
     const pool = availableCardPool();
     if (!pool.length) {
-        openModal('人物卡池尚未开放', `<p>开启乐团剧情，读到第一位伙伴出场时，就会自动获得人物卡并开启邀请。</p><p>邀请券会保留，未解锁人物不会进入卡池。</p><button class="btn primary" data-route="chronicle">开始乐团剧情 ${I('arrow')}</button>`);
+        openModal('人物卡池尚未开放', `<p>开启乐团剧情，读到第一位伙伴出场时，就会自动获得人物卡并开启邀请。</p><p>也可前往卡册，花 ${ECONOMY_RULES.cardUnlock} 音符解锁指定正式角色，并获得 ${ECONOMY_RULES.cardUnlockBond} 羁绊。邀请券会保留，未解锁人物不会进入卡池。</p><button class="btn secondary" data-route="cards">前往卡册解锁</button><button class="btn primary" data-route="chronicle">开始乐团剧情 ${I('arrow')}</button>`);
         return;
     }
     const groups = ['UR', 'SSR', 'SR', 'R'].filter(r => pool.some(c => cardRarity(c) === r)), weights = { UR: 1, SSR: 9, SR: 70, R: 20 }, sum = groups.reduce((n, r) => n + weights[r], 0);
-    openModal('邀请已相遇的伙伴', `<p>当前卡池：${pool.map(c => c.name).join("、")}。随着剧情提到更多伙伴，卡池会自动扩充。</p><div class="summon-resources">${I('ticket')}邀请券 <b>${state.cards.tickets}</b>${I('music')}音符 <b>${state.coins}</b></div><div class="summon-actions">${[1, 5].map(n => `<button class="btn primary" data-card-draw="${n}" ${state.coins < recruitCost(n).coins ? 'disabled' : ''}>邀请 ${n} 次<small>${costLabel(n)}</small></button>`).join('')}</div><details class="summon-rules"><summary>当前卡池规则与概率</summary><p>${groups.map(r => r + ' ' + (weights[r] / sum * 100).toFixed(1) + '%').join(' / ')}。仅在已解锁稀有度之间按权重分配，各稀有度内均匀抽取。池内有 SSR 时，第 10 次未出 SSR 的邀请必得 SSR；池内没有 SSR 时保留保底计数。</p><p>剧情首次提到人物时，直接获得对应人物卡，无需抽取。重复邀请增加 40 经验；1 张券邀请一次，不足时每次 12 音符。没有真实付费。</p></details>`);
+    openModal('邀请已相遇的伙伴', `<p>当前卡池：${pool.map(c => c.name).join("、")}。通过剧情相遇或音符解锁更多伙伴，卡池会自动扩充。</p><div class="summon-resources">${I('ticket')}邀请券 <b>${state.cards.tickets}</b>${I('music')}音符 <b>${state.coins}</b></div><div class="summon-actions">${[1, 5].map(n => `<button class="btn primary" data-card-draw="${n}" ${state.coins < recruitCost(n).coins ? 'disabled' : ''}>邀请 ${n} 次<small>${costLabel(n)}</small></button>`).join('')}</div><details class="summon-rules"><summary>当前卡池规则与概率</summary><p>${groups.map(r => r + ' ' + (weights[r] / sum * 100).toFixed(1) + '%').join(' / ')}。仅在已解锁稀有度之间按权重分配，各稀有度内均匀抽取。池内有 SSR 时，第 10 次未出 SSR 的邀请必得 SSR；池内没有 SSR 时保留保底计数。</p><p>剧情首次提到人物时，直接获得对应人物卡，无需抽取。重复邀请增加 40 经验；1 张券邀请一次，不足时每次 12 音符。没有真实付费。</p></details>`);
 }
 
 function randomCardFrom(list) { return list[Math.floor(Math.random() * list.length)]; }

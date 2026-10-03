@@ -502,14 +502,6 @@
   transform:translateY(-50%);
   text-shadow:0 1px 8px #152033
 }
-.chapter-locked .collect-info {
-  padding:22px
-}
-.chapter-locked p {
-  font-size:12px;
-  color:#8c8493;
-  margin:12px 0 18px
-}
 .hidden-skill summary {
   cursor:pointer;
   display:flex;

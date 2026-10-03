@@ -1,0 +1,704 @@
+{
+  "patches": [
+    {
+      "name": "patch-01",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-01-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-01.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-01.txt",
+      "pages": [
+        {
+          "id": "q_start_p7",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_start_p7.webp"
+        },
+        {
+          "id": "q_start_p8",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_start_p8.webp"
+        },
+        {
+          "id": "q_start_p9",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_start_p9.webp"
+        },
+        {
+          "id": "q01_p1",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q01_p1.webp"
+        },
+        {
+          "id": "q01_p2",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q01_p2.webp"
+        },
+        {
+          "id": "q03_p1",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q03_p1.webp"
+        },
+        {
+          "id": "q03_p2",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q03_p2.webp"
+        },
+        {
+          "id": "q03_p4",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q03_p4.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-02",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-02-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-02.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-02.txt",
+      "pages": [
+        {
+          "id": "q03_p6",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q03_p6.webp"
+        },
+        {
+          "id": "q_cat_p1",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_cat_p1.webp"
+        },
+        {
+          "id": "q_cat_p2",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_cat_p2.webp"
+        },
+        {
+          "id": "q_cat_p4",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_cat_p4.webp"
+        },
+        {
+          "id": "q_cat_p5",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_cat_p5.webp"
+        },
+        {
+          "id": "q_event2_p1",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_event2_p1.webp"
+        },
+        {
+          "id": "q_event2_p3",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_event2_p3.webp"
+        },
+        {
+          "id": "q_event2_p5",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_event2_p5.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-03",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-03-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-03.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-03.txt",
+      "pages": [
+        {
+          "id": "q_event2_p7",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_event2_p7.webp"
+        },
+        {
+          "id": "q_event2b_p1",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_event2b_p1.webp"
+        },
+        {
+          "id": "q_event2b_p2",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_event2b_p2.webp"
+        },
+        {
+          "id": "q_event2b_p4",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_event2b_p4.webp"
+        },
+        {
+          "id": "q_event2b_p5",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_event2b_p5.webp"
+        },
+        {
+          "id": "q_event2b_p10",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_event2b_p10.webp"
+        },
+        {
+          "id": "q_event2b_p12",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_event2b_p12.webp"
+        },
+        {
+          "id": "q_event2b_p17",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_event2b_p17.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-04",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-04-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-04.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-04.txt",
+      "pages": [
+        {
+          "id": "q_event2b_p20",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_event2b_p20.webp"
+        },
+        {
+          "id": "q_shanqiu_fight_p1",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_shanqiu_fight_p1.webp"
+        },
+        {
+          "id": "q_shanqiu_fight_p3",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_shanqiu_fight_p3.webp"
+        },
+        {
+          "id": "q_shanqiu_fight_p4",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_shanqiu_fight_p4.webp"
+        },
+        {
+          "id": "q_shanqiu_fight_p7",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_shanqiu_fight_p7.webp"
+        },
+        {
+          "id": "q_shanqiu_fight_p8",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_shanqiu_fight_p8.webp"
+        },
+        {
+          "id": "q_shanqiu_fight_p9",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_shanqiu_fight_p9.webp"
+        },
+        {
+          "id": "q_washroom_p1",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_washroom_p1.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-05",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-05-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-05.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-05.txt",
+      "pages": [
+        {
+          "id": "q_washroom_p2",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_washroom_p2.webp"
+        },
+        {
+          "id": "q_washroom_p4",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_washroom_p4.webp"
+        },
+        {
+          "id": "q_washroom_p5",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_washroom_p5.webp"
+        },
+        {
+          "id": "q_washroom_p6",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_washroom_p6.webp"
+        },
+        {
+          "id": "q_washroom_p7",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_washroom_p7.webp"
+        },
+        {
+          "id": "q_washroom_later_p1",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_washroom_later_p1.webp"
+        },
+        {
+          "id": "q_dinner_tense_p1",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_dinner_tense_p1.webp"
+        },
+        {
+          "id": "q_dinner_tense_p2",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_dinner_tense_p2.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-06",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-06-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-06.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-06.txt",
+      "pages": [
+        {
+          "id": "q_dinner_tense_p5",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_dinner_tense_p5.webp"
+        },
+        {
+          "id": "q_dinner_p3",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_dinner_p3.webp"
+        },
+        {
+          "id": "q_dinner_p4",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_dinner_p4.webp"
+        },
+        {
+          "id": "q_dinner_p7",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_dinner_p7.webp"
+        },
+        {
+          "id": "q_dinner_p8",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_dinner_p8.webp"
+        },
+        {
+          "id": "q_dinner_p12",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_dinner_p12.webp"
+        },
+        {
+          "id": "q_check_p2",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_check_p2.webp"
+        },
+        {
+          "id": "q_after_loan_p1",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_after_loan_p1.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-07",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-07-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-07.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-07.txt",
+      "pages": [
+        {
+          "id": "q_after_loan_p2",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_after_loan_p2.webp"
+        },
+        {
+          "id": "q_after_loan_p4",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_after_loan_p4.webp"
+        },
+        {
+          "id": "q_after_loan_p5",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_after_loan_p5.webp"
+        },
+        {
+          "id": "q_after_loan_p7",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_after_loan_p7.webp"
+        },
+        {
+          "id": "q_badloan_p1",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_badloan_p1.webp"
+        },
+        {
+          "id": "q_expose_p1",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_expose_p1.webp"
+        },
+        {
+          "id": "q_expose_p17",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_expose_p17.webp"
+        },
+        {
+          "id": "q_expose_p18",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_expose_p18.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-08",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-08-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-08.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-08.txt",
+      "pages": [
+        {
+          "id": "q_expose2_p10",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_expose2_p10.webp"
+        },
+        {
+          "id": "q_expose2_p11",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_expose2_p11.webp"
+        },
+        {
+          "id": "q_expose2_p13",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_expose2_p13.webp"
+        },
+        {
+          "id": "q_event3_alone_p1",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_event3_alone_p1.webp"
+        },
+        {
+          "id": "q_event3_alone_p2",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_event3_alone_p2.webp"
+        },
+        {
+          "id": "q_event3_p5",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_event3_p5.webp"
+        },
+        {
+          "id": "q_event3_p10",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_event3_p10.webp"
+        },
+        {
+          "id": "q_event3_p11",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_event3_p11.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-09",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-09-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-09.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-09.txt",
+      "pages": [
+        {
+          "id": "q_event3_p12",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_event3_p12.webp"
+        },
+        {
+          "id": "q_confront1_p1",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_confront1_p1.webp"
+        },
+        {
+          "id": "q_confront1_p3",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_confront1_p3.webp"
+        },
+        {
+          "id": "q_confront1_p4",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_confront1_p4.webp"
+        },
+        {
+          "id": "q_confront1_p5",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_confront1_p5.webp"
+        },
+        {
+          "id": "q_confront1_p7",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_confront1_p7.webp"
+        },
+        {
+          "id": "q_confront1_p9",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_confront1_p9.webp"
+        },
+        {
+          "id": "q_confront2_p3",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_confront2_p3.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-10",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-10-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-10.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-10.txt",
+      "pages": [
+        {
+          "id": "q_confront2_p4",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_confront2_p4.webp"
+        },
+        {
+          "id": "q_confront2_p19",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_confront2_p19.webp"
+        },
+        {
+          "id": "q_confront2_p20",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_confront2_p20.webp"
+        },
+        {
+          "id": "q_judge_p3",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_judge_p3.webp"
+        },
+        {
+          "id": "q_struggle_p1",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p1.webp"
+        },
+        {
+          "id": "q_struggle_p3",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p3.webp"
+        },
+        {
+          "id": "q_struggle_p5",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p5.webp"
+        },
+        {
+          "id": "q_struggle_p6",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p6.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-11",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-11-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-11.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-11.txt",
+      "pages": [
+        {
+          "id": "q_struggle_p7",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p7.webp"
+        },
+        {
+          "id": "q_struggle_p8",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p8.webp"
+        },
+        {
+          "id": "q_struggle_p9",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p9.webp"
+        },
+        {
+          "id": "q_struggle_p10",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p10.webp"
+        },
+        {
+          "id": "q_struggle_p11",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p11.webp"
+        },
+        {
+          "id": "q_struggle_p12",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p12.webp"
+        },
+        {
+          "id": "q_struggle_p15",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p15.webp"
+        },
+        {
+          "id": "q_struggle_p19",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p19.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-12",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-12-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-12.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-12.txt",
+      "pages": [
+        {
+          "id": "q_struggle_p20",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p20.webp"
+        },
+        {
+          "id": "q_struggle_p21",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p21.webp"
+        },
+        {
+          "id": "q_struggle_p22",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_struggle_p22.webp"
+        },
+        {
+          "id": "q_redemption_p2",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_redemption_p2.webp"
+        },
+        {
+          "id": "q_redemption_p3",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_redemption_p3.webp"
+        },
+        {
+          "id": "q_redemption_p4",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_redemption_p4.webp"
+        },
+        {
+          "id": "q_redemption_p6",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_redemption_p6.webp"
+        },
+        {
+          "id": "q_redemption_p7",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_redemption_p7.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-13",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-13-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-13.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-13.txt",
+      "pages": [
+        {
+          "id": "q_redemption2_p5",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_redemption2_p5.webp"
+        },
+        {
+          "id": "q_redemption2_p6",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_redemption2_p6.webp"
+        },
+        {
+          "id": "q_event4_p12",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_event4_p12.webp"
+        },
+        {
+          "id": "q_event4_p13",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_event4_p13.webp"
+        },
+        {
+          "id": "q_event4_p14",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_event4_p14.webp"
+        },
+        {
+          "id": "q_event4_p15",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_event4_p15.webp"
+        },
+        {
+          "id": "q_event4_p16",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_event4_p16.webp"
+        },
+        {
+          "id": "q_ending_p1",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_ending_p1.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-14",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-14-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-14.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-14.txt",
+      "pages": [
+        {
+          "id": "q_ending_p3",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_ending_p3.webp"
+        },
+        {
+          "id": "q_ending_p4",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_ending_p4.webp"
+        },
+        {
+          "id": "q_start_read7",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_start_read7.webp"
+        },
+        {
+          "id": "q_cat_read1",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_cat_read1.webp"
+        },
+        {
+          "id": "q_cat_read6",
+          "panel": 5,
+          "output": "assets/chronicle/chapter-seven/q_cat_read6.webp"
+        },
+        {
+          "id": "q_event2_read1",
+          "panel": 6,
+          "output": "assets/chronicle/chapter-seven/q_event2_read1.webp"
+        },
+        {
+          "id": "q_washroom_later_read1",
+          "panel": 7,
+          "output": "assets/chronicle/chapter-seven/q_washroom_later_read1.webp"
+        },
+        {
+          "id": "q_check_read3",
+          "panel": 8,
+          "output": "assets/chronicle/chapter-seven/q_check_read3.webp"
+        }
+      ]
+    },
+    {
+      "name": "patch-15",
+      "reference": "docs/imagegen/chapter-seven/qiqi-red/reference/patch-15-before.png",
+      "source": "docs/imagegen/chapter-seven/qiqi-red/source/patch-15.png",
+      "prompt": "docs/imagegen/chapter-seven/qiqi-red/patch-15.txt",
+      "pages": [
+        {
+          "id": "q_expose2_read10",
+          "panel": 1,
+          "output": "assets/chronicle/chapter-seven/q_expose2_read10.webp"
+        },
+        {
+          "id": "q_event3_alone_read1",
+          "panel": 2,
+          "output": "assets/chronicle/chapter-seven/q_event3_alone_read1.webp"
+        },
+        {
+          "id": "q_event3_alone_read3",
+          "panel": 3,
+          "output": "assets/chronicle/chapter-seven/q_event3_alone_read3.webp"
+        },
+        {
+          "id": "q_event3_read14",
+          "panel": 4,
+          "output": "assets/chronicle/chapter-seven/q_event3_read14.webp"
+        }
+      ]
+    }
+  ]
+}

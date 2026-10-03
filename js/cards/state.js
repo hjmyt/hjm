@@ -34,7 +34,7 @@ function cleanCards(input) {
     d.blackUntil = Math.min(num(input.blackUntil, Date.now() + 180000), Date.now() + 180000);
     const prep = input.prepared, c = CARD_DEFS.find(c => c.id === prep?.id);
     if (c && c.active && d.team.includes(c.id))
-        d.prepared = { id: c.id, amount: c.id === 'xiaozhou' ? c.active * (d.sourceCast.xiaozhou.praised ? 2 : d.sourceCast.xiaozhou.compared ? .5 : 1) : c.id === 'dayang' ? c.active + (d.sourceCast.dayang.online ? 4 : 0) : c.active, token: num(prep.token, 9999999999999) };
+        d.prepared = { id: c.id, amount: c.id === 'bingbing' ? 0 : c.id === 'xiaozhou' ? c.active * (d.sourceCast.xiaozhou.praised ? 2 : d.sourceCast.xiaozhou.compared ? .5 : 1) : c.id === 'dayang' ? c.active + (d.sourceCast.dayang.online ? 4 : 0) : c.active, token: num(prep.token, 9999999999999) };
     if (input.daily?.date === dateKey()) {
         d.daily.eye = input.daily.eye === true;
         for (const c of CARD_DEFS) {

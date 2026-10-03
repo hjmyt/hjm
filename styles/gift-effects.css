@@ -199,6 +199,17 @@
 .gift-comfort-feihong .gift-ritual-box { filter:hue-rotate(100deg) drop-shadow(0 12px 25px #3d265e80); }
 .gift-comfort-feihong .gift-ritual-title { color:#e8ddff; }
 
+/* Qiqi transformation: ruby-and-gold gift box and warm full-scene stage. */
+.gift-qiqi-transformation .gift-ritual-box { filter:hue-rotate(322deg) saturate(1.12) drop-shadow(0 14px 26px #64251c70); }
+.gift-qiqi-transformation .gift-ritual-veil { background:radial-gradient(ellipse at 50% 46%,#fff0df28,#c9514230 58%,#6c283222 100%); }
+.gift-qiqi-transformation .gift-ritual-title { top:9%; color:#fff0d5; text-shadow:0 2px 18px #73352b90; }
+.gift-qiqi-transformation .gift-ritual-title span { color:#ffe1c1; }
+.gift-qiqi-transformation .gift-ritual-target { border-color:#ffe1b5; box-shadow:0 0 30px #ffc073,inset 0 0 28px #ff9d7d66; }
+.gift-qiqi-transformation .gift-receipt { background:linear-gradient(125deg,#633128ee,#321e27f2); border-color:#ffdfa180; }
+.gift-qiqi-transformation .gift-receipt strong { color:#fff0dc; }
+.gift-qiqi-transformation .gift-receipt small,.gift-qiqi-transformation .gift-receipt-kicker { color:#f8d6bc; }
+.gift-qiqi-transformation .gift-encore-status { color:#fff2e6; }
+
 /* Full-scene gift films dissolve into the live game instead of reading as a player. */
 .is-gift-full-background .gift-dragon-aperture { top:47%; width:min(96vw,52.3vh); height:min(170.7vw,93vh); }
 .is-gift-full-background .gift-encore-stage .gift-encore-video,

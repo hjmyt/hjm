@@ -123,7 +123,7 @@ const server = http.createServer((req, res) => {
             assert.deepEqual(cleaned.first, cleaned.again, 'Cleaning remains idempotent');
             const completed = structuredClone(fixture.personal);
             Object.assign(completed.routes.baoshi_feihong, {scene:'complete', ending:'cp_HE', endings:['cp_HE'], previewed:'cp_HE'});
-            await page.evaluate(old => { state = freshState(); state.chronicle.personal = old; state.economy.claimed['chapter:7'] = true; save(); }, completed);
+            await page.evaluate(old => { state = freshState(); state.chronicle.personal = old; state.economy.claimed['personal:first-ending'] = true; save(); }, completed);
             await page.reload(); await page.locator('[data-music-enter-muted]').click(); await page.evaluate(() => route('chronicle'));
             assert.equal(await page.locator('.story-cinematic').count(), 1, 'Previously viewed old ending also opens on entry');
             await page.locator('[data-cinematic-close]').click();

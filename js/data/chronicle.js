@@ -618,7 +618,8 @@ const ChronicleData = {
     "narrator": {
       "name": "旁白",
       "tag": "乐团正传 · 故事叙述",
-      "icon": "album"
+      "icon": "album",
+      "asset": "avatarNarrator"
     },
     "jerry": {
       "name": "Jerry",
