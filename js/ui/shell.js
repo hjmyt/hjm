@@ -1,0 +1,153 @@
+'use strict';
+
+const APP_DEEP_LINKS = Object.freeze({
+    home: { view: 'home' }, rehearsal: { view: 'home' },
+    cards: { view: 'cards' }, care: { view: 'care' }, 'cat-home': { view: 'care' },
+    story: { view: 'story' }, stories: { view: 'story' }, chronicle: { view: 'chronicle' }, fusion: { view: 'fusion' },
+    rhythm: { view: 'rhythm' }, 'rhythm-stage': { view: 'rhythm' },
+    pitch: { view: 'pitch' }, 'pitch-audition': { view: 'pitch' },
+    'pitch-tone': { view: 'pitch', challenge: 'pitch', target: 'pitchChallengeNav' },
+    'pitch-rhythm': { view: 'pitch', challenge: 'rhythm', target: 'pitchChallengeNav' },
+    album: { view: 'album' }
+});
+const APP_ROUTE_ANCHORS = Object.freeze({ home: 'home', cards: 'cards', card: 'cards', care: 'care', story: 'story', chronicle: 'chronicle', fusion: 'fusion', rhythm: 'rhythm', pitch: 'pitch', album: 'album' });
+let appAnchorTimer = 0, appAnchorFocusTarget = '', appAnchorFocusUntil = 0, applyingAppAnchor = false;
+
+function appAnchorName() {
+    try { return decodeURIComponent(location.hash.replace(/^#/, '')).trim().toLowerCase(); }
+    catch { return ''; }
+}
+function setAppAnchor(anchor, { replace = false } = {}) {
+    if (!/^[a-z0-9-]+$/.test(anchor)) return;
+    const hash = `#${anchor}`;
+    if (location.hash === hash) return;
+    history[replace ? 'replaceState' : 'pushState'](null, '', `${location.pathname}${location.search}${hash}`);
+}
+function scheduleAppAnchorFocus(targetId) {
+    clearTimeout(appAnchorTimer);
+    appAnchorTimer = setTimeout(() => {
+        const target = $(targetId);
+        if (!target || target.closest('.view')?.hidden) return;
+        const top = window.scrollY + target.getBoundingClientRect().top - 12;
+        window.scrollTo({ top: Math.max(0, top), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+    }, 180);
+}
+function focusAppAnchor(targetId) {
+    appAnchorFocusTarget = targetId;
+    appAnchorFocusUntil = Date.now() + 1200;
+    scheduleAppAnchorFocus(targetId);
+}
+function refreshAppAnchorFocus() {
+    if (appAnchorFocusTarget && Date.now() <= appAnchorFocusUntil)
+        scheduleAppAnchorFocus(appAnchorFocusTarget);
+}
+function applyAppAnchor() {
+    const anchor = appAnchorName();
+    if (!anchor) { route('home', { syncAnchor: false }); return true; }
+    const link = APP_DEEP_LINKS[anchor];
+    if (!link) return false;
+    if(link.view === 'chronicle') Chronicle.openLibrary();
+    route(link.view, { syncAnchor: false, pitchChallenge: link.challenge });
+    if (link.target) focusAppAnchor(link.target);
+    return true;
+}
+function bindAppAnchors() {
+    const apply = () => {
+        if (applyingAppAnchor) return;
+        applyingAppAnchor = true;
+        applyAppAnchor();
+        setTimeout(() => { applyingAppAnchor = false; }, 0);
+    };
+    addEventListener('popstate', apply);
+    addEventListener('hashchange', apply);
+    document.querySelectorAll('[data-music-enter],[data-music-enter-muted]').forEach(button => button.addEventListener('click', () => {
+        const link = APP_DEEP_LINKS[appAnchorName()];
+        if (link?.target) focusAppAnchor(link.target);
+    }));
+}
+
+function renderGlobal() {
+    syncUnifiedBonds(state);
+    syncStoryCards();
+    ensureDaily();
+    $('coinStat').textContent = state.coins;
+    $('orchestraLevelStat').textContent = globalOrchestraLevel();
+    $('bandLevelStat').textContent = globalBandLevel();
+    $('homeAlbumText').textContent = `已珍藏 ${MEMORIES.filter(m => memoryVisible(m.id)).length} 张乐团回忆`;
+    $('greeting').textContent = currentView === 'cards' ? '让每一段故事，带来一位新的合奏伙伴。' : currentView === 'rhythm' ? '选一首喜欢的曲子，让猫爪落在你的节拍上。' : currentView === 'pitch' ? '空格在等你听出那个走调的音。' : `欢迎回来，${state.nickname}。你的专属座位，一直为你留着。`;
+    $('soundBtn').innerHTML = I(state.sound ? 'sound' : 'mute');
+    $('soundBtn').setAttribute('aria-label', state.sound ? '声音已开启，点击关闭' : '声音已关闭，点击开启');
+    $('soundBtn').title = state.sound ? '声音已开启' : '声音已关闭';
+    renderAudioStatus();
+    $('giftLink').innerHTML = '兑换礼物' + I('arrow');
+    renderPet();
+    renderDaily();
+    if (currentView === 'story' && !storySession)
+        renderCharacters();
+    if (currentView === 'album')
+        renderAlbum();
+    renderCardGlobals();
+    if (currentView === 'pitch') { PitchAudition.renderTeam(); PitchAudition.syncSound(); }
+    Chronicle.refresh();
+    syncStoryMusic();
+}
+function syncStoryMusic() {
+    const r = state.chronicle.run;
+    const siteControls = $('siteMusicControls');
+    siteControls.hidden = ['chronicle', 'story', 'fusion', 'rhythm', 'pitch'].includes(currentView);
+    if (!siteControls.hidden && !siteControls.firstChild)
+        siteControls.innerHTML = window.StoryBgm?.controls() || '';
+    if (currentView === 'story' && !$('storyMusicControls').firstChild)
+        $('storyMusicControls').innerHTML = window.StoryBgm?.controls() || '';
+    const personal=state.chronicle.personal, personalRun=personal?.active?personal.routes[personal.selected]:null, chapterSeven=state.chronicle.chapterSeven;
+    const fusionChapter = currentView === 'fusion' ? state.fusion.chapter : null;
+    window.StoryBgm?.sync({ view: currentView, sound: state.sound, character: storySession?.id, chapter: r.chapter, chapterSeven: !!chapterSeven?.active, personalRoute: personal?.active?personal.selected:null, personalPage: personalRun?.page||0, scene: currentView === 'chronicle' ? (personalRun?.scene || (chapterSeven?.active ? chapterSeven.scene : r.scene)) : '', ending: currentView === 'chronicle' ? (personalRun?.ending || (chapterSeven?.active ? chapterSeven.ending : r.ending)) : null, closed: !!r.bar?.closed, fusionChapter, fusionEnded: !!(fusionChapter && state.fusion.runs[fusionChapter]?.ended) });
+}
+function renderDaily() { const labels = [['pet', '陪猫咪玩一次'], ['story', '读一段故事'], ['rhythm', '完整演奏达到 C']]; $('dailyItems').innerHTML = labels.map(([k, t]) => `<span class="task ${state.daily[k] ? 'done' : ''}"><span class="task-dot">${state.daily[k] ? I('check') : ''}</span>${t}</span>`).join(''); const all = labels.every(([k]) => state.daily[k]); $('dailyClaim').disabled = !all || state.daily.claimed; $('dailyClaim').textContent = state.daily.claimed ? '今日礼物已领取' : '10 ♪ + 1 邀请券'; }
+function markDaily(k) { ensureDaily(); state.daily[k] = true; }
+function route(name, { syncAnchor = true, replaceAnchor = false, pitchChallenge = null } = {}) {
+    GiftEffects.stop();
+    if ($('modalBackdrop').querySelector('.story-cinematic-modal')) closeModal(false);
+    if (!['home', 'cards', 'card', 'care', 'story', 'chronicle', 'fusion', 'rhythm', 'pitch', 'album'].includes(name))
+        return;
+    if (name === 'fusion' && !fusionAccessReady()) {
+        toast('请先在 Jerry 个人页点击「去山丘看看」（羁绊需超过 20）。');
+        return;
+    }
+    if (currentView === 'chronicle' && name !== 'chronicle')
+        Chronicle.suspend();
+    if (currentView === 'rhythm' && name !== 'rhythm' && ['running', 'countdown'].includes(game.status))
+        pauseGame();
+    if (currentView === 'pitch' && name !== 'pitch') PitchAudition.close();
+    Chronicle.resetPersonalPreview();
+    const previousView = currentView;
+    if (name === 'chronicle' && previousView !== 'chronicle')
+        LalaUI.recap = hiddenSkillReady('lala') && lalaState().autoRecap && !!state.chronicle.run.name && state.chronicle.run.scene !== 'start';
+    currentView = name;
+    document.body.dataset.view = name;
+    $$('.view').forEach(v => v.hidden = v.id !== `view-${name}`);
+    $$('.nav-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.route === (name === 'card' ? 'cards' : ['story','fusion'].includes(name) ? 'chronicle' : name));
+        if (b.dataset.route === (name === 'card' ? 'cards' : ['story','fusion'].includes(name) ? 'chronicle' : name))
+            b.setAttribute('aria-current', 'page');
+        else
+            b.removeAttribute('aria-current');
+    });
+    const titles = { chronicle: '从排练室到剧场，写下我们的正传。', fusion: '去山丘，听见另一种融合。', cards: '乐团卡册', card: '和你，在同一个频率相遇。', home: '今天，也来合奏一点快乐。', care: '有人等你，也有猫等你。', story: '每一次相遇，都有回响。', rhythm: '节奏舞台', pitch: '空格考验', album: '那些小瞬间，都在这里。' };
+    $('pageTitle').textContent = titles[name];
+    if (name === 'story' && !storySession)
+        renderCharacters();
+    if (name === 'album')
+        renderAlbum();
+    if (name === 'fusion')
+        renderFusion();
+    if (name === 'rhythm') {
+        updateBest();
+        requestAnimationFrame(() => { resizeCanvas(); renderGameOverlay(); ensureGameLoop(); });
+    }
+    if (name === 'pitch' && previousView !== 'pitch') PitchAudition.open(pitchChallenge || undefined);
+    else if (name === 'pitch' && pitchChallenge) PitchAudition.loadChallenge(pitchChallenge);
+    renderGlobal();
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    if (syncAnchor && APP_ROUTE_ANCHORS[name]) setAppAnchor(APP_ROUTE_ANCHORS[name], { replace: replaceAnchor });
+}

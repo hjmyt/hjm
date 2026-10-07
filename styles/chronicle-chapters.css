@@ -1,0 +1,266 @@
+/* Chapter II integration. Uses the established blue-white interface and existing virtual art. */
+.cp-chapters {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+  margin:0 0 21px
+}
+.cp-chapter-tile {
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  text-align:left;
+  padding:18px 23px;
+  border:1px solid #dce4f1;
+  border-radius:16px;
+  background:#ffffffd9;
+  min-width:0;
+  transition:background .2s,transform .2s
+}
+.cp-chapter-tile>span {
+  font-size:9px;
+  letter-spacing:2px;
+  color:#8b97aa
+}
+.cp-chapter-tile strong {
+  font:600 22px var(--serif);
+  color:#54677f;
+  letter-spacing:3px;
+  margin:8px 0 5px
+}
+.cp-chapter-tile small {
+  font-size:11px;
+  color:#8491a6
+}
+.cp-chapter-tile>.icon {
+  position:absolute;
+  right:21px;
+  top:25px;
+  color:#92a7c8
+}
+.cp-chapter-tile.active {
+  background:linear-gradient(115deg,#e8eff9,#f9fbff);
+  border-color:#90acd1;
+  box-shadow:0 5px 17px #6a83a010
+}
+.cp-chapter-tile.active strong {
+  color:#395b87
+}
+.cp-chapter-tile em {
+  font-style:normal;
+  font-size:8px;
+  letter-spacing:0;
+  padding:2px 6px;
+  background:#ecdfbd;
+  color:#867039;
+  border-radius:6px;
+  margin-left:6px
+}
+.cp-chapter-tile:hover {
+  transform:translateY(-2px)
+}
+.cp-banner.cp-banner-two {
+  background:linear-gradient(115deg,#202e42,#3a4356);
+  color:#f0e7d2;
+  border-color:#748395
+}
+.cp-banner-two .cp-banner-portrait {
+  opacity:.7;
+  object-position:center 12%;
+  mask-image:linear-gradient(90deg,transparent,#000 32%);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 32%)
+}
+.cp-banner-two .cp-overline {
+  color:#b3c3d3
+}
+.cp-banner-two h2 {
+  color:#f1dec0;
+  letter-spacing:12px
+}
+.cp-banner-two p {
+  color:#d0d7e0
+}
+.cp-banner-two .cp-stage-tag {
+  color:#cbd6e3;
+  background:#42556b77;
+  border-color:#69819655
+}
+.cp-banner-two .cp-day {
+  color:#bdd0df;
+  background:#f1f8ff14;
+  border-color:#a0b4d844
+}
+.cp-banner-two .cp-day.active {
+  color:#263b54;
+  background:#e2c88f;
+  border-color:#dfcda6
+}
+.cp-banner-two .cp-day.past {
+  background:#b6c8d63b;
+  color:#d8e8f4
+}
+.cp-eventboard {
+  margin-top:25px;
+  padding-top:22px;
+  border-top:1px solid #e2e6eb
+}
+.cp-eventhead {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:13px
+}
+.cp-eventhead strong {
+  font-size:13px;
+  font-weight:600;
+  color:#5a6e87
+}
+.cp-eventhead span {
+  font-size:10px;
+  color:#8b9aab
+}
+.cp-eventgrid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px
+}
+.cp-event {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:9px;
+  min-width:0;
+  text-align:left;
+  border:1px solid #dce4ed;
+  background:#f7f9fc;
+  border-radius:13px;
+  padding:15px 13px
+}
+.cp-event>.icon {
+  color:#708cab;
+  width:20px;
+  height:20px
+}
+.cp-event strong {
+  font-size:12px;
+  color:#536880;
+  font-weight:500
+}
+.cp-event small {
+  font-size:10px;
+  color:#8a9aac
+}
+.cp-eventboard>p {
+  font-size:10px;
+  color:#8695a6;
+  line-height:1.85;
+  margin:11px 0 0
+}
+.cp-transfer-note {
+  padding:13px 16px;
+  border-left:3px solid #b9a176;
+  background:#f3eee4;
+  color:#7d715b;
+  font-size:12px;
+  line-height:1.95;
+  border-radius:0 9px 9px 0;
+  margin-top:14px
+}
+.cp-result-factors {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:18px 0
+}
+.cp-result-factors span {
+  padding:5px 10px;
+  font-size:11px;
+  color:#6b7d91;
+  border:1px solid #dfe7ee;
+  background:#f2f5f9;
+  border-radius:8px
+}
+.cp-sidebar .cp-goal-sub {
+  line-height:1.9
+}
+.cp-choices .cp-choice {
+  width:100%
+}
+.cp-controls>div {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap
+}
+@media(max-width:720px) {
+  .cp-chapters {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;
+    margin-bottom:17px
+  }
+  .cp-chapter-tile {
+    padding:14px 13px
+  }
+  .cp-chapter-tile strong {
+    font-size:19px;
+    margin-top:9px
+  }
+  .cp-chapter-tile>span {
+    font-size:8px;
+    letter-spacing:1.1px
+  }
+  .cp-chapter-tile small {
+    font-size:9px;
+    max-width:100%;
+    line-height:1.8
+  }
+  .cp-chapter-tile>.icon {
+    right:12px;
+    top:13px;
+    width:16px;
+    height:16px
+  }
+  .cp-chapter-tile em {
+    font-size:7px;
+    margin-left:3px;
+    padding:2px 4px
+  }
+  .cp-eventgrid {
+    gap:7px
+  }
+  .cp-event {
+    padding:13px 9px;
+    gap:8px
+  }
+  .cp-event strong {
+    font-size:11px
+  }
+  .cp-event small {
+    font-size:9px
+  }
+  .cp-eventhead strong {
+    font-size:12px
+  }
+  .cp-transfer-note {
+    font-size:11px;
+    padding:11px 13px
+  }
+  .cp-banner-two h2 {
+    letter-spacing:8px
+  }
+  .cp-banner-two .cp-banner-portrait {
+    opacity:.46
+  }
+  .cp-result-factors {
+    gap:6px
+  }
+  .cp-result-factors span {
+    font-size:10px
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .cp-chapter-tile:hover {
+    transform:none
+  }
+}

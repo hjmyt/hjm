@@ -1,0 +1,12 @@
+{
+  "mode": "built-in image_gen, text-only generation",
+  "assets": [
+    {
+      "path": "assets/zhu-portrait.webp",
+      "prompt": "Use case: illustration-story. Generate a vertical 2:3 premium anime-style character illustration for a Chinese orchestra romance game. Fictional Chinese man in his late 30s, Mr Zhu, friendly music-theater composer and owner of a small live-music bar. Short slightly messy black hair, narrow glasses, quietly mischievous smile, cream shirt with rolled sleeves and dark waistcoat. Waist-up behind warm wooden bar, offering a paper drinks menu without readable text. Cocktail shaker, lemon water, handwritten music scores and kazoo on counter, blurred rehearsal music stands and small piano behind. Refined painterly anime rendering, warm amber light with muted blue shadows. Face in upper third, naturally proportioned hands, no text, no watermark, no real person's likeness."
+    },
+    {
+      "path": "assets/shanqiu-closed.webp"
+    }
+  ]
+}

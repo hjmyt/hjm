@@ -1,0 +1,9 @@
+.gift-card-redeem { border-top:1px solid #e1e7f0; margin-top:26px; padding-top:22px; }
+.gift-card-redeem h3 { margin:0 0 10px; }
+.gift-card-redeem p { line-height:1.8; margin-bottom:16px; }
+.gift-card-redeem label { display:block; font-size:13px; margin-bottom:8px; }
+.gift-card-redeem textarea { width:100%; resize:vertical; min-height:112px; font:13px/1.6 monospace; overflow-wrap:anywhere; }
+.gift-card-bottom { display:flex; gap:16px; align-items:center; justify-content:space-between; margin-top:14px; }
+.gift-card-bottom span { font-size:13px; line-height:1.7; color:#72839c; }
+.gift-card-bottom button { flex-shrink:0; }
+@media(max-width:620px) { .gift-card-bottom { align-items:stretch; flex-direction:column; gap:10px; } }

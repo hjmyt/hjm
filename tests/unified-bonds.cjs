@@ -1,0 +1,96 @@
+const {chromium}=require('playwright');
+const assert=require('node:assert/strict');
+const {pathToFileURL}=require('node:url');
+const path=require('node:path');
+(async()=>{
+ const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});
+ try{
+  const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'}),errors=[];
+  page.on('pageerror',e=>errors.push(e.message));
+  await page.goto(pathToFileURL(path.resolve(__dirname,'../index.html')).href);
+  const checks=await page.evaluate(async()=>{
+   const results=[],check=(name,ok)=>{if(!ok)throw Error(name);results.push(name);};
+   const click=async selector=>{await new Promise(r=>setTimeout(r,220));const b=document.querySelector(selector);if(!b||b.disabled)throw Error('Missing enabled button '+selector);b.click();};
+   const fresh=()=>{closeModal(false);state=freshState();state.sound=false;state.cards.encounters=CARD_DEFS.map(c=>c.id);save();};
+   const scene=(name,ch=1)=>{state.chronicle.completedChapters=[1,2,3,4,5];Object.assign(state.chronicle.run,{name:'羁绊测试',inst:'长笛',scene:name,chapter:ch,ending:null,week:1});state.chronicle.run.rev++;save();route('chronicle');};
+   fresh();
+   check('Global heart resource removed',!('hearts' in state)&&!document.querySelector('#heartStat'));
+   check('One shared record for cards and story',state.affinity===state.chronicle.bonds&&state.affinity===state.chronicle.run.aff);
+   goCard('zhu');check('Card detail omits the redundant global bond rule block',!$('view-card').innerText.includes('演奏音符加成：')&&!$('view-card').innerText.includes('正传与卡册共用；普通投喂'));
+   const ordinaryGift=g=>!isFullBondGift(g)&&!isEncoreGift(g)&&!isComfortGift(g)&&!isQiqiTransformationGift(g)&&!isKonggeNoodleGift(g)&&!isKonggeBeefBallsGift(g)&&!isTimTransformationGift(g);
+   const ordinaryGifts=CARD_DEFS.filter(c=>!c.placeholder).flatMap(c=>effectiveGifts(c).filter(ordinaryGift));
+   for(const c of CARD_DEFS.filter(c=>!c.placeholder))check(c.id+' gifts use the five-notes-per-bond rule',effectiveGifts(c).filter(ordinaryGift).every(g=>[1,5,10].includes(g[4])&&g[3]===g[4]*5));
+   check('All three ordinary gift tiers exist',BOND_RULES.giftGains.every(gain=>ordinaryGifts.some(g=>g[4]===gain)));
+   for(const id of ['jerry','yuerou','laodu','xuezi','xiaojie'])check(id+' receives low, medium and premium gifts',[1,5,10].every(gain=>effectiveGifts(cardDef(id)).some(g=>!isFullBondGift(g)&&g[4]===gain)));
+   goCard('lala');CardUI.gift=effectiveGifts(cardDef('lala'))[0][0];state.coins=4;feedCard();
+   check('Insufficient coins change neither points nor quota',state.coins===4&&cardBond('lala')===0&&!state.cards.daily.gifts.lala);
+   state.coins=30;feedCard();feedCard();feedCard();feedCard();feedCard();feedCard();
+   check('Exactly five paid gifts are allowed daily',state.coins===5&&cardBond('lala')===5&&state.cards.daily.gifts.lala===5);
+   check('Card gift immediately updates story value',state.chronicle.run.aff.lala===5);route('chronicle');check('Story sidebar renders updated score',[...document.querySelectorAll('.cp-relation')].some(e=>e.textContent.includes('垃垃')&&e.querySelector('b')?.textContent==='5'));goCard('lala');CardUI.gift=effectiveGifts(cardDef('lala'))[0][0];
+   state=cleanState(JSON.parse(JSON.stringify(state)));feedCard();check('Gift limit survives save cleaning',state.coins===5&&cardBond('lala')===5);
+   state.cards.daily.date='2000-01-01';feedCard();check('New date resets gift quota',state.coins===0&&cardBond('lala')===6&&state.cards.daily.gifts.lala===1);
+   expansion().dijie.emo=true;check('Emo keeps the selected gift tier without multiplying it',effectiveGifts(cardDef('dijie')).filter(g=>!isFullBondGift(g)&&!isEncoreGift(g)&&!isComfortGift(g)).every(g=>[1,5,10].includes(g[4])&&g[3]===g[4]*5));
+   fresh();scene('chat_select');await click('[data-cp-action="chat"][data-cp-person="lala"]');check('Chat grants one',cardBond('lala')===1);
+   scene('chat_select');await click('[data-cp-action="chat"][data-cp-person="lala"]');check('Repeated chat does not farm',cardBond('lala')===1);
+   state.cards.team=['lala','tim','baoshi'];game.notes=[{}];game.score=1000;game.perfect=1;game.good=game.nice=game.miss=0;
+   const perform=()=>{game.cardRun=captureCardRun();awardCardPerformance(1);return game.cardRun.bondGains;};const performances=Array.from({length:11},perform);
+   check('Ensemble quota is independent from chat',performances[0].join(',')==='lala,tim,baoshi'&&cardBond('lala')===11&&cardBond('tim')===11&&cardBond('baoshi')===10&&state.bondProgress.daily.counts['companion:lala']===1);
+   check('Each teammate has a ten-performance daily cap',performances[9].length===3&&performances[10].length===0&&state.bondProgress.daily.counts['performance:lala']===10&&state.bondProgress.daily.counts['performance:tim']===10&&state.bondProgress.daily.counts['performance:baoshi']===10);
+   fanWave();fanWave();check('Group skill keeps its separate daily companion cap',cardBond('lala')===11&&cardBond('tim')===11&&cardBond('baoshi')===11);
+   state=cleanState(JSON.parse(JSON.stringify(state)));rewardPerformanceBond('tim');rewardCompanionBond('tim');check('Both daily caps survive reload cleaning',cardBond('tim')===11);
+   state.bondProgress.daily.date='2000-01-01';rewardPerformanceBond('tim');rewardCompanionBond('tim');check('Next day resets performance and companion independently',cardBond('tim')===13&&state.bondProgress.daily.counts['performance:tim']===1&&state.bondProgress.daily.counts['companion:tim']===1);
+   fresh();scene('s_dream');check('Key option hides bond reward',!document.querySelector('[data-cp-choice="0"]').textContent.includes('羁绊')&&!document.querySelector('[data-cp-choice="0"] small'));await click('[data-cp-choice="0"]');
+   check('Explicit support grants five to chosen role',cardBond('shiyuan')===5&&state.chronicle.run.aff.shiyuan===5);
+   scene('s_dream');check('Replayed option hides claim status',!document.querySelector('[data-cp-choice="0"]').textContent.includes('已领取'));await click('[data-cp-choice="0"]');check('Replay does not double key reward',cardBond('shiyuan')===5);
+   await click('[data-cp-action="restart"]');await click('[data-cp-action="confirm-restart"]');scene('s_dream');await click('[data-cp-choice="0"]');check('Actual chapter restart preserves claim',cardBond('shiyuan')===5);
+   scene('c2_tim',2);await click('[data-cp-choice="1"]');check('TIM support grants five and Tang minor reward',cardBond('tim')===5&&cardBond('tang')===1&&state.chronicle.run.aff.tangshao===1);
+   state.affinity.shiyuan=8;scene('c2_kong',2);await click('[data-cp-choice="0"]');
+   check('Asking Kongge to stay rewards both roles once',cardBond('shiyuan')===13&&cardBond('kongge')===5&&state.chronicle.run.flags.konggeStay===1);
+   check('Both stay rewards synchronize with Chronicle',state.chronicle.run.aff.shiyuan===13&&state.chronicle.run.aff.kongge===5);
+   state=cleanState(JSON.parse(JSON.stringify(state)));scene('c2_kong',2);await click('[data-cp-choice="0"]');
+   check('Replaying stay choice after save cleaning grants neither reward again',cardBond('shiyuan')===13&&cardBond('kongge')===5);
+   await click('[data-cp-action="restart"]');await click('[data-cp-action="confirm-restart"]');scene('c2_kong',2);await click('[data-cp-choice="0"]');
+   check('Chapter restart preserves both stay reward claims',cardBond('shiyuan')===13&&cardBond('kongge')===5);
+   scene('c3_band_zhou',3);await click('[data-cp-choice="0"]');check('Supporting Xiaozhou rewards Xiaozhou',cardBond('xiaozhou')===5&&cardBond('lala')===0);
+   scene('c6_zhu',6);await click('[data-cp-choice="0"]');scene('c6_zhu',6);await click('[data-cp-choice="1"]');check('Alternate choices at same node cannot farm same role',cardBond('zhu')===5);
+   fresh();scene('s_door');await click('[data-cp-choice="0"]');scene('s_door');await click('[data-cp-choice="0"]');check('Ordinary plot reward is once only',cardBond('lala')===1);
+   storySession={id:'lala',index:6,choice:0};nextStory();const afterStory=cardBond('lala'),coins=state.coins;storySession={id:'lala',index:6,choice:1};nextStory();
+   check('Role story gives two once',afterStory===3&&cardBond('lala')===afterStory&&state.coins===coins);
+   fresh();for(const c of CARD_DEFS)state.affinity[c.id]=34;state.cards.zhuNight=true;qiqiState().sisters=true;trio().kongge.career=true;expansion().azhe.tickets=1;expansion().dijie.perfectConcerts=100;
+   for(const c of CARD_DEFS.filter(c=>!c.placeholder))check(c.id+' hidden locked at 34',!hiddenSkillReady(c.id));
+   switchTangForm();triggerBlack();showTimArchive();startAzheApplause();startChiefTrial();runRehearsalScript();showLalaJournal(1,true);
+   check('Hidden execution entries reject at 34',state.cards.form==='normal'&&!state.cards.blackUntil&&$('modalBackdrop').hidden&&!expansion().daily.script&&!dijieGolden());
+   showYeAnchor();check('Hidden relationship condition cannot bypass gate',$('modalBackdrop').hidden);
+   goCard('zhu');check('Previously revealed Zhu skill still gated at 34',!$('view-card').innerHTML.includes('shaker')&&!cardGifts(cardDef('zhu')).some(g=>g[0]==='night'));
+   state.affinity.tim=30;state.coins=25;goCard('tim');CardUI.gift=effectiveGifts(cardDef('tim'))[0][0];feedCard();check('Five-point gift crosses to 35 with exact cost and live unlock',cardBond('tim')===35&&state.coins===0&&hiddenSkillReady('tim')&&state.chronicle.run.aff.tim===35);
+   for(const c of CARD_DEFS)state.affinity[c.id]=35;
+   for(const id of ['tang','feihong','tim','lala','shiyuan','baoshi','zhu','azhe','qiqi'])check(id+' hidden eligible at 35',hiddenSkillReady(id));
+   check('Additional achievement plus 35 activates legend',hiddenSkillReady('dijie','legend'));
+   qiqiState().sisters=false;trio().kongge.career=false;check('Additional events remain mandatory',!hiddenSkillReady('qiqi')&&!hiddenSkillReady('kongge','clue'));
+   showTimArchive();check('TIM archive uses unified 35 gate',!$('modalBackdrop').hidden&&$('modalTitle').textContent.includes('TIM'));closeModal(false);
+   check('TIM has no independent performance meter',!('performance' in trio().tim));
+   fresh();state.affinity.lemon=99;state.affinity.shiyuan=98;grantBond('lemon',1);grantBond('shiyuan',2);save();scene('menu');
+   check('Normal growth never ends a relationship',!sourceCast().lemon.ended&&!state.chronicle.run.ending&&cardBond('lemon')===100);
+   scene('c4_band_lemon',4);await click('[data-cp-choice="2"]');check('Explicit trip decision triggers ending',state.chronicle.run.ending==='c4_lemon'&&sourceCast().lemon.ended);
+   fresh();state.coins=50;state.cat.hunger=0;for(let i=0;i<6;i++){lastPetAction=-1000;care('feed');}
+   check('Cat feeding follows five-note cost and five-use quota',state.coins===25&&state.cat.aff===5&&state.bondProgress.daily.counts['catGift:cat']===5);
+   lastPetAction=-1000;care('pet');lastPetAction=-1000;care('play');check('Cat companionship cannot be farmed',state.cat.aff===6);
+   const old=freshState();delete old.bondProgress;old.hearts=999;old.affinity={...old.affinity,tang:12,tim:20,lala:15};
+   old.chronicle.bonds={tangshao:18,tim:7,lala:9,zhu:140};old.chronicle.run.aff={tangshao:13,tim:8};old.chronicle.run.journal=[{chapter:1,week:1,scene:'s_dream',who:'shiyuan',text:'旧对白',choice:'「我帮你。」'}];old.chronicle.run.name='旧存档';old.chronicle.run.scene='s_first';old.cards.trio.tim.performance=31;
+   state=cleanState(old);check('Migration uses maximum, not sum',cardBond('tang')===18&&cardBond('tim')===31&&cardBond('lala')===15&&cardBond('zhu')===140);
+   check('Legacy heart total never becomes bond',!('hearts' in state)&&cardBond('shiyuan')===0);
+   check('Old played choice seeded into reward ledger',state.bondProgress.claimed['plot:1:s_dream:shiyuan']);
+   const before=JSON.stringify(state.affinity);state=cleanState(JSON.parse(JSON.stringify(state)));check('Migration is idempotent',JSON.stringify(state.affinity)===before);
+   grantBond('zhu',1);check('Historic score above cap is not reduced',cardBond('zhu')===140);
+   save();return results;
+  });
+  await page.reload();assert(await page.evaluate(()=>cardBond('tim')===31&&cardBond('tang')===18&&state.chronicle.run.aff.tangshao===18),'Actual reload retains unified aliases');
+  await page.evaluate(()=>{state.cards.encounters=CARD_DEFS.map(c=>c.id);state.sound=false;save();});
+  for(const width of [1440,390]){
+   await page.setViewportSize({width,height:width===390?844:1000});
+   for(const id of await page.evaluate(()=>CARD_DEFS.filter(c=>!c.placeholder).map(c=>c.id)))for(const tab of ['detail','bond']){await page.evaluate(([id,tab])=>{closeModal(false);goCard(id);CardUI.tab=tab;renderCardPage();},[id,tab]);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${id} ${tab} overflow at ${width}`);}
+  }
+  await page.evaluate(()=>{state.affinity.lala=34;goCard('lala');document.querySelectorAll('.toast').forEach(e=>e.remove());});await page.screenshot({path:'/tmp/hjm-unified-bonds-mobile.png',fullPage:true});
+  assert.deepEqual(errors,[]);console.log(`PASS: ${checks.length} unified bond checks, reload, all cards at desktop/mobile sizes, no runtime errors.`);
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

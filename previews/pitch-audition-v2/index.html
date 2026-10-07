@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#2C2C2C">
+  <title>空格的音准考验 · 霓虹舞台原型 V2</title>
+  <style>
+    :root[data-theme="light"] {
+      --brand-color:#00754A; --brand-color-hover:#1A9162; --brand-color-active:#006A44;
+      --brand-color-focus:#CFF0E4; --brand-color-disabled:#B8E9D6; --brand-color-light:#E6F7F1;
+      --information-color:#0052D9; --information-color-hover:#366EF4; --information-color-active:#003CAB; --information-color-light:#F2F3FF;
+      --warning-color:#E37318; --warning-color-hover:#FA9550; --warning-color-active:#BE5A00; --warning-color-light:#FFF1E9;
+      --error-color:#D54941; --error-color-hover:#F6685D; --error-color-active:#AD352F; --error-color-light:#FFF0ED;
+      --success-color:#059465; --success-color-hover:#56C08D; --success-color-active:#008858; --success-color-light:#E3F9E9;
+      --bg-page:#F3F3F3; --bg-container:#FFFFFF; --bg-container-hover:#F3F3F3; --bg-secondary:#F3F3F3; --bg-component:#E8E8E8; --bg-component-disabled:#EEEEEE;
+      --text-primary:rgba(0,0,0,.90); --text-secondary:rgba(0,0,0,.60); --text-placeholder:rgba(0,0,0,.40); --text-disabled:rgba(0,0,0,.26); --text-brand:#00754A; --text-link:#006A44;
+      --border-l1:#E8E8E8; --border-l2:#C6C6C6;
+      --shadow-1:0 1px 10px rgba(0,0,0,.05),0 4px 5px rgba(0,0,0,.08),0 2px 4px rgba(0,0,0,.12);
+      --shadow-2:0 8px 10px rgba(0,0,0,.05),0 3px 14px rgba(0,0,0,.06),0 5px 5px rgba(0,0,0,.10);
+      --shadow-3:0 16px 24px rgba(0,0,0,.05),0 6px 30px rgba(0,0,0,.04),0 8px 10px rgba(0,0,0,.08);
+    }
+    :root[data-theme="dark"] {
+      --brand-color:#1BA075; --brand-color-hover:#3BB58B; --brand-color-active:#177352;
+      --brand-color-focus:#0C2B1F; --brand-color-disabled:#4B4B4B; --brand-color-light:#0C2B1F;
+      --information-color:#4582E6; --information-color-hover:#2667D4; --information-color-active:#699EF5; --information-color-light:#1B2F51;
+      --warning-color:#CF6E2D; --warning-color-hover:#A75D2B; --warning-color-active:#DC7633; --warning-color-light:#4F2A1D;
+      --error-color:#C64751; --error-color-hover:#A03F46; --error-color-active:#DE6670; --error-color-light:#472324;
+      --success-color:#059465; --success-color-hover:#0D7A55; --success-color-active:#43AF8A; --success-color-light:#193A2A;
+      --bg-page:#2C2C2C; --bg-container:#242424; --bg-container-hover:#2C2C2C; --bg-secondary:#2C2C2C; --bg-component:#393939; --bg-component-disabled:#2C2C2C;
+      --text-primary:rgba(255,255,255,.90); --text-secondary:rgba(255,255,255,.55); --text-placeholder:rgba(255,255,255,.35); --text-disabled:rgba(255,255,255,.22); --text-brand:#1BA075; --text-link:#3BB58B;
+      --border-l1:#393939; --border-l2:#5E5E5E;
+      --shadow-1:0 4px 6px rgba(0,0,0,.06),0 1px 10px rgba(0,0,0,.08),0 2px 4px rgba(0,0,0,.12);
+      --shadow-2:0 8px 10px rgba(0,0,0,.12),0 3px 14px rgba(0,0,0,.10),0 5px 5px rgba(0,0,0,.16);
+      --shadow-3:0 16px 24px rgba(0,0,0,.14),0 6px 30px rgba(0,0,0,.12),0 8px 10px rgba(0,0,0,.20);
+    }
+    :root {
+      --radius-small:2px; --radius-default:4px; --radius-medium:6px; --radius-large:8px; --radius-extralarge:12px; --radius-round:999px;
+      --space-1:2px; --space-2:4px; --space-3:6px; --space-4:8px; --space-5:12px; --space-6:16px; --space-7:20px; --space-8:24px;
+      --space-9:28px; --space-10:32px; --space-11:36px; --space-12:40px; --space-13:48px; --space-14:56px; --space-15:64px; --space-16:72px;
+      color-scheme:light;
+      font-family:Poppins,"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif;
+    }
+    :root[data-theme="dark"] { color-scheme:dark; }
+    * { box-sizing:border-box; }
+    body { margin:0; min-width:320px; min-height:100vh; color:var(--text-primary); background:radial-gradient(circle at 8% 8%,color-mix(in srgb,var(--information-color) 18%,transparent),transparent 30%),radial-gradient(circle at 92% 20%,color-mix(in srgb,var(--warning-color) 12%,transparent),transparent 26%),radial-gradient(circle at 70% 100%,color-mix(in srgb,var(--brand-color) 14%,transparent),transparent 34%),var(--bg-page); background-attachment:fixed; }
+    button,a { -webkit-tap-highlight-color:transparent; }
+    button { font:inherit; }
+    button:focus-visible,a:focus-visible,[role="slider"]:focus-visible { outline:none; box-shadow:0 0 0 3px var(--brand-color-focus); }
+    button:disabled { cursor:not-allowed; opacity:.48; }
+    .shell { width:min(1180px,calc(100% - var(--space-12))); margin:0 auto; padding:var(--space-8) 0 var(--space-13); }
+    .topbar { display:flex; align-items:center; justify-content:space-between; gap:var(--space-6); margin-bottom:var(--space-8); padding:var(--space-4) var(--space-5); border:1px solid color-mix(in srgb,var(--border-l1) 70%,transparent); border-radius:var(--radius-extralarge); background:color-mix(in srgb,var(--bg-container) 76%,transparent); box-shadow:var(--shadow-1); backdrop-filter:blur(18px); }
+    .brand { display:flex; align-items:center; gap:var(--space-5); min-width:0; }
+    .brand-mark { width:var(--space-12); height:var(--space-12); display:grid; place-items:center; flex:0 0 auto; border-radius:var(--radius-extralarge); color:var(--brand-color); background:var(--brand-color-light); font-size:24px; box-shadow:0 0 24px color-mix(in srgb,var(--brand-color) 42%,transparent); }
+    .brand strong { display:block; font-size:16px; }
+    .brand small { display:block; color:var(--text-secondary); font-size:12px; margin-top:var(--space-1); }
+    .top-actions { display:flex; align-items:center; gap:var(--space-4); }
+    .icon-btn,.ds-btn { border:1px solid var(--border-l2); border-radius:var(--radius-large); background:var(--bg-container); color:var(--text-primary); cursor:pointer; transition:background .2s cubic-bezier(.4,0,.2,1),transform .2s cubic-bezier(.4,0,.2,1),border-color .2s cubic-bezier(.4,0,.2,1); }
+    .icon-btn { width:var(--space-12); height:var(--space-12); display:grid; place-items:center; font-size:18px; }
+    .icon-btn:hover,.ds-btn:hover:not(:disabled) { background:var(--bg-container-hover); transform:translateY(-1px); }
+    .ds-btn { min-height:44px; padding:var(--space-5) var(--space-7); font-weight:600; }
+    .ds-btn--primary { border-color:var(--brand-color); color:#fff; background:var(--brand-color); }
+    .ds-btn--primary:hover:not(:disabled) { background:var(--brand-color-hover); }
+    .ds-btn--secondary { color:var(--brand-color); border-color:var(--brand-color); background:var(--bg-container); }
+    .ds-btn--ghost { border-color:var(--border-l1); background:transparent; color:var(--text-secondary); }
+    .ds-btn--block { width:100%; }
+    .badge-new,.badge-changed { display:inline-flex; align-items:center; padding:1px 7px; margin-left:6px; font-size:11px; font-weight:600; line-height:1.6; border-radius:var(--radius-round); vertical-align:middle; }
+    .badge-new { color:var(--warning-color-active); background:var(--warning-color-light); }
+    .badge-changed { color:var(--information-color-active); background:var(--information-color-light); }
+    .section-new { border-left:3px solid var(--warning-color); }
+    .section-changed { border-left:3px solid var(--information-color); }
+    .hero { position:relative; isolation:isolate; overflow:hidden; display:grid; grid-template-columns:minmax(0,1fr) auto; gap:var(--space-10); align-items:center; padding:var(--space-10); border:1px solid color-mix(in srgb,var(--information-color) 36%,var(--border-l1)); border-radius:var(--radius-extralarge); background:linear-gradient(125deg,color-mix(in srgb,var(--bg-container) 92%,var(--information-color)),color-mix(in srgb,var(--bg-container) 88%,var(--brand-color))); box-shadow:var(--shadow-2),0 0 48px color-mix(in srgb,var(--information-color) 18%,transparent); margin-bottom:var(--space-8); }
+    .hero::before { content:""; position:absolute; z-index:-1; inset:-60% -20%; background:conic-gradient(from 180deg,transparent,color-mix(in srgb,var(--information-color) 18%,transparent),transparent,color-mix(in srgb,var(--brand-color) 18%,transparent),transparent); animation:aurora-spin 14s linear infinite; }
+    .hero::after { content:"♪"; position:absolute; right:var(--space-10); top:calc(-1 * var(--space-12)); color:var(--brand-color); opacity:.08; font:700 180px/1 Roboto,system-ui; transform:rotate(12deg); pointer-events:none; }
+    .eyebrow { color:var(--brand-color); font-size:12px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    h1 { margin:var(--space-4) 0 var(--space-4); font-size:clamp(28px,4vw,44px); line-height:1.2; }
+    .hero p { max-width:680px; margin:0; color:var(--text-secondary); line-height:1.75; font-size:14px; }
+    .hero-score { position:relative; z-index:1; min-width:150px; padding:var(--space-6); border:1px solid color-mix(in srgb,var(--brand-color) 45%,var(--border-l1)); border-radius:var(--radius-extralarge); background:color-mix(in srgb,var(--bg-container) 80%,transparent); text-align:center; box-shadow:var(--shadow-2),inset 0 0 24px color-mix(in srgb,var(--brand-color) 10%,transparent),0 0 32px color-mix(in srgb,var(--brand-color) 24%,transparent); backdrop-filter:blur(12px); }
+    .hero-score small { display:block; color:var(--text-secondary); font-size:12px; }
+    .hero-score strong { display:block; margin:var(--space-2) 0; color:var(--brand-color); font:700 36px/1.2 Roboto,system-ui; }
+    .hero-score span { font-size:12px; color:var(--text-placeholder); }
+    .game-layout { display:grid; grid-template-columns:260px minmax(0,1fr); gap:var(--space-8); align-items:start; }
+    .side-card,.game-card { border:1px solid color-mix(in srgb,var(--information-color) 26%,var(--border-l1)); border-radius:var(--radius-extralarge); background:color-mix(in srgb,var(--bg-container) 94%,transparent); box-shadow:var(--shadow-2),0 0 40px color-mix(in srgb,var(--information-color) 10%,transparent); backdrop-filter:blur(14px); }
+    .side-card { padding:var(--space-7); position:sticky; top:var(--space-6); }
+    .judge { display:grid; grid-template-columns:56px 1fr; gap:var(--space-5); align-items:center; padding-bottom:var(--space-6); border-bottom:1px solid var(--border-l1); }
+    .judge img { width:56px; height:56px; border-radius:var(--radius-round); object-fit:cover; background:var(--bg-secondary); }
+    .judge strong { display:block; font-size:15px; }
+    .judge small { color:var(--text-secondary); font-size:12px; }
+    .rule-list { display:grid; gap:var(--space-5); margin:var(--space-7) 0; padding:0; list-style:none; counter-reset:rule; }
+    .rule-list li { display:grid; grid-template-columns:28px 1fr; gap:var(--space-4); align-items:start; color:var(--text-secondary); font-size:13px; line-height:1.55; }
+    .rule-list li::before { counter-increment:rule; content:counter(rule); width:28px; height:28px; display:grid; place-items:center; border-radius:var(--radius-round); color:var(--brand-color); background:var(--brand-color-light); font:600 12px/1 Roboto,system-ui; }
+    .side-note { padding:var(--space-5); border-radius:var(--radius-large); background:var(--information-color-light); color:var(--information-color); font-size:12px; line-height:1.6; }
+    .doc-link { display:flex; justify-content:center; margin-top:var(--space-6); color:var(--text-link); font-size:13px; font-weight:600; text-decoration:none; }
+    .game-card { position:relative; min-height:640px; overflow:hidden; }
+    .game-card::before { content:""; position:absolute; z-index:4; left:8%; right:8%; top:0; height:2px; background:linear-gradient(90deg,transparent,var(--information-color),var(--brand-color),var(--warning-color),transparent); box-shadow:0 0 18px var(--brand-color); }
+    .game-head { display:flex; align-items:center; justify-content:space-between; gap:var(--space-6); padding:var(--space-6) var(--space-7); border-bottom:1px solid color-mix(in srgb,var(--information-color) 26%,var(--border-l1)); background:linear-gradient(90deg,var(--bg-secondary),color-mix(in srgb,var(--information-color-light) 62%,var(--bg-secondary))); }
+    .progress-copy { display:flex; align-items:center; gap:var(--space-5); min-width:0; }
+    .round-mark { width:var(--space-12); height:var(--space-12); display:grid; place-items:center; flex:0 0 auto; border-radius:var(--radius-round); background:var(--brand-color); color:#fff; font:700 13px/1 Roboto,system-ui; }
+    .progress-copy strong { display:block; font-size:14px; }
+    .progress-copy small { display:block; color:var(--text-secondary); font-size:12px; margin-top:var(--space-1); }
+    .steps { display:flex; align-items:center; gap:var(--space-3); }
+    .step { width:36px; height:6px; border-radius:var(--radius-round); background:var(--bg-component); }
+    .step.done { background:var(--success-color); }
+    .step.current { background:var(--brand-color); }
+    .head-visual { display:flex; align-items:center; gap:var(--space-5); }
+    .soundwave { height:32px; display:flex; align-items:center; gap:3px; padding:0 var(--space-2); }
+    .soundwave i { width:3px; height:8px; border-radius:var(--radius-round); background:linear-gradient(var(--information-color),var(--brand-color)); box-shadow:0 0 8px color-mix(in srgb,var(--brand-color) 55%,transparent); transform-origin:center; }
+    .game-card.audio-active .soundwave i { animation:wave .55s ease-in-out infinite alternate; }
+    .game-card.audio-active .soundwave i:nth-child(2),.game-card.audio-active .soundwave i:nth-child(7) { animation-delay:-.18s; }
+    .game-card.audio-active .soundwave i:nth-child(3),.game-card.audio-active .soundwave i:nth-child(6) { animation-delay:-.36s; }
+    .game-card.audio-active .soundwave i:nth-child(4),.game-card.audio-active .soundwave i:nth-child(5) { animation-delay:-.08s; }
+    .game-body { padding:var(--space-8); }
+    .stage-title { display:flex; align-items:start; justify-content:space-between; gap:var(--space-6); margin-bottom:var(--space-6); }
+    .stage-title h2 { margin:0 0 var(--space-2); font-size:22px; }
+    .stage-title p { margin:0; color:var(--text-secondary); font-size:13px; line-height:1.65; }
+    .stage-chip { flex:0 0 auto; padding:var(--space-3) var(--space-5); border-radius:var(--radius-round); color:var(--brand-color); background:var(--brand-color-light); font-size:12px; font-weight:600; }
+    .audio-panel { position:relative; overflow:hidden; display:flex; flex-wrap:wrap; gap:var(--space-4); padding:var(--space-5); border:1px solid color-mix(in srgb,var(--information-color) 32%,var(--border-l1)); border-radius:var(--radius-extralarge); background:linear-gradient(120deg,var(--bg-secondary),color-mix(in srgb,var(--information-color-light) 52%,var(--bg-secondary))); box-shadow:inset 0 0 24px color-mix(in srgb,var(--information-color) 7%,transparent); }
+    .audio-panel::after { content:""; position:absolute; left:-25%; right:-25%; bottom:0; height:1px; background:linear-gradient(90deg,transparent,var(--information-color),var(--brand-color),transparent); animation:scanline 3s ease-in-out infinite alternate; }
+    .audio-panel .ds-btn { flex:1 1 160px; }
+    .audio-status { flex:1 0 100%; display:flex; align-items:center; justify-content:space-between; gap:var(--space-5); color:var(--text-secondary); font-size:12px; }
+    .volume-meter { display:flex; align-items:end; gap:var(--space-1); height:18px; }
+    .volume-meter i { width:4px; border-radius:var(--radius-round); background:var(--brand-color); box-shadow:0 0 8px color-mix(in srgb,var(--brand-color) 48%,transparent); }
+    .volume-meter i:nth-child(1) { height:6px; }.volume-meter i:nth-child(2) { height:9px; }.volume-meter i:nth-child(3) { height:12px; }.volume-meter i:nth-child(4) { height:15px; }.volume-meter i:nth-child(5) { height:18px; }
+    .score-staff { position:relative; overflow:hidden; display:grid; grid-template-columns:repeat(6,minmax(52px,1fr)); gap:var(--space-4); margin:var(--space-8) 0; padding:var(--space-8) var(--space-5); border-radius:var(--radius-extralarge); background:linear-gradient(color-mix(in srgb,var(--bg-container) 94%,transparent),color-mix(in srgb,var(--bg-container) 94%,transparent)) padding-box,linear-gradient(90deg,var(--information-color),var(--brand-color),var(--warning-color)) border-box; border:1px solid transparent; box-shadow:inset 0 0 34px color-mix(in srgb,var(--information-color) 8%,transparent),0 0 28px color-mix(in srgb,var(--information-color) 10%,transparent); }
+    .score-staff::before,.score-staff::after { content:""; position:absolute; left:var(--space-6); right:var(--space-6); height:1px; background:var(--border-l1); pointer-events:none; }
+    .score-staff::before { top:43%; }
+    .score-staff::after { top:57%; }
+    .note-choice { position:relative; z-index:1; min-height:84px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:var(--space-4); padding:var(--space-4); border:1px solid var(--border-l2); border-radius:var(--radius-extralarge); background:var(--bg-container); color:var(--text-primary); cursor:pointer; transition:.2s cubic-bezier(.4,0,.2,1); }
+    .note-choice:hover:not(:disabled) { border-color:var(--brand-color); transform:translateY(-2px); }
+    .note-choice.selected { border-color:var(--brand-color); background:var(--brand-color-light); box-shadow:0 0 0 2px var(--brand-color-focus); }
+    .note-choice.playing { border-color:var(--information-color); background:var(--information-color-light); transform:translateY(-4px) scale(1.04); box-shadow:0 0 0 2px var(--information-color-light),0 0 28px color-mix(in srgb,var(--information-color) 52%,transparent); }
+    .note-choice.revealed { border-color:var(--warning-color); background:var(--warning-color-light); }
+    .note-index { color:var(--text-placeholder); font:500 11px/1 Roboto,system-ui; }
+    .note-value { width:34px; height:34px; display:grid; place-items:center; border-radius:var(--radius-round); color:var(--brand-color); background:var(--brand-color-light); font:700 20px/1 Roboto,system-ui; box-shadow:0 0 16px color-mix(in srgb,var(--brand-color) 24%,transparent); }
+    .direction-group { display:grid; grid-template-columns:1fr 1fr; gap:var(--space-5); margin-bottom:var(--space-7); }
+    .direction { min-height:62px; padding:var(--space-5); border:1px solid var(--border-l2); border-radius:var(--radius-extralarge); background:var(--bg-container); color:var(--text-primary); cursor:pointer; text-align:left; }
+    .direction strong { display:block; color:var(--brand-color); font-size:14px; }
+    .direction small { color:var(--text-secondary); font-size:12px; }
+    .direction.selected { border-color:var(--brand-color); background:var(--brand-color-light); box-shadow:0 0 0 2px var(--brand-color-focus); }
+    .feedback { display:flex; gap:var(--space-4); align-items:flex-start; margin-bottom:var(--space-7); padding:var(--space-5); border-radius:var(--radius-large); font-size:13px; line-height:1.6; }
+    .feedback.success { color:var(--success-color); background:var(--success-color-light); }
+    .feedback.warning { color:var(--warning-color); background:var(--warning-color-light); }
+    .feedback strong { display:block; }
+    .feedback p { margin:0; color:var(--text-secondary); }
+    .tune-stage { display:grid; grid-template-columns:minmax(260px,.9fr) minmax(280px,1.1fr); gap:var(--space-8); align-items:center; margin:var(--space-7) 0; }
+    .knob-wrap { display:grid; place-items:center; padding:var(--space-7); border-radius:var(--radius-extralarge); background:var(--bg-secondary); }
+    .knob-scale { position:relative; width:260px; height:220px; display:grid; place-items:center; }
+    .knob-scale::before { content:""; position:absolute; width:210px; height:210px; border-radius:50%; background:conic-gradient(from 225deg,var(--information-color) 0deg,var(--brand-color) 135deg,var(--warning-color) 270deg,transparent 270deg); opacity:.42; filter:blur(5px); animation:knob-glow 2.8s ease-in-out infinite alternate; }
+    .knob { --knob-angle:0deg; position:relative; width:154px; height:154px; border:1px solid color-mix(in srgb,var(--brand-color) 52%,var(--border-l2)); border-radius:50%; background:radial-gradient(circle at 40% 34%,var(--bg-container),var(--bg-component)); box-shadow:var(--shadow-2),inset 0 0 34px color-mix(in srgb,var(--information-color) 11%,transparent),0 0 36px color-mix(in srgb,var(--brand-color) 22%,transparent); cursor:grab; touch-action:none; user-select:none; }
+    .knob:active { cursor:grabbing; }
+    .knob::before { content:""; position:absolute; width:5px; height:54px; left:calc(50% - 2.5px); top:12px; border-radius:var(--radius-round); background:var(--brand-color); transform-origin:2.5px 65px; transform:rotate(var(--knob-angle)); }
+    .knob::after { content:"♪"; position:absolute; inset:38px; display:grid; place-items:center; border-radius:50%; color:var(--brand-color); background:var(--bg-container); font-size:30px; box-shadow:inset 0 0 0 1px var(--border-l1); }
+    .knob-label { position:absolute; bottom:0; color:var(--text-secondary); font-size:12px; }
+    .knob-label.low { left:4px; }
+    .knob-label.center { left:50%; transform:translateX(-50%); color:var(--brand-color); font-weight:600; }
+    .knob-label.high { right:4px; }
+    .nudge-row { display:flex; gap:var(--space-4); margin-top:var(--space-5); }
+    .nudge-row button { width:44px; height:40px; border:1px solid var(--border-l2); border-radius:var(--radius-large); color:var(--text-primary); background:var(--bg-container); cursor:pointer; font-size:20px; }
+    .tune-copy h3 { margin:0 0 var(--space-4); font-size:18px; }
+    .tune-copy p { margin:0 0 var(--space-5); color:var(--text-secondary); font-size:13px; line-height:1.7; }
+    .listening-hint { display:flex; gap:var(--space-4); align-items:flex-start; padding:var(--space-5); border-radius:var(--radius-large); color:var(--information-color); background:var(--information-color-light); font-size:12px; line-height:1.6; }
+    .action-row { display:flex; justify-content:flex-end; gap:var(--space-4); margin-top:var(--space-7); }
+    .result-panel { display:grid; place-items:center; min-height:500px; text-align:center; padding:var(--space-8); }
+    .result-orbit { width:144px; height:144px; display:grid; place-items:center; border-radius:50%; color:var(--brand-color); background:var(--brand-color-light); box-shadow:0 0 0 16px var(--bg-secondary); }
+    .result-orbit strong { display:block; font:700 46px/1 Roboto,system-ui; }
+    .result-orbit small { font-size:12px; }
+    .result-panel h2 { margin:var(--space-8) 0 var(--space-3); }
+    .result-panel>p { max-width:540px; margin:0 0 var(--space-7); color:var(--text-secondary); line-height:1.7; }
+    .round-summary { width:min(540px,100%); display:grid; grid-template-columns:repeat(3,1fr); gap:var(--space-4); margin-bottom:var(--space-7); }
+    .round-summary article { padding:var(--space-5); border:1px solid var(--border-l1); border-radius:var(--radius-large); background:var(--bg-secondary); }
+    .round-summary strong { display:block; font:700 20px/1.4 Roboto,system-ui; }
+    .round-summary small { color:var(--text-secondary); font-size:11px; }
+    .intro-panel { min-height:520px; display:grid; place-items:center; text-align:center; padding:var(--space-10); }
+    .intro-icon { width:112px; height:112px; display:grid; place-items:center; border-radius:50%; color:var(--brand-color); background:var(--brand-color-light); font-size:44px; box-shadow:0 0 0 14px var(--bg-secondary); }
+    .intro-panel h2 { margin:var(--space-8) 0 var(--space-4); font-size:26px; }
+    .intro-panel p { max-width:560px; margin:0 auto var(--space-7); color:var(--text-secondary); line-height:1.8; font-size:14px; }
+    .intro-meta { display:flex; flex-wrap:wrap; justify-content:center; gap:var(--space-4); margin-bottom:var(--space-7); }
+    .intro-meta span { padding:var(--space-3) var(--space-5); border-radius:var(--radius-round); color:var(--text-secondary); background:var(--bg-secondary); font-size:12px; }
+    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+    [hidden] { display:none !important; }
+    @keyframes aurora-spin { to { transform:rotate(360deg); } }
+    @keyframes wave { from { transform:scaleY(.55); } to { transform:scaleY(2.5); } }
+    @keyframes scanline { from { transform:translateX(-28%); } to { transform:translateX(28%); } }
+    @keyframes knob-glow { from { transform:scale(.96); opacity:.3; } to { transform:scale(1.06); opacity:.58; } }
+    @media (max-width:900px) {
+      .shell { width:min(100% - var(--space-8),720px); padding-top:var(--space-5); }
+      .game-layout { grid-template-columns:1fr; }
+      .side-card { position:static; }
+      .side-card .rule-list,.side-note { display:none; }
+      .judge { border:0; padding:0; }
+      .doc-link { position:absolute; top:var(--space-5); right:76px; }
+      .hero { grid-template-columns:1fr; padding:var(--space-8); }
+      .hero-score { display:flex; align-items:baseline; justify-content:center; gap:var(--space-4); padding:var(--space-4); }
+      .hero-score small,.hero-score strong,.hero-score span { display:inline; margin:0; }
+      .hero-score strong { font-size:24px; }
+      .tune-stage { grid-template-columns:1fr; }
+    }
+    @media (max-width:640px) {
+      .shell { width:100%; padding:var(--space-4) var(--space-4) var(--space-10); }
+      .topbar { margin-bottom:var(--space-5); }
+      .brand small { display:none; }
+      .top-actions a { display:none; }
+      .hero { padding:var(--space-7); gap:var(--space-5); margin-bottom:var(--space-5); }
+      .hero::after { font-size:120px; }
+      .hero p { font-size:13px; }
+      .side-card { padding:var(--space-5); }
+      .doc-link { position:static; justify-content:flex-start; margin:var(--space-4) 0 0 72px; }
+      .game-card { min-height:0; }
+      .game-head { padding:var(--space-5); }
+      .steps { display:none; }
+      .soundwave { display:none; }
+      .game-body { padding:var(--space-5); }
+      .stage-title { display:block; }
+      .stage-chip { display:inline-flex; margin-top:var(--space-4); }
+      .audio-panel { display:grid; grid-template-columns:1fr 1fr; }
+      .audio-status { grid-column:1/-1; }
+      .audio-panel .ds-btn { min-width:0; padding-inline:var(--space-4); font-size:12px; }
+      .audio-panel .ds-btn:last-child { grid-column:1/-1; }
+      .score-staff { grid-template-columns:repeat(3,1fr); padding:var(--space-5); margin:var(--space-6) 0; }
+      .score-staff::before,.score-staff::after { display:none; }
+      .note-choice { min-height:72px; }
+      .direction-group { gap:var(--space-4); }
+      .direction { min-height:72px; }
+      .knob-scale { width:240px; }
+      .action-row { display:grid; grid-template-columns:1fr; }
+      .action-row .ds-btn { width:100%; }
+      .round-summary { gap:var(--space-3); }
+      .round-summary article { padding:var(--space-4); }
+      .intro-panel,.result-panel { min-height:460px; padding:var(--space-7); }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      *,*::before,*::after { scroll-behavior:auto !important; transition-duration:.01ms !important; animation-duration:.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">♫</span>
+        <span><strong>恋与哈基米 · 霓虹听音室</strong><small>V2 独立预览 · 高动态音量</small></span>
+      </div>
+      <div class="top-actions">
+        <a class="ds-btn ds-btn--ghost" href="requirement.html">原型说明</a>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="切换深浅主题" title="切换深浅主题">◐</button>
+      </div>
+    </header>
+
+    <section class="hero section-changed">
+      <div>
+        <div class="eyebrow">PITCH AUDITION · NEON STAGE V2 <span class="badge-changed">CHANGED</span></div>
+        <h1>空格的音准考验</h1>
+        <p>灯光已亮，音量已拉高。找出旋律里唯一不准的音，再像校准琴弦一样，把它拧回正确位置——这一次，只能相信耳朵。</p>
+      </div>
+      <div class="hero-score" aria-label="本局分数">
+        <small>本局得分</small><strong id="totalScore">0</strong><span>/ 6</span>
+      </div>
+    </section>
+
+    <div class="game-layout">
+      <aside class="side-card">
+        <div class="judge">
+          <img src="../../assets/thumbs/avatars/192/kongge.webp" alt="首席空格头像">
+          <div><strong>首席空格</strong><small>技术考核 · 音准测试</small></div>
+        </div>
+        <ol class="rule-list">
+          <li>听标准音与两遍旋律，找出唯一不准的音。</li>
+          <li>选中位置，判断它是偏高还是偏低。</li>
+          <li>旋转调音钮，误差不超过 3 Hz 即通过。</li>
+        </ol>
+        <div class="side-note">建议戴耳机。识别错音 1 分，调准音高 1 分；三题共 6 分。</div>
+        <a class="doc-link" href="requirement.html">查看规则与待确认项 →</a>
+      </aside>
+
+      <section class="game-card" aria-live="polite">
+        <div class="game-head">
+          <div class="progress-copy">
+            <span class="round-mark" id="roundMark">准备</span>
+            <span><strong id="roundTitle">耳朵热身</strong><small id="roundSubtitle">完整体验约 3 分钟</small></span>
+          </div>
+          <div class="head-visual"><div class="soundwave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="steps" id="steps" aria-label="三题进度"><i class="step"></i><i class="step"></i><i class="step"></i></div></div>
+        </div>
+        <div id="gameRoot"></div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    'use strict';
+    (() => {
+      const $ = selector => document.querySelector(selector);
+      const gameRoot = $('#gameRoot');
+      const NOTE_FREQUENCIES = {1:261.626,2:293.665,3:329.628,4:349.228,5:391.995,6:440,7:493.883};
+      const rounds = [
+        {notes:[1,2,3,5,6,5], wrongIndex:2, offset:10, label:'基础辨音'},
+        {notes:[5,4,3,2,1,2], wrongIndex:4, offset:-9.5, label:'反向旋律'},
+        {notes:[1,3,5,6,5,3], wrongIndex:1, offset:6.75, label:'细微偏差'}
+      ];
+      const state = {screen:'intro', round:0, score:0, selected:null, direction:null, adjustment:0, answers:[], playing:false};
+      let audioContext = null, audioOutput = null, activeNodes = [], highlightTimers = [], dragActive = false;
+
+      function escapeHTML(value) { return String(value).replace(/[&<>"']/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char])); }
+      function roundData() { return rounds[state.round]; }
+      function directionOf(offset) { return offset > 0 ? 'high' : 'low'; }
+      function directionLabel(direction) { return direction === 'high' ? '偏高' : '偏低'; }
+      function setHeader() {
+        const intro = state.screen === 'intro', finish = state.screen === 'finish';
+        $('#roundMark').textContent = intro ? '准备' : finish ? '完成' : `${state.round + 1}/3`;
+        $('#roundTitle').textContent = intro ? '耳朵热身' : finish ? '考验结束' : roundData().label;
+        $('#roundSubtitle').textContent = intro ? '完整体验约 3 分钟' : finish ? `最终得分 ${state.score} / 6` : state.screen === 'identify' ? '第一步 · 找出错音' : state.screen === 'tune' ? '第二步 · 调准音高' : '本题结算';
+        $('#totalScore').textContent = state.score;
+        [...$('#steps').children].forEach((step,index) => {
+          step.className = `step${index < state.round || finish ? ' done' : index === state.round && !intro ? ' current' : ''}`;
+        });
+      }
+      function introHTML() {
+        return `<div class="intro-panel game-body"><div><div class="intro-icon" aria-hidden="true">♬</div><h2>灯光就位，先听准，再动手。</h2><p>每题会给出一段六音旋律，其中只有一个音偏离标准音高。先找出它，再用旋钮把它调回去。V2 已提高默认试听音量，并用动态声浪与霓虹反馈强化舞台感。</p><div class="intro-meta"><span>3 道固定测试题</span><span>每题 2 分</span><span>允许 ±3 Hz</span><span>增强音量</span></div><button class="ds-btn ds-btn--primary" type="button" data-action="start">点亮舞台 · 开始第一题</button></div></div>`;
+      }
+      function noteButtons(readonly = false) {
+        return `<div class="score-staff" aria-label="六音旋律">${roundData().notes.map((note,index) => `<button class="note-choice${state.selected === index ? ' selected' : ''}${readonly && index === roundData().wrongIndex ? ' revealed' : ''}" type="button" data-note-index="${index}" ${readonly ? 'disabled' : ''} aria-pressed="${state.selected === index}"><span class="note-index">第 ${index + 1} 音</span><span class="note-value">${note}</span></button>`).join('')}</div>`;
+      }
+      function audioPanel(tune = false) {
+        return `<div class="audio-panel"><div class="audio-status"><span>高动态试听 · 默认增强音量 <span class="badge-changed">CHANGED</span></span><span class="volume-meter" aria-label="增强音量"><i></i><i></i><i></i><i></i><i></i></span></div><button class="ds-btn ds-btn--secondary" type="button" data-audio="standard">▶ ${tune ? '播放正确音' : '播放标准旋律'}</button><button class="ds-btn ds-btn--primary" type="button" data-audio="exam">▶ ${tune ? '试听当前音' : '播放考核旋律'}</button><button class="ds-btn ds-btn--ghost" type="button" data-audio="a4">♪ 标准音 A</button></div>`;
+      }
+      function identifyHTML() {
+        return `<div class="game-body"><div class="stage-title"><div><h2>哪一个音跑偏了？</h2><p>标准旋律和考核旋律可以反复对比。选中一个位置，再判断偏高或偏低。</p></div><span class="stage-chip">识别 · 1 分</span></div>${audioPanel()}${noteButtons()}<div class="direction-group" aria-label="判断偏差方向"><button class="direction${state.direction === 'high' ? ' selected' : ''}" type="button" data-direction="high" aria-pressed="${state.direction === 'high'}"><strong>↑ 偏高了</strong><small>听起来更尖、更紧</small></button><button class="direction${state.direction === 'low' ? ' selected' : ''}" type="button" data-direction="low" aria-pressed="${state.direction === 'low'}"><strong>↓ 偏低了</strong><small>听起来更沉、更松</small></button></div><div class="action-row"><button class="ds-btn ds-btn--ghost" type="button" data-action="restart">重新开始本局</button><button class="ds-btn ds-btn--primary" type="button" data-action="identify-submit" ${state.selected === null || !state.direction ? 'disabled' : ''}>确认判断，开始调音</button></div></div>`;
+      }
+      function tuneHTML() {
+        const answer = state.answers[state.round];
+        const correct = answer.identify;
+        const angle = state.adjustment / 16 * 135;
+        return `<div class="game-body"><div class="stage-title"><div><h2>把第 ${roundData().wrongIndex + 1} 音调回去</h2><p>拖动旋钮或用方向键微调。界面不会显示赫兹数，试听后凭耳朵判断。</p></div><span class="stage-chip">调音 · 1 分</span></div><div class="feedback ${correct ? 'success' : 'warning'}"><span aria-hidden="true">${correct ? '✓' : '!'}</span><div><strong>${correct ? '错音判断正确，先得 1 分。' : `刚才没有命中：实际是第 ${roundData().wrongIndex + 1} 音${directionLabel(directionOf(roundData().offset))}。`}</strong><p>${correct ? `第 ${roundData().wrongIndex + 1} 音确实${directionLabel(directionOf(roundData().offset))}，现在把它调回标准位置。` : '识别分未获得，但调音分仍可继续争取。'}</p></div></div><div class="tune-stage"><div class="knob-wrap"><div class="knob-scale"><div class="knob" id="pitchKnob" role="slider" tabindex="0" aria-label="音高调节旋钮" aria-valuemin="-16" aria-valuemax="16" aria-valuenow="${state.adjustment}" style="--knob-angle:${angle}deg"></div><span class="knob-label low">偏低</span><span class="knob-label center">标准位置</span><span class="knob-label high">偏高</span></div><div class="nudge-row"><button type="button" data-nudge="-0.5" aria-label="向低微调">−</button><button type="button" data-nudge="0.5" aria-label="向高微调">＋</button></div></div><div class="tune-copy"><h3>听，不要看数值。</h3><p>考核音一开始仍保留原来的偏差。把旋钮往相反方向转，每次都可以试听当前音，并与正确音或 A4 标准音对照。</p>${audioPanel(true)}<div class="listening-hint"><span aria-hidden="true">🎧</span><span>小提示：先大幅转到你觉得接近的位置，再用 ＋ / − 做细微调整。键盘方向键也可以微调。</span></div></div></div><div class="action-row"><button class="ds-btn ds-btn--ghost" type="button" data-action="tune-reset">旋钮归零</button><button class="ds-btn ds-btn--primary" type="button" data-action="tune-submit">确认这个音</button></div></div>`;
+      }
+      function roundResultHTML() {
+        const answer = state.answers[state.round];
+        const roundScore = Number(answer.identify) + Number(answer.tuned);
+        return `<div class="result-panel game-body"><div><div class="result-orbit"><span><strong>${roundScore}</strong><small>/ 2 分</small></span></div><h2>${roundScore === 2 ? '听准了，也调准了。' : roundScore === 1 ? '已经抓住一半了。' : '没关系，再听一遍会更清楚。'}</h2><p>最终与标准音相差 <strong>${answer.finalError.toFixed(2)} Hz</strong>。${answer.tuned ? '在允许的 ±3 Hz 内，调音通过。' : '超过允许的 ±3 Hz，本题调音分未获得。'}</p><div class="round-summary"><article><strong>${answer.identify ? '✓' : '—'}</strong><small>识别错音</small></article><article><strong>${answer.tuned ? '✓' : '—'}</strong><small>调准音高</small></article><article><strong>${directionLabel(directionOf(roundData().offset))}</strong><small>原始偏差</small></article></div><button class="ds-btn ds-btn--primary" type="button" data-action="next">${state.round === rounds.length - 1 ? '查看最终结果' : '进入下一题'}</button></div></div>`;
+      }
+      function finishHTML() {
+        const copy = state.score >= 6 ? '空格难得地点了点头：耳朵和手都很稳。' : state.score >= 4 ? '空格把笔收起来：能听出来，再多练几次会更准。' : '空格没有催你：音准不是猜出来的，是一次次听出来的。';
+        return `<div class="result-panel game-body"><div><div class="result-orbit"><span><strong>${state.score}</strong><small>/ 6 分</small></span></div><h2>${state.score >= 6 ? '全音准通过' : state.score >= 4 ? '考核合格' : '再试一次'}</h2><p>${copy}</p><div class="round-summary">${state.answers.map((answer,index) => `<article><strong>${Number(answer.identify) + Number(answer.tuned)} / 2</strong><small>第 ${index + 1} 题 · ${escapeHTML(rounds[index].label)}</small></article>`).join('')}</div><button class="ds-btn ds-btn--primary" type="button" data-action="restart">重新挑战</button></div></div>`;
+      }
+      function render() {
+        stopAudio();
+        setHeader();
+        gameRoot.dataset.stage = state.screen;
+        gameRoot.innerHTML = state.screen === 'intro' ? introHTML() : state.screen === 'identify' ? identifyHTML() : state.screen === 'tune' ? tuneHTML() : state.screen === 'round-result' ? roundResultHTML() : finishHTML();
+        if (state.screen === 'tune') bindKnob();
+      }
+      async function ensureAudio() {
+        const AC = window.AudioContext || window.webkitAudioContext;
+        if (!AC) { alert('当前浏览器不支持 Web Audio，无法进行听音测试。'); return null; }
+        if (!audioContext || audioContext.state === 'closed') {
+          audioContext = new AC();
+          audioOutput = audioContext.createGain();
+          audioOutput.gain.value = .58;
+          const compressor = audioContext.createDynamicsCompressor();
+          compressor.threshold.value = -14;
+          compressor.knee.value = 18;
+          compressor.ratio.value = 6;
+          compressor.attack.value = .003;
+          compressor.release.value = .18;
+          audioOutput.connect(compressor); compressor.connect(audioContext.destination);
+        }
+        if (audioContext.state !== 'running') await audioContext.resume();
+        return audioContext;
+      }
+      function stopAudio() {
+        highlightTimers.forEach(clearTimeout); highlightTimers = [];
+        activeNodes.forEach(node => { try { node.stop(); } catch {} }); activeNodes = [];
+        document.querySelectorAll('.note-choice.playing').forEach(node => node.classList.remove('playing'));
+        document.querySelector('.game-card')?.classList.remove('audio-active');
+        state.playing = false;
+      }
+      function scheduleTone(frequency, when, duration = .5) {
+        const gain = audioContext.createGain();
+        const filter = audioContext.createBiquadFilter();
+        gain.gain.setValueAtTime(.0001,when);
+        gain.gain.exponentialRampToValueAtTime(.26,when + .025);
+        gain.gain.exponentialRampToValueAtTime(.11,when + duration * .68);
+        gain.gain.exponentialRampToValueAtTime(.0001,when + duration);
+        filter.type = 'lowpass'; filter.frequency.value = 1800; filter.Q.value = .7;
+        gain.connect(filter); filter.connect(audioOutput);
+        [
+          {type:'triangle',ratio:1,volume:1},
+          {type:'sine',ratio:2,volume:.16}
+        ].forEach(voice => {
+          const oscillator = audioContext.createOscillator(), voiceGain = audioContext.createGain();
+          oscillator.type = voice.type; oscillator.frequency.value = frequency * voice.ratio; voiceGain.gain.value = voice.volume;
+          oscillator.connect(voiceGain); voiceGain.connect(gain); oscillator.start(when); oscillator.stop(when + duration + .03); activeNodes.push(oscillator);
+        });
+      }
+      async function play(kind) {
+        stopAudio();
+        if (!await ensureAudio()) return;
+        const data = roundData();
+        document.querySelector('.game-card')?.classList.add('audio-active');
+        if (kind === 'a4') { scheduleTone(440,audioContext.currentTime + .02,.9); highlightTimers.push(setTimeout(() => document.querySelector('.game-card')?.classList.remove('audio-active'),980)); return; }
+        if (state.screen === 'tune') {
+          const base = NOTE_FREQUENCIES[data.notes[data.wrongIndex]];
+          scheduleTone(kind === 'standard' ? base : base + data.offset + state.adjustment,audioContext.currentTime + .02,1.05);
+          highlightTimers.push(setTimeout(() => document.querySelector('.game-card')?.classList.remove('audio-active'),1130));
+          return;
+        }
+        state.playing = true;
+        const start = audioContext.currentTime + .06, gap = .62;
+        data.notes.forEach((note,index) => {
+          const base = NOTE_FREQUENCIES[note], frequency = kind === 'exam' && index === data.wrongIndex ? base + data.offset : base;
+          scheduleTone(frequency,start + index * gap,.48);
+          highlightTimers.push(setTimeout(() => {
+            document.querySelectorAll('.note-choice').forEach(node => node.classList.toggle('playing',Number(node.dataset.noteIndex) === index));
+          },Math.max(0,(start - audioContext.currentTime + index * gap) * 1000)));
+        });
+        highlightTimers.push(setTimeout(() => { document.querySelectorAll('.note-choice.playing').forEach(node => node.classList.remove('playing')); document.querySelector('.game-card')?.classList.remove('audio-active'); state.playing = false; },(start - audioContext.currentTime + data.notes.length * gap) * 1000));
+      }
+      function startGame() {
+        Object.assign(state,{screen:'identify',round:0,score:0,selected:null,direction:null,adjustment:0,answers:[]});
+        render();
+      }
+      function submitIdentify() {
+        if (state.selected === null || !state.direction) return;
+        const identify = state.selected === roundData().wrongIndex && state.direction === directionOf(roundData().offset);
+        state.answers[state.round] = {identify,tuned:false,selected:state.selected,direction:state.direction,finalError:Math.abs(roundData().offset)};
+        if (identify) state.score++;
+        state.screen = 'tune'; state.adjustment = 0; render();
+      }
+      function submitTune() {
+        const finalError = Math.abs(roundData().offset + state.adjustment), tuned = finalError <= 3;
+        Object.assign(state.answers[state.round],{tuned,finalError,adjustment:state.adjustment});
+        if (tuned) state.score++;
+        state.screen = 'round-result'; render();
+      }
+      function nextRound() {
+        if (state.round >= rounds.length - 1) state.screen = 'finish';
+        else { state.round++; state.screen = 'identify'; state.selected = null; state.direction = null; state.adjustment = 0; }
+        render();
+      }
+      function setAdjustment(value) {
+        state.adjustment = Math.max(-16,Math.min(16,Math.round(value * 4) / 4));
+        const knob = $('#pitchKnob');
+        if (knob) { knob.style.setProperty('--knob-angle',`${state.adjustment / 16 * 135}deg`); knob.setAttribute('aria-valuenow',state.adjustment); }
+      }
+      function pointerAdjustment(event, knob) {
+        const rect = knob.getBoundingClientRect(), x = event.clientX - (rect.left + rect.width / 2), y = event.clientY - (rect.top + rect.height / 2);
+        let degrees = Math.atan2(y,x) * 180 / Math.PI + 90;
+        if (degrees > 180) degrees -= 360;
+        setAdjustment(Math.max(-135,Math.min(135,degrees)) / 135 * 16);
+      }
+      function bindKnob() {
+        const knob = $('#pitchKnob');
+        knob.addEventListener('pointerdown',event => { dragActive = true; knob.setPointerCapture(event.pointerId); pointerAdjustment(event,knob); });
+        knob.addEventListener('pointermove',event => { if (dragActive) pointerAdjustment(event,knob); });
+        knob.addEventListener('pointerup',() => { dragActive = false; });
+        knob.addEventListener('pointercancel',() => { dragActive = false; });
+        knob.addEventListener('keydown',event => {
+          if (['ArrowLeft','ArrowDown','ArrowRight','ArrowUp','Home'].includes(event.key)) event.preventDefault();
+          if (event.key === 'ArrowLeft' || event.key === 'ArrowDown') setAdjustment(state.adjustment - .25);
+          if (event.key === 'ArrowRight' || event.key === 'ArrowUp') setAdjustment(state.adjustment + .25);
+          if (event.key === 'Home') setAdjustment(0);
+        });
+      }
+      gameRoot.addEventListener('click',event => {
+        const note = event.target.closest('[data-note-index]');
+        if (note && state.screen === 'identify') { state.selected = Number(note.dataset.noteIndex); render(); return; }
+        const direction = event.target.closest('[data-direction]');
+        if (direction) { state.direction = direction.dataset.direction; render(); return; }
+        const audio = event.target.closest('[data-audio]');
+        if (audio) { play(audio.dataset.audio); return; }
+        const nudge = event.target.closest('[data-nudge]');
+        if (nudge) { setAdjustment(state.adjustment + Number(nudge.dataset.nudge)); return; }
+        const action = event.target.closest('[data-action]')?.dataset.action;
+        if (action === 'start' || action === 'restart') startGame();
+        else if (action === 'identify-submit') submitIdentify();
+        else if (action === 'tune-submit') submitTune();
+        else if (action === 'tune-reset') setAdjustment(0);
+        else if (action === 'next') nextRound();
+      });
+      $('#themeToggle').addEventListener('click',() => {
+        const dark = document.documentElement.dataset.theme === 'dark';
+        document.documentElement.dataset.theme = dark ? 'light' : 'dark';
+        localStorage.setItem('pitch-audition-v2-theme',dark ? 'light' : 'dark');
+      });
+      document.addEventListener('visibilitychange',() => { if (document.hidden) stopAudio(); });
+      window.addEventListener('pagehide',stopAudio);
+      const storedTheme = localStorage.getItem('pitch-audition-v2-theme');
+      if (storedTheme === 'dark' || storedTheme === 'light') document.documentElement.dataset.theme = storedTheme;
+      window.__pitchAudition = {state,rounds,setAdjustment,startGame,submitIdentify,submitTune,nextRound,audioSettings:() => ({masterGain:audioOutput?.gain.value ?? null,peakGain:.26})};
+      render();
+    })();
+  </script>
+</body>
+</html>

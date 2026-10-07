@@ -1,0 +1,34 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+
+const root = path.resolve(__dirname, '..');
+const read = file => fs.readFileSync(path.join(root, file), 'utf8');
+const html = read('index.html');
+const utils = read('js/core/utils.js');
+const preload = read('js/cards/preload.js');
+const model = read('js/cards/model.js');
+const chronicle = read('js/chronicle/views.js');
+const library = read('js/chronicle/library.js');
+const persistence = read('js/chronicle/persistence.js');
+const personal = read('js/chronicle/personal.js');
+const seven = read('js/chronicle/seven.js');
+const fusion = read('js/features/fusion.js');
+const events = read('js/app/events.js');
+const bootstrap = read('js/app/bootstrap.js');
+const worker = read('sw.js');
+
+assert(html.indexOf('js/cards/model.js') < html.indexOf('js/cards/preload.js'), 'Preloader loads after card model');
+assert(html.indexOf('js/cards/preload.js') < html.indexOf('js/app/bootstrap.js'), 'Preloader loads before bootstrap');
+assert(preload.includes("/^https?:$/.test(location.protocol)"), 'Service worker skips file:// mode');
+assert(preload.includes('connection?.saveData') && preload.includes("effectiveType === '3g'"), 'Background warmup respects constrained connections');
+assert(model.includes("preloadCardFull(card.id, 'high')"), 'Dialogue appearance warms original card art');
+assert(events.includes("'[data-dialogue-card],[data-card-open]'"), 'Pointer and focus intent warm card art');
+assert(bootstrap.includes('scheduleCardImageWarmup()') && bootstrap.includes('registerImageServiceWorker()'), 'Bootstrap enables warmup and persistent caching');
+assert(worker.includes("request.destination !== 'image'") && worker.includes('url.origin !== self.location.origin') && worker.includes('cache.match(event.request)') && worker.includes('event.waitUntil(update'), 'Worker uses stale-while-revalidate only for same-origin images');
+assert(utils.includes('function scheduleStoryImagePreload') && utils.includes("image.fetchPriority = 'low'") && utils.includes('image.decode?.()') && utils.includes('storyImagePreloads.size > maxEntries'), 'Shared story preloader prioritizes, decodes, and bounds upcoming images');
+assert(utils.includes('function scheduleStorySequencePreload') && utils.includes('storySequencePreloadToken') && utils.includes('storyAvatarPreloadSources'), 'Chapter warmup loads artwork and portraits through one ordered low-priority queue');
+assert([chronicle, personal, seven, fusion].every(source => source.includes('scheduleStoryImagePreload(')), 'All illustrated story readers use the shared story preloader');
+assert(library.includes('preloadChronicleChapterAssets') && persistence.includes('preloadChronicleChapterAssets(ch)') && personal.includes('scheduleStorySequencePreload(') && seven.includes('scheduleStorySequencePreload(') && fusion.includes('scheduleStorySequencePreload('), 'Entering main, personal, chapter-seven, and fusion chapters starts ordered chapter warmup');
+assert(![chronicle, personal, seven, fusion].some(source => /preloaded(?:Scene|Personal|Art)|new Image\(\)/.test(source)), 'Story readers do not maintain duplicate image preload implementations');
+console.log('PASS: smart card/story preloading, bounded decode cache, file:// compatibility, and persistent image cache wiring.');

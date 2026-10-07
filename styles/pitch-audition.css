@@ -1,0 +1,41 @@
+#view-pitch { max-width: 1280px; margin: 0 auto; }
+#view-pitch .rhythm-team-panel { margin-bottom: 20px; }
+.pitch-challenge-layout { display: grid; grid-template-columns: 244px minmax(0, 1fr); gap: var(--space-6); align-items: start; }
+.pitch-challenge-nav { position: sticky; top: var(--space-5); display: grid; gap: var(--space-4); padding: var(--space-6); border: 1px solid var(--border-l1); border-radius: var(--radius-extralarge); background: var(--bg-container); box-shadow: var(--shadow-1); }
+.pitch-challenge-nav-head { padding: var(--space-2) var(--space-2) var(--space-4); border-bottom: 1px solid var(--border-l1); }
+.pitch-challenge-nav-head h3 { margin: var(--space-2) 0; color: var(--text-primary); font-size: var(--font-size-title-medium); line-height: var(--line-height-body-medium); }
+.pitch-challenge-nav-head p { margin: 0; color: var(--text-secondary); font-size: var(--font-size-body-small); line-height: var(--line-height-body-small); }
+.pitch-challenge-option { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; gap: var(--space-4); align-items: center; width: 100%; min-height: 76px; padding: var(--space-4); border: 1px solid var(--border-l1); border-radius: var(--radius-large); color: var(--text-primary); background: var(--bg-secondary); text-align: left; cursor: pointer; transition: border-color .2s ease, background .2s ease, transform .2s ease; }
+.pitch-challenge-option:hover { transform: translateY(-1px); border-color: var(--information-color); }
+.pitch-challenge-option.active { border-color: var(--information-color); background: var(--information-color-light); box-shadow: 0 0 0 2px color-mix(in srgb, var(--information-color) 18%, transparent); }
+.pitch-challenge-icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: var(--radius-round); color: var(--information-color); background: var(--bg-container); }
+.pitch-challenge-option strong, .pitch-challenge-option small { display: block; }
+.pitch-challenge-option strong { font-size: var(--font-size-body-medium); line-height: var(--line-height-body-medium); }
+.pitch-challenge-option small { margin-top: var(--space-1); color: var(--text-secondary); font-size: 11px; line-height: 1.45; }
+.pitch-challenge-option em { color: var(--information-color); font-size: 12px; font-style: normal; font-weight: 700; white-space: nowrap; }
+.pitch-game-wrap { overflow: hidden; min-width: 0; border: 1px solid var(--border-l1); border-radius: var(--radius-extralarge); background: var(--bg-secondary); box-shadow: var(--shadow-1); }
+#pitchGameMount { display: block; width: 100%; min-height: 640px; }
+.pitch-reward-status { margin: 14px 4px 0; color: var(--muted); font-size: 14px; line-height: 1.6; }
+.pitch-mobile-summary { display: none; }
+@media (max-width: 700px) {
+  body[data-view="pitch"] .page-heading .eyebrow,
+  body[data-view="pitch"] .stats .level-stat,
+  body[data-view="pitch"] .page-footer { display: none; }
+  #view-pitch .rhythm-team-panel { grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-4); padding: var(--space-5); margin-bottom: var(--space-5); }
+  #view-pitch .rhythm-team-panel .team-lineup,
+  #view-pitch .rhythm-solo-mark { grid-column: 1; grid-row: 1; }
+  #view-pitch .rhythm-team-text { grid-column: 1 / -1; grid-row: 2; min-width: 0; }
+  #view-pitch .rhythm-team-text strong,
+  #view-pitch .rhythm-team-text small { display: none; }
+  #view-pitch .rhythm-team-panel > .btn { grid-column: 2; grid-row: 1; align-self: center; margin: 0; }
+  #view-pitch .pitch-mobile-summary { display: block; color: var(--text-secondary); font-size: var(--font-size-body-small); line-height: var(--line-height-body-small); }
+  .pitch-challenge-layout { display: block; }
+  .pitch-challenge-nav { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); margin-bottom: var(--space-4); padding: 0; border: 0; background: transparent; box-shadow: none; }
+  .pitch-challenge-nav-head { display: none; }
+  .pitch-challenge-option { grid-template-columns: 32px minmax(0, 1fr); min-height: 68px; padding: var(--space-4); }
+  .pitch-challenge-option .pitch-challenge-icon { width: 32px; height: 32px; }
+  .pitch-challenge-option small, .pitch-challenge-option em { display: none; }
+  .pitch-challenge-option strong { font-size: var(--font-size-body-small); line-height: var(--line-height-body-small); }
+  .pitch-game-wrap { border: 0; box-shadow: none; background: transparent; }
+  #pitchGameMount { min-height: 0; }
+}

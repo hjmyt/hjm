@@ -1,0 +1,26 @@
+.paw-gift { position: fixed; inset: 0; pointer-events: none; z-index: 1500; overflow: hidden; contain: strict; }
+.paw-gift svg { width: 100%; height: 100%; display: block; }
+.paw-gift-particles { position: absolute; inset: 0; width: 100%; height: 100%; }
+.paw-gift-aura { position: absolute; left: calc(var(--x) - 180px); top: calc(var(--y) - 180px); width: 360px; height: 360px; border-radius: 50%; background: radial-gradient(circle, #ffe0cc55, #fca8c51c 45%, transparent 70%); animation: paw-aura 3.2s both; }
+.paw-gift-hand { position: absolute; left: calc(var(--sx) - 95px); top: calc(var(--sy) - 8px); width: 190px; height: 238px; filter: drop-shadow(0 14px 16px #7b3c5b30); mask-image: linear-gradient(#000 0%, #000 84%, transparent 100%); transform-origin: 50% 85%; animation: paw-deliver 2.1s both; will-change: transform, opacity; }
+.paw-gift-heart { position: absolute; top: 0; left: 0; width: 98px; height: 92px; opacity: 0; filter: drop-shadow(0 8px 8px #a8377445) drop-shadow(0 0 19px #ffc4db85); will-change: transform, opacity; }
+.paw-gift-ring { position: absolute; left: calc(var(--x) - 60px); top: calc(var(--y) - 60px); width: 120px; height: 120px; border: 1px solid #ffe6bd; border-radius: 50%; box-shadow: 0 0 14px #ffd6ac75, inset 0 0 12px #ffd8e64d; animation: paw-ring 1s 1.76s both; }
+.paw-gift-ring-second { border-color: #ffc2d685; animation-delay: 1.88s; animation-duration: .9s; }
+.paw-gift-caption { position: absolute; left: var(--x); top: calc(var(--y) + 78px); width: max-content; max-width: calc(100vw - 28px); text-align: center; padding: 11px 25px 10px; border: 1px solid #fff1dddc; border-radius: 14px; background: linear-gradient(125deg, #fffdf3ed, #fff0f5ed); box-shadow: 0 8px 30px #8f566825, inset 0 1px 0 #fff; color: #a65c77; animation: paw-caption 1.35s 1.8s both; }
+.paw-gift-caption-title { display: block; font: 600 15px/1.7 'Songti SC', serif; letter-spacing: 2px; }
+.paw-gift-caption small { display: block; margin-top: 3px; color: #b88e8d; font: 8px/1.5 system-ui, sans-serif; letter-spacing: 1.6px; }
+@keyframes paw-deliver {
+    0% { opacity: 0; transform: translate3d(25px,210px,0) rotate(20deg) scale(.88); }
+    32% { opacity: 1; transform: translate3d(0,0,0) rotate(-9deg) scale(1); }
+    43% { opacity: 1; transform: translate3d(0,9px,0) rotate(-4deg) scale(1.025,.97); }
+    54% { opacity: 1; transform: translate3d(-6px,-23px,0) rotate(-16deg) scale(.98,1.035); }
+    67% { opacity: 1; transform: translate3d(2px,0,0) rotate(-7deg); }
+    100% { opacity: 0; transform: translate3d(28px,220px,0) rotate(18deg) scale(.92); }
+}
+@keyframes paw-aura { 0%,15% { opacity: 0; transform: scale(.7); } 55%,70% { opacity: 1; transform: scale(1.1); } 100% { opacity: 0; transform: scale(1.2); } }
+@keyframes paw-ring { 0% { opacity: 0; transform: scale(.2); } 15% { opacity: .9; } 100% { opacity: 0; transform: scale(2); } }
+@keyframes paw-caption { 0% { opacity: 0; transform: translate(-50%, 12px) scale(.97); } 20%,72% { opacity: 1; transform: translate(-50%, 0) scale(1); } 100% { opacity: 0; transform: translate(-50%, -8px); } }
+@media (prefers-reduced-motion: reduce) {
+    .paw-gift-hand, .paw-gift-heart, .paw-gift-particles, .paw-gift-ring, .paw-gift-aura { display: none; }
+    .paw-gift-caption { animation: paw-caption 1.3s both; }
+}

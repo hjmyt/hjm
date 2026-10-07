@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "chapter": "rl",
+  "runs": {
+    "rl": {
+      "current": "fs_00",
+      "page": 1,
+      "done": [],
+      "flags": {},
+      "score": 0,
+      "ended": false,
+      "ending": null,
+      "chats": {},
+      "chatTotal": 0,
+      "seen": {},
+      "lastChat": null,
+      "poolStage": null
+    },
+    "ep2": {
+      "current": null,
+      "page": 0,
+      "done": [],
+      "flags": {},
+      "score": 0,
+      "ended": false,
+      "ending": null,
+      "chats": {},
+      "chatTotal": 0,
+      "seen": {},
+      "lastChat": null,
+      "poolStage": null
+    },
+    "fm": {
+      "current": null,
+      "page": 0,
+      "done": [],
+      "flags": {},
+      "score": 0,
+      "ended": false,
+      "ending": null,
+      "chats": {},
+      "chatTotal": 0,
+      "seen": {},
+      "lastChat": null,
+      "poolStage": null
+    }
+  }
+}

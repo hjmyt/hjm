@@ -1,0 +1,258 @@
+.gift-performance { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 1500; contain: strict; }
+.gift-scene { position: absolute; left: var(--gift-x); top: var(--gift-y); width: var(--gift-size); height: var(--gift-size); margin-left: calc(var(--gift-size) / -2); margin-top: calc(var(--gift-size) / -2); animation: gift-scene-life 3.7s both; }
+.gift-art-shell { position: absolute; inset: 0; filter: drop-shadow(0 15px 13px #35203938); animation: gift-materialize .85s cubic-bezier(.16,1,.3,1) both; }
+.gift-art { width: 100%; height: 100%; overflow: visible; }
+.gift-local-glow { position: absolute; inset: -8%; border-radius: 50%; background: radial-gradient(ellipse, #fff7eeed 0%, #fff8efd9 22%, color-mix(in srgb, var(--gift-tint) 50%, transparent) 40%, transparent 70%); animation: gift-glow 3.5s both; }
+.gift-orbit { position: absolute; inset: 15%; border: 1px solid color-mix(in srgb, var(--gift-tint) 70%, transparent); border-radius: 50%; transform: rotateX(65deg) rotate(-24deg); box-shadow: 0 0 12px color-mix(in srgb, var(--gift-tint) 40%, transparent); animation: gift-orbit 3.5s both; }
+.gift-orbit-two { inset: 9%; transform: rotateX(65deg) rotate(25deg); animation-delay: .12s; opacity: .4; }
+.gift-object { transform-origin: 200px 240px; animation: gift-object-drift 3.6s both; }
+.gift-receipt { position: absolute; top: 83%; left: 50%; width: max-content; max-width: calc(100vw - 36px); min-width: 200px; transform: translateX(-50%); text-align: center; padding: 12px 26px 14px; border: 1px solid #fff3e2d9; border-radius: 16px; background: linear-gradient(125deg,#fffaf2f5,#fff5f6ee); box-shadow: 0 10px 32px #72536521,inset 0 1px #fff; animation: gift-receipt 1.9s 1.65s both; }
+.gift-receipt-kicker { display: block; font: 10px/1.5 system-ui,sans-serif; letter-spacing: 1px; color: #9c7b82; }
+.gift-receipt strong { display: block; margin: 3px 0 5px; font: 600 19px/1.5 'Songti SC',serif; letter-spacing: 2px; color: #6f4f64; }
+.gift-receipt small { font: 10px/1.5 system-ui,sans-serif; letter-spacing: 2px; color: #a37d87; }
+.gift-dust { position: absolute; left: 50%; top: 50%; width: var(--dot); height: var(--dot); border-radius: 50%; background: var(--gift-tint); box-shadow: 0 0 9px var(--gift-deep); animation: gift-dust 1.25s var(--delay) both; }
+.gift-dust-star { border-radius: 0; clip-path: polygon(50% 0%,60% 39%,100% 50%,61% 61%,50% 100%,39% 61%,0% 50%,39% 39%); background: #fff0c8; }
+.gift-steam { animation: gift-steam 2.7s .35s both; }
+.gift-rise { animation: gift-steam 2.5s .4s both; }
+.gift-bloom { animation: gift-bloom 1.5s calc(.25s + var(--i) * .13s) both; }
+.gift-star-turn { animation: gift-star 2.6s .2s both; }
+.gift-orbit-lines { transform-origin: 200px 198px; animation: gift-orbit-lines 3s both; }
+.gift-photo { animation: gift-photo 3s .15s both; }
+.gift-flash { animation: gift-flash .65s 1.66s both; }
+.gift-clapper { animation: gift-clap 1.8s .2s both; }
+.gift-pearl { animation: gift-pearl .8s calc(.2s + var(--i) * .045s) both; }
+.gift-berry { transform-origin: 200px 180px; animation: gift-bloom 1s .6s both; }
+.gift-note { animation: gift-note 2.7s calc(.25s + var(--i) * .15s) both; }
+.gift-waves { animation: gift-waves 1s .55s 3 both; transform-origin: 200px 200px; }
+.gift-glass-left { animation: gift-cheers-left 2.7s .15s both; }
+.gift-glass-right { animation: gift-cheers-right 2.7s .15s both; }
+.gift-bubble { animation: gift-bubble 1.5s calc(.45s + var(--i) * .16s) both; }
+.gift-lid { animation: gift-lid 3s .2s both; transform-origin: 200px 190px; }
+.gift-box-star { animation: gift-box-star 2s .95s both; transform-origin: 200px 220px; }
+.gift-box-rays { animation: gift-flash 1.8s 1.1s both; }
+@keyframes gift-scene-life { 0% { opacity: 0; } 10%,80% { opacity: 1; } 100% { opacity: 0; } }
+@keyframes gift-materialize { from { opacity: 0; transform: translateY(45px) scale(.72) rotate(-7deg); } to { opacity: 1; transform: none; } }
+@keyframes gift-object-drift { 0%,100% { transform: translateY(5px); } 35% { transform: translateY(-5px); } 65% { transform: translateY(0); } }
+@keyframes gift-glow { 0% { opacity: 0; transform: scale(.5); } 40%,70% { opacity: 1; transform: scale(1.02); } 100% { opacity: 0; transform: scale(1.2); } }
+@keyframes gift-orbit { 0% { opacity: 0; scale: .55; } 25%,70% { opacity: .65; scale: 1; } 100% { opacity: 0; scale: 1.25; } }
+@keyframes gift-receipt { 0% { opacity: 0; transform: translate(-50%,12px); } 20%,75% { opacity: 1; transform: translate(-50%,0); } 100% { opacity: 0; transform: translate(-50%,-7px); } }
+@keyframes gift-dust { 0% { opacity: 0; transform: scale(.3); } 15% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--px),var(--py)) scale(.2); } }
+@keyframes gift-steam { 0% { opacity: 0; transform: translateY(22px); } 35% { opacity: .9; } 100% { opacity: 0; transform: translateY(-28px); } }
+@keyframes gift-bloom { 0% { opacity: 0; scale: .3; rotate: -20deg; } 70% { opacity: 1; scale: 1.08; rotate: 3deg; } 100% { opacity: 1; scale: 1; rotate: 0deg; } }
+@keyframes gift-star { 0% { transform: scale(.5) rotate(-80deg); } 55% { transform: scale(1.08) rotate(8deg); } 100% { transform: scale(1) rotate(0); } }
+@keyframes gift-orbit-lines { from { opacity: 0; transform: rotate(-35deg) scale(.5); } 40%,100% { opacity: .7; transform: rotate(8deg) scale(1); } }
+@keyframes gift-photo { 0%,40% { opacity: 0; transform: translateY(80px) rotate(-10deg); } 70%,100% { opacity: 1; transform: translateY(-30px) rotate(0); } }
+@keyframes gift-flash { 0%,100% { opacity: 0; } 25% { opacity: .85; } }
+@keyframes gift-clap { 0%,55% { transform: rotate(-18deg); } 80%,100% { transform: rotate(0); } }
+@keyframes gift-pearl { from { opacity: 0; translate: 0 -90px; } to { opacity: 1; translate: 0 0; } }
+@keyframes gift-note { 0% { opacity: 0; translate: 0 80px; } 40%,75% { opacity: 1; } 100% { opacity: 0; translate: 0 -22px; } }
+@keyframes gift-waves { 0%,100% { opacity: .15; scale: .93; } 50% { opacity: .85; scale: 1.05; } }
+@keyframes gift-cheers-left { 0% { transform: translateX(-42px) rotate(-12deg); } 60%,72% { transform: translateX(8px) rotate(12deg); } 100% { transform: translateX(-8px) rotate(-3deg); } }
+@keyframes gift-cheers-right { 0% { transform: translateX(42px) rotate(12deg); } 60%,72% { transform: translateX(-8px) rotate(-12deg); } 100% { transform: translateX(8px) rotate(3deg); } }
+@keyframes gift-bubble { from { opacity: 0; translate: 0 18px; } 25% { opacity: .9; } to { opacity: 0; translate: 0 -65px; } }
+@keyframes gift-lid { 0%,27% { transform: translateY(0); } 50%,100% { transform: translate(-5px,-80px) rotate(-9deg); } }
+@keyframes gift-box-star { from { opacity: 0; transform: translateY(75px) scale(.2); } 40%,100% { opacity: 1; transform: translateY(-24px) scale(1); } }
+.gift-performance.is-reduced .gift-scene { animation: gift-scene-life 1.4s both; }
+.gift-performance.is-reduced .gift-art-shell, .gift-performance.is-reduced .gift-orbit, .gift-performance.is-reduced .gift-local-glow { display: none; }
+.gift-performance.is-reduced .gift-receipt { top: 48%; animation: gift-receipt 1.4s both; }
+@media (prefers-reduced-motion: reduce) { .gift-performance * { animation-duration: .01ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; } .gift-performance.is-reduced .gift-scene, .gift-performance.is-reduced .gift-receipt { animation: none !important; } }
+/* Vol. 03: deeper staging, continuous light paths, and object-specific movement. */
+.gift-atmosphere { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+.gift-scene { animation-duration:4.2s; }
+.gift-local-glow { background:radial-gradient(ellipse,#fff7ee85 0%,#fff8ef40 24%,color-mix(in srgb,var(--gift-tint) 35%,transparent) 42%,transparent 70%); animation-duration:4s; }
+.gift-art-shell { filter:drop-shadow(0 16px 16px #2515364d) drop-shadow(0 0 6px color-mix(in srgb,var(--gift-tint) 22%,transparent)); }
+.gift-receipt { animation-duration:2.2s; }
+.gift-stick-left { transform-origin:225px 260px; animation:gift-stick-left 1.1s .55s 2 both; }
+.gift-stick-right { transform-origin:173px 260px; animation:gift-stick-right 1.1s .7s 2 both; }
+.gift-drum-surface { transform-origin:200px 260px; animation:gift-drum-impact 1.1s .55s 2 both; }
+.gift-pick { animation:gift-pick-fan 1.5s calc(.15s + var(--i) * .15s) both; }
+.gift-string-tail { stroke-dasharray:300; animation:gift-line-draw 1.5s .35s both; }
+.gift-racket { transform-origin:145px 295px; animation:gift-racket-swing 2s .2s both; }
+.gift-shuttle { animation:gift-shuttle-flight 2.5s .25s both; }
+.gift-mountain { transform-origin:200px 280px; animation:gift-mountain-rise 1.4s .1s both; }
+.gift-map-route { animation:gift-route-show 1.5s .8s both; }
+.gift-leaf-left { transform-origin:199px 208px; animation:gift-leaf-open 1.4s .2s both; }
+.gift-leaf-right { transform-origin:201px 177px; animation:gift-leaf-open 1.4s .45s both; }
+.gift-leaf-top { transform-origin:198px 143px; animation:gift-leaf-open 1.2s .7s both; }
+.gift-duck { transform-origin:200px 255px; animation:gift-duck-bob 3.7s both; }
+.gift-candy-spin { transform-origin:200px 190px; animation:gift-candy-spin 1.8s .1s both; }
+.gift-lozenge { animation:gift-lozenge-drop .8s calc(.7s + var(--i) * .1s) both; }
+.gift-ribbon-tie, .gift-knot { transform-origin:200px 200px; animation:gift-ribbon-open 1.7s .15s both; }
+.gift-ticket { transform-origin:200px 195px; animation:gift-ticket-enter 1.5s .15s both; }
+.gift-writing { stroke-dasharray:1; animation:gift-write 1.6s .65s both; }
+.gift-pen { transform-origin:180px 260px; animation:gift-pen-write 2.6s .2s both; }
+@keyframes gift-stick-left { 0%,100% { transform:rotate(-20deg); } 45% { transform:rotate(15deg); } 60% { transform:rotate(3deg); } }
+@keyframes gift-stick-right { 0%,100% { transform:rotate(20deg); } 45% { transform:rotate(-15deg); } 60% { transform:rotate(-3deg); } }
+@keyframes gift-drum-impact { 0%,30%,100% { transform:scale(1); } 48% { transform:scale(1.04,.96); } 68% { transform:scale(.98,1.02); } }
+@keyframes gift-pick-fan { from { opacity:0; translate:0 65px; scale:.6; } to { opacity:1; translate:0 0; scale:1; } }
+@keyframes gift-line-draw { from { stroke-dashoffset:300; } to { stroke-dashoffset:0; } }
+@keyframes gift-racket-swing { 0% { opacity:0; transform:rotate(-35deg) translateX(-40px); } 45% { opacity:1; transform:rotate(12deg); } 65%,100% { opacity:1; transform:rotate(0); } }
+@keyframes gift-shuttle-flight { 0%,25% { opacity:0; transform:translate(-100px,100px) rotate(-20deg); } 52% { opacity:1; transform:translate(10px,-18px); } 75%,100% { opacity:1; transform:translate(0,0); } }
+@keyframes gift-mountain-rise { from { opacity:0; transform:translateY(45px) scaleY(.7); } to { opacity:1; transform:none; } }
+@keyframes gift-route-show { from { opacity:0; } to { opacity:1; } }
+@keyframes gift-leaf-open { from { opacity:0; scale:.15; rotate:-30deg; } to { opacity:1; scale:1; rotate:0deg; } }
+@keyframes gift-duck-bob { 0% { opacity:0; transform:translate(-65px,20px) rotate(-12deg); } 25% { opacity:1; transform:translate(0,-7px) rotate(7deg); } 55% { transform:translate(0,4px) rotate(-5deg); } 85%,100% { opacity:1; transform:translate(0,0) rotate(2deg); } }
+@keyframes gift-candy-spin { from { opacity:0; transform:rotate(-60deg) scale(.3); } 75% { opacity:1; transform:rotate(8deg) scale(1.08); } to { opacity:1; transform:rotate(-8deg) scale(1); } }
+@keyframes gift-lozenge-drop { from { opacity:0; translate:0 -65px; } 70% { opacity:1; translate:0 4px; } to { opacity:1; translate:0 0; } }
+@keyframes gift-ribbon-open { from { opacity:0; transform:scaleX(.15) rotate(-20deg); } 75% { opacity:1; transform:scaleX(1.08) rotate(3deg); } to { opacity:1; transform:scaleX(1) rotate(0); } }
+@keyframes gift-ticket-enter { from { opacity:0; transform:perspective(500px) rotateY(70deg) translateY(40px); } to { opacity:1; transform:perspective(500px) rotateY(-8deg) translateY(0); } }
+@keyframes gift-write { from { stroke-dashoffset:1; } to { stroke-dashoffset:0; } }
+@keyframes gift-pen-write { 0% { opacity:0; transform:translate(55px,-30px) rotate(20deg); } 25% { opacity:1; transform:translate(0,0); } 65% { transform:translate(20px,-4px) rotate(4deg); } 100% { opacity:1; transform:translate(24px,-8px) rotate(10deg); } }
+@media (prefers-reduced-motion:reduce) { .gift-atmosphere { display:none; } }
+/* Jade dragon: generated 3D artwork, layered atmosphere and camera motion. */
+.gift-jade-stage { position:absolute; inset:0; overflow:hidden; background:radial-gradient(ellipse at 52% 45%,#103c3e,#071c26 50%,#050e1beF); opacity:0; }
+.gift-jade-depth { position:absolute; inset:-15%; background:radial-gradient(ellipse at 24% 27%,#48bf9f25,transparent 40%),radial-gradient(ellipse at 78% 67%,#ac8adb20,transparent 42%),linear-gradient(115deg,transparent 40%,#cefde609 46%,transparent 52%); }
+.gift-jade-halo { position:absolute; left:50%; top:42%; width:min(95vw,780px); aspect-ratio:1; transform:translate(-50%,-50%); background:radial-gradient(circle,#79e6b719,#7adfce12 33%,transparent 64%); border-radius:50%; }
+.gift-jade-figure { position:absolute; top:2%; left:0; width:100%; height:81%; perspective:1000px; }
+.gift-jade-figure img { display:block; width:100%; height:100%; object-fit:contain; filter:drop-shadow(0 24px 32px #010d17aa); transform-origin:50% 62%; }
+.gift-jade-fog { position:absolute; left:-25%; width:150%; height:38%; opacity:.5; filter:blur(25px); mix-blend-mode:screen; background:radial-gradient(ellipse at 28% 54%,#c9eee129,transparent 35%),radial-gradient(ellipse at 64% 38%,#b6cde630,transparent 38%),radial-gradient(ellipse at 80% 65%,#71d8c324,transparent 30%); }
+.gift-jade-fog-back { top:23%; }
+.gift-jade-fog-front { bottom:14%; opacity:.65; }
+.gift-jade-ring { position:absolute; left:50%; top:65%; width:min(78vw,640px); height:min(20vw,150px); border:1px solid #b1fff360; border-radius:50%; transform:translate(-50%,-50%) rotate(-8deg); box-shadow:0 0 12px #97e8d820,inset 0 0 12px #83d6c61c; }
+.gift-jade-ring-back { top:66%; width:min(85vw,700px); height:min(27vw,190px); opacity:.45; }
+.gift-dragon-sky { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+.gift-jade-seal { position:absolute; left:50%; bottom:15%; transform:translateX(-50%); text-align:center; white-space:nowrap; text-shadow:0 3px 18px #031923; }
+.gift-jade-seal span { display:block; font:10px/1.8 system-ui,sans-serif; color:#9fbab8; letter-spacing:5px; }
+.gift-jade-seal strong { display:block; margin:5px 0 7px; color:#e0f7ea; font:400 clamp(28px,4vw,43px)/1.3 'Songti SC',serif; letter-spacing:10px; }
+.gift-jade-seal small { color:#a8c4c5; font:10px/1.7 system-ui; letter-spacing:3px; }
+.gift-jade-loading { position:absolute; inset:0; display:grid; place-items:center; background:#061822ec; color:#c5e8dd; font:16px/1.5 'Songti SC',serif; letter-spacing:4px; }
+.gift-dragon-skip { position:absolute; right:20px; bottom:max(22px,env(safe-area-inset-bottom)); pointer-events:auto; border:1px solid #bfe9e05c; border-radius:24px; padding:9px 17px; color:#d6eee6; background:#09222be0; font:12px/1.5 system-ui,sans-serif; cursor:pointer; }
+.gift-dragon-skip:focus-visible { outline:2px solid #d6ffe8; outline-offset:4px; }
+.gift-performance-full:not(.is-reduced) .gift-art-shell,.gift-performance-full:not(.is-reduced) .gift-local-glow,.gift-performance-full:not(.is-reduced) .gift-orbit { display:none; }
+.gift-performance-full:not(.is-reduced) .gift-scene { animation:none; left:50%; top:auto; bottom:4%; width:min(90vw,390px); height:70px; margin:0; transform:translateX(-50%); }
+.gift-performance-full:not(.is-reduced) .gift-receipt { top:0; min-width:260px; opacity:0; color:#d5eee5; background:linear-gradient(125deg,#14383bea,#102833ea); border:1px solid #95d1c54d; box-shadow:0 0 35px #5fbea721; animation:none; }
+.gift-performance-full:not(.is-reduced) .gift-receipt strong { color:#d9efe5; font-size:16px; }
+.gift-performance-full:not(.is-reduced) .gift-receipt small,.gift-performance-full:not(.is-reduced) .gift-receipt-kicker { color:#a6bfb9; }
+.is-jade-ready .gift-jade-stage { animation:jade-stage 7.5s both; }
+.is-jade-ready .gift-jade-figure img { animation:jade-camera 7.5s cubic-bezier(.22,.65,.3,1) both; }
+.is-jade-ready .gift-jade-fog-back { animation:jade-fog 7.5s linear both; }
+.is-jade-ready .gift-jade-fog-front { animation:jade-fog 7.5s linear reverse both; }
+.is-jade-ready .gift-jade-seal { animation:jade-seal 3.8s 2.8s both; }
+.gift-performance-full.is-jade-ready .gift-receipt { animation:gift-receipt 1.8s 5.55s both; }
+.gift-performance-full.is-jade-fallback .gift-receipt { animation:gift-receipt 1.7s both; }
+@keyframes jade-stage { 0% {opacity:0} 12%,90% {opacity:1} 100% {opacity:0} }
+@keyframes jade-camera { 0% {opacity:0;transform:perspective(1100px) translate3d(0,65px,0) rotateY(-8deg) scale(.72)} 22% {opacity:1;transform:perspective(1100px) translate3d(0,8px,0) rotateY(-2deg) scale(.94)} 70% {opacity:1;transform:perspective(1100px) translate3d(0,-7px,0) rotateY(2deg) scale(1.015)} 90% {opacity:1;transform:perspective(1100px) translate3d(0,-3px,0) rotateY(0deg) scale(.97)} 100% {opacity:0;transform:translateY(-12px) scale(.94)} }
+@keyframes jade-fog { from {transform:translateX(-5%) scale(1)} to {transform:translateX(7%) scale(1.12)} }
+@keyframes jade-seal { 0% {opacity:0;translate:0 12px} 20%,80% {opacity:1;translate:0 0} 100% {opacity:0;translate:0 -5px} }
+@media(max-width:600px) { .gift-jade-figure {top:8%;height:71%;} .gift-jade-seal {bottom:17%;} .gift-performance-full:not(.is-reduced) .gift-scene {bottom:7%;} .gift-dragon-skip {right:14px;bottom:12px;} }
+@media(prefers-reduced-motion:reduce) { .gift-jade-stage {display:none} }
+/* The complete portrait film stays uncropped on both phones and desktops. */
+.gift-dragon-film { position:absolute; inset:0; background:radial-gradient(ellipse at center,#344f54,#07151e 75%); opacity:0; transition:opacity .45s ease; }
+.gift-dragon-video { position:absolute; inset:0; display:block; width:100%; height:100%; object-fit:contain; }
+.is-video-ready .gift-dragon-film { opacity:1; }
+.gift-performance-full.is-dragon-video .gift-scene { bottom:max(86px,12%); }
+.gift-performance-full.is-video-arrival .gift-receipt { opacity:1; transition:opacity .45s ease; }
+.gift-performance-full.is-video-ended .gift-dragon-film,.gift-performance-full.is-video-ended .gift-receipt { opacity:0; transition:opacity .6s ease; }
+.gift-dragon-resume { position:absolute; top:58%; left:50%; transform:translateX(-50%); pointer-events:auto; background:#d2f4e7; color:#153d37; border:0; border-radius:24px; padding:13px 22px; cursor:pointer; }
+.gift-dragon-resume[hidden] { display:none; }
+/* A box opens into a cloud portal; the gift returns to the actual recipient. */
+.is-dragon-ritual .gift-dragon-film { background:none; opacity:1; }
+.gift-dragon-aperture { position:absolute; left:50%; top:46%; width:min(92vw,43.875vh); height:min(163.55vw,78vh); transform-origin:50% 50%; opacity:0; will-change:transform,opacity; }
+.is-dragon-ritual .gift-dragon-video { mask-image:radial-gradient(ellipse 85% 76% at 50% 50%,#000 60%,transparent 90%),linear-gradient(to right,transparent,#000 9%,#000 91%,transparent),linear-gradient(to bottom,transparent,#000 7%,#000 89%,transparent); mask-composite:intersect; }
+.gift-ritual-veil { position:absolute; inset:0; background:radial-gradient(ellipse at 50% 46%,#1c5963aa,#03131bf5 74%); opacity:0; }
+.gift-ritual-box { opacity:0; position:absolute; width:clamp(220px,33vw,360px); aspect-ratio:320/280; filter:drop-shadow(0 20px 25px #001d26aa); will-change:transform,opacity; }
+.gift-ritual-box svg { display:block; width:100%; height:100%; overflow:visible; }
+.gift-ritual-lid { transform-origin:160px 136px; }
+.gift-ritual-core { opacity:0; }
+.gift-ritual-particles { position:absolute; inset:0; width:100%; height:100%; pointer-events:none; }
+.gift-ritual-title { position:absolute; top:2%; left:50%; width:max-content; max-width:95%; transform:translateX(-50%); text-align:center; text-shadow:0 2px 16px #00272d; color:#e2fff0; }
+.gift-ritual-title span { display:block; font:10px/2 system-ui; letter-spacing:6px; color:#bdeddc; }
+.gift-ritual-title strong { display:block; font:400 clamp(23px,4vw,35px)/1.8 'Songti SC',serif; letter-spacing:5px; }
+.gift-ritual-target { position:absolute; border-radius:24px; border:2px solid #d7ffea; box-shadow:0 0 28px #7dffd2,inset 0 0 32px #8affd877; opacity:0; }
+.gift-performance-full.is-dragon-ritual .gift-scene { bottom:max(88px,10%); }
+.gift-performance-full.is-dragon-ritual .gift-receipt { opacity:0; transition:opacity .35s; }
+.gift-performance-full.is-ritual-delivered .gift-receipt { opacity:1; }
+.is-dragon-ritual .gift-jade-loading { background:transparent; top:auto; bottom:17%; height:24px; font:12px/1.5 system-ui; letter-spacing:2px; }
+.is-dragon-ritual .gift-dragon-skip,.is-dragon-ritual .gift-dragon-resume { z-index:2; }
+/* Alpha films composite their subjects directly over the current game. */
+.gift-encore-video,.gift-encore-poster { position:absolute; left:50%; top:48%; transform:translate(-50%,-50%); width:min(96vw,48.375vh); height:min(170.66vw,86vh); object-fit:contain; opacity:0; transition:opacity .55s; }
+.gift-encore-video { mix-blend-mode:normal; }
+.is-encore-ready .gift-encore-video,.is-encore-ready .gift-encore-poster { opacity:1; }
+.gift-performance-encore:not(.is-reduced) .gift-art-shell,.gift-performance-encore .gift-local-glow,.gift-performance-encore .gift-orbit,.gift-performance-encore .gift-particles { display:none; }
+.gift-performance-encore:not(.is-reduced) .gift-scene { animation:none; left:50%; top:auto; bottom:max(95px,10%); width:min(90vw,390px); height:70px; margin:0; transform:translateX(-50%); z-index:1; }
+.gift-performance-encore:not(.is-reduced) .gift-receipt { top:0; opacity:0; animation:none; background:linear-gradient(125deg,#45274bf0,#24182ff0); border-color:#eac39380; transition:opacity .4s; }
+.gift-performance-encore:not(.is-reduced) .gift-receipt strong { color:#ffe4ec; }
+.gift-performance-encore:not(.is-reduced) .gift-receipt small,.gift-performance-encore:not(.is-reduced) .gift-receipt-kicker { color:#ebccdc; }
+.gift-encore-status { position:absolute; top:48%; left:0; width:100%; text-align:center; color:#ffe1f1; font:16px/1.6 'Songti SC',serif; }
+.is-encore-delivery .gift-encore-video { opacity:0; }
+.gift-performance-encore.is-encore-delivery .gift-receipt { opacity:1; transition-delay:.8s; }
+
+/* Shared gift ritual, recolored for the Encore stage. */
+.gift-encore-stage { position:absolute; inset:0; }
+.gift-encore-stage .gift-encore-video { left:0; top:0; width:100%; height:100%; transform:none; mix-blend-mode:normal; mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent),linear-gradient(to bottom,transparent,#000 9%,#000 95%,transparent); mask-composite:intersect; }
+.gift-performance-encore .gift-ritual-box { filter:hue-rotate(135deg) drop-shadow(0 15px 25px #3a0e36aa); }
+.gift-performance-encore .gift-ritual-veil { background:radial-gradient(ellipse at 50% 46%,#512a52aa,#160b21f5 74%); }
+.gift-performance-encore .gift-ritual-title { color:#ffe3f0; text-shadow:0 2px 16px #4b103a; }
+.gift-performance-encore .gift-ritual-title span { color:#f5cbe0; }
+.gift-performance-encore .gift-ritual-target { border-color:#ffe4c1; box-shadow:0 0 28px #ffa5d5,inset 0 0 32px #ffb1d577; }
+.gift-performance-encore.is-encore-delivery .gift-receipt { opacity:0; transition-delay:0s; }
+.gift-performance-encore.is-ritual-delivered .gift-receipt,.gift-performance-encore.is-encore-fallback .gift-receipt { opacity:1; }
+.gift-performance-encore .gift-encore-status { top:auto; bottom:16%; font-size:12px; }
+
+/* Comfort keeps faces and dark costumes solid; only the outer crop is feathered. */
+.gift-comfort-art { width:100%; height:100%; object-fit:contain; }
+.gift-performance-comfort .gift-encore-stage .gift-encore-video { mask-image:linear-gradient(to right,transparent,#000 2%,#000 98%,transparent),linear-gradient(to bottom,transparent,#000 3%,#000 89%,transparent); }
+.gift-performance-comfort .gift-ritual-veil { background:radial-gradient(ellipse at 50% 46%,#66506b70,#211829ba 85%); }
+.gift-performance-comfort .gift-ritual-title { top:6%; }
+.gift-comfort-baoshi .gift-ritual-box { filter:hue-rotate(225deg) drop-shadow(0 12px 25px #67402280); }
+.gift-comfort-baoshi .gift-ritual-title { color:#ffe6be; }
+.gift-comfort-feihong .gift-ritual-box { filter:hue-rotate(100deg) drop-shadow(0 12px 25px #3d265e80); }
+.gift-comfort-feihong .gift-ritual-title { color:#e8ddff; }
+
+/* Qiqi transformation: ruby-and-gold gift box and warm full-scene stage. */
+.gift-qiqi-transformation .gift-ritual-box { filter:hue-rotate(322deg) saturate(1.12) drop-shadow(0 14px 26px #64251c70); }
+.gift-qiqi-transformation .gift-ritual-veil { background:radial-gradient(ellipse at 50% 46%,#fff0df28,#c9514230 58%,#6c283222 100%); }
+.gift-qiqi-transformation .gift-ritual-title { top:9%; color:#fff0d5; text-shadow:0 2px 18px #73352b90; }
+.gift-qiqi-transformation .gift-ritual-title span { color:#ffe1c1; }
+.gift-qiqi-transformation .gift-ritual-target { border-color:#ffe1b5; box-shadow:0 0 30px #ffc073,inset 0 0 28px #ff9d7d66; }
+.gift-qiqi-transformation .gift-receipt { background:linear-gradient(125deg,#633128ee,#321e27f2); border-color:#ffdfa180; }
+.gift-qiqi-transformation .gift-receipt strong { color:#fff0dc; }
+.gift-qiqi-transformation .gift-receipt small,.gift-qiqi-transformation .gift-receipt-kicker { color:#f8d6bc; }
+.gift-qiqi-transformation .gift-encore-status { color:#fff2e6; }
+
+/* Warm food gifts for Kongge share the soft amber meal-time treatment. */
+.gift-kongge-noodle .gift-ritual-box,.gift-kongge-beefballs .gift-ritual-box { filter:hue-rotate(345deg) saturate(.82) drop-shadow(0 14px 25px #6b482f70); }
+.gift-kongge-noodle .gift-ritual-veil,.gift-kongge-beefballs .gift-ritual-veil { background:radial-gradient(ellipse at 50% 46%,#fff4dc28,#d9a85e25 58%,#89644320 100%); }
+.gift-kongge-noodle .gift-ritual-title,.gift-kongge-beefballs .gift-ritual-title { top:9%; color:#fff1d3; text-shadow:0 2px 18px #59412d90; }
+.gift-kongge-noodle .gift-ritual-title span,.gift-kongge-beefballs .gift-ritual-title span { color:#ffe5b4; }
+.gift-kongge-noodle .gift-ritual-target,.gift-kongge-beefballs .gift-ritual-target { border-color:#ffedc5; box-shadow:0 0 28px #f6d18a,inset 0 0 28px #f5d59c66; }
+.gift-kongge-noodle .gift-receipt,.gift-kongge-beefballs .gift-receipt { background:linear-gradient(125deg,#55412dee,#2d2621f2); border-color:#ffe0a180; }
+.gift-kongge-noodle .gift-receipt strong,.gift-kongge-beefballs .gift-receipt strong { color:#fff1d8; }
+.gift-kongge-noodle .gift-receipt small,.gift-kongge-noodle .gift-receipt-kicker,.gift-kongge-beefballs .gift-receipt small,.gift-kongge-beefballs .gift-receipt-kicker { color:#f4dcba; }
+.gift-kongge-noodle .gift-encore-status,.gift-kongge-beefballs .gift-encore-status { color:#fff4e5; }
+
+/* Tim's badminton-to-violin transformation uses a champagne-gold stage. */
+.gift-tim-transformation .gift-ritual-box { filter:hue-rotate(18deg) saturate(.9) drop-shadow(0 14px 26px #73512b80); }
+.gift-tim-transformation .gift-ritual-veil { background:radial-gradient(ellipse at 50% 46%,#fff7e530,#d5ad6630 58%,#75604422 100%); }
+.gift-tim-transformation .gift-ritual-title { top:9%; color:#fff4d8; text-shadow:0 2px 18px #5c452b90; }
+.gift-tim-transformation .gift-ritual-title span { color:#ffe6b6; }
+.gift-tim-transformation .gift-ritual-target { border-color:#ffebc0; box-shadow:0 0 30px #f4d48f,inset 0 0 28px #f4d48f66; }
+.gift-tim-transformation .gift-receipt { background:linear-gradient(125deg,#57432eee,#29241ff2); border-color:#ffe7b080; }
+.gift-tim-transformation .gift-receipt strong { color:#fff2d4; }
+.gift-tim-transformation .gift-receipt small,.gift-tim-transformation .gift-receipt-kicker { color:#f3ddb0; }
+.gift-tim-transformation .gift-encore-status { color:#fff5dd; }
+.gift-tim-shuttlecue { position:absolute; z-index:3; left:8%; top:51%; width:56px; height:64px; pointer-events:none; opacity:0; filter:drop-shadow(0 0 12px #ffe0a8); animation:gift-tim-shuttle-flight 1.55s cubic-bezier(.2,.72,.22,1) both; }
+.gift-tim-shuttlecue svg { width:100%; height:100%; overflow:visible; }
+@keyframes gift-tim-shuttle-flight { 0% { opacity:0; transform:translate3d(-20px,30px,0) rotate(-45deg) scale(.65); } 14% { opacity:1; } 68% { opacity:1; transform:translate3d(30vw,9vh,0) rotate(32deg) scale(1.05); } 100% { opacity:0; transform:translate3d(39vw,15vh,0) rotate(62deg) scale(.18); } }
+
+/* Full-scene gift films dissolve into the live game instead of reading as a player. */
+.is-gift-full-background .gift-dragon-aperture { top:47%; width:min(96vw,52.3vh); height:min(170.7vw,93vh); }
+.is-gift-full-background .gift-encore-stage .gift-encore-video,
+.is-gift-full-background .gift-encore-poster {
+    -webkit-mask-image:radial-gradient(ellipse 50% 65% at 50% 48%,#000 40%,#0009 70%,transparent 100%);
+    mask-image:radial-gradient(ellipse 50% 65% at 50% 48%,#000 40%,#0009 70%,transparent 100%);
+}
+.is-gift-full-background .gift-encore-poster { width:min(96vw,52.3vh); height:min(170.7vw,93vh); }
+.is-gift-full-background .gift-ritual-veil {
+    background:radial-gradient(ellipse at 50% 44%,#fff3f51a,#f6ebf520 54%,#e1d8ea45 100%);
+    backdrop-filter:blur(2px) saturate(1.08);
+}
+.is-gift-full-background .gift-ritual-box { filter:drop-shadow(0 16px 24px #553e6b38) saturate(.9); }
+.is-gift-full-background .gift-ritual-title { text-shadow:0 2px 18px #65547665; }
+.is-gift-full-background .gift-ritual-target { border-color:#fff0cf; box-shadow:0 0 30px #efc8ff,inset 0 0 26px #fff0cf55; }
+.is-gift-full-background .gift-encore-status { color:#fff4f6; text-shadow:0 2px 14px #30213c; }
+.is-gift-full-background .gift-encore-stage .gift-encore-video { filter:saturate(1.04) contrast(1.015); }
+.is-gift-full-background .gift-encore-stage::after {
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:radial-gradient(ellipse at 50% 48%,transparent 47%,#eee6f012 76%,#e4d8ed38 100%);
+}

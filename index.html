@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f4f6fb">
+<meta name="description" content="收集伙伴、培养羁绊，在节奏舞台和空格考验中一起合奏。">
+<link rel="canonical" href="https://hjmyt.github.io/hjm/">
+<link rel="image_src" href="https://hjmyt.github.io/hjm/assets/welcome-ensemble.jpg">
+<meta itemprop="name" content="恋与哈基米｜乐团养成与音乐挑战">
+<meta itemprop="description" content="收集伙伴、培养羁绊，在节奏舞台和空格考验中一起合奏。">
+<meta itemprop="image" content="https://hjmyt.github.io/hjm/assets/welcome-ensemble.jpg">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="恋与哈基米">
+<meta property="og:title" content="恋与哈基米｜乐团养成与音乐挑战">
+<meta property="og:description" content="收集伙伴、培养羁绊，在节奏舞台和空格考验中一起合奏。">
+<meta property="og:url" content="https://hjmyt.github.io/hjm/">
+<meta property="og:image" content="https://hjmyt.github.io/hjm/assets/welcome-ensemble.jpg">
+<meta property="og:image:secure_url" content="https://hjmyt.github.io/hjm/assets/welcome-ensemble.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1448">
+<meta property="og:image:height" content="1086">
+<meta property="og:image:alt" content="恋与哈基米的乐团排练场景">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="恋与哈基米｜乐团养成与音乐挑战">
+<meta name="twitter:description" content="收集伙伴、培养羁绊，在节奏舞台和空格考验中一起合奏。">
+<meta name="twitter:image" content="https://hjmyt.github.io/hjm/assets/welcome-ensemble.jpg">
+<title>恋与哈基米 · V6.3 剧场之夜版</title>
+<link rel="stylesheet" href="styles/base.css?v=7ba782485b9b">
+<link rel="stylesheet" href="styles/cards.css?v=fee9db2f5379">
+<link rel="stylesheet" href="styles/chronicle.css?v=6c1e2e223783">
+<link rel="stylesheet" href="styles/character-skills.css?v=be62731343cf">
+<link rel="stylesheet" href="styles/chronicle-chapters.css?v=978378d54223">
+<link rel="stylesheet" href="styles/lala.css?v=f9ea6f4c49c2">
+<link rel="stylesheet" href="styles/theme.css?v=82c64b50b524">
+<link rel="stylesheet" href="styles/chronicle-weeks.css?v=ff14e4220152">
+<link rel="stylesheet" href="styles/album.css?v=68c10e951c56">
+<link rel="stylesheet" href="styles/chronicle-reader.css?v=b36f0a42a63b">
+<link rel="stylesheet" href="styles/chronicle-training.css?v=cfae256cd7a5">
+<link rel="stylesheet" href="styles/chronicle-personal.css?v=703143138141">
+<link rel="stylesheet" href="styles/gift-cards.css?v=1fa531c8f941">
+<link rel="stylesheet" href="styles/fusion.css?v=bdd3525c333c">
+<link rel="stylesheet" href="styles/paw-gift.css?v=5fdee2256211">
+<link rel="stylesheet" href="styles/story-cinematic.css?v=41ff47d6af78">
+<link rel="stylesheet" href="styles/gift-effects.css?v=a45db1123f20">
+<link rel="stylesheet" href="styles/pitch-audition.css?v=d01620246396">
+<link id="pitchAuditionGameStyle" rel="stylesheet" href="styles/game-pitch-audition.css?v=7c8baaca7872" media="not all">
+<link id="rhythmAuditionGameStyle" rel="stylesheet" href="styles/game-rhythm-audition.css?v=fbb08ead5498" media="not all">
+<link rel="stylesheet" href="styles/story-redesign.css?v=e616deffa917">
+</head>
+<body>
+<div class="shell">
+<header class="site-header">
+ <button class="brand" data-route="home" aria-label="恋与哈基米，返回排练室"><span class="brand-mark" data-icon="paw"></span><span><span class="brand-title">恋与哈基米</span><span class="brand-en" style="display:block">LOVE &amp; HAKIMI · 乐团篇</span></span></button>
+ <nav class="main-nav" aria-label="主导航">
+  <button class="nav-btn active" data-route="home" aria-current="page"><span data-icon="home"></span><span>排练室</span></button>
+  <button class="nav-btn" data-route="cards"><span data-icon="cards"></span><span>乐团卡册</span></button>
+  <button class="nav-btn" data-route="care"><span data-icon="cat"></span><span>喵咪小屋</span></button>
+  <button class="nav-btn" data-route="chronicle"><span data-icon="album"></span><span>乐团剧情</span></button>
+  <button class="nav-btn" data-route="rhythm"><span data-icon="music"></span><span>节奏舞台</span></button>
+  <button class="nav-btn" data-route="pitch"><span data-icon="sound"></span><span>空格考验</span></button>
+  <button class="nav-btn" data-route="album"><span data-icon="album"></span><span>回忆相册</span></button>
+ </nav>
+ <div class="header-tools"><button class="icon-btn" id="helpBtn" aria-label="游玩指南" title="游玩指南"><span data-icon="help"></span></button><button class="icon-btn" id="soundBtn" aria-label="切换声音"></button><button class="icon-btn" id="settingsBtn" aria-label="设置与存档" title="设置与存档"><span data-icon="settings"></span></button></div>
+</header>
+<section class="topline" aria-label="今日概览">
+ <div class="page-heading"><div class="eyebrow" id="pageEyebrow">MUSIC, CATS &amp; LITTLE MOMENTS</div><h1 id="pageTitle">今天，也来合奏一点快乐。</h1><div class="greeting-line"><span data-icon="sun" class="tiny"></span><span id="greeting">欢迎回来，乐团新人。你的专属座位，一直为你留着。</span></div></div>
+ <div class="stats"><span class="stat-pill"><span data-icon="music"></span><strong id="coinStat">30</strong><span class="stat-label">音符</span></span><span class="stat-pill level-stat"><span data-icon="team"></span><strong id="orchestraLevelStat">1</strong><span class="stat-label">乐团等级</span></span><span class="stat-pill level-stat"><span data-icon="stats"></span><strong id="bandLevelStat">1</strong><span class="stat-label">乐队等级</span></span></div>
+</section>
+<main>
+<div id="siteMusicControls" aria-label="网站背景音乐"></div>
+<section id="view-home" class="view" aria-label="排练室">
+ <div id="chronicleHomeGate" class="cp-homegate" aria-label="乐团正传四章入口"></div>
+ <div id="cardEvent" class="home-premiere"></div>
+ <div class="home-grid">
+  <article class="card home-feature" id="homeFeature" aria-label="当前陪伴角色"></article>
+  <article class="card pet-card"><div class="section-card-top"><h2 class="section-title"><span data-icon="paw"></span>喵咪休息室</h2><span class="label-tag" id="petMoodTag">等你摸摸</span></div><div class="pet-scene"><div class="pet-bubble pet-speech">你来啦！<br>今天也想贴贴。</div><button class="cat-touch" data-care="pet" aria-label="摸摸哈基米"><img data-asset="cat" alt="戴着金色小铃铛的灰白猫咪哈基米"></button><div class="pet-caption">轻轻点一下，收获一声呼噜</div></div><div class="pet-progress"><div class="progress-label"><span><span class="pet-name">哈基米</span>的羁绊分</span><span class="pet-aff-text">0 / 100</span></div><div class="progress-track"><div class="progress-fill pet-aff-bar"></div></div></div><div class="pet-actions"><button class="btn" data-care="pet"><span data-icon="hand"></span>摸摸</button><button class="btn" data-care="feed"><span data-icon="fish"></span>喂食 <small>10 ♪</small></button><button class="btn" data-care="play"><span data-icon="ball"></span>逗逗猫</button></div></article>
+ </div>
+ <div class="roster-heading"><div><h2><span data-icon="cards"></span>把每一次相遇，收进卡册。</h2><p class="tiny" id="homeCollectionCount"></p></div><button class="text-btn" data-route="cards">全部卡牌<span data-icon="arrow"></span></button></div><div class="home-card-rail" id="homeRoster" aria-label="角色卡牌详情入口"></div>
+ <div class="lower-title"><h2>把喜欢，慢慢收集起来</h2><span class="tiny">LITTLE THINGS, BIG FEELINGS</span></div>
+ <div class="activity-grid">
+  <button class="card activity-card" data-route="rhythm"><span class="activity-icon"><span data-icon="music"></span></span><div><h3>一起合奏吧</h3><p>让猫爪，落在心动的节拍上</p><span class="mini-link">开始演奏<span data-icon="arrow"></span></span></div></button>
+  <button class="card activity-card" id="homeAlbumBtn"><span class="activity-icon cream"><span data-icon="camera"></span></span><div><h3>定格小小瞬间</h3><p id="homeAlbumText">已珍藏 1 张乐团回忆</p><span class="mini-link">翻开相册<span data-icon="arrow"></span></span></div></button>
+  <button class="card activity-card" id="giftBtn"><span class="activity-icon sage"><span data-icon="gift"></span></span><div><h3>来自乐团的礼物</h3><p>兑换礼品卡，收下乐团的心意</p><span class="mini-link" id="giftLink">拆开礼物<span data-icon="arrow"></span></span></div></button>
+ </div>
+ <div class="daily-strip"><div class="daily-left"><span data-icon="sparkles"></span><div><div class="daily-title">今日份的小幸福</div><div class="daily-sub">故事、陪伴与达标演奏，慢慢积累音符</div></div></div><div class="daily-items" id="dailyItems"></div><button class="btn secondary small" id="dailyClaim">领取 10 ♪</button></div>
+</section>
+<section id="view-care" class="view" hidden aria-label="喵咪小屋">
+ <div class="screen-head"><div><div class="eyebrow">A SOFT PLACE TO LAND</div><h2>有猫在等你的日子</h2><p>不必赶进度。今天的任务，只是陪它待一会儿。</p></div><button class="btn ghost small" id="renamePet"><span data-icon="edit"></span>给猫起名</button></div>
+ <div class="care-grid"><article class="card big-pet"><div class="section-card-top"><h3 class="section-title"><span data-icon="paw"></span><span class="pet-name">哈基米</span>的小角落</h3><span class="label-tag">乐团第 <span id="togetherDays">1</span> 天</span></div><div class="pet-scene"><div class="pet-bubble pet-speech">你来啦！<br>今天也想贴贴。</div><button class="cat-touch" data-care="pet" aria-label="轻轻摸摸猫咪"><img data-asset="cat" alt="窝在排练室的灰白猫咪"></button><div class="pet-caption">猫咪永远记得，对它温柔的人。</div></div><div class="pet-actions"><button class="btn" data-care="pet"><span data-icon="hand"></span>摸摸</button><button class="btn" data-care="feed"><span data-icon="fish"></span>喂食 10 ♪</button><button class="btn" data-care="play"><span data-icon="ball"></span>逗猫</button><button class="btn" data-care="rest"><span data-icon="moon"></span>休息</button></div></article><div class="care-side"><article class="card care-data"><h3>今天，也是被偏爱的小猫</h3><div class="pet-progress"><div class="progress-label"><span>我们的羁绊分</span><span class="pet-aff-text">0 / 100</span></div><div class="progress-track"><div class="progress-fill pet-aff-bar"></div></div></div><div id="petNeeds"></div><p class="tiny">摸摸不消耗音符；喂食消耗 10 音符、羁绊分 +1，每天最多 3 次；摸摸与逗猫每日合计最多 +1 分；逗猫会花一点精力。休息能恢复精力，离开页面也不会让猫咪变差。</p></article><article class="card camera-card"><span class="activity-icon cream"><span data-icon="camera"></span></span><div><h3 class="section-title">把这声呼噜，收藏起来</h3><p>拍张纪念照，存进你的回忆相册。</p><button class="btn secondary small" id="takePhoto"><span data-icon="camera"></span>拍一张合影</button></div></article><div style="padding:7px 13px"><div class="small-quote">“喜欢你这件事，<br>小猫从来不会藏起来。”</div></div></div></div>
+</section>
+<section id="view-story" class="view" hidden aria-label="心动故事">
+ <div class="cp-switch"><button class="btn ghost" data-route="chronicle"><span data-icon="album"></span>乐团正传</button><button class="btn cp-current" data-route="story"><span data-icon="heart"></span>心动故事</button><span class="cp-switch-note">正传会改变周目，日常仍可以轻松相遇。</span></div>
+ <div id="storyMusicControls"></div><div id="storySelect"><div class="screen-head"><div><div class="eyebrow">EVERY MEETING IS A PRELUDE</div><h2>相遇，是故事的前奏</h2><p>从排练间隙到下一次合奏，翻开伙伴的专属日常。</p></div><span class="label-tag" id="storyCount">已完成 0 / 10</span></div><div class="char-grid" id="characterGrid"></div><div class="note-box"><span data-icon="heart"></span><span>这里没有选错的答案。不同回应会得到不同对白；读完一段故事，即可收藏一张专属回忆。重读可以体验另一条分支。</span></div></div>
+ <div id="storyPlayer" hidden><div class="story-stage"><img class="story-bg" data-asset="ensemble" alt="排练室背景"><img class="story-character" id="storyPortrait" alt="当前对话角色"><div class="story-top"><button class="btn small" id="exitStory"><span data-icon="back"></span>返回角色</button><span class="story-location" id="storyLocation">排练室 · 19:30</span><div class="story-progress" id="storyProgress"></div></div><div class="story-time" id="storySceneTitle">排练之前<br>刚好遇见你<small>THE PRELUDE TO US</small></div><div class="dialogue-box"><div class="speaker" id="speaker"></div><div class="story-text" id="storyText" aria-live="polite"></div><div class="story-options" id="storyOptions" hidden></div><div class="story-next-line" id="storyNextLine"><span class="tiny" id="storyTip">每一次相遇，都值得认真听见。</span><button class="btn primary small" id="storyNext">继续<span data-icon="arrow"></span></button></div></div></div></div>
+</section>
+<section id="view-rhythm" class="view" hidden aria-label="节奏舞台">
+ <div class="screen-head rhythm-controls"><div class="rhythm-key-guide"><span class="desktop-only"><kbd>D</kbd><kbd>F</kbd><kbd>J</kbd><kbd>K</kbd></span><span class="desktop-only">接住猫爪，跟上节拍</span><span class="mobile-only">轻点琴键，接住落下的猫爪</span></div><button class="btn ghost small" id="rhythmGuide"><span data-icon="help"></span>玩法</button></div>
+ <div id="rhythmTeam" class="rhythm-team-panel"></div>
+<div class="rhythm-layout"><article class="card track-card"><div class="record" id="record"><div class="record-core"><span data-icon="music"></span></div></div><h3 id="trackName">恋与哈基米（编曲 · 垃垃）</h3><p id="trackDesc">从原曲 00:00 到完整尾声，跟着鼓点演奏。</p><div class="track-chip"><span id="trackKind">原曲录音 · 完整版</span><span id="trackBpm">143.2 BPM</span><span id="trackDuration">约 155 秒</span></div><label for="trackSelect" class="form-label">选择一首曲子</label><select class="track-select" id="trackSelect"><option value="2" selected>01　恋与哈基米（编曲 · 垃垃）</option><option value="0">02　晚风排练曲 · C 大调</option><option value="1">03　猫步小夜曲 · A 小调</option><option value="3">04　miau in C（哈基米之歌）</option><option value="4">05　畅游</option><option value="5">06　千与千寻</option><option value="6">07　蒲公英的约定</option></select><div class="form-label">演奏难度</div><div class="mode-picker"><button class="mode-btn active" data-mode="gentle">初见 · 简单</button><button class="mode-btn" data-mode="normal">合奏 · 困难</button></div><button class="btn primary" id="startGame"><span data-icon="play"></span>开始演奏</button><button class="btn ghost small" id="restartGame"><span data-icon="repeat"></span>从头再来</button></article>
+ <article class="stage-card"><div class="stage-top"><div><small>SCORE</small><strong id="gameScore">000000</strong></div><div style="text-align:center"><small id="gameTrackLabel">恋与哈基米（编曲 · 垃垃）</small><span class="tiny" id="gameTime">00:00 / 02:34</span></div><button class="icon-btn" id="pauseGame" aria-label="暂停或继续演奏"><span data-icon="pause"></span></button></div><div class="canvas-area" id="canvasArea"><canvas id="rhythmCanvas" aria-label="四轨节奏舞台；可按 D、F、J、K 或点击下方四个琴键演奏"></canvas><div class="game-overlay" id="gameOverlay"></div></div><div class="lane-buttons" id="laneButtons"><button class="lane-btn" data-lane="0" aria-label="第一轨，D 键"><span data-icon="paw"></span><span>D</span></button><button class="lane-btn" data-lane="1" aria-label="第二轨，F 键"><span data-icon="paw"></span><span>F</span></button><button class="lane-btn" data-lane="2" aria-label="第三轨，J 键"><span data-icon="paw"></span><span>J</span></button><button class="lane-btn" data-lane="3" aria-label="第四轨，K 键"><span data-icon="paw"></span><span>K</span></button></div><div class="stage-bottom"><span class="desktop-only">D · F · J · K 演奏 / Esc 暂停</span><span class="mobile-only">点击四个琴键，接住猫爪音符</span><span id="audioStatus">♪ 点击开始后播放</span></div></article>
+ <aside class="rhythm-stats"><article class="card score-card"><div class="eyebrow">CURRENT COMBO</div><div class="score-number" id="gameCombo">0</div><div class="score-caption">最高连击 <span id="gameMaxCombo">0</span></div><div class="mini-line"></div><div class="legend-row"><span>PERFECT</span><strong id="perfectCount">0</strong></div><div class="legend-row"><span>GOOD</span><strong id="goodCount">0</strong></div><div class="legend-row"><span>NICE</span><strong id="niceCount">0</strong></div><div class="legend-row"><span>MISS</span><strong id="missCount">0</strong></div></article><article class="card score-card"><div class="eyebrow">PERSONAL BEST</div><div class="score-number" id="bestScore">0</div><div class="score-caption" id="bestRank">这首歌，还在等你的第一次演奏</div></article><div class="rhythm-help"><h4>写给第一次合奏的你</h4>等猫爪的中心落到横线，再轻轻按下琴键。<br>连击越多，心动越多。<br><br>OP、miau in C、《畅游》、《千与千寻》和《蒲公英的约定》均为完整原曲录音；两档难度保持原速。《晚风排练曲》和《猫步小夜曲》使用浏览器合成音色。</div></aside>
+ </div>
+</section>
+<section id="view-pitch" class="view" hidden aria-label="空格考验">
+ <div id="pitchTeam" class="rhythm-team-panel"></div>
+ <div class="pitch-challenge-layout" id="pitchChallengeRoom">
+  <aside class="pitch-challenge-nav" id="pitchChallengeNav" aria-label="选择空格考验">
+   <div class="pitch-challenge-nav-head"><span class="eyebrow">CHALLENGE ROOM</span><h3>今天练什么？</h3><p>两种考验共用每日音符额度。</p></div>
+   <button class="pitch-challenge-option active" id="pitchChallengeTone" type="button" data-pitch-challenge="pitch" aria-pressed="true"><span class="pitch-challenge-icon" data-icon="sound"></span><span><strong>音准辨音</strong><small>听出走调，再把音调回来</small></span><em>6 分</em></button>
+   <button class="pitch-challenge-option" id="pitchChallengeRhythm" type="button" data-pitch-challenge="rhythm" aria-pressed="false"><span class="pitch-challenge-icon" data-icon="music"></span><span><strong>节奏听写</strong><small>看谱拍击，或听节奏写谱</small></span><em>4 阶</em></button>
+  </aside>
+  <div class="pitch-game-wrap" id="pitchGameMount" aria-live="polite"></div>
+ </div>
+ <p id="pitchRewardStatus" class="pitch-reward-status" role="status" aria-live="polite">完成三题后，按得分领取音符；编队伙伴共享合奏羁绊额度。</p>
+</section>
+<section id="view-album" class="view" hidden aria-label="回忆相册">
+ <div class="screen-head album-heading"><div><div class="eyebrow">KEEP THE MOMENTS THAT MATTER</div><h2>喜欢，是慢慢装满的相册</h2><p id="albumDescription">不必把每一天过得特别。我们记住的，都是小事。</p></div><div class="album-tools"><button class="filter-btn active" data-filter="all">全部回忆</button><button class="filter-btn" data-filter="unlocked">已收藏</button></div></div><div class="album-grid" id="albumGrid"></div><div class="note-box"><span data-icon="camera"></span><span>点击已解锁的照片，可以查看回忆并保存纪念图。所有回忆只保存在当前浏览器，不会上传。</span></div>
+</section>
+<section class="view" id="view-cards" aria-label="乐团卡册" hidden></section>
+<section class="view" id="view-card" aria-label="角色卡牌详情" hidden></section>
+<section class="view" id="view-chronicle" aria-label="乐团正传" hidden></section>
+<section class="view" id="view-fusion" aria-label="融合线" hidden></section>
+</main>
+<footer class="page-footer"><div class="footer-note"><span data-icon="paw"></span><span>不只是周边，也是可以一起玩的心动回忆。</span></div><button class="text-btn" id="footerHelp">V6.3 · 剧场之夜 · 自动存档</button></footer>
+</div>
+<div class="music-welcome-backdrop" id="musicWelcome">
+ <section class="music-welcome" role="dialog" aria-modal="true" aria-labelledby="musicWelcomeTitle" aria-describedby="musicWelcomeText">
+  <figure class="music-welcome-art"><img src="assets/welcome-ensemble.jpg" alt="乐团伙伴们在温暖的排练室里一起合奏"></figure>
+  <div class="music-welcome-mark" aria-hidden="true">♪</div>
+  <div class="eyebrow">LOVE &amp; HAKIMI · 乐团篇</div>
+  <h2 id="musicWelcomeTitle">欢迎来到《恋与哈基米》</h2>
+  <p id="musicWelcomeText">戴上耳机，一起开启今天的乐团故事。</p>
+  <div class="music-welcome-actions">
+   <button class="btn primary" type="button" data-music-enter><span data-icon="music"></span>进入乐团</button>
+   <button class="btn ghost" type="button" data-music-enter-muted>静音进入</button>
+  </div>
+  <small>点击“进入乐团”后，背景音乐将循环播放。</small>
+ </section>
+</div>
+<div class="toast-stack" id="toastStack" role="status" aria-live="polite" aria-atomic="false"></div>
+<div class="modal-backdrop" id="modalBackdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1"><div class="modal-header"><h2 id="modalTitle"></h2><button class="icon-btn" id="closeModal" aria-label="关闭弹窗"><span data-icon="close"></span></button></div><div id="modalContent"></div></section></div>
+<input type="file" id="importInput" accept="application/json,.json" hidden>
+<noscript><div style="padding:30px;text-align:center;color:#95566f">这个小游戏需要开启 JavaScript。请保留完整项目目录，并用浏览器打开 index.html。</div></noscript>
+<!-- Classic scripts intentionally preserve file:// support. Keep dependency order; bootstrap is last. -->
+<script defer src="js/core/utils.js?v=55122f0926d4"></script>
+<script defer src="js/ui/icons.js?v=917f32c79a18"></script>
+<script defer src="js/data/assets.js?v=779c378fb529"></script>
+<script defer src="js/data/chapter-seven.js?v=fc28d5f15260"></script>
+<script defer src="js/data/characters.js?v=be3fb8e69e14"></script>
+<script defer src="js/data/chronicle-art.js?v=7e589e7fe712"></script>
+<script defer src="js/data/story-cinematics.js?v=a16df03f1bbf"></script>
+<script defer src="js/data/personal-routes.js?v=c541175dec36"></script>
+<script defer src="js/data/fusion-routes.js?v=266d6aad49d5"></script>
+<script defer src="js/data/fusion-art.js?v=7eb8397821d0"></script>
+<script defer src="js/data/memories.js?v=83a527118d4f"></script>
+<script defer src="js/data/cards.js?v=5c9929f80a34"></script>
+<script defer src="js/data/stories.js?v=7b8e1b84ac47"></script>
+<script defer src="js/data/tracks.js?v=e8ee85c95080"></script>
+<script defer src="js/data/tracks-extra.js?v=7b37d22aba47"></script>
+<script defer src="js/data/chronicle.js?v=69eedfeb8360"></script>
+<script defer src="js/data/chronicle-training.js?v=40d62315e815"></script>
+<script defer src="js/data/chronicle-weeks.js?v=c9c4b4ca957d"></script>
+<script defer src="js/core/economy.js?v=1648af93278e"></script>
+<script defer src="js/core/bonds.js?v=4c0b417975e7"></script>
+<script defer src="js/core/progression.js?v=abf0ff927c18"></script>
+<script defer src="js/core/fusion-state.js?v=596eb38c5144"></script>
+<script defer src="js/core/state.js?v=7951e0fc61cb"></script>
+<script defer src="js/cards/state.js?v=87282d13a496"></script>
+<script defer src="js/cards/model.js?v=6b8940826dd0"></script>
+<script defer src="js/cards/preload.js?v=b6f969c3349f"></script>
+<script defer src="js/cards/unlocks.js?v=74386df477ea"></script>
+<script defer src="js/cards/skills/source.js?v=d7f271acbd47"></script>
+<script defer src="js/cards/skills/qiqi.js?v=578c07ff8c4c"></script>
+<script defer src="js/cards/skills/expansion.js?v=2d9bb2436441"></script>
+<script defer src="js/cards/skills/trio.js?v=135282faccd3"></script>
+<script defer src="js/cards/skills/lala.js?v=6d30ce782f28"></script>
+<script defer src="js/chronicle/art.js?v=d16c064b5011"></script>
+<script defer src="js/chronicle/pulse.js?v=2badbe2411f2"></script>
+<script defer src="js/chronicle/ear.js?v=8501181bed5f"></script>
+<script defer src="js/chronicle/training.js?v=12b7c7d4608c"></script>
+<script defer src="js/chronicle/weeks.js?v=41e428cd9d86"></script>
+<script defer src="js/chronicle/bar.js?v=64262481cd90"></script>
+<script defer src="js/chronicle/seven.js?v=a9ab64eda01e"></script>
+<script defer src="js/chronicle/personal.js?v=f960a50e1fad"></script>
+<script defer src="js/chronicle/persistence.js?v=b59a10b36958"></script>
+<script defer src="js/chronicle/encounters.js?v=4c9e85dcc72d"></script>
+<script defer src="js/chronicle/activities.js?v=69cfb3c2fa4e"></script>
+<script defer src="js/chronicle/performance.js?v=400cd20d6b4d"></script>
+<script defer src="js/chronicle/library.js?v=9f6825112e9d"></script>
+<script defer src="js/chronicle/views.js?v=ccea18ffe638"></script>
+<script defer src="js/chronicle/chapters/one.js?v=47a62f347ca9"></script>
+<script defer src="js/chronicle/chapters/two.js?v=8ffbfeec7d32"></script>
+<script defer src="js/chronicle/chapters/three.js?v=0fab25e1f768"></script>
+<script defer src="js/chronicle/chapters/four.js?v=02d003070ca1"></script>
+<script defer src="js/chronicle/chapters/five-six.js?v=1a7c1325a5fb"></script>
+<script defer src="js/chronicle/index.js?v=179c647b94d0"></script>
+<script defer src="js/audio/story-bgm.js?v=29eeb36a2e5b"></script>
+<script defer src="js/audio/rhythm-recording.js?v=b53b0982f71b"></script>
+<script defer src="js/audio/synth.js?v=b0f86ccd5a48"></script>
+<script defer src="js/features/pet.js?v=b8723df27691"></script>
+<script defer src="js/data/gift-keys.js?v=a8649d050684"></script>
+<script defer src="js/features/gift-cards.js?v=2637d2115ed5"></script>
+<script defer src="js/features/settings.js?v=696725564075"></script>
+<script defer src="js/features/stories.js?v=a60f57044e15"></script>
+<script defer src="js/features/album.js?v=8aa5b65b3401"></script>
+<script defer src="js/features/rhythm.js?v=06633ed1fd1a"></script>
+<script defer src="js/features/pitch-audition-game.js?v=c9ec5250842c"></script>
+<script defer src="js/data/rhythm-audition.js?v=57fe2505d6d3"></script>
+<script defer src="js/features/rhythm-audition-rules.js?v=bea98e72e98a"></script>
+<script defer src="js/audio/rhythm-audition-voices.js?v=483694602c95"></script>
+<script defer src="js/features/rhythm-audition-game.js?v=8c29cb16a669"></script>
+<script defer src="js/features/pitch-audition.js?v=8240acba201a"></script>
+<script defer src="js/features/fusion.js?v=3e5097aeb40c"></script>
+<script defer src="js/cards/views.js?v=3545601fd8d1"></script>
+<script defer src="js/cards/actions.js?v=9c21d98184d2"></script>
+<script defer src="js/cards/recruitment.js?v=e25cc8e4289c"></script>
+<script defer src="js/cards/performance.js?v=fe3697a9dd67"></script>
+<script defer src="js/audio/paw-gift.js?v=ae55d3db5b46"></script>
+<script defer src="js/ui/story-cinematic.js?v=d1024aa769bf"></script>
+<script defer src="js/data/gift-effects.js?v=0b2426235c0d"></script>
+<script defer src="js/ui/gift-art-extra.js?v=0273de5da439"></script>
+<script defer src="js/ui/gift-art.js?v=4dec0aacf9e2"></script>
+<script defer src="js/ui/gift-atmosphere.js?v=677cdbb4f879"></script>
+<script defer src="js/ui/gift-media.js?v=7b23f3eac8cb"></script>
+<script defer src="js/ui/gift-dragon.js?v=f11d38e536ba"></script>
+<script defer src="js/ui/gift-encore.js?v=5b7d1504ac02"></script>
+<script defer src="js/ui/gift-effects.js?v=408e27310f7e"></script>
+<script defer src="js/ui/paw-gift.js?v=9d4277e2a159"></script>
+<script defer src="js/ui/common.js?v=4336bd0c13e2"></script>
+<script defer src="js/ui/shell.js?v=ab6a7a29d60c"></script>
+<script defer src="js/app/events.js?v=d19682052c25"></script>
+<script defer src="js/app/bootstrap.js?v=66bcea9e0c37"></script>
+</body>
+</html>

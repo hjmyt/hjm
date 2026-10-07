@@ -1,0 +1,1251 @@
+/* October story prototype: warm illustrated pages, porcelain surfaces and rose accents. */
+body:is([data-view="chronicle"],[data-view="fusion"]) {
+  --story-ink:#233455; --story-muted:#7e8bae; --story-pink:#dc4b88;
+  --story-line:#e2e6f2; --story-paper:#fffdfd;
+  background:radial-gradient(ellipse at 0 0,#fff0f2 0,transparent 55%),#fcfbff;
+  color:var(--story-ink);
+}
+body:is([data-view="chronicle"],[data-view="fusion"]) .topline {display:none}
+:is(#view-chronicle,#view-fusion) {max-width:1120px;margin:auto;color:#233455}
+body:is([data-view="chronicle"],[data-view="fusion"]) .page-footer {display:none}
+body:is([data-view="chronicle"],[data-view="fusion"]) main {min-height:calc(100dvh - 128px)}
+:is(#view-chronicle,#view-fusion) .btn.primary,.story-unlock .btn.primary {
+  background:linear-gradient(125deg,#ed83b0,#df3f83);border:1px solid #f4a6c8;color:#fff;box-shadow:0 7px 24px #da4b8515;
+}
+:is(#view-chronicle,#view-fusion) .btn.secondary {background:#f8f9ff;border:1px solid #dee4f4;color:#56668b}
+:is(#view-chronicle,#view-fusion) button:focus-visible,.story-unlock button:focus-visible {outline:3px solid #5684e4;outline-offset:4px}
+.story-library {padding:0 20px 30px}
+.story-library-hero {position:relative;min-height:295px;display:flex;align-items:center;margin:0 -20px;padding:36px 28px 46px;isolation:isolate;background:linear-gradient(90deg,#fff7f9ed 0,#fff9faba 32%,#fff9fa05 65%),url('../assets/story/piano-cat-hero.jpg') 75% 57% / cover;border-radius:22px 22px 0 0}
+.story-library-hero:after {content:'';position:absolute;inset:60% 0 0;background:linear-gradient(transparent,#fcfbff);z-index:-1}
+.story-library-hero h1 {font:600 clamp(42px,6vw,68px)/1.15 var(--serif);letter-spacing:5px;color:#684645;margin:0}
+.story-signature {display:block;font:italic 24px/1.4 'Georgia',serif;color:#ec8db4;letter-spacing:2px}
+.story-library-hero p {font-size:16px;color:#928393;line-height:1.85;margin:13px 0 0}
+.story-hero-note {position:absolute;right:12%;top:35px;transform:rotate(-10deg);font:italic 18px/1.8 var(--serif);color:#b44f6d}
+.story-tabs {position:relative;display:grid;grid-template-columns:repeat(3,1fr);padding:8px;background:#ffffffd9;border:1px solid #efedf6;border-radius:18px;gap:5px;margin:-18px 0 20px;box-shadow:0 4px 16px #9d739008}
+.story-tabs button {padding:13px 5px;background:#f5f3f8;border:0;border-radius:12px;color:#93808d;font-size:18px;cursor:pointer}
+.story-tabs .active {background:linear-gradient(120deg,#f289bc,#d94082);color:white;box-shadow:inset 0 1px 0 #ffcee6}
+.story-resume {display:grid;grid-template-columns:120px minmax(0,1fr) auto;gap:23px;align-items:center;padding:18px;border:1px solid #efccd9;border-radius:18px;background:linear-gradient(130deg,#fff,#fff7fa);margin:0 0 28px}
+.story-resume>img {width:120px;height:110px;object-fit:cover;border-radius:14px}
+.story-resume small {font-size:13px;color:#b35573}
+.story-resume h2 {font:600 25px/1.5 var(--serif);margin:7px 0 0;color:#392d3d}
+.story-resume p {color:#80869e;font-size:14px;margin:5px 0 0}
+.story-resume .btn {border-radius:24px;white-space:nowrap}
+.story-section-title {display:flex;justify-content:space-between;align-items:center;gap:14px;margin:24px 0 12px}
+.story-section-title h2 {font:600 27px/1.4 var(--serif);letter-spacing:2px;margin:0;color:#342e40}
+.story-section-title>h2:after {content:'';display:inline-block;width:30px;height:1px;background:#dd7195;vertical-align:middle;margin-left:18px}
+.story-section-title p {font-size:13px;color:#8a91ad;margin:0;line-height:1.7}
+.story-chapter-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.story-chapter {position:relative;min-height:155px;text-align:left;overflow:hidden;padding:20px;border:1px solid #dfe3ef;border-radius:17px;color:#41577a;background:linear-gradient(90deg,#fffffff7 15%,#ffffffea 45%,#ffffff10),var(--chapter-art) right center / cover;cursor:pointer}
+.story-chapter.active {border-color:#92a9e1;background-color:#edf3ff}
+.story-chapter:disabled {opacity:.65;cursor:not-allowed}
+.story-chapter>span:first-child {font-size:10px;letter-spacing:3px;color:#8797b8}
+.story-chapter h3 {font:600 25px/1.4 var(--serif);letter-spacing:1px;margin:10px 0 4px}
+.story-chapter p {font-size:12px;margin:0 0 12px;color:#7f8aaa}
+.story-chapter>svg {position:absolute;right:17px;top:20px;width:19px;color:#7b8caf}
+.story-chapter .cp-end-badges {min-height:18px;margin:0}
+.story-chapter .cp-end-badge {padding:4px 8px;font-size:11px}
+.story-library-footer {display:flex;justify-content:space-between;margin-top:20px}
+.story-info {display:flex;gap:9px;align-items:center;padding:15px 18px;background:#f3f4fad9;border:1px solid #edeef7;border-radius:14px;color:#7c86a8;font-size:14px;line-height:1.8;margin:14px 0}
+.story-info svg {flex:none;width:22px}
+.story-personal-list {display:grid;gap:12px}
+.story-personal-list .cp-personal-pick-row {border:1px solid #e1e5f1;border-radius:19px;background:linear-gradient(110deg,#fff,#fffafa);overflow:hidden}
+.story-personal-list .cp-personal-pick {width:100%;padding:12px 18px;display:flex;gap:20px;align-items:center;background:transparent;border:0;box-shadow:none;border-radius:0;min-height:125px}
+.story-personal-list .cp-personal-pick img {width:115px;height:100px;border-radius:13px;object-fit:cover}
+.story-personal-list .cp-personal-pick>span {flex:1;min-width:0}
+.story-personal-list .cp-personal-pick b {font-size:22px;color:#263654}
+.story-personal-list .cp-personal-pick em {font-size:15px;color:#7e8cae;margin:8px 0 6px;font-style:normal}
+.story-personal-list .cp-personal-pick small {font-size:13px;color:#a57858}
+.story-personal-list .cp-personal-unlock {margin:0 16px 12px auto;width:auto;border-radius:20px;padding:9px 16px}
+.story-personal-list .locked {opacity:.7;filter:none}
+#view-fusion .fusion-chapters {display:grid;gap:15px}
+#view-fusion .fusion-chapter {position:relative;isolation:isolate;display:flex;align-items:flex-end;gap:18px;border:1px solid #dfe3ef;border-radius:19px;background:#273247;padding:70px 22px 20px;overflow:hidden;text-align:left;min-height:205px;color:#fff}
+#view-fusion .fusion-chapter>img {position:absolute;z-index:-2;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;mask-image:none}
+#view-fusion .fusion-chapter:before {content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(0deg,#172237eb 0,#26324992 48%,#26324914 100%)}
+#view-fusion .fusion-chapter>span {flex:1;display:grid;gap:5px;min-width:0}
+#view-fusion .fusion-chapter strong {font:600 26px/1.4 var(--serif);margin:0;color:#fff;text-shadow:0 1px 8px #172035}
+#view-fusion .fusion-chapter small {justify-self:start;display:inline-block;color:#a94270;background:#fff1f7e8;padding:4px 10px;border-radius:8px}
+#view-fusion .fusion-chapter em {color:#eef2ff;font-size:13px;line-height:1.7;font-style:normal;text-shadow:0 1px 6px #172035}
+#view-fusion .fusion-chapter>.icon {position:relative;z-index:1;flex:none;color:#fff}
+.story-detail {max-width:920px;margin:auto}
+.story-detail-hero {min-height:480px;border-radius:24px 24px 0 0;padding:25px;display:flex;flex-direction:column;justify-content:space-between;color:#fff;background:linear-gradient(0deg,#302525dd,transparent 75%),var(--chapter-art) center / cover}
+.story-detail-hero>.btn {align-self:flex-start;color:#fff;background:#352b2945;border:1px solid #ffffff70;border-radius:30px}
+.story-detail-hero small {letter-spacing:4px;font:15px var(--serif)}
+.story-detail-hero h1 {font:500 clamp(30px,4vw,48px)/1.5 var(--serif);margin:12px 0}
+.story-detail-hero p {max-width:600px;line-height:1.9;font-size:17px}
+.story-detail-panel {position:relative;margin:-12px 16px 0;background:#ffffffed;border-radius:28px;padding:24px;box-shadow:0 20px 45px #74606c10}
+.story-detail-panel>.btn {display:flex;width:100%;margin:14px 0;min-height:54px;border-radius:30px;font-size:20px}
+.story-detail-stats {display:grid;grid-template-columns:repeat(3,1fr);padding:20px 0;text-align:center}
+.story-detail-stats>div+div {border-left:1px solid #e5e9f4}
+.story-detail-stats small {display:block;color:#8590a8;font-size:13px}
+.story-detail-stats strong {display:block;font:36px/1.7 var(--serif);color:#526581}
+.story-detail-stats em {font:16px var(--sans);font-style:normal}
+.story-detail-note {text-align:center;font:italic 14px/1.8 var(--serif);color:#9aa1b6;letter-spacing:2px;margin-top:22px}
+.story-reader-toolbar {display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 15px;min-height:48px}
+.story-reader-toolbar>span {text-align:center;font-weight:600;color:#566589;font-size:14px}
+.story-reader-toolbar .btn {padding:9px 12px;font-size:13px}
+#view-chronicle .story-play-layout,#view-fusion .cp-layout {display:block}
+.story-reading-extras,.cp-reader-details {margin-top:16px;border:1px solid #e4e7f1;border-radius:16px;background:#fff;padding:14px;color:#7a86a4;font-size:13px}
+.story-reading-extras summary,.cp-reader-details summary {cursor:pointer}
+.story-reading-extras .cp-controls {margin-top:12px;flex-wrap:wrap}
+:is(#view-chronicle,#view-fusion) .cp-personal-heading {padding:5px 10px 12px;background:none;border:0}
+:is(#view-chronicle,#view-fusion) .cp-personal-heading h2 {font:600 25px var(--serif)}
+:is(#view-chronicle,#view-fusion) .cp-personal-toolbar {background:#ffffffa0;border-radius:14px;font-size:12px;gap:8px;padding:10px}
+:is(#view-chronicle,#view-fusion) .cp-personal-toolbar .btn {font-size:12px;padding:8px 12px}
+:is(#view-chronicle,#view-fusion) .cp-novel {border:0;border-radius:23px;padding:24px;background:#66504b}
+:is(#view-chronicle,#view-fusion) .cp-novel::before {filter:blur(12px) saturate(.8)}
+:is(#view-chronicle,#view-fusion) .cp-novel::after {background:linear-gradient(0deg,#493630bb,#443c3633)}
+:is(#view-chronicle,#view-fusion) .cp-novel-body {gap:24px;grid-template-columns:minmax(0,1fr) minmax(230px,37%);grid-template-areas:'heading art' 'dialogue art';grid-template-rows:auto 1fr;align-items:center}
+:is(#view-chronicle,#view-fusion) .cp-novel .cp-novel-art {width:100%;max-width:390px;transform:none;border-radius:14px;overflow:hidden;padding:7px}
+:is(#view-chronicle,#view-fusion) .cp-novel-art button {border-radius:9px}
+:is(#view-chronicle,#view-fusion) .cp-novel-art figcaption {display:none}
+:is(#view-chronicle,#view-fusion) .cp-novel-heading {display:block}
+:is(#view-chronicle,#view-fusion) .cp-novel-heading h3 {font-size:28px;margin-bottom:8px}
+:is(#view-chronicle,#view-fusion) .cp-novel-dialogue {background:#fffdfcf7;border:1px solid #fff;border-radius:20px;padding:24px;align-self:start}
+:is(#view-chronicle,#view-fusion) .cp-novel-dialogue .cp-text {font-size:17px;line-height:1.95}
+:is(#view-chronicle,#view-fusion) .cp-novel-dialogue .cp-speaker img {width:48px;height:48px;border-radius:50%;object-fit:cover}
+:is(#view-chronicle,#view-fusion) .cp-novel-dialogue .cp-speaker b {font-size:21px;color:#ab647f}
+:is(#view-chronicle,#view-fusion) .cp-novel-dialogue .cp-choices {grid-template-columns:1fr;gap:10px;margin-top:22px}
+:is(#view-chronicle,#view-fusion) .cp-choice {background:linear-gradient(110deg,#fcf0f4,#fffafc);border:1px solid #e8b7cb;border-radius:18px;padding:16px;color:#40506a;box-shadow:none}
+:is(#view-chronicle,#view-fusion) .cp-option-n {font:italic 23px var(--serif);color:#bb8099;background:none;border:0;border-radius:0;border-right:1px solid #efd6e1;padding-right:13px}
+:is(#view-chronicle,#view-fusion) .cp-choice>svg {color:#bd819a}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only {background:#f4f1f7}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only::after {background:none}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only .cp-novel-top {color:#7484a5}
+.story-week-hero {min-height:190px;padding:27px;border-radius:18px;color:white;background:linear-gradient(90deg,#27334dd9,#27334d05),var(--chapter-art) center / cover}
+.story-week-hero small {font-size:14px;letter-spacing:2px}
+.story-week-hero h2 {font:500 34px/1.5 var(--serif);margin:10px 0}
+.story-week-hero p {font-size:15px}
+.story-week .cp-week-advance {display:flex;flex-direction:column;border:0;padding:20px 0 0;background:none;box-shadow:none}
+.story-week .cp-week-progress-copy {display:none}
+.story-week .cp-week-track {width:100%;margin:0}
+.story-week .cp-week-end {border:1px solid #e5e9f6;border-radius:16px;width:100%;padding:14px;margin:18px 0 0;background:#fff}
+.story-week .cp-week-track li.current>span {background:#ed70a3;box-shadow:0 0 0 5px #fce8f0}
+.story-week .cp-week-track li {color:#8394ba;font-size:12px}
+.story-week .cp-week-track li.current {color:#cc5284}
+.story-week .cp-week-track small {font-size:11px}
+.story-week .cp-week-core {background:#ffffff9c;border:1px solid #efdfeb;border-radius:22px;padding:18px;margin:18px 0}
+.story-week .cp-week-core>.story-section-title {margin-top:0}
+.story-week .cp-actions-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.story-week .cp-action-card {position:relative;background:#fff;border:1px solid #e4e8f3;border-radius:16px;padding:20px 18px 20px 65px;text-align:left;min-height:100px}
+.story-week .cp-action-card>svg {position:absolute;left:18px;top:23px;color:#7b9bdb;width:28px;height:28px}
+.story-week .cp-action-card strong {font-size:17px;color:#354d77}
+.story-week .cp-action-card small {font-size:12px;color:#8395b6;line-height:1.7}
+.story-week .cp-training-hub {background:#f9fbff;border-radius:16px}
+.story-week .cp-week-story {border:1px solid #f3d9e5;background:#fff7fa;border-radius:16px}
+.story-contacts .cp-partners {display:grid;grid-template-columns:1fr;gap:12px}
+.story-contacts .cp-partner {display:flex;align-items:center;text-align:left;gap:20px;padding:17px;background:#ffffffc9;border:1px solid #e2e7f3;border-radius:18px}
+.story-contacts .cp-partner>img {width:80px;height:80px;border-radius:12px;object-fit:cover}
+.story-contacts .cp-partner>span {flex:1;min-width:0}
+.story-contacts .cp-partner strong {font-size:22px;color:#344563}
+.story-contacts .cp-partner small {color:#8593b3;font-size:13px;line-height:1.8;display:block;margin-top:7px}
+.story-contact-bond {display:flex;gap:7px;align-items:center;flex-wrap:wrap;justify-content:center;color:#d95282;font-size:22px;max-width:95px}
+.story-contact-bond svg {width:21px;fill:#e25a8b;stroke:#e25a8b}
+.story-contact-bond small {width:100%;text-align:center;font-size:10px!important;margin-top:0!important}
+.story-unlock {text-align:center;color:#657498}
+.story-unlock-caption {color:#e486ad;letter-spacing:3px}
+.story-unlock-summary {display:flex;align-items:center;text-align:left;gap:22px;margin:20px 0}
+.story-unlock-summary img,.story-unlock>img {width:145px;height:135px;object-fit:cover;border-radius:14px}
+.story-unlock-summary h3 {font-size:23px;color:#2c3c60}
+.story-unlock-summary p {line-height:1.8;font-size:14px}
+.story-unlock-price {display:block;border:1px solid #f2c8dc;border-radius:15px;padding:15px 8px;background:#fff0f7;color:#d73f7f;font-size:25px}
+.story-unlock .settings-actions {display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:22px}
+.story-unlock .btn {min-height:48px;border-radius:14px}
+.story-invite {text-align:left}
+.story-invite-summary {display:grid;grid-template-columns:145px minmax(0,1fr);align-items:center;gap:20px}
+.story-invite-summary img {width:145px;height:145px;object-fit:cover;border-radius:16px;box-shadow:0 12px 32px #5d3d521c}
+.story-invite-summary h3 {margin:7px 0 7px;font-size:22px;color:#2c3c60}
+.story-invite-summary p {font-size:12px;line-height:1.75}
+.story-invite>.btn {display:flex;width:min(100%,280px);margin:18px 0 0 auto;justify-content:center}
+.story-tools {display:grid;gap:13px}
+.modal:has(.story-unlock) {background:linear-gradient(135deg,#fff8fc,#fff);border:1px solid #f0dfe9;border-radius:25px}
+@media(max-width:900px) {
+ body:is([data-view="chronicle"],[data-view="fusion"]) .shell {padding:0 0 90px}
+ body:is([data-view="chronicle"],[data-view="fusion"]) .site-header {display:contents}
+ body:is([data-view="chronicle"],[data-view="fusion"]) .site-header>.brand,body:is([data-view="chronicle"],[data-view="fusion"]) .header-tools {display:none}
+ body:is([data-view="chronicle"],[data-view="fusion"]) main {min-height:calc(100dvh - 90px)}
+ :is(#view-chronicle,#view-fusion) {width:100%;padding:0}
+ .story-library {padding:0 15px 24px}
+ .story-library-hero {min-height:218px;padding:28px 20px 30px;margin:0 -15px;border-radius:0;background-position:65% center}
+ .story-library-hero h1 {font-size:43px;letter-spacing:2px}
+ .story-library-hero p {font-size:12px;line-height:1.75;margin-top:8px}
+ .story-signature {font-size:17px;letter-spacing:1px}
+ .story-hero-note {right:12px;top:20px;font-size:11px}
+ .story-tabs {border-radius:15px;padding:6px;margin-top:-6px;margin-bottom:13px}
+ .story-tabs button {font-size:16px;padding:10px 2px;border-radius:11px}
+ .story-resume {grid-template-columns:80px minmax(0,1fr);gap:8px 13px;padding:12px;border-radius:15px;margin-bottom:23px}
+ .story-resume>img {width:80px;height:94px;grid-row:1 / 3;border-radius:10px}
+ .story-resume small {font-size:10px}
+ .story-resume h2 {font-size:18px;line-height:1.4;margin-top:4px}
+ .story-resume p {font-size:11px;line-height:1.5}
+ .story-resume .btn {grid-column:2;justify-self:end;min-height:33px;padding:7px 16px;font-size:12px}
+ .story-section-title {margin-top:20px;gap:8px}
+ .story-section-title h2 {font-size:22px;letter-spacing:1px;white-space:nowrap}
+ .story-section-title h2:after {width:18px;margin-left:10px}
+ .story-section-title p {font-size:10px;text-align:right;max-width:52%}
+ .story-chapter-grid {gap:9px}
+ .story-chapter {padding:14px 10px;min-height:130px;border-radius:13px;background-position:right center}
+ .story-chapter>span:first-child {font-size:8px;letter-spacing:1.7px}
+ .story-chapter h3 {font-size:20px;margin:9px 0 4px}
+ .story-chapter p {font-size:10px;line-height:1.6;margin-bottom:8px}
+ .story-chapter>svg {width:14px;right:9px;top:14px}
+ .story-chapter .cp-end-badges {gap:3px;flex-wrap:wrap}
+ .story-chapter .cp-end-badge {font-size:9px;padding:3px 5px}
+ .story-info {padding:11px 13px;font-size:12px;border-radius:12px}
+ .story-personal-list .cp-personal-pick {gap:12px;padding:10px;min-height:99px}
+ .story-personal-list .cp-personal-pick img {width:80px;height:80px;border-radius:10px}
+ .story-personal-list .cp-personal-pick b {font-size:17px}
+ .story-personal-list .cp-personal-pick em {font-size:12px;margin:5px 0}
+ .story-personal-list .cp-personal-pick small {font-size:10px;line-height:1.6}
+ .story-personal-list .cp-personal-pick>svg {width:17px}
+ .story-personal-list .cp-personal-unlock {font-size:11px;margin:0 10px 10px auto;padding:7px 11px}
+ #view-fusion .fusion-chapter {display:flex;gap:9px;padding:62px 15px 15px;min-height:158px;border-radius:15px}
+ #view-fusion .fusion-chapter>img {height:100%;object-position:center 35%}
+ #view-fusion .fusion-chapter:before {background:linear-gradient(0deg,#172237f2 0,#263249a8 52%,#2632491f 100%)}
+ #view-fusion .fusion-chapter strong {font-size:20px;line-height:1.4;margin:0}
+ #view-fusion .fusion-chapter em {font-size:11px;line-height:1.7}
+ #view-fusion .fusion-chapter small {font-size:10px;padding:3px 7px}
+ .story-detail-hero {min-height:370px;border-radius:0;padding:20px}
+ .story-detail-hero h1 {font-size:29px}
+ .story-detail-hero p {font-size:14px}
+ .story-detail-panel {margin:-12px 10px 0;padding:16px;border-radius:22px}
+ .story-detail-panel>.btn {font-size:18px}
+ .story-detail-stats small {font-size:11px}
+ .story-detail-stats strong {font-size:30px}
+ .story-reader-toolbar {padding:12px 10px 0;margin:0 0 12px;gap:3px}
+ .story-reader-toolbar>span {font-size:12px}
+ .story-reader-toolbar .btn {font-size:11px;padding:6px;gap:4px}
+ .story-reader-toolbar svg {width:17px}
+ :is(#view-chronicle,#view-fusion) .cp-novel {padding:18px 12px;border-radius:0}
+ :is(#view-chronicle,#view-fusion) .cp-novel-top {font-size:10px;gap:7px;flex-wrap:wrap}
+ :is(#view-chronicle,#view-fusion) .cp-novel-body {display:flex;flex-direction:column;gap:14px;margin-top:18px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-visual {display:contents}
+ :is(#view-chronicle,#view-fusion) .cp-novel .cp-novel-art {order:0;width:100%;max-width:450px;padding:0;background:transparent;border-radius:14px;box-shadow:none}
+ :is(#view-chronicle,#view-fusion) .cp-novel-art button {aspect-ratio:auto;background:transparent}
+ :is(#view-chronicle,#view-fusion) .cp-novel .cp-novel-art img {height:auto;max-height:53vh;object-fit:contain}
+ :is(#view-chronicle,#view-fusion) .cp-novel-heading {order:1;width:100%;padding:0 5px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-heading h3 {font-size:27px;margin-bottom:5px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-dialogue {order:2;width:100%;padding:20px 17px;border-radius:20px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-dialogue .cp-text {font-size:16px;line-height:1.95}
+ :is(#view-chronicle,#view-fusion) .cp-novel-dialogue .cp-speaker b {font-size:20px}
+ :is(#view-chronicle,#view-fusion) .cp-choice {padding:15px 12px;gap:12px;min-height:62px;font-size:15px;border-radius:16px}
+ :is(#view-chronicle,#view-fusion) .cp-option-n {font-size:22px;min-width:31px}
+ .story-reading-extras,.cp-reader-details {margin:12px}
+ #view-chronicle .cp-personal-heading {display:none}
+ #view-chronicle .cp-personal-toolbar {margin:0 12px 10px}
+ #view-chronicle .cp-personal>.story-music {margin:0 12px}
+ .story-week {padding:0 12px}
+ .story-week-hero {min-height:145px;padding:20px}
+ .story-week-hero h2 {font-size:25px}
+ .story-week-hero small,.story-week-hero p {font-size:11px}
+ .story-week .cp-week-track {gap:2px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+ .story-week .cp-week-track li {font-size:10px;min-width:0}
+ .story-week .cp-week-track small {font-size:9px;line-height:1.5}
+ .story-week .cp-week-end {padding:12px;display:grid;grid-template-columns:1fr;gap:10px}
+ .story-week .cp-week-end .btn {width:100%}
+ .story-week .cp-week-core {padding:12px}
+ .story-week .cp-action-card {padding:13px 10px;min-height:108px}
+ .story-week .cp-action-card>svg {position:static;width:24px;height:24px;margin-bottom:7px}
+ .story-week .cp-action-card strong {font-size:14px}
+ .story-week .cp-action-card small {font-size:10px}
+ .story-contacts {padding:0 14px}
+ .story-contacts .story-section-title p {max-width:none;font-size:13px;text-align:left;margin-top:8px}
+ .story-contacts .cp-partner {padding:11px;gap:13px}
+ .story-contacts .cp-partner>img {width:65px;height:72px;border-radius:10px}
+ .story-contacts .cp-partner strong {font-size:20px}
+ .story-contacts .cp-partner small {font-size:11px}
+ .story-contact-bond {font-size:19px;max-width:64px;gap:5px}
+ .story-contacts .cp-partner>svg {width:15px;color:#a4afc7}
+ .story-unlock-summary {gap:15px}
+ .story-unlock-summary img {width:100px;height:110px}
+ .story-unlock-summary h3 {font-size:20px}
+ .story-unlock-summary p {font-size:12px}
+ .story-unlock-price {font-size:22px}
+}
+
+/* Reading owns the full mobile viewport. The chapter-directory control is the
+   single exit, so the persistent seven-item navigation no longer steals space. */
+@media(max-width:900px) {
+  body[data-view="chronicle"]:has(#view-chronicle .cp-novel) .main-nav,
+  body[data-view="fusion"]:has(#view-fusion .cp-novel) .main-nav {display:none}
+  body[data-view="chronicle"]:has(#view-chronicle .cp-novel) .shell,
+  body[data-view="fusion"]:has(#view-fusion .cp-novel) .shell {padding-bottom:0}
+  body[data-view="chronicle"]:has(#view-chronicle .cp-novel) main,
+  body[data-view="fusion"]:has(#view-fusion .cp-novel) main {min-height:100dvh}
+  body[data-view="chronicle"]:has(#view-chronicle .cp-novel) .cp-novel-illustrated,
+  body[data-view="fusion"]:has(#view-fusion .cp-novel) .cp-novel-illustrated,
+  body[data-view="chronicle"]:has(#view-chronicle .cp-novel) .cp-novel-text-only:not(:has(.cp-form)),
+  body[data-view="fusion"]:has(#view-fusion .cp-novel) .cp-novel-text-only:not(:has(.cp-form)) {bottom:0!important}
+  body[data-view="chronicle"]:has(#view-chronicle .cp-novel) .cp-novel-illustrated .cp-novel-dialogue,
+  body[data-view="fusion"]:has(#view-fusion .cp-novel) .cp-novel-illustrated .cp-novel-dialogue {
+    bottom:14px;max-height:76%;
+  }
+}
+
+/* Compact bidirectional pagination stays on one line over the scene. */
+:is(#view-chronicle,#view-fusion) .cp-reader-next {display:flex!important;justify-content:flex-end!important;align-items:center;gap:8px}
+:is(#view-chronicle,#view-fusion) .cp-reader-next .cp-choice {width:auto;min-width:0;max-width:100%;flex:0 1 auto}
+:is(#view-chronicle,#view-fusion) .cp-reader-next .cp-option-n {display:none}
+:is(#view-chronicle,#view-fusion) .cp-reader-next .cp-page-next {margin-left:auto}
+:is(#view-chronicle,#view-fusion) .cp-reader-next .cp-page-prev {flex:none;margin-right:auto;color:#65748e;border-color:#dfe4ee;background:#f8faff}
+:is(#view-chronicle,#view-fusion) .cp-reader-next .cp-page-prev>svg {transform:none}
+
+/* Keep the Shanqiu choices comfortably separated from the dialogue copy. */
+@media(max-width:900px) {
+  #view-chronicle .cp-novel-dialogue .shanqiu-menu .cp-speaker {margin-inline:2px}
+  #view-chronicle .cp-novel-dialogue .shanqiu-menu>.cp-illustrated-copy>.cp-text {margin:3px 2px 14px}
+  #view-chronicle .cp-novel-dialogue .shanqiu-menu-head {margin:11px 2px;padding-inline:11px}
+  #view-chronicle .cp-novel-dialogue .shanqiu-drinks {gap:7px;padding:0 2px}
+  #view-chronicle .cp-novel-dialogue .shanqiu-menu .cp-caption {margin:9px 4px 1px}
+}
+
+@media(max-width:560px) {
+  .story-invite-summary {grid-template-columns:112px minmax(0,1fr);gap:13px}
+  .story-invite-summary img {width:112px;height:126px;border-radius:13px}
+  .story-invite-summary h3 {font-size:18px;line-height:1.35}
+  .story-invite-summary p {font-size:10px;line-height:1.65}
+  .story-invite>.btn {width:100%;margin-top:14px}
+  .memory-actions {grid-template-columns:1fr 1.35fr}
+}
+@media(prefers-reduced-motion:reduce) { .story-library *, .story-detail * {animation:none!important;transition:none!important} }
+
+.story-stage-conditions {margin-bottom:22px;color:#596e95}
+.story-stage-conditions h3 {font:600 26px/1.5 var(--serif);margin:8px 0;color:#2b436b}
+.story-stage-conditions>p {font-size:13px;line-height:1.8}
+.story-stage-label {display:inline-block;padding:5px 10px;background:#fae3ee;color:#cc638e;border-radius:8px;font-size:12px}
+.story-stage-conditions>div {display:flex;justify-content:space-between;gap:12px;padding:14px;background:#f7faff;border:1px solid #e2e9f7;border-radius:14px;margin-top:10px}
+.story-stage-conditions>div>span {display:flex;gap:9px;align-items:center}
+.story-stage-reward {padding:12px;background:#fff7ed;border-radius:12px;color:#a8805c}
+.story-stage-reward svg {width:19px;vertical-align:middle;margin-right:8px}
+
+/* Illustrated reader: one stable visual-novel stage per viewport. */
+:is(#view-chronicle,#view-fusion):has(.cp-novel-illustrated) {position:relative}
+:is(#view-chronicle,#view-fusion):has(.cp-novel-illustrated) .story-reader-toolbar {
+  position:absolute;z-index:12;top:0;left:0;right:0;margin:0;padding:14px 18px;
+  color:#fff;pointer-events:none;text-shadow:0 1px 8px #182239a8;
+}
+:is(#view-chronicle,#view-fusion):has(.cp-novel-illustrated) .story-reader-toolbar>* {pointer-events:auto}
+:is(#view-chronicle,#view-fusion):has(.cp-novel-illustrated) .story-reader-toolbar>span {color:#fff;font-size:14px}
+:is(#view-chronicle,#view-fusion):has(.cp-novel-illustrated) .story-reader-toolbar .btn {
+  min-height:38px;padding:7px 11px;border:1px solid #ffffff78;border-radius:999px;
+  background:#26324940;color:#fff;backdrop-filter:blur(12px);box-shadow:0 4px 14px #1b20362b;
+}
+:is(#view-chronicle,#view-fusion):has(.cp-novel-illustrated) .story-reader-toolbar .btn:last-child {
+  width:38px;padding:0;justify-content:center;font-size:18px;letter-spacing:2px;
+}
+:is(#view-chronicle,#view-fusion):has(.cp-novel-illustrated) :is(.story-reading-extras,.cp-reader-details,.cp-log) {display:none}
+#view-chronicle:has(.cp-novel-illustrated) .cp-personal>:is(.cp-personal-heading,.cp-personal-toolbar,.story-music) {display:none}
+
+:is(#view-chronicle,#view-fusion) .cp-novel.cp-novel-illustrated {
+  height:clamp(560px,calc(100dvh - 170px),820px);min-height:0;margin:0;padding:0;
+  border:0;border-radius:24px;background:#332d32;box-shadow:0 18px 50px #46363c24;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel.cp-novel-illustrated::before {
+  z-index:-3;inset:-26px;filter:blur(24px) saturate(.82) brightness(.72);transform:scale(1.08);
+}
+:is(#view-chronicle,#view-fusion) .cp-novel.cp-novel-illustrated::after {
+  z-index:1;background:linear-gradient(180deg,#10172666 0,#22203308 34%,#21181f3b 62%,#181119b5 100%);pointer-events:none;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-top {
+  position:absolute;z-index:5;top:58px;left:20px;right:20px;display:flex;justify-content:center;
+  color:#fff;padding:0;text-shadow:0 1px 8px #141728b8;pointer-events:none;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-top>span {display:none}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-progress {width:auto;justify-content:center}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-progress i {width:34px;height:4px;background:#ffffff5c}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-progress i.past {background:#f0aac8}
+
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-body {
+  position:absolute;inset:0;display:block;margin:0;padding:0;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-visual {display:block;position:absolute;inset:0}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-heading {display:none}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-memory-link {display:none}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-art {
+  position:absolute;z-index:0;inset:0;display:block;width:100%;max-width:none;height:100%;margin:0;padding:0;
+  border:0;border-radius:0;background:transparent;transform:none;box-shadow:none;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-art button {
+  width:100%;height:100%;aspect-ratio:auto;border-radius:0;background:transparent;cursor:zoom-in;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-art img {
+  width:100%;height:100%;max-height:none;object-fit:contain;object-position:center 8%;
+}
+
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue {
+  position:absolute;z-index:4;left:clamp(14px,3vw,34px);right:clamp(14px,3vw,34px);bottom:clamp(14px,3vw,30px);
+  width:auto;max-height:min(57%,440px);overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;
+  padding:18px 20px 16px;border:1px solid #ffffffd9;border-radius:20px;
+  background:#fffdf9ef;backdrop-filter:blur(16px) saturate(1.08);box-shadow:0 16px 38px #1c172240;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-dialogue-turn {min-width:0}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-speaker {
+  display:flex;gap:11px;align-items:center;flex-wrap:nowrap;margin:0;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-speaker-avatar {
+  flex:none;width:48px;height:48px;padding:0;border:0;border-radius:50%;overflow:hidden;background:#f5e6ec;
+  box-shadow:0 0 0 2px #fff,0 4px 12px #4f344433;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-speaker img,
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-speaker-symbol {
+  width:48px;height:48px;border-radius:50%;object-fit:cover;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-speaker b {font-size:18px;color:#a35f7c}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-speaker small {font-size:10px;color:#a38892}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-scene-label {display:none}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-text {
+  margin-top:11px;font-size:16px;line-height:1.8;color:#35445f;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-dialogue-turn+.cp-dialogue-turn {
+  margin-top:14px;padding-top:14px;border-top:1px solid #e7dce2;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-choices {
+  position:sticky;z-index:2;bottom:-16px;margin:15px -4px -8px;padding:8px 4px 8px;
+  background:linear-gradient(0deg,#fffdf9 72%,#fffdf900);grid-template-columns:repeat(2,minmax(0,1fr));
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-choice {min-height:50px;padding:11px 13px;border-radius:14px}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-option-n {font-size:18px;min-width:27px}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-reader-next {display:flex;justify-content:flex-end}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-reader-next .cp-choice {
+  width:auto;min-width:0;min-height:36px;padding:7px 11px;border-color:#edc4d4;background:#fff9fb;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-reader-next .cp-option-n {display:none}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-reader-next .cp-choice>span:not(.cp-option-n) {display:flex;align-items:center;gap:7px;white-space:nowrap}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-reader-next .cp-choice small {display:inline;margin:0;padding-left:7px;border-left:1px solid #ead4de;color:#9a8790;font-size:10px;line-height:1}
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-reader-next .cp-choice>svg {width:15px;height:15px}
+
+@media(max-width:900px) {
+ body:is([data-view="chronicle"],[data-view="fusion"]):has(.cp-novel-illustrated) {overflow:hidden!important}
+ :is(#view-chronicle,#view-fusion):has(.cp-novel-illustrated) .story-reader-toolbar {position:fixed;padding:10px 12px}
+ :is(#view-chronicle,#view-fusion):has(.cp-novel-illustrated) .story-reader-toolbar>span {max-width:58%;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ :is(#view-chronicle,#view-fusion):has(.cp-novel-illustrated) .story-reader-toolbar .btn {min-height:34px;padding:6px 9px;font-size:10px}
+ :is(#view-chronicle,#view-fusion):has(.cp-novel-illustrated) .story-reader-toolbar .btn:last-child {width:34px;font-size:16px}
+ :is(#view-chronicle,#view-fusion) .cp-novel.cp-novel-illustrated {
+   position:fixed;z-index:1;inset:0 0 calc(74px + env(safe-area-inset-bottom));
+   width:100%;height:auto;min-height:0;border-radius:0;
+ }
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-art img {
+   object-fit:contain;object-position:center;
+ }
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-top {top:51px;left:12px;right:12px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-progress i {width:24px;height:3px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue {
+   left:12px;right:12px;bottom:12px;max-height:66%;padding:14px 14px 12px;border-radius:17px;
+ }
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-speaker-avatar,
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-speaker img,
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-speaker-symbol {width:43px;height:43px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-speaker b {font-size:17px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-text {font-size:14px;line-height:1.72;margin-top:8px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-choices {grid-template-columns:1fr;gap:7px;bottom:-12px;margin-top:11px;margin-bottom:-6px;padding-bottom:6px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-choice {min-height:45px;padding:9px 10px;font-size:13px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-reader-next {display:flex}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-reader-next .cp-choice {min-height:34px;padding:6px 10px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker h3 {margin:7px 0 0;font-size:18px;color:#34415b}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker>.cp-text {margin-top:5px;font-size:12px;line-height:1.55}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker .cp-partners {grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:10px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker .cp-partner {
+   display:grid;grid-template-columns:1fr;justify-items:center;gap:4px;min-width:0;min-height:94px;padding:7px 3px;
+   border:1px solid #e0e6f2;border-radius:12px;background:#f8faff;text-align:center;
+ }
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker .cp-partner img,
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker .cp-partner-symbol {width:38px;height:38px;border-radius:50%;object-fit:cover}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker .cp-partner>span:not(.cp-partner-duo) {min-width:0}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker .cp-partner strong {display:block;overflow:hidden;max-width:100%;font-size:12px;line-height:1.3;text-overflow:ellipsis;white-space:nowrap}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker .cp-partner small {display:none}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker .story-contact-bond {display:flex;gap:3px;max-width:none;font-size:12px;line-height:1}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker .story-contact-bond .icon {width:13px;height:13px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker .cp-partner>.icon {display:none}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-partner-picker .cp-rule-note {display:none}
+}
+
+@media(max-width:480px) {
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-art img {
+   object-fit:cover;object-position:center top;
+ }
+}
+
+@media(max-width:380px),(max-height:650px) {
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue {max-height:72%;padding:11px 12px 10px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-speaker-avatar,
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-speaker img,
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-speaker-symbol {width:38px;height:38px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue .cp-text {font-size:13px;line-height:1.62}
+}
+
+/* System-wide story pass: every non-reader state uses the same compact hierarchy. */
+:is(#view-chronicle,#view-fusion):not(:has(.cp-novel-illustrated)) .story-reader-toolbar {
+  position:sticky;z-index:20;top:0;margin:0 0 14px;padding:10px 12px;
+  border:1px solid #ebe7ef;border-radius:16px;background:#fffafbe8;
+  backdrop-filter:blur(18px) saturate(1.1);box-shadow:0 8px 28px #614a5c0c;
+}
+:is(#view-chronicle,#view-fusion):not(:has(.cp-novel-illustrated)) .story-reader-toolbar .btn {
+  min-height:38px;border-radius:12px;background:#fff;border-color:#e2e6f1;
+}
+#view-chronicle #cpMain>.cp-surface,
+#view-fusion #fusionMain>.cp-surface,
+#view-chronicle .cp-novel-text-only .cp-novel-dialogue>.cp-surface {
+  width:min(100%,920px);margin-inline:auto;padding:clamp(20px,3vw,34px);
+  border:1px solid #e8e5ef;border-radius:24px;
+  background:linear-gradient(145deg,#fffefef5,#fffafcf0);
+  box-shadow:0 18px 48px #5d496210;
+}
+#view-chronicle #cpMain>.cp-surface>.cp-speaker,
+#view-fusion #fusionMain>.cp-surface>.cp-speaker {
+  margin-bottom:18px;padding-bottom:15px;border-bottom:1px solid #eee5ea;
+}
+#view-chronicle #cpMain>.cp-surface>h3,
+#view-fusion #fusionMain>.cp-surface>h3 {font:600 clamp(24px,3vw,34px)/1.45 var(--serif);color:#2f3f60}
+#view-chronicle #cpMain>.cp-surface>.cp-text,
+#view-fusion #fusionMain>.cp-surface>.cp-text {font-size:15px;line-height:1.85;color:#53647f}
+
+/* Enrollment and other text-only setup pages. */
+#view-chronicle .cp-novel-text-only:has(.cp-form) {
+  max-width:860px;margin-inline:auto;padding:18px;border-radius:25px;
+  background:radial-gradient(circle at 95% 0,#f5dce8,transparent 42%),linear-gradient(145deg,#f6f2f7,#e9eef8);
+}
+#view-chronicle .cp-novel-text-only:has(.cp-form) .cp-novel-top {display:none}
+#view-chronicle .cp-novel-text-only:has(.cp-form) .cp-novel-body {display:block;margin:0}
+#view-chronicle .cp-novel-text-only:has(.cp-form) .cp-novel-dialogue {
+  padding:0;border:0;background:transparent;box-shadow:none;
+}
+#view-chronicle .cp-novel-text-only:has(.cp-form) .cp-surface {max-width:680px}
+#view-chronicle .cp-novel-text-only:has(.cp-form) .cp-form {
+  display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;margin-top:22px;padding-top:18px;
+}
+#view-chronicle .cp-novel-text-only:has(.cp-form) .cp-form>label,
+#view-chronicle .cp-novel-text-only:has(.cp-form) .cp-form>.text-input,
+#view-chronicle .cp-novel-text-only:has(.cp-form) .cp-form>.cp-input-error,
+#view-chronicle .cp-novel-text-only:has(.cp-form) .cp-form>.btn,
+#view-chronicle .cp-novel-text-only:has(.cp-form) .cp-form>.cp-rule-note {grid-column:1/-1}
+#view-chronicle .cp-novel-text-only:has(.cp-form) .cp-instruments {grid-column:1/-1}
+#view-chronicle .cp-novel-text-only:has(.cp-form) .cp-form>.btn {min-height:50px;margin-top:5px;border-radius:15px}
+
+/* Weekly dashboard: make the story and actions readable without a multi-screen card stack. */
+.story-week {padding-bottom:18px}
+.story-week .cp-week-core {padding:20px;background:linear-gradient(145deg,#fffafc,#ffffffdb);box-shadow:0 15px 35px #87556c0a}
+.story-week .cp-week-story {margin:12px 0 16px;padding:20px}
+.story-week .cp-training-hub {
+  margin:14px 0 18px;padding:18px;border:1px solid #e3e8f4;border-radius:18px;
+  background:linear-gradient(145deg,#f8faff,#fff);overflow:hidden;
+}
+.story-week .cp-training-heading {align-items:flex-end}
+.story-week .cp-training-heading h3 {margin:6px 0 3px;font:600 23px/1.45 var(--serif);color:#314668}
+.story-week .cp-training-heading p {margin:0;font-size:12px;line-height:1.65}
+.story-week .cp-training-heading>strong {
+  padding:8px 12px;border:1px solid #dbe5f5;border-radius:14px;background:#fff;color:#4675ba;font-size:25px;
+}
+.story-week .cp-training-readiness {
+  display:flex;justify-content:space-between;align-items:center;gap:14px;margin:13px 0 0;padding:10px 12px;
+  border:1px solid #e4eaf5;background:#f1f5fc;font-size:12px;line-height:1.55;
+}
+.story-week .cp-training-readiness>small {flex:none;color:#8b9ab1;font-size:10px}
+.story-week .cp-training-list {grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin-top:12px}
+.story-week .cp-training-card {
+  position:relative;display:grid;grid-template-columns:1fr;align-content:start;gap:8px;min-width:0;min-height:150px;
+  padding:12px;border-radius:14px;background:#fff;box-shadow:0 7px 18px #49678a0a;
+}
+.story-week .cp-training-card:last-child {grid-column:auto}
+.story-week .cp-training-card.current {border-color:#e790b4;background:linear-gradient(150deg,#fff7fa,#fff)}
+.story-week .cp-training-card.complete {border-color:#cae1d4;background:linear-gradient(150deg,#f6fcf8,#fff)}
+.story-week .cp-training-card.locked {opacity:.58;background:#f6f7fa}
+.story-week .cp-training-icon {display:flex;align-items:center;justify-content:space-between;color:#7195d0}
+.story-week .cp-training-icon svg {width:22px;height:22px}
+.story-week .cp-training-icon i {font:italic 16px var(--serif);color:#a8b7d0}
+.story-week .cp-training-copy {min-width:0}
+.story-week .cp-training-copy b {display:block;font-size:13px;line-height:1.45;color:#3a5277}
+.story-week .cp-training-copy small {display:-webkit-box;overflow:hidden;-webkit-line-clamp:2;-webkit-box-orient:vertical;margin-top:5px;font-size:10px;line-height:1.5}
+.story-week .cp-training-copy em {margin-top:7px;font-size:10px;color:#b46c89}
+.story-week .cp-training-state {position:absolute;right:9px;bottom:9px;color:#9cacbf}
+.story-week .cp-training-state svg {width:15px;height:15px}
+.story-week .cp-training-hub>.cp-caption {margin:10px 0 0;font-size:10px}
+.story-week>.story-section-title {margin:20px 2px 10px}
+.story-week>.cp-actions-grid {
+  display:flex;gap:10px;overflow-x:auto;padding:2px 2px 10px;scroll-snap-type:x proximity;scrollbar-width:thin;
+}
+.story-week>.cp-actions-grid>.cp-action-card {flex:0 0 min(245px,72vw);scroll-snap-align:start}
+.story-week .cp-hud {margin-top:12px}
+
+/* Gameplay, result, bar, personal hub and ending surfaces. */
+#view-chronicle #cpMain>.cp-training-player {max-width:900px;background:linear-gradient(150deg,#fff,#f8fbff)}
+#view-chronicle .cp-training-player header {padding-bottom:14px;border-bottom:1px solid #e8edf5}
+#view-chronicle .cp-training-player header h3 {font:600 27px/1.4 var(--serif);color:#314767}
+#view-chronicle .cp-training-rounds span {border:1px solid #e5eaf4;background:#f8f9fc}
+#view-chronicle .cp-training-rounds .active {border-color:#dba8bd;background:#fff1f6;color:#ba5b82}
+#view-chronicle #cpMain>.cp-surface:has(.cp-battle-board) {background:linear-gradient(155deg,#fff,#f7f9fd)}
+#view-chronicle #cpMain>.cp-surface:has(.cp-battle-board)>.cp-choices {grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+#view-chronicle #cpMain>.cp-surface:has(.cp-battle-result):not(:has(.cp-ending-hero)) {max-width:680px;text-align:center}
+#view-chronicle #cpMain>.cp-surface:has(.cp-battle-result):not(:has(.cp-ending-hero))>.cp-speaker {justify-content:center;text-align:left}
+#view-chronicle #cpMain>.cp-surface:has(.cp-battle-result):not(:has(.cp-ending-hero))>.btn {min-width:240px;margin-top:14px}
+#view-chronicle #cpMain>.cp-surface:has(.cp-live-score) {
+  max-width:820px;border-color:#4a5574;background:radial-gradient(circle at 50% 0,#4d466e 0,transparent 48%),linear-gradient(155deg,#202a42,#121a2c);color:#eaf0ff;
+}
+#view-chronicle #cpMain>.cp-surface:has(.cp-live-score)>.cp-speaker {border-bottom-color:#ffffff1e}
+#view-chronicle #cpMain>.cp-surface:has(.cp-live-score)>.cp-text,
+#view-chronicle #cpMain>.cp-surface:has(.cp-live-score) .cp-live-guide {color:#c4cee2}
+#view-chronicle #cpMain>.cp-surface:has(.cp-live-score) .cp-live-dot {border-color:#ffffff2b;background:#ffffff0c;color:#adb9d3}
+#view-chronicle #cpMain>.cp-surface:has(.cp-live-score) .cp-live-dot.done {border-color:#a4d0bb55;background:#9bd5b522;color:#aee1c8}
+#view-chronicle #cpMain>.cp-surface:has(.cp-live-score) .cp-slider {border-color:#ffffff2b;background:linear-gradient(90deg,#2d354a,#3a435b,#2d354a)}
+#view-chronicle #cpMain>.cp-surface:has(.cp-live-score) .cp-slider-scale {color:#9ba9c4}
+#view-chronicle #cpMain>.cp-surface:has(.cp-live-score) .cp-judge {color:#b8d7c2}
+#view-chronicle #cpMain>.cp-surface:has(.cp-ending-hero),
+#view-fusion #fusionMain>.fusion-ending,
+#view-chronicle #cpMain>.cp-personal-complete {max-width:820px;text-align:center;overflow:hidden}
+#view-chronicle #cpMain>.cp-surface:has(.cp-ending-hero) .cp-ending-hero,
+#view-fusion #fusionMain>.fusion-ending {
+  margin:-34px -34px 24px;padding:42px 28px 32px;
+  background:radial-gradient(circle at 50% 0,#f4dce7,transparent 56%),linear-gradient(145deg,#f6f1f6,#eef2fa);
+}
+#view-chronicle #cpMain>.cp-surface:has(.cp-ending-hero)>.cp-choices {max-width:620px;margin:20px auto}
+#view-chronicle #cpMain>.cp-surface:has(.cp-ending-hero)>.cp-teaser {margin-top:20px;text-align:left}
+#view-fusion #fusionMain>.fusion-ending>p {max-width:600px;margin:16px auto;line-height:1.8;color:#687994}
+#view-fusion #fusionMain>.fusion-ending .fusion-ending-actions {justify-content:center}
+#view-chronicle #cpMain>.shanqiu-menu {background:linear-gradient(145deg,#fffaf5,#fff)}
+#view-chronicle .shanqiu-menu-head {border-color:#eadfd3;background:#fff9f3}
+#view-chronicle .shanqiu-drink {border-color:#eadfd4;background:#fff}
+#view-chronicle .cp-personal #cpMain>.cp-surface:not(.cp-personal-complete) {position:relative;isolation:isolate;max-width:820px;text-align:left;overflow:hidden;background:radial-gradient(circle at 94% 2%,#f1d8e5 0,transparent 35%),linear-gradient(145deg,#fffdfd,#f6f8fc)}
+#view-chronicle .cp-personal #cpMain>.cp-surface:not(.cp-personal-complete):after {content:'♪';position:absolute;z-index:-1;right:6%;top:7%;font:italic 92px/1 var(--serif);color:#d479a618;transform:rotate(-11deg)}
+#view-chronicle .cp-personal #cpMain>.cp-surface:not(.cp-personal-complete)>h3 {max-width:75%;margin:8px 0;font:600 clamp(25px,4vw,38px)/1.45 var(--serif);color:#344766}
+#view-chronicle .cp-personal #cpMain>.cp-surface:not(.cp-personal-complete)>.cp-caption {max-width:650px;margin:12px auto;line-height:1.8}
+#view-chronicle .cp-personal-hub-actions {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:660px;margin:22px 0}
+#view-chronicle .cp-personal #cpMain>.cp-surface:not(.cp-personal-complete)>.cp-personal-hub-actions>.primary:first-child {grid-column:1/-1}
+#view-chronicle .cp-personal-hub-actions .btn {min-height:48px;border-radius:14px}
+
+/* Compact utility rows below the weekly dashboard. */
+#view-chronicle:has(.story-week) .cp-hud {gap:8px;margin:12px 12px 10px}
+#view-chronicle:has(.story-week) .cp-hud>div {display:flex;align-items:center;justify-content:space-between;padding:9px 12px;border-radius:12px;background:#ffffffbd}
+#view-chronicle:has(.story-week) .cp-hud strong {font-size:21px;margin:0}
+#view-chronicle:has(.story-week) .cp-log,
+#view-chronicle:has(.story-week) .story-reading-extras,
+#view-chronicle:has(.story-week) .cp-reader-details {margin:9px 12px;padding:11px 13px;border-radius:13px;background:#ffffffa8}
+
+/* Fusion completion is a full illustrated epilogue, not a generic message card. */
+#view-fusion:has(.fusion-ending) :is(.story-reading-extras,.cp-reader-details) {display:none}
+#view-chronicle:has(#cpMain>.cp-surface>.cp-ending-hero) :is(.cp-log,.story-reading-extras,.cp-reader-details) {display:none}
+#view-fusion:has(.fusion-ending) .cp-maincol {max-width:920px;margin:auto}
+#view-fusion #fusionMain>.fusion-ending {
+  display:grid;grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr);min-height:540px;
+  margin:0;padding:0;border:0;border-radius:26px;background:#fff;overflow:hidden;text-align:left;
+  box-shadow:0 24px 65px #55404f24;
+}
+#view-fusion .fusion-ending-visual {
+  position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;min-height:540px;
+  padding:42px;color:#fff;background:var(--ending-art) center / cover;
+}
+#view-fusion .fusion-ending-visual:after {content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,#1c20300d 15%,#1718246b 57%,#17131bd9 100%)}
+#view-fusion .fusion-ending-visual .eyebrow {align-self:flex-start;padding:6px 10px;border:1px solid #ffffff63;border-radius:999px;background:#28263d4f;color:#fff;font-size:10px;letter-spacing:.24em;backdrop-filter:blur(8px)}
+#view-fusion .fusion-ending-visual h2 {margin:16px 0 8px;font:500 clamp(30px,4vw,45px)/1.35 var(--serif);letter-spacing:2px;text-shadow:0 3px 16px #15121e}
+#view-fusion .fusion-ending-visual p {margin:0;max-width:520px;color:#f3edf3;font-size:15px;line-height:1.8;text-shadow:0 2px 12px #17131d}
+#view-fusion .fusion-ending-sheet {display:flex;flex-direction:column;padding:34px 30px;background:linear-gradient(155deg,#fffdfd,#faf7fb)}
+#view-fusion .fusion-ending-stats {display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-bottom:24px;border-bottom:1px solid #e8e4ed}
+#view-fusion .fusion-ending-stats>span {display:grid;justify-items:center;gap:5px;text-align:center;color:#7c8cac}
+#view-fusion .fusion-ending-stats svg {width:20px;height:20px;color:#df6799}
+#view-fusion .fusion-ending-stats b {font:30px/1 var(--serif);color:#334765}
+#view-fusion .fusion-ending-stats b small {font:11px var(--sans);color:#99a4b9}
+#view-fusion .fusion-ending-stats em {font:normal 10px var(--sans);color:#8b96aa}
+#view-fusion .fusion-ending-next {margin:24px 0;padding:18px;border:1px solid #eadce6;border-radius:17px;background:linear-gradient(135deg,#fff6fa,#fff)}
+#view-fusion .fusion-ending-next>span {display:block;color:#ce5e8c;font-size:10px;letter-spacing:.16em}
+#view-fusion .fusion-ending-next strong {display:block;margin:8px 0 4px;font:600 20px/1.45 var(--serif);color:#33435f}
+#view-fusion .fusion-ending-next small {display:block;color:#8792a8;font-size:11px;line-height:1.65}
+#view-fusion .fusion-ending-actions {display:grid;grid-template-columns:1fr;gap:10px;margin-top:auto}
+#view-fusion .fusion-ending-actions .btn {width:100%;min-height:48px;border-radius:14px}
+
+/* Personal and chapter endings use the same compact epilogue rhythm. */
+#view-chronicle #cpMain>.cp-personal-complete {display:grid;grid-template-columns:minmax(240px,.85fr) minmax(0,1.15fr);align-items:center;gap:26px;text-align:left}
+#view-chronicle .cp-personal-complete>.cp-ending-hero {text-align:left}
+#view-chronicle .cp-personal-complete>.cp-personal-ending-art {grid-column:1;grid-row:1 / span 3;width:100%;margin:0}
+#view-chronicle .cp-personal-complete>.cp-caption,
+#view-chronicle .cp-personal-complete>.cp-personal-hub-actions {grid-column:2;margin:0}
+#view-chronicle #cpMain>.cp-surface:has(.cp-ending-hero):not(.cp-personal-complete)>.cp-ending-hero {position:relative;overflow:hidden;border-radius:0 0 24px 24px}
+#view-chronicle #cpMain>.cp-surface:has(.cp-ending-hero):not(.cp-personal-complete)>.cp-ending-hero:after {content:'♪';position:absolute;right:7%;top:10%;font:italic 90px/1 var(--serif);color:#d780a51b;transform:rotate(-12deg)}
+
+/* Every main-story ending reuses its collected memory as the epilogue poster. */
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker)) {
+  max-width:880px;padding:0 0 26px;border:0;background:#fff;overflow:hidden;box-shadow:0 24px 64px #5d45551c;
+}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-ending-hero {
+  position:relative;isolation:isolate;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-start;
+  min-height:430px;margin:0 0 22px;padding:44px 38px;border-radius:0;color:#fff;text-align:left;
+  background:var(--ending-art) center 32% / cover;
+}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-ending-hero:before {
+  content:'';position:absolute;z-index:-1;inset:0;background:linear-gradient(180deg,#11182a0a 25%,#1b1b2a55 57%,#18121bd9 100%);
+}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-ending-hero:after {display:none}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-ending-hero>svg {
+  position:absolute;top:28px;right:30px;width:32px;height:32px;padding:7px;border:1px solid #ffffff78;border-radius:50%;background:#1b203752;color:#fff;box-sizing:content-box;backdrop-filter:blur(8px);
+}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-ending-hero .cp-overline {color:#f7d8e6;letter-spacing:.22em;text-shadow:0 2px 12px #17131d}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-ending-hero h3 {margin:10px 0 7px;font:500 clamp(31px,4vw,46px)/1.35 var(--serif);color:#fff;text-shadow:0 3px 18px #16111a}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-ending-hero .cp-caption {max-width:610px;margin:4px 0;color:#f3edf4;font-size:13px;line-height:1.7;text-shadow:0 2px 12px #15121b}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-choices,
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-teaser {margin-inline:26px}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-choices {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:16px}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-choices>* {min-width:0;min-height:82px;margin:0;padding:12px;border-radius:15px}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-choices .cp-option-n {display:none}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-choices small {font-size:9px;line-height:1.45}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-teaser {display:grid;grid-template-columns:1fr auto;align-items:center;gap:12px;margin-top:14px;padding:14px 16px;border-radius:15px}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-teaser strong {grid-column:1;display:block}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-teaser>.btn {grid-column:2;grid-row:1 / span 2;margin:0!important;white-space:nowrap}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-teaser br {display:none}
+
+/* Chapter-one/two performance settlement uses the same poster language as later endings. */
+#view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style]) {
+  max-width:880px;padding:0 0 24px;border:0;background:#fff;overflow:hidden;
+  box-shadow:0 24px 64px #5d45551c;
+}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style])>.cp-speaker {display:none}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style])>.cp-ending-hero {margin:0}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style])>.cp-text {
+  margin:0;padding:22px 28px 8px;color:#40516e;font-size:14px;line-height:1.8;text-align:left;
+}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style])>.cp-reward {
+  margin:12px 28px;padding:12px 14px;border:1px solid #eadfbf;border-radius:13px;
+  background:#fffcf1;color:#8d7545;font-size:11px;line-height:1.65;text-align:left;
+}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style])>.btn {
+  display:flex;width:calc(100% - 56px);min-height:46px;margin:16px 28px 0;border-radius:14px;
+}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style]) .cp-battle-result {
+  margin:7px 0 0;padding:0!important;color:#f3d9a0;font:600 clamp(36px,6vw,54px)/1.1 var(--serif);text-shadow:0 3px 18px #17131d;
+}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style]) .cp-battle-result span {font-size:14px!important;color:#f8e8bd}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style]) .cp-result-note {margin:7px 0 0;color:#eee6ef;font-size:10px;line-height:1.6;text-shadow:0 2px 10px #17131d}
+
+@media(max-width:900px) {
+ :is(#view-chronicle,#view-fusion):not(:has(.cp-novel-illustrated)) .story-reader-toolbar {top:0;margin:0 8px 10px;padding:8px;border-radius:14px}
+ #view-chronicle #cpMain>.cp-surface,#view-fusion #fusionMain>.cp-surface,
+ #view-chronicle .cp-novel-text-only .cp-novel-dialogue>.cp-surface {padding:18px 15px;border-radius:19px;box-shadow:none}
+ #view-chronicle .cp-novel-text-only:has(.cp-form) {padding:10px;border-radius:0}
+ #view-chronicle .cp-novel-text-only:has(.cp-form) .cp-surface {padding:18px 15px}
+ #view-chronicle .cp-novel-text-only:has(.cp-form) .cp-form {display:block;margin-top:16px;padding-top:10px}
+ #view-chronicle .cp-novel-text-only:has(.cp-form) .cp-instruments {grid-template-columns:repeat(2,1fr)}
+ #view-chronicle .cp-novel-text-only:has(.cp-form) .cp-rule-note {font-size:10px;line-height:1.65}
+ .story-week {padding:0 9px 12px}
+ .story-week-hero {min-height:126px;padding:16px;border-radius:15px}
+ .story-week-hero h2 {margin:6px 0;font-size:23px}
+ .story-week .cp-week-advance {padding-top:14px}
+ .story-week .cp-week-track small {display:none}
+ .story-week .cp-week-end {margin-top:12px;padding:10px}
+ .story-week .cp-week-message p {margin:5px 0 0;font-size:10px;line-height:1.55}
+ .story-week>.story-info {margin:10px 0;padding:9px 11px;font-size:10px;line-height:1.55}
+ .story-week .cp-week-core {margin:12px 0;padding:11px;border-radius:17px}
+ .story-week .story-section-title {margin:8px 0 10px}
+ .story-week .story-section-title h2 {font-size:20px}
+ .story-week .cp-week-story {margin:8px 0 12px;padding:14px;border-radius:14px}
+ .story-week .cp-week-story h3 {font-size:20px;margin:5px 0 8px}
+ .story-week .cp-week-story p {font-size:11px;line-height:1.65}
+ .story-week .cp-training-hub {margin:10px 0 12px;padding:12px;border-radius:15px}
+ .story-week .cp-training-heading {display:flex;align-items:flex-end;gap:8px}
+ .story-week .cp-training-heading>div {min-width:0;flex:1}
+ .story-week .cp-training-heading h3 {font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .story-week .cp-training-heading p {display:none}
+ .story-week .cp-training-heading>strong {padding:6px 8px;font-size:21px;border-radius:11px}
+ .story-week .cp-training-heading>strong small {font-size:9px}
+ .story-week .cp-training-readiness {margin-top:9px;padding:8px;font-size:10px}
+ .story-week .cp-training-readiness>small {display:none}
+ .story-week .cp-training-list {display:flex;gap:7px;overflow-x:auto;margin:9px -12px 0;padding:0 12px 8px;scroll-snap-type:x mandatory;scrollbar-width:none}
+ .story-week .cp-training-list::-webkit-scrollbar {display:none}
+ .story-week .cp-training-card {flex:0 0 142px;min-height:112px;padding:10px;scroll-snap-align:start}
+ .story-week .cp-training-copy b {font-size:12px}
+ .story-week .cp-training-copy small {display:none}
+ .story-week .cp-training-copy em {font-size:9px;line-height:1.4}
+ .story-week .cp-training-hub>.cp-caption {display:none}
+ .story-week .cp-action-card {min-height:88px;padding:11px 9px}
+ .story-week .cp-action-card>svg {width:21px;height:21px;margin-bottom:4px}
+ .story-week .cp-action-card strong {font-size:13px}
+ .story-week .cp-action-card small {font-size:9px;line-height:1.45}
+ .story-week>.story-section-title {margin:15px 2px 8px}
+ .story-week>.cp-actions-grid>.cp-action-card {flex-basis:145px}
+ #view-chronicle #cpMain>.cp-training-player {padding:15px 12px}
+ #view-chronicle .cp-training-player header {margin-bottom:14px;padding-bottom:10px}
+ #view-chronicle .cp-training-player header h3 {font-size:21px;margin:4px 0 0}
+ #view-chronicle .cp-training-player .cp-speaker {margin-bottom:14px}
+ #view-chronicle .cp-training-rounds {margin:12px 0}
+ #view-chronicle .cp-training-rounds span {padding:7px 4px;font-size:10px}
+ #view-chronicle .cp-training-player>header {margin-bottom:7px;padding-bottom:7px}
+ #view-chronicle .cp-training-player>header .cp-week-kicker {font-size:9px}
+ #view-chronicle .cp-training-player>header h3 {margin-top:2px;font-size:19px;line-height:1.25}
+ #view-chronicle .cp-training-player>header>.btn {min-height:34px;padding:6px 9px}
+ #view-chronicle .cp-training-player>.cp-speaker {min-height:40px;margin-bottom:7px;padding:5px 0 7px;border-bottom:1px solid #edf0f5}
+ #view-chronicle .cp-training-player>.cp-speaker img,
+ #view-chronicle .cp-training-player>.cp-speaker .cp-speaker-symbol {width:36px;height:36px}
+ #view-chronicle .cp-training-player>.cp-speaker b {font-size:14px}
+ #view-chronicle .cp-training-player>.cp-speaker small {font-size:8px}
+ #view-chronicle .cp-training-player>.cp-speaker>small:last-child {margin-left:auto;max-width:90px;text-align:right}
+ #view-chronicle .cp-training-player>.cp-training-rounds {margin:7px 0}
+ #view-chronicle .cp-training-player>.cp-training-rounds span {padding:5px 4px}
+ #view-chronicle .cp-training-player>.cp-training-instruction {display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:2;margin:5px 0;font-size:11px;line-height:1.55}
+ #view-chronicle .cp-training-player>.cp-training-status {min-height:17px;margin:4px 0 7px;font-size:10px;line-height:1.45}
+ #view-chronicle .cp-training-player>.cp-caption {display:none}
+ #view-chronicle .cp-training-ear .cp-ear {padding:10px 12px 9px;border-radius:15px}
+ #view-chronicle .cp-training-ear .cp-ear-meta {font-size:9px}
+ #view-chronicle .cp-training-ear .cp-ear-meta b {font-size:14px}
+ #view-chronicle .cp-training-ear .cp-ear-meta b span {margin-left:5px;font-size:11px}
+ #view-chronicle .cp-training-ear .cp-ear h4 {margin:8px 0 2px;font-size:18px}
+ #view-chronicle .cp-training-ear .cp-ear-subtitle {font-size:9px}
+ #view-chronicle .cp-training-ear .cp-ear-score {grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;margin:8px 0}
+ #view-chronicle .cp-training-ear .cp-ear-bar {gap:1px;padding-right:3px}
+ #view-chronicle .cp-training-ear .cp-ear-note {height:45px;font-size:22px;border-radius:8px}
+ #view-chronicle .cp-training-ear .cp-ear-bracket {font-size:18px}
+ #view-chronicle .cp-training-ear .cp-ear-answer-label {margin:6px 0 5px;font-size:9px}
+ #view-chronicle .cp-training-ear .cp-ear-keys {gap:3px}
+ #view-chronicle .cp-training-ear .cp-ear-keys button {min-height:40px;padding:5px 0;border-radius:8px}
+ #view-chronicle .cp-training-ear .cp-ear-keys b {font-size:16px}
+ #view-chronicle .cp-training-ear .cp-ear-keys small {display:none}
+ #view-chronicle .cp-training-ear .cp-ear-hint {margin:6px 0 0;font-size:8px;line-height:1.45}
+ #view-chronicle .cp-training-ear>[data-cp-action="training-begin"] {min-height:42px;margin-top:8px;padding:8px}
+ #view-chronicle #cpMain>.cp-surface:has(.cp-battle-board)>.cp-choices {grid-template-columns:1fr}
+ #view-chronicle #cpMain>.cp-surface:has(.cp-live-score) {margin:0 9px;width:calc(100% - 18px);padding:16px 13px}
+ #view-chronicle #cpMain>.cp-surface:has(.cp-ending-hero) .cp-ending-hero,
+ #view-fusion #fusionMain>.fusion-ending {margin:-18px -15px 18px;padding:28px 16px 22px}
+ #view-chronicle .cp-personal-hub-actions {grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:14px 0}
+ #view-chronicle .cp-personal-hub-actions .btn {min-height:43px}
+ #view-chronicle .cp-personal #cpMain>.cp-surface:not(.cp-personal-complete)>h3 {font-size:25px}
+ #view-chronicle .cp-personal #cpMain>.cp-surface:not(.cp-personal-complete)>.cp-caption {margin:8px 0;font-size:10px;line-height:1.6}
+ #view-chronicle:has(.story-week) .cp-hud {margin:9px 9px 7px}
+ #view-chronicle:has(.story-week) .cp-hud>div {display:block;padding:7px 8px}
+ #view-chronicle:has(.story-week) .cp-hud small {font-size:8px}
+ #view-chronicle:has(.story-week) .cp-hud strong {font-size:18px}
+ #view-chronicle:has(.story-week) .cp-log,#view-chronicle:has(.story-week) .story-reading-extras,#view-chronicle:has(.story-week) .cp-reader-details {margin:7px 9px;padding:9px 11px;font-size:10px}
+ #view-fusion #fusionMain>.fusion-ending {display:block;min-height:0;margin:0 9px;border-radius:20px}
+ #view-fusion .fusion-ending-visual {min-height:330px;padding:24px 20px}
+ #view-fusion .fusion-ending-visual h2 {font-size:30px;margin:12px 0 6px}
+ #view-fusion .fusion-ending-visual p {font-size:12px;line-height:1.65}
+ #view-fusion .fusion-ending-sheet {padding:18px 15px}
+ #view-fusion .fusion-ending-stats {padding-bottom:15px}
+ #view-fusion .fusion-ending-stats b {font-size:24px}
+ #view-fusion .fusion-ending-next {margin:15px 0;padding:13px}
+ #view-fusion .fusion-ending-next strong {font-size:17px}
+ #view-fusion .fusion-ending-actions {grid-template-columns:1.12fr .88fr;gap:8px}
+ #view-fusion .fusion-ending-actions .btn {min-height:42px;padding:9px 8px;font-size:11px}
+ #view-chronicle .cp-personal #cpMain>.cp-personal-complete {
+   display:flex;flex-direction:column;align-items:stretch;box-sizing:border-box;width:calc(100% - 20px);
+   margin:0 10px;padding:0 0 12px;text-align:left;border-radius:18px;
+ }
+ #view-chronicle .cp-personal #cpMain>.cp-personal-complete>.cp-ending-hero {
+   margin:0 0 8px;padding:11px 15px 10px;text-align:left;border-radius:18px 18px 0 0;
+ }
+ #view-chronicle .cp-personal-complete>.cp-ending-hero .cp-overline {display:none}
+ #view-chronicle .cp-personal-complete>.cp-ending-hero h3 {margin:0 0 4px;font-size:21px;line-height:1.3;letter-spacing:1px}
+ #view-chronicle .cp-personal-complete>.cp-ending-hero p {margin:0;color:#6f7e99;font-size:10px;line-height:1.45}
+ #view-chronicle .cp-personal-complete>.cp-personal-ending-art {
+   display:flex;align-items:center;justify-content:center;width:calc(100% - 28px);
+   height:clamp(140px,calc(100dvh - 490px),340px);margin:0 auto 9px;
+ }
+ #view-chronicle .cp-personal-complete>.cp-personal-ending-art img {width:auto;max-width:100%;height:auto;max-height:100%;object-fit:contain}
+ #view-chronicle .cp-personal-complete>.cp-caption {margin:0 16px 9px;font-size:10px;line-height:1.5}
+ #view-chronicle .cp-personal-complete>.cp-personal-hub-actions {width:calc(100% - 32px);margin:0 16px;gap:7px}
+ #view-chronicle .cp-personal-complete>.cp-personal-hub-actions .btn {min-height:42px;padding:7px 6px;font-size:11px;line-height:1.35}
+ #view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-ending-hero {min-height:300px;margin-bottom:14px;padding:24px 18px}
+ #view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-ending-hero>svg {top:16px;right:16px;width:24px;height:24px;padding:6px}
+ #view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-ending-hero h3 {font-size:29px}
+ #view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-ending-hero .cp-caption {font-size:10px;line-height:1.55}
+ #view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-choices {grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;margin:12px 12px}
+ #view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-choices>* {min-height:68px;padding:9px;font-size:11px}
+ #view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-teaser {margin:10px 12px 0;padding:11px 12px;font-size:9px;line-height:1.55}
+ #view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-teaser>.btn {min-height:38px;padding:8px 10px;font-size:10px}
+}
+
+/* Late chapter endings: one clear next step, then a balanced two-by-two utility grid. */
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-choices>.cp-teaser,
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-choices>.primary[data-cp-chapter] {
+  order:-2;grid-column:1/-1;min-height:auto;
+}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-choices:has(>.cp-teaser),
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-choices:has(>.primary[data-cp-chapter]) {grid-template-columns:repeat(2,minmax(0,1fr))}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-choices>.cp-teaser {
+  display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 14px;padding:16px 18px;border:1px solid #e3e8f4;border-radius:16px;background:linear-gradient(135deg,#f8faff,#fff);
+}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-choices>.cp-teaser strong {grid-column:1;display:block;font:600 18px/1.45 var(--serif);color:#405678}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-choices>.cp-teaser>.btn {grid-column:2;grid-row:1 / span 2;margin:0!important;white-space:nowrap}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-choices>.cp-teaser br {display:none}
+#view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-choices>.primary[data-cp-chapter] {min-height:54px}
+
+@media(max-width:900px) {
+ #view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-choices>.cp-teaser {grid-template-columns:1fr;padding:12px;text-align:left}
+ #view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-choices>.cp-teaser strong {font-size:16px}
+ #view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-choices>.cp-teaser>.btn {grid-column:1;grid-row:auto;width:100%;min-height:42px}
+}
+
+/* Final story-wide polish: keep the narrative surface free of diagnostic panels. */
+:is(#view-chronicle,#view-fusion) :is(.cp-log,.story-reading-extras,.cp-reader-details) {display:none!important}
+#view-chronicle .cp-personal>:is(.cp-personal-heading,.cp-personal-toolbar,.story-music,.cp-personal-details) {display:none}
+:is(#view-chronicle,#view-fusion):not(:has(.story-library)) .cp-maincol {width:min(100%,960px);margin-inline:auto}
+
+/* Personal hubs now read as route posters with a compact action sheet. */
+#view-chronicle #cpMain>.cp-personal-hub {
+  display:grid;grid-template-columns:minmax(260px,.86fr) minmax(0,1.14fr);gap:0;max-width:900px;padding:0!important;
+  overflow:hidden;border:0;background:#fff;box-shadow:0 24px 70px #4f3b5018;
+}
+#view-chronicle .cp-personal-hub-visual {position:relative;isolation:isolate;min-height:520px;display:flex;align-items:flex-end;padding:34px;color:#fff;overflow:hidden;background:#2b3040}
+#view-chronicle .cp-personal-hub-visual:after {content:'';position:absolute;z-index:1;inset:0;background:linear-gradient(180deg,#151c2a08 18%,#1d1b2a45 54%,#17131fd9 100%)}
+#view-chronicle .cp-personal-hub-visual>img {position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;filter:saturate(.88)}
+#view-chronicle .cp-personal-hub-visual>div {position:relative;z-index:2}
+#view-chronicle .cp-personal-hub-visual .cp-week-kicker {color:#f4c4d7;letter-spacing:.18em;text-shadow:0 2px 9px #111827}
+#view-chronicle .cp-personal-hub-visual h3 {margin:10px 0 5px;font:500 clamp(28px,3vw,40px)/1.35 var(--serif);color:#fff;text-shadow:0 3px 18px #111827}
+#view-chronicle .cp-personal-hub-visual p {margin:0;color:#f8eef3;font-size:13px;line-height:1.75;text-shadow:0 2px 10px #111827}
+#view-chronicle .cp-personal-hub-sheet {display:flex;flex-direction:column;justify-content:center;padding:32px 30px;background:linear-gradient(145deg,#fffdfd,#f8f9fd)}
+#view-chronicle .cp-personal-hub-note {margin:0 0 20px;padding:15px 16px;border-left:3px solid #df78a4;background:#fff4f8;color:#5e6e89;font-size:13px;line-height:1.75}
+#view-chronicle .cp-personal-hub .cp-personal-hub-actions {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin:0;max-width:none}
+#view-chronicle .cp-personal-hub .cp-personal-hub-actions>.primary:first-child {grid-column:1/-1;min-height:54px}
+#view-chronicle .cp-personal-hub .cp-personal-hub-actions .btn {min-width:0;min-height:45px;padding:10px;border-radius:13px;font-size:12px;line-height:1.45}
+#view-chronicle .cp-personal-hub-meta {margin:18px 0 0;padding-top:15px;border-top:1px solid #e7e9f1;color:#8b96aa;font-size:10px;line-height:1.75}
+#view-chronicle .cp-personal-hub[data-personal-hub="yangcun"] .cp-personal-hub-visual>img {object-position:center 35%}
+
+/* Contacts are a deliberate conversation list rather than a stack of generic cards. */
+#view-chronicle .story-contacts {max-width:920px;margin-inline:auto;padding:4px 10px 18px}
+#view-chronicle .story-contacts>.story-section-title {margin:0 0 14px;padding:24px;border:1px solid #eadfe7;border-radius:22px;background:radial-gradient(circle at 92% 20%,#efbfd31f 0 20%,transparent 21%),linear-gradient(135deg,#fff7fa,#f7f9fd)}
+#view-chronicle .story-contacts>.story-section-title h2 {font-size:32px}
+#view-chronicle .story-contacts>.story-info {margin:0 0 13px;padding:10px 13px;font-size:11px}
+#view-chronicle .story-contacts .cp-partners {grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#view-chronicle .story-contacts .cp-partner {min-height:94px;padding:11px 13px;gap:12px;border-color:#e4e8f2;border-radius:16px;background:#fff;box-shadow:0 6px 16px #47597708}
+#view-chronicle .story-contacts .cp-partner>img {width:62px;height:68px;border-radius:11px}
+#view-chronicle .story-contacts .cp-partner strong {font-size:18px}
+#view-chronicle .story-contacts .cp-partner small {margin-top:4px;font-size:10px;line-height:1.5}
+#view-chronicle .story-contacts>.cp-caption {margin:12px 2px 0;font-size:10px}
+
+/* Text-only pages retain the visual-novel rhythm without borrowing unrelated art. */
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) {
+  position:relative;isolation:isolate;min-height:620px;overflow:hidden;border-radius:24px;
+  background:radial-gradient(circle at 78% 20%,#d58fab38 0 2%,transparent 25%),radial-gradient(circle at 18% 76%,#6688b235 0 2%,transparent 28%),linear-gradient(145deg,#252b3b,#4c3d49 55%,#2c3344);
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)):before {content:'♪';position:absolute;inset:auto 8% 12% auto;font:italic 190px/1 var(--serif);color:#ffffff09;filter:none;transform:rotate(-12deg)}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-top {position:relative;z-index:2;color:#fff9;text-shadow:0 1px 8px #111827}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-body {position:relative;z-index:2;display:flex;min-height:530px;align-items:flex-end;justify-content:center}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-dialogue {width:min(100%,760px);max-height:470px;overflow:auto;padding:0;border:0;background:transparent;box-shadow:none}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-dialogue>.cp-surface {margin:0;background:#fffdf9f0;backdrop-filter:blur(18px) saturate(1.05);box-shadow:0 18px 44px #14131d4d}
+
+/* Compact controls and stronger hierarchy for gameplay surfaces. */
+#view-chronicle #cpMain>.cp-surface:has(.cp-battle-board),
+#view-chronicle #cpMain>.cp-surface:has(.cp-live-score),
+#view-chronicle #cpMain>.cp-training-player {overflow:hidden;border:0;box-shadow:0 20px 58px #38465f18}
+#view-chronicle #cpMain>.cp-training-player {position:relative;isolation:isolate;display:flex;flex-direction:column;background:radial-gradient(circle at 92% 8%,#edbed22c 0 12%,transparent 38%),radial-gradient(circle at 6% 92%,#86a9dc24 0 10%,transparent 36%),linear-gradient(150deg,#fff,#f5f8fd)}
+#view-chronicle #cpMain>.cp-training-player:after {content:'♪';position:absolute;z-index:-1;right:-12px;bottom:28px;font:italic 170px/1 var(--serif);color:#718bb90b;transform:rotate(-12deg)}
+#view-chronicle #cpMain>.cp-training-player>.cp-caption {margin-top:auto}
+#view-chronicle .cp-battle-board {border-radius:19px;background:linear-gradient(145deg,#334b6b,#263853);box-shadow:inset 0 1px 0 #ffffff15}
+#view-chronicle #cpMain>.cp-surface:has(.cp-battle-board)>.cp-caption {margin:13px 2px 0;font-size:10px;line-height:1.6}
+#view-chronicle .cp-training-player>.cp-caption {padding-top:12px;border-top:1px solid #e7ebf3;color:#8b96aa}
+#view-chronicle .cp-training-result {border:1px solid #e2e8f3;border-radius:18px;background:linear-gradient(145deg,#f8fbff,#fff)}
+
+/* Bar menus and monthly contacts use their own themed sheets. */
+#view-chronicle #cpMain>.shanqiu-menu {max-width:820px;border-color:#ead8ca;background:linear-gradient(150deg,#fffaf4,#fff);box-shadow:0 22px 64px #70513c16}
+#view-chronicle .shanqiu-menu-head {border-radius:14px;background:linear-gradient(120deg,#f8eee2,#fff9f2)}
+#view-chronicle .shanqiu-drinks {gap:9px}
+#view-chronicle .shanqiu-drink {min-height:70px;border-radius:14px;box-shadow:none}
+#view-chronicle .cp-yc-chat {border-radius:24px;background:linear-gradient(145deg,#f5efe8,#e9eef8)}
+#view-chronicle .cp-yc-chat-body {border-radius:22px;background:#fffdfaf2;box-shadow:0 18px 48px #4b3d3614}
+#view-chronicle .cp-yc-contact {border-color:#e2e6f0;background:#fff}
+
+/* Story tool modal follows the same restrained action-sheet language. */
+.modal:has(.story-tools) {border:1px solid #e9e3ec;border-radius:24px;background:linear-gradient(145deg,#fffdfd,#f6f8fc);box-shadow:0 28px 80px #382c3b30}
+.modal:has(.story-tools) .story-tools {grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+.modal:has(.story-tools) .story-tools>.story-music,
+.modal:has(.story-tools) .story-tools>.btn:first-child {grid-column:1/-1}
+.modal:has(.story-tools) .story-tools .btn {min-height:46px;border-radius:13px}
+
+@media(max-width:900px) {
+ #view-fusion #fusionMain>.fusion-ending {box-sizing:border-box;width:calc(100% - 18px)!important;max-width:calc(100% - 18px);margin-inline:9px}
+ :is(#view-chronicle,#view-fusion):not(:has(.cp-novel-illustrated)) .story-reader-toolbar {position:sticky;top:0;margin:0 8px 9px;padding:7px 8px;border-radius:13px}
+ #view-chronicle #cpMain>.cp-personal-hub {display:block;margin:0 9px;width:calc(100% - 18px)}
+ #view-chronicle .cp-personal-hub-visual {min-height:205px;padding:20px}
+ #view-chronicle .cp-personal-hub-visual>img {object-position:center 22%}
+ #view-chronicle .cp-personal-hub-visual h3 {font-size:27px}
+ #view-chronicle .cp-personal-hub-sheet {padding:16px 14px 17px}
+ #view-chronicle .cp-personal-hub-note {margin-bottom:12px;padding:10px 11px;font-size:10px;line-height:1.6}
+ #view-chronicle .cp-personal-hub .cp-personal-hub-actions {gap:7px}
+ #view-chronicle .cp-personal-hub .cp-personal-hub-actions .btn {min-height:39px;padding:8px 6px;font-size:10px}
+ #view-chronicle .cp-personal-hub .cp-personal-hub-actions>.primary:first-child {min-height:46px}
+ #view-chronicle .cp-personal-hub-meta {margin-top:12px;padding-top:10px;font-size:8px}
+ #view-chronicle .story-contacts {padding:0 9px 12px}
+ #view-chronicle .story-contacts>.story-section-title {padding:14px 13px;margin-bottom:9px;border-radius:16px}
+ #view-chronicle .story-contacts>.story-section-title h2 {font-size:25px}
+ #view-chronicle .story-contacts>.story-section-title p {font-size:10px}
+ #view-chronicle .story-contacts>.story-info {margin-bottom:9px;padding:8px 10px;font-size:9px;line-height:1.55}
+ #view-chronicle .story-contacts .cp-partners {grid-template-columns:1fr;gap:7px}
+ #view-chronicle .story-contacts .cp-partner {min-height:76px;padding:7px 9px;border-radius:13px}
+ #view-chronicle .story-contacts .cp-partner>img {width:51px;height:57px}
+ #view-chronicle .story-contacts .cp-partner strong {font-size:16px}
+ #view-chronicle .story-contacts .cp-partner small {font-size:8px}
+ #view-chronicle .story-contacts .story-contact-bond {font-size:16px}
+ body:is([data-view="chronicle"],[data-view="fusion"]):has(.cp-novel-text-only):not(:has(.cp-novel-text-only .cp-form)) {overflow:hidden!important}
+ :is(#view-chronicle,#view-fusion):has(.cp-novel-text-only):not(:has(.cp-novel-text-only .cp-form)) .story-reader-toolbar {position:fixed;z-index:12;top:0;left:0;right:0;margin:0 8px;background:#24283d63;border-color:#ffffff40;color:#fff}
+ :is(#view-chronicle,#view-fusion):has(.cp-novel-text-only):not(:has(.cp-novel-text-only .cp-form)) .story-reader-toolbar>span,
+ :is(#view-chronicle,#view-fusion):has(.cp-novel-text-only):not(:has(.cp-novel-text-only .cp-form)) .story-reader-toolbar .btn {color:#fff}
+ :is(#view-chronicle,#view-fusion):has(.cp-novel-text-only):not(:has(.cp-novel-text-only .cp-form)) .story-reader-toolbar .btn {background:#1f263b4f;border-color:#ffffff45}
+ :is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) {position:fixed;z-index:1;inset:0 0 calc(74px + env(safe-area-inset-bottom));min-height:0;border-radius:0;padding:52px 10px 10px}
+ :is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-top {display:none}
+ :is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-body {height:100%;min-height:0;align-items:flex-end;margin:0}
+ :is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-dialogue {max-height:84%;overflow:auto}
+ :is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-dialogue>.cp-surface {padding:13px 12px;border-radius:18px}
+ #view-chronicle #cpMain>.cp-surface:has(.cp-battle-board) {margin:0 9px;width:calc(100% - 18px);padding:13px 12px}
+ #view-chronicle #cpMain>.cp-surface:has(.cp-battle-board)>.cp-speaker {margin-bottom:10px;padding-bottom:9px}
+ #view-chronicle #cpMain>.cp-surface:has(.cp-battle-board)>.cp-choices {gap:7px}
+ #view-chronicle #cpMain>.cp-surface:has(.cp-battle-board)>.cp-choices .cp-choice {min-height:58px;padding:8px 10px}
+ #view-chronicle #cpMain>.cp-training-player {min-height:calc(100dvh - 154px);margin:0 9px;width:calc(100% - 18px)}
+ #view-chronicle #cpMain>.shanqiu-menu {margin:0 9px;width:calc(100% - 18px)}
+ #view-chronicle .cp-yc-chat {margin:0;padding:10px;border-radius:0}
+ #view-chronicle .cp-yc-chat-body {margin-top:0;padding:14px 12px;border-radius:18px}
+ .modal:has(.story-tools) .story-tools {grid-template-columns:1fr}
+ .modal:has(.story-tools) .story-tools>* {grid-column:1!important}
+}
+
+/* Final cascade audit: navigation belongs to the scene, never to a second card. */
+#view-chronicle:has(#cpMain>.cp-surface:not(.cp-personal-complete)>.cp-ending-hero),
+#view-fusion:has(#fusionMain>.fusion-ending) {position:relative}
+:is(#view-chronicle:has(#cpMain>.cp-surface:not(.cp-personal-complete)>.cp-ending-hero),#view-fusion:has(#fusionMain>.fusion-ending)) .story-reader-toolbar {
+  position:absolute;z-index:24;top:0;left:50%;width:min(100%,880px);min-height:58px;
+  margin:0;padding:14px 18px;transform:translateX(-50%);border:0;border-radius:0;
+  background:transparent;box-shadow:none;backdrop-filter:none;pointer-events:none;
+}
+:is(#view-chronicle:has(#cpMain>.cp-surface:not(.cp-personal-complete)>.cp-ending-hero),#view-fusion:has(#fusionMain>.fusion-ending)) .story-reader-toolbar>* {pointer-events:auto}
+:is(#view-chronicle:has(#cpMain>.cp-surface:not(.cp-personal-complete)>.cp-ending-hero),#view-fusion:has(#fusionMain>.fusion-ending)) .story-reader-toolbar>span {
+  color:#fff;font-size:13px;text-shadow:0 2px 12px #15131ccc;
+}
+:is(#view-chronicle:has(#cpMain>.cp-surface:not(.cp-personal-complete)>.cp-ending-hero),#view-fusion:has(#fusionMain>.fusion-ending)) .story-reader-toolbar .btn {
+  min-height:38px;padding:7px 12px;border:1px solid #ffffff73;border-radius:999px;
+  background:#1c22394d;color:#fff;box-shadow:0 5px 18px #17131e26;backdrop-filter:blur(14px) saturate(1.08);
+}
+:is(#view-chronicle:has(#cpMain>.cp-surface:not(.cp-personal-complete)>.cp-ending-hero),#view-fusion:has(#fusionMain>.fusion-ending)) .story-reader-toolbar .btn:last-child {
+  width:38px;padding:0;justify-content:center;font-size:18px;letter-spacing:2px;
+}
+
+/* Text-only beats use a composed paper-and-light stage with a real dialogue sheet. */
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) {
+  background:
+    radial-gradient(circle at 78% 18%,#e9b6cc7a 0 7%,transparent 31%),
+    radial-gradient(circle at 13% 82%,#adc4e575 0 6%,transparent 32%),
+    linear-gradient(148deg,#fbf6f8 0%,#eef2f8 48%,#e7edf6 100%);
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)):before {
+  content:'♪';inset:auto 7% 7% auto;color:#758db417;font-size:170px;filter:none;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)):after {
+  content:'';position:absolute;z-index:0;left:7%;right:7%;top:24%;height:72px;opacity:.3;
+  background:repeating-linear-gradient(180deg,transparent 0 13px,#9aabc344 14px 15px);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-top {
+  color:#6d7890;text-shadow:none;
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-dialogue {
+  width:min(100%,720px);max-height:min(520px,74%);padding:24px;border:1px solid #ffffffde;border-radius:24px;
+  background:#fffdf9e8;color:#34445f;box-shadow:0 24px 60px #53607824;backdrop-filter:blur(18px) saturate(1.05);
+}
+:is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-dialogue .cp-text {color:#40516e}
+:is(#view-chronicle,#view-fusion):has(.cp-novel-text-only):not(:has(.cp-novel-text-only .cp-form)) .story-reader-toolbar {
+  position:absolute;z-index:24;top:0;left:0;right:0;margin:0;padding:14px 18px;border:0;background:transparent;box-shadow:none;backdrop-filter:none;pointer-events:none;
+}
+:is(#view-chronicle,#view-fusion):has(.cp-novel-text-only):not(:has(.cp-novel-text-only .cp-form)) .story-reader-toolbar>* {pointer-events:auto}
+:is(#view-chronicle,#view-fusion):has(.cp-novel-text-only):not(:has(.cp-novel-text-only .cp-form)) .story-reader-toolbar>span {color:#52617e;text-shadow:none}
+:is(#view-chronicle,#view-fusion):has(.cp-novel-text-only):not(:has(.cp-novel-text-only .cp-form)) .story-reader-toolbar .btn {
+  min-height:38px;border:1px solid #dfe5ef;border-radius:999px;background:#ffffffbd;color:#65748e;box-shadow:0 6px 20px #52617c14;backdrop-filter:blur(12px);
+}
+
+/* The Shanqiu order sheet must fit above the persistent navigation without clipping. */
+:is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue:has(.shanqiu-menu) {
+  max-height:calc(100% - 78px);padding:13px 14px 11px;
+}
+#view-chronicle .cp-novel-dialogue .shanqiu-menu {
+  width:100%;max-width:none;margin:0;padding:0!important;border:0;border-radius:0;background:transparent;box-shadow:none;
+}
+#view-chronicle .cp-novel-text-only:has(.shanqiu-menu) .cp-novel-dialogue>.shanqiu-menu {
+  width:100%;max-width:none;margin:0;padding:0!important;border:0;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;
+}
+#view-chronicle .cp-novel-dialogue .shanqiu-menu .cp-speaker {min-height:40px;margin-bottom:7px;padding-bottom:7px}
+#view-chronicle .cp-novel-dialogue .shanqiu-menu .cp-speaker img,
+#view-chronicle .cp-novel-dialogue .shanqiu-menu .cp-speaker-avatar,
+#view-chronicle .cp-novel-dialogue .shanqiu-menu .cp-speaker-symbol {width:38px;height:38px;flex-basis:38px}
+#view-chronicle .cp-novel-dialogue .shanqiu-menu .cp-speaker b {font-size:15px}
+#view-chronicle .cp-novel-dialogue .shanqiu-menu .cp-speaker small {font-size:8px}
+#view-chronicle .cp-novel-dialogue .shanqiu-menu>.cp-illustrated-copy>.cp-text {margin:0 0 12px;font-size:12px;line-height:1.55}
+#view-chronicle .cp-novel-dialogue .shanqiu-menu-head {
+  margin:10px 0;padding:7px 9px;border:1px solid #eadac7;border-radius:10px;font-size:9px;line-height:1.35;
+}
+#view-chronicle .cp-novel-dialogue .shanqiu-drinks {gap:5px}
+#view-chronicle .cp-novel-dialogue .shanqiu-drink {min-height:48px;padding:7px 9px;gap:8px;border-radius:11px}
+#view-chronicle .cp-novel-dialogue .shanqiu-drink-no {font-size:17px}
+#view-chronicle .cp-novel-dialogue .shanqiu-drink strong {font-size:14px;line-height:1.25}
+#view-chronicle .cp-novel-dialogue .shanqiu-drink small {overflow:hidden;margin-top:2px;font-size:8px;line-height:1.3;text-overflow:ellipsis;white-space:nowrap}
+#view-chronicle .cp-novel-dialogue .shanqiu-drink>b {font-size:14px}
+#view-chronicle .cp-novel-dialogue .shanqiu-decline {
+  border-color:#e5a9c1;background:linear-gradient(110deg,#fff7fa,#fff);box-shadow:inset 3px 0 0 #df74a0;
+}
+#view-chronicle .cp-novel-dialogue .shanqiu-decline .shanqiu-drink-no,
+#view-chronicle .cp-novel-dialogue .shanqiu-decline strong,
+#view-chronicle .cp-novel-dialogue .shanqiu-decline>b {color:#b95882}
+#view-chronicle .cp-novel-dialogue .shanqiu-decline small {color:#9b7485}
+#view-chronicle .cp-novel-dialogue .shanqiu-decline:hover:not(:disabled) {border-color:#d96d99;background:#fff0f6}
+#view-chronicle .cp-novel-dialogue .shanqiu-menu .cp-caption {margin:6px 2px 0;font-size:8px;line-height:1.4}
+
+@media(max-width:900px) {
+  body:is([data-view="chronicle"],[data-view="fusion"]) .shell {padding:0 0 90px}
+  body:is([data-view="chronicle"],[data-view="fusion"]) .site-header {display:contents}
+  body:is([data-view="chronicle"],[data-view="fusion"]) .site-header>.brand,
+  body:is([data-view="chronicle"],[data-view="fusion"]) .header-tools {display:none}
+  body:is([data-view="chronicle"],[data-view="fusion"]) main {min-height:calc(100dvh - 90px)}
+  :is(#view-chronicle,#view-fusion) {width:100%;padding:0}
+}
+
+@media(max-width:900px) {
+  :is(#view-chronicle:has(#cpMain>.cp-surface:not(.cp-personal-complete)>.cp-ending-hero),#view-fusion:has(#fusionMain>.fusion-ending)) .story-reader-toolbar {
+    position:absolute;top:0;left:0;right:0;width:auto;min-height:56px;margin:0;padding:9px 12px;transform:none;
+  }
+  :is(#view-chronicle:has(#cpMain>.cp-surface:not(.cp-personal-complete)>.cp-ending-hero),#view-fusion:has(#fusionMain>.fusion-ending)) .story-reader-toolbar>span {max-width:55%;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  :is(#view-chronicle:has(#cpMain>.cp-surface:not(.cp-personal-complete)>.cp-ending-hero),#view-fusion:has(#fusionMain>.fusion-ending)) .story-reader-toolbar .btn {min-height:34px;padding:6px 9px;font-size:10px}
+  :is(#view-chronicle:has(#cpMain>.cp-surface:not(.cp-personal-complete)>.cp-ending-hero),#view-fusion:has(#fusionMain>.fusion-ending)) .story-reader-toolbar .btn:last-child {width:34px}
+
+  :is(#view-chronicle,#view-fusion):has(.cp-novel-text-only):not(:has(.cp-novel-text-only .cp-form)) .story-reader-toolbar {
+    position:fixed;top:0;left:0;right:0;margin:0;padding:9px 12px;
+  }
+  :is(#view-chronicle,#view-fusion):has(.cp-novel-text-only):not(:has(.cp-novel-text-only .cp-form)) .story-reader-toolbar>span {max-width:55%;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  :is(#view-chronicle,#view-fusion):has(.cp-novel-text-only):not(:has(.cp-novel-text-only .cp-form)) .story-reader-toolbar .btn {min-height:34px;padding:6px 9px;font-size:10px}
+  :is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) {padding:58px 12px 12px}
+  :is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-top {
+    display:flex;position:absolute;z-index:3;top:64px;left:16px;right:16px;padding:0;border:0;background:none;color:#7b879d;font-size:9px;
+  }
+  :is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-body {height:100%;min-height:0;align-items:center;padding-top:38px}
+  :is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-dialogue {
+    width:100%;max-height:68%;padding:15px 14px;border-radius:19px;overflow:auto;
+  }
+  :is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-dialogue .cp-speaker {margin-bottom:10px;padding-bottom:9px}
+  :is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-novel-dialogue .cp-text {font-size:14px;line-height:1.72}
+  :is(#view-chronicle,#view-fusion) .cp-novel-text-only:not(:has(.cp-form)) .cp-choice {min-height:56px;padding:10px 11px}
+
+  #view-chronicle .cp-novel-text-only:has(.shanqiu-menu) .cp-novel-body {
+    position:relative;display:block;height:100%;padding-top:0;
+  }
+  #view-chronicle .cp-novel-text-only:has(.shanqiu-menu) .cp-novel-dialogue {
+    position:fixed;inset:104px 14px 14px;width:auto;height:calc(100dvh - 118px);max-height:none;
+    padding:18px 17px 16px;overflow:auto;overscroll-behavior:contain;
+  }
+  #view-chronicle .cp-novel-text-only:has(.shanqiu-menu) .shanqiu-menu,
+  #view-chronicle .cp-novel-text-only:has(.shanqiu-menu) .cp-illustrated-copy {
+    display:flex;height:100%;min-height:0;flex-direction:column;
+  }
+  #view-chronicle .cp-novel-text-only:has(.shanqiu-menu) .shanqiu-drinks {
+    flex:1;grid-template-rows:repeat(5,minmax(43px,1fr));
+  }
+  :is(#view-chronicle,#view-fusion) .cp-novel-illustrated .cp-novel-dialogue:has(.shanqiu-menu) {
+    top:auto;right:14px;bottom:14px;left:14px;height:auto;max-height:calc(100% - 88px);
+    padding:18px 17px 16px;overflow-y:auto;
+  }
+  #view-chronicle .cp-novel-dialogue .shanqiu-drinks {grid-template-columns:1fr}
+  #view-chronicle .cp-novel-dialogue .shanqiu-drink {min-height:43px;padding:6px 8px}
+}
+
+@media(min-width:480px) and (max-width:900px) {
+  #view-chronicle .cp-novel-dialogue .shanqiu-drinks {grid-template-columns:repeat(2,minmax(0,1fr))}
+  #view-chronicle .cp-novel-text-only:has(.shanqiu-menu) .shanqiu-drinks {grid-template-rows:repeat(3,minmax(60px,1fr))}
+}
+
+/* A toolbar is navigation chrome, so only its controls carry surfaces. */
+:is(#view-chronicle,#view-fusion):not(:has(.story-library)):not(:has(.cp-novel-illustrated)) .story-reader-toolbar {
+  min-height:52px;padding:7px 10px;border:0;background:transparent;box-shadow:none;backdrop-filter:none;
+}
+:is(#view-chronicle,#view-fusion):not(:has(.story-library)):not(:has(.cp-novel-illustrated)) .story-reader-toolbar .btn {
+  min-height:36px!important;padding:7px 10px!important;line-height:1.2;
+}
+
+/* Keep ending titles legible over every memorial image, including pale artwork. */
+:is(#view-chronicle:has(#cpMain>.cp-surface:not(.cp-personal-complete)>.cp-ending-hero),#view-fusion:has(#fusionMain>.fusion-ending)) .story-reader-toolbar>span {
+  padding:6px 10px;border-radius:999px;background:#1c223933;backdrop-filter:blur(10px) saturate(1.05);
+}
+
+@media(max-width:900px) {
+  body:is([data-view="chronicle"],[data-view="fusion"]) .main-nav {
+    position:fixed;z-index:80;left:0;right:0;bottom:0;display:flex;justify-content:space-around;
+    gap:2px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));
+    border-top:1px solid #e4d4dc;background:#fffaf5ee;backdrop-filter:blur(16px);
+  }
+  body:is([data-view="chronicle"],[data-view="fusion"]) .nav-btn {
+    flex:1;max-width:110px;padding:7px 3px;gap:4px;border-radius:13px;font-size:10px;
+  }
+  body:is([data-view="chronicle"],[data-view="fusion"]) .nav-btn .icon {width:20px;height:20px}
+  #view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style]) {
+    box-sizing:border-box;width:calc(100% - 18px);margin-inline:9px;padding-bottom:16px;border-radius:20px;
+  }
+  #view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style])>.cp-text {padding:16px 17px 5px;font-size:12px;line-height:1.72}
+  #view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style])>.cp-reward {margin:10px 17px;padding:10px 11px;font-size:9px;line-height:1.55}
+  #view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style])>.btn {width:calc(100% - 34px);min-height:42px;margin:12px 17px 0;font-size:11px}
+}
+
+@media(min-width:600px) and (max-width:900px) {
+  #view-chronicle #cpMain>.cp-surface:has(>.cp-ending-hero[style])>.cp-ending-hero,
+  #view-fusion .fusion-ending-visual {min-height:clamp(420px,50dvh,560px)}
+  #view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style]) {
+    display:flex;min-height:calc(100dvh - 74px - env(safe-area-inset-bottom));flex-direction:column;
+    background:linear-gradient(180deg,#fff 0 76%,#fff8fb 100%);
+  }
+  #view-chronicle #cpMain>.cp-surface:has(>.cp-speaker):has(>.cp-ending-hero[style]):after {
+    content:'LOVE & HAKIMI  ·  MUSIC BRINGS US CLOSER';display:flex;flex:1;min-height:72px;
+    align-items:center;justify-content:center;padding:24px;color:#bd8ca3;font-size:9px;letter-spacing:.24em;
+    background:radial-gradient(circle at 50% 48%,#f4ccdc38 0 4%,transparent 35%);
+  }
+}
+
+@media(max-width:900px) {
+  :is(#view-chronicle,#view-fusion):not(:has(.story-library)):not(:has(.cp-novel-illustrated)) .story-reader-toolbar {
+    min-height:48px;margin:0 8px 5px;padding:7px 8px;
+  }
+  :is(#view-chronicle,#view-fusion):not(:has(.story-library)):not(:has(.cp-novel-illustrated)) .story-reader-toolbar .btn {
+    min-height:34px!important;padding:6px 9px!important;font-size:10px;line-height:1.2;
+  }
+  :is(#view-chronicle:has(#cpMain>.cp-surface:not(.cp-personal-complete)>.cp-ending-hero),#view-fusion:has(#fusionMain>.fusion-ending)) .story-reader-toolbar>span {
+    padding:5px 8px;
+  }
+}
+
+/* Fusion contact lists keep their title on the readable sheet and use the
+   full mobile reader height. Only the list itself scrolls when it is long. */
+#view-fusion .cp-novel-chat.cp-novel-text-only .cp-novel-dialogue.fusion-chat {
+  background:#fffdfaf5;color:#34445f;
+}
+#view-fusion .fusion-chat-heading {margin:0 0 14px;padding-bottom:12px;border-bottom:1px solid #e7e3ec}
+#view-fusion .fusion-chat-heading h3 {margin:0;color:#293b5b;font:600 clamp(19px,2.3vw,25px)/1.45 var(--serif)}
+#view-fusion .fusion-chat-heading+.cp-speaker {margin-top:15px}
+
+@media(max-width:900px) {
+  #view-fusion .cp-novel-chat.cp-novel-text-only .cp-novel-body {
+    position:static;display:block;height:100%;min-height:0;margin:0;padding:0;
+  }
+  #view-fusion .cp-novel-chat.cp-novel-text-only .cp-novel-dialogue.fusion-chat {
+    position:absolute;top:clamp(116px,15dvh,144px);right:12px;bottom:auto;left:12px;
+    box-sizing:border-box;width:auto;height:calc(100dvh - clamp(116px,15dvh,144px) - 12px);min-height:0;max-height:none;margin:0;padding:18px 16px 16px;
+    padding-bottom:max(76px,calc(env(safe-area-inset-bottom) + 40px));
+    overflow-x:hidden;overflow-y:auto;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch;touch-action:pan-y;border-radius:20px;
+  }
+  #view-fusion .fusion-chat-heading {margin-bottom:12px;padding-bottom:10px}
+  #view-fusion .fusion-chat-heading h3 {font-size:20px;line-height:1.42}
+  #view-fusion .cp-novel-chat .fusion-chat-grid {gap:9px;margin-top:14px}
+}
+
+/* Chapter endings: make the outcome explicit and let the poster use spare screen height. */
+#view-chronicle #cpMain>.cp-main-ending>.cp-ending-hero .cp-overline {display:none}
+#view-chronicle #cpMain>.cp-main-ending>.cp-ending-hero .cp-ending-type {
+  display:inline-flex;align-items:center;align-self:flex-start;margin-bottom:4px;padding:6px 12px;
+  border:1px solid #ffffffb5;border-radius:999px;background:#fff4f9ec;color:#9d3f68;
+  font-size:12px;font-weight:700;letter-spacing:.08em;box-shadow:0 4px 16px #21152530;
+}
+#view-chronicle #cpMain>.cp-main-ending>.cp-ending-hero .cp-ending-type[data-ending-type="TE"] {background:#eef4ffec;color:#456796}
+#view-chronicle #cpMain>.cp-main-ending>.cp-ending-hero .cp-ending-type[data-ending-type="BE"] {background:#edeaf2ec;color:#5b536c}
+#view-chronicle #cpMain>.cp-main-ending>.cp-ending-hero .cp-ending-type[data-ending-type="分支"],
+#view-chronicle #cpMain>.cp-main-ending>.cp-ending-hero .cp-ending-type[data-ending-type="未记录"] {background:#fff8e7ec;color:#84643b}
+
+@media(max-width:900px) {
+  #view-chronicle #cpMain>.cp-main-ending:not(:has(>.cp-speaker)) {
+    display:flex;flex-direction:column;box-sizing:border-box;width:calc(100% - 18px);
+    min-height:calc(100dvh - 80px - env(safe-area-inset-bottom));margin:0 9px;padding:0 0 14px;border-radius:20px;
+  }
+  #view-chronicle #cpMain>.cp-main-ending:not(:has(>.cp-speaker))>.cp-ending-hero {
+    flex:1 0 300px;box-sizing:border-box;min-height:300px;margin-bottom:0;padding:22px 20px 26px;
+  }
+  #view-chronicle #cpMain>.cp-surface.cp-main-ending:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-ending-hero .cp-caption {font-size:12px;line-height:1.5}
+  #view-chronicle #cpMain>.cp-surface.cp-main-ending:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-choices {
+    width:auto;max-width:none;margin:12px 14px 0;
+  }
+  #view-chronicle #cpMain>.cp-surface.cp-main-ending:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-choices>* {min-height:76px;padding:11px;font-size:13px;line-height:1.4}
+  #view-chronicle #cpMain>.cp-surface.cp-main-ending:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-choices small {font-size:11px;line-height:1.35}
+  #view-chronicle #cpMain>.cp-surface.cp-main-ending:has(>.cp-ending-hero[style]):not(:has(>.cp-speaker))>.cp-teaser {
+    max-width:none;min-height:82px;margin:10px 14px 0;padding:12px 13px;font-size:11px;line-height:1.45;
+  }
+}

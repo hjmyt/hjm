@@ -1,0 +1,92 @@
+/* Full viewport presentation, with the complete illustration preserved on every screen. */
+.modal.story-cinematic-modal { position: fixed; inset: 0; width: 100%; max-width: none; height: 100vh; height: 100dvh; max-height: none; margin: 0; padding: 0; border: 0; border-radius: 0; overflow: hidden; background: #110e19; color: #fff2e5; }
+.story-cinematic-modal > .modal-header { position: absolute; z-index: 5; top: max(14px, env(safe-area-inset-top)); right: max(18px, env(safe-area-inset-right)); margin: 0; padding: 0; border: 0; }
+.story-cinematic-modal #modalTitle { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.story-cinematic-modal #closeModal { color: #fce4d2; background: #17131a8c; border: 1px solid #ebc6a34d; border-radius: 50%; }
+.story-cinematic-modal #modalContent { height: 100%; min-height: 0; overflow: hidden; }
+.story-cinematic { position: relative; isolation: isolate; height: min(100%, var(--cinematic-height, 100%)); min-height: 0; overflow: hidden; background: #100d18; color: #fff1e5; font-family: system-ui, sans-serif; display: grid; grid-template-rows: auto minmax(0, 1fr) auto; }
+.cinematic-backdrop { position: absolute; inset: -5%; z-index: -3; background-size: cover; background-position: center; filter: blur(30px) saturate(.75); opacity: .33; }
+.story-cinematic::before { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: -2; background: linear-gradient(180deg,#100c19ba,transparent 28%,#100c1966 65%,#100c19), radial-gradient(ellipse at center, transparent 20%,#0a08139c); }
+.cinematic-aura { position: absolute; inset: -10%; z-index: -1; background: radial-gradient(ellipse at 20% 45%, #ce866632, transparent 40%), radial-gradient(ellipse at 80% 20%, #d571c128, transparent 44%); animation: cinematic-breathe 12s ease-in-out infinite alternate; pointer-events: none; }
+.cinematic-kicker { z-index: 2; display: flex; justify-content: space-between; padding: 27px 90px 18px 40px; font-size: 10px; letter-spacing: 3px; color: #e9cfadbf; }
+.cinematic-story { position: relative; z-index: 2; min-height: 0; display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(300px, 1fr); grid-template-rows: minmax(0, 1fr) minmax(0, 2fr); gap: 0 24px; padding: 8px 38px 20px; overflow-x: hidden; overflow-y: auto; overscroll-behavior-y: contain; touch-action: pan-y; -webkit-overflow-scrolling: touch; scroll-padding-block: 20px; }
+.cinematic-prelude { grid-column: 2; align-self: end; padding: 18px 12px; text-align: center; color: #e9cbb7; font: 15px/2 'Songti SC', serif; letter-spacing: 2px; animation: cinematic-caption 1.6s .2s both; }
+.cinematic-prelude span, .cinematic-prelude strong { display: block; }
+.cinematic-prelude strong { font-size: 21px; font-weight: 400; color: #ffe6ce; margin-top: 5px; }
+.cinematic-picture { grid-row: 1 / 3; grid-column: 1; min-height: 0; margin: 0; display: flex; flex-direction: column; justify-content: center; gap: 12px; }
+.cinematic-picture video, .cinematic-picture .cinematic-still { display: block; width: 100%; height: auto; max-height: calc(100% - 30px); object-fit: contain; filter: drop-shadow(0 12px 35px #0008); animation: cinematic-reveal 7s cubic-bezier(.16,.7,.3,1) both; }
+.cinematic-picture figcaption { color: #ffecd7bd; text-align: center; font: 12px/1.6 'Songti SC', serif; letter-spacing: 2px; animation: cinematic-caption 2s 1s both; }
+.cinematic-words { grid-row: 2; grid-column: 2; align-self: start; text-align: center; padding: 14px 4px; text-shadow: 0 2px 16px #120a13; }
+.cinematic-overline { font: 12px/1.8 'Songti SC', serif; letter-spacing: 5px; color: #e3c2a5; animation: cinematic-caption 2s 1s both; }
+.cinematic-words h2 { font: 400 clamp(26px, 3vw, 42px)/1.6 'Songti SC', 'Noto Serif CJK SC', serif; letter-spacing: 3px; margin: 8px 0 18px; animation: cinematic-caption 2.2s 1.7s both; }
+.cinematic-words em { display: block; font-style: normal; color: #f5c9ce; }
+.cinematic-prose { font: 14px/2.2 'Songti SC', 'Noto Serif CJK SC', serif; letter-spacing: 1px; color: #e4d2c6; }
+.cinematic-prose p { color: #e4d2c6; margin: 0 0 18px; animation: cinematic-caption 2s 2.8s both; }
+.cinematic-prose p:last-child { animation-delay: 4s; }
+.cinematic-credit { font-size: 10px; letter-spacing: 3px; color: #b8a0ae; margin: 16px 0 0; animation: cinematic-caption 2s 4.5s both; }
+.cinematic-footer { position: relative; background: #100d18; z-index: 3; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 14px 38px max(22px, env(safe-area-inset-bottom)); border-top: 1px solid #d8bba21c; }
+.cinematic-actions { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.cinematic-actions button, .cinematic-music button { border: 1px solid #d2ad9559; border-radius: 24px; background: #251d2780; color: #f9e4d4; padding: 10px 18px; cursor: pointer; font: 12px/1.5 system-ui; }
+.cinematic-actions button:last-child { background: #e9c7aa; color: #3d2d35; border-color: #e9c7aa; }
+.cinematic-actions button:focus-visible, .cinematic-music button:focus-visible { outline: 2px solid #f2d0b4; outline-offset: 4px; }
+.cinematic-music { max-width: 390px; min-width: 0; }
+.cinematic-music .story-music { margin: 0; padding: 0; border: 0; background: transparent; color: #e7cbb6; }
+.cinematic-music .story-music button { color: #e7cbb6; }
+.cinematic-music .story-music small { color: #bba7b2; }
+.cinematic-music input { accent-color: #e9c7aa; }
+.cinematic-music .story-music label { color: #c7b7bc; }
+.cinematic-dust { position: absolute; inset: 0; pointer-events: none; z-index: 1; }
+.cinematic-dust i { position: absolute; left: var(--left); top: var(--top); width: var(--size); height: var(--size); border-radius: 50%; background: #ffe0ac; box-shadow: 0 0 10px #ffb584; animation: cinematic-drift var(--duration) var(--delay) linear infinite; }
+.story-cinematic.is-paused *, .story-cinematic.is-paused *::before { animation-play-state: paused !important; }
+.story-cinematic.is-settled .cinematic-prelude, .story-cinematic.is-settled .cinematic-picture video, .story-cinematic.is-settled .cinematic-words *, .story-cinematic.is-settled figcaption { animation: none; opacity: 1; transform: none; }
+.story-cinematic.art-unavailable figcaption { opacity: 1; animation: none; }
+@keyframes cinematic-reveal { from { opacity: 0; transform: scale(.94); filter: brightness(.65); } 22% { opacity: 1; } to { opacity: 1; transform: scale(1); filter: brightness(1); } }
+@keyframes cinematic-caption { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes cinematic-drift { 0% { opacity: 0; transform: translate3d(0,30px,0); } 25%,65% { opacity: .5; } 100% { opacity: 0; transform: translate3d(25px,-90px,0); } }
+@keyframes cinematic-breathe { from { opacity: .4; transform: scale(1); } to { opacity: 1; transform: scale(1.08); } }
+@media(max-width: 720px) {
+    .cinematic-kicker { padding: 23px 65px 12px 18px; font-size: 8px; letter-spacing: 1.3px; gap: 14px; }
+    .cinematic-kicker { flex-wrap: wrap; }
+    .cinematic-kicker::after { content: "上下滑动 · 查看完整剧情"; flex-basis: 100%; text-align: center; font-size: 10px; letter-spacing: 1px; color: #c7b7bc; }
+    .cinematic-story { display: flex; flex-direction: column; gap: 0; padding: 0 0 28px; }
+    .cinematic-prelude { align-self: auto; flex: 0 0 auto; padding: 8px 16px 14px; font-size: 12px; line-height: 1.9; }
+    .cinematic-prelude strong { font-size: 18px; margin-top: 3px; }
+    .cinematic-picture { flex: 0 0 auto; gap: 8px; width: 100%; }
+    .cinematic-picture video, .cinematic-picture .cinematic-still { height: auto; max-height: 34vh; max-height: 34dvh; aspect-ratio: 4 / 3; }
+    .cinematic-picture figcaption { font-size: 10px; line-height: 1.5; }
+    .cinematic-words { flex: 0 0 auto; align-self: auto; padding: 16px 16px 8px; }
+    .cinematic-overline { font-size: 10px; letter-spacing: 3px; }
+    .cinematic-words h2 { font-size: clamp(23px, 6.7vw, 29px); letter-spacing: 1px; margin: 4px 0 10px; }
+    .cinematic-words em { display: inline; margin-left: .2em; }
+    .cinematic-prose { font-size: 13px; line-height: 1.95; letter-spacing: .7px; }
+    .cinematic-prose p { margin-bottom: 10px; }
+    .cinematic-credit { font-size: 9px; margin-top: 12px; letter-spacing: 2px; }
+    .cinematic-footer { flex-direction: column; gap: 10px; padding: 10px 12px max(12px, env(safe-area-inset-bottom)); }
+    .cinematic-music { width: 100%; max-width: 380px; }
+    .cinematic-actions { gap: 7px; }
+    .cinematic-actions button { padding: 9px 13px; font-size: 11px; }
+}
+@media(max-height: 530px) and (min-width: 721px) {
+    .cinematic-kicker { padding-top: 12px; padding-bottom: 8px; }
+    .cinematic-story { grid-template-columns: minmax(0, 1.2fr) minmax(280px, 1fr); padding: 0 20px 8px; gap: 0 16px; }
+    .cinematic-prelude { padding: 0; font-size: 10px; line-height: 1.5; }
+    .cinematic-prelude strong { font-size: 13px; margin: 0; }
+    .cinematic-picture figcaption { display: none; }
+    .cinematic-picture video, .cinematic-picture .cinematic-still { max-height: 100%; }
+    .cinematic-words { padding: 4px 0; }
+    .cinematic-overline, .cinematic-credit { display: none; }
+    .cinematic-words h2 { font-size: 20px; margin: 0 0 4px; }
+    .cinematic-words em { display: inline; }
+    .cinematic-prose { font-size: 10px; line-height: 1.65; }
+    .cinematic-prose p { margin-bottom: 6px; }
+    .cinematic-footer { padding-top: 8px; padding-bottom: 8px; }
+}
+@media(prefers-reduced-motion: reduce) {
+    .story-cinematic *, .story-cinematic *::before { animation: none !important; }
+    .cinematic-dust { display: none; }
+    [data-cinematic-skip] { display: none; }
+}
+.cinematic-music .story-music strong, .cinematic-music .story-music-note { color: #e9c7aa; }
+
+.cinematic-picture .cinematic-still { aspect-ratio: 4 / 3; animation: none; }
+.cinematic-picture video[hidden], .cinematic-picture .cinematic-still[hidden] { display: none; }
