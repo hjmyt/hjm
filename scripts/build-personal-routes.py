@@ -2,9 +2,9 @@
 from pathlib import Path
 import re,html,json,copy
 ROOT=Path(__file__).resolve().parents[1]
-names={'阿喆':'azhe','TIM':'tim','冰冰':'bingbing','垃垃':'lala','十元':'shiyuan','旁白':'narrator','小塔':'xiaota','大塔':'xiaota','大鹅':'goose','大羊':'dayang','黄奕兴':'huangyx','朱老师':'zhu','飞鸿':'feihong','宝石':'baoshi','雪子':'xuezi','REK':'rek','柒柒':'qiqi','小周':'xiaozhou','小英':'xiaoying','主唱':'singer','客人':'guest','你':'player'}
+names={'阿喆':'azhe','TIM':'tim','Tim':'tim','冰冰':'bingbing','垃垃':'lala','小垃':'lala','十元':'shiyuan','旁白':'narrator','小塔':'xiaota','大塔':'xiaota','大鹅':'goose','大羊':'dayang','黄奕兴':'huangyx','朱老师':'zhu','飞鸿':'feihong','宝石':'baoshi','雪子':'xuezi','REK':'rek','柒柒':'qiqi','小周':'xiaozhou','小英':'xiaoying','主唱':'singer','客人':'guest','你':'player','空格':'kongge','汤少':'tang','笛杰':'dijie','酒狂狂':'jiukuang'}
 result={}
-route_files={'azhe':'azhe.html','shiyuan':'shiyuan.html','baoshi_feihong':'baoshi-feihong.html'}
+route_files={'azhe':'azhe.html','shiyuan':'shiyuan.html','baoshi_feihong':'baoshi-feihong.html','tim':'tim.html'}
 for route,filename in route_files.items():
  source=(ROOT/f'docs/story-sources/personal/{filename}').read_text()
  raw=html.unescape(re.search(r'<textarea[^>]*>([\s\S]*?)</textarea>',source)[1])
@@ -12,7 +12,10 @@ for route,filename in route_files.items():
  for block in re.split(r'(?=^【)',raw,flags=re.M):
   lines=[l.strip() for l in block.splitlines() if l.strip()]
   if not lines or not lines[0].startswith('【'):continue
-  id,conditions,title=re.match(r'【(.*?)】',lines[0])[1].split('｜')
+  head=re.match(r'【(.*?)】',lines[0])[1].split('｜')
+  id=head[0].strip()
+  conditions=head[1].strip() if len(head)>2 else ''
+  title=head[2].strip() if len(head)>2 else head[1].strip()
   if title:lasttitle=title
   node={'id':id,'title':title or lasttitle,'sub':'副场景' in conditions,'need':{'bond':0,'score':0,'flags':[]},'lines':[],'choices':[]}
   for cond in conditions.split():
@@ -28,10 +31,12 @@ for route,filename in route_files.items():
      m=re.search(r'（([^（）]*)）\s*$',t)
      if not m:break
      effect=m[1]
-     if re.fullmatch(r'(好感|羁绊)[+-]\d+',effect):c['bond']=max(0,min(2,int(effect[2:])))
+     if re.fullmatch(r'(好感|羁绊)[+-]\d+',effect):
+      amount=int(effect[2:])
+      c['bond']=5 if route=='tim' and amount==5 else max(0,min(2,amount))
      elif re.fullmatch(r'大旗[+-]\d+',effect):c['score']=int(effect[2:])
      elif effect.startswith('记住'):c['flags'].insert(0,effect[2:])
-     elif re.fullmatch(r'去(?:azhe_|sy_|cp_|CHK_|ACT_)[A-Za-z0-9_]+',effect):c['next']=effect[1:]
+     elif re.fullmatch(r'去(?:azhe_|sy_|cp_|t_|CHK_|ACT_)[A-Za-z0-9_]+',effect):c['next']=effect[1:]
      else:break
      t=t[:m.start()].strip()
     c['text']=t or '（继续）';node['choices'].append(c)
@@ -40,7 +45,8 @@ for route,filename in route_files.items():
     if who in names:node['lines'].append({'who':names[who],'text':text})
   if not node['choices']:node['choices']=[{'text':'（继续）','bond':0,'score':0,'flags':[],'next':None}]
   nodes.append(node)
- result[route]={'id':route,'name':{'azhe':'阿喆','shiyuan':'十元','baoshi_feihong':'宝石×飞鸿'}[route], 'tagline':{'azhe':'翻过这一页，星光还在','shiyuan':'把光源，也牵进光里','baoshi_feihong':'大旗扇起来，别让两个笨蛋走散'}[route], 'asset':{'azhe':'cardAzhe','shiyuan':'cardShiyuan','baoshi_feihong':'cardBaoshi'}[route],'nodes':nodes}
+ result[route]={'id':route,'name':{'azhe':'阿喆','shiyuan':'十元','baoshi_feihong':'宝石×飞鸿','tim':'TIM'}[route], 'tagline':{'azhe':'翻过这一页，星光还在','shiyuan':'把光源，也牵进光里','baoshi_feihong':'大旗扇起来，别让两个笨蛋走散','tim':'春风入线，舒服地并肩'}[route], 'asset':{'azhe':'cardAzhe','shiyuan':'cardShiyuan','baoshi_feihong':'cardBaoshi','tim':'cardTim'}[route],'nodes':nodes}
+ if route=='tim':result[route].update({'entry':'t_start','turnsPerPage':1})
 
 def node(route,id):return next(n for n in result[route]['nodes'] if n['id']==id)
 def new(route,id,title,text,who='narrator',choices=None):
@@ -99,6 +105,20 @@ for id,typ in [('sy_HE','HE'),('sy_TE','TE'),('sy_TE2','TE'),('sy_BE','BE'),('sy
 # the Baoshi×Feihong CP route when the chapter-two string-group path also exists.
 node('shiyuan','sy_10')['choices'][1]['text']='「十元，我们继续一起组乐团吧。」'
 node('shiyuan','sy_10')['choices'][1]['flags']=['syFriend']
+
+# Tim's supplied prototype is adapted to the shared personal-story runtime.
+# Side scenes are explicit graph edges (the prototype discovered them by an
+# id suffix), and its final check uses the permanent global Tim bond instead
+# of introducing a second route-local relationship meter.
+for choice in node('tim','t_sports')['choices']:
+ choice['next']='t_sports_a' if 'sportsOK' in choice['flags'] else 't_crisis'
+for scene,next_scene in [
+ ('t_crisis','t_crisis_a'),('t_photo','t_photo_a'),('t_jiebao','t_jiebao_a'),
+ ('t_care','t_care_a'),('t_final','t_final_a')
+]:
+ for choice in node('tim',scene)['choices']:choice['next']=next_scene
+for id,typ in [('t_HE','HE'),('t_TE','TE'),('t_BE','BE')]:node('tim',id)['ending']=typ
+node('tim','t_final_a')['resolveTimEnding']=True
 
 # CP route production adaptations. Its "banner" score is route-local, not a
 # relationship resource, and therefore never changes either character's bond.
@@ -237,17 +257,18 @@ for r in result.values():
   for choice in n['choices']:
    if choice['next']=='ACT_DONE':choice['next']=None
 
-def dialogue_pages(lines,merge=True):
+def dialogue_pages(lines,merge=True,size=2):
  turns=[]
  for line in lines:
   if merge and turns and turns[-1]['who']==line['who']:turns[-1]['text']+='\n\n'+line['text']
   else:turns.append(copy.deepcopy(line))
- return [turns[i:i+2] for i in range(0,len(turns),2)] or [[]]
+ return [turns[i:i+size] for i in range(0,len(turns),size)] or [[]]
 
 # Long nodes span several reader pages. Give every visible page its own
 # illustration instead of repeating a single node cover across later beats.
 cp_page_scenes=[]
 other_page_scenes=[]
+tim_page_scenes=[]
 he_prompts=[
  '夜晚摩天轮下，飞鸿穿蓝灰衬衫站在缠着胶带的行李箱旁；宝石穿米白衬衫气喘吁吁跑到他面前，久别重逢、欲言又止，霓虹映亮两人的脸。',
  '摩天轮霓虹下，飞鸿眼眶微红、克制地质问，宝石慌张摆手解释；脚边有旅行六小时带来的行李箱，两个成年男性近景对话。',
@@ -286,6 +307,49 @@ for route_id in ['azhe','shiyuan']:
    if page_index>0:other_page_scenes.append({'route':route_id,'node':n['id'],'page':page_index+1,'title':n['title'],**art})
   n['pageArt']=page_art
 
+# Tim deliberately uses one speaking turn per click-page. visibleCast is an
+# authored physical-presence list, never a name scan over dialogue text.
+tim_visible_cast={
+ 't_start':['tim'],'t_start_page2':['tim'],'t_start_page3':['tim'],'t_start_page4':['tim'],'t_start_page5':['tim'],
+ 't_sports':['tim'],'t_sports_page2':['tim'],'t_sports_page3':['tim'],
+ 't_sports_a':['tim'],'t_sports_a_page2':['tim'],'t_sports_a_page3':['tim'],
+ 't_crisis':['kongge'],'t_crisis_page2':['kongge'],'t_crisis_page3':['kongge'],'t_crisis_page4':['kongge'],
+ 't_crisis_page5':['tim'],'t_crisis_page6':['tim','kongge'],'t_crisis_page7':['kongge'],
+ 't_crisis_page8':['tim','kongge'],'t_crisis_page9':['kongge'],'t_crisis_page10':['tim','kongge'],
+ 't_crisis_page11':['tim','kongge'],'t_crisis_page12':['tim','kongge'],'t_crisis_a':['tim'],
+ 't_photo':['tim','tang'],'t_photo_page2':['tim','tang'],'t_photo_page3':['tang','tim'],
+ 't_photo_page4':['tim','tang'],'t_photo_page5':['tang','tim'],'t_photo_page6':['tang','tim'],
+ 't_photo_page7':['tim'],'t_photo_a':['tim'],'t_photo_a_page2':['tim'],
+ 't_jiebao':['tim','dijie'],'t_jiebao_page2':['tim','dijie'],'t_jiebao_page3':['dijie','tim'],
+ 't_jiebao_page4':['tim','dijie'],'t_jiebao_page5':['dijie','tim'],'t_jiebao_page6':['tim','dijie'],
+ 't_jiebao_page7':['tim','dijie'],'t_jiebao_a':['tim','dijie'],'t_jiebao_a_page2':['tim'],'t_jiebao_a_page3':['tim','dijie'],
+ 't_cp':['tim','kongge'],'t_cp_page2':['tim'],'t_cp_page3':[],
+ 't_cp_a1':['tim'],'t_cp_a2':['tim'],'t_cp_a3':['tim'],'t_cp_a':['tim'],'t_cp_a_page2':['tim'],
+ 't_care':['tim','kongge'],'t_care_a':['tim'],'t_distance':['tim'],'t_distance_page2':['tim'],
+ 't_test':['tim'],'t_test_page2':['tim'],'t_test_page3':['tim'],'t_confess':['tim'],
+ 't_confess_page2':['tim'],'t_confess_page3':['tim'],'t_confess_page4':['tim'],
+ 't_final':['tim'],'t_final_page2':['tim'],'t_final_page3':['tim'],'t_final_page4':['tim'],
+ 't_final_a':['tim'],'t_final_a_page2':['tim'],'t_final_a_page3':['tim'],'t_BE_trigger':['tim'],
+ 't_HE':['tim'],'t_TE':['tim'],'t_BE':['tim']
+}
+for n in result['tim']['nodes']:
+ pages=dialogue_pages(n['lines'],size=1);page_art=[]
+ for page_index,page in enumerate(pages):
+  output_id=n['id'] if page_index==0 else f'{n["id"]}_page{page_index+1}'
+  text=' '.join(line['text'] for line in page)
+  visible=tim_visible_cast[output_id]
+  art={'id':output_id,'asset':f'personal_{output_id}','memory':f'cp7_{output_id}',
+       'text':text[:280],'visibleCast':visible,'semanticScene':f'tim:{n["id"]}:{page_index+1}'}
+  page_art.append(art)
+  tim_page_scenes.append({'node':n['id'],'page':page_index+1,'title':n['title'],**art})
+ n['pageArt']=page_art
+assert set(tim_visible_cast)=={scene['id'] for scene in tim_page_scenes}
+for index,scene in enumerate(tim_page_scenes):
+ scene['contextBefore']=tim_page_scenes[index-1]['text'] if index else 'Tim 个人线尚未开始。'
+ scene['contextAfter']=tim_page_scenes[index+1]['text'] if index+1<len(tim_page_scenes) else 'Tim 个人线在这个结局收束。'
+ by_id=next(art for n in result['tim']['nodes'] for art in n['pageArt'] if art['id']==scene['id'])
+ by_id.update({'contextBefore':scene['contextBefore'],'contextAfter':scene['contextAfter']})
+
 for n in result['yangcun']['nodes']:
  pages=dialogue_pages(n['lines'],merge=False);page_art=[]
  for page_index,page in enumerate(pages):
@@ -312,7 +376,7 @@ yc_chat_js="\nconst YANGCUN_CHAT = Object.freeze({\n"+",\n".join([
 (ROOT/'js/data/personal-routes.js').write_text("'use strict';\n\n// Compiled from supplied scripts; production rules are explicit in the build script.\nconst PERSONAL_ROUTES = "+json.dumps(result,ensure_ascii=False,indent=2)+";\nconst PERSONAL_NODES = Object.values(PERSONAL_ROUTES).flatMap(r=>r.nodes.map(n=>({...n,route:r.id})));\nconst PERSONAL_PAGE_ART = PERSONAL_NODES.flatMap(n=>(n.pageArt||[]).map((a,index)=>({...a,route:n.route,node:n.id,page:index+1,title:n.title})));\nObject.assign(ASSETS,Object.fromEntries([...PERSONAL_NODES.filter(n=>n.asset).map(n=>[n.asset,ASSETS[n.asset]||`assets/chronicle/personal/${n.id}.webp`]),...PERSONAL_PAGE_ART.map(a=>[a.asset,ASSETS[a.asset]||`assets/chronicle/personal/${a.id}.webp`])]));\n"+yc_chat_js)
 # Every reader node gets its own panel. No character portraits substitute for scene art.
 base='''Use case: illustration-story. Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total aspect ratio 2:1 landscape, ideally 3072x1536. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, no inner comics or split panels. All faces and crucial props within central 80%. Row-major order. Warm cinematic semi-realistic anime painted CG, detailed environments and gentle film lighting, matching the supplied game references. All depicted people are fictional Chinese adults. Player is a gender-neutral first-person viewpoint (only a sleeve/hand if essential), NEVER a fixed protagonist face. NEVER depict Shiyuan as the player or as Azhe's romantic partner. In Azhe route, do not show a woman in romantic embraces, proposals or video-call thumbnails: view everything from the player camera, showing only Azhe and the player hand. Shiyuan may appear ONLY if the excerpt explicitly names her. Story excerpts below are CONTENT ONLY for scene depiction, never render their text. Do not combine different scenes. Choose the key instant in each excerpt. Keep identity and instrument consistent. A character's reference portrait defines identity and clothing, not a prop requirement: show an instrument only when the specific panel excerpt explicitly involves playing, rehearsing, carrying or protecting it. Avoid giving a violin a guitar body, avoid duplicate people.\n阿喆：棕色微卷短发、细圆框眼镜、黑色衬衫、温柔腼腆的成年小提琴男性。十元：棕色短bob、金色星形发卡、奶油开衫浅色上衣、成年女性小提琴团长。TIM：棕色短发白衬衫、无眼镜小提琴成年男性。冰冰：严格以 assets/characters/source/bingbing-2026-10.png 为唯一基准，成年女性，精致亮眼，侧分长黑发、白色花饰、垂坠水晶耳饰、白色挂脖无袖纱裙、腕表，大提琴手；绝不是男性。小塔：短黑发深色上衣手串、架子鼓男性。大鹅：黑发白色上衣、键盘男性。大羊：深棕短发、黑衬衫、原声吉他男性。柒柒：严格对应卡册立绘，黑色盘发配花形发簪、粉白花纹旗袍的成年女性；日常、酒桌与走廊场景不拿吉他，只有原文明确演奏时才出现乐器。垃垃：长棕发蝴蝶结、小提琴女性。黄奕兴：黑色短发金属框眼镜灰西装男性。朱老师：瘦、短黑发方框眼镜、吧台调酒男性。宝石：黑色微卷短发、宽松米白衬衫、气质清澈的成年男性主唱。REK：严格对应卡册立绘，成年男性，棕黑色中长发、矩形黑框眼镜、短胡茬、宽松黑色短袖和黑色长裤、体格高大，贝斯手；绝不能画成女性、少女、清秀少年或无眼镜人物。飞鸿：黑色利落短发、蓝灰色衬衫叠白色 T 恤的成年男性主唱。雪子：中国成年男性，长黑发束在脑后、黑色嘻哈风层叠穿搭、键盘手；绝不是女性。\n'''
-nodes=[n for r in result.values() if r['id'] not in ['baoshi_feihong','yangcun'] for n in r['nodes']]
+nodes=[n for route_id in ['azhe','shiyuan'] for n in result[route_id]['nodes']]
 cp_nodes=list(result['baoshi_feihong']['nodes'])
 cp_nodes.insert(next(i for i,n in enumerate(cp_nodes) if n['id']=='cp_HE'),yc_hold_archive)
 plan=[]
@@ -353,10 +417,48 @@ for start in range(0,len(yangcun_pages),8):
  for i in range(len(group),8):prompt+=f'\nPANEL {i+1}: Archive detail study, an empty warm rehearsal room with a keyboard, drum kit, guitar and bass cases, no characters, no readable text.\n'
  (ROOT/f'docs/imagegen/personal/{batch}.txt').write_text(prompt)
  plan.append({'batch':batch,'scenes':[{k:scene[k] for k in ['id','title','asset','memory']} for scene in group]})
+
+# Tim atlases are appended after all shipped batches so rebuilding this route
+# cannot renumber or invalidate any previously audited atlas.
+tim_names={'tim':'TIM','kongge':'空格','tang':'汤少','dijie':'笛杰'}
+tim_locks={
+ 'tim':'中国成年男性，约一米七五，严格匹配 assets/characters/source/tim-2026-10.png：深棕微乱短发、细矩形金黑框眼镜、干净柔和脸型、黑色西装外套、白衬衫、松系黑领带、黑色长裤；小提琴手。运动场景可换简洁运动服，但必须保留同一张脸、发型与眼镜。',
+ 'kongge':'中国成年男性，严格匹配 assets/kongge-portrait-selected.webp：高大结实、蓬松凌乱黑短发、粗矩形黑框眼镜、黑色圆领上衣，第一小提琴首席；仅在 visibleCast 指定时出现。',
+ 'tang':'中国成年男性，严格匹配 assets/characters/source/tang-2026-10.png：黑色侧分短发、矩形黑框眼镜、黑色机能外套，摄影师；仅在 visibleCast 指定时出现。',
+ 'dijie':'中国成年男性，严格匹配 assets/dijie-portrait-v2.webp：略长微乱黑发、无眼镜、棕灰格子衬衫叠白 T、竹笛／长笛乐手；仅在 visibleCast 指定时出现。'
+}
+tim_base='''Use case: illustration-story.
+Asset type: production story-art atlas for Tim's personal route.
+Create ONE 4-column by 2-row atlas, EXACTLY eight equal SQUARE panels, total 2:1 landscape. No margins, gutters, labels, captions, text, speech bubbles, UI or watermark. Crop boundaries exactly at x=25%,50%,75%, y=50%. Each cell is ONE coherent scene, never an inner comic or split panel. Keep every face, hand and crucial prop within the central 80% of its own square. Row-major order.
+Style: warm cinematic semi-realistic anime painted CG, detailed real environments, gentle film lighting, adult proportions, anatomically correct hands, consistent identities.
+The player remains an anonymous first-person viewpoint; only a neutral sleeve or hand may appear when essential, never a fixed player face or body. Dialogue excerpts are content only and must never be rendered as text.
+Hard continuity rule: each panel may physically show ONLY the characters in its explicit Visible named cast. Any other name in the before/current/after text is off-screen, a memory, a social-media mention, or a topic and MUST NOT appear. Do not import cast from adjacent panels. A phone photo, avatar, sticker, or message does not authorize depicting that named person physically.
+Character locks apply only when that character is in Visible named cast:
+TIM: 中国成年男性，约一米七五，严格匹配 assets/characters/source/tim-2026-10.png：深棕微乱短发、细矩形金黑框眼镜、干净柔和脸型、黑色西装外套、白衬衫、松系黑领带、黑色长裤；小提琴手。运动场景可换简洁运动服，但必须保留同一张脸、发型与眼镜。
+空格: 中国成年男性，严格匹配 assets/kongge-portrait-selected.webp：高大结实、蓬松凌乱黑短发、粗矩形黑框眼镜、黑色圆领上衣，第一小提琴首席。
+汤少: 中国成年男性，严格匹配 assets/characters/source/tang-2026-10.png：黑色侧分短发、矩形黑框眼镜、黑色机能外套，摄影师。
+笛杰: 中国成年男性，严格匹配 assets/dijie-portrait-v2.webp：略长微乱黑发、无眼镜、棕灰格子衬衫叠白 T、竹笛／长笛乐手。
+Do not add unnamed crowds unless the beat explicitly requires background silhouettes, and never make them focal characters. Show a musical instrument only when the current beat requires playing, carrying, tuning, or packing it.
+'''
+for start in range(0,len(tim_page_scenes),8):
+ group=tim_page_scenes[start:start+8];batch=f'{45+start//8:02d}-tim';prompt=tim_base
+ for i,scene in enumerate(group):
+  cast=', '.join(tim_names[id] for id in scene['visibleCast']) or 'none (environment / object-only panel)'
+  locks='; '.join(tim_locks[id] for id in scene['visibleCast']) or 'No named character identity lock; show no named person.'
+  prompt+=f'''\nPANEL {i+1} ({scene["id"]}, do not write ID)
+Context immediately before: {scene["contextBefore"]}
+Visible named cast in the current physical location: {cast}
+Current story beat: {scene["text"]}
+Context immediately after: {scene["contextAfter"]}
+Identity / wardrobe lock for this panel: {locks}
+Constraint: physically show only this panel's Visible named cast; all other names are off-screen or mentioned only. No readable text.\n'''
+ for i in range(len(group),8):prompt+=f'''\nPANEL {i+1}: Empty warm rehearsal-room continuity study, violin case and music stand only, no people, no readable text.\n'''
+ (ROOT/f'docs/imagegen/personal/{batch}.txt').write_text(prompt)
+ plan.append({'batch':batch,'route':'tim','scenes':[{k:scene[k] for k in ['id','node','page','title','asset','memory','visibleCast','semanticScene','contextBefore','text','contextAfter']} for scene in group]})
 # Preserve previously audited one-cell corrections when rebuilding the plan.
 for batch in plan:
  for scene in batch['scenes']:
   if scene['id']=='cp_00b':scene.update({'sourceOverride':'assets/chronicle/personal/source/cp_00b-fixed.png','promptOverride':'docs/imagegen/personal/anatomy-fixes-2026-09-27.md'})
   if scene['id']=='cp_10_page2':scene.update({'sourceOverride':'assets/chronicle/personal/source/cp_10_page2-fixed.png','promptOverride':'docs/imagegen/personal/anatomy-fixes-2026-09-27.md'})
 (ROOT/'docs/imagegen/personal/plan.json').write_text(json.dumps(plan,ensure_ascii=False,indent=2)+'\n')
-print(f'{sum(len(v["nodes"]) for v in result.values())} dialogue scenes ({len(nodes)+len(cp_nodes)+len(cp_page_scenes)+len(other_page_scenes)} illustrated pages), {len(plan)} atlases; '+', '.join(f'{k}: {len(v["nodes"])}' for k,v in result.items()))
+print(f'{sum(len(v["nodes"]) for v in result.values())} dialogue scenes ({len(nodes)+len(cp_nodes)+len(cp_page_scenes)+len(other_page_scenes)+len(tim_page_scenes)} illustrated pages), {len(plan)} atlases; '+', '.join(f'{k}: {len(v["nodes"])}' for k,v in result.items()))

@@ -6725,6 +6725,2358 @@ const PERSONAL_ROUTES = {
     ],
     "entry": "cp_00"
   },
+  "tim": {
+    "id": "tim",
+    "name": "TIM",
+    "tagline": "春风入线，舒服地并肩",
+    "asset": "cardTim",
+    "nodes": [
+      {
+        "id": "t_start",
+        "title": "壹 · 目光",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "来哈基米一段时间了。不知不觉，你的目光里多了一个身影。"
+          },
+          {
+            "who": "narrator",
+            "text": "排练间隙、谢幕散场、人来人往的走廊——你总能一眼找到他。"
+          },
+          {
+            "who": "narrator",
+            "text": "还记得第一次来乐团那天，你站在门口找位置，一个男生冲你招了招手。大概一米七五，直发梳成背头，穿衬衫，袖子挽到小臂。"
+          },
+          {
+            "who": "tim",
+            "text": "「新来的？坐这儿，我旁边空着。」"
+          },
+          {
+            "who": "tim",
+            "text": "「我是Tim，小提琴。小时候学过，中间断了十几年，工作之后又捡起来的。」"
+          },
+          {
+            "who": "narrator",
+            "text": "他说话不快，吐字清楚。问你是什么声部，眼睛弯了一下。"
+          },
+          {
+            "who": "tim",
+            "text": "「那以后有人一起对音准了。」"
+          },
+          {
+            "who": "narrator",
+            "text": "那天你还注意到，Tim有个习惯——每次进拍子前，轻轻点两下脚尖。没想到这个细节，你一记就是这么久。"
+          },
+          {
+            "who": "narrator",
+            "text": "回忆散场。今天的排练刚结束，Tim正在不远处收琴，背影和记忆里那个招手的人重叠在一起。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "走过去：「你每次拉琴前都点脚，是在数拍子吗？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "走过去：「断了十几年再捡起来，难吗？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "收回目光，低头收拾自己的东西",
+            "bond": 1,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_t_start",
+        "memory": "cp7_t_start",
+        "artText": "来哈基米一段时间了。不知不觉，你的目光里多了一个身影。 排练间隙、谢幕散场、人来人往的走廊——你总能一眼找到他。 还记得第一次来乐团那天，你站在门口找位置，一个男生冲你招了招手。大概一米七五，直发梳成背头，穿衬衫，袖子挽到小臂。 「新来的？坐这儿，我旁边空着。」 「我是Tim，小提琴。小时候学过，中间断了十几年，工作之后又捡起来的。」 他说话不快，吐字清楚。问你是什么声部，眼睛弯了一下。 「那以后有人一起对音准了。」 那天你还注意到，Tim有个习惯——每次进拍子前，轻轻点两下脚尖。没想到这个细节，你一记就是这么久。 回忆散场。今天的排练刚结束，Tim正在",
+        "pageArt": [
+          {
+            "id": "t_start",
+            "asset": "personal_t_start",
+            "memory": "cp7_t_start",
+            "text": "来哈基米一段时间了。不知不觉，你的目光里多了一个身影。\n\n排练间隙、谢幕散场、人来人往的走廊——你总能一眼找到他。\n\n还记得第一次来乐团那天，你站在门口找位置，一个男生冲你招了招手。大概一米七五，直发梳成背头，穿衬衫，袖子挽到小臂。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_start:1",
+            "contextBefore": "Tim 个人线尚未开始。",
+            "contextAfter": "「新来的？坐这儿，我旁边空着。」\n\n「我是Tim，小提琴。小时候学过，中间断了十几年，工作之后又捡起来的。」"
+          },
+          {
+            "id": "t_start_page2",
+            "asset": "personal_t_start_page2",
+            "memory": "cp7_t_start_page2",
+            "text": "「新来的？坐这儿，我旁边空着。」\n\n「我是Tim，小提琴。小时候学过，中间断了十几年，工作之后又捡起来的。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_start:2",
+            "contextBefore": "来哈基米一段时间了。不知不觉，你的目光里多了一个身影。\n\n排练间隙、谢幕散场、人来人往的走廊——你总能一眼找到他。\n\n还记得第一次来乐团那天，你站在门口找位置，一个男生冲你招了招手。大概一米七五，直发梳成背头，穿衬衫，袖子挽到小臂。",
+            "contextAfter": "他说话不快，吐字清楚。问你是什么声部，眼睛弯了一下。"
+          },
+          {
+            "id": "t_start_page3",
+            "asset": "personal_t_start_page3",
+            "memory": "cp7_t_start_page3",
+            "text": "他说话不快，吐字清楚。问你是什么声部，眼睛弯了一下。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_start:3",
+            "contextBefore": "「新来的？坐这儿，我旁边空着。」\n\n「我是Tim，小提琴。小时候学过，中间断了十几年，工作之后又捡起来的。」",
+            "contextAfter": "「那以后有人一起对音准了。」"
+          },
+          {
+            "id": "t_start_page4",
+            "asset": "personal_t_start_page4",
+            "memory": "cp7_t_start_page4",
+            "text": "「那以后有人一起对音准了。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_start:4",
+            "contextBefore": "他说话不快，吐字清楚。问你是什么声部，眼睛弯了一下。",
+            "contextAfter": "那天你还注意到，Tim有个习惯——每次进拍子前，轻轻点两下脚尖。没想到这个细节，你一记就是这么久。\n\n回忆散场。今天的排练刚结束，Tim正在不远处收琴，背影和记忆里那个招手的人重叠在一起。"
+          },
+          {
+            "id": "t_start_page5",
+            "asset": "personal_t_start_page5",
+            "memory": "cp7_t_start_page5",
+            "text": "那天你还注意到，Tim有个习惯——每次进拍子前，轻轻点两下脚尖。没想到这个细节，你一记就是这么久。\n\n回忆散场。今天的排练刚结束，Tim正在不远处收琴，背影和记忆里那个招手的人重叠在一起。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_start:5",
+            "contextBefore": "「那以后有人一起对音准了。」",
+            "contextAfter": "第35次排练结束，Tim一边收琴一边问你。"
+          }
+        ]
+      },
+      {
+        "id": "t_sports",
+        "title": "贰 · 运动邀约",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "第35次排练结束，Tim一边收琴一边问你。"
+          },
+          {
+            "who": "tim",
+            "text": "「周末有空吗？我知道一个球馆，羽毛球和篮球场地都有。」"
+          },
+          {
+            "who": "tim",
+            "text": "「我羽毛球还行，以前拿过区里的奖。篮球一般，打着玩。」"
+          },
+          {
+            "who": "narrator",
+            "text": "他问得很自然，像问你“要不要一起吃饭”。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「羽毛球！我也打过，切磋一下？」",
+            "bond": 5,
+            "score": 0,
+            "flags": [
+              "sportsOK"
+            ],
+            "next": "t_sports_a"
+          },
+          {
+            "text": "「篮球吧，我篮球还行。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [
+              "sportsOK"
+            ],
+            "next": "t_sports_a"
+          },
+          {
+            "text": "「我运动细胞一般……在旁边给你们加油？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [
+              "sportsOK"
+            ],
+            "next": "t_sports_a"
+          },
+          {
+            "text": "「周末可能要加班，下次吧。」",
+            "bond": 1,
+            "score": 0,
+            "flags": [],
+            "next": "t_crisis"
+          }
+        ],
+        "asset": "personal_t_sports",
+        "memory": "cp7_t_sports",
+        "artText": "第35次排练结束，Tim一边收琴一边问你。 「周末有空吗？我知道一个球馆，羽毛球和篮球场地都有。」 「我羽毛球还行，以前拿过区里的奖。篮球一般，打着玩。」 他问得很自然，像问你“要不要一起吃饭”。",
+        "pageArt": [
+          {
+            "id": "t_sports",
+            "asset": "personal_t_sports",
+            "memory": "cp7_t_sports",
+            "text": "第35次排练结束，Tim一边收琴一边问你。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_sports:1",
+            "contextBefore": "那天你还注意到，Tim有个习惯——每次进拍子前，轻轻点两下脚尖。没想到这个细节，你一记就是这么久。\n\n回忆散场。今天的排练刚结束，Tim正在不远处收琴，背影和记忆里那个招手的人重叠在一起。",
+            "contextAfter": "「周末有空吗？我知道一个球馆，羽毛球和篮球场地都有。」\n\n「我羽毛球还行，以前拿过区里的奖。篮球一般，打着玩。」"
+          },
+          {
+            "id": "t_sports_page2",
+            "asset": "personal_t_sports_page2",
+            "memory": "cp7_t_sports_page2",
+            "text": "「周末有空吗？我知道一个球馆，羽毛球和篮球场地都有。」\n\n「我羽毛球还行，以前拿过区里的奖。篮球一般，打着玩。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_sports:2",
+            "contextBefore": "第35次排练结束，Tim一边收琴一边问你。",
+            "contextAfter": "他问得很自然，像问你“要不要一起吃饭”。"
+          },
+          {
+            "id": "t_sports_page3",
+            "asset": "personal_t_sports_page3",
+            "memory": "cp7_t_sports_page3",
+            "text": "他问得很自然，像问你“要不要一起吃饭”。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_sports:3",
+            "contextBefore": "「周末有空吗？我知道一个球馆，羽毛球和篮球场地都有。」\n\n「我羽毛球还行，以前拿过区里的奖。篮球一般，打着玩。」",
+            "contextAfter": "球馆里。Tim今天穿运动服，顺毛刘海，跟排练时的背头判若两人。\n\n他热身动作很标准，引拍、侧身、转体，一看就是练过的。但打起来并不凶。"
+          }
+        ]
+      },
+      {
+        "id": "t_sports_a",
+        "title": "贰 · 运动邀约",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": [
+            [
+              "sportsOK"
+            ]
+          ]
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "球馆里。Tim今天穿运动服，顺毛刘海，跟排练时的背头判若两人。"
+          },
+          {
+            "who": "narrator",
+            "text": "他热身动作很标准，引拍、侧身、转体，一看就是练过的。但打起来并不凶。"
+          },
+          {
+            "who": "tim",
+            "text": "「我打球是为了放松，不是为了赢。赢了你，下次你不来了，我亏大了。」"
+          },
+          {
+            "who": "narrator",
+            "text": "中场休息，他递给你一瓶水，瓶盖已经拧松了。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「那下次我让你赢。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "「你这种打法，对手会很舒服。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "「以前拿过奖，现在不追求胜负了？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_t_sports_a",
+        "memory": "cp7_t_sports_a",
+        "artText": "球馆里。Tim今天穿运动服，顺毛刘海，跟排练时的背头判若两人。 他热身动作很标准，引拍、侧身、转体，一看就是练过的。但打起来并不凶。 「我打球是为了放松，不是为了赢。赢了你，下次你不来了，我亏大了。」 中场休息，他递给你一瓶水，瓶盖已经拧松了。",
+        "pageArt": [
+          {
+            "id": "t_sports_a",
+            "asset": "personal_t_sports_a",
+            "memory": "cp7_t_sports_a",
+            "text": "球馆里。Tim今天穿运动服，顺毛刘海，跟排练时的背头判若两人。\n\n他热身动作很标准，引拍、侧身、转体，一看就是练过的。但打起来并不凶。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_sports_a:1",
+            "contextBefore": "他问得很自然，像问你“要不要一起吃饭”。",
+            "contextAfter": "「我打球是为了放松，不是为了赢。赢了你，下次你不来了，我亏大了。」"
+          },
+          {
+            "id": "t_sports_a_page2",
+            "asset": "personal_t_sports_a_page2",
+            "memory": "cp7_t_sports_a_page2",
+            "text": "「我打球是为了放松，不是为了赢。赢了你，下次你不来了，我亏大了。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_sports_a:2",
+            "contextBefore": "球馆里。Tim今天穿运动服，顺毛刘海，跟排练时的背头判若两人。\n\n他热身动作很标准，引拍、侧身、转体，一看就是练过的。但打起来并不凶。",
+            "contextAfter": "中场休息，他递给你一瓶水，瓶盖已经拧松了。"
+          },
+          {
+            "id": "t_sports_a_page3",
+            "asset": "personal_t_sports_a_page3",
+            "memory": "cp7_t_sports_a_page3",
+            "text": "中场休息，他递给你一瓶水，瓶盖已经拧松了。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_sports_a:3",
+            "contextBefore": "「我打球是为了放松，不是为了赢。赢了你，下次你不来了，我亏大了。」",
+            "contextAfter": "演出日。大巴上，小垃发了一条朋友圈：「婚礼民工的一天图文直播。」\n\n配图是乐团众人，空格坐在角落，抱着一个看起来很旧的琴盒。\n\n到了酒店，空格打开琴盒，脸色变了。"
+          }
+        ]
+      },
+      {
+        "id": "t_crisis",
+        "title": "叁 · 格老的琴",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "演出日。大巴上，小垃发了一条朋友圈：「婚礼民工的一天图文直播。」"
+          },
+          {
+            "who": "narrator",
+            "text": "配图是乐团众人，空格坐在角落，抱着一个看起来很旧的琴盒。"
+          },
+          {
+            "who": "narrator",
+            "text": "到了酒店，空格打开琴盒，脸色变了。"
+          },
+          {
+            "who": "kongge",
+            "text": "「……」"
+          },
+          {
+            "who": "kongge",
+            "text": "「光带衣服了。」"
+          },
+          {
+            "who": "narrator",
+            "text": "全场安静了一秒。"
+          },
+          {
+            "who": "kongge",
+            "text": "「琴没带。」"
+          },
+          {
+            "who": "narrator",
+            "text": "酒狂狂第一个笑出声：「琴呢？」"
+          },
+          {
+            "who": "narrator",
+            "text": "Tim没笑。他放下自己的琴盒，掏出手机，打开地图App。"
+          },
+          {
+            "who": "tim",
+            "text": "「格老，你在闲鱼上租的琴，地址给我。我现在去取。」"
+          },
+          {
+            "who": "kongge",
+            "text": "「啊？」"
+          },
+          {
+            "who": "tim",
+            "text": "「你不是说你在闲鱼上收了把88块的琴？3/4的？」"
+          },
+          {
+            "who": "kongge",
+            "text": "「……你怎么知道？」"
+          },
+          {
+            "who": "tim",
+            "text": "（笑了一下：）「你什么事我不知道。」"
+          },
+          {
+            "who": "narrator",
+            "text": "十分钟后，Tim联系好了闪送。三十分钟后，一把3/4的琴送到了酒店大堂。"
+          },
+          {
+            "who": "narrator",
+            "text": "Tim检查了一下琴的弓毛，递给空格。"
+          },
+          {
+            "who": "tim",
+            "text": "「先用我的备用弓。弦我帮你调好了。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「你好像一点都不慌。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_crisis_a"
+          },
+          {
+            "text": "「我去帮忙联系闪送吧，你休息会儿。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_crisis_a"
+          },
+          {
+            "text": "「格老这也太不靠谱了……」",
+            "bond": 1,
+            "score": 0,
+            "flags": [],
+            "next": "t_crisis_a"
+          }
+        ],
+        "asset": "personal_t_crisis",
+        "memory": "cp7_t_crisis",
+        "artText": "演出日。大巴上，小垃发了一条朋友圈：「婚礼民工的一天图文直播。」 配图是乐团众人，空格坐在角落，抱着一个看起来很旧的琴盒。 到了酒店，空格打开琴盒，脸色变了。 「……」 「光带衣服了。」 全场安静了一秒。 「琴没带。」 酒狂狂第一个笑出声：「琴呢？」 Tim没笑。他放下自己的琴盒，掏出手机，打开地图App。 「格老，你在闲鱼上租的琴，地址给我。我现在去取。」 「啊？」 「你不是说你在闲鱼上收了把88块的琴？3/4的？」 「……你怎么知道？」 （笑了一下：）「你什么事我不知道。」 十分钟后，Tim联系好了闪送。三十分钟后，一把3/4的琴送到了酒店大堂。 T",
+        "pageArt": [
+          {
+            "id": "t_crisis",
+            "asset": "personal_t_crisis",
+            "memory": "cp7_t_crisis",
+            "text": "演出日。大巴上，小垃发了一条朋友圈：「婚礼民工的一天图文直播。」\n\n配图是乐团众人，空格坐在角落，抱着一个看起来很旧的琴盒。\n\n到了酒店，空格打开琴盒，脸色变了。",
+            "visibleCast": [
+              "kongge"
+            ],
+            "semanticScene": "tim:t_crisis:1",
+            "contextBefore": "中场休息，他递给你一瓶水，瓶盖已经拧松了。",
+            "contextAfter": "「……」\n\n「光带衣服了。」"
+          },
+          {
+            "id": "t_crisis_page2",
+            "asset": "personal_t_crisis_page2",
+            "memory": "cp7_t_crisis_page2",
+            "text": "「……」\n\n「光带衣服了。」",
+            "visibleCast": [
+              "kongge"
+            ],
+            "semanticScene": "tim:t_crisis:2",
+            "contextBefore": "演出日。大巴上，小垃发了一条朋友圈：「婚礼民工的一天图文直播。」\n\n配图是乐团众人，空格坐在角落，抱着一个看起来很旧的琴盒。\n\n到了酒店，空格打开琴盒，脸色变了。",
+            "contextAfter": "全场安静了一秒。"
+          },
+          {
+            "id": "t_crisis_page3",
+            "asset": "personal_t_crisis_page3",
+            "memory": "cp7_t_crisis_page3",
+            "text": "全场安静了一秒。",
+            "visibleCast": [
+              "kongge"
+            ],
+            "semanticScene": "tim:t_crisis:3",
+            "contextBefore": "「……」\n\n「光带衣服了。」",
+            "contextAfter": "「琴没带。」"
+          },
+          {
+            "id": "t_crisis_page4",
+            "asset": "personal_t_crisis_page4",
+            "memory": "cp7_t_crisis_page4",
+            "text": "「琴没带。」",
+            "visibleCast": [
+              "kongge"
+            ],
+            "semanticScene": "tim:t_crisis:4",
+            "contextBefore": "全场安静了一秒。",
+            "contextAfter": "酒狂狂第一个笑出声：「琴呢？」\n\nTim没笑。他放下自己的琴盒，掏出手机，打开地图App。"
+          },
+          {
+            "id": "t_crisis_page5",
+            "asset": "personal_t_crisis_page5",
+            "memory": "cp7_t_crisis_page5",
+            "text": "酒狂狂第一个笑出声：「琴呢？」\n\nTim没笑。他放下自己的琴盒，掏出手机，打开地图App。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_crisis:5",
+            "contextBefore": "「琴没带。」",
+            "contextAfter": "「格老，你在闲鱼上租的琴，地址给我。我现在去取。」"
+          },
+          {
+            "id": "t_crisis_page6",
+            "asset": "personal_t_crisis_page6",
+            "memory": "cp7_t_crisis_page6",
+            "text": "「格老，你在闲鱼上租的琴，地址给我。我现在去取。」",
+            "visibleCast": [
+              "tim",
+              "kongge"
+            ],
+            "semanticScene": "tim:t_crisis:6",
+            "contextBefore": "酒狂狂第一个笑出声：「琴呢？」\n\nTim没笑。他放下自己的琴盒，掏出手机，打开地图App。",
+            "contextAfter": "「啊？」"
+          },
+          {
+            "id": "t_crisis_page7",
+            "asset": "personal_t_crisis_page7",
+            "memory": "cp7_t_crisis_page7",
+            "text": "「啊？」",
+            "visibleCast": [
+              "kongge"
+            ],
+            "semanticScene": "tim:t_crisis:7",
+            "contextBefore": "「格老，你在闲鱼上租的琴，地址给我。我现在去取。」",
+            "contextAfter": "「你不是说你在闲鱼上收了把88块的琴？3/4的？」"
+          },
+          {
+            "id": "t_crisis_page8",
+            "asset": "personal_t_crisis_page8",
+            "memory": "cp7_t_crisis_page8",
+            "text": "「你不是说你在闲鱼上收了把88块的琴？3/4的？」",
+            "visibleCast": [
+              "tim",
+              "kongge"
+            ],
+            "semanticScene": "tim:t_crisis:8",
+            "contextBefore": "「啊？」",
+            "contextAfter": "「……你怎么知道？」"
+          },
+          {
+            "id": "t_crisis_page9",
+            "asset": "personal_t_crisis_page9",
+            "memory": "cp7_t_crisis_page9",
+            "text": "「……你怎么知道？」",
+            "visibleCast": [
+              "kongge"
+            ],
+            "semanticScene": "tim:t_crisis:9",
+            "contextBefore": "「你不是说你在闲鱼上收了把88块的琴？3/4的？」",
+            "contextAfter": "（笑了一下：）「你什么事我不知道。」"
+          },
+          {
+            "id": "t_crisis_page10",
+            "asset": "personal_t_crisis_page10",
+            "memory": "cp7_t_crisis_page10",
+            "text": "（笑了一下：）「你什么事我不知道。」",
+            "visibleCast": [
+              "tim",
+              "kongge"
+            ],
+            "semanticScene": "tim:t_crisis:10",
+            "contextBefore": "「……你怎么知道？」",
+            "contextAfter": "十分钟后，Tim联系好了闪送。三十分钟后，一把3/4的琴送到了酒店大堂。\n\nTim检查了一下琴的弓毛，递给空格。"
+          },
+          {
+            "id": "t_crisis_page11",
+            "asset": "personal_t_crisis_page11",
+            "memory": "cp7_t_crisis_page11",
+            "text": "十分钟后，Tim联系好了闪送。三十分钟后，一把3/4的琴送到了酒店大堂。\n\nTim检查了一下琴的弓毛，递给空格。",
+            "visibleCast": [
+              "tim",
+              "kongge"
+            ],
+            "semanticScene": "tim:t_crisis:11",
+            "contextBefore": "（笑了一下：）「你什么事我不知道。」",
+            "contextAfter": "「先用我的备用弓。弦我帮你调好了。」"
+          },
+          {
+            "id": "t_crisis_page12",
+            "asset": "personal_t_crisis_page12",
+            "memory": "cp7_t_crisis_page12",
+            "text": "「先用我的备用弓。弦我帮你调好了。」",
+            "visibleCast": [
+              "tim",
+              "kongge"
+            ],
+            "semanticScene": "tim:t_crisis:12",
+            "contextBefore": "十分钟后，Tim联系好了闪送。三十分钟后，一把3/4的琴送到了酒店大堂。\n\nTim检查了一下琴的弓毛，递给空格。",
+            "contextAfter": "（一边调弦一边：）「慌没用。我算过了，从酒店到琴的位置，打车18分钟，闪送取货12分钟，回来20分钟。演出前两小时送到，还有时间调音。」\n\n（抬头看你：）「而且格老不是不靠谱，他是P人。P人的世界里，‘大概来得及’等于‘肯定来得及’。」\n\n「我是J人。没有‘大概’，只有‘几点几分’。」"
+          }
+        ]
+      },
+      {
+        "id": "t_crisis_a",
+        "title": "叁 · 格老的琴",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "tim",
+            "text": "（一边调弦一边：）「慌没用。我算过了，从酒店到琴的位置，打车18分钟，闪送取货12分钟，回来20分钟。演出前两小时送到，还有时间调音。」"
+          },
+          {
+            "who": "tim",
+            "text": "（抬头看你：）「而且格老不是不靠谱，他是P人。P人的世界里，‘大概来得及’等于‘肯定来得及’。」"
+          },
+          {
+            "who": "tim",
+            "text": "「我是J人。没有‘大概’，只有‘几点几分’。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「所以你连他P人的属性都计算进去了？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "「那你跟格老相处，岂不是很累？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_t_crisis_a",
+        "memory": "cp7_t_crisis_a",
+        "artText": "（一边调弦一边：）「慌没用。我算过了，从酒店到琴的位置，打车18分钟，闪送取货12分钟，回来20分钟。演出前两小时送到，还有时间调音。」 （抬头看你：）「而且格老不是不靠谱，他是P人。P人的世界里，‘大概来得及’等于‘肯定来得及’。」 「我是J人。没有‘大概’，只有‘几点几分’。」",
+        "pageArt": [
+          {
+            "id": "t_crisis_a",
+            "asset": "personal_t_crisis_a",
+            "memory": "cp7_t_crisis_a",
+            "text": "（一边调弦一边：）「慌没用。我算过了，从酒店到琴的位置，打车18分钟，闪送取货12分钟，回来20分钟。演出前两小时送到，还有时间调音。」\n\n（抬头看你：）「而且格老不是不靠谱，他是P人。P人的世界里，‘大概来得及’等于‘肯定来得及’。」\n\n「我是J人。没有‘大概’，只有‘几点几分’。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_crisis_a:1",
+            "contextBefore": "「先用我的备用弓。弦我帮你调好了。」",
+            "contextAfter": "这天排练，汤少带着相机来了，说要拍一组乐团宣传照。\n\nTim主动走过去。"
+          }
+        ]
+      },
+      {
+        "id": "t_photo",
+        "title": "肆 · 汤少的镜头",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "这天排练，汤少带着相机来了，说要拍一组乐团宣传照。"
+          },
+          {
+            "who": "narrator",
+            "text": "Tim主动走过去。"
+          },
+          {
+            "who": "tim",
+            "text": "「汤少，需要摄影助理吗？我帮你打反光板、拿器材，都行。」"
+          },
+          {
+            "who": "tang",
+            "text": "「你？你会摄影？」"
+          },
+          {
+            "who": "tim",
+            "text": "「不会。但我可以学。你边拍边教，我边学边干。」"
+          },
+          {
+            "who": "narrator",
+            "text": "汤少看了他两秒，笑了。"
+          },
+          {
+            "who": "tang",
+            "text": "「行，那你举反光板。注意角度，别把人拍成鬼。」"
+          },
+          {
+            "who": "narrator",
+            "text": "Tim举着反光板，站在烈日下四十分钟，没喊过累。"
+          },
+          {
+            "who": "narrator",
+            "text": "收工后，你看见他在手机上记笔记：「反光板45度。侧逆光补面光。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「你对什么都这么有兴趣吗？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_photo_a"
+          },
+          {
+            "text": "「举了四十分钟，手不酸？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_photo_a"
+          },
+          {
+            "text": "「你记这些，是为了下次帮汤少？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_photo_a"
+          }
+        ],
+        "asset": "personal_t_photo",
+        "memory": "cp7_t_photo",
+        "artText": "这天排练，汤少带着相机来了，说要拍一组乐团宣传照。 Tim主动走过去。 「汤少，需要摄影助理吗？我帮你打反光板、拿器材，都行。」 「你？你会摄影？」 「不会。但我可以学。你边拍边教，我边学边干。」 汤少看了他两秒，笑了。 「行，那你举反光板。注意角度，别把人拍成鬼。」 Tim举着反光板，站在烈日下四十分钟，没喊过累。 收工后，你看见他在手机上记笔记：「反光板45度。侧逆光补面光。」",
+        "pageArt": [
+          {
+            "id": "t_photo",
+            "asset": "personal_t_photo",
+            "memory": "cp7_t_photo",
+            "text": "这天排练，汤少带着相机来了，说要拍一组乐团宣传照。\n\nTim主动走过去。",
+            "visibleCast": [
+              "tim",
+              "tang"
+            ],
+            "semanticScene": "tim:t_photo:1",
+            "contextBefore": "（一边调弦一边：）「慌没用。我算过了，从酒店到琴的位置，打车18分钟，闪送取货12分钟，回来20分钟。演出前两小时送到，还有时间调音。」\n\n（抬头看你：）「而且格老不是不靠谱，他是P人。P人的世界里，‘大概来得及’等于‘肯定来得及’。」\n\n「我是J人。没有‘大概’，只有‘几点几分’。」",
+            "contextAfter": "「汤少，需要摄影助理吗？我帮你打反光板、拿器材，都行。」"
+          },
+          {
+            "id": "t_photo_page2",
+            "asset": "personal_t_photo_page2",
+            "memory": "cp7_t_photo_page2",
+            "text": "「汤少，需要摄影助理吗？我帮你打反光板、拿器材，都行。」",
+            "visibleCast": [
+              "tim",
+              "tang"
+            ],
+            "semanticScene": "tim:t_photo:2",
+            "contextBefore": "这天排练，汤少带着相机来了，说要拍一组乐团宣传照。\n\nTim主动走过去。",
+            "contextAfter": "「你？你会摄影？」"
+          },
+          {
+            "id": "t_photo_page3",
+            "asset": "personal_t_photo_page3",
+            "memory": "cp7_t_photo_page3",
+            "text": "「你？你会摄影？」",
+            "visibleCast": [
+              "tang",
+              "tim"
+            ],
+            "semanticScene": "tim:t_photo:3",
+            "contextBefore": "「汤少，需要摄影助理吗？我帮你打反光板、拿器材，都行。」",
+            "contextAfter": "「不会。但我可以学。你边拍边教，我边学边干。」"
+          },
+          {
+            "id": "t_photo_page4",
+            "asset": "personal_t_photo_page4",
+            "memory": "cp7_t_photo_page4",
+            "text": "「不会。但我可以学。你边拍边教，我边学边干。」",
+            "visibleCast": [
+              "tim",
+              "tang"
+            ],
+            "semanticScene": "tim:t_photo:4",
+            "contextBefore": "「你？你会摄影？」",
+            "contextAfter": "汤少看了他两秒，笑了。"
+          },
+          {
+            "id": "t_photo_page5",
+            "asset": "personal_t_photo_page5",
+            "memory": "cp7_t_photo_page5",
+            "text": "汤少看了他两秒，笑了。",
+            "visibleCast": [
+              "tang",
+              "tim"
+            ],
+            "semanticScene": "tim:t_photo:5",
+            "contextBefore": "「不会。但我可以学。你边拍边教，我边学边干。」",
+            "contextAfter": "「行，那你举反光板。注意角度，别把人拍成鬼。」"
+          },
+          {
+            "id": "t_photo_page6",
+            "asset": "personal_t_photo_page6",
+            "memory": "cp7_t_photo_page6",
+            "text": "「行，那你举反光板。注意角度，别把人拍成鬼。」",
+            "visibleCast": [
+              "tang",
+              "tim"
+            ],
+            "semanticScene": "tim:t_photo:6",
+            "contextBefore": "汤少看了他两秒，笑了。",
+            "contextAfter": "Tim举着反光板，站在烈日下四十分钟，没喊过累。\n\n收工后，你看见他在手机上记笔记：「反光板45度。侧逆光补面光。」"
+          },
+          {
+            "id": "t_photo_page7",
+            "asset": "personal_t_photo_page7",
+            "memory": "cp7_t_photo_page7",
+            "text": "Tim举着反光板，站在烈日下四十分钟，没喊过累。\n\n收工后，你看见他在手机上记笔记：「反光板45度。侧逆光补面光。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_photo:7",
+            "contextBefore": "「行，那你举反光板。注意角度，别把人拍成鬼。」",
+            "contextAfter": "（把笔记给你看：）「我对新鲜事物都好奇。但不会只停留在‘感兴趣’，得试试看才知道是不是真的喜欢。」\n\n（顿了顿：）「而且汤少拍得好。跟他学，不亏。」"
+          }
+        ]
+      },
+      {
+        "id": "t_photo_a",
+        "title": "肆 · 汤少的镜头",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "tim",
+            "text": "（把笔记给你看：）「我对新鲜事物都好奇。但不会只停留在‘感兴趣’，得试试看才知道是不是真的喜欢。」"
+          },
+          {
+            "who": "tim",
+            "text": "（顿了顿：）「而且汤少拍得好。跟他学，不亏。」"
+          },
+          {
+            "who": "narrator",
+            "text": "他手机里还有一个文件夹，名字叫「想学的事」。你瞥见里面有咖啡拉花、木工入门、日语五十音……"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「你的‘想学’清单，看得我压力好大。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "「那你‘正在学’的有多少？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_t_photo_a",
+        "memory": "cp7_t_photo_a",
+        "artText": "（把笔记给你看：）「我对新鲜事物都好奇。但不会只停留在‘感兴趣’，得试试看才知道是不是真的喜欢。」 （顿了顿：）「而且汤少拍得好。跟他学，不亏。」 他手机里还有一个文件夹，名字叫「想学的事」。你瞥见里面有咖啡拉花、木工入门、日语五十音……",
+        "pageArt": [
+          {
+            "id": "t_photo_a",
+            "asset": "personal_t_photo_a",
+            "memory": "cp7_t_photo_a",
+            "text": "（把笔记给你看：）「我对新鲜事物都好奇。但不会只停留在‘感兴趣’，得试试看才知道是不是真的喜欢。」\n\n（顿了顿：）「而且汤少拍得好。跟他学，不亏。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_photo_a:1",
+            "contextBefore": "Tim举着反光板，站在烈日下四十分钟，没喊过累。\n\n收工后，你看见他在手机上记笔记：「反光板45度。侧逆光补面光。」",
+            "contextAfter": "他手机里还有一个文件夹，名字叫「想学的事」。你瞥见里面有咖啡拉花、木工入门、日语五十音……"
+          },
+          {
+            "id": "t_photo_a_page2",
+            "asset": "personal_t_photo_a_page2",
+            "memory": "cp7_t_photo_a_page2",
+            "text": "他手机里还有一个文件夹，名字叫「想学的事」。你瞥见里面有咖啡拉花、木工入门、日语五十音……",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_photo_a:2",
+            "contextBefore": "（把笔记给你看：）「我对新鲜事物都好奇。但不会只停留在‘感兴趣’，得试试看才知道是不是真的喜欢。」\n\n（顿了顿：）「而且汤少拍得好。跟他学，不亏。」",
+            "contextAfter": "排练间隙，笛杰坐在角落里看谱子。Tim端着两瓶乌龙茶走过去，递给他一瓶。"
+          }
+        ]
+      },
+      {
+        "id": "t_jiebao",
+        "title": "伍 · 杰宝",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "排练间隙，笛杰坐在角落里看谱子。Tim端着两瓶乌龙茶走过去，递给他一瓶。"
+          },
+          {
+            "who": "tim",
+            "text": "「杰宝，今天那段solo吹得可以啊。」"
+          },
+          {
+            "who": "dijie",
+            "text": "（接过乌龙茶，耳朵红了：）「……别这么叫。」"
+          },
+          {
+            "who": "tim",
+            "text": "「那叫什么？笛老师？笛大师？」"
+          },
+          {
+            "who": "dijie",
+            "text": "（低头看谱：）「叫名字就行。」"
+          },
+          {
+            "who": "tim",
+            "text": "（笑：）「好的杰宝。」"
+          },
+          {
+            "who": "narrator",
+            "text": "笛杰没再反驳，嘴角弯了一下。"
+          },
+          {
+            "who": "narrator",
+            "text": "阿喆坐在旁边，看着他俩，也笑，但没说话。你发现阿喆的眼中有一丝幽怨，不知道是不是错觉。"
+          },
+          {
+            "who": "narrator",
+            "text": "你注意到，Tim对笛杰的态度和对别人不一样——不是更热情，是更放松。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「你为什么叫笛杰‘杰宝’？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_jiebao_a"
+          },
+          {
+            "text": "「你对笛杰好像特别放松。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_jiebao_a"
+          },
+          {
+            "text": "没说话，只是观察",
+            "bond": 1,
+            "score": 0,
+            "flags": [],
+            "next": "t_jiebao_a"
+          }
+        ],
+        "asset": "personal_t_jiebao",
+        "memory": "cp7_t_jiebao",
+        "artText": "排练间隙，笛杰坐在角落里看谱子。Tim端着两瓶乌龙茶走过去，递给他一瓶。 「杰宝，今天那段solo吹得可以啊。」 （接过乌龙茶，耳朵红了：）「……别这么叫。」 「那叫什么？笛老师？笛大师？」 （低头看谱：）「叫名字就行。」 （笑：）「好的杰宝。」 笛杰没再反驳，嘴角弯了一下。 阿喆坐在旁边，看着他俩，也笑，但没说话。你发现阿喆的眼中有一丝幽怨，不知道是不是错觉。 你注意到，Tim对笛杰的态度和对别人不一样——不是更热情，是更放松。",
+        "pageArt": [
+          {
+            "id": "t_jiebao",
+            "asset": "personal_t_jiebao",
+            "memory": "cp7_t_jiebao",
+            "text": "排练间隙，笛杰坐在角落里看谱子。Tim端着两瓶乌龙茶走过去，递给他一瓶。",
+            "visibleCast": [
+              "tim",
+              "dijie"
+            ],
+            "semanticScene": "tim:t_jiebao:1",
+            "contextBefore": "他手机里还有一个文件夹，名字叫「想学的事」。你瞥见里面有咖啡拉花、木工入门、日语五十音……",
+            "contextAfter": "「杰宝，今天那段solo吹得可以啊。」"
+          },
+          {
+            "id": "t_jiebao_page2",
+            "asset": "personal_t_jiebao_page2",
+            "memory": "cp7_t_jiebao_page2",
+            "text": "「杰宝，今天那段solo吹得可以啊。」",
+            "visibleCast": [
+              "tim",
+              "dijie"
+            ],
+            "semanticScene": "tim:t_jiebao:2",
+            "contextBefore": "排练间隙，笛杰坐在角落里看谱子。Tim端着两瓶乌龙茶走过去，递给他一瓶。",
+            "contextAfter": "（接过乌龙茶，耳朵红了：）「……别这么叫。」"
+          },
+          {
+            "id": "t_jiebao_page3",
+            "asset": "personal_t_jiebao_page3",
+            "memory": "cp7_t_jiebao_page3",
+            "text": "（接过乌龙茶，耳朵红了：）「……别这么叫。」",
+            "visibleCast": [
+              "dijie",
+              "tim"
+            ],
+            "semanticScene": "tim:t_jiebao:3",
+            "contextBefore": "「杰宝，今天那段solo吹得可以啊。」",
+            "contextAfter": "「那叫什么？笛老师？笛大师？」"
+          },
+          {
+            "id": "t_jiebao_page4",
+            "asset": "personal_t_jiebao_page4",
+            "memory": "cp7_t_jiebao_page4",
+            "text": "「那叫什么？笛老师？笛大师？」",
+            "visibleCast": [
+              "tim",
+              "dijie"
+            ],
+            "semanticScene": "tim:t_jiebao:4",
+            "contextBefore": "（接过乌龙茶，耳朵红了：）「……别这么叫。」",
+            "contextAfter": "（低头看谱：）「叫名字就行。」"
+          },
+          {
+            "id": "t_jiebao_page5",
+            "asset": "personal_t_jiebao_page5",
+            "memory": "cp7_t_jiebao_page5",
+            "text": "（低头看谱：）「叫名字就行。」",
+            "visibleCast": [
+              "dijie",
+              "tim"
+            ],
+            "semanticScene": "tim:t_jiebao:5",
+            "contextBefore": "「那叫什么？笛老师？笛大师？」",
+            "contextAfter": "（笑：）「好的杰宝。」"
+          },
+          {
+            "id": "t_jiebao_page6",
+            "asset": "personal_t_jiebao_page6",
+            "memory": "cp7_t_jiebao_page6",
+            "text": "（笑：）「好的杰宝。」",
+            "visibleCast": [
+              "tim",
+              "dijie"
+            ],
+            "semanticScene": "tim:t_jiebao:6",
+            "contextBefore": "（低头看谱：）「叫名字就行。」",
+            "contextAfter": "笛杰没再反驳，嘴角弯了一下。\n\n阿喆坐在旁边，看着他俩，也笑，但没说话。你发现阿喆的眼中有一丝幽怨，不知道是不是错觉。\n\n你注意到，Tim对笛杰的态度和对别人不一样——不是更热情，是更放松。"
+          },
+          {
+            "id": "t_jiebao_page7",
+            "asset": "personal_t_jiebao_page7",
+            "memory": "cp7_t_jiebao_page7",
+            "text": "笛杰没再反驳，嘴角弯了一下。\n\n阿喆坐在旁边，看着他俩，也笑，但没说话。你发现阿喆的眼中有一丝幽怨，不知道是不是错觉。\n\n你注意到，Tim对笛杰的态度和对别人不一样——不是更热情，是更放松。",
+            "visibleCast": [
+              "tim",
+              "dijie"
+            ],
+            "semanticScene": "tim:t_jiebao:7",
+            "contextBefore": "（笑：）「好的杰宝。」",
+            "contextAfter": "（坐下来：）「杰宝人好啊。话少，但靠谱。你问他什么，他嘴上不说，行动上都做了。」\n\n（看着笛杰的方向：）「而且他是真喜欢音乐。不是‘我来玩一玩’，是‘我得把这个音吹准’。这种人，值得叫得好听一点。」"
+          }
+        ]
+      },
+      {
+        "id": "t_jiebao_a",
+        "title": "伍 · 杰宝",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "tim",
+            "text": "（坐下来：）「杰宝人好啊。话少，但靠谱。你问他什么，他嘴上不说，行动上都做了。」"
+          },
+          {
+            "who": "tim",
+            "text": "（看着笛杰的方向：）「而且他是真喜欢音乐。不是‘我来玩一玩’，是‘我得把这个音吹准’。这种人，值得叫得好听一点。」"
+          },
+          {
+            "who": "narrator",
+            "text": "他顿了顿。"
+          },
+          {
+            "who": "tim",
+            "text": "「当然，他不让叫，我偏叫。这叫……反向表达喜爱。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「那你也给我起个外号？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "「你对阿喆怎么不起外号？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_t_jiebao_a",
+        "memory": "cp7_t_jiebao_a",
+        "artText": "（坐下来：）「杰宝人好啊。话少，但靠谱。你问他什么，他嘴上不说，行动上都做了。」 （看着笛杰的方向：）「而且他是真喜欢音乐。不是‘我来玩一玩’，是‘我得把这个音吹准’。这种人，值得叫得好听一点。」 他顿了顿。 「当然，他不让叫，我偏叫。这叫……反向表达喜爱。」",
+        "pageArt": [
+          {
+            "id": "t_jiebao_a",
+            "asset": "personal_t_jiebao_a",
+            "memory": "cp7_t_jiebao_a",
+            "text": "（坐下来：）「杰宝人好啊。话少，但靠谱。你问他什么，他嘴上不说，行动上都做了。」\n\n（看着笛杰的方向：）「而且他是真喜欢音乐。不是‘我来玩一玩’，是‘我得把这个音吹准’。这种人，值得叫得好听一点。」",
+            "visibleCast": [
+              "tim",
+              "dijie"
+            ],
+            "semanticScene": "tim:t_jiebao_a:1",
+            "contextBefore": "笛杰没再反驳，嘴角弯了一下。\n\n阿喆坐在旁边，看着他俩，也笑，但没说话。你发现阿喆的眼中有一丝幽怨，不知道是不是错觉。\n\n你注意到，Tim对笛杰的态度和对别人不一样——不是更热情，是更放松。",
+            "contextAfter": "他顿了顿。"
+          },
+          {
+            "id": "t_jiebao_a_page2",
+            "asset": "personal_t_jiebao_a_page2",
+            "memory": "cp7_t_jiebao_a_page2",
+            "text": "他顿了顿。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_jiebao_a:2",
+            "contextBefore": "（坐下来：）「杰宝人好啊。话少，但靠谱。你问他什么，他嘴上不说，行动上都做了。」\n\n（看着笛杰的方向：）「而且他是真喜欢音乐。不是‘我来玩一玩’，是‘我得把这个音吹准’。这种人，值得叫得好听一点。」",
+            "contextAfter": "「当然，他不让叫，我偏叫。这叫……反向表达喜爱。」"
+          },
+          {
+            "id": "t_jiebao_a_page3",
+            "asset": "personal_t_jiebao_a_page3",
+            "memory": "cp7_t_jiebao_a_page3",
+            "text": "「当然，他不让叫，我偏叫。这叫……反向表达喜爱。」",
+            "visibleCast": [
+              "tim",
+              "dijie"
+            ],
+            "semanticScene": "tim:t_jiebao_a:3",
+            "contextBefore": "他顿了顿。",
+            "contextAfter": "乐团群里突然炸了。\n\n起因是小垃发了一张排练照，照片里Tim和空格并排坐着，两个人都低着头看谱。角度抓得好，像电影截图。\n\n下面评论刷疯了：「嗑到了」「Tim空锁死」「这什么神仙CP」。\n\n十分钟后，Tim把头像换了。换成了一张羽毛球场的照片，只有他一个人。\n\n同时群里发了一条消息。"
+          }
+        ]
+      },
+      {
+        "id": "t_cp",
+        "title": "陆 · 拆CP",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "乐团群里突然炸了。"
+          },
+          {
+            "who": "narrator",
+            "text": "起因是小垃发了一张排练照，照片里Tim和空格并排坐着，两个人都低着头看谱。角度抓得好，像电影截图。"
+          },
+          {
+            "who": "narrator",
+            "text": "下面评论刷疯了：「嗑到了」「Tim空锁死」「这什么神仙CP」。"
+          },
+          {
+            "who": "narrator",
+            "text": "十分钟后，Tim把头像换了。换成了一张羽毛球场的照片，只有他一个人。"
+          },
+          {
+            "who": "narrator",
+            "text": "同时群里发了一条消息。"
+          },
+          {
+            "who": "tim",
+            "text": "「没在点你们。但换个头像，省得你们脑补。」"
+          },
+          {
+            "who": "tim",
+            "text": "「我和格老就是好朋友。好朋友坐一起，不叫CP，叫正常社交。」"
+          },
+          {
+            "who": "narrator",
+            "text": "满屏「哈哈哈哈」和「无情拆CP」。"
+          },
+          {
+            "who": "narrator",
+            "text": "空格在群里回了一个表情包：一只猫摊在地上，配文「累了」。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「你换头像好快，早就准备好备用的了？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_cp_a1"
+          },
+          {
+            "text": "「你不怕大家伤心吗？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_cp_a2"
+          },
+          {
+            "text": "「……其实那张照片是挺有氛围的。」",
+            "bond": 1,
+            "score": 0,
+            "flags": [],
+            "next": "t_cp_a3"
+          }
+        ],
+        "asset": "personal_t_cp",
+        "memory": "cp7_t_cp",
+        "artText": "乐团群里突然炸了。 起因是小垃发了一张排练照，照片里Tim和空格并排坐着，两个人都低着头看谱。角度抓得好，像电影截图。 下面评论刷疯了：「嗑到了」「Tim空锁死」「这什么神仙CP」。 十分钟后，Tim把头像换了。换成了一张羽毛球场的照片，只有他一个人。 同时群里发了一条消息。 「没在点你们。但换个头像，省得你们脑补。」 「我和格老就是好朋友。好朋友坐一起，不叫CP，叫正常社交。」 满屏「哈哈哈哈」和「无情拆CP」。 空格在群里回了一个表情包：一只猫摊在地上，配文「累了」。",
+        "pageArt": [
+          {
+            "id": "t_cp",
+            "asset": "personal_t_cp",
+            "memory": "cp7_t_cp",
+            "text": "乐团群里突然炸了。\n\n起因是小垃发了一张排练照，照片里Tim和空格并排坐着，两个人都低着头看谱。角度抓得好，像电影截图。\n\n下面评论刷疯了：「嗑到了」「Tim空锁死」「这什么神仙CP」。\n\n十分钟后，Tim把头像换了。换成了一张羽毛球场的照片，只有他一个人。\n\n同时群里发了一条消息。",
+            "visibleCast": [
+              "tim",
+              "kongge"
+            ],
+            "semanticScene": "tim:t_cp:1",
+            "contextBefore": "「当然，他不让叫，我偏叫。这叫……反向表达喜爱。」",
+            "contextAfter": "「没在点你们。但换个头像，省得你们脑补。」\n\n「我和格老就是好朋友。好朋友坐一起，不叫CP，叫正常社交。」"
+          },
+          {
+            "id": "t_cp_page2",
+            "asset": "personal_t_cp_page2",
+            "memory": "cp7_t_cp_page2",
+            "text": "「没在点你们。但换个头像，省得你们脑补。」\n\n「我和格老就是好朋友。好朋友坐一起，不叫CP，叫正常社交。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_cp:2",
+            "contextBefore": "乐团群里突然炸了。\n\n起因是小垃发了一张排练照，照片里Tim和空格并排坐着，两个人都低着头看谱。角度抓得好，像电影截图。\n\n下面评论刷疯了：「嗑到了」「Tim空锁死」「这什么神仙CP」。\n\n十分钟后，Tim把头像换了。换成了一张羽毛球场的照片，只有他一个人。\n\n同时群里发了一条消息。",
+            "contextAfter": "满屏「哈哈哈哈」和「无情拆CP」。\n\n空格在群里回了一个表情包：一只猫摊在地上，配文「累了」。"
+          },
+          {
+            "id": "t_cp_page3",
+            "asset": "personal_t_cp_page3",
+            "memory": "cp7_t_cp_page3",
+            "text": "满屏「哈哈哈哈」和「无情拆CP」。\n\n空格在群里回了一个表情包：一只猫摊在地上，配文「累了」。",
+            "visibleCast": [],
+            "semanticScene": "tim:t_cp:3",
+            "contextBefore": "「没在点你们。但换个头像，省得你们脑补。」\n\n「我和格老就是好朋友。好朋友坐一起，不叫CP，叫正常社交。」",
+            "contextAfter": "（私聊回你：）「备用的？我有十二个备用头像，按不同场景轮换。」\n\n「天秤座，讲究平衡。头像太‘CP感’，会影响我的社交边界。」"
+          }
+        ]
+      },
+      {
+        "id": "t_cp_a1",
+        "title": "陆 · 拆CP",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "tim",
+            "text": "（私聊回你：）「备用的？我有十二个备用头像，按不同场景轮换。」"
+          },
+          {
+            "who": "tim",
+            "text": "「天秤座，讲究平衡。头像太‘CP感’，会影响我的社交边界。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "（继续）",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": "t_cp_a"
+          }
+        ],
+        "asset": "personal_t_cp_a1",
+        "memory": "cp7_t_cp_a1",
+        "artText": "（私聊回你：）「备用的？我有十二个备用头像，按不同场景轮换。」 「天秤座，讲究平衡。头像太‘CP感’，会影响我的社交边界。」",
+        "pageArt": [
+          {
+            "id": "t_cp_a1",
+            "asset": "personal_t_cp_a1",
+            "memory": "cp7_t_cp_a1",
+            "text": "（私聊回你：）「备用的？我有十二个备用头像，按不同场景轮换。」\n\n「天秤座，讲究平衡。头像太‘CP感’，会影响我的社交边界。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_cp_a1:1",
+            "contextBefore": "满屏「哈哈哈哈」和「无情拆CP」。\n\n空格在群里回了一个表情包：一只猫摊在地上，配文「累了」。",
+            "contextAfter": "（私聊回你：）「伤心？嗑CP本来就是图一乐，乐完就散了。」\n\n「但头像太‘CP感’，会影响我的社交边界。这个不能含糊。」"
+          }
+        ]
+      },
+      {
+        "id": "t_cp_a2",
+        "title": "陆 · 拆CP",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "tim",
+            "text": "（私聊回你：）「伤心？嗑CP本来就是图一乐，乐完就散了。」"
+          },
+          {
+            "who": "tim",
+            "text": "「但头像太‘CP感’，会影响我的社交边界。这个不能含糊。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "（继续）",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": "t_cp_a"
+          }
+        ],
+        "asset": "personal_t_cp_a2",
+        "memory": "cp7_t_cp_a2",
+        "artText": "（私聊回你：）「伤心？嗑CP本来就是图一乐，乐完就散了。」 「但头像太‘CP感’，会影响我的社交边界。这个不能含糊。」",
+        "pageArt": [
+          {
+            "id": "t_cp_a2",
+            "asset": "personal_t_cp_a2",
+            "memory": "cp7_t_cp_a2",
+            "text": "（私聊回你：）「伤心？嗑CP本来就是图一乐，乐完就散了。」\n\n「但头像太‘CP感’，会影响我的社交边界。这个不能含糊。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_cp_a2:1",
+            "contextBefore": "（私聊回你：）「备用的？我有十二个备用头像，按不同场景轮换。」\n\n「天秤座，讲究平衡。头像太‘CP感’，会影响我的社交边界。」",
+            "contextAfter": "（私聊回你：）「有氛围也不行。氛围是误会最好的养料。」\n\n「头像太‘CP感’，会影响我的社交边界。」"
+          }
+        ]
+      },
+      {
+        "id": "t_cp_a3",
+        "title": "陆 · 拆CP",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "tim",
+            "text": "（私聊回你：）「有氛围也不行。氛围是误会最好的养料。」"
+          },
+          {
+            "who": "tim",
+            "text": "「头像太‘CP感’，会影响我的社交边界。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "（继续）",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": "t_cp_a"
+          }
+        ],
+        "asset": "personal_t_cp_a3",
+        "memory": "cp7_t_cp_a3",
+        "artText": "（私聊回你：）「有氛围也不行。氛围是误会最好的养料。」 「头像太‘CP感’，会影响我的社交边界。」",
+        "pageArt": [
+          {
+            "id": "t_cp_a3",
+            "asset": "personal_t_cp_a3",
+            "memory": "cp7_t_cp_a3",
+            "text": "（私聊回你：）「有氛围也不行。氛围是误会最好的养料。」\n\n「头像太‘CP感’，会影响我的社交边界。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_cp_a3:1",
+            "contextBefore": "（私聊回你：）「伤心？嗑CP本来就是图一乐，乐完就散了。」\n\n「但头像太‘CP感’，会影响我的社交边界。这个不能含糊。」",
+            "contextAfter": "（又补一条：）「而且我有女朋友。让别的女生嗑我CP，对她不公平。」"
+          }
+        ]
+      },
+      {
+        "id": "t_cp_a",
+        "title": "陆 · 拆CP",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "tim",
+            "text": "（又补一条：）「而且我有女朋友。让别的女生嗑我CP，对她不公平。」"
+          },
+          {
+            "who": "narrator",
+            "text": "你看着“我有女朋友”这五个字，愣了一下。"
+          },
+          {
+            "who": "narrator",
+            "text": "他知道你看到了。但他没解释，没撤回，像在说“今天天气不错”。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「你女朋友……也来乐团吗？」",
+            "bond": 1,
+            "score": 0,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "「嗯，我知道了。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "没回。过了十分钟，他发来一条：「没别的意思，就是想说清楚。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_t_cp_a",
+        "memory": "cp7_t_cp_a",
+        "artText": "（又补一条：）「而且我有女朋友。让别的女生嗑我CP，对她不公平。」 你看着“我有女朋友”这五个字，愣了一下。 他知道你看到了。但他没解释，没撤回，像在说“今天天气不错”。",
+        "pageArt": [
+          {
+            "id": "t_cp_a",
+            "asset": "personal_t_cp_a",
+            "memory": "cp7_t_cp_a",
+            "text": "（又补一条：）「而且我有女朋友。让别的女生嗑我CP，对她不公平。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_cp_a:1",
+            "contextBefore": "（私聊回你：）「有氛围也不行。氛围是误会最好的养料。」\n\n「头像太‘CP感’，会影响我的社交边界。」",
+            "contextAfter": "你看着“我有女朋友”这五个字，愣了一下。\n\n他知道你看到了。但他没解释，没撤回，像在说“今天天气不错”。"
+          },
+          {
+            "id": "t_cp_a_page2",
+            "asset": "personal_t_cp_a_page2",
+            "memory": "cp7_t_cp_a_page2",
+            "text": "你看着“我有女朋友”这五个字，愣了一下。\n\n他知道你看到了。但他没解释，没撤回，像在说“今天天气不错”。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_cp_a:2",
+            "contextBefore": "（又补一条：）「而且我有女朋友。让别的女生嗑我CP，对她不公平。」",
+            "contextAfter": "演出结束，回程的大巴上。空格靠在窗边睡着了，头一点一点。\n\nTim把自己的外套脱下来，叠成一个方块，轻轻垫在空格脑袋和窗户之间。\n\n动作很轻。\n\n十元坐在后排，小声对小垃说：「Tim简直是空格的妈妈。」\n\n小垃压低声音：「柒柒是妈妈，Tim是……介于男朋友和老爹之间。」\n\nTim听见了，没回头，竖起食指放在唇边，做了一个“嘘”的手势。\n\n然后继续看着窗外。"
+          }
+        ]
+      },
+      {
+        "id": "t_care",
+        "title": "柒 · 空格的“妈妈”",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "演出结束，回程的大巴上。空格靠在窗边睡着了，头一点一点。"
+          },
+          {
+            "who": "narrator",
+            "text": "Tim把自己的外套脱下来，叠成一个方块，轻轻垫在空格脑袋和窗户之间。"
+          },
+          {
+            "who": "narrator",
+            "text": "动作很轻。"
+          },
+          {
+            "who": "narrator",
+            "text": "十元坐在后排，小声对小垃说：「Tim简直是空格的妈妈。」"
+          },
+          {
+            "who": "narrator",
+            "text": "小垃压低声音：「柒柒是妈妈，Tim是……介于男朋友和老爹之间。」"
+          },
+          {
+            "who": "narrator",
+            "text": "Tim听见了，没回头，竖起食指放在唇边，做了一个“嘘”的手势。"
+          },
+          {
+            "who": "narrator",
+            "text": "然后继续看着窗外。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「你对每个人都这么好吗？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_care_a"
+          },
+          {
+            "text": "「你照顾格老，是习惯还是……」",
+            "bond": 1,
+            "score": 0,
+            "flags": [],
+            "next": "t_care_a"
+          },
+          {
+            "text": "没说话，只是把空调调高了两度",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_care_a"
+          }
+        ],
+        "asset": "personal_t_care",
+        "memory": "cp7_t_care",
+        "artText": "演出结束，回程的大巴上。空格靠在窗边睡着了，头一点一点。 Tim把自己的外套脱下来，叠成一个方块，轻轻垫在空格脑袋和窗户之间。 动作很轻。 十元坐在后排，小声对小垃说：「Tim简直是空格的妈妈。」 小垃压低声音：「柒柒是妈妈，Tim是……介于男朋友和老爹之间。」 Tim听见了，没回头，竖起食指放在唇边，做了一个“嘘”的手势。 然后继续看着窗外。",
+        "pageArt": [
+          {
+            "id": "t_care",
+            "asset": "personal_t_care",
+            "memory": "cp7_t_care",
+            "text": "演出结束，回程的大巴上。空格靠在窗边睡着了，头一点一点。\n\nTim把自己的外套脱下来，叠成一个方块，轻轻垫在空格脑袋和窗户之间。\n\n动作很轻。\n\n十元坐在后排，小声对小垃说：「Tim简直是空格的妈妈。」\n\n小垃压低声音：「柒柒是妈妈，Tim是……介于男朋友和老爹之间。」\n\nTim听见了，没回头，竖起食指放在唇边，做了一个“嘘”的手势。\n\n然后继续看着窗外。",
+            "visibleCast": [
+              "tim",
+              "kongge"
+            ],
+            "semanticScene": "tim:t_care:1",
+            "contextBefore": "你看着“我有女朋友”这五个字，愣了一下。\n\n他知道你看到了。但他没解释，没撤回，像在说“今天天气不错”。",
+            "contextAfter": "（下车之后，他走在你旁边：）「你对每个人都这么好吗？——你是不是想问这个。」\n\n「我对谁都好，是因为我对‘不好’这件事过敏。但‘好’和‘近’是两回事。」\n\n（看着前方的路：）「我可以给你拧瓶盖、调琴弓、垫外套。但我的手机密码、我家地址、我女朋友的名字——这些，不是‘好’能换到的。」"
+          }
+        ]
+      },
+      {
+        "id": "t_care_a",
+        "title": "柒 · 空格的“妈妈”",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "tim",
+            "text": "（下车之后，他走在你旁边：）「你对每个人都这么好吗？——你是不是想问这个。」"
+          },
+          {
+            "who": "tim",
+            "text": "「我对谁都好，是因为我对‘不好’这件事过敏。但‘好’和‘近’是两回事。」"
+          },
+          {
+            "who": "tim",
+            "text": "（看着前方的路：）「我可以给你拧瓶盖、调琴弓、垫外套。但我的手机密码、我家地址、我女朋友的名字——这些，不是‘好’能换到的。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「那你跟我说这些，算‘近’还是‘好’？」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "「我明白了。边界感。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": null
+          },
+          {
+            "text": "「所以你还是防着我。」",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "asset": "personal_t_care_a",
+        "memory": "cp7_t_care_a",
+        "artText": "（下车之后，他走在你旁边：）「你对每个人都这么好吗？——你是不是想问这个。」 「我对谁都好，是因为我对‘不好’这件事过敏。但‘好’和‘近’是两回事。」 （看着前方的路：）「我可以给你拧瓶盖、调琴弓、垫外套。但我的手机密码、我家地址、我女朋友的名字——这些，不是‘好’能换到的。」",
+        "pageArt": [
+          {
+            "id": "t_care_a",
+            "asset": "personal_t_care_a",
+            "memory": "cp7_t_care_a",
+            "text": "（下车之后，他走在你旁边：）「你对每个人都这么好吗？——你是不是想问这个。」\n\n「我对谁都好，是因为我对‘不好’这件事过敏。但‘好’和‘近’是两回事。」\n\n（看着前方的路：）「我可以给你拧瓶盖、调琴弓、垫外套。但我的手机密码、我家地址、我女朋友的名字——这些，不是‘好’能换到的。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_care_a:1",
+            "contextBefore": "演出结束，回程的大巴上。空格靠在窗边睡着了，头一点一点。\n\nTim把自己的外套脱下来，叠成一个方块，轻轻垫在空格脑袋和窗户之间。\n\n动作很轻。\n\n十元坐在后排，小声对小垃说：「Tim简直是空格的妈妈。」\n\n小垃压低声音：「柒柒是妈妈，Tim是……介于男朋友和老爹之间。」\n\nTim听见了，没回头，竖起食指放在唇边，做了一个“嘘”的手势。\n\n然后继续看着窗外。",
+            "contextAfter": "第100场合奏。谢幕。\n\n庆功宴上，Tim坐在你旁边，给你倒饮料，帮你挡酒，问你今天累不累。\n\n一切都很好。但你看着他跟十元碰杯，跟笛杰开玩笑，跟空格核对下周的谱子，忽然不知道自己在他那儿算不算特别。\n\n他记得空格喜欢煲珠公的抹茶雪籽冰淇凌，记得垃垃容易低血糖，记得十元的生日。\n\n宴会结束，他问你。"
+          }
+        ]
+      },
+      {
+        "id": "t_distance",
+        "title": "捌 · 距离",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "第100场合奏。谢幕。"
+          },
+          {
+            "who": "narrator",
+            "text": "庆功宴上，Tim坐在你旁边，给你倒饮料，帮你挡酒，问你今天累不累。"
+          },
+          {
+            "who": "narrator",
+            "text": "一切都很好。但你看着他跟十元碰杯，跟笛杰开玩笑，跟空格核对下周的谱子，忽然不知道自己在他那儿算不算特别。"
+          },
+          {
+            "who": "narrator",
+            "text": "他记得空格喜欢煲珠公的抹茶雪籽冰淇凌，记得垃垃容易低血糖，记得十元的生日。"
+          },
+          {
+            "who": "narrator",
+            "text": "宴会结束，他问你。"
+          },
+          {
+            "who": "tim",
+            "text": "「今天开心吗？」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「开心。但觉得……你离我很远。」",
+            "bond": 0,
+            "score": 0,
+            "flags": [
+              "distanceOK"
+            ],
+            "next": "t_test"
+          },
+          {
+            "text": "「开心。有你这样的朋友，很好。」",
+            "bond": 5,
+            "score": 0,
+            "flags": [
+              "distanceOK"
+            ],
+            "next": "t_final"
+          },
+          {
+            "text": "笑了笑，没正面回答：「下次排练见。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [
+              "distanceOK"
+            ],
+            "next": "t_final"
+          }
+        ],
+        "asset": "personal_t_distance",
+        "memory": "cp7_t_distance",
+        "artText": "第100场合奏。谢幕。 庆功宴上，Tim坐在你旁边，给你倒饮料，帮你挡酒，问你今天累不累。 一切都很好。但你看着他跟十元碰杯，跟笛杰开玩笑，跟空格核对下周的谱子，忽然不知道自己在他那儿算不算特别。 他记得空格喜欢煲珠公的抹茶雪籽冰淇凌，记得垃垃容易低血糖，记得十元的生日。 宴会结束，他问你。 「今天开心吗？」",
+        "pageArt": [
+          {
+            "id": "t_distance",
+            "asset": "personal_t_distance",
+            "memory": "cp7_t_distance",
+            "text": "第100场合奏。谢幕。\n\n庆功宴上，Tim坐在你旁边，给你倒饮料，帮你挡酒，问你今天累不累。\n\n一切都很好。但你看着他跟十元碰杯，跟笛杰开玩笑，跟空格核对下周的谱子，忽然不知道自己在他那儿算不算特别。\n\n他记得空格喜欢煲珠公的抹茶雪籽冰淇凌，记得垃垃容易低血糖，记得十元的生日。\n\n宴会结束，他问你。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_distance:1",
+            "contextBefore": "（下车之后，他走在你旁边：）「你对每个人都这么好吗？——你是不是想问这个。」\n\n「我对谁都好，是因为我对‘不好’这件事过敏。但‘好’和‘近’是两回事。」\n\n（看着前方的路：）「我可以给你拧瓶盖、调琴弓、垫外套。但我的手机密码、我家地址、我女朋友的名字——这些，不是‘好’能换到的。」",
+            "contextAfter": "「今天开心吗？」"
+          },
+          {
+            "id": "t_distance_page2",
+            "asset": "personal_t_distance_page2",
+            "memory": "cp7_t_distance_page2",
+            "text": "「今天开心吗？」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_distance:2",
+            "contextBefore": "第100场合奏。谢幕。\n\n庆功宴上，Tim坐在你旁边，给你倒饮料，帮你挡酒，问你今天累不累。\n\n一切都很好。但你看着他跟十元碰杯，跟笛杰开玩笑，跟空格核对下周的谱子，忽然不知道自己在他那儿算不算特别。\n\n他记得空格喜欢煲珠公的抹茶雪籽冰淇凌，记得垃垃容易低血糖，记得十元的生日。\n\n宴会结束，他问你。",
+            "contextAfter": "你说了“很远”。Tim看着你，眼神没变。"
+          }
+        ]
+      },
+      {
+        "id": "t_test",
+        "title": "玖 · 试探 · 副场景 旗标distanceOK",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "你说了“很远”。Tim看着你，眼神没变。"
+          },
+          {
+            "who": "tim",
+            "text": "「远是正常的。我本来就是远的人。」"
+          },
+          {
+            "who": "tim",
+            "text": "（把外套拉链拉到一半：）「我小时候转学很多次。每次刚跟朋友熟起来，就搬走了。后来我就学会了——不要让别人靠太近，走的时候就不会难过。」"
+          },
+          {
+            "who": "tim",
+            "text": "「这个习惯改不掉。我也不想改。」"
+          },
+          {
+            "who": "narrator",
+            "text": "他说得很平静，像在讲别人的事。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「那如果我偏要走近呢？」",
+            "bond": 0,
+            "score": 0,
+            "flags": [
+              "confessPath"
+            ],
+            "next": "t_confess"
+          },
+          {
+            "text": "「我懂了。我会站在这里，不往前走。」",
+            "bond": 5,
+            "score": 0,
+            "flags": [],
+            "next": "t_final"
+          },
+          {
+            "text": "「风是捉不住的。但我可以享受被风吹过的感觉。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_final"
+          }
+        ],
+        "asset": "personal_t_test",
+        "memory": "cp7_t_test",
+        "artText": "你说了“很远”。Tim看着你，眼神没变。 「远是正常的。我本来就是远的人。」 （把外套拉链拉到一半：）「我小时候转学很多次。每次刚跟朋友熟起来，就搬走了。后来我就学会了——不要让别人靠太近，走的时候就不会难过。」 「这个习惯改不掉。我也不想改。」 他说得很平静，像在讲别人的事。",
+        "pageArt": [
+          {
+            "id": "t_test",
+            "asset": "personal_t_test",
+            "memory": "cp7_t_test",
+            "text": "你说了“很远”。Tim看着你，眼神没变。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_test:1",
+            "contextBefore": "「今天开心吗？」",
+            "contextAfter": "「远是正常的。我本来就是远的人。」\n\n（把外套拉链拉到一半：）「我小时候转学很多次。每次刚跟朋友熟起来，就搬走了。后来我就学会了——不要让别人靠太近，走的时候就不会难过。」\n\n「这个习惯改不掉。我也不想改。」"
+          },
+          {
+            "id": "t_test_page2",
+            "asset": "personal_t_test_page2",
+            "memory": "cp7_t_test_page2",
+            "text": "「远是正常的。我本来就是远的人。」\n\n（把外套拉链拉到一半：）「我小时候转学很多次。每次刚跟朋友熟起来，就搬走了。后来我就学会了——不要让别人靠太近，走的时候就不会难过。」\n\n「这个习惯改不掉。我也不想改。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_test:2",
+            "contextBefore": "你说了“很远”。Tim看着你，眼神没变。",
+            "contextAfter": "他说得很平静，像在讲别人的事。"
+          },
+          {
+            "id": "t_test_page3",
+            "asset": "personal_t_test_page3",
+            "memory": "cp7_t_test_page3",
+            "text": "他说得很平静，像在讲别人的事。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_test:3",
+            "contextBefore": "「远是正常的。我本来就是远的人。」\n\n（把外套拉链拉到一半：）「我小时候转学很多次。每次刚跟朋友熟起来，就搬走了。后来我就学会了——不要让别人靠太近，走的时候就不会难过。」\n\n「这个习惯改不掉。我也不想改。」",
+            "contextAfter": "你说“偏要走近”。\n\nTim沉默了很久。久到你以为他不会回答了。"
+          }
+        ]
+      },
+      {
+        "id": "t_confess",
+        "title": "拾 · 表白线 · 副场景 旗标confessPath",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "你说“偏要走近”。"
+          },
+          {
+            "who": "narrator",
+            "text": "Tim沉默了很久。久到你以为他不会回答了。"
+          },
+          {
+            "who": "tim",
+            "text": "「我有女朋友。」"
+          },
+          {
+            "who": "tim",
+            "text": "「不是借口。是真的。我们在一起三年了。」"
+          },
+          {
+            "who": "tim",
+            "text": "（声音很轻：）「你对我的好感，我能感觉到。我不是木头。但我也不能回应。」"
+          },
+          {
+            "who": "narrator",
+            "text": "他看着你，眼神里有歉意，但没有犹豫。"
+          },
+          {
+            "who": "tim",
+            "text": "「如果你还想做朋友，我欢迎。但如果你想更进一步……我给不了。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「……我明白了。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_final"
+          },
+          {
+            "text": "「做朋友就够了。是我越界了。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_final"
+          },
+          {
+            "text": "转身走了。没有说再见。",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": "t_BE_trigger"
+          }
+        ],
+        "asset": "personal_t_confess",
+        "memory": "cp7_t_confess",
+        "artText": "你说“偏要走近”。 Tim沉默了很久。久到你以为他不会回答了。 「我有女朋友。」 「不是借口。是真的。我们在一起三年了。」 （声音很轻：）「你对我的好感，我能感觉到。我不是木头。但我也不能回应。」 他看着你，眼神里有歉意，但没有犹豫。 「如果你还想做朋友，我欢迎。但如果你想更进一步……我给不了。」",
+        "pageArt": [
+          {
+            "id": "t_confess",
+            "asset": "personal_t_confess",
+            "memory": "cp7_t_confess",
+            "text": "你说“偏要走近”。\n\nTim沉默了很久。久到你以为他不会回答了。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_confess:1",
+            "contextBefore": "他说得很平静，像在讲别人的事。",
+            "contextAfter": "「我有女朋友。」\n\n「不是借口。是真的。我们在一起三年了。」\n\n（声音很轻：）「你对我的好感，我能感觉到。我不是木头。但我也不能回应。」"
+          },
+          {
+            "id": "t_confess_page2",
+            "asset": "personal_t_confess_page2",
+            "memory": "cp7_t_confess_page2",
+            "text": "「我有女朋友。」\n\n「不是借口。是真的。我们在一起三年了。」\n\n（声音很轻：）「你对我的好感，我能感觉到。我不是木头。但我也不能回应。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_confess:2",
+            "contextBefore": "你说“偏要走近”。\n\nTim沉默了很久。久到你以为他不会回答了。",
+            "contextAfter": "他看着你，眼神里有歉意，但没有犹豫。"
+          },
+          {
+            "id": "t_confess_page3",
+            "asset": "personal_t_confess_page3",
+            "memory": "cp7_t_confess_page3",
+            "text": "他看着你，眼神里有歉意，但没有犹豫。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_confess:3",
+            "contextBefore": "「我有女朋友。」\n\n「不是借口。是真的。我们在一起三年了。」\n\n（声音很轻：）「你对我的好感，我能感觉到。我不是木头。但我也不能回应。」",
+            "contextAfter": "「如果你还想做朋友，我欢迎。但如果你想更进一步……我给不了。」"
+          },
+          {
+            "id": "t_confess_page4",
+            "asset": "personal_t_confess_page4",
+            "memory": "cp7_t_confess_page4",
+            "text": "「如果你还想做朋友，我欢迎。但如果你想更进一步……我给不了。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_confess:4",
+            "contextBefore": "他看着你，眼神里有歉意，但没有犹豫。",
+            "contextAfter": "第120场。也是这一季的倒数第二场。\n\n排练结束后，Tim在整理琴盒。你走过去。"
+          }
+        ]
+      },
+      {
+        "id": "t_final",
+        "title": "拾壹 · 最后的排练 · 副场景",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "第120场。也是这一季的倒数第二场。"
+          },
+          {
+            "who": "narrator",
+            "text": "排练结束后，Tim在整理琴盒。你走过去。"
+          },
+          {
+            "who": "tim",
+            "text": "「坐。」"
+          },
+          {
+            "who": "narrator",
+            "text": "他拍了拍旁边的椅子。"
+          },
+          {
+            "who": "tim",
+            "text": "「有些人跟我相处，是为了‘得到’。得到了，就满足了。」"
+          },
+          {
+            "who": "tim",
+            "text": "（看着你：）「你好像……没打算从我这里拿走什么。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「因为我享受的，是跟你一起排练的过程。不是结果。」",
+            "bond": 5,
+            "score": 0,
+            "flags": [],
+            "next": "t_final_a"
+          },
+          {
+            "text": "「你可能想多了。我就是顺便站在这。」",
+            "bond": 2,
+            "score": 0,
+            "flags": [],
+            "next": "t_final_a"
+          },
+          {
+            "text": "「如果我说，我还是想得到呢？」",
+            "bond": 1,
+            "score": 0,
+            "flags": [],
+            "next": "t_final_a"
+          }
+        ],
+        "asset": "personal_t_final",
+        "memory": "cp7_t_final",
+        "artText": "第120场。也是这一季的倒数第二场。 排练结束后，Tim在整理琴盒。你走过去。 「坐。」 他拍了拍旁边的椅子。 「有些人跟我相处，是为了‘得到’。得到了，就满足了。」 （看着你：）「你好像……没打算从我这里拿走什么。」",
+        "pageArt": [
+          {
+            "id": "t_final",
+            "asset": "personal_t_final",
+            "memory": "cp7_t_final",
+            "text": "第120场。也是这一季的倒数第二场。\n\n排练结束后，Tim在整理琴盒。你走过去。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_final:1",
+            "contextBefore": "「如果你还想做朋友，我欢迎。但如果你想更进一步……我给不了。」",
+            "contextAfter": "「坐。」"
+          },
+          {
+            "id": "t_final_page2",
+            "asset": "personal_t_final_page2",
+            "memory": "cp7_t_final_page2",
+            "text": "「坐。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_final:2",
+            "contextBefore": "第120场。也是这一季的倒数第二场。\n\n排练结束后，Tim在整理琴盒。你走过去。",
+            "contextAfter": "他拍了拍旁边的椅子。"
+          },
+          {
+            "id": "t_final_page3",
+            "asset": "personal_t_final_page3",
+            "memory": "cp7_t_final_page3",
+            "text": "他拍了拍旁边的椅子。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_final:3",
+            "contextBefore": "「坐。」",
+            "contextAfter": "「有些人跟我相处，是为了‘得到’。得到了，就满足了。」\n\n（看着你：）「你好像……没打算从我这里拿走什么。」"
+          },
+          {
+            "id": "t_final_page4",
+            "asset": "personal_t_final_page4",
+            "memory": "cp7_t_final_page4",
+            "text": "「有些人跟我相处，是为了‘得到’。得到了，就满足了。」\n\n（看着你：）「你好像……没打算从我这里拿走什么。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_final:4",
+            "contextBefore": "他拍了拍旁边的椅子。",
+            "contextAfter": "（笑了一下：）「天秤座，最怕选择题。」\n\n（把琴盒合上：）「但你这道题，我不用选。」"
+          }
+        ]
+      },
+      {
+        "id": "t_final_a",
+        "title": "拾壹 · 最后的排练 · 副场景",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "tim",
+            "text": "（笑了一下：）「天秤座，最怕选择题。」"
+          },
+          {
+            "who": "tim",
+            "text": "（把琴盒合上：）「但你这道题，我不用选。」"
+          },
+          {
+            "who": "narrator",
+            "text": "他站起来，背着琴盒，走到门口，回头看了你一眼。"
+          },
+          {
+            "who": "tim",
+            "text": "「下一季，还来吗？」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "「来。」",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": "CHK_END"
+          },
+          {
+            "text": "「你在，我就来。」",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": "CHK_END"
+          },
+          {
+            "text": "「看心情。」",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": "CHK_END"
+          }
+        ],
+        "resolveTimEnding": true,
+        "asset": "personal_t_final_a",
+        "memory": "cp7_t_final_a",
+        "artText": "（笑了一下：）「天秤座，最怕选择题。」 （把琴盒合上：）「但你这道题，我不用选。」 他站起来，背着琴盒，走到门口，回头看了你一眼。 「下一季，还来吗？」",
+        "pageArt": [
+          {
+            "id": "t_final_a",
+            "asset": "personal_t_final_a",
+            "memory": "cp7_t_final_a",
+            "text": "（笑了一下：）「天秤座，最怕选择题。」\n\n（把琴盒合上：）「但你这道题，我不用选。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_final_a:1",
+            "contextBefore": "「有些人跟我相处，是为了‘得到’。得到了，就满足了。」\n\n（看着你：）「你好像……没打算从我这里拿走什么。」",
+            "contextAfter": "他站起来，背着琴盒，走到门口，回头看了你一眼。"
+          },
+          {
+            "id": "t_final_a_page2",
+            "asset": "personal_t_final_a_page2",
+            "memory": "cp7_t_final_a_page2",
+            "text": "他站起来，背着琴盒，走到门口，回头看了你一眼。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_final_a:2",
+            "contextBefore": "（笑了一下：）「天秤座，最怕选择题。」\n\n（把琴盒合上：）「但你这道题，我不用选。」",
+            "contextAfter": "「下一季，还来吗？」"
+          },
+          {
+            "id": "t_final_a_page3",
+            "asset": "personal_t_final_a_page3",
+            "memory": "cp7_t_final_a_page3",
+            "text": "「下一季，还来吗？」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_final_a:3",
+            "contextBefore": "他站起来，背着琴盒，走到门口，回头看了你一眼。",
+            "contextAfter": "你转身走了。\n\nTim没有追。他站在原地，把琴盒的锁扣“咔哒”一声扣好。\n\n排练厅里很安静。"
+          }
+        ]
+      },
+      {
+        "id": "t_BE_trigger",
+        "title": "拾壹 · 最后的排练 · 副场景",
+        "sub": true,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "你转身走了。"
+          },
+          {
+            "who": "narrator",
+            "text": "Tim没有追。他站在原地，把琴盒的锁扣“咔哒”一声扣好。"
+          },
+          {
+            "who": "narrator",
+            "text": "排练厅里很安静。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "转身离开，没有回头。",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": "t_BE"
+          }
+        ],
+        "asset": "personal_t_BE_trigger",
+        "memory": "cp7_t_BE_trigger",
+        "artText": "你转身走了。 Tim没有追。他站在原地，把琴盒的锁扣“咔哒”一声扣好。 排练厅里很安静。",
+        "pageArt": [
+          {
+            "id": "t_BE_trigger",
+            "asset": "personal_t_BE_trigger",
+            "memory": "cp7_t_BE_trigger",
+            "text": "你转身走了。\n\nTim没有追。他站在原地，把琴盒的锁扣“咔哒”一声扣好。\n\n排练厅里很安静。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_BE_trigger:1",
+            "contextBefore": "「下一季，还来吗？」",
+            "contextAfter": "下一季，你来了。Tim也来了。\n\n你们之间一切如昨，又似乎更有默契。你们是一起对音准的搭档，是一起打羽毛球的球友，是他换头像时第一个告知“我换头像了免得你误会”的朋友。\n\n他依旧对你好，对所有人都好。但你不再计较了。\n\n有一次排练完，他递给你一瓶乌龙茶，忽然说：「跟你待着挺舒服的。不用想太多。」"
+          }
+        ]
+      },
+      {
+        "id": "t_HE",
+        "title": "HE · 春风正好 · 副场景",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "下一季，你来了。Tim也来了。"
+          },
+          {
+            "who": "narrator",
+            "text": "你们之间一切如昨，又似乎更有默契。你们是一起对音准的搭档，是一起打羽毛球的球友，是他换头像时第一个告知“我换头像了免得你误会”的朋友。"
+          },
+          {
+            "who": "narrator",
+            "text": "他依旧对你好，对所有人都好。但你不再计较了。"
+          },
+          {
+            "who": "narrator",
+            "text": "有一次排练完，他递给你一瓶乌龙茶，忽然说：「跟你待着挺舒服的。不用想太多。」"
+          }
+        ],
+        "choices": [
+          {
+            "text": "—— Tim线 · HE 完 ——",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "ending": "HE",
+        "asset": "personal_t_HE",
+        "memory": "cp7_t_HE",
+        "artText": "下一季，你来了。Tim也来了。 你们之间一切如昨，又似乎更有默契。你们是一起对音准的搭档，是一起打羽毛球的球友，是他换头像时第一个告知“我换头像了免得你误会”的朋友。 他依旧对你好，对所有人都好。但你不再计较了。 有一次排练完，他递给你一瓶乌龙茶，忽然说：「跟你待着挺舒服的。不用想太多。」",
+        "pageArt": [
+          {
+            "id": "t_HE",
+            "asset": "personal_t_HE",
+            "memory": "cp7_t_HE",
+            "text": "下一季，你来了。Tim也来了。\n\n你们之间一切如昨，又似乎更有默契。你们是一起对音准的搭档，是一起打羽毛球的球友，是他换头像时第一个告知“我换头像了免得你误会”的朋友。\n\n他依旧对你好，对所有人都好。但你不再计较了。\n\n有一次排练完，他递给你一瓶乌龙茶，忽然说：「跟你待着挺舒服的。不用想太多。」",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_HE:1",
+            "contextBefore": "你转身走了。\n\nTim没有追。他站在原地，把琴盒的锁扣“咔哒”一声扣好。\n\n排练厅里很安静。",
+            "contextAfter": "你们还是朋友。但有些东西变了。\n\n你开始刻意观察他对谁更好、对谁更近。你开始计较他回你消息的速度、他朋友圈点赞的顺序、他给你的水和给别人的水是不是同一个牌子。\n\nTim感觉到了。他没说什么，只是不再主动约你打球。排练时他还是会笑，但那笑容里多了一层礼貌的距离。\n\n你得到了更多的“好”，却失去了最开始的“舒服”。\n\n有一天你发现，他已经三个月没叫过你名字了。他只叫你的声部。"
+          }
+        ]
+      },
+      {
+        "id": "t_TE",
+        "title": "TE · 路越走越窄 · 副场景",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "你们还是朋友。但有些东西变了。"
+          },
+          {
+            "who": "narrator",
+            "text": "你开始刻意观察他对谁更好、对谁更近。你开始计较他回你消息的速度、他朋友圈点赞的顺序、他给你的水和给别人的水是不是同一个牌子。"
+          },
+          {
+            "who": "narrator",
+            "text": "Tim感觉到了。他没说什么，只是不再主动约你打球。排练时他还是会笑，但那笑容里多了一层礼貌的距离。"
+          },
+          {
+            "who": "narrator",
+            "text": "你得到了更多的“好”，却失去了最开始的“舒服”。"
+          },
+          {
+            "who": "narrator",
+            "text": "有一天你发现，他已经三个月没叫过你名字了。他只叫你的声部。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "—— Tim线 · TE 完 ——",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "ending": "TE",
+        "asset": "personal_t_TE",
+        "memory": "cp7_t_TE",
+        "artText": "你们还是朋友。但有些东西变了。 你开始刻意观察他对谁更好、对谁更近。你开始计较他回你消息的速度、他朋友圈点赞的顺序、他给你的水和给别人的水是不是同一个牌子。 Tim感觉到了。他没说什么，只是不再主动约你打球。排练时他还是会笑，但那笑容里多了一层礼貌的距离。 你得到了更多的“好”，却失去了最开始的“舒服”。 有一天你发现，他已经三个月没叫过你名字了。他只叫你的声部。",
+        "pageArt": [
+          {
+            "id": "t_TE",
+            "asset": "personal_t_TE",
+            "memory": "cp7_t_TE",
+            "text": "你们还是朋友。但有些东西变了。\n\n你开始刻意观察他对谁更好、对谁更近。你开始计较他回你消息的速度、他朋友圈点赞的顺序、他给你的水和给别人的水是不是同一个牌子。\n\nTim感觉到了。他没说什么，只是不再主动约你打球。排练时他还是会笑，但那笑容里多了一层礼貌的距离。\n\n你得到了更多的“好”，却失去了最开始的“舒服”。\n\n有一天你发现，他已经三个月没叫过你名字了。他只叫你的声部。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_TE:1",
+            "contextBefore": "下一季，你来了。Tim也来了。\n\n你们之间一切如昨，又似乎更有默契。你们是一起对音准的搭档，是一起打羽毛球的球友，是他换头像时第一个告知“我换头像了免得你误会”的朋友。\n\n他依旧对你好，对所有人都好。但你不再计较了。\n\n有一次排练完，他递给你一瓶乌龙茶，忽然说：「跟你待着挺舒服的。不用想太多。」",
+            "contextAfter": "你没有再出现。\n\nTim也没有问。他依旧排练、打球、帮汤少举反光板、叫笛杰“杰宝”、在空格忘带琴时冷静地叫闪送。\n\n只是他的琴盒里，多了一块你之前借给他的松香。他忘记还了。或者说，你忘记要了。\n\n那块松香他用完了，没有再买同款的。换了一个新牌子。"
+          }
+        ]
+      },
+      {
+        "id": "t_BE",
+        "title": "BE · 风停了 · 副场景",
+        "sub": false,
+        "need": {
+          "bond": 0,
+          "score": 0,
+          "flags": []
+        },
+        "lines": [
+          {
+            "who": "narrator",
+            "text": "你没有再出现。"
+          },
+          {
+            "who": "narrator",
+            "text": "Tim也没有问。他依旧排练、打球、帮汤少举反光板、叫笛杰“杰宝”、在空格忘带琴时冷静地叫闪送。"
+          },
+          {
+            "who": "narrator",
+            "text": "只是他的琴盒里，多了一块你之前借给他的松香。他忘记还了。或者说，你忘记要了。"
+          },
+          {
+            "who": "narrator",
+            "text": "那块松香他用完了，没有再买同款的。换了一个新牌子。"
+          }
+        ],
+        "choices": [
+          {
+            "text": "—— Tim线 · BE 完 ——",
+            "bond": 0,
+            "score": 0,
+            "flags": [],
+            "next": null
+          }
+        ],
+        "ending": "BE",
+        "asset": "personal_t_BE",
+        "memory": "cp7_t_BE",
+        "artText": "你没有再出现。 Tim也没有问。他依旧排练、打球、帮汤少举反光板、叫笛杰“杰宝”、在空格忘带琴时冷静地叫闪送。 只是他的琴盒里，多了一块你之前借给他的松香。他忘记还了。或者说，你忘记要了。 那块松香他用完了，没有再买同款的。换了一个新牌子。",
+        "pageArt": [
+          {
+            "id": "t_BE",
+            "asset": "personal_t_BE",
+            "memory": "cp7_t_BE",
+            "text": "你没有再出现。\n\nTim也没有问。他依旧排练、打球、帮汤少举反光板、叫笛杰“杰宝”、在空格忘带琴时冷静地叫闪送。\n\n只是他的琴盒里，多了一块你之前借给他的松香。他忘记还了。或者说，你忘记要了。\n\n那块松香他用完了，没有再买同款的。换了一个新牌子。",
+            "visibleCast": [
+              "tim"
+            ],
+            "semanticScene": "tim:t_BE:1",
+            "contextBefore": "你们还是朋友。但有些东西变了。\n\n你开始刻意观察他对谁更好、对谁更近。你开始计较他回你消息的速度、他朋友圈点赞的顺序、他给你的水和给别人的水是不是同一个牌子。\n\nTim感觉到了。他没说什么，只是不再主动约你打球。排练时他还是会笑，但那笑容里多了一层礼貌的距离。\n\n你得到了更多的“好”，却失去了最开始的“舒服”。\n\n有一天你发现，他已经三个月没叫过你名字了。他只叫你的声部。",
+            "contextAfter": "Tim 个人线在这个结局收束。"
+          }
+        ]
+      }
+    ],
+    "entry": "t_start",
+    "turnsPerPage": 1
+  },
   "yangcun": {
     "id": "yangcun",
     "name": "羊村",
@@ -8917,7 +11269,7 @@ const PERSONAL_ROUTES = {
             "asset": "personal_yc_cp2",
             "memory": "cp7_yc_cp2",
             "text": "这天，垃垃蹦进了排练室。她是十元的朋友，做游戏的，风风火火。 「跟大家说个事哈哈哈！我在跟笛杰策划一个游戏，叫《恋与哈基米》——就以你们乐团为原型！(⁎⁍̴̛ᴗ⁍̴̛⁎)」",
-            "prompt": "原版羊村线剧情分镜《十二月 · 恋与哈基米》第 1 幕：旁白：这天，垃垃蹦进了排练室。她是十元的朋友，做游戏的，风风火火。 垃垃：「跟大家说个事哈哈哈！我在跟笛杰策划一个游戏，叫《恋与哈基米》——就以你们乐团为原型！(⁎⁍̴̛ᴗ⁍̴̛⁎)」"
+            "prompt": "原版羊村线剧情分镜《十二月 · 恋与哈基米》第 1 幕：旁白：这天，垃垃蹦进了排练室。她是十元的朋友，做游戏的，风风火火。 小垃：「跟大家说个事哈哈哈！我在跟笛杰策划一个游戏，叫《恋与哈基米》——就以你们乐团为原型！(⁎⁍̴̛ᴗ⁍̴̛⁎)」"
           },
           {
             "id": "yc_cp2_page2",
@@ -8988,7 +11340,7 @@ const PERSONAL_ROUTES = {
             "asset": "personal_yc_cp3",
             "memory": "cp7_yc_cp3",
             "text": "（她眼睛一亮，一把抓住你的胳膊：）「既然如此——宝石飞鸿的CP线就交给你了！毕竟你都是一手素材嘛哈哈哈！抱紧大腿！(⁎⁍̴̛ᴗ⁍̴̛⁎)」 你盛情难却，熬了两个晚上，把这几个月小本子上的观察写成了一条CP线，取名《爱我还是他》。",
-            "prompt": "原版羊村线剧情分镜《十二月 · 一手素材》第 1 幕：垃垃：（她眼睛一亮，一把抓住你的胳膊：）「既然如此——宝石飞鸿的CP线就交给你了！毕竟你都是一手素材嘛哈哈哈！抱紧大腿！(⁎⁍̴̛ᴗ⁍̴̛⁎)」 旁白：你盛情难却，熬了两个晚上，把这几个月小本子上的观察写成了一条CP线，取名《爱我还是他》。 动作必须是一只手突然抓住对方穿着衣袖的前臂、靠近手肘的位置，手掌绝不相扣，不能画成牵手、握手、拥抱或暧昧互动；两人隔着桌子保持社交距离。"
+            "prompt": "原版羊村线剧情分镜《十二月 · 一手素材》第 1 幕：小垃：（她眼睛一亮，一把抓住你的胳膊：）「既然如此——宝石飞鸿的CP线就交给你了！毕竟你都是一手素材嘛哈哈哈！抱紧大腿！(⁎⁍̴̛ᴗ⁍̴̛⁎)」 旁白：你盛情难却，熬了两个晚上，把这几个月小本子上的观察写成了一条CP线，取名《爱我还是他》。 动作必须是一只手突然抓住对方穿着衣袖的前臂、靠近手肘的位置，手掌绝不相扣，不能画成牵手、握手、拥抱或暧昧互动；两人隔着桌子保持社交距离。"
           },
           {
             "id": "yc_cp3_page2",

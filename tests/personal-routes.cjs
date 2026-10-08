@@ -18,18 +18,18 @@ const assert=require('node:assert/strict');
   const pageToChoices=async()=>{while(document.querySelector('[data-cp-action="personal-page"]'))await action('page');};
   const choose=async n=>{await pageToChoices();return click(`[data-personal-choice="${n}"]`);};
   const forged=async(action,data={})=>{await wait();const b=document.createElement('button');b.dataset.cpAction=action;Object.assign(b.dataset,data);document.body.append(b);b.click();b.remove();};
-  const setup=(bond=100,complete=true)=>{closeModal(false);state=freshState();state.sound=false;state.coins=100;state.chronicle.completedChapters=complete?[1,2,3,4,5,6]:[1,2,3,4,5];Object.assign(state.chronicle.run,{chapter:6,ch:6,name:'测试玩家',inst:'长笛',scene:'c6_intro',tech:24});for(const id of ['azhe','shiyuan'])applyBondValue(id,bond);save();route('chronicle');};
+  const setup=(bond=100,complete=true)=>{closeModal(false);state=freshState();state.sound=false;state.coins=100;state.chronicle.completedChapters=complete?[1,2,3,4,5,6]:[1,2,3,4,5];Object.assign(state.chronicle.run,{chapter:6,ch:6,name:'测试玩家',inst:'长笛',scene:'c6_intro',tech:24});for(const id of ['azhe','shiyuan','tim'])applyBondValue(id,bond);save();route('chronicle');};
   const select=async id=>{await action('picker');await click(`[data-cp-person="${id}"]`);};
   const reload=()=>{closeModal(false);state=cleanState(JSON.parse(JSON.stringify(state)));save();route('chronicle');};
   const go=scene=>{closeModal(false);S().scene=scene;S().page=0;S().ending=null;P().rev++;renderGlobal();};
   const finish=async()=>{await choose(0);check('Ending auto preview '+S().ending,!$('modalBackdrop').hidden);closeModal(false);};
-  const symbolicNext=new Set(['CHK_COMFORT','NEXT','RESULT','yc_nov2_auto','yc_dec_band_auto']);
+  const symbolicNext=new Set(['CHK_COMFORT','CHK_END','NEXT','RESULT','yc_nov2_auto','yc_dec_band_auto']);
   for(const route of Object.values(PERSONAL_ROUTES))for(const n of route.nodes){
    check('Valid graph '+n.id,n.lines.length>0&&n.choices.length>0&&n.choices.every(c=>c.next===null||symbolicNext.has(c.next)||route.nodes.some(v=>v.id===c.next)));
    check('Explicit bond range '+n.id,n.choices.every(c=>[0,1,2,5].includes(c.bond)));
-   check('Known personal speaker '+n.id,n.lines.every(l=>['narrator','player','bingbing','xuezi','rek','crowd','guest','singer','xiaoying',...ChronicleData.PERSON_IDS].includes(l.who)));
+   check('Known personal speaker '+n.id,n.lines.every(l=>['narrator','player','bingbing','xuezi','rek','crowd','guest','singer','xiaoying','tang',...ChronicleData.PERSON_IDS].includes(l.who)));
   }
-  for(const route of Object.values(PERSONAL_ROUTES))for(const n of route.nodes){const turns=[];for(const l of n.lines){if(!route.preserveTurns&&turns.at(-1)?.who===l.who)turns.at(-1).text+=' '+l.text;else turns.push({...l});}check('Every personal dialogue page has dedicated art '+route.id+':'+n.id,n.pageArt.length===Math.ceil(turns.length/2)&&n.pageArt.every(a=>a.asset&&a.memory));}
+  for(const route of Object.values(PERSONAL_ROUTES))for(const n of route.nodes){const turns=[];for(const l of n.lines){if(!route.preserveTurns&&turns.at(-1)?.who===l.who)turns.at(-1).text+=' '+l.text;else turns.push({...l});}const size=route.turnsPerPage||2;check('Every personal dialogue page has dedicated art '+route.id+':'+n.id,n.pageArt.length===Math.ceil(turns.length/size)&&n.pageArt.every(a=>a.asset&&a.memory));}
   closeModal(false);state=freshState();state.sound=false;save();route('chronicle');
   const freshChapter=JSON.stringify(state.chronicle),freshNotes=state.coins;
   const pickerTile=document.querySelector('[data-cp-action="personal-picker"]');
@@ -51,6 +51,13 @@ const assert=require('node:assert/strict');
    applyBondValue(id,36);await select(id);check('36 enters directly from chapter one '+id,P().active&&P().selected===id&&state.chronicle.run.chapter===1);
    reload();check('Natural entry survives cleaning before chapter six '+id,P().active&&P().selected===id);
   }
+  closeModal(false);state=freshState();state.sound=false;applyBondValue('tim',34);save();route('chronicle');
+  await action('picker');check('Tim stays locked below 35',document.querySelector('[data-cp-person="tim"]').disabled&&$('modalContent').textContent.includes('还差 1 分'));closeModal(false);
+  await forged('personal-select',{cpPerson:'tim'});check('Tim execution gate rejects 34',!P().active);
+  applyBondValue('tim',35);await select('tim');check('Tim enters exactly at 35 from chapter one',P().active&&P().selected==='tim'&&S().scene==='t_start'&&state.chronicle.run.chapter===1);
+  check('Tim reader shows one speaking turn with unique current art',document.querySelectorAll('.cp-dialogue-turn').length===1&&document.querySelector('.cp-novel-art img')?.src.includes('/t_start.webp'));
+  await action('page');check('Tim next click keeps one speaker and changes illustration',document.querySelectorAll('.cp-dialogue-turn').length===1&&document.querySelector('.cp-novel-art img')?.src.includes('/t_start_page2.webp'));
+  reload();check('Tim exact-boundary progress survives cleaning',P().active&&P().selected==='tim'&&S().scene==='t_start'&&S().page===1);
   for(const id of Object.keys(PERSONAL_ROUTES)){
    closeModal(false);state=freshState();state.sound=false;state.coins=349;save();route('chronicle');
    await action('picker');const shortButton=document.querySelector(`[data-cp-action="personal-unlock"][data-cp-person="${id}"]`);
@@ -91,6 +98,18 @@ const assert=require('node:assert/strict');
    reload();check('Personal story receipt survives cleaner',state.economy.claimed['personal:first-ending']&&S().scene==='complete'&&$('modalBackdrop').hidden);
    await select('shiyuan');go('sy_BE_ge');await finish();check('Other character cannot repay personal-story reward',state.coins===notes+15&&state.cards.tickets===tickets+1);ended.push(target);
   }
+  const timEnded=[];
+  for(const target of ['t_HE','t_TE','t_BE']){
+   setup();await select('tim');
+   for(let step=0;step<80&&S().scene!==target;step++){
+    const id=S().scene;if(id==='hub')throw Error('Unexpected blocked Tim story');
+    const choice=id==='t_distance'?(target==='t_HE'?1:0):id==='t_test'?(target==='t_HE'?1:0):id==='t_confess'?(target==='t_BE'?2:0):0;
+    await choose(choice);
+    check('Tim page never shows two speaking characters '+id,document.querySelectorAll('.cp-dialogue-turn').length<=1);
+   }
+   check('Full Tim route reaches '+target,S().scene===target);await finish();timEnded.push(target);
+  }
+  check('Tim route preserves three distinct endings',timEnded.length===3);
   // Complete source branches through UI: stable support path, three distinct invites, exam and career.
   setup();await select('shiyuan');await choose(0);await choose(1);check('First storm waits for invitations',S().scene==='hub');
   for(let i=1;i<=3;i++){
@@ -217,7 +236,7 @@ const assert=require('node:assert/strict');
   assert(await page.evaluate(id=>state.chronicle.personal.active&&state.chronicle.personal.selected===id&&state.chronicle.run.chapter===1,id),'Actual refresh retains early route '+id);
  }
  const assets=await page.evaluate(()=>[...PERSONAL_NODES.filter(n=>n.asset).map(n=>ASSETS[n.asset]),...PERSONAL_PAGE_ART.map(a=>ASSETS[a.asset])]);
- assert.equal(new Set(assets).size,323,'Unique route illustrations');
+ assert.equal(new Set(assets).size,396,'Unique route illustrations');
  if(!process.env.PERSONAL_SKIP_ART)for(const asset of assets)assert(fs.existsSync(path.resolve(__dirname,'..',asset)),asset);
  assert.deepEqual(errors,[],'Runtime errors');
  console.log(`PASS: ${checks.length} personal route graph/behavior checks, full HE/TE/BE paths, actual refresh and four widths.`);

@@ -27,7 +27,8 @@ function createChroniclePersonal(ctx) {
     const paidUnlock = id => P().unlocks?.[id]===true;
     const fusionCpUnlocked = () => P().storyUnlocks?.baoshi_feihong===true;
     const yangcunStoryUnlocked = () => P().storyUnlocks?.yangcun===true||historicFlag('yangcun');
-    const admitted = id => !!PERSONAL_ROUTES[id] && (id==='baoshi_feihong'&&fusionCpUnlocked() || id==='yangcun'&&yangcunStoryUnlocked() || paidUnlock(id)||(id==='baoshi_feihong'?cpStoryStarted()||(historicFlag('feiSide')&&bandLevel()>=6&&cpFriendPath()):id==='yangcun'?false:cardBond(id)>35));
+    const bondAdmitted = id => id==='tim'?cardBond(id)>=35:cardBond(id)>35;
+    const admitted = id => !!PERSONAL_ROUTES[id] && (id==='baoshi_feihong'&&fusionCpUnlocked() || id==='yangcun'&&yangcunStoryUnlocked() || paidUnlock(id)||(id==='baoshi_feihong'?cpStoryStarted()||(historicFlag('feiSide')&&bandLevel()>=6&&cpFriendPath()):id==='yangcun'?false:bondAdmitted(id)));
     const esc = ctx.E;
     function inferYangcunMonth(raw) {
         if(Number.isFinite(Number(raw?.month)))return ctx.nInt(raw.month,0,0,6);
@@ -85,12 +86,13 @@ function createChroniclePersonal(ctx) {
             const cp=r.id==='baoshi_feihong',yc=r.id==='yangcun',bond=cp||yc?0:cardBond(r.id),s=P().routes[r.id],open=admitted(r.id);
             const purchased=paidUnlock(r.id),cpStatus=fusionCpUnlocked()?'特殊剧情已解锁 · 开启 CP 线':purchased?'已付费永久解锁':cpStoryStarted()?(s?.ending?'结局已收录 · 可重读':'已有进度 · 继续故事'):!historicFlag('feiSide')?'需第一章替飞鸿解围；或在羊村线将两人本周目好感合计升至 100':bandLevel()<6?`乐队 Lv.${bandLevel()} / 6；或在羊村线将两人本周目好感合计升至 100`:!cpFriendPath()?'需弦乐组＋十元友情分流；也可由羊村线好感分流解锁':'前置已解锁 · 开启 CP 线';
             const ycStatus=yangcunStoryUnlocked()?'第二章乐队组已解锁 · 开启羊村线':purchased?'已付费永久解锁':'需第二章达到乐队 Lv.6 并选择羊村';
-            const status=cp?cpStatus:yc?ycStatus:purchased?'已付费永久解锁':`羁绊 ${bond} · ${bond<=35?'还差 '+(36-bond)+' 分可进入':s?.ending?'结局已收藏 · 可继续或重读':s?'已有进度 · 继续故事':'已解锁 · 开启故事'}`;
+            const threshold=r.id==='tim'?35:36;
+            const status=cp?cpStatus:yc?ycStatus:purchased?'已付费永久解锁':`羁绊 ${bond} · ${bond<threshold?'还差 '+(threshold-bond)+' 分可进入':s?.ending?'结局已收藏 · 可继续或重读':s?'已有进度 · 继续故事':'已解锁 · 开启故事'}`;
             const canPurchase=!open,affordable=state.coins>=ECONOMY_RULES.personalRouteUnlock;
             return `<div class="cp-personal-pick-row"><button class="cp-personal-pick ${open?'':'locked'}" data-cp-action="personal-select" data-cp-person="${r.id}" ${open?'':'disabled aria-disabled="true"'}><img src="${ASSETS[r.asset]}" alt="${r.name}"><span><b>${r.name}${cp?' CP 线':yc?'线':'个人线'}</b><em>${r.tagline}</em><small>${status}</small></span>${I(open?'arrow':'lock')}</button>${canPurchase?`<button class="btn secondary cp-personal-unlock" data-cp-action="personal-unlock" data-cp-person="${r.id}" ${affordable?'':'disabled aria-disabled="true"'}>支付 ${ECONOMY_RULES.personalRouteUnlock} 音符直接解锁 <small>当前 ${state.coins}</small></button>`:''}</div>`;
         }).join(''); }
     function picker() {
-        openModal('选择你的个人故事',`<p class="cp-caption">个人线需对应角色羁绊超过 35 分；宝石×飞鸿可由融合线关键聊天，或羊村线本周目好感分流解锁；羊村线可由第二章乐队组解锁。所有未解锁故事线均可支付 ${ECONOMY_RULES.personalRouteUnlock} 音符永久开启。</p><div class="cp-personal-picker">${personalPickerRows()}</div><p class="cp-caption">其他角色的个人线将陆续开放。</p>`);
+        openModal('选择你的个人故事',`<p class="cp-caption">Tim 个人线羁绊达到 35 分即可进入；其他既有个人线沿用原门槛。宝石×飞鸿可由融合线关键聊天，或羊村线本周目好感分流解锁；羊村线可由第二章乐队组解锁。所有未解锁故事线均可支付 ${ECONOMY_RULES.personalRouteUnlock} 音符永久开启。</p><div class="cp-personal-picker">${personalPickerRows()}</div><p class="cp-caption">其他角色的个人线将陆续开放。</p>`);
     }
     function confirmUnlock(id) {
         const r=PERSONAL_ROUTES[id];if(!r||admitted(id))return;
@@ -107,12 +109,13 @@ function createChroniclePersonal(ctx) {
         changed();toast(`已永久解锁${PERSONAL_ROUTES[id].name}故事线，音符 −${ECONOMY_RULES.personalRouteUnlock}。`,true);closeModal(false);ctx.render();
     }
     function select(id) {
-        if(!admitted(id)){toast(id==='baoshi_feihong'?'宝石×飞鸿线的前置条件还没有满足。':id==='yangcun'?`羊村线需要第二章乐队组前置，或支付 ${ECONOMY_RULES.personalRouteUnlock} 音符解锁。`:'该角色的羁绊需要超过 35 分才能进入。');return;}
+        if(!admitted(id)){toast(id==='baoshi_feihong'?'宝石×飞鸿线的前置条件还没有满足。':id==='yangcun'?`羊村线需要第二章乐队组前置，或支付 ${ECONOMY_RULES.personalRouteUnlock} 音符解锁。`:id==='tim'?'Tim 的羁绊需要达到 35 分才能进入。':'该角色的羁绊需要超过 35 分才能进入。');return;}
         const routeConfig=PERSONAL_ROUTES[id],art=(routeConfig?.nodes||[]).flatMap(node=>[
             ...(node.pageArt||[]).map(item=>item.asset&&ASSETS[item.asset]),
             node.asset&&ASSETS[node.asset]
         ]).filter(Boolean);
-        scheduleStorySequencePreload([...art,...storyAvatarPreloadSources(['cardXueziAvatar','avatarNarrator'])]);
+        if(id==='tim')scheduleStoryImagePreload(art.slice(0,1));
+        else scheduleStorySequencePreload([...art,...storyAvatarPreloadSources(['cardXueziAvatar','avatarNarrator'])]);
         ctx.closeLibrary();ctx.suspend();const p=P();p.selected=id;p.active=true;ctx.M().chapterSeven.active=false;
         p.routes[id]??=freshRoute(id);
         if(!Object.keys(p.routes).some(k=>k!==id))p.tech=Math.max(p.tech,ctx.R().tech);
@@ -249,6 +252,7 @@ function createChroniclePersonal(ctx) {
         if(n.ending){finish(n);changed(true);return;}
         if(n.placeholder){move('hub');changed(true);return;}
         if(n.resolveCpEnding){s.flags.cpReady=true;move(s.score>=95?(['push1','push2','push3','push4'].filter(f=>s.flags[f]).length>=3?'cp_HE':'cp_BE'):'hub');changed(true);return;}
+        if(n.resolveTimEnding&&c.next==='CHK_END'){move(cardBond('tim')>=45&&!s.flags.confessPath?'t_HE':'t_TE');changed(true);return;}
         if(n.id.startsWith('sy_act')){
             const count=['sy_act1','sy_act2','sy_act3'].filter(id=>s.done[id]).length;
             s.flags.acts2=count>=2;s.focus=Math.min(3,Math.max(s.focus,count));
@@ -320,6 +324,7 @@ function createChroniclePersonal(ctx) {
         if(kind==='resolve' && P().selected==='baoshi_feihong'&&s.flags.cpReady&&s.score>=95){move(['push1','push2','push3','push4'].filter(f=>s.flags[f]).length>=3?'cp_HE':'cp_BE');changed();}
     }
     function character(who) {
+        if(who==='tang')return ctx.person('tangshao');
         if(who==='bingbing')return {name:'冰冰',tag:'大提琴 · 全团女神',icon:'music',card:'bingbing'};
         if(who==='xuezi')return {name:'雪子',tag:'键盘手 · 山丘的男性老友',icon:'music',asset:'cardXueziAvatar'};
         if(who==='rek')return {name:'REK',tag:'贝斯手 · 乐队成员',icon:'music',asset:'cardRekAvatar'};
@@ -341,7 +346,8 @@ function createChroniclePersonal(ctx) {
     }
     function dialoguePages(n) {
         const turns=dialogueTurns(n),pages=[];
-        for(let i=0;i<turns.length;i+=2)pages.push(turns.slice(i,i+2));
+        const size=Math.max(1,Number(config()?.turnsPerPage)||2);
+        for(let i=0;i<turns.length;i+=size)pages.push(turns.slice(i,i+size));
         return pages.length?pages:[[]];
     }
     function currentArt(n,page) {return n.pageArt?.[page]||{asset:n.asset,memory:n.memory,text:n.artText};}
@@ -355,6 +361,10 @@ function createChroniclePersonal(ctx) {
     function preloadUpcomingArt(n,page) {
         const candidates=[];
         if(n?.pageArt?.[page+1])candidates.push(n.pageArt[page+1]);
+        if(n?.resolveTimEnding){
+            const next=getNode('tim',cardBond('tim')>=45&&!S().flags.confessPath?'t_HE':'t_TE');
+            if(next)candidates.push(currentArt(next,0));
+        }
         for (const choice of n?.choices || []) {
             const next = typeof choice.next === 'string' ? getNode(P().selected,choice.next) : null;
             if(next)candidates.push(currentArt(next,0));
@@ -415,9 +425,10 @@ function createChroniclePersonal(ctx) {
             return hubSurface(id,'YANGCUN · BAND STORY','从五月，一起走到十二月',note,`${n?button('continue','继续 · '+esc(n.node.title),n.locked?'disabled':'','primary'):''}${button('picker','切换故事线')}`,`乐队积分 ${s.score} · 担当值 ${s.dang} · 乐队 Lv.${bandLevel()}。`);
         }
         const note=n?esc(n.locked?n.reason:'新的故事已经准备好。'):'这一刻，先陪彼此待一会儿。';
-        const actions=`${button('continue',n?'继续 · '+esc(n.node.title):'暂无待续剧情',!n||n.locked?'disabled':'','primary')}${id==='azhe'?button('duet','和阿喆合奏一场')+button('chat','找阿喆聊天',s.duets<2?'disabled':''):['商场商演','小乐队排练','老乐手小聚'].map((title,i)=>button('invite',(s.done['sy_act'+(i+1)]?'已赴约 · ':'赴约 · ')+title,`data-personal-event="sy_act${i+1}" ${s.done['sy_act'+(i+1)]?'disabled':''}`)).join('')}${button('practice','刻苦练琴 · 10 音符 / 琴技 +2',state.coins<10?'disabled':'')}<button class="btn secondary" data-route="cards">去卡册陪伴与投喂</button><button class="btn secondary" data-route="rhythm">免费演奏赚音符</button>${id==='shiyuan'&&s.done.sy_06done&&!s.done.sy_10?button('confess','今晚，想向她表达心意'):''}`;
-        const footer=id==='azhe'?`已合奏 ${s.duets} 场；两场后可聊天。每次合奏羁绊 +1，每日最多 10 次。`:`已赴约 ${['sy_act1','sy_act2','sy_act3'].filter(k=>s.done[k]).length} / 3 场 · 事业准备 ${s.focus} / 3。不同邀约积累事业准备。`;
-        return hubSurface(id,'PERSONAL STORY · 留一点时间相处',id==='azhe'?'翻过这一页，星光还在':'把光源，也牵进光里',note,actions,`${footer}<br>琴技 ${P().tech} · 音符 ${state.coins}。剧情奖励按节点只结算一次。`);
+        const routeActions=id==='azhe'?button('duet','和阿喆合奏一场')+button('chat','找阿喆聊天',s.duets<2?'disabled':''):id==='shiyuan'?['商场商演','小乐队排练','老乐手小聚'].map((title,i)=>button('invite',(s.done['sy_act'+(i+1)]?'已赴约 · ':'赴约 · ')+title,`data-personal-event="sy_act${i+1}" ${s.done['sy_act'+(i+1)]?'disabled':''}`)).join(''):'';
+        const actions=`${button('continue',n?'继续 · '+esc(n.node.title):'暂无待续剧情',!n||n.locked?'disabled':'','primary')}${routeActions}${button('practice','刻苦练琴 · 10 音符 / 琴技 +2',state.coins<10?'disabled':'')}<button class="btn secondary" data-route="cards">去卡册陪伴与投喂</button><button class="btn secondary" data-route="rhythm">免费演奏赚音符</button>${id==='shiyuan'&&s.done.sy_06done&&!s.done.sy_10?button('confess','今晚，想向她表达心意'):''}`;
+        const footer=id==='azhe'?`已合奏 ${s.duets} 场；两场后可聊天。每次合奏羁绊 +1，每日最多 10 次。`:id==='shiyuan'?`已赴约 ${['sy_act1','sy_act2','sy_act3'].filter(k=>s.done[k]).length} / 3 场 · 事业准备 ${s.focus} / 3。不同邀约积累事业准备。`:'逐页阅读会自动保存；每页只显示一个说话角色。';
+        return hubSurface(id,'PERSONAL STORY · 留一点时间相处',config().tagline,note,actions,`${footer}<br>琴技 ${P().tech} · 音符 ${state.coins}。剧情奖励按节点只结算一次。`);
     }
     function completionHTML() {
         const s=S(),n=getNode(P().selected,s.ending);
