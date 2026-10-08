@@ -684,6 +684,15 @@ body {
 .collect-card.rarity-r .collect-rarity {
   color:#d9e7ff
 }
+
+.collect-card.rarity-nr .collect-rarity {
+  background: linear-gradient(135deg, rgba(66, 74, 72, .94), rgba(122, 111, 91, .92));
+  color: #fff8e8;
+}
+
+.collect-card.rarity-nr .collect-art-button::after {
+  box-shadow: inset 0 0 0 1px rgba(221, 205, 159, .32);
+}
 .collect-card.rarity-ssr {
   border-color:#dbcaa1
 }
@@ -2089,6 +2098,44 @@ body {
   font-size:10px;
   color:#9aa6ba;
   margin-top:10px
+}
+.bond-dialogue-action {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:18px;
+  border:1px solid #dfe6f1;
+  border-radius:16px;
+  background:linear-gradient(135deg,#fff,#f7f9fd)
+}
+.bond-dialogue-action strong {
+  color:#2f3d58
+}
+.bond-dialogue-action p {
+  margin:6px 0 0;
+  color:#7d8ca5;
+  font-size:12px
+}
+.bond-talk-modal {
+  display:grid;
+  grid-template-columns:76px 1fr;
+  gap:16px;
+  align-items:start
+}
+.bond-talk-modal .cp-speaker-avatar {
+  width:76px;
+  height:76px
+}
+.bond-talk-modal p {
+  margin:10px 0 0;
+  font-size:17px;
+  line-height:1.8;
+  color:#2f3d58
+}
+@media(max-width:600px) {
+  .bond-dialogue-action { align-items:stretch; flex-direction:column }
+  .bond-dialogue-action .btn { width:100% }
 }
 @keyframes drawReveal {
   0% {
@@ -3613,3 +3660,16 @@ body {
 .bingbing-burst i{position:absolute;left:calc(var(--burst-i)*8%);bottom:0;width:26px;height:26px;line-height:24px;border-radius:50%;border:1px solid #d99820;background:linear-gradient(135deg,#fff0a1,#e9ab36);color:#9b6111;font-size:19px;font-style:normal;pointer-events:none;animation:bingbing-gold 1.6s ease-out both;animation-delay:calc(var(--burst-i)*.04s)}
 @keyframes bingbing-gold{from{opacity:0;transform:translateY(20px) rotate(0)}30%{opacity:1}to{opacity:0;transform:translateY(-100px) rotate(140deg)}}
 @media(prefers-reduced-motion:reduce){.bingbing-burst i{display:none}}
+
+/* Mobius: bond dialogue archive and the in-stage wave cue. */
+.bond-dialogue-list{display:grid;gap:10px}
+.bond-dialogue{padding:12px 14px;border:1px solid rgba(154,124,154,.2);border-radius:14px;background:rgba(255,255,255,.48)}
+.bond-dialogue>span{display:flex;align-items:center;gap:6px;color:var(--primary,#8d628b);font-size:11px;font-weight:700;letter-spacing:.04em}
+.bond-dialogue p{margin:7px 0 0;line-height:1.7}
+.bond-dialogue.locked{opacity:.6;background:rgba(245,241,247,.45)}
+#rhythmTeam .team-slot[data-card-member="mobius"].mobius-wave{z-index:2}
+#rhythmTeam .team-slot[data-card-member="mobius"].mobius-wave .card-avatar-image{animation:mobius-wave .86s cubic-bezier(.22,.75,.3,1) both;box-shadow:0 0 0 3px rgba(255,174,220,.32),0 0 22px rgba(176,105,190,.55)}
+#rhythmTeam .team-slot[data-card-member="mobius"].mobius-wave::after{content:'热舞';position:absolute;left:50%;top:-9px;transform:translateX(-50%);padding:2px 7px;border-radius:999px;background:linear-gradient(110deg,#e8a7c9,#a978bd);color:#fff;font-size:9px;font-weight:800;white-space:nowrap;box-shadow:0 4px 12px rgba(112,74,123,.25)}
+.mobius-result{color:#8d4d8d;font-weight:700}
+@keyframes mobius-wave{0%{transform:translateY(0) rotate(0) scale(1)}22%{transform:translateY(-4px) rotate(-7deg) scale(1.06)}48%{transform:translateY(1px) rotate(6deg) scale(1.03)}72%{transform:translateY(-2px) rotate(-4deg) scale(1.05)}100%{transform:translateY(0) rotate(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){#rhythmTeam .team-slot[data-card-member="mobius"].mobius-wave .card-avatar-image{animation:none}}

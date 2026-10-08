@@ -38,7 +38,8 @@ function unlockCardWithNotes(id) {
         return;
     }
     goCard(id);
-    toast(`${cardDef(id).name}已加入卡册 · 消耗 ${ECONOMY_RULES.cardUnlock} 音符 · 羁绊分 +${result.gain}`, true);
+    const card = cardDef(id);
+    toast(`${card.obtainQuote ? `“${card.obtainQuote}” · ` : ''}${card.name}已加入卡册 · 消耗 ${ECONOMY_RULES.cardUnlock} 音符 · 羁绊分 +${result.gain}`, true);
 }
 
 function showDialogueCard(id) {

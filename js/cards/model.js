@@ -126,6 +126,26 @@ function addCardXP(id, amount) {
 }
 function rewardCompanionBond(id) { return grantBond(id, 1, { daily: true }); }
 function rewardPerformanceBond(id) { return grantBond(id, 1, { daily: 'performance' }); }
+function cardBondDialogue(c, bond = cardBond(c?.id)) {
+    if (!c?.bondLines?.length || bond <= 0)
+        return null;
+    return c.bondLines.filter(([threshold]) => bond > threshold).at(-1) || null;
+}
+function nextCardBondDialogue(c, bond = cardBond(c?.id)) {
+    return c?.bondLines?.find(([threshold]) => bond <= threshold) || null;
+}
+function talkCardBond(id) {
+    const c = cardDef(id), bond = cardBond(id), line = cardBondDialogue(c, bond);
+    if (!c || !cardOwned(id) || !line) {
+        toast('羁绊分大于 0 后，才会有新的话想对你说。');
+        return false;
+    }
+    const gain = rewardCompanionBond(id), after = cardBond(id), next = nextCardBondDialogue(c, after);
+    save();
+    renderGlobal();
+    openModal(`${c.name} · 羁绊对话`, `<div class="bond-talk-modal">${dialogueAvatarHTML({ card: c, name: c.name, alt: `${c.name}的头像` })}<div><span class="eyebrow">BOND ${bond} · 当前回应</span><p>“${escapeHTML(line[1])}”</p></div></div><div class="modal-foot">${gain ? `${c.name} 羁绊分 +1 · 今日陪伴奖励已结算` : '今天的陪伴羁绊奖励已经领取，仍可随时回来聊天。'}${next ? `<br>羁绊分大于 ${next[0]} 后，回应会发生变化。` : '<br>当前已是最高羁绊回应。'}</div>`);
+    return true;
+}
 function cardBonus(id, ids = state.cards.team) {
     const c = cardDef(id);
     if (!c)

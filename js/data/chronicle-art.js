@@ -650,12 +650,23 @@ const CHRONICLE_ART = [
     "newMemory": true
   },
   {
+    "id": "scene_2_chat_shiyuan_shadow",
+    "chapter": 2,
+    "scene": "chat",
+    "title": "糖落进掌心以后",
+    "location": "山丘 · 十元",
+    "text": "十元聊起乐团的未来，把一颗糖放进 Jerry 掌心。身后的谱架却渐渐远了。",
+    "asset": "scene_2_chat_shiyuan_shadow",
+    "newMemory": true,
+    "condition": "shadowPendingChat"
+  },
+  {
     "id": "scene_2_be_shiyuan",
     "chapter": 2,
     "scene": "be_shiyuan",
     "title": "合奏之外的背影",
     "location": "山丘 · 暗涌",
-    "text": "（你把所有的目光都给了团长。）十元的笑容依旧明亮，可某一天你回过头，身后已经没有了合奏的人。\n\n这一周目走到了结尾，已建立的全局羁绊仍然保留。",
+    "text": "（你把所有的目光都给了团长。）十元的笑容依旧明亮，可某一天你回过头，身后已经没有了合奏的人。",
     "asset": "scene_2_be_shiyuan",
     "newMemory": true
   },
@@ -1033,6 +1044,28 @@ const CHRONICLE_ART = [
     "newMemory": true
   },
   {
+    "id": "scene_4_c4_rumor_second",
+    "chapter": 4,
+    "scene": "c4_rumor",
+    "title": "第二次被拉开的谱架",
+    "location": "鹭湖剧院 · 周末结算",
+    "text": "同样的差距延续到第二个周末，关于偏爱的闲话变得更冷。",
+    "asset": "scene_4_c4_rumor_second",
+    "newMemory": true,
+    "condition": "rumorSecond"
+  },
+  {
+    "id": "scene_4_c4_rumor_first",
+    "chapter": 4,
+    "scene": "c4_rumor",
+    "title": "第一次传开的闲话",
+    "location": "鹭湖剧院 · 周末结算",
+    "text": "一张被反复照顾的谱架，让排练室里第一次出现了关于偏爱的低语。",
+    "asset": "scene_4_c4_rumor_first",
+    "newMemory": true,
+    "condition": "rumorFirst"
+  },
+  {
     "id": "scene_4_be_qiqi4",
     "chapter": 4,
     "scene": "be_qiqi4",
@@ -1121,6 +1154,28 @@ const CHRONICLE_ART = [
     "text": "（你帮他们把声部重新排了。飞鸿看着新谱子，小声对你说：「谢谢。」顿了顿又补了一句，「他紧张的时候，眼睛会到处找……找我。我站他旁边就行。」",
     "asset": "scene_4_c4_bao_b",
     "newMemory": true
+  },
+  {
+    "id": "scene_4_c4_qiqi_a_second",
+    "chapter": 4,
+    "scene": "c4_qiqi_a",
+    "title": "还是和上次一样",
+    "location": "鹭湖剧院 · 赞助提案",
+    "text": "同一份心意再次被婉拒。柒柒收回替十元整理衣领的手，笑意变得很远。",
+    "asset": "scene_4_c4_qiqi_a_second",
+    "newMemory": true,
+    "condition": "qiqiRefusalSecond"
+  },
+  {
+    "id": "scene_4_c4_qiqi_a_first",
+    "chapter": 4,
+    "scene": "c4_qiqi_a",
+    "title": "第一次退回的提案",
+    "location": "鹭湖剧院 · 赞助提案",
+    "text": "十元温柔地退回提案。柒柒仍替她理好衣领，只把第一点失落藏在眼底。",
+    "asset": "scene_4_c4_qiqi_a_first",
+    "newMemory": true,
+    "condition": "qiqiRefusalFirst"
   },
   {
     "id": "scene_4_c4_qiqi_a",

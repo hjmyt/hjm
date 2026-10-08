@@ -78,6 +78,14 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
         if (art.condition === 'openingIncomplete') state.affinity.zhu = 0;
         if (art.condition === 'konggeStays') state.chronicle.run.flags.konggeStay = 1;
         if (art.condition === 'approachSecond') state.chronicle.run.weekly.approach = 1;
+        if (art.condition === 'shadowPendingChat') {
+          state.chronicle.run.chat = 'shiyuan';
+          state.chronicle.run.flags.beShiyuan = 1;
+        }
+        if (art.condition === 'qiqiRefusalFirst') state.chronicle.run.flags.qHate = 1;
+        if (art.condition === 'qiqiRefusalSecond') state.chronicle.run.flags.qHate = 2;
+        if (art.condition === 'rumorFirst') state.chronicle.run.flags.qBack = 1;
+        if (art.condition === 'rumorSecond') state.chronicle.run.flags.qBack = 2;
         Chronicle.syncBonds(state.chronicle, state.affinity); route('chronicle');
         check('Artwork reachable ' + art.id, document.querySelector('.cp-novel-art img')?.getAttribute('src') === ASSETS[art.asset]);
         check('Artwork collected ' + art.id, memoryVisible(art.id));
@@ -91,6 +99,7 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
     });
     await page.reload();
     assert(await page.evaluate(() => state.memories.includes('scene_1_s_room') && !state.memories.includes('scene_1_gig')));
+    if (await page.locator('[data-music-enter-muted]').count()) await page.locator('[data-music-enter-muted]').click();
     for (const width of [390, 768, 1440, 2356]) {
       await page.setViewportSize({ width, height: 1100 });
       for (const scene of ['s_room', 'gig', 'emo', 'zhu_offer', 'practice_partner', 'c6_warn', 'c2_bar']) {
@@ -106,9 +115,10 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
           if(!img)return {noArt:true,overflow:document.documentElement.scrollWidth>innerWidth,textOnly:!!document.querySelector('.cp-novel-text-only'),currentView,copy:$('view-chronicle').innerText.slice(0,120)};
           await img.decode();
           const stage=document.querySelector('.cp-novel-illustrated').getBoundingClientRect(),dialogue=document.querySelector('.cp-novel-dialogue').getBoundingClientRect(),nav=document.querySelector('.main-nav').getBoundingClientRect();
-          return {overflow: document.documentElement.scrollWidth > innerWidth,
-            imageWidth: img.getBoundingClientRect().width, imageHeight: img.getBoundingClientRect().height,
-            stageWidth:stage.width,stageHeight:stage.height,stageTop:stage.top,stageBottom:stage.bottom,dialogueBottom:dialogue.bottom,navTop:nav.top,
+	          return {overflow: document.documentElement.scrollWidth > innerWidth,
+	            imageWidth: img.getBoundingClientRect().width, imageHeight: img.getBoundingClientRect().height,
+	            stageWidth:stage.width,stageHeight:stage.height,stageTop:stage.top,stageBottom:stage.bottom,dialogueBottom:dialogue.bottom,navTop:nav.top,
+	            viewportHeight:innerHeight,navHidden:document.querySelector('.main-nav').offsetParent===null,
             reservedWidth: img.getAttribute('width'), reservedHeight: img.getAttribute('height'),
             artPadding: getComputedStyle(document.querySelector('.cp-novel-art')).paddingTop,
             artFit: getComputedStyle(img).objectFit,
@@ -122,7 +132,7 @@ assert.equal(new Set(manifest.map(a => createHash('sha256').update(fs.readFileSy
         assert.equal(layout.artPadding, '0px', `${scene} removes the old detached photo edge`);
         if (width === 390) {
           assert.equal(layout.artFit, 'cover', `${scene} fills the mobile stage without a blank band`);
-          assert(layout.stageTop>=-1&&layout.stageBottom<=layout.navTop+1&&layout.dialogueBottom<=layout.stageBottom+1,`${scene} stays inside the mobile viewport: ${JSON.stringify(layout)}`);
+	          assert(layout.stageTop>=-1&&layout.stageBottom<=(layout.navHidden?layout.viewportHeight:layout.navTop)+1&&layout.dialogueBottom<=layout.stageBottom+1,`${scene} stays inside the mobile viewport: ${JSON.stringify(layout)}`);
         } else {
           assert.equal(layout.artFit, 'contain', `${scene} keeps desktop/tablet full composition`);
           assert(layout.stageHeight<=1100,`${scene} desktop/tablet stage fits the viewport`);

@@ -33,6 +33,17 @@ function createChronicleActivities(ctx) {
         if (!c || c.disabled)
             return;
         const previousPage = ctx.captureReaderPage();
+        if (ctx.triggerShadowEnding()) {
+            ctx.rememberReaderPage(previousPage);
+            ctx.changed();
+            return;
+        }
+        if (ctx.R().chapter === 2 && !ctx.R().ending && cardBond('shiyuan') >= 99) {
+            ctx.onBondChanged('shiyuan', cardBond('shiyuan'), cardBond('shiyuan'));
+            ctx.changed();
+            return;
+        }
+        const rumorPage = ctx.R().scene === 'c4_rumor';
         ctx.recordReadScene(c.text);
         ctx.choiceRewards = ctx.KEY_BOND_CHOICES[ctx.R().scene + ':' + index] || null;
         try {
@@ -51,6 +62,16 @@ function createChronicleActivities(ctx) {
             if (ctx.R().chapter === 1 && ctx.R().scene === 's_shi' && !ctx.R().bar.order) {
                 ctx.R().bar.returnTo = c.next;
                 ctx.R().scene = 'zhu_offer';
+            }
+            else if (rumorPage) {
+                ctx.R().scene = 'menu';
+                const closeCount = ['azhe', 'dijie', 'feihong', 'tangshao', 'tim'].filter(k => ctx.R().aff[k] > 10).length;
+                if (closeCount >= 3 && !ctx.R().flags.qiJealous) {
+                    ctx.R().flags.qiJealous = 1;
+                    ctx.R().scene = 'c4_jeal';
+                }
+                else
+                    ctx.enterWeekStory();
             }
             else
                 ctx.storyTransition(c.next);
@@ -104,6 +125,18 @@ function createChronicleActivities(ctx) {
         r.week++;
         ctx.weekNotice = { run: r, from: previousWeek, to: r.week };
         ctx.log(`第 ${r.week} 周开始了。`);
+        if (ctx.isFour()) {
+            const ranked = ['azhe', 'dijie', 'feihong', 'tangshao', 'tim'].map(k => r.aff[k] || 0).sort((a, b) => b - a);
+            if ((ranked[0] || 0) >= 60 && (ranked[0] || 0) - (ranked[1] || 0) >= 30) {
+                r.flags.qBack = (r.flags.qBack || 0) + 1;
+                r.scene = 'c4_rumor';
+                ctx.log(`团里又传起了关于过度偏爱的闲话（第 ${r.flags.qBack} 周）。`, true);
+                ctx.changed();
+                requestAnimationFrame(() => $('cpMain')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+                toast(`已进入第 ${r.week} 周 · 团里传来了新的闲话。`, true);
+                return;
+            }
+        }
         if (ctx.isThree() || ctx.isFour()) {
             const count = ['azhe', 'dijie', 'feihong', 'tangshao', 'tim'].filter(k => r.aff[k] > 10).length;
             if (count >= 3 && !r.flags.qiJealous) {
@@ -141,10 +174,13 @@ function createChronicleActivities(ctx) {
     function chat(k) {
         if (ctx.R().scene !== 'chat_select' || !canChat(k))
             return;
-        ctx.R().chat = k;
-        const gain = grantBond(ctx.PEOPLE[k].card, 1, { daily: true });
-        ctx.log(`${ctx.person(k).name}的羁绊分 +${gain}${gain ? '' : '（今日陪伴奖励已领取）'}。`);
-        ctx.R().scene = 'chat';
+        const r = ctx.R(), alreadyRewarded = r.flags.chatBondWeek === r.week;
+        r.chat = k;
+        const gain = alreadyRewarded ? 0 : grantBond(ctx.PEOPLE[k].card, r.chapter === 2 && k === 'shiyuan' ? 2 : 1);
+        if (!alreadyRewarded)
+            r.flags.chatBondWeek = r.week;
+        ctx.log(`${ctx.person(k).name}的羁绊分 +${gain}${gain ? '' : '（本周聊天羁绊奖励已领取）'}。`);
+        r.scene = 'chat';
         ctx.checkEnding();
         markDaily('story');
         ctx.changed();

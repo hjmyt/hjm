@@ -33,7 +33,7 @@ const { pathToFileURL } = require('node:url');
             check(currentView === 'cards', 'Direct card entry rejected');
             check(save(), 'Save succeeds');
             const encoded = persistedState();
-            check(encoded.bondVault.v === 4 && encoded.bondVault.values.bill, 'Protected save format remains compatible');
+            check(encoded.bondVault.v === 9 && encoded.bondVault.values.bill, 'Protected save format remains compatible');
             check(cleanImportedState(encoded).affinity.bill === oldBond, 'Export and import preserve retired bond');
         }, fixture);
         await page.addStyleTag({ content: '*,*::before,*::after{animation:none!important;transition:none!important}' });

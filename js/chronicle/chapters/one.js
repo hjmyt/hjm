@@ -39,7 +39,7 @@ function createChronicleChaptersOne(ctx) {
             case 's_room': return ctx.D('lala', '来得正好，今晚排练。角落那个在拉《小星星》的，就是我们团长——十元。', ctx.choice('去跟十元打招呼', 's_shi'), ctx.choice('先四处看看', 's_look', () => { G.flags.look = 1; }));
             case 's_look': return ctx.D('lala', '眼光不错。那边翻谱比谁都快的是阿喆；谱架后面阴影里那位是笛杰，别盯着他看，会 emo；门口调试相机的是汤少——别被他拍到丑照。', ctx.choice('去找十元', 's_shi'));
             case 's_shi': return ctx.D('shiyuan', '（琴声停）哇，新面孔！你好你好——你是来加入我们的吗？没你不行！我们正好缺' + G.inst + '！', ctx.choice('「我加入。请多指教。」', 's_first', () => ctx.affUp('shiyuan', 2)), ctx.choice('「先说说，乐团的目标是什么？」', 's_dream', () => { ctx.affUp('shiyuan', 1); G.flags.ambition = 1; }));
-            case 's_dream': return ctx.D('shiyuan', '（眼睛亮起来）商业化！让哈基米乐团站上真正的舞台！……虽然现在我连音准都不稳，嘿嘿。', ctx.choice('「我帮你。」', 's_first', () => { ctx.affUp('shiyuan', 3); G.flags.promise = 1; }), ctx.choice('「志向很远大。」', 's_first'), ctx.choice('放弃乐团排练，只陪团长 · 将结束本章', 'be_shiyuan', () => ctx.ending('shadow')));
+            case 's_dream': return ctx.D('shiyuan', '（眼睛亮起来）商业化！让哈基米乐团站上真正的舞台！……虽然现在我连音准都不稳，嘿嘿。', ctx.choice('「我帮你。」', 's_first', () => { ctx.affUp('shiyuan', 3); G.flags.promise = 1; }), ctx.choice('「志向很远大。」', 's_first'));
             case 's_first': return ctx.D('kongge', '安静。（全团瞬间坐直）新人，报上乐器。……好，' + G.inst + '，坐第三排。今晚先过一遍《欢乐颂》，让我听听你的水平。', ctx.choice('（开始排练）', 'practice_partner', () => ctx.initPractice('intro')));
             case 'after_practice': return G.battle?.win ?
                 ctx.D('kongge', [ctx.spoken('kongge', '排练结束。首席空格点了点头：「还行，能跟上。」'), ctx.spoken('dijie', '笛杰小声说：「刚才那段……我可以帮你做个节拍器程序。」')], ctx.choice('继续', 's_conflict')) :

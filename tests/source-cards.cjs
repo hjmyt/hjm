@@ -1,7 +1,7 @@
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),path=require('node:path'),{pathToFileURL}=require('node:url');
 (async()=>{const browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});try{const p=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];p.on('pageerror',e=>errors.push(e.message));await p.goto(pathToFileURL(path.resolve(__dirname,'../index.html')).href);const results=await p.evaluate(()=>{
  const checks=[],check=(name,ok)=>{if(!ok)throw Error(name);checks.push(name);};state=freshState();state.sound=false;
- check('Twenty-seven unique cards',CARD_DEFS.length===27&&new Set(CARD_DEFS.map(c=>c.id)).size===27);
+ check('Thirty-two unique cards',CARD_DEFS.length===32&&new Set(CARD_DEFS.map(c=>c.id)).size===32);
  check('No duplicate memory records',new Set(MEMORIES.map(m=>m.id)).size===MEMORIES.length);
  check('Unmentioned Dayang, Baoshi, REK and A-Qi remain locked',!cardOwned('dayang')&&!cardOwned('baoshi')&&!cardOwned('rek')&&!cardOwned('aqi')&&!availableCardPool().some(c=>['dayang','baoshi','rek','aqi'].includes(c.id)));
  state.cards.encounters=CARD_DEFS.map(c=>c.id);save();
@@ -15,7 +15,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),path
  check('Bill is absent from the card catalog',!cardDef('bill')&&!CARD_DEFS.some(c=>c.placeholder));
  check('Bill absent from recruit pool',!availableCardPool().some(c=>c.id==='bill'));
  goCard('baoshi');check('Secret absent from locked DOM',!$('view-card').innerHTML.includes('宝石姬')&&!$('view-card').innerHTML.includes('新裙子'));
- state.affinity.baoshi=35;goCard('baoshi');check('Secret unlocks collapsed',$('view-card').innerHTML.includes('宝石姬')&&!$('view-card').innerText.includes('宝石姬'));check('Hidden gift appears after unlock',effectiveGifts(cardDef('baoshi')).filter(g=>!isFullBondGift(g)).length===4);
+ state.affinity.baoshi=35;goCard('baoshi');check('Secret unlocks collapsed',$('view-card').innerHTML.includes('宝石姬')&&!$('view-card').innerText.includes('宝石姬'));check('Hidden gift appears after unlock',effectiveGifts(cardDef('baoshi')).some(g=>g[0]==='dress'));
  state.cards.team=['xiaozhou'];onSourceGift(cardDef('xiaozhou'),cardDef('xiaozhou').gifts.find(g=>g[0]==='praise'));prepareSourceSkill('xiaozhou');check('Praise doubles active reward',state.cards.prepared.amount===12);state=cleanState(JSON.parse(JSON.stringify(state)));check('Prepared dynamic reward persists',state.cards.prepared.amount===12);
  const perform=(ids)=>{state.cards.team=ids;game.cardRun=captureCardRun();game.notes=[];awardCardPerformance(1);};
  perform(['xiaozhou','goose']);check('Goose present prevents solo growth',sourceCast().xiaozhou.solos===0);

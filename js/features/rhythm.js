@@ -83,7 +83,12 @@ function renderGameOverlay() {
         const bondNames = (run?.bondGains || []).map(id => cardDef(id)?.name).filter(Boolean).join('、');
         const teamResult = run?.credited && run.ids.length ? `<p class="result-extra">${r.cardBonus ? `编队音符加成 +${r.cardBonus} ♪ · ` : ''}成员经验已同步 · ${bondNames ? `${escapeHTML(bondNames)}羁绊分各 +1` : '今日合奏羁绊已达 10 次上限'}</p>` : '';
         const levelResult = r.levelReports?.length ? `<p class="result-extra">${escapeHTML(r.levelReports.join(' · '))}</p>` : '';
-        e.innerHTML = `<div class="eyebrow">OUR LITTLE ENCORE</div><h3 class="result-rank">${r.rank}</h3><h3 style="font-size:18px;margin-top:8px">${r.accuracy >= 85 ? '这一次，我们很有默契。' : r.accuracy >= 45 ? '你认真演奏的样子，很好看。' : '每一首合奏，都从第一拍开始。'}</h3>${run?.bingbingBurst ? `<div class="bingbing-burst" role="status"><strong>爆金币 · 得分 ×2</strong><span>基础得分 ${run.bingbingBaseScore} · 音符奖励照常结算</span><div aria-hidden="true">${Array.from({length:12},(_,i)=>`<i style="--burst-i:${i}">♪</i>`).join('')}</div></div>` : ''}<div class="result-stats"><div><strong>${game.score}</strong><span>本次得分</span></div><div><strong>${r.accuracy}%</strong><span>准确率</span></div><div><strong>${game.maxCombo}</strong><span>最高连击</span></div></div><p style="margin:0 0 17px">${r.reward ? `收获 ${r.reward} 音符 · ${r.newBest ? '刷新个人最佳！' : '谢谢你的认真演奏。'}` : '完整演奏达到 C（45%）即可获得音符，试试简单模式再来一次。'}</p>${teamResult}${levelResult}${run?.trioReport ? '<p class="result-extra">' + escapeHTML(run.trioReport) + '</p>' : ''}${run?.sourceReport ? `<p class="result-extra">${escapeHTML(run.sourceReport)}</p>` : ''}${run?.lalaReport ? `<p class="result-extra">${escapeHTML(run.lalaReport)}</p>` : ''}${run?.ids.includes('azhe') && run?.credited ? '<button class="btn secondary small" data-azhe-applause style="margin-bottom:8px">为阿喆送上掌声 · 华彩安可</button>' : ''}<div class="result-buttons"><button class="btn primary small" data-game="start">${I('repeat')}再演一遍</button><button class="btn secondary small" data-route="home">回排练室</button></div>`;
+        const mobiusResult = run?.mobius?.activations ? `<p class="result-extra mobius-result">Mobius · 热舞触发 ${run.mobius.activations} 次 · 得分 +${run.mobius.bonusScore}</p>` : '';
+        const riaResult = run?.ria?.compensated ? `<p class="result-extra ria-result">RIA · 热爱无价 · 低于 80% 补偿 +${run.ria.bonusScore}</p>` : '';
+        const bingbingIntpResult = run?.bingbingIntp ? `<p class="result-extra bingbing-intp-result">饼饼 · 全队技巧 +${run.bingbingIntp.teamTechnique} · ${run.bingbingIntp.people} 人档得分 +${run.bingbingIntp.bonusScore}${run.bingbingIntp.judgementWidth ? ' · 空格联动判定 +8%' : ''}</p>` : '';
+        const wangResult = run?.wanglaoshi ? `<p class="result-extra wanglaoshi-result">汪老师 · 稳定输出区间 ${run.wanglaoshi.stableRange}%${run.wanglaoshi.pitchBoosts.length ? ` · 导师音准：${run.wanglaoshi.pitchBoosts.map(item => `${escapeHTML(cardDef(item.id).name)} +${item.boost}`).join('、')}` : ''}${run.wanglaoshi.latePenalty ? ' · 接孩子全属性 -10' : ''}</p>` : '';
+        const sammyResult = run?.sammy ? `<p class="result-extra sammy-result">Sammy · 随机偏移影响 -50% · 保住连击 ${run.sammy.comboSaves} 次${run.sammy.flutePenalty ? ' · 怕笛全属性 -5' : ''}</p>` : '';
+        e.innerHTML = `<div class="eyebrow">OUR LITTLE ENCORE</div><h3 class="result-rank">${r.rank}</h3><h3 style="font-size:18px;margin-top:8px">${r.accuracy >= 85 ? '这一次，我们很有默契。' : r.accuracy >= 45 ? '你认真演奏的样子，很好看。' : '每一首合奏，都从第一拍开始。'}</h3>${run?.bingbingBurst ? `<div class="bingbing-burst" role="status"><strong>爆金币 · 得分 ×2</strong><span>基础得分 ${run.bingbingBaseScore} · 音符奖励照常结算</span><div aria-hidden="true">${Array.from({length:12},(_,i)=>`<i style="--burst-i:${i}">♪</i>`).join('')}</div></div>` : ''}<div class="result-stats"><div><strong>${game.score}</strong><span>本次得分</span></div><div><strong>${r.accuracy}%</strong><span>准确率</span></div><div><strong>${game.maxCombo}</strong><span>最高连击</span></div></div><p style="margin:0 0 17px">${r.reward ? `收获 ${r.reward} 音符 · ${r.newBest ? '刷新个人最佳！' : '谢谢你的认真演奏。'}` : '完整演奏达到 C（45%）即可获得音符，试试简单模式再来一次。'}</p>${teamResult}${levelResult}${mobiusResult}${riaResult}${bingbingIntpResult}${wangResult}${sammyResult}${run?.trioReport ? '<p class="result-extra">' + escapeHTML(run.trioReport) + '</p>' : ''}${run?.sourceReport ? `<p class="result-extra">${escapeHTML(run.sourceReport)}</p>` : ''}${run?.lalaReport ? `<p class="result-extra">${escapeHTML(run.lalaReport)}</p>` : ''}${run?.ids.includes('azhe') && run?.credited ? '<button class="btn secondary small" data-azhe-applause style="margin-bottom:8px">为阿喆送上掌声 · 华彩安可</button>' : ''}<div class="result-buttons"><button class="btn primary small" data-game="start">${I('repeat')}再演一遍</button><button class="btn secondary small" data-route="home">回排练室</button></div>`;
     }
     if (game.status !== 'countdown') {
         e.style.background = '';
@@ -123,6 +128,15 @@ async function startGame() {
         resumeGame();
         return;
     }
+    if (state.cards.team.includes('bingbing_intp') && !game.bingbingStrategyReady) {
+        game.bingbingStrategyReady = true;
+        const partners = state.cards.team.filter(id => id !== 'bingbing_intp').map(id => cardDef(id)?.name).filter(Boolean);
+        openModal('饼饼的开局碎碎念', `<div class="bingbing-intp-strategy"><div class="eyebrow">INTP STRATEGY BRIEFING</div><p>“先说结论：${game.mode === 'gentle' ? '简单谱不要追着音符跑，等它自己落到判定线。' : '困难谱先保主拍，再处理插入音；手腕不要因为信息量变大就一起变僵。'}”</p><p>“本局是 ${state.cards.team.length + 1} 人配置${partners.length ? `，还有${escapeHTML(partners.join('、'))}` : ''}。我已经把策略拆完了——全队技巧 +22，持续整局。${state.cards.team.includes('kongge') ? '空格也在，所以判定窗口再拓宽 8%。' : ''}还有三个补充条件但你可以先……”</p><div class="modal-actions"><button class="btn primary" data-bingbing-strategy-close>听完了，开始</button><button class="btn secondary" data-bingbing-strategy-close>跳过剩余碎碎念</button></div></div>`, () => {
+            if (currentView === 'rhythm' && ['idle', 'finished'].includes(game.status))
+                startGame();
+        });
+        return;
+    }
     stopSongAudio();
     game.startToken++;
     const token = game.startToken;
@@ -153,6 +167,7 @@ async function startGame() {
     const preparation = (TRACKS[game.track].countIn ?? 3) + gameLeadIn();
     Object.assign(game, { elapsed: -preparation, score: 0, combo: 0, maxCombo: 0, perfect: 0, good: 0, nice: 0, miss: 0, flashes: [0, 0, 0, 0], judgement: null, result: null, status: 'countdown', startAt: performance.now() + preparation * 1000, countdownLabel: 3, countdownSoundLabel: null });
     game.cardRun = captureCardRun();
+    game.bingbingStrategyReady = false;
     renderRhythmTeam();
     if (audioMaster)
         audioMaster.gain.setTargetAtTime(state.sound ? 0.28 : 0, audioCtx.currentTime, .02);
@@ -237,6 +252,7 @@ function finishGame() {
     const previous = state.best[gameKey()], newBest = complete && hits > 0 && game.score > (previous?.score || 0);
     if (newBest)
         state.best[gameKey()] = { score: game.score, accuracy, rank, combo: game.maxCombo };
+    applyRiaCompensation(complete, hits, raw);
     applyBingbingScore(complete, hits);
     state.coins += payout.base;
     if (qualified) {
@@ -269,7 +285,7 @@ function hitLane(lane) {
     setTimeout(() => btn?.classList.remove('pressed'), 120);
     if (game.status !== 'running')
         return;
-    const time = gameTime(now), windowSize = game.mode === 'gentle' ? .24 : .19;
+    const time = gameTime(now), windowSize = (game.mode === 'gentle' ? .24 : .19) * (1 + (game.cardRun?.bingbingIntp?.judgementWidth || 0));
     let nearest = null, dist = Infinity;
     for (const note of game.notes) {
         if (note.lane !== lane || note.hit || note.missed)
@@ -292,19 +308,20 @@ function hitLane(lane) {
     let label;
     if (dist <= .075) {
         game.perfect++;
-        game.score += 1000;
+        game.score += 1000 + mobiusScoreBonus(1000, time) + bingbingIntpScoreBonus(1000);
         label = 'PERFECT';
     }
     else if (dist <= .145) {
         game.good++;
-        game.score += 700;
+        game.score += 700 + mobiusScoreBonus(700, time) + bingbingIntpScoreBonus(700);
         label = 'GOOD';
     }
     else {
         game.nice++;
-        game.score += 400;
+        game.score += 400 + mobiusScoreBonus(400, time) + bingbingIntpScoreBonus(400);
         label = 'NICE';
     }
+    onMobiusJudgement(label, time);
     game.combo++;
     game.maxCombo = Math.max(game.maxCombo, game.combo);
     game.judgement = { text: label, at: now, lane };

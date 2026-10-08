@@ -16,7 +16,12 @@ function chronicleSceneArt(run, meta = state?.chronicle) {
         konggeStays: () => run.flags.konggeStay === 1,
         konggeUndecided: () => run.flags.konggeStay !== 1,
         approachFirst: () => (run.weekly.approach ?? 0) === 0,
-        approachSecond: () => run.weekly.approach === 1
+        approachSecond: () => run.weekly.approach === 1,
+        shadowPendingChat: () => run.chapter === 2 && run.chat === 'shiyuan' && !!run.flags.beShiyuan,
+        qiqiRefusalFirst: () => (run.flags.qHate || 0) === 1,
+        qiqiRefusalSecond: () => (run.flags.qHate || 0) >= 2,
+        rumorFirst: () => (run.flags.qBack || 0) === 1,
+        rumorSecond: () => (run.flags.qBack || 0) >= 2
     };
     return CHRONICLE_ART.find(a => a.chapter === run.chapter && a.scene === run.scene && (!a.condition || matches[a.condition]?.())) || null;
 }

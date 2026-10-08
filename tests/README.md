@@ -7,6 +7,7 @@
 - `node tests/card-note-unlocks.cjs`：全员 50 音符解锁与对应角色羁绊 +3、余额边界、重复点击、占位卡、剧情免费解锁、羁绊上限、旧档与刷新、保存失败回滚、桌面和手机入口、已解锁与锁定卡混排的紧凑布局。
 - `node tests/chapter-three.cjs`：第二章补充、第三章分支与结局、章节切换、导入、柒柒技能。
 - `node tests/chapter-four.cjs`：第四章主线与回应、人物按剧情解锁、周常、剧场门槛与结局、继承/重开、原版存档兼容、隐藏预告与移动端。
+- `node tests/original-hidden-endings.cjs`：第二章十元 99 羁绊清零／下一选项结算、每周一次聊天与十元 +2、第四章跨重开两次婉拒、两个周末明显偏爱、边界值、存档清洗，以及 8 合 1 母图的分页映射、在场人物和全部 440px 裁图。
 - `node tests/source-cards.cjs`：新卡稀有度、小周成长、羁绊隐藏、柠檬安全成长与主动结局、小塔救场、持久化、图片相对路径与加载。
 - `node tests/zhu-bar.cjs`：朱老师登场、初始 30 音符、酒单扣费与羁绊、余额不足、章节记录、山丘停业与弹窗、隐藏调酒、卡祖笛救场、存档刷新与移动端。
 
@@ -109,6 +110,11 @@
 - `swift -module-cache-path /tmp/hjm-swift-cache tests/gift-apple-alpha.swift http://127.0.0.1:8766/previews/gift-effects.html`：macOS 真正 WKWebView 的三段 HEVC Alpha 播放与像素透明／主体不透明校验；先在仓库根目录启动本地静态服务器。运行时短暂打开测试窗口并自动关闭，需非沙箱执行。此测试不等同于 iPhone 真机验证。
 
 - `node tests/bingbing.cjs`：冰冰剧情免费／音符解锁、上一版 v3 真实存档迁移、技能 35% 边界与重复结算保护、四张剧情图与相册映射，以及桌面／手机六种人物卡入口。
+- `node tests/mobius-card.cjs`：Mobius 三用途人物图、R 卡资料、严格大于 0／3／6 的按钮式羁绊对话、50 音符／+10 的统一能量饮料档、v4 存档显式迁移，以及连续 10 个 PERFECT 后 5 秒热舞加分与头像 wave。
+- `node tests/ria-card.cjs`：RIA 三用途人物图、四星 R 卡资料、按钮式羁绊对话、50 音符／+10 的统一马卡龙档、v5 存档显式迁移、低于 80% 的得分补偿与音准 70 上限。
+- `node tests/bingbing-intp-card.cjs`：饼饼三用途人物图、三星 SR 卡资料、按钮式羁绊对话、50 音符／+10 的统一造型饼干档、v6 存档显式迁移、开局碎碎念、2／3／4 人得分档与空格判定联动。
+- `node tests/wanglaoshi-card.cjs`：汪老师三用途人物图、四星 R 卡、按钮式羁绊对话、导师音准加成与属性上限、稳定输出区间、晚八点彩蛋、统一儿童果汁档及 v7 存档迁移。
+- `node tests/sammy-card.cjs`：Sammy 三用途人物图、限定 NR 卡、按钮式羁绊对话、25% MISS 保连击、随机偏移稳定、怕笛减益、统一伯爵茶档及 v8 存档迁移。
 
 - `node tests/story-redesign.cjs`：新版剧情总览、详情只读、原有七项导航、固定单屏阅读器、角色头像与长对白内滚动、紧凑搭档宫格、整卡铺图的融合线章节、个人线确认解锁与保存失败回滚、Jerry 实际邀请/直达入口防护、v1 融合存档迁移与刷新、周目录/聊天和 320～1440 屏宽。截图输出到 `/tmp/hjm-story-*.png`。
 - `node tests/chronicle-reader-history.cjs`：正传单项推进按钮靠右，仅在有已读前页时显示回退；分支选项页不加回退。验证连续回看与返回当前页不改变剧情进度、音符或羁绊。截图输出到 `/tmp/hjm-chronicle-*-navigation.png`。

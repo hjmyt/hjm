@@ -103,5 +103,7 @@ function applyBondValue(id, after) {
         unlock('dijie_gold');
     if (id !== 'cat' && before < BOND_RULES.hidden && after >= BOND_RULES.hidden)
         toast(`${CARD_DEFS.find(c => c.id === id).name}羁绊分达到 35 · 隐藏技能门槛已达成`, true);
+    if (id !== 'cat' && typeof Chronicle !== 'undefined')
+        Chronicle.onBondChanged?.(id, before, after);
     return after - before;
 }

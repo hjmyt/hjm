@@ -151,6 +151,29 @@ const Chronicle = (() => {
             log(`${person(k).name}的羁绊分 +${gained}。`);
         return gained;
     }
+    function clearUnifiedBond(id) {
+        const m = M(), records = [state.affinity, m.bonds, m.run?.aff, ...Object.values(m.slots || {}).map(r => r?.aff), m.chapter2Start?.aff, m.chapter3Start?.aff, m.chapter4Start?.aff, m.chapter5Start?.aff, m.chapter6Start?.aff].filter(Boolean);
+        for (const record of records)
+            record[id] = 0;
+    }
+    function onBondChanged(id, before, after) {
+        const r = R();
+        if (id !== 'shiyuan' || r?.chapter !== 2 || r.ending || r.flags.beShiyuan || after < 99)
+            return false;
+        clearUnifiedBond('shiyuan');
+        r.flags.beShiyuan = 1;
+        log('十元羁绊达到 99，已清零。下一个剧情选项将走向「团长的影子」。', true);
+        return true;
+    }
+    function triggerShadowEnding() {
+        const r = R();
+        if (r.chapter !== 2 || r.ending || !r.flags.beShiyuan)
+            return false;
+        delete r.flags.beShiyuan;
+        ending('shadow');
+        r.scene = 'be_shiyuan';
+        return true;
+    }
     function darkUp(k, v) {
         if (!['feihong', 'dijie'].includes(k))
             return;
@@ -453,6 +476,8 @@ const Chronicle = (() => {
         get rememberReaderPage() { return rememberReaderPage; },
         get readerHasPrevious() { return readerHasPrevious; },
         get readerPreviewHTML() { return readerPreviewHTML; },
+        get onBondChanged() { return onBondChanged; },
+        get triggerShadowEnding() { return triggerShadowEnding; },
         get clearReaderTrail() { return clearReaderTrail; },
         get refresh() { return refresh; },
         get renderSignature() { return renderSignature; }, set renderSignature(value) { renderSignature = value; },
@@ -492,5 +517,5 @@ const Chronicle = (() => {
     const { projectEvent, resolveEvent, chapterTwoDialogue, secondProgress, eventBoard, secondOutcomeText, secondResultHTML, secondTitleHTML, chapterTwoHelp } = createChronicleChaptersTwo(context);
     const { supplementalDialogue, chapterThreeDialogue, thirdTitleHTML, thirdHelp } = createChronicleChaptersThree(context);
     const { chapterFourDialogue, fourthTitleHTML, fourthHelp } = createChronicleChaptersFour(context);
-    return { openLibrary, closeLibrary, libraryAction, fresh, clean, syncBonds, refresh, resetPersonalPreview, mount, suspend, sourceSaveDetected, requestLegacy, encounterIds, journalSpeaker, priorHeCount, requiredTech, unlockFusionCp, enterFusionCp, unlockYangcun, offerYangcun, enterYangcun };
+    return { openLibrary, closeLibrary, libraryAction, fresh, clean, syncBonds, refresh, resetPersonalPreview, mount, suspend, sourceSaveDetected, requestLegacy, encounterIds, journalSpeaker, priorHeCount, requiredTech, unlockFusionCp, enterFusionCp, unlockYangcun, offerYangcun, enterYangcun, onBondChanged };
 })();

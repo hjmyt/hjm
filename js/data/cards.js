@@ -84,6 +84,298 @@ const SAVE_CARD_DEFS = [
   ]
 },
   {
+    "id": "mobius",
+    "name": "Mobius",
+    "rarity": "R",
+    "stars": 3,
+    "role": "第一小提琴",
+    "group": "弦乐",
+    "asset": "cardMobius",
+    "coverAsset": "cardMobiusCover",
+    "avatarAsset": "cardMobiusAvatar",
+    "imageVersion": "mobius20261008",
+    "icon": "violin",
+    "tag": "节奏型 · 连击输出",
+    "bonus": 1,
+    "active": 0,
+    "chronicleOnly": true,
+    "subtitle": "听见节拍，身体会比弓先一步跟上旋律。",
+    "quote": "我会拉琴，也会跳舞——不过这里好像不让跳。",
+    "obtainQuote": "Mobius，第一小提琴。我会拉琴，也会跳舞——不过这里好像不让跳。",
+    "identity": "第一小提琴 · 节奏型 / 连击输出",
+    "seat": "第一小提琴",
+    "specialty": "舞蹈（K-pop）",
+    "profileFields": [
+      ["档案", "女 · R 品质"],
+      ["声部", "第一小提琴"],
+      ["定位", "节奏型 / 连击输出"],
+      ["特长", "舞蹈（K-pop）"]
+    ],
+    "stats": [["音准", 68], ["节奏", 82], ["魅力", 72], ["技巧", 65]],
+    "statnote": "1 级基础数值。排练时穿露腰短上衣和工装裤；站琴时脚底打着拍子，身体听见音乐就会自然轻轻摆动。",
+    "activeName": "舞曲节奏",
+    "activeKind": "被动",
+    "autoSkill": true,
+    "activeText": "连续打出 10 个 PERFECT 后进入「热舞」状态，接下来 5 秒内得分 +15%；节奏舞台上的角色头像会做一次 wave 动作。",
+    "passiveName": "节拍器成精",
+    "passiveKind": "天赋",
+    "passiveText": "天赋：节奏属性额外 +20%。不改变判定窗口，也不绕过编队音符加成上限。",
+    "bio": "长发、韩式平眉和很长的睫毛让她在人群里很显眼。她不是故意扭；只是音乐一响，脚下就会先把拍子踩准，身体也跟着旋律轻轻摆动。",
+    "giftTitle": "给 Mob 补充一点舞台能量",
+    "gifts": [
+      ["electrolyte", "电解质水", "sun", 5, 1, 8],
+      ["dance_mix", "K-pop 练舞歌单", "music", 25, 5, 20],
+      ["energy_drink", "能量饮料", "bolt", 50, 10, 36]
+    ],
+    "thanks": [
+      "“刚好，下一遍我想把脚下的拍子再踩稳一点。”",
+      "“这首可以！等排练结束，我跳给你看。”",
+      "“满电。下一段 solo，记得看我收尾。”"
+    ],
+    "bondLines": [
+      [0, "嗨，你是新来的？我叫Mobius，叫我Mob就行。……对了，你会跳舞吗？"],
+      [3, "我刚才那段solo，其实编了一段舞，但指挥不让跳。下次我偷偷跳给你看。"],
+      [6, "以后咱俩组队吧。你打前半段，我后半段热舞收尾，绝配。"]
+    ]
+  },
+  {
+    "id": "ria",
+    "name": "RIA",
+    "rarity": "R",
+    "stars": 4,
+    "role": "第二小提琴",
+    "group": "弦乐",
+    "asset": "cardRia",
+    "coverAsset": "cardRiaCover",
+    "avatarAsset": "cardRiaAvatar",
+    "imageVersion": "ria20261008",
+    "icon": "violin",
+    "tag": "新手友好 · 补偿型",
+    "bonus": 1,
+    "active": 0,
+    "chronicleOnly": true,
+    "subtitle": "琴还在慢慢学，但喜欢音乐这件事从不需要证明。",
+    "quote": "我不是央音的……你认错人了。不过没关系，很多人都认错。",
+    "obtainQuote": "RIA。二提。我不是央音的……你认错人了。不过没关系，很多人都认错。",
+    "identity": "第二小提琴 · 新手友好 / 补偿型",
+    "seat": "第二小提琴",
+    "specialty": "气质型美貌 · 初学者但热爱音乐",
+    "profileFields": [
+      ["档案", "女 · R 品质"],
+      ["声部", "第二小提琴"],
+      ["定位", "新手友好 / 补偿型"],
+      ["特长", "气质型美貌，初学者但热爱音乐"]
+    ],
+    "stats": [["音准", 65], ["节奏", 68], ["魅力", 85], ["技巧", 62]],
+    "statCaps": {"音准": 70},
+    "statnote": "1 级基础数值。魅力受天赋额外加成；音准成长最多显示为 70。",
+    "activeName": "热爱无价",
+    "activeKind": "被动",
+    "autoSkill": true,
+    "activeText": "完整演奏且有手动命中时，若单局准确率低于 80%，结算得分额外补偿 +20%。补偿不伪造准确率、评级、最佳成绩或音符奖励。",
+    "passiveName": "气质加成",
+    "passiveKind": "天赋",
+    "passiveText": "魅力属性额外 +25%，但音准属性上限锁定在 70，无法突破。",
+    "bio": "及腰黑色长发没有染烫，发质好得很惹眼。她穿着原图中的黑色高领针织衫和黑色长裙，笑起来会露出一颗虎牙；平时不太笑，初见时很像央音的高岭之花。其实拿琴的手势还是初学者水平，只是气质悄悄掩盖了一切。",
+    "giftTitle": "给 RIA 一点练琴后的甜味",
+    "gifts": [
+      ["warm_water", "温水", "sun", 5, 1, 8],
+      ["fingering_notes", "指法便签", "album", 25, 5, 20],
+      ["macaron", "马卡龙", "heart", 50, 10, 36]
+    ],
+    "thanks": [
+      "“谢谢。练琴的时候，我总是忘记喝水。”",
+      "“你写得很清楚……这次手指应该不会放错了。”",
+      "“是马卡龙。别看我，我只是刚好很喜欢。”"
+    ],
+    "bondLines": [
+      [0, "RIA，二提。……我第一次拉这首，请多包涵。（笑，露出虎牙）"],
+      [3, "其实我小时候学的是钢琴。小提琴是去年才开始的。……是不是看得出来？"],
+      [6, "你教我指法的时候，手不要抖。……不是凶你，是我也会紧张。"]
+    ]
+  },
+  {
+    "id": "bingbing_intp",
+    "name": "饼饼",
+    "rarity": "SR",
+    "stars": 3,
+    "role": "小提琴",
+    "group": "弦乐",
+    "asset": "cardBingbingIntp",
+    "coverAsset": "cardBingbingIntpCover",
+    "avatarAsset": "cardBingbingIntpAvatar",
+    "imageVersion": "bingbingIntp20261009",
+    "icon": "violin",
+    "tag": "碎碎念辅助 · INTP技术流",
+    "bonus": 1,
+    "active": 0,
+    "chronicleOnly": true,
+    "subtitle": "话题跳得很快，但每一句都有她刚查完的理论依据。",
+    "quote": "我可以开始碎碎念了吗？不可以？……那我说完这段再开始。",
+    "obtainQuote": "饼饼！小提琴！……我可以开始碎碎念了吗？不可以？……那我说完这段再开始。",
+    "identity": "小提琴 · 碎碎念辅助 / INTP技术流",
+    "seat": "小提琴",
+    "specialty": "INTP · 英国学琴 · 空格认定的小组成员",
+    "profileFields": [
+      ["档案", "女 · SR 品质"],
+      ["声部", "小提琴"],
+      ["定位", "碎碎念辅助 / INTP技术流"],
+      ["特长", "INTP，喜欢粉色迪士尼饼饼，英国学琴"]
+    ],
+    "stats": [["音准", 76], ["节奏", 74], ["魅力", 78], ["技巧", 82]],
+    "statnote": "1 级基础数值。空格认定的小组成员；开局策略讲解与同队联动会在节奏舞台实际生效。",
+    "activeName": "INTP的碎碎念",
+    "activeKind": "团队被动",
+    "autoSkill": true,
+    "activeText": "每局开始时自动弹出本局策略讲解，可跳过；进入演奏后全队技巧 +22，持续整局。",
+    "passiveName": "超绝I人",
+    "passiveKind": "天赋",
+    "passiveText": "包括玩家在内，2 人时饼饼贡献得分 +5%，3 人 +10%，4 人 +15%。当前最多三张人物卡编队，因此三档均可触发。",
+    "extraSkills": [
+      {
+        "name": "空格认定",
+        "tag": "联动",
+        "icon": "team",
+        "text": "和空格同队时，开局自动将全队判定窗口拓宽 8%。空格的小组，规矩由她定。"
+      }
+    ],
+    "bio": "粉色齐刘海下是卷卷的长发，两边扎着小揪揪，圆框眼镜后总有说不完的新论点。她穿粉色卫衣，胸前是喜欢的厨师小狗；琴盒也贴满同主题贴纸。她在英国学琴，说话语速很快，一个话题跳到另一个话题，但每个话题都能给出理论依据。",
+    "giftTitle": "给饼饼的粉色补给",
+    "gifts": [
+      ["pink_milk", "草莓牛奶", "heart", 5, 1, 8],
+      ["theory_tabs", "乐理索引贴", "album", 25, 5, 20],
+      ["cookieann_cookie", "可琦安造型饼干", "gift", 50, 10, 36]
+    ],
+    "thanks": [
+      "“粉色的。很好。颜色对思考速度没有影响，但对心情有。”",
+      "“这个索引逻辑不错，我可以再补一套和声功能分类。”",
+      "“是厨师小狗造型的！先别吃，我要从三个角度拍完再分析糖霜结构。”"
+    ],
+    "bondLines": [
+      [0, "饼饼！小提琴！INTP！英国回来的！……等等我要先说完，我喜欢粉色的可琦安，就是迪士尼那个饼饼，不是吃的饼，是狗，金色的狗，会做饭……你懂吗？"],
+      [3, "垃垃长得像我在英国的专业老师。不是外貌，是气质。就是那种……‘你刚才拉的是什么东西’的气质。……但垃垃比较温柔。"],
+      [6, "空格说我是他小组的。……我不知道我什么时候加入的，但他说是就是吧。……我查了一下，INTP被认领的时候通常不会反抗。……我就没反抗。"]
+    ]
+  },
+  {
+    "id": "wanglaoshi",
+    "name": "汪老师",
+    "rarity": "R",
+    "stars": 4,
+    "role": "小提琴（导师）",
+    "group": "弦乐",
+    "asset": "cardWanglaoshi",
+    "coverAsset": "cardWanglaoshiCover",
+    "avatarAsset": "cardWanglaoshiAvatar",
+    "imageVersion": "wanglaoshi20261009",
+    "icon": "violin",
+    "tag": "新手导师 · 稳定器",
+    "bonus": 1,
+    "active": 0,
+    "chronicleOnly": true,
+    "subtitle": "像是接孩子前顺路来看看，一拿琴却标准得像教科书。",
+    "quote": "专业教琴的，来这儿放松放松。……顺便取取经。",
+    "obtainQuote": "汪老师，小提琴。专业教琴的，来这儿放松放松。……顺便取取经。",
+    "identity": "小提琴教师 · 新手导师 / 稳定器",
+    "seat": "小提琴（教师）",
+    "specialty": "专业小提琴老师 · 帅气奶爸",
+    "profileFields": [
+      ["档案", "男 · R 品质 · 四星"],
+      ["声部", "小提琴（教师）"],
+      ["定位", "新手导师 / 稳定器"],
+      ["特长", "专业小提琴老师，帅气奶爸"]
+    ],
+    "stats": [["音准", 80], ["节奏", 78], ["魅力", 72], ["技巧", 74]],
+    "statnote": "1 级基础数值。晚上 8 点后展示并结算「接孩子要走了」的全属性 -10。",
+    "activeName": "奶爸的耐心",
+    "activeKind": "被动",
+    "autoSkill": true,
+    "activeText": "队伍中音准低于 70 的角色获得临时音准 +15；若角色自身有音准上限，则仍遵守该上限。导师加成持续整局。",
+    "passiveName": "稳定输出",
+    "passiveKind": "天赋",
+    "passiveText": "汪老师的个人得分稳定区间固定为 97.5%～102.5%，最高与最低差距不超过 5%，适合刷准确率成就。",
+    "extraSkills": [
+      {"name": "接孩子要走了", "tag": "彩蛋", "icon": "moon", "text": "晚上 8 点后使用汪老师，全属性 -10。他得去接孩子。"}
+    ],
+    "bio": "三十出头，短发，下巴留着一点没刮干净的胡茬。POLO 衫配双肩包，包侧还挂着奶瓶袋，像是接孩子下课前顺路来排练厅看看。可一旦拿起琴，他的姿势标准得像教科书；声音很稳，没有大起伏，却很好听。",
+    "giftTitle": "给接孩子前的汪老师补充一点能量",
+    "gifts": [
+      ["black_coffee", "无糖咖啡", "sun", 5, 1, 8],
+      ["lesson_notes", "课堂便签", "album", 25, 5, 20],
+      ["kids_juice", "儿童果汁", "heart", 50, 10, 36]
+    ],
+    "thanks": [
+      "“谢谢。课间喝一口，正好。”",
+      "“这个能记学生的手型问题。挺实用。”",
+      "“儿童果汁？……我先替她尝一下。”"
+    ],
+    "bondLines": [
+      [0, "汪老师，小提琴。我不是来玩的，是来看看你们怎么玩的。……顺便拉两把。"],
+      [3, "你手型不对。……过来，我教你。……别怕，我不收学费。"],
+      [6, "我女儿今天问我，爸爸你为什么总和琴说话。我说，因为琴不哭不闹，还听话。……她哭了。我哄了半天。"]
+    ]
+  },
+  {
+    "id": "sammy",
+    "name": "Sammy",
+    "rarity": "NR",
+    "stars": 2,
+    "role": "中提琴",
+    "group": "弦乐",
+    "asset": "cardSammy",
+    "coverAsset": "cardSammyCover",
+    "avatarAsset": "cardSammyAvatar",
+    "imageVersion": "sammy20261009",
+    "icon": "violin",
+    "tag": "团队指挥 · 控场",
+    "bonus": 1,
+    "active": 0,
+    "chronicleOnly": true,
+    "eventLimited": true,
+    "eventName": "教堂的回声",
+    "subtitle": "肩膀不晃，坐得笔直；每一弓都像一段安静的祷告。",
+    "quote": "为什么来哈基米？这个问题，我也在找答案。",
+    "obtainQuote": "Sammy。中提。……为什么来哈基米？这个问题，我也在找答案。",
+    "identity": "中提琴 · 团队指挥 / 控场",
+    "seat": "中提琴",
+    "specialty": "ENTJ · 前教堂团长 · 沧桑",
+    "profileFields": [
+      ["档案", "男 · NR 品质 · 活动限定"],
+      ["声部", "中提琴"],
+      ["定位", "团队指挥 / 控场"],
+      ["活动获取", "限定活动「教堂的回声」通关奖励"]
+    ],
+    "stats": [["音准", 78], ["节奏", 74], ["魅力", 70], ["技巧", 80]],
+    "statnote": "1 级基础数值。活动限定来源会保留在卡面档案；正式角色仍遵守统一音符解锁规则。",
+    "activeName": "前团长的指挥",
+    "activeKind": "团队被动",
+    "autoSkill": true,
+    "activeText": "全员判定线稳定化，节奏系统的随机偏移影响减少 50%，高速曲目中持续整局。",
+    "passiveName": "和善的威严",
+    "passiveKind": "天赋",
+    "passiveText": "队友出现 MISS 时有 25% 概率保留当前连击；触发时 Sammy 会低声说「没关系」。MISS 仍会被记录。",
+    "extraSkills": [
+      {"name": "怕笛", "tag": "彩蛋弱点", "icon": "music", "text": "队伍中有竹笛角色时，Sammy 全属性 -5；他从不主动要求调整阵容。"}
+    ],
+    "bio": "四十岁左右，鬓角已有白发，却打理得很整齐。深灰色开衫一直扣到最上面一颗。他拉琴时坐得笔直，肩膀不晃，眼神很沉，看谱子的时间比看人的时间少。叶思阳叫他“主教”，他只会微微点头，从不纠正。",
+    "giftTitle": "给主教留一杯安静的茶",
+    "gifts": [
+      ["plain_biscuit", "原味饼干", "sun", 5, 1, 8],
+      ["choir_score", "旧诗班谱", "album", 25, 5, 20],
+      ["earl_grey", "伯爵茶", "heart", 50, 10, 36]
+    ],
+    "thanks": [
+      "“谢谢。很安静的味道。”",
+      "“这些声部，我以前带过。不是同一批人。”",
+      "“伯爵茶。……坐吧，水还热。”"
+    ],
+    "bondLines": [
+      [0, "Sammy，中提。……思阳叫我主教，你们跟着叫也行。我不介意。"],
+      [3, "我以前在教堂带团，不是管弦乐团，是诗班。……气氛差不多，都是一群人聚在一起，发出声音。"],
+      [6, "你为什么一直看着我？……我脸上有谱子吗？……没有。只是很久没人这样看着我了。"]
+    ]
+  },
+  {
     "id": "tang",
     "name": "汤少",
     "rarity": "SSR",
@@ -2284,6 +2576,11 @@ const COLLECTION_ORDER = [
   "lala",
   "azhe",
   "bingbing",
+  "mobius",
+  "ria",
+  "bingbing_intp",
+  "wanglaoshi",
+  "sammy",
   "shiyuan",
   "zhu",
   "tim",
@@ -2312,6 +2609,11 @@ const COLLECTION_ORDER = [
 
 const STORY_CARD_ALIASES = {
   "bingbing": ["冰冰"],
+  "mobius": ["Mobius", "Mob"],
+  "ria": ["RIA", "Ria", "ria"],
+  "bingbing_intp": ["饼饼"],
+  "wanglaoshi": ["汪老师"],
+  "sammy": ["Sammy", "sammy", "主教"],
   "jerry": [
     "Jerry",
     "jerry"

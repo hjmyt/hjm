@@ -193,6 +193,7 @@ const ChronicleData = {
     "c4_bao",
     "c4_qiqi",
     "c4_menu",
+    "c4_rumor",
     "be_mianbei",
     "be_qiqi4",
     "c4_he",

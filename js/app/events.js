@@ -53,6 +53,10 @@ function bindAppEvents() {
         const b = e.target.closest('button');
         if (!b || b.disabled)
             return;
+        if (b.dataset.bingbingStrategyClose !== undefined) {
+            closeModal();
+            return;
+        }
         if (b.dataset.route) {
             if(b.dataset.route === 'chronicle') Chronicle.openLibrary();
             route(b.dataset.route);
@@ -329,6 +333,8 @@ function bindAppEvents() {
             return useEye();
         if (d.cardBondMemory !== undefined)
             return showBondMemory();
+        if (d.cardBondDialogue)
+            return talkCardBond(d.cardBondDialogue);
         if (d.cardHelp !== undefined)
             return showCardsHelp();
         if (d.cardRecruit !== undefined)

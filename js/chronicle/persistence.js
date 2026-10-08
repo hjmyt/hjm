@@ -52,7 +52,7 @@ function createChroniclePersistence(ctx) {
         for (const k of ctx.FLAG_KEYS)
             if (a.flags?.[k])
                 r.flags[k] = 1;
-        for (const key of ['qiWatch', 'qBack', 'qHate'])
+        for (const key of ['qiWatch', 'qBack', 'qHate', 'chatBondWeek'])
             r.flags[key] = ctx.nInt(a.flags?.[key], 0, 0, 999);
         if (a.flags?.konggeStay === 1 || a.flags?.konggeStay === 'weak')
             r.flags.konggeStay = a.flags.konggeStay;
@@ -118,7 +118,8 @@ function createChroniclePersistence(ctx) {
             r.scene = 'title' + (r.chapter + 1);
         if (r.chapter >= 5 && ['zhu_offer', 'zhu_reply', 'shanqiu_closed'].includes(r.scene))
             r.scene = 'c' + r.chapter + '_intro';
-        delete r.flags.beShiyuan;
+        if (r.chapter !== 2 || r.ending)
+            delete r.flags.beShiyuan;
         delete r.flags.lemonDanger;
         if (r.chapter >= 2 && r.scene === 'start' && r.name.trim())
             r.scene = 'c' + r.chapter + '_intro';
@@ -148,7 +149,7 @@ function createChroniclePersistence(ctx) {
     function confirmRestart() { ctx.suspend(); const ch = ctx.R().chapter; openModal('重新开始' + ctx.chapterName() + '？', `<p>${ch === 1 ? '重新登记，开启第一章的新周目。' : ctx.M()['chapter' + ch + 'Start'] ? '恢复进入本章时的琴技和等级，重新阅读并选择；全局羁绊保持当前值。' : '这份旧存档未保存本章起点，将使用基础体验档重新开始。'}<br>本章对白、演出分段和选择会重置；其他章节、已解锁人物、卡牌养成、猫咪、相册和已领取奖励全部保留。</p><div class="settings-actions"><button class="btn ghost" data-cp-action="cancel-restart">继续这段故事</button><button class="btn primary" data-cp-action="confirm-restart">确认重开当前章</button></div>`); }
     function restart() {
         ctx.suspend();
-        const ch = ctx.R().chapter, name = ctx.R().name, inst = ctx.R().inst;
+        const ch = ctx.R().chapter, name = ctx.R().name, inst = ctx.R().inst, fourthRefusals = ch === 4 ? ctx.nInt(ctx.R().flags.qHate, 0, 0, 999) : 0;
         ctx.M().runNo++;
         ctx.M().run = ch === 1 ? freshRun() : safeSnapshot(ctx.M()['chapter' + ch + 'Start'] || quickRun(ch, name, inst));
         ctx.R().name = name;
@@ -167,6 +168,8 @@ function createChroniclePersistence(ctx) {
             ctx.R().journal = [];
             ctx.R().log = [];
             ctx.R().flags = ch >= 4 ? { ...ctx.R().flags } : ch === 3 ? { c3Met: 1 } : {};
+            if (ch === 4)
+                ctx.R().flags.qHate = Math.max(ctx.nInt(ctx.R().flags.qHate, 0, 0, 999), fourthRefusals);
             ctx.R().events = { sponsor: null, boundary: null, bill: null };
             ctx.log('回到' + ctx.chapterName() + '起点。');
         }

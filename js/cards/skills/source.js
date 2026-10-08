@@ -142,12 +142,13 @@ function settleLateNote(note, now) {
         x.assists++;
         if (label === 'GOOD') {
             game.good++;
-            game.score += 700;
+            game.score += 700 + mobiusScoreBonus(700, game.elapsed) + bingbingIntpScoreBonus(700);
         }
         else {
             game.nice++;
-            game.score += 400;
+            game.score += 400 + mobiusScoreBonus(400, game.elapsed) + bingbingIntpScoreBonus(400);
         }
+        onMobiusJudgement(label, game.elapsed);
         game.combo++;
         game.maxCombo = Math.max(game.maxCombo, game.combo);
         r.missStreak = 0;
@@ -157,11 +158,14 @@ function settleLateNote(note, now) {
     else {
         note.missed = true;
         game.miss++;
+        onMobiusJudgement('MISS', game.elapsed);
         onExpansionMiss();
-        game.combo = 0;
+        const sammySaved = sammyPreservesCombo();
+        if (!sammySaved)
+            game.combo = 0;
         if (x)
             x.beats = 0;
-        game.judgement = { text: 'MISS', at: now, lane: note.lane };
+        game.judgement = { text: sammySaved ? 'Sammy · 没关系' : 'MISS', at: now, lane: note.lane };
     }
     updateGameStats();
 }

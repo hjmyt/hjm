@@ -49,3 +49,6 @@ runpy.run_path(str(ROOT / "scripts/crop-tang-art.py"))["rebuild"]("chronicle")
 
 # Apply Yeshiyang's black-coat identity refresh last.
 runpy.run_path(str(ROOT / "scripts/crop-yeshiyang-art.py"))["rebuild"]("chronicle")
+
+# Restore the original chapter-two/four hidden-ending branches and their album art.
+runpy.run_path(str(ROOT / "scripts/crop-original-hidden-endings.py"))["rebuild"]()

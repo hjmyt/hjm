@@ -1,6 +1,6 @@
 'use strict';
 
-function freshCards() { return { edition: 7, zhuNight: false, sourceCast: freshSourceCast(), qiqi: freshQiqi(), lala: freshLala(), trio: freshTrio(), expansion: freshExpansion(), tickets: 3, pulls: 0, pity: 0, encounterVersion: 3, encounters: [], selected: null, team: [], form: 'normal', prepared: null, blackUntil: 0, collection: Object.fromEntries(SAVE_CARD_DEFS.map(c => [c.id, { owned: false, xp: 0, copies: 0 }])), daily: { date: dateKey(), gifts: {}, eye: false }, history: [] }; }
+function freshCards() { return { edition: 12, zhuNight: false, sourceCast: freshSourceCast(), qiqi: freshQiqi(), lala: freshLala(), trio: freshTrio(), expansion: freshExpansion(), tickets: 3, pulls: 0, pity: 0, encounterVersion: 3, encounters: [], selected: null, team: [], form: 'normal', prepared: null, blackUntil: 0, collection: Object.fromEntries(SAVE_CARD_DEFS.map(c => [c.id, { owned: false, xp: 0, copies: 0 }])), daily: { date: dateKey(), gifts: {}, eye: false }, history: [] }; }
 function cleanCards(input) {
     const d = freshCards();
     if (!input || typeof input !== 'object') {
