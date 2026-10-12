@@ -30,7 +30,7 @@
   #view-pitch .rhythm-team-panel > .btn { grid-column: 2; grid-row: 1; align-self: center; margin: 0; }
   #view-pitch .pitch-mobile-summary { display: block; color: var(--text-secondary); font-size: var(--font-size-body-small); line-height: var(--line-height-body-small); }
   .pitch-challenge-layout { display: block; }
-  .pitch-challenge-nav { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); margin-bottom: var(--space-4); padding: 0; border: 0; background: transparent; box-shadow: none; }
+  .pitch-challenge-nav { position: static; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin-bottom: var(--space-4); padding: 0; border: 0; background: transparent; box-shadow: none; }
   .pitch-challenge-nav-head { display: none; }
   .pitch-challenge-option { grid-template-columns: 32px minmax(0, 1fr); min-height: 68px; padding: var(--space-4); }
   .pitch-challenge-option .pitch-challenge-icon { width: 32px; height: 32px; }

@@ -2,17 +2,20 @@
 
 const game = { status: 'idle', track: Math.max(0, TRACKS.findIndex(t => t.default)), mode: 'gentle', notes: [], melodyEvents: [], duration: 45, startAt: 0, elapsed: 0, score: 0, combo: 0, maxCombo: 0, perfect: 0, good: 0, nice: 0, miss: 0, raf: 0, lastUi: 0, flashes: [0, 0, 0, 0], judgement: null, result: null, countdownLabel: null, width: 500, height: 404, startToken: 0 };
 const canvas = $('rhythmCanvas'), ctx = canvas.getContext('2d');
-function gameKey() { return `${TRACKS[game.track].scoreIds?.[game.mode] || TRACKS[game.track].scoreId || TRACKS[game.track].id || game.track}_${game.mode}`; }
+function gameKey() { if(RhythmScoreStage.active())return `${RhythmScoreStage.key()}_${game.mode}`; return `${TRACKS[game.track].scoreIds?.[game.mode] || TRACKS[game.track].scoreId || TRACKS[game.track].id || game.track}_${game.mode}`; }
 // Chart-relative time is negative during the original recording prelude.
 // Countdown ends before this audible lead-in; notes retain their percussion attack timing.
 function gameLeadIn() { return TRACKS[game.track].leadIn ?? 2.5; }
-function gameCountdownRemaining() { return Math.max(1, Math.ceil(-game.elapsed - gameLeadIn())); }
+// Score notes enter during countdown; their beat zero is chart time 1.
+function gameCountdownEnd() { return TRACKS[game.track].countInEnd ?? -gameLeadIn(); }
+function gameCountdownRemaining() { return Math.max(1, Math.ceil(gameCountdownEnd() - game.elapsed)); }
 function gameTime(now = performance.now()) {
     return TRACKS[game.track].audio ? RhythmRecording.time() : (now - game.startAt) / 1000;
 }
 function generateChart() {
     const t = TRACKS[game.track], b = 60 / t[game.mode], ns = [];
     game.melodyEvents = [];
+    if(RhythmScoreStage.active()){RhythmScoreStage.generate();return;}
     if (t.audio) {
         game.notes = t.charts[game.mode].map(([time, lane]) => ({ time, lane, hit: false, missed: false }));
         game.duration = t.duration;
@@ -45,12 +48,14 @@ function updateTrackUI() {
     updateBest();
     updateGameStats();
     renderAudioStatus();
+    RhythmScoreStage.ui();
 }
 function updateBest() { const best = state.best[gameKey()]; $('bestScore').textContent = best ? best.score.toLocaleString() : 0; $('bestRank').textContent = best ? `${best.rank} 评级 · ${best.accuracy}% 准确率` : '这首歌，还在等你的第一次演奏'; }
 function formatTime(t) { t = Math.max(0, Math.floor(t)); return `${String(Math.floor(t / 60)).padStart(2, '0')}:${String(t % 60).padStart(2, '0')}`; }
 function updateGameStats() { $('gameScore').textContent = String(game.score).padStart(6, '0'); $('gameCombo').textContent = game.combo; $('gameMaxCombo').textContent = game.maxCombo; $('perfectCount').textContent = game.perfect; $('goodCount').textContent = game.good; $('niceCount').textContent = game.nice; $('missCount').textContent = game.miss; $('gameTime').textContent = `${formatTime(game.elapsed + (TRACKS[game.track].audioPrelude || 0))} / ${formatTime(game.duration + (TRACKS[game.track].audioPrelude || 0))}`; }
 function syncGameControls() { const active = ['starting', 'countdown', 'running', 'paused'].includes(game.status); $('trackSelect').disabled = active; $$('[data-mode]').forEach(b => b.disabled = active); $('record').classList.toggle('playing', ['running', 'countdown'].includes(game.status)); $('pauseGame').disabled = !['running', 'countdown', 'paused'].includes(game.status); $('pauseGame').innerHTML = I(game.status === 'paused' ? 'play' : 'pause'); $('pauseGame').setAttribute('aria-label', game.status === 'paused' ? '继续演奏' : '暂停演奏'); const labels = { starting: '正在准备…', countdown: '暂停演奏', running: '暂停演奏', paused: '继续演奏', finished: '再演一遍', idle: '开始演奏' }; $('startGame').innerHTML = I(['running', 'countdown'].includes(game.status) ? 'pause' : 'play') + labels[game.status]; $('startGame').disabled = game.status === 'starting'; }
 function renderGameOverlay() {
+    RhythmScoreStage.ui();
     const e = $('gameOverlay');
     syncGameControls();
     if (game.status === 'running') {
@@ -88,7 +93,24 @@ function renderGameOverlay() {
         const bingbingIntpResult = run?.bingbingIntp ? `<p class="result-extra bingbing-intp-result">饼饼 · 全队技巧 +${run.bingbingIntp.teamTechnique} · ${run.bingbingIntp.people} 人档得分 +${run.bingbingIntp.bonusScore}${run.bingbingIntp.judgementWidth ? ' · 空格联动判定 +8%' : ''}</p>` : '';
         const wangResult = run?.wanglaoshi ? `<p class="result-extra wanglaoshi-result">汪老师 · 稳定输出区间 ${run.wanglaoshi.stableRange}%${run.wanglaoshi.pitchBoosts.length ? ` · 导师音准：${run.wanglaoshi.pitchBoosts.map(item => `${escapeHTML(cardDef(item.id).name)} +${item.boost}`).join('、')}` : ''}${run.wanglaoshi.latePenalty ? ' · 接孩子全属性 -10' : ''}</p>` : '';
         const sammyResult = run?.sammy ? `<p class="result-extra sammy-result">Sammy · 随机偏移影响 -50% · 保住连击 ${run.sammy.comboSaves} 次${run.sammy.flutePenalty ? ' · 怕笛全属性 -5' : ''}</p>` : '';
-        e.innerHTML = `<div class="eyebrow">OUR LITTLE ENCORE</div><h3 class="result-rank">${r.rank}</h3><h3 style="font-size:18px;margin-top:8px">${r.accuracy >= 85 ? '这一次，我们很有默契。' : r.accuracy >= 45 ? '你认真演奏的样子，很好看。' : '每一首合奏，都从第一拍开始。'}</h3>${run?.bingbingBurst ? `<div class="bingbing-burst" role="status"><strong>爆金币 · 得分 ×2</strong><span>基础得分 ${run.bingbingBaseScore} · 音符奖励照常结算</span><div aria-hidden="true">${Array.from({length:12},(_,i)=>`<i style="--burst-i:${i}">♪</i>`).join('')}</div></div>` : ''}<div class="result-stats"><div><strong>${game.score}</strong><span>本次得分</span></div><div><strong>${r.accuracy}%</strong><span>准确率</span></div><div><strong>${game.maxCombo}</strong><span>最高连击</span></div></div><p style="margin:0 0 17px">${r.reward ? `收获 ${r.reward} 音符 · ${r.newBest ? '刷新个人最佳！' : '谢谢你的认真演奏。'}` : '完整演奏达到 C（45%）即可获得音符，试试简单模式再来一次。'}</p>${teamResult}${levelResult}${mobiusResult}${riaResult}${bingbingIntpResult}${wangResult}${sammyResult}${run?.trioReport ? '<p class="result-extra">' + escapeHTML(run.trioReport) + '</p>' : ''}${run?.sourceReport ? `<p class="result-extra">${escapeHTML(run.sourceReport)}</p>` : ''}${run?.lalaReport ? `<p class="result-extra">${escapeHTML(run.lalaReport)}</p>` : ''}${run?.ids.includes('azhe') && run?.credited ? '<button class="btn secondary small" data-azhe-applause style="margin-bottom:8px">为阿喆送上掌声 · 华彩安可</button>' : ''}<div class="result-buttons"><button class="btn primary small" data-game="start">${I('repeat')}再演一遍</button><button class="btn secondary small" data-route="home">回排练室</button></div>`;
+        const winnieResult = run?.winnie ? `<p class="result-extra winnie-result">Winnie · ${run.winnie.activated ? `隐忍解除，后半程得分 +${run.winnie.bonusScore}` : run.winnie.prepared ? '曲目未满 30 秒，隐忍尚未解除' : '本局未准备隐忍'} · 观察补位 ${run.winnie.observationAssists} 次（今日 ${state.cards.daily.winnieAssists}/5）</p>` : '';
+        const jiukuangkuangResult = run?.jiukuangkuang ? `<p class="result-extra jiukuangkuang-result">酒狂狂 · 判定线 +12% · 漏拍补为 GOOD ${run.jiukuangkuang.rescues} 次${run.jiukuangkuang.prepared ? ` · 理智爆发 ${run.jiukuangkuang.activations} 次／自动长按 ${run.jiukuangkuang.autoHolds} 次` : ''}${run.jiukuangkuang.rhythmBoosts.length ? ` · 二次元节奏：${run.jiukuangkuang.rhythmBoosts.map(item => `${escapeHTML(cardDef(item.id).name)} +${item.boost}`).join('、')}` : ''}</p>` : '';
+        const fugeResult = run?.fuge ? `<p class="result-extra fuge-result">赋格 · 专注 ${run.fuge.focusStack}/5 层${run.fuge.xpGains.length ? ` · 经验：${run.fuge.xpGains.map(item => `${escapeHTML(cardDef(item.id).name)} +${item.amount}`).join('、')}` : ' · 本局未结算经验'}</p>` : '';
+        const liaResult = run?.lia ? `<p class="result-extra lia-result">Lia · 天然呆补位 ${run.lia.rescues}/3 次${run.lia.polkaEnergy.length ? ` · 波尔卡开局精力：${run.lia.polkaEnergy.map(item => `${escapeHTML(cardDef(item.id).name)} +${item.boost}`).join('、')}` : ''}${run.lia.sisterTechnique.length ? ` · 姐妹技巧：${run.lia.sisterTechnique.map(item => `${escapeHTML(cardDef(item.id).name)} +${item.boost}`).join('、')}` : ''}${run.lia.voice ? ' · 已触发语音彩蛋' : ''}</p>` : '';
+        const zouzouResult = run?.zouzou ? `<p class="result-extra zouzou-result">奏奏 · ${run.zouzou.autoJoined ? '神隐入场，全属性 +15% · ' : ''}TUBA 触发 ${run.zouzou.activations} 次${run.zouzou.activations ? `／最近持续 ${run.zouzou.lastDuration} 秒` : ''} · 得分 +${run.zouzou.bonusScore}</p>` : '';
+        const zentaResult = run?.zenta ? `<p class="result-extra zenta-result">水獭ZENTA · 队友得分 +${run.zenta.bonusScore}${run.zenta.pitchBoosts.length ? ` · 和声音准：${run.zenta.pitchBoosts.map(item => `${escapeHTML(cardDef(item.id).name)} +${item.boost}`).join('、')}` : ''}${run.zenta.energyRestores.length ? ' · 全队精力 +5' : ''}</p>` : '';
+        const jinsangResult = run?.jinsang ? `<p class="result-extra jinsang-result">金桑 · ${run.jinsang.event === 'crash' ? `翻车，得分 ${run.jinsang.bonusScore}` : run.jinsang.event === 'highlight' ? `高光，得分 +${run.jinsang.bonusScore}` : `平稳发挥，得分 ${run.jinsang.bonusScore >= 0 ? '+' : ''}${run.jinsang.bonusScore}`}${run.jinsang.kongge ? ' · 空格分格 -5%' : ''}${run.jinsang.simultaneousHighlight ? ' · 双人高光 +100%' : ''} · 下首高光 ${Math.round(run.jinsang.nextHighlightChance * 100)}%</p>` : '';
+        e.innerHTML = `<div class="eyebrow">OUR LITTLE ENCORE</div><h3 class="result-rank">${r.rank}</h3><h3 style="font-size:18px;margin-top:8px">${r.accuracy >= 85 ? '这一次，我们很有默契。' : r.accuracy >= 45 ? '你认真演奏的样子，很好看。' : '每一首合奏，都从第一拍开始。'}</h3>${run?.bingbingBurst ? `<div class="bingbing-burst" role="status"><strong>爆金币 · 得分 ×2</strong><span>基础得分 ${run.bingbingBaseScore} · 音符奖励照常结算</span><div aria-hidden="true">${Array.from({length:12},(_,i)=>`<i style="--burst-i:${i}">♪</i>`).join('')}</div></div>` : ''}<div class="result-stats"><div><strong>${game.score}</strong><span>本次得分</span></div><div><strong>${r.accuracy}%</strong><span>准确率</span></div><div><strong>${game.maxCombo}</strong><span>最高连击</span></div></div><p style="margin:0 0 17px">${r.reward ? `收获 ${r.reward} 音符 · ${r.newBest ? '刷新个人最佳！' : '谢谢你的认真演奏。'}` : '完整演奏达到 C（45%）即可获得音符，试试简单模式再来一次。'}</p>${teamResult}${levelResult}${mobiusResult}${riaResult}${bingbingIntpResult}${wangResult}${sammyResult}${winnieResult}${jiukuangkuangResult}${run?.trioReport ? '<p class="result-extra">' + escapeHTML(run.trioReport) + '</p>' : ''}${run?.sourceReport ? `<p class="result-extra">${escapeHTML(run.sourceReport)}</p>` : ''}${run?.lalaReport ? `<p class="result-extra">${escapeHTML(run.lalaReport)}</p>` : ''}${run?.ids.includes('azhe') && run?.credited ? '<button class="btn secondary small" data-azhe-applause style="margin-bottom:8px">为阿喆送上掌声 · 华彩安可</button>' : ''}<div class="result-buttons"><button class="btn primary small" data-game="start">${I('repeat')}再演一遍</button><button class="btn secondary small" data-route="home">回排练室</button></div>`;
+        if (fugeResult)
+            e.querySelector('.result-buttons')?.insertAdjacentHTML('beforebegin', fugeResult);
+        if (liaResult)
+            e.querySelector('.result-buttons')?.insertAdjacentHTML('beforebegin', liaResult);
+        if (zouzouResult)
+            e.querySelector('.result-buttons')?.insertAdjacentHTML('beforebegin', zouzouResult);
+        if (zentaResult)
+            e.querySelector('.result-buttons')?.insertAdjacentHTML('beforebegin', zentaResult);
+        if (jinsangResult)
+            e.querySelector('.result-buttons')?.insertAdjacentHTML('beforebegin', jinsangResult);
     }
     if (game.status !== 'countdown') {
         e.style.background = '';
@@ -102,6 +124,7 @@ function scheduleSong() {
         return;
     stopSongAudio(true);
     const origin = audioCtx.currentTime + (game.startAt - performance.now()) / 1000, now = audioCtx.currentTime;
+    if(RhythmScoreStage.active()){RhythmScoreStage.schedule(origin,now);return;}
     for (const n of game.melodyEvents) {
         if (origin + n.time < now + .004)
             continue;
@@ -150,6 +173,10 @@ async function startGame() {
         renderGameOverlay();
         return;
     }
+    if(RhythmScoreStage.active() && a && state.sound){
+        await RhythmScoreStage.prepare();
+        if(token!==game.startToken)return;
+    }
     if (TRACKS[game.track].audio) {
         try {
             await RhythmRecording.start(TRACKS[game.track]);
@@ -164,13 +191,20 @@ async function startGame() {
         if (token !== game.startToken) return;
     }
     generateChart();
-    const preparation = (TRACKS[game.track].countIn ?? 3) + gameLeadIn();
+    const preparation = (TRACKS[game.track].countIn ?? 3) - gameCountdownEnd();
     Object.assign(game, { elapsed: -preparation, score: 0, combo: 0, maxCombo: 0, perfect: 0, good: 0, nice: 0, miss: 0, flashes: [0, 0, 0, 0], judgement: null, result: null, status: 'countdown', startAt: performance.now() + preparation * 1000, countdownLabel: 3, countdownSoundLabel: null });
-    game.cardRun = captureCardRun();
+    const performanceLineup = zouzouPerformanceLineup();
+    game.cardRun = captureCardRun(Math.random, performanceLineup.ids, { zouzouAutoJoined: performanceLineup.autoJoined });
+    if (game.cardRun.jinsang?.event === 'crash')
+        save();
+    applyLiaOpeningEnergy(game.cardRun);
+    if (game.cardRun.lia?.voice)
+        toast(`Lia：“${game.cardRun.lia.voice.line}”`, true);
     game.bingbingStrategyReady = false;
     renderRhythmTeam();
+    showJinsangPerformanceCue(game.cardRun);
     if (audioMaster)
-        audioMaster.gain.setTargetAtTime(state.sound ? 0.28 : 0, audioCtx.currentTime, .02);
+        audioMaster.gain.setTargetAtTime(state.sound ? GAME_AUDIO_LEVEL : 0, audioCtx.currentTime, .02);
     scheduleSong();
     renderGameOverlay();
     updateGameStats();
@@ -208,7 +242,7 @@ async function resumeGame() {
         if (token !== game.startToken || game.status !== 'paused') return;
     }
     game.startAt = performance.now() - game.elapsed * 1000;
-    game.status = game.elapsed < -gameLeadIn() ? 'countdown' : 'running';
+    game.status = game.elapsed < gameCountdownEnd() ? 'countdown' : 'running';
     scheduleSong();
     renderGameOverlay();
     ensureGameLoop();
@@ -254,6 +288,7 @@ function finishGame() {
         state.best[gameKey()] = { score: game.score, accuracy, rank, combo: game.maxCombo };
     applyRiaCompensation(complete, hits, raw);
     applyBingbingScore(complete, hits);
+    updateFugeFocus(complete, hits);
     state.coins += payout.base;
     if (qualified) {
         markDaily('rhythm');
@@ -285,7 +320,7 @@ function hitLane(lane) {
     setTimeout(() => btn?.classList.remove('pressed'), 120);
     if (game.status !== 'running')
         return;
-    const time = gameTime(now), windowSize = (game.mode === 'gentle' ? .24 : .19) * (1 + (game.cardRun?.bingbingIntp?.judgementWidth || 0));
+    const time = gameTime(now), windowSize = (game.mode === 'gentle' ? .24 : .19) * (1 + (game.cardRun?.bingbingIntp?.judgementWidth || 0) + (game.cardRun?.jiukuangkuang?.judgementWidth || 0));
     let nearest = null, dist = Infinity;
     for (const note of game.notes) {
         if (note.lane !== lane || note.hit || note.missed)
@@ -298,6 +333,12 @@ function hitLane(lane) {
     }
     if (!nearest)
         return;
+    awardRhythmNote(nearest,dist,time,now);
+}
+function awardRhythmNote(nearest,dist,time,now){
+    const lane=nearest.lane;
+    if(nearest.hit||nearest.missed)return;
+    if (jiukuangkuangAutoHold(nearest, time)) dist = 0;
     nearest.hit = true;
     if (game.cardRun?.sourceSnapshot) {
         game.cardRun.sourceSnapshot.manualHits++;
@@ -308,20 +349,21 @@ function hitLane(lane) {
     let label;
     if (dist <= .075) {
         game.perfect++;
-        game.score += 1000 + mobiusScoreBonus(1000, time) + bingbingIntpScoreBonus(1000);
+        game.score += 1000 + mobiusScoreBonus(1000, time) + bingbingIntpScoreBonus(1000) + winnieScoreBonus(1000, time) + zouzouScoreBonus(1000, time) + zentaScoreBonus(1000) + jinsangScoreBonus(1000);
         label = 'PERFECT';
     }
     else if (dist <= .145) {
         game.good++;
-        game.score += 700 + mobiusScoreBonus(700, time) + bingbingIntpScoreBonus(700);
+        game.score += 700 + mobiusScoreBonus(700, time) + bingbingIntpScoreBonus(700) + winnieScoreBonus(700, time) + zouzouScoreBonus(700, time) + zentaScoreBonus(700) + jinsangScoreBonus(700);
         label = 'GOOD';
     }
     else {
         game.nice++;
-        game.score += 400 + mobiusScoreBonus(400, time) + bingbingIntpScoreBonus(400);
+        game.score += 400 + mobiusScoreBonus(400, time) + bingbingIntpScoreBonus(400) + winnieScoreBonus(400, time) + zouzouScoreBonus(400, time) + zentaScoreBonus(400) + jinsangScoreBonus(400);
         label = 'NICE';
     }
     onMobiusJudgement(label, time);
+    onZouzouJudgement(label);
     game.combo++;
     game.maxCombo = Math.max(game.maxCombo, game.combo);
     game.judgement = { text: label, at: now, lane };
@@ -402,7 +444,8 @@ function drawGame(now) {
         ctx.fillText(['D', 'F', 'J', 'K'][i], (i + .5) * laneW, h - 14);
     }
     const time = game.elapsed;
-    const visible = game.status === 'running' || (game.status === 'paused' && time >= -gameLeadIn()) ? game.notes : [];
+    const scoreEntry = RhythmScoreStage.active() && ['countdown', 'paused'].includes(game.status);
+    const visible = game.status === 'running' || scoreEntry || (game.status === 'paused' && time >= gameCountdownEnd()) ? game.notes : [];
     visible.forEach(n => {
         if (n.hit || n.missed)
             return;
@@ -412,10 +455,11 @@ function drawGame(now) {
         const x = (n.lane + .5) * laneW, r = laneW < 90 ? 20 : 24;
         ctx.save();
         ctx.shadowBlur = 15;
-        ctx.shadowColor = n.lane % 2 ? '#b687b161' : '#cd97ad80';
+        const tubaGold = zouzouTubaActive(time);
+        ctx.shadowColor = tubaGold ? '#ffc94fbb' : n.lane % 2 ? '#b687b161' : '#cd97ad80';
         const g = ctx.createLinearGradient(x - r, y - r, x + r, y + r);
-        g.addColorStop(0, n.lane % 2 ? '#c8a7d0' : '#e3b0bf');
-        g.addColorStop(1, n.lane % 2 ? '#b18ebc' : '#c78ca4');
+        g.addColorStop(0, tubaGold ? '#fff0a3' : n.lane % 2 ? '#c8a7d0' : '#e3b0bf');
+        g.addColorStop(1, tubaGold ? '#e3a82d' : n.lane % 2 ? '#b18ebc' : '#c78ca4');
         ctx.fillStyle = g;
         ctx.beginPath();
         ctx.arc(x, y, r, 0, Math.PI * 2);
@@ -424,9 +468,10 @@ function drawGame(now) {
         ctx.strokeStyle = '#fff7';
         ctx.lineWidth = 2;
         ctx.stroke();
-        drawPaw(x, y, r * 1.05, '#fff7f6');
+        drawPaw(x, y, r * 1.05, tubaGold ? '#fffbea' : '#fff7f6');
         ctx.restore();
     });
+    RhythmScoreStage.drawHint(w,h);
     if (game.judgement) {
         const age = (now - game.judgement.at) / 1000;
         if (age < .62) {
@@ -449,7 +494,7 @@ function gameFrame(now) {
     if (['running', 'countdown'].includes(game.status)) {
         game.elapsed = gameTime(now);
         if (game.status === 'countdown') {
-            if (game.elapsed >= -gameLeadIn()) {
+            if (game.elapsed >= gameCountdownEnd()) {
                 game.status = 'running';
                 renderGameOverlay();
             }
@@ -457,6 +502,7 @@ function gameFrame(now) {
                 renderGameOverlay();
         }
         if (game.status === 'running') {
+            RhythmScoreStage.frame();
             const late = game.mode === 'gentle' ? .24 : .19;
             for (const n of game.notes) {
                 if (!n.hit && !n.missed && game.elapsed - n.time > late) {
@@ -469,6 +515,7 @@ function gameFrame(now) {
     }
     if (now - game.lastUi > 180) {
         updateGameStats();
+        updateZouzouTubaUI();
         game.lastUi = now;
     }
     drawGame(now);

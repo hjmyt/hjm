@@ -1,5 +1,7 @@
 'use strict';
 
+const GAME_AUDIO_LEVEL = .8;
+
 // Rhythm game Web Audio: original synthesized melodies. Story BGM is managed separately.
 let audioCtx = null, audioMaster = null, audioUnavailable = false, audioBlocked = false, synthAudioBridge = null, bridgeIdleTimer = 0, audioStarts = 0;
 const iosAudio = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
@@ -40,6 +42,7 @@ function unlockSynthAudio() {
 }
 function renderAudioStatus() {
     RhythmRecording.syncSound();
+    if(typeof RhythmScoreStage !== 'undefined' && RhythmScoreStage.active() && !audioUnavailable && !audioBlocked){RhythmScoreStage.ui();return;}
     $('audioStatus').textContent = !state.sound ? '静音中 · 可点右上角开启' : TRACKS[game.track].audio ? '♪ 原曲录音 · 完整版' : audioUnavailable ? '浏览器不支持合成音频' : audioBlocked ? '音频暂停 · 点击开始或继续重试' : '♪ 原创合成音色';
 }
 async function ensureAudio() {
@@ -58,8 +61,14 @@ async function ensureAudio() {
             }
             audioCtx = new AC();
             audioMaster = audioCtx.createGain();
-            audioMaster.gain.value = state.sound ? 0.28 : 0;
+            audioMaster.gain.value = state.sound ? GAME_AUDIO_LEVEL : 0;
             const compressor = audioCtx.createDynamicsCompressor();
+            // Compress only loud peaks; the default -24 dB threshold muffles score playback.
+            compressor.threshold.value = -8;
+            compressor.knee.value = 6;
+            compressor.ratio.value = 12;
+            compressor.attack.value = .003;
+            compressor.release.value = .12;
             audioMaster.connect(compressor);
             compressor.connect(audioCtx.destination);
             audioCtx.onstatechange = () => {
@@ -118,6 +127,15 @@ function toneAt(midi, when, duration, volume = .12, group = 'song', wave = 'tria
     osc.onended = () => { songNodes.delete(osc); synthNodes.delete(osc); osc.disconnect(); gain.disconnect(); releaseAudioBridge(); };
     osc.start(t);
     osc.stop(t + Math.max(.18, duration) + .26);
+}
+function scoreInstrumentAt(midi, when, duration, volume, instrument) {
+    if(!audioCtx || !audioMaster)return;
+    clearTimeout(bridgeIdleTimer);
+    return ScoreInstrumentAudio.play(audioCtx,audioMaster,instrument,440*Math.pow(2,(midi-69)/12),when,duration,volume,node=>{
+        songNodes.add(node);synthNodes.add(node);
+        node.addEventListener('ended',()=>{songNodes.delete(node);synthNodes.delete(node);releaseAudioBridge();},{once:true});
+        return node;
+    });
 }
 function stopSongAudio(keepOutput = false) {
     if (!keepOutput) RhythmRecording.pause();

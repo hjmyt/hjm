@@ -8,7 +8,7 @@ function cardUnlockOffer(c, compact = false) {
     return `<div class="card-unlock-offer"><button class="btn primary" data-card-unlock="${c.id}" aria-label="消耗 ${cost} 音符解锁${c.name}，该角色羁绊加 ${gain}" ${!storageOK || state.coins < cost ? 'disabled' : ''}>${cost} 音符解锁</button><p>解锁后${c.name}羁绊 +${gain}（最高 100）<br>${hint}</p></div>`;
 }
 
-function cardSkillSummary() { const p = state.cards.prepared; return p?.id === 'bingbing' ? '爆金币已准备 · 35% 概率本场得分翻倍' : p ? `${cardDef(p.id).activeName}${p.target ? ' → ' + cardDef(p.target).name : ''}已准备 · 与编队合计最多 +2 ♪` : '还可以准备一项主动技能'; }
+function cardSkillSummary() { const p = state.cards.prepared; return p?.id === 'bingbing' ? '爆金币已准备 · 35% 概率本场得分翻倍' : p?.id === 'winnie' ? '隐忍已准备 · 开演 30 秒后得分 +30%' : p?.id === 'jiukuangkuang' ? '理智爆发已准备 · 首枚长按音符开启 10 秒' : p ? `${cardDef(p.id).activeName}${p.target ? ' → ' + cardDef(p.target).name : ''}已准备 · 与编队合计最多 +2 ♪` : '还可以准备一项主动技能'; }
 
 function teamSlots(ids = state.cards.team, editable = true) {
     return Array.from({ length: 3 }, (_, i) => {
@@ -44,8 +44,81 @@ function renderRhythmTeam() {
     const intpBuff = run?.bingbingIntp || (ids.includes('bingbing_intp') ? { teamTechnique: 22, judgementWidth: ids.includes('kongge') ? .08 : 0 } : null);
     const wangBuff = run?.wanglaoshi || (ids.includes('wanglaoshi') ? { pitchBoosts: wangTeacherPitchBoosts(ids), stableRange: 5, latePenalty: isWangTeacherLate() ? 10 : 0 } : null);
     const sammyBuff = run?.sammy || (ids.includes('sammy') ? { timingOffsetMultiplier: .5, comboSaves: 0, flutePenalty: sammyFlutePenaltyActive(ids) ? 5 : 0 } : null);
+    const winnieBuff = run?.winnie || (ids.includes('winnie') ? { prepared: state.cards.prepared?.id === 'winnie', observationAssists: 0 } : null);
+    const jiukuangkuangBuff = run?.jiukuangkuang || (ids.includes('jiukuangkuang') ? { judgementWidth: .12, missToGoodChance: .08, prepared: state.cards.prepared?.id === 'jiukuangkuang', rhythmBoosts: jiukuangkuangRhythmBoosts(ids) } : null);
+    const fugeBuff = run?.fuge || (ids.includes('fuge') ? { focusStack: state.cards.fuge?.streak || 0 } : null);
+    const liaBuff = run?.lia || (ids.includes('lia') ? { rescues: 0, polkaEnergy: liaPolkaEnergyBoosts(ids), sisterTechnique: liaSisterTechniqueBoosts(ids), voice: null } : null);
+    const zentaBuff = run?.zenta || (ids.includes('zenta') ? { pitchBoosts: zentaViolinPitchBoosts(ids), energyRestores: [], bonusScore: 0 } : null);
+    const jinsangBuff = run?.jinsang || (ids.includes('jinsang') ? { event: 'pending', highlightChance: Math.min(.5, .2 + (state.cards.jinsang?.highlightBonus || 0) / 100), kongge: ids.includes('kongge') } : null);
+    const zouzouWaiting = !run && cardOwned('zouzou') && !ids.includes('zouzou') && ids.length < 3;
     $('rhythmTeam').classList.toggle('is-solo', !ids.length);
-    $('rhythmTeam').innerHTML = `${ids.length ? `<div class="team-lineup">${teamSlots(ids, false)}</div>` : `<div class="rhythm-solo-mark">${I('music')}</div>`}<div class="rhythm-team-text"><strong>${locked ? '本场阵容已就位' : ids.length ? '和伙伴一起登台' : '先来一场独奏练习'}${ids.length ? `<span class="rhythm-bonus">奖励 +${plus} ♪</span>` : ''}${intpBuff ? `<span class="rhythm-bonus">技巧 +${intpBuff.teamTechnique}${intpBuff.judgementWidth ? ' · 判定 +8%' : ''}</span>` : ''}${wangBuff ? `<span class="rhythm-bonus">导师音准 ${wangBuff.pitchBoosts.length ? wangBuff.pitchBoosts.map(item => `${escapeHTML(cardDef(item.id).name)} +${item.boost}`).join('、') : '队员已达标'}${wangBuff.latePenalty ? ' · 晚八点全属性 -10' : ''}</span>` : ''}${sammyBuff ? `<span class="rhythm-bonus">随机偏移 -50%${sammyBuff.flutePenalty ? ' · 怕笛全属性 -5' : ''}</span>` : ''}</strong><small>今日已完成 ${economy().daily.rhythm} 场达标演奏。与伙伴完成一场有手动命中的合奏，编队角色羁绊分各 +1；首次携带乐队／乐团成员取得某一评级，还会提升对应的全局等级，同一评级只结算一次。合奏额度独立计算，每角色每天最多 10 次。前 3 场 · 当前${game.mode === 'normal' ? '困难' : '简单'}谱面：C/B/A/S 奖励 ${rhythmBaseRewards(TRACKS[game.track].id, game.mode).join('/')} 音符，编队与技能最多另 +2；之后每场共 1 音符。须完整演奏达到 C（45%）才发音符，演奏免费。</small></div><button class="btn ghost small" data-route="${availableCardPool().length ? 'cards' : 'chronicle'}">${I(availableCardPool().length ? 'team' : 'album')}${locked ? '查看编队' : availableCardPool().length ? '调整编队' : '去相遇'}</button>`;
+    $('rhythmTeam').innerHTML = `${ids.length ? `<div class="team-lineup">${teamSlots(ids, false)}</div>` : `<div class="rhythm-solo-mark">${I('music')}</div>`}<div class="rhythm-team-text"><strong>${locked ? '本场阵容已就位' : ids.length ? '和伙伴一起登台' : '先来一场独奏练习'}${ids.length ? `<span class="rhythm-bonus">奖励 +${plus} ♪</span>` : ''}${intpBuff ? `<span class="rhythm-bonus">技巧 +${intpBuff.teamTechnique}${intpBuff.judgementWidth ? ' · 判定 +8%' : ''}</span>` : ''}${wangBuff ? `<span class="rhythm-bonus">导师音准 ${wangBuff.pitchBoosts.length ? wangBuff.pitchBoosts.map(item => `${escapeHTML(cardDef(item.id).name)} +${item.boost}`).join('、') : '队员已达标'}${wangBuff.latePenalty ? ' · 晚八点全属性 -10' : ''}</span>` : ''}${sammyBuff ? `<span class="rhythm-bonus">随机偏移 -50%${sammyBuff.flutePenalty ? ' · 怕笛全属性 -5' : ''}</span>` : ''}${winnieBuff ? `<span class="rhythm-bonus">观察 ${state.cards.daily.winnieAssists}/5${winnieBuff.prepared ? ' · 30 秒后得分 +30%' : ' · 隐忍未准备'}</span>` : ''}</strong><small>今日已完成 ${economy().daily.rhythm} 场达标演奏。与伙伴完成一场有手动命中的合奏，编队角色羁绊分各 +1；首次携带乐队／乐团成员取得某一评级，还会提升对应的全局等级，同一评级只结算一次。合奏额度独立计算，每角色每天最多 10 次。前 3 场 · 当前${game.mode === 'normal' ? '困难' : '简单'}谱面：C/B/A/S 奖励 ${rhythmBaseRewards(TRACKS[game.track].id, game.mode).join('/')} 音符，编队与技能最多另 +2；之后每场共 1 音符。须完整演奏达到 C（45%）才发音符，演奏免费。</small></div><div class="rhythm-team-actions"><button class="btn ghost small" data-route="${availableCardPool().length ? 'cards' : 'chronicle'}">${I(availableCardPool().length ? 'team' : 'album')}${locked ? '查看编队' : availableCardPool().length ? '调整编队' : '去相遇'}</button></div>`;
+    if (jiukuangkuangBuff) {
+        const label = document.createElement('span');
+        label.className = 'rhythm-bonus';
+        label.textContent = `判定 +12% · MISS→GOOD +8%${jiukuangkuangBuff.prepared ? ' · 理智爆发已准备' : ''}${jiukuangkuangBuff.rhythmBoosts.length ? ` · 二次元节奏 ${jiukuangkuangBuff.rhythmBoosts.map(item => `${cardDef(item.id).name} +${item.boost}`).join('、')}` : ''}`;
+        $('rhythmTeam').querySelector('.rhythm-team-text strong')?.append(label);
+    }
+    if (fugeBuff) {
+        const label = document.createElement('span');
+        label.className = 'rhythm-bonus';
+        label.textContent = `赋格经验 +50% · 队友 +15% · 专注 ${fugeBuff.focusStack}/5 层`;
+        $('rhythmTeam').querySelector('.rhythm-team-text strong')?.append(label);
+    }
+    if (liaBuff) {
+        const label = document.createElement('span');
+        label.className = 'rhythm-bonus';
+        const polka = liaBuff.polkaEnergy.length ? ` · 波尔卡精力 ${liaBuff.polkaEnergy.map(item => `${cardDef(item.id).name} +${item.boost}`).join('、')}` : '';
+        const sisters = liaBuff.sisterTechnique.length ? ` · 姐妹技巧 ${liaBuff.sisterTechnique.map(item => `${cardDef(item.id).name} +${item.boost}`).join('、')}` : '';
+        label.textContent = `天然呆 ${liaBuff.rescues}/3${polka}${sisters}`;
+        $('rhythmTeam').querySelector('.rhythm-team-text strong')?.append(label);
+    }
+    if (zentaBuff) {
+        const label = document.createElement('span');
+        label.className = 'rhythm-bonus';
+        const harmony = zentaBuff.pitchBoosts.length ? ` · 小提琴音准 ${zentaBuff.pitchBoosts.map(item => `${cardDef(item.id).name} +${item.boost}`).join('、')}` : '';
+        label.textContent = `默默支持 · 队友得分 +12%${harmony} · 结束后全队精力 +5`;
+        $('rhythmTeam').querySelector('.rhythm-team-text strong')?.append(label);
+    }
+    if (jinsangBuff) {
+        const label = document.createElement('span');
+        label.className = 'rhythm-bonus jinsang-status';
+        const event = jinsangBuff.event === 'pending' ? '开场待判定' : jinsangBuff.event === 'crash' ? '翻车 -15%' : jinsangBuff.event === 'highlight' ? '高光 +60%' : '平稳发挥';
+        label.textContent = `金桑 · ${event} · 高光 ${Math.round(jinsangBuff.highlightChance * 100)}%${jinsangBuff.kongge ? ' · 空格分格 -5%' : ''}`;
+        $('rhythmTeam').querySelector('.rhythm-team-text strong')?.append(label);
+    }
+    if (zouzouWaiting) {
+        const label = document.createElement('span');
+        label.className = 'rhythm-bonus';
+        label.textContent = '奏奏 · 演出日待命，有空位时将临时加入';
+        $('rhythmTeam').querySelector('.rhythm-team-text strong')?.append(label);
+    }
+    if (run?.zouzou) {
+        const label = document.createElement('span');
+        label.className = 'rhythm-bonus zouzou-status';
+        label.textContent = `奏奏${run.zouzou.autoJoined ? ' · 神隐入场 · 全属性 +15%' : ''}${zouzouHasCello(ids) ? ' · 低音共振 15 秒' : ' · TUBA 12 秒'}`;
+        $('rhythmTeam').querySelector('.rhythm-team-text strong')?.append(label);
+        const button = document.createElement('button');
+        button.className = 'btn primary small zouzou-tuba-button';
+        button.dataset.zouzouTuba = '';
+        $('rhythmTeam').querySelector('.rhythm-team-actions')?.prepend(button);
+        updateZouzouTubaUI();
+    }
+}
+
+function updateZouzouTubaUI() {
+    const button = document.querySelector('[data-zouzou-tuba]'), skill = game.cardRun?.zouzou;
+    if (!button || !skill)
+        return;
+    const at = game.elapsed, active = at < skill.activeUntil, cooldown = Math.max(0, Math.ceil(skill.cooldownUntil - at));
+    button.disabled = game.status !== 'running' || skill.energy < 100 || cooldown > 0;
+    button.classList.toggle('is-active', active);
+    button.textContent = active
+        ? `TUBA 生效中 · ${Math.max(0, Math.ceil(skill.activeUntil - at))}s`
+        : cooldown > 0
+            ? `TUBA ${skill.energy}% · 冷却 ${cooldown}s`
+            : `释放 TUBA · 能量 ${skill.energy}%`;
+    $('rhythmTeam')?.classList.toggle('zouzou-tuba-active', active);
 }
 
 function renderCardGlobals() {
@@ -94,7 +167,7 @@ function renderCardPage() {
     page.classList.toggle('is-emo', c.id === 'dijie' && expansion().dijie.emo);
     page.dataset.person = c.id;
     page.innerHTML = `<div class="detail-topbar"><button class="btn ghost small" data-card-back>${I('back')}返回${CardUI.returnTo === 'home' ? '排练室' : '卡册'}</button><span class="tiny">NO. ${String(CARD_DEFS.indexOf(c) + 1).padStart(3, '0')} · ${cardRarity(c)} · ${own ? '已珍藏' : '未相遇'}</span><button class="btn ghost small" data-card-help>${I('help')}玩法</button></div>
- <div class="detail-layout"><article class="character-cover "><img class="cover-art card-full-image" src="${cardImage(c, 'full')}" alt="${c.name}卡牌插画"><div class="cover-top"><div class="cover-rarity">${cardRarity(c)}<small>${c.id === 'tang' ? 'HIDDEN EDITION' : 'ORCHESTRA · MEMBER'}</small></div><span class="cover-tag">${c.id === 'jerry' ? c.mbti : c.id === 'kongge' ? (hiddenSkillReady('kongge') ? konggeForm() : '一提首席') : dark ? '好好先生暂时下线' : c.tag.split(' · ')[0]}</span></div><div class="cover-content"><div class="cover-name">${c.id === 'tang' && god ? '汤少 <small>· 汤神</small>' : c.name}</div><div class="cover-sub">${c.id === 'jerry' ? `现代音乐人 · 「${c.subtitle}」` : `${c.role} · ${c.id === 'tang' ? '全团摄像头' : c.tag.split(' · ')[1] || '你的排练搭档'}`}</div><div class="cover-signature">MUSIC BRINGS US CLOSER</div><blockquote>“${c.quote}”</blockquote><div class="cover-bottom-stats"><span class="stars">${cardStars(c)}</span><span><b>${lv}</b> / 60 级</span><span>♡ ${bond}</span></div><div class="cover-actions">${own ? `<button class="btn cover-main" data-card-team="${c.id}">${I(state.cards.team.includes(c.id) ? 'check' : 'team')}${state.cards.team.includes(c.id) ? '已在编队' : '加入编队'}</button>${c.id === 'jerry' ? (bond > 20 ? `<button class="btn fusion-entry" data-fusion-open data-fusion-invite>${I('music')}去山丘看看</button>` : '') : c.fusionOnly ? `<button class="btn fusion-entry" data-fusion-open>${I('music')}继续融合线</button>` : `<button class="btn" data-card-story="${c.id}">${I('heart')}${state.completed.includes(c.id) ? '重温相遇' : c.id === 'kongge' ? '角色日常' : c.id === 'tim' ? '角色日常' : c.id === 'lala' ? '排练日常' : c.chronicleOnly ? '乐团正传' : '心动故事'}</button>`}` : `<button class="btn cover-main" data-card-recruit>${I('ticket')}邀请这位伙伴</button>`}</div>${c.id === 'tang' && hiddenSkillReady('tang') ? `<button class="cover-form" data-card-form>${I('repeat')}切换形态 · ${god ? '汤神 → 汤少' : '汤少 → 汤神'}</button>` : ''}</div></article>
+ <div class="detail-layout"><article class="character-cover "><img class="cover-art card-full-image" src="${cardImage(c, 'full')}" alt="${c.name}卡牌插画"><div class="cover-top"><div class="cover-rarity">${cardRarity(c)}<small>${c.id === 'tang' ? 'HIDDEN EDITION' : 'ORCHESTRA · MEMBER'}</small></div><span class="cover-tag">${c.id === 'jerry' ? c.mbti : c.id === 'kongge' ? (hiddenSkillReady('kongge') ? konggeForm() : '一提首席') : dark ? '好好先生暂时下线' : c.tag.split(' · ')[0]}</span></div><div class="cover-content"><div class="cover-name">${c.id === 'tang' && god ? '汤少 <small>· 汤神</small>' : c.name}</div><div class="cover-sub">${c.id === 'jerry' ? `现代音乐人 · 「${c.subtitle}」` : `${c.role} · ${c.id === 'tang' ? '全团摄像头' : c.tag.split(' · ')[1] || '你的排练搭档'}`}</div><div class="cover-signature">MUSIC BRINGS US CLOSER</div><blockquote>“${c.quote}”</blockquote><div class="cover-bottom-stats"><span class="stars">${cardStars(c)}</span><span><b>${lv}</b> / 60 级</span><span>♡ ${bond}</span></div><div class="cover-actions">${own ? `${c.id === 'zouzou' ? `<button class="btn cover-main" data-route="rhythm">${I('music')}演出日自动加入</button>` : `<button class="btn cover-main" data-card-team="${c.id}">${I(state.cards.team.includes(c.id) ? 'check' : 'team')}${state.cards.team.includes(c.id) ? '已在编队' : '加入编队'}</button>`}${c.id === 'jerry' ? (bond > 20 ? `<button class="btn fusion-entry" data-fusion-open data-fusion-invite>${I('music')}去山丘看看</button>` : '') : c.fusionOnly ? `<button class="btn fusion-entry" data-fusion-open>${I('music')}继续融合线</button>` : `<button class="btn" data-card-story="${c.id}">${I('heart')}${state.completed.includes(c.id) ? '重温相遇' : c.id === 'kongge' ? '角色日常' : c.id === 'tim' ? '角色日常' : c.id === 'lala' ? '排练日常' : c.chronicleOnly ? '乐团正传' : '心动故事'}</button>`}` : `<button class="btn cover-main" data-card-recruit>${I('ticket')}邀请这位伙伴</button>`}</div>${c.id === 'tang' && hiddenSkillReady('tang') ? `<button class="cover-form" data-card-form>${I('repeat')}切换形态 · ${god ? '汤神 → 汤少' : '汤少 → 汤神'}</button>` : ''}</div></article>
  <div class="profile-stack">${own ? `<div class="profile-tabs" role="tablist" aria-label="角色详情"><button class="${CardUI.tab === 'detail' ? 'active' : ''}" data-card-tab="detail" role="tab" aria-selected="${CardUI.tab === 'detail'}">详情 · 技能与投喂</button><button class="${CardUI.tab === 'bond' ? 'active' : ''}" data-card-tab="bond" role="tab" aria-selected="${CardUI.tab === 'bond'}">${'羁绊分'} · ${bond}/100</button></div>` : ''}
  ${!own ? `<div class="locked-detail"><section class="profile-panel"><div class="eyebrow">A NEW MEETING IS WAITING</div><h3>他也在等你的邀请。</h3><p>${c.id === 'tang' ? '第一封邀请固定获得 SSR 汤少，同时开启「汤少 / 汤神」双形态。' : '第二封邀请固定获得 R 飞鸿，并开启「三分钟黑化 / 橘猫安抚」互动。'}<br>新篇已附赠 3 张邀请券，不需要真实付款。</p><button class="btn primary" data-card-recruit>${I('sparkles')}拆开邀请函</button></section></div>` : ''}
  ${concealCardSkills(CardUI.tab === 'bond' && own ? renderBondContent(c) : renderDetailContent(c, own), c)}
@@ -115,7 +188,7 @@ function renderDetailContent(c, own) {
     const lv = cardLevel(c.id), v = state.cards.collection[c.id], gifts = cardGifts(c), used = state.cards.daily.gifts[c.id] || 0, bond = cardBond(c.id), selected = gifts.find(g => g[0] === CardUI.gift), inTeam = state.cards.team.includes(c.id), queued = state.cards.prepared?.id === c.id;
     const infoRows = c.profileFields || [['身份', c.identity], ['位置', c.seat], ['擅长', c.specialty], ...(c.crush ? [['暗恋', c.crush]] : []), ...(c.id === 'qiqi' ? [['外形', '旗袍 · 中式盘发'], ['反差', '旗袍与失真音墙同框']] : [['情敌', c.rival]]), ...(c.id === 'tang' && hiddenSkillReady('tang') ? [['当前形态', state.cards.form === 'god' ? '汤神 · 隐藏摄影之神' : '汤少 · 逗比青年']] : [])];
     const info = c.sourceSet ? renderSourceInfo(c) : `<section class="profile-panel"><h3 class="panel-title">${I('cards')}基本资料 <span class="tiny">${c.tag}</span></h3><dl class="profile-info">${infoRows.map(([key, value]) => `<dt>${key}</dt><dd>${value}</dd>`).join('')}</dl><p class="info-bio">${c.bio}</p></section>`;
-    const attrs = `<section class="profile-panel"><h3 class="panel-title">${I('stats')}${c.id === 'tang' ? '评级面板' : '属性面板'}<span class="tiny">Lv.${lv} · ${own ? '已相遇' : '等待相遇'}</span></h3>${c.id === 'tang' ? `<div class="grade-panel">${[['摄影', 'EX'], ['人像', 'S+'], ['出片率', 'S'], ['硬盘储量', '数十T']].map(([k, v]) => `<div class="grade-cell"><small>${k}</small><strong>${v}</strong></div>`).join('')}</div>` : `<div class="profile-stats">${c.stats.map(([k, v]) => { let val = typeof v === 'number' ? (c.id === 'jerry' ? v : c.sourceSet ? sourceStat(c, k, v) : newStat(c, Math.min(100, v + Math.floor(lv / 5)))) : v; const cap = Number(c.statCaps?.[k]); if (typeof val === 'number' && Number.isFinite(cap)) val = Math.min(cap, val); if (typeof val === 'number' && c.id === 'wanglaoshi' && isWangTeacherLate()) val = Math.max(0, val - 10); if (typeof val === 'number' && c.id === 'sammy' && sammyFlutePenaltyActive()) val = Math.max(0, val - 5); return `<div class="profile-stat"><div class="profile-stat-head"><span>${k}</span><strong>${val}</strong></div><div class="progress-track"><div class="progress-fill" style="width:${val === '??' ? 0 : typeof val === 'number' ? Math.min(100, val) : 100}%"></div></div></div>`; }).join('')}</div>`}${c.id === 'jerry' ? '' : `<p class="stat-caption">${c.id === 'tang' && !hiddenSkillReady('tang') ? '镜头里记录着每一次合奏。' : c.statnote}<small>属性是角色展示数值；演出实际奖励以下方技能为准。</small></p>`}</section>`;
+    const attrs = `<section class="profile-panel"><h3 class="panel-title">${I('stats')}${c.id === 'tang' ? '评级面板' : '属性面板'}<span class="tiny">Lv.${lv} · ${own ? '已相遇' : '等待相遇'}</span></h3>${c.id === 'tang' ? `<div class="grade-panel">${[['摄影', 'EX'], ['人像', 'S+'], ['出片率', 'S'], ['硬盘储量', '数十T']].map(([k, v]) => `<div class="grade-cell"><small>${k}</small><strong>${v}</strong></div>`).join('')}</div>` : `<div class="profile-stats">${c.stats.map(([k, v]) => { let val = typeof v === 'number' ? (c.id === 'jerry' ? v : c.sourceSet ? sourceStat(c, k, v) : newStat(c, Math.min(100, v + Math.floor(lv / 5)))) : v; const cap = Number(c.statCaps?.[k]); if (typeof val === 'number' && Number.isFinite(cap)) val = Math.min(cap, val); if (typeof val === 'number' && c.id === 'wanglaoshi' && isWangTeacherLate()) val = Math.max(0, val - 10); if (typeof val === 'number' && c.id === 'sammy' && sammyFlutePenaltyActive()) val = Math.max(0, val - 5); if (typeof val === 'number' && k === '技巧' && liaSisterTechniqueBoosts().some(item => item.id === c.id)) val = Math.min(100, val + 5); if (typeof val === 'number' && k === '音准' && zentaViolinPitchBoosts().some(item => item.id === c.id)) val = Math.min(100, val + 10); if (typeof val === 'number' && c.id === 'zouzou' && game.cardRun?.zouzou?.autoJoined) val = Math.round(Math.min(115, val * 1.15)); if (typeof val === 'number' && Number.isFinite(cap)) val = Math.min(cap, val); return `<div class="profile-stat"><div class="profile-stat-head"><span>${k}</span><strong>${val}</strong></div><div class="progress-track"><div class="progress-fill" style="width:${val === '??' ? 0 : typeof val === 'number' ? Math.min(100, val) : 100}%"></div></div></div>`; }).join('')}</div>`}${c.id === 'jerry' ? '' : `<p class="stat-caption">${c.id === 'tang' && !hiddenSkillReady('tang') ? '镜头里记录着每一次合奏。' : c.statnote}<small>属性是角色展示数值；演出实际奖励以下方技能为准。</small></p>`}</section>`;
     const jerryPair = CardUI.jerryPair === 'lala' ? 'lala' : 'dijie';
     const jerryPairing = `<article class="skill-item jerry-pairing"><div class="skill-heading">${I('bolt')}<h4>${c.passiveName}</h4><span class="skill-tag pairing">羁绊</span></div><div class="jerry-pair-options" role="group" aria-label="Jerry 组合技搭配预览"><button class="${jerryPair === 'dijie' ? 'active' : ''}" data-jerry-pair="dijie" aria-pressed="${jerryPair === 'dijie'}">搭配 笛杰卡</button><button class="${jerryPair === 'lala' ? 'active' : ''}" data-jerry-pair="lala" aria-pressed="${jerryPair === 'lala'}">搭配 垃垃卡</button></div><p class="jerry-pair-copy">${jerryPair === 'dijie' ? '【Jerry × 笛杰】emo 清零 · 笛杰全属性×2 · 团队获得「安心」光环。竹笛遇上低音炮，山谷里起了雾。' : '【Jerry × 垃垃】组合技「融合巴洛克」发动：命中容错区间大幅扩大——古典的骨头，fusion 的血。'}</p></article>`;
     let skills = `<section class="profile-panel"><h3 class="panel-title">${I('sparkles')}技能<span class="tiny">${inTeam ? `全队加成合计最多 +2 ♪` : '加入编队后生效'}</span></h3><div class="skill-list"><article class="skill-item"><div class="skill-heading">${I(c.id === 'orange' ? 'paw' : c.icon)}<h4>${c.activeName}</h4><span class="skill-tag ${c.autoSkill ? 'passive' : ''}">${c.activeKind || '主动技'}</span>${queued ? '<span class="skill-state">已准备</span>' : ''}</div><p>${c.activeText}</p>${own && !c.autoSkill ? `<button class="btn secondary small" ${c.id === 'orange' ? 'data-card-soothe' : `data-card-skill="${c.id}"`}>${I(c.id === 'orange' ? 'hand' : 'bolt')}${c.id === 'orange' ? '让橘猫蹭蹭' : queued ? '取消准备' : `准备技能`}</button>` : ''}</article>${c.id === 'jerry' ? jerryPairing : `<article class="skill-item"><div class="skill-heading">${I('bolt')}<h4>${c.passiveName}</h4><span class="skill-tag passive">${c.passiveKind || '被动'}</span></div><p>${c.id === 'tang' && !hiddenSkillReady('tang') ? '入队参与全队加成，达标时合计最多 +2 音符；全队每场另得 5 经验。' : c.passiveText}</p></article>`}`;

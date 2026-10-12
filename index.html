@@ -28,7 +28,8 @@
 <meta name="twitter:image" content="https://hjmyt.github.io/hjm/assets/welcome-ensemble.jpg">
 <title>恋与哈基米 · V6.3 剧场之夜版</title>
 <link rel="stylesheet" href="styles/base.css?v=7ba782485b9b">
-<link rel="stylesheet" href="styles/cards.css?v=44759e723a72">
+<link rel="stylesheet" href="styles/rhythm-score-stage.css?v=f9c8d91173a4">
+<link rel="stylesheet" href="styles/cards.css?v=994da6550fe6">
 <link rel="stylesheet" href="styles/chronicle.css?v=6c1e2e223783">
 <link rel="stylesheet" href="styles/character-skills.css?v=be62731343cf">
 <link rel="stylesheet" href="styles/chronicle-chapters.css?v=978378d54223">
@@ -44,9 +45,10 @@
 <link rel="stylesheet" href="styles/paw-gift.css?v=5fdee2256211">
 <link rel="stylesheet" href="styles/story-cinematic.css?v=41ff47d6af78">
 <link rel="stylesheet" href="styles/gift-effects.css?v=a45db1123f20">
-<link rel="stylesheet" href="styles/pitch-audition.css?v=d01620246396">
+<link rel="stylesheet" href="styles/pitch-audition.css?v=4b450e9739e4">
 <link id="pitchAuditionGameStyle" rel="stylesheet" href="styles/game-pitch-audition.css?v=7c8baaca7872" media="not all">
 <link id="rhythmAuditionGameStyle" rel="stylesheet" href="styles/game-rhythm-audition.css?v=fbb08ead5498" media="not all">
+<link id="scoreAuditionGameStyle" rel="stylesheet" href="styles/game-score-audition.css?v=63783e14b003" media="not all">
 <link rel="stylesheet" href="styles/story-redesign.css?v=e616deffa917">
 </head>
 <body>
@@ -98,18 +100,19 @@
 <section id="view-rhythm" class="view" hidden aria-label="节奏舞台">
  <div class="screen-head rhythm-controls"><div class="rhythm-key-guide"><span class="desktop-only"><kbd>D</kbd><kbd>F</kbd><kbd>J</kbd><kbd>K</kbd></span><span class="desktop-only">接住猫爪，跟上节拍</span><span class="mobile-only">轻点琴键，接住落下的猫爪</span></div><button class="btn ghost small" id="rhythmGuide"><span data-icon="help"></span>玩法</button></div>
  <div id="rhythmTeam" class="rhythm-team-panel"></div>
-<div class="rhythm-layout"><article class="card track-card"><div class="record" id="record"><div class="record-core"><span data-icon="music"></span></div></div><h3 id="trackName">恋与哈基米（编曲 · 垃垃）</h3><p id="trackDesc">从原曲 00:00 到完整尾声，跟着鼓点演奏。</p><div class="track-chip"><span id="trackKind">原曲录音 · 完整版</span><span id="trackBpm">143.2 BPM</span><span id="trackDuration">约 155 秒</span></div><label for="trackSelect" class="form-label">选择一首曲子</label><select class="track-select" id="trackSelect"><option value="2" selected>01　恋与哈基米（编曲 · 垃垃）</option><option value="0">02　晚风排练曲 · C 大调</option><option value="1">03　猫步小夜曲 · A 小调</option><option value="3">04　miau in C（哈基米之歌）</option><option value="4">05　畅游</option><option value="5">06　千与千寻</option><option value="6">07　蒲公英的约定</option></select><div class="form-label">演奏难度</div><div class="mode-picker"><button class="mode-btn active" data-mode="gentle">初见 · 简单</button><button class="mode-btn" data-mode="normal">合奏 · 困难</button></div><button class="btn primary" id="startGame"><span data-icon="play"></span>开始演奏</button><button class="btn ghost small" id="restartGame"><span data-icon="repeat"></span>从头再来</button></article>
+<div class="rhythm-layout"><article class="card track-card"><div class="record" id="record"><div class="record-core"><span data-icon="music"></span></div></div><h3 id="trackName">恋与哈基米（编曲 · 垃垃）</h3><p id="trackDesc">从原曲 00:00 到完整尾声，跟着鼓点演奏。</p><div class="track-chip"><span id="trackKind">原曲录音 · 完整版</span><span id="trackBpm">143.2 BPM</span><span id="trackDuration">约 155 秒</span></div><label for="trackSelect" class="form-label">选择一首曲子</label><select class="track-select" id="trackSelect"><option value="2" selected>01　恋与哈基米（编曲 · 垃垃）</option><option value="0">02　晚风排练曲 · C 大调</option><option value="1">03　猫步小夜曲 · A 小调</option><option value="3">04　miau in C（哈基米之歌）</option><option value="4">05　畅游</option><option value="5">06　千与千寻</option><option value="6">07　蒲公英的约定</option><option value="7">08　便利店的约会</option></select><div id="rhythmScoreControls" hidden><label class="form-label" for="rhythmScorePart">演奏声部</label><select class="track-select" id="rhythmScorePart"></select><label class="form-label" for="rhythmScoreBacking">伴奏</label><select class="track-select" id="rhythmScoreBacking"><option value="full">总谱乐器伴奏</option><option value="part">当前声部乐器伴奏</option></select><p id="rhythmScoreHint"></p><p>采样音源：<a href="assets/audio/soundfonts/musyng-kite/LICENSE.html" target="_blank" rel="noopener">Musyng Kite · CC BY-SA 3.0</a></p><p id="rhythmPhraseStatus" role="status"></p></div><div class="form-label">演奏难度</div><div class="mode-picker"><button class="mode-btn active" data-mode="gentle">初见 · 简单</button><button class="mode-btn" data-mode="normal">合奏 · 困难</button></div><button class="btn primary" id="startGame"><span data-icon="play"></span>开始演奏</button><button class="btn ghost small" id="restartGame"><span data-icon="repeat"></span>从头再来</button></article>
  <article class="stage-card"><div class="stage-top"><div><small>SCORE</small><strong id="gameScore">000000</strong></div><div style="text-align:center"><small id="gameTrackLabel">恋与哈基米（编曲 · 垃垃）</small><span class="tiny" id="gameTime">00:00 / 02:34</span></div><button class="icon-btn" id="pauseGame" aria-label="暂停或继续演奏"><span data-icon="pause"></span></button></div><div class="canvas-area" id="canvasArea"><canvas id="rhythmCanvas" aria-label="四轨节奏舞台；可按 D、F、J、K 或点击下方四个琴键演奏"></canvas><div class="game-overlay" id="gameOverlay"></div></div><div class="lane-buttons" id="laneButtons"><button class="lane-btn" data-lane="0" aria-label="第一轨，D 键"><span data-icon="paw"></span><span>D</span></button><button class="lane-btn" data-lane="1" aria-label="第二轨，F 键"><span data-icon="paw"></span><span>F</span></button><button class="lane-btn" data-lane="2" aria-label="第三轨，J 键"><span data-icon="paw"></span><span>J</span></button><button class="lane-btn" data-lane="3" aria-label="第四轨，K 键"><span data-icon="paw"></span><span>K</span></button></div><div class="stage-bottom"><span class="desktop-only">D · F · J · K 演奏 / Esc 暂停</span><span class="mobile-only">点击四个琴键，接住猫爪音符</span><span id="audioStatus">♪ 点击开始后播放</span></div></article>
- <aside class="rhythm-stats"><article class="card score-card"><div class="eyebrow">CURRENT COMBO</div><div class="score-number" id="gameCombo">0</div><div class="score-caption">最高连击 <span id="gameMaxCombo">0</span></div><div class="mini-line"></div><div class="legend-row"><span>PERFECT</span><strong id="perfectCount">0</strong></div><div class="legend-row"><span>GOOD</span><strong id="goodCount">0</strong></div><div class="legend-row"><span>NICE</span><strong id="niceCount">0</strong></div><div class="legend-row"><span>MISS</span><strong id="missCount">0</strong></div></article><article class="card score-card"><div class="eyebrow">PERSONAL BEST</div><div class="score-number" id="bestScore">0</div><div class="score-caption" id="bestRank">这首歌，还在等你的第一次演奏</div></article><div class="rhythm-help"><h4>写给第一次合奏的你</h4>等猫爪的中心落到横线，再轻轻按下琴键。<br>连击越多，心动越多。<br><br>OP、miau in C、《畅游》、《千与千寻》和《蒲公英的约定》均为完整原曲录音；两档难度保持原速。《晚风排练曲》和《猫步小夜曲》使用浏览器合成音色。</div></aside>
+ <aside class="rhythm-stats"><article class="card score-card"><div class="eyebrow">CURRENT COMBO</div><div class="score-number" id="gameCombo">0</div><div class="score-caption">最高连击 <span id="gameMaxCombo">0</span></div><div class="mini-line"></div><div class="legend-row"><span>PERFECT</span><strong id="perfectCount">0</strong></div><div class="legend-row"><span>GOOD</span><strong id="goodCount">0</strong></div><div class="legend-row"><span>NICE</span><strong id="niceCount">0</strong></div><div class="legend-row"><span>MISS</span><strong id="missCount">0</strong></div></article><article class="card score-card"><div class="eyebrow">PERSONAL BEST</div><div class="score-number" id="bestScore">0</div><div class="score-caption" id="bestRank">这首歌，还在等你的第一次演奏</div></article><div class="rhythm-help"><h4>写给第一次合奏的你</h4>等猫爪的中心落到横线，再轻轻按下琴键。<br>连击越多，心动越多。<br><br>OP、miau in C、《畅游》和《便利店的约会》均为完整原曲录音；两档难度保持原速。《周杰伦婚礼曲》《第二圆舞曲》《千与千寻》《蒲公英的约定》和《听海》沿用空格考验原谱，可选声部与总谱／单声部采样伴奏。《晚风排练曲》和《猫步小夜曲》使用浏览器合成音色。</div></aside>
  </div>
 </section>
 <section id="view-pitch" class="view" hidden aria-label="空格考验">
  <div id="pitchTeam" class="rhythm-team-panel"></div>
  <div class="pitch-challenge-layout" id="pitchChallengeRoom">
   <aside class="pitch-challenge-nav" id="pitchChallengeNav" aria-label="选择空格考验">
-   <div class="pitch-challenge-nav-head"><span class="eyebrow">CHALLENGE ROOM</span><h3>今天练什么？</h3><p>两种考验共用每日音符额度。</p></div>
+   <div class="pitch-challenge-nav-head"><span class="eyebrow">CHALLENGE ROOM</span><h3>今天练什么？</h3><p>三种考验共用每日音符额度。</p></div>
    <button class="pitch-challenge-option active" id="pitchChallengeTone" type="button" data-pitch-challenge="pitch" aria-pressed="true"><span class="pitch-challenge-icon" data-icon="sound"></span><span><strong>音准辨音</strong><small>听出走调，再把音调回来</small></span><em>6 分</em></button>
    <button class="pitch-challenge-option" id="pitchChallengeRhythm" type="button" data-pitch-challenge="rhythm" aria-pressed="false"><span class="pitch-challenge-icon" data-icon="music"></span><span><strong>节奏听写</strong><small>看谱拍击，或听节奏写谱</small></span><em>4 阶</em></button>
+   <button class="pitch-challenge-option" id="pitchChallengeScore" type="button" data-pitch-challenge="score" aria-pressed="false"><span class="pitch-challenge-icon" data-icon="album"></span><span><strong>真谱演奏</strong><small>真实曲谱 · 乐曲与声部自选</small></span><em>5 首</em></button>
   </aside>
   <div class="pitch-game-wrap" id="pitchGameMount" aria-live="polite"></div>
  </div>
@@ -146,7 +149,7 @@
 <!-- Classic scripts intentionally preserve file:// support. Keep dependency order; bootstrap is last. -->
 <script defer src="js/core/utils.js?v=55122f0926d4"></script>
 <script defer src="js/ui/icons.js?v=917f32c79a18"></script>
-<script defer src="js/data/assets.js?v=8cf0260a1a38"></script>
+<script defer src="js/data/assets.js?v=2c38f8d8dcb0"></script>
 <script defer src="js/data/chapter-seven.js?v=fc28d5f15260"></script>
 <script defer src="js/data/characters.js?v=be3fb8e69e14"></script>
 <script defer src="js/data/chronicle-art.js?v=ad4fe25dfdde"></script>
@@ -155,10 +158,10 @@
 <script defer src="js/data/fusion-routes.js?v=266d6aad49d5"></script>
 <script defer src="js/data/fusion-art.js?v=7eb8397821d0"></script>
 <script defer src="js/data/memories.js?v=83a527118d4f"></script>
-<script defer src="js/data/cards.js?v=a9797ef9f44f"></script>
+<script defer src="js/data/cards.js?v=b469aad77c98"></script>
 <script defer src="js/data/stories.js?v=7b8e1b84ac47"></script>
 <script defer src="js/data/tracks.js?v=e8ee85c95080"></script>
-<script defer src="js/data/tracks-extra.js?v=7b37d22aba47"></script>
+<script defer src="js/data/tracks-extra.js?v=eb867a595ca2"></script>
 <script defer src="js/data/chronicle.js?v=80de11e39c9b"></script>
 <script defer src="js/data/chronicle-training.js?v=40d62315e815"></script>
 <script defer src="js/data/chronicle-weeks.js?v=c9c4b4ca957d"></script>
@@ -166,15 +169,15 @@
 <script defer src="js/core/bonds.js?v=b53503cc3d50"></script>
 <script defer src="js/core/progression.js?v=abf0ff927c18"></script>
 <script defer src="js/core/fusion-state.js?v=596eb38c5144"></script>
-<script defer src="js/core/state.js?v=8c5647a711ab"></script>
-<script defer src="js/cards/state.js?v=6a68d160291f"></script>
-<script defer src="js/cards/model.js?v=64f7cdc4cbaa"></script>
+<script defer src="js/core/state.js?v=74cc9f11a3cb"></script>
+<script defer src="js/cards/state.js?v=584e8bab322e"></script>
+<script defer src="js/cards/model.js?v=5cd776cba7ba"></script>
 <script defer src="js/cards/preload.js?v=b6f969c3349f"></script>
 <script defer src="js/cards/unlocks.js?v=74386df477ea"></script>
-<script defer src="js/cards/skills/source.js?v=c9f7a1b2c655"></script>
+<script defer src="js/cards/skills/source.js?v=0a455d9d899a"></script>
 <script defer src="js/cards/skills/qiqi.js?v=578c07ff8c4c"></script>
 <script defer src="js/cards/skills/expansion.js?v=2d9bb2436441"></script>
-<script defer src="js/cards/skills/trio.js?v=135282faccd3"></script>
+<script defer src="js/cards/skills/trio.js?v=1e2e427c185e"></script>
 <script defer src="js/cards/skills/lala.js?v=6d30ce782f28"></script>
 <script defer src="js/chronicle/art.js?v=873d7801713e"></script>
 <script defer src="js/chronicle/pulse.js?v=2badbe2411f2"></script>
@@ -197,26 +200,33 @@
 <script defer src="js/chronicle/chapters/five-six.js?v=1a7c1325a5fb"></script>
 <script defer src="js/chronicle/index.js?v=87b5cc6b9e7d"></script>
 <script defer src="js/audio/story-bgm.js?v=29eeb36a2e5b"></script>
-<script defer src="js/audio/rhythm-recording.js?v=b53b0982f71b"></script>
-<script defer src="js/audio/synth.js?v=b0f86ccd5a48"></script>
+<script defer src="js/audio/rhythm-recording.js?v=0b4f03b11c58"></script>
+<script defer src="js/data/score-samples.js?v=1f31ade9585d"></script>
+<script defer src="js/audio/score-samples.js?v=2a81b26bc28e"></script>
+<script defer src="js/audio/score-instruments.js?v=0852ddd45fd3"></script>
+<script defer src="js/audio/synth.js?v=cea3e0c34de6"></script>
 <script defer src="js/features/pet.js?v=b8723df27691"></script>
 <script defer src="js/data/gift-keys.js?v=a8649d050684"></script>
 <script defer src="js/features/gift-cards.js?v=2637d2115ed5"></script>
 <script defer src="js/features/settings.js?v=696725564075"></script>
 <script defer src="js/features/stories.js?v=a60f57044e15"></script>
 <script defer src="js/features/album.js?v=8aa5b65b3401"></script>
-<script defer src="js/features/rhythm.js?v=34ed7dcfd279"></script>
+<script defer src="js/features/rhythm.js?v=fec9c17c6355"></script>
 <script defer src="js/features/pitch-audition-game.js?v=c9ec5250842c"></script>
 <script defer src="js/data/rhythm-audition.js?v=57fe2505d6d3"></script>
 <script defer src="js/features/rhythm-audition-rules.js?v=bea98e72e98a"></script>
 <script defer src="js/audio/rhythm-audition-voices.js?v=483694602c95"></script>
 <script defer src="js/features/rhythm-audition-game.js?v=8c29cb16a669"></script>
-<script defer src="js/features/pitch-audition.js?v=8240acba201a"></script>
+<script defer src="js/data/score-audition.js?v=b7971351d05e"></script>
+<script defer src="js/features/score-audition-rules.js?v=5d982e2f0aee"></script>
+<script defer src="js/features/rhythm-score-stage.js?v=d069d992d622"></script>
+<script defer src="js/features/score-audition-game.js?v=84f051180f8e"></script>
+<script defer src="js/features/pitch-audition.js?v=762022abaa13"></script>
 <script defer src="js/features/fusion.js?v=3e5097aeb40c"></script>
-<script defer src="js/cards/views.js?v=ea58d0c8bce5"></script>
-<script defer src="js/cards/actions.js?v=af4a1d607ba6"></script>
+<script defer src="js/cards/views.js?v=e30ccdcb518d"></script>
+<script defer src="js/cards/actions.js?v=97323c2a1386"></script>
 <script defer src="js/cards/recruitment.js?v=e25cc8e4289c"></script>
-<script defer src="js/cards/performance.js?v=cc74ff3e0a23"></script>
+<script defer src="js/cards/performance.js?v=388493d428d1"></script>
 <script defer src="js/audio/paw-gift.js?v=ae55d3db5b46"></script>
 <script defer src="js/ui/story-cinematic.js?v=d1024aa769bf"></script>
 <script defer src="js/data/gift-effects.js?v=0b2426235c0d"></script>
@@ -229,8 +239,8 @@
 <script defer src="js/ui/gift-effects.js?v=408e27310f7e"></script>
 <script defer src="js/ui/paw-gift.js?v=9d4277e2a159"></script>
 <script defer src="js/ui/common.js?v=4336bd0c13e2"></script>
-<script defer src="js/ui/shell.js?v=ab6a7a29d60c"></script>
-<script defer src="js/app/events.js?v=f8d81eda804d"></script>
+<script defer src="js/ui/shell.js?v=7ba604dd0ac8"></script>
+<script defer src="js/app/events.js?v=7787897393bb"></script>
 <script defer src="js/app/bootstrap.js?v=66bcea9e0c37"></script>
 </body>
 </html>

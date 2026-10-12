@@ -24,7 +24,7 @@ const index = pathToFileURL(path.resolve(__dirname, '../index.html')).href;
       PitchAudition.renderTeam();
     });
 
-    assert.equal(await page.locator('[data-pitch-challenge]').count(), 2, 'Space challenge exposes two first-class choices');
+    assert.equal(await page.locator('[data-pitch-challenge]').count(), 3, 'Space challenge exposes three first-class choices');
     const frame = page.locator('#pitchGameMount');
     await frame.locator('[data-action="start"]').waitFor();
     assert.equal(await page.evaluate(() => currentView), 'pitch', 'Direct rhythm deep link opens the Space Challenge view');
@@ -223,6 +223,7 @@ const index = pathToFileURL(path.resolve(__dirname, '../index.html')).href;
 
     await page.locator('[data-pitch-challenge="pitch"]').click();
     await frame.locator('[data-mode="simple"]').waitFor();
+    await page.waitForFunction(() => document.getElementById('pitchGameMount')?.shadowRoot?.querySelector('[data-mode="simple"]')?.textContent.includes('今日 20 / 20 音符'));
     assert.match(await frame.locator('[data-mode="simple"]').textContent(), /今日 20 \/ 20 音符/, 'Pitch audition sees the rhythm challenge shared cap');
     assert.equal(await frame.locator('.side-card').isVisible(), false, 'The duplicated embedded judge sidebar is removed');
 
@@ -235,7 +236,7 @@ const index = pathToFileURL(path.resolve(__dirname, '../index.html')).href;
     assert.equal(deepLinkPosition.view, 'pitch');
     assert.equal(deepLinkPosition.hash, '#pitch-rhythm');
     assert(deepLinkPosition.top >= 0 && deepLinkPosition.top < deepLinkPosition.viewport * .7, `Mobile deep link brings the challenge selector into the main viewport: ${JSON.stringify(deepLinkPosition)}`);
-    assert.equal(await page.locator('.pitch-challenge-nav').evaluate(node => getComputedStyle(node).gridTemplateColumns.split(' ').length), 2, 'Mobile selector becomes two compact cards');
+    assert.equal(await page.locator('.pitch-challenge-nav').evaluate(node => getComputedStyle(node).gridTemplateColumns.split(' ').length), 3, 'Mobile selector becomes three compact cards');
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Main page has no horizontal overflow');
     const embeddedWidth = await frame.evaluate(node => { const box=node.getBoundingClientRect(),surface=node.shadowRoot.querySelector('.game-surface'); return { scroll:surface.scrollWidth, viewport:node.clientWidth, offenders:[...node.shadowRoot.querySelectorAll('*')].filter(el=>el.getBoundingClientRect().right>box.right+1).slice(0,6).map(el=>`${el.tagName}.${el.className}`) }; });
     assert(embeddedWidth.scroll <= embeddedWidth.viewport && !embeddedWidth.offenders.length, `Mounted rhythm challenge has no horizontal overflow: ${JSON.stringify(embeddedWidth)}`);

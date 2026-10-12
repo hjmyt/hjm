@@ -39,7 +39,7 @@ const { pathToFileURL } = require('node:url');
       const migrated = cleanImportedState(legacy);
       check(migrated.affinity.mobius === 0 && migrated.cards.collection.mobius, 'v4 save adds only Mobius fields');
       state = migrated;
-      check(persistedState().bondVault.v === 9, 'migrated saves write bond vault v9');
+      check(persistedState().bondVault.v === 16, 'migrated saves write bond vault v16');
       const broken = persistedState();
       delete broken.bondVault.values.mobius;
       let rejected = false;

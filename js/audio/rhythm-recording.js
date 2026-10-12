@@ -26,7 +26,7 @@ const RhythmRecording = (() => {
             countIn = track.countIn + track.leadIn;
             element.preload = 'auto';
             element.setAttribute('playsinline', '');
-            element.volume = .85;
+            element.volume = 1;
             element.muted = !state.sound;
             const interrupted = () => {
                 if (media === element && !element.ended && ['running', 'countdown'].includes(game.status))

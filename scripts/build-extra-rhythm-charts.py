@@ -20,7 +20,7 @@ spec.loader.exec_module(drums)
 hard_spec = importlib.util.spec_from_file_location('hard', ROOT/'scripts/rhythm-hard-chart.py')
 hard = importlib.util.module_from_spec(hard_spec)
 hard_spec.loader.exec_module(hard)
-SONGS = [('miau-in-c', 'miau in C（哈基米之歌）'), ('changyou', '畅游'), ('qian-yu-qian-xun', '千与千寻'), ('pu-gong-ying-de-yue-ding', '蒲公英的约定')]
+SONGS = [('miau-in-c', 'miau in C（哈基米之歌）'), ('changyou', '畅游'), ('qian-yu-qian-xun', '千与千寻'), ('pu-gong-ying-de-yue-ding', '蒲公英的约定'), ('bian-li-dian-de-yue-hui', '便利店的约会')]
 QUIET_INTERLUDE_SONGS = {'qian-yu-qian-xun', 'pu-gong-ying-de-yue-ding'}
 
 def decode(path):

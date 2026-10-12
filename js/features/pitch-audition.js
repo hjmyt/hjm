@@ -7,7 +7,8 @@ const PitchAudition = (() => {
     const status = $('pitchRewardStatus');
     const sources = {
         pitch: { factory: createPitchAuditionGame, style: 'pitchAuditionGameStyle', label: '音准辨音' },
-        rhythm: { factory: createRhythmAuditionGame, style: 'rhythmAuditionGameStyle', label: '节奏听写' }
+        rhythm: { factory: createRhythmAuditionGame, style: 'rhythmAuditionGameStyle', label: '节奏听写' },
+        score: { factory: createScoreAuditionGame, style: 'scoreAuditionGameStyle', label: '真谱演奏' }
     };
     const settledQuestionIds = new Set();
     let activeChallenge = 'pitch';
@@ -140,8 +141,13 @@ const PitchAudition = (() => {
         return points === score;
     }
 
+    function validScoreResult(message, mode, expectedScoreId = null) {
+        const taps = message.evidence?.taps, holds = message.evidence?.holds, tempo = message.evidence?.tempo, skipLeadingRests = message.evidence?.skipLeadingRests;
+        return (skipLeadingRests === undefined || typeof skipLeadingRests === 'boolean') && (!expectedScoreId || message.scoreId === expectedScoreId) && ScoreAuditionRules.validResult(mode, message.scoreId, taps, holds, message.score, tempo, skipLeadingRests === true);
+    }
+
     function settle(message) {
-        const valid = run?.challenge === 'rhythm' ? validRhythmResult(message.stages, message.answers, message.score, run.mode) : validPitchResult(message.rounds, message.answers, message.score);
+        const valid = run?.challenge === 'rhythm' ? validRhythmResult(message.stages, message.answers, message.score, run.mode) : run?.challenge === 'score' ? validScoreResult(message, run.mode, run.scoreId) : validPitchResult(message.rounds, message.answers, message.score);
         if (!run || run.settled || settledQuestionIds.has(message.id) || message.id !== run.id || message.challenge !== run.challenge || !valid) return;
         if (!storageOK) {
             status.textContent = '存档暂时无法保存，请先恢复存档后再挑战。';
@@ -191,9 +197,10 @@ const PitchAudition = (() => {
             status.hidden = true;
             status.textContent = '';
             loadChallenge(activeChallenge, { force: true });
-        } else if (message.type === 'hjm-pitch-start' && message.challenge === activeChallenge && typeof message.id === 'string' && /^[A-Z0-9]{7}$/.test(message.id) && (message.challenge === 'rhythm' ? ['simple', 'medium', 'hard'] : ['simple', 'hard']).includes(message.mode)) {
+        } else if (message.type === 'hjm-pitch-start' && message.challenge === activeChallenge && typeof message.id === 'string' && /^[A-Z0-9]{7}$/.test(message.id) && (['rhythm', 'score'].includes(message.challenge) ? ['simple', 'medium', 'hard'] : ['simple', 'hard']).includes(message.mode)) {
             if (settledQuestionIds.has(message.id)) return;
-            run = { challenge: message.challenge, id: message.id, mode: message.mode, ids: [...state.cards.team], settled: false };
+            if (message.challenge === 'score' && (!ScoreAuditionRules.scoreById(message.scoreId) || ScoreAuditionRules.scoreById(message.scoreId).hidden === true)) return;
+            run = { challenge: message.challenge, id: message.id, mode: message.mode, scoreId: message.challenge === 'score' ? message.scoreId : null, ids: [...state.cards.team], settled: false };
             renderTeam();
         } else if (message.type === 'hjm-pitch-complete') {
             settle(message);
@@ -203,8 +210,8 @@ const PitchAudition = (() => {
     document.querySelectorAll('[data-pitch-challenge]').forEach(button => button.addEventListener('click', () => {
         const challenge = button.dataset.pitchChallenge;
         loadChallenge(challenge);
-        setAppAnchor(challenge === 'rhythm' ? 'pitch-rhythm' : 'pitch-tone');
+        setAppAnchor(challenge === 'rhythm' ? 'pitch-rhythm' : challenge === 'score' ? 'pitch-score' : 'pitch-tone');
     }));
     window.addEventListener('message', onMessage);
-    return { open, close, renderTeam, syncSound, syncRules, loadChallenge, validPitchResult, validRhythmResult };
+    return { open, close, renderTeam, syncSound, syncRules, loadChallenge, validPitchResult, validRhythmResult, validScoreResult };
 })();

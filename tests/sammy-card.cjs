@@ -25,7 +25,7 @@ const { pathToFileURL } = require('node:url');
       check(unlocked.ok && state.coins === 50 && cardOwned('sammy') && cardBond('sammy') === 3, 'notes unlock is atomic');
       const legacy = persistedState(); legacy.bondVault.v = 8; delete legacy.bondVault.values.sammy; delete legacy.cards.collection.sammy;
       const migrated = cleanImportedState(legacy);
-      check(migrated.affinity.sammy === 0 && migrated.cards.collection.sammy && persistedState().bondVault.v === 9, 'v8 migration adds Sammy fields');
+      check(migrated.affinity.sammy === 0 && migrated.cards.collection.sammy && persistedState().bondVault.v === 16, 'v8 migration adds Sammy fields');
 
       state = freshState();
       for (const id of ['sammy', 'dijie']) { state.cards.encounters.push(id); state.cards.collection[id].owned = true; }

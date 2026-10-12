@@ -1,1 +1,4 @@
 docs
+
+# Licensed/private score sources stay local; the browser uses generated JS data.
+assets/scores/source/*.musicxml

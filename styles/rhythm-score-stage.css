@@ -1,0 +1,23 @@
+#rhythmScoreControls {
+  grid-column: 1 / -1;
+  min-width: 0;
+  text-align: left;
+}
+#rhythmScoreControls .form-label {
+  display: block;
+  margin: 14px 0 4px;
+}
+#rhythmScoreControls .track-select {
+  display: block;
+  width: 100%;
+  margin: 4px 0 10px;
+}
+#rhythmScoreControls p {
+  margin: 8px 0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+#rhythmPhraseStatus {
+  color: #795c78;
+  min-height: 1.7em;
+}

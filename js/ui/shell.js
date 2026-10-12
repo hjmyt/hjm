@@ -8,6 +8,7 @@ const APP_DEEP_LINKS = Object.freeze({
     pitch: { view: 'pitch' }, 'pitch-audition': { view: 'pitch' },
     'pitch-tone': { view: 'pitch', challenge: 'pitch', target: 'pitchChallengeNav' },
     'pitch-rhythm': { view: 'pitch', challenge: 'rhythm', target: 'pitchChallengeNav' },
+    'pitch-score': { view: 'pitch', challenge: 'score', target: 'pitchChallengeNav' },
     album: { view: 'album' }
 });
 const APP_ROUTE_ANCHORS = Object.freeze({ home: 'home', cards: 'cards', card: 'cards', care: 'care', story: 'story', chronicle: 'chronicle', fusion: 'fusion', rhythm: 'rhythm', pitch: 'pitch', album: 'album' });

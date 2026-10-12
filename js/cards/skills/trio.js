@@ -49,6 +49,14 @@ function onTrioPerformance(run) {
     const x = trio(), messages = [];
     for (const id of run.ids)
         trioAddEnergy(id, -10);
+    if (run.zenta) {
+        for (const id of run.ids) {
+            const before = trioEnergy(id);
+            trioAddEnergy(id, 5);
+            run.zenta.energyRestores.push({ id, before, after: trioEnergy(id) });
+        }
+        messages.push('温水效应：全队合奏精力 +5（本场净消耗 5）');
+    }
     if (run.prepared?.id === 'yeshiyang') {
         const twice = run.ids.includes('shiyuan'), gain = twice ? 60 : 30;
         for (const id of run.ids)

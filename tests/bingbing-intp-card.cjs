@@ -39,7 +39,7 @@ const { pathToFileURL } = require('node:url');
       const migrated = cleanImportedState(legacy);
       check(migrated.affinity.bingbing_intp === 0 && migrated.cards.collection.bingbing_intp, 'v6 save adds only 饼饼 fields');
       state = migrated;
-      check(persistedState().bondVault.v === 9, 'migrated saves write bond vault v9');
+      check(persistedState().bondVault.v === 16, 'migrated saves write bond vault v16');
       const broken = persistedState();
       delete broken.bondVault.values.bingbing_intp;
       let rejected = false;

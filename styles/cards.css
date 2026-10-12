@@ -3673,3 +3673,24 @@ body {
 .mobius-result{color:#8d4d8d;font-weight:700}
 @keyframes mobius-wave{0%{transform:translateY(0) rotate(0) scale(1)}22%{transform:translateY(-4px) rotate(-7deg) scale(1.06)}48%{transform:translateY(1px) rotate(6deg) scale(1.03)}72%{transform:translateY(-2px) rotate(-4deg) scale(1.05)}100%{transform:translateY(0) rotate(0) scale(1)}}
 @media(prefers-reduced-motion:reduce){#rhythmTeam .team-slot[data-card-member="mobius"].mobius-wave .card-avatar-image{animation:none}}
+
+#rhythmTeam.zouzou-tuba-active{box-shadow:0 0 0 1px rgba(230,177,54,.28),0 12px 34px rgba(214,153,35,.18);background:linear-gradient(120deg,rgba(255,250,229,.96),rgba(246,232,190,.88))}
+#rhythmTeam .zouzou-tuba-button{white-space:nowrap;background:linear-gradient(135deg,#c89128,#f0c75e);border-color:#d4a33c;color:#33230a}
+#rhythmTeam .zouzou-tuba-button.is-active{box-shadow:0 0 22px rgba(235,181,55,.5)}
+#rhythmTeam .rhythm-team-actions{display:flex;flex-direction:column;align-items:stretch;gap:6px}
+#rhythmTeam .rhythm-team-actions .btn{margin:0}
+
+@media(max-width:720px){#rhythmTeam .rhythm-team-actions{grid-column:2;justify-self:start;align-items:flex-start}}
+
+/* Jinsang: one opening roll per song, with a full-screen crash/highlight cue. */
+.jinsang-performance-cue{position:fixed;inset:0;z-index:4200;display:grid;place-items:center;pointer-events:none;background:radial-gradient(circle,rgba(255,247,224,.1),rgba(32,23,20,.34));animation:jinsang-cue-fade 1.5s ease both}
+.jinsang-performance-cue>div{display:grid;justify-items:center;gap:7px;padding:20px 28px;border-radius:24px;background:rgba(35,28,29,.88);color:#fff;box-shadow:0 24px 70px rgba(20,13,13,.36);text-align:center}
+.jinsang-performance-cue img{width:108px;height:108px;object-fit:cover;border-radius:50%;border:3px solid rgba(255,255,255,.7)}
+.jinsang-performance-cue strong{font-size:28px;letter-spacing:.08em}.jinsang-performance-cue span{font-size:12px;opacity:.82}
+.jinsang-performance-cue.is-crash img{transform:rotate(-5deg);filter:saturate(.7)}
+.jinsang-performance-cue.is-crash strong{color:#ffd4c9}.jinsang-performance-cue.is-highlight>div{background:linear-gradient(145deg,rgba(91,57,14,.94),rgba(42,27,23,.92));box-shadow:0 0 70px rgba(255,198,65,.5)}
+.jinsang-performance-cue.is-highlight img,#rhythmTeam .team-slot.jinsang-highlight .card-avatar-image{box-shadow:0 0 0 4px rgba(255,225,145,.4),0 0 30px rgba(255,188,45,.9)}
+#rhythmTeam .team-slot.jinsang-crash .card-avatar-image{transform:rotate(-4deg);filter:saturate(.72)}
+.jinsang-result{color:#98621c;font-weight:700}
+@keyframes jinsang-cue-fade{0%{opacity:0;transform:scale(.9)}14%,72%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.04)}}
+@media(prefers-reduced-motion:reduce){.jinsang-performance-cue{animation:none;opacity:1}.jinsang-performance-cue{display:none}}

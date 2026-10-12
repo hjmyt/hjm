@@ -14,7 +14,7 @@ const { pathToFileURL } = require('node:url');
       const check = (ok, message) => { if (!ok) throw new Error(message); };
       state = freshState(); state.sound = false;
       const card = cardDef('wanglaoshi');
-      check(card?.rarity === 'R' && card.stars === 4 && card.role === '小提琴（导师）', 'R four-star teacher identity');
+      check(card?.rarity === 'R' && card.stars === 3 && card.role === '小提琴（导师）', 'R three-star teacher identity');
       check(card.stats.map(row => row[1]).join(',') === '80,78,72,74', 'level one stats');
       check(card.activeName === '奶爸的耐心' && card.passiveName === '稳定输出' && card.extraSkills?.[0]?.name === '接孩子要走了', 'three skills');
       const juice = cardGifts(card).find(gift => gift[0] === 'kids_juice');
@@ -27,7 +27,7 @@ const { pathToFileURL } = require('node:url');
       check(unlocked.ok && state.coins === 50 && cardOwned('wanglaoshi') && cardBond('wanglaoshi') === 3, 'notes unlock is atomic');
       const legacy = persistedState(); legacy.bondVault.v = 7; delete legacy.bondVault.values.wanglaoshi; delete legacy.cards.collection.wanglaoshi;
       const migrated = cleanImportedState(legacy);
-      check(migrated.affinity.wanglaoshi === 0 && migrated.cards.collection.wanglaoshi && persistedState().bondVault.v === 9, 'v7 migration adds Wang fields');
+      check(migrated.affinity.wanglaoshi === 0 && migrated.cards.collection.wanglaoshi && persistedState().bondVault.v === 16, 'v7 migration adds Wang fields');
 
       state = freshState();
       for (const id of ['wanglaoshi', 'mobius', 'ria']) { state.cards.encounters.push(id); state.cards.collection[id].owned = true; }
@@ -51,6 +51,6 @@ const { pathToFileURL } = require('node:url');
     assert.deepEqual(result.full, [1024, 1536]); assert.deepEqual(result.cover, [1536, 1024]); assert.deepEqual(result.avatar, [1254, 1254]);
     assert.match(result.thumbnail, /thumbs\/avatars\/192\/wanglaoshi\.webp\?v=wanglaoshi20261009$/);
     assert.equal(result.overflow, false); assert.deepEqual(errors, []);
-    console.log('PASS: 汪老师 card, v7 migration, four stars, mentor boost/cap, stable range, late rule, strict bond dialogue button, unified gift and three image usages.');
+    console.log('PASS: 汪老师 card, v7 migration, R three-star mapping, mentor boost/cap, stable range, late rule, strict bond dialogue button, unified gift and three image usages.');
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; });

@@ -124,7 +124,19 @@ function onXiaotaBeat() {
 function settleLateNote(note, now) {
     const r = game.cardRun, x = r?.sourceSnapshot;
     let label = null, rescuer = '小塔';
-    if (x?.xiaota) {
+    if (tryLiaNaturalRescue()) {
+        label = 'GOOD';
+        rescuer = 'Lia · 天然呆';
+    }
+    if (!label && tryWinnieObservation()) {
+        label = 'GOOD';
+        rescuer = 'Winnie · 观察';
+    }
+    if (!label && tryJiukuangkuangRescue()) {
+        label = 'GOOD';
+        rescuer = '酒狂狂 · 定海神针';
+    }
+    if (!label && x?.xiaota) {
         if (r.prepared?.id === 'xiaota' && !x.rescued) {
             x.rescued = true;
             label = 'GOOD';
@@ -142,13 +154,14 @@ function settleLateNote(note, now) {
         x.assists++;
         if (label === 'GOOD') {
             game.good++;
-            game.score += 700 + mobiusScoreBonus(700, game.elapsed) + bingbingIntpScoreBonus(700);
+            game.score += 700 + mobiusScoreBonus(700, game.elapsed) + bingbingIntpScoreBonus(700) + winnieScoreBonus(700, game.elapsed) + zouzouScoreBonus(700, game.elapsed) + zentaScoreBonus(700) + jinsangScoreBonus(700);
         }
         else {
             game.nice++;
-            game.score += 400 + mobiusScoreBonus(400, game.elapsed) + bingbingIntpScoreBonus(400);
+            game.score += 400 + mobiusScoreBonus(400, game.elapsed) + bingbingIntpScoreBonus(400) + winnieScoreBonus(400, game.elapsed) + zouzouScoreBonus(400, game.elapsed) + zentaScoreBonus(400) + jinsangScoreBonus(400);
         }
         onMobiusJudgement(label, game.elapsed);
+        onZouzouJudgement(label);
         game.combo++;
         game.maxCombo = Math.max(game.maxCombo, game.combo);
         r.missStreak = 0;
@@ -159,6 +172,7 @@ function settleLateNote(note, now) {
         note.missed = true;
         game.miss++;
         onMobiusJudgement('MISS', game.elapsed);
+        onZouzouJudgement('MISS');
         onExpansionMiss();
         const sammySaved = sammyPreservesCombo();
         if (!sammySaved)

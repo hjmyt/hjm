@@ -20,7 +20,7 @@ const server=http.createServer((req,res)=>{
    const page=await browser.newPage({viewport:{width:mobile?390:1440,height:900},hasTouch:mobile});
    page.setDefaultTimeout(20000);
    const errors=[];page.on('pageerror',e=>errors.push(e.message));
-   await page.addInitScript(()=>{const Native=Audio;window.Audio=function(src){const a=new Native(src);if(/(?:miau-in-c|changyou|love-hakimi-op|qian-yu-qian-xun|pu-gong-ying-de-yue-ding)-full/.test(src))window.recording=a;return a;};});
+   await page.addInitScript(()=>{const Native=Audio;window.Audio=function(src){const a=new Native(src);if(/(?:miau-in-c|changyou|love-hakimi-op|qian-yu-qian-xun|pu-gong-ying-de-yue-ding|bian-li-dian-de-yue-hui)-full/.test(src))window.recording=a;return a;};});
    await page.goto(mobile?`http://127.0.0.1:${server.address().port}/index.html`:pathToFileURL(path.join(root,'index.html')).href);
    await page.locator('[data-music-enter]').click();
    await page.locator('.nav-btn[data-route="rhythm"]').click();
@@ -33,8 +33,8 @@ const server=http.createServer((req,res)=>{
      return positions[0]===positions[1];
     }finally{drawPaw=original;Object.assign(game,saved);}
    }),'Hard and easy have identical fall speed');
-   assert.match(await page.locator('#trackSelect option').last().textContent(),/蒲公英的约定$/);
-   for(const [index,playMode] of [[2,'normal'],[3,'normal'],[4,'normal'],[5,'gentle'],[5,'normal'],[6,'gentle'],[6,'normal']]){
+   assert.match(await page.locator('#trackSelect option[value="7"]').textContent(),/便利店的约会$/);
+   for(const [index,playMode] of [[2,'normal'],[3,'normal'],[4,'normal'],[7,'gentle'],[7,'normal']].filter(([index])=>!process.env.RHYTHM_TRACK_INDEX||index===Number(process.env.RHYTHM_TRACK_INDEX))){
     await page.locator('#trackSelect').selectOption(String(index));
     assert.equal(await page.evaluate(()=>game.mode),'gentle','Selecting a track defaults to easy');
     for(const mode of ['gentle','normal']){
@@ -46,6 +46,11 @@ const server=http.createServer((req,res)=>{
     }
     await page.locator(`[data-mode="${playMode}"]`).click();
     assert.match(await page.locator('#audioStatus').textContent(),/原曲录音/);
+    if(index===7)assert(await page.evaluate(()=>{
+     const t=TRACKS[game.track],easy=t.charts.gentle,hard=t.charts.normal;
+     const additions=hard.filter(n=>!easy.some(e=>e[0]===n[0]&&e[1]===n[1]));
+     return easy.every(n=>hard.some(h=>h[0]===n[0]&&h[1]===n[1]))&&hard.length<easy.length*1.3&&hard.every((n,i)=>!i||n[0]-hard[i-1][0]>=.18)&&additions.every((n,i)=>!i||n[0]-additions[i-1][0]>=2);
+    }),'New hard chart preserves easy anchors and limits added density');
     await page.locator('#startGame').click();
     await page.waitForFunction(()=>game.status==='countdown'&&recording.currentTime>.1);
     assert(await page.evaluate(()=>recording.playbackRate===1&&Math.abs(game.elapsed-(recording.currentTime-5.5))<.1));
@@ -80,6 +85,6 @@ const server=http.createServer((req,res)=>{
    }
    assert.deepEqual(errors,[]);await page.close();
   }
-  console.log('PASS: all five recording songs and difficulties, file/HTTP, real keyboard/touch, pause, media ending, rewards, reload and layouts');
+  console.log('PASS: selected recording songs and difficulties, file/HTTP, real keyboard/touch, pause, media ending, rewards, reload and layouts');
  }finally{await browser.close();server.close();}
 })().catch(e=>{console.error(e);server.close();process.exitCode=1;});

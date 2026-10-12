@@ -16,7 +16,9 @@ function compareCollection(a, b, mode = 'rarity') {
         return 1;
     if (b.id === 'dijie')
         return -1;
-    const rarity = { UR: 4, SSR: 3, SR: 2, R: 1, 待定: 0 };
+    // NR (Not-Rare) is intentionally below the ordinary N tier. Event-only NR
+    // cards stay out of the recruitment weights but still sort consistently.
+    const rarity = { UR: 5, SSR: 4, SR: 3, R: 2, N: 1, NR: 0, 待定: -1 };
     const diff = mode === 'bond' ? cardBond(b.id) - cardBond(a.id) : mode === 'level' ? cardLevel(b.id) - cardLevel(a.id) : rarity[cardRarity(b)] - rarity[cardRarity(a)];
     return diff || COLLECTION_ORDER.indexOf(a.id) - COLLECTION_ORDER.indexOf(b.id);
 }
@@ -51,7 +53,7 @@ function dialogueAvatarHTML({ card = null, asset = null, name = '', icon = 'musi
     return `<button type="button" class="cp-speaker-avatar" data-dialogue-card="${card.id}" aria-label="查看${escapeHTML(card.name)}的人物卡牌" title="点击查看人物卡牌">${image}</button>`;
 }
 const cardRarity = c => c.id === 'xiaozhou' && sourceCast().xiaozhou.solos >= 3 ? 'SR' : c.rarity;
-const cardStarCount = c => c.id === 'xiaozhou' && sourceCast().xiaozhou.solos >= 3 ? 3 : c.stars;
+const cardStarCount = c => c.id === 'xiaozhou' && sourceCast().xiaozhou.solos >= 3 ? 3 : cardRarity(c) === 'R' ? 3 : c.stars;
 const cardOwned = id => cardAvailable(id) && !!state.cards.collection[id]?.owned;
 const cardLevel = id => Math.min(60, 1 + Math.floor((state.cards.collection[id]?.xp || 0) / 60));
 const cardBond = id => state.affinity[id] || 0;
@@ -111,17 +113,24 @@ function renderGiftChoices(c, gifts, used) {
 }
 function ensureCardDay() {
     if (state.cards.daily.date !== dateKey())
-        state.cards.daily = { date: dateKey(), gifts: {}, eye: false };
+        state.cards.daily = { date: dateKey(), gifts: {}, eye: false, winnieAssists: 0 };
     const x = expansion();
     if (x.daily.date !== dateKey())
         x.daily = { date: dateKey(), script: false, greet: false };
 }
-function addCardXP(id, amount) {
+function cardXPAward(id, amount, options = {}) {
+    const base = Math.max(0, Number(amount) || 0), team = Array.isArray(options.team) ? options.team : state.cards.team;
+    let bonus = id === 'fuge' ? .5 : team.includes('fuge') && team.includes(id) ? .15 : 0;
+    if (id === 'fuge' && options.performance)
+        bonus += clamp(Math.floor(Number(options.focusStack) || 0), 0, 5) * .05;
+    return Math.max(0, Math.round(base * (1 + bonus)));
+}
+function addCardXP(id, amount, options = {}) {
     const v = state.cards.collection[id];
     if (!v?.owned)
         return false;
     const before = cardLevel(id);
-    v.xp = clamp(v.xp + amount, 0, 3540);
+    v.xp = clamp(v.xp + cardXPAward(id, amount, options), 0, 3540);
     return cardLevel(id) > before;
 }
 function rewardCompanionBond(id) { return grantBond(id, 1, { daily: true }); }

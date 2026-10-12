@@ -1,6 +1,6 @@
 'use strict';
 
-function freshCards() { return { edition: 12, zhuNight: false, sourceCast: freshSourceCast(), qiqi: freshQiqi(), lala: freshLala(), trio: freshTrio(), expansion: freshExpansion(), tickets: 3, pulls: 0, pity: 0, encounterVersion: 3, encounters: [], selected: null, team: [], form: 'normal', prepared: null, blackUntil: 0, collection: Object.fromEntries(SAVE_CARD_DEFS.map(c => [c.id, { owned: false, xp: 0, copies: 0 }])), daily: { date: dateKey(), gifts: {}, eye: false }, history: [] }; }
+function freshCards() { return { edition: 19, zhuNight: false, sourceCast: freshSourceCast(), qiqi: freshQiqi(), lala: freshLala(), trio: freshTrio(), expansion: freshExpansion(), fuge: { streak: 0 }, jinsang: { highlightBonus: 0 }, tickets: 3, pulls: 0, pity: 0, encounterVersion: 3, encounters: [], selected: null, team: [], form: 'normal', prepared: null, blackUntil: 0, collection: Object.fromEntries(SAVE_CARD_DEFS.map(c => [c.id, { owned: false, xp: 0, copies: 0 }])), daily: { date: dateKey(), gifts: {}, eye: false, winnieAssists: 0 }, history: [] }; }
 function cleanCards(input) {
     const d = freshCards();
     if (!input || typeof input !== 'object') {
@@ -32,11 +32,14 @@ function cleanCards(input) {
     }
     d.form = input.form === 'god' ? 'god' : 'normal';
     d.blackUntil = Math.min(num(input.blackUntil, Date.now() + 180000), Date.now() + 180000);
+    d.fuge.streak = num(input.fuge?.streak, 5);
+    d.jinsang.highlightBonus = num(input.jinsang?.highlightBonus, 30);
     const prep = input.prepared, c = CARD_DEFS.find(c => c.id === prep?.id);
-    if (c && c.active && d.team.includes(c.id))
-        d.prepared = { id: c.id, amount: c.id === 'bingbing' ? 0 : c.id === 'xiaozhou' ? c.active * (d.sourceCast.xiaozhou.praised ? 2 : d.sourceCast.xiaozhou.compared ? .5 : 1) : c.id === 'dayang' ? c.active + (d.sourceCast.dayang.online ? 4 : 0) : c.active, token: num(prep.token, 9999999999999) };
+    if (c && (c.active || c.preparable) && d.team.includes(c.id))
+        d.prepared = { id: c.id, amount: ['bingbing', 'winnie', 'jiukuangkuang'].includes(c.id) ? 0 : c.id === 'xiaozhou' ? c.active * (d.sourceCast.xiaozhou.praised ? 2 : d.sourceCast.xiaozhou.compared ? .5 : 1) : c.id === 'dayang' ? c.active + (d.sourceCast.dayang.online ? 4 : 0) : c.active, token: num(prep.token, 9999999999999) };
     if (input.daily?.date === dateKey()) {
         d.daily.eye = input.daily.eye === true;
+        d.daily.winnieAssists = num(input.daily.winnieAssists, 5);
         for (const c of SAVE_CARD_DEFS) {
             const count = num(input.daily.gifts?.[c.id], BOND_RULES.giftsPerDay);
             if (count)

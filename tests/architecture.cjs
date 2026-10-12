@@ -37,13 +37,17 @@ const rhythmGameIndex = scripts.findIndex(script => script.file === 'js/features
 const rhythmDataIndex = scripts.findIndex(script => script.file === 'js/data/rhythm-audition.js');
 const rhythmRulesIndex = scripts.findIndex(script => script.file === 'js/features/rhythm-audition-rules.js');
 const rhythmVoicesIndex = scripts.findIndex(script => script.file === 'js/audio/rhythm-audition-voices.js');
+const scoreDataIndex = scripts.findIndex(script => script.file === 'js/data/score-audition.js');
+const scoreRulesIndex = scripts.findIndex(script => script.file === 'js/features/score-audition-rules.js');
+const scoreGameIndex = scripts.findIndex(script => script.file === 'js/features/score-audition-game.js');
 assert(rhythmVoicesIndex >= 0 && rhythmVoicesIndex < rhythmGameIndex, 'Reference click samples load before the rhythm game');
 assert(rhythmDataIndex >= 0 && rhythmDataIndex < rhythmRulesIndex && rhythmRulesIndex < rhythmGameIndex, 'Shared rhythm data and clocks load before the game and reward controller');
-for (const feature of ['js/features/pitch-audition-game.js', 'js/features/rhythm-audition-game.js']) {
+assert(scoreDataIndex >= 0 && scoreDataIndex < scoreRulesIndex && scoreRulesIndex < scoreGameIndex, 'Generated MusicXML score data and validator load before the true-score game');
+for (const feature of ['js/features/pitch-audition-game.js', 'js/features/rhythm-audition-game.js', 'js/features/score-audition-game.js']) {
   const index = scripts.findIndex(script => script.file === feature);
   assert(index >= 0 && index < featureControllerIndex, `${feature} loads before its controller`);
 }
-for (const style of ['styles/game-pitch-audition.css', 'styles/game-rhythm-audition.css']) {
+for (const style of ['styles/game-pitch-audition.css', 'styles/game-rhythm-audition.css', 'styles/game-score-audition.css']) {
   assert(styles.includes(style), `${style} is included in the root asset version chain`);
 }
 assert(!fs.existsSync(path.join(root, 'game/pitch-audition/index.html')), 'Pitch game is no longer an independent HTML page');
@@ -94,7 +98,8 @@ const server = http.createServer((req, res) => {
       assert.equal(loaded.size, scripts.length + styles.length, 'All split resources loaded');
       await page.evaluate(() => {
         if (!state || state.coins !== 30 || !storageOK) throw Error('Fresh state failed');
-        if (CARD_DEFS.length !== 32 || new Set(CARD_DEFS.map(c => c.id)).size !== CARD_DEFS.length) throw Error('Card catalog integrity');
+        if (CARD_DEFS.length !== 39 || new Set(CARD_DEFS.map(c => c.id)).size !== CARD_DEFS.length) throw Error('Card catalog integrity');
+        if (CARD_DEFS.some(card => card.rarity === 'R' && card.stars !== 3)) throw Error('Every R card must map to three stars');
         if (new Set(MEMORIES.map(m => m.id)).size !== MEMORIES.length) throw Error('Memory catalog integrity');
         for (const view of ['home', 'chronicle', 'story', 'care', 'rhythm', 'pitch', 'album', 'cards', 'fusion']) route(view);
         state.coins = 287;

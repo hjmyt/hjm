@@ -95,16 +95,16 @@ function sealBonds(source) {
     const values = { cat: sealProtectedNumber(source.cat.aff, 'bond:cat') };
     for (const card of SAVE_CARD_DEFS)
         values[card.id] = sealProtectedNumber(source.affinity[card.id] || 0, 'bond:' + card.id);
-    return { v: 9, values };
+    return { v: 16, values };
 }
 function openBonds(vault) {
-    if (!vault || ![1, 2, 3, 4, 5, 6, 7, 8, 9].includes(vault.v) || !vault.values || typeof vault.values !== 'object')
+    if (!vault || ![1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16].includes(vault.v) || !vault.values || typeof vault.values !== 'object')
         throw new Error('羁绊数据校验失败');
     const values = { cat: openProtectedNumber(vault.values.cat, 'bond:cat') };
     for (const card of SAVE_CARD_DEFS) {
         // Explicit roster migrations: v1 predates Xiaojie/REK, v2 predates Aqi,
-        // v3 predates Bingbing, v4 Mobius, v5 RIA, v6 饼饼, v7 汪老师, and v8 Sammy. Missing current values fail.
-        const legacyAddition = vault.values[card.id] === undefined && ((vault.v === 1 && ['xiaojie', 'rek', 'aqi'].includes(card.id)) || (vault.v === 2 && card.id === 'aqi') || (vault.v <= 3 && card.id === 'bingbing') || (vault.v <= 4 && card.id === 'mobius') || (vault.v <= 5 && card.id === 'ria') || (vault.v <= 6 && card.id === 'bingbing_intp') || (vault.v <= 7 && card.id === 'wanglaoshi') || (vault.v <= 8 && card.id === 'sammy'));
+        // v3 predates Bingbing, v4 Mobius, v5 RIA, v6 饼饼, v7 汪老师, v8 Sammy, v9 Winnie, v10 酒狂狂, v11 赋格, v12 Lia, v13 奏奏, v14 ZENTA, and v15 金桑. Missing current values fail.
+        const legacyAddition = vault.values[card.id] === undefined && ((vault.v === 1 && ['xiaojie', 'rek', 'aqi'].includes(card.id)) || (vault.v === 2 && card.id === 'aqi') || (vault.v <= 3 && card.id === 'bingbing') || (vault.v <= 4 && card.id === 'mobius') || (vault.v <= 5 && card.id === 'ria') || (vault.v <= 6 && card.id === 'bingbing_intp') || (vault.v <= 7 && card.id === 'wanglaoshi') || (vault.v <= 8 && card.id === 'sammy') || (vault.v <= 9 && card.id === 'winnie') || (vault.v <= 10 && card.id === 'jiukuangkuang') || (vault.v <= 11 && card.id === 'fuge') || (vault.v <= 12 && card.id === 'lia') || (vault.v <= 13 && card.id === 'zouzou') || (vault.v <= 14 && card.id === 'zenta') || (vault.v <= 15 && card.id === 'jinsang'));
         values[card.id] = legacyAddition && vault.values[card.id] === undefined
             ? 0
             : openProtectedNumber(vault.values[card.id], 'bond:' + card.id);

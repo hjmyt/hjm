@@ -274,6 +274,10 @@ function toggleTeam(id) {
         toast(`${c.name}先在台下休息一会儿。`);
         return;
     }
+    if (id === 'zouzou') {
+        toast('奏奏平时神隐；进入节奏舞台的演出日时，她会在空位中自动加入。');
+        return;
+    }
     if (team.length >= 3) {
         openModal('这一次，换谁上台？', `<p>编队最多 3 位。选择一位替换为 <strong>${c.name}</strong>，只是轮换，不会丢失角色或羁绊分。</p><div class="replace-list">${team.map(old => { const x = cardDef(old); return `<button class="replace-option" data-card-replace-old="${old}" data-card-replace-new="${id}"><img class="card-avatar-image" src="${cardThumbnail(x, 'avatar')}" alt="${x.name}" decoding="async"><span><strong>${x.name} → ${c.name}</strong><small>${x.role} · 参与全队加成，合计最多 +2 ♪</small></span>${I('repeat')}</button>`; }).join('')}</div>`);
         return;
@@ -285,6 +289,11 @@ function toggleTeam(id) {
 }
 
 function replaceTeam(oldId, newId) {
+    if (newId === 'zouzou') {
+        closeModal();
+        toast('奏奏不占常驻编队；演出日有空位时会自动加入。');
+        return;
+    }
     if (!cardOwned(newId) || state.cards.team.includes(newId))
         return;
     const i = state.cards.team.indexOf(oldId);
@@ -309,7 +318,7 @@ function prepareCardSkill(id) {
     if (id === 'shiyuan')
         return startPraise();
     const c = cardDef(id);
-    if (!c || !c.active || !cardOwned(id))
+    if (!c || (!c.active && !c.preparable) || !cardOwned(id))
         return;
     if (!state.cards.team.includes(id)) {
         toast('请先把这位伙伴加入编队，再准备技能。');
@@ -320,8 +329,8 @@ function prepareCardSkill(id) {
         toast('主动技能已取消准备。');
     }
     else {
-        state.cards.prepared = { id, amount: id === 'bingbing' ? 0 : c.active, token: Date.now() };
-        toast(id === 'bingbing' ? '爆金币已准备 · 下场完整演奏有 35% 概率得分翻倍' : `${c.activeName}已准备 · 下场达标演奏参与全队加成，合计最多 +2 ♪`, true);
+        state.cards.prepared = { id, amount: ['bingbing', 'winnie', 'jiukuangkuang'].includes(id) ? 0 : c.active, token: Date.now() };
+        toast(id === 'bingbing' ? '爆金币已准备 · 下场完整演奏有 35% 概率得分翻倍' : id === 'winnie' ? '隐忍已准备 · 开演 30 秒后得分 +30%' : id === 'jiukuangkuang' ? '理智爆发已准备 · 遇到长按音符自动开启 10 秒' : `${c.activeName}已准备 · 下场达标演奏参与全队加成，合计最多 +2 ♪`, true);
     }
     save();
     renderGlobal();
