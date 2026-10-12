@@ -15,10 +15,7 @@ window.StoryBgm = (() => {
     farewell: {title: 'The truth that you leave', src: 'assets/bgm/the-truth-that-you-leave.mp3'},
     cpFerris: {title: '宝石飞鸿摩天轮 · HE', src: 'assets/bgm/baoshi-feihong-ferris-wheel.mp3'},
     cpFarewell: {title: '讳莫如深的名字 · 宝石飞鸿 BE', src: 'assets/bgm/huimosrushen-de-mingzi.mp3'},
-    fusionEntry: {title: 'My Sunset · 融合入线篇', src: 'assets/bgm/fusion-my-sunset.mp3'},
-    fusionDaily: {title: 'NEXT TO YOU · 融合日常篇', src: 'assets/bgm/fusion-next-to-you.mp3'},
-    fusionStage: {title: 'Take Off · 融合主线篇', src: 'assets/bgm/fusion-take-off.mp3'},
-    fusionFinale: {title: '这团不好带 · 融合篇终章', src: 'assets/bgm/fusion-this-band-is-hard-to-lead.mp3'}
+    fusion: {title: 'some pieces from Jerry · 融合线', src: 'assets/bgm/fusion-some-pieces-from-jerry.mp3'}
   };
   const storageKey = 'hjm-story-bgm-v1';
   let enabled = true, volume = .32;
@@ -35,9 +32,7 @@ window.StoryBgm = (() => {
   }
   function trackFor(c) {
     if (['home', 'cards', 'card', 'care', 'album'].includes(c.view)) return 'site';
-    if (c.view === 'fusion') return c.fusionChapter === 'fm' && c.fusionEnded
-      ? 'fusionFinale'
-      : ({rl: 'fusionEntry', ep2: 'fusionDaily', fm: 'fusionStage'})[c.fusionChapter] || 'fusionEntry';
+    if (c.view === 'fusion') return 'fusion';
     if (!['chronicle', 'story'].includes(c.view)) return null;
     if (c.view === 'story') return c.character ? 'memories' : 'daily';
     if (c.personalRoute === CP_HE_CINEMATIC.route && (c.scene === CP_HE_CINEMATIC.scene && c.personalPage >= CP_HE_CINEMATIC.page || c.ending === CP_HE_CINEMATIC.scene)) return 'cpFerris';
