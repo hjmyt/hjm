@@ -96,8 +96,6 @@
 .preview-status i { background:#dbe8fb; }
 .preview-status b { background:#3377d6; }
 .true-score-playing .tap-pad { min-height:108px; margin-top:14px; }
-.true-score-hold-progress { display:block; width:min(360px,82%); height:6px; margin:12px auto 0; overflow:hidden; border-radius:999px; background:rgba(255,255,255,.22); }
-.true-score-hold-progress i { display:block; width:0; height:100%; border-radius:inherit; background:#fff; }
 .true-score-result { display:block; min-height:0; }
 .true-score-result .final-content { width:100%; }
 .true-score-result > .final-content > p { color:var(--text-secondary); font-size:13px; }

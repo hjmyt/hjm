@@ -75,29 +75,24 @@ const ScoreAuditionRules = (() => {
         for (let index = starts.length - 1; index >= 0; index--) if (beat >= starts[index]) return index;
         return 0;
     }
-    function holdTargets(data) {
+    function tapTargets(data) {
         const { beatSeconds } = timing(data);
         // One physical space-key attack plays every pitch of a simultaneous chord.
         const attacks=new Map();
         for(const event of soundingEvents(data)){
             const previous=attacks.get(event.beat);
-            if(previous){previous.duration=Math.max(previous.duration,event.duration);previous.tied=previous.tied||event.tied;}
-            else attacks.set(event.beat,{...event});
+            if(previous){previous.duration=Math.max(previous.duration,event.duration);previous.tied=previous.tied||event.tied;previous.notes.push({pitch:event.pitch,duration:event.duration,tied:event.tied});}
+            else attacks.set(event.beat,{...event,notes:[{pitch:event.pitch,duration:event.duration,tied:event.tied}]});
         }
-        return [...attacks.values()].map((event, index) => ({ ...event, index, start: event.beat * beatSeconds, end: (event.beat + event.duration) * beatSeconds, beats: event.duration, required: event.tied || event.duration > 1 + 1e-7 }));
+        return [...attacks.values()].map((event, index) => ({ ...event, index, start: event.beat * beatSeconds, end: (event.beat + event.duration) * beatSeconds, beats: event.duration }));
     }
-    function holdReleaseWindow(event, tapStart = event.start) {
-        const seconds = event.end - event.start, beatSeconds = seconds / event.beats;
-        const earlyReleaseTolerance = Math.min(beatSeconds * .5, seconds * .35), lateReleaseTolerance = Math.min(.3, beatSeconds * .4, seconds * .35), minimumHeldSeconds = seconds - earlyReleaseTolerance;
-        return { earlyReleaseTolerance, lateReleaseTolerance, minimumHeldSeconds, earliestEnd: Math.max(event.end - earlyReleaseTolerance, tapStart + minimumHeldSeconds), latestEnd: event.end + lateReleaseTolerance };
-    }
-    function analyze(data, taps = [], holds = []) {
+    const holdTargets = tapTargets;
+    function analyze(data, taps = []) {
         const spec = modeSpec(data.mode, data);
         if (!spec || !validTempo(data.tempo)) return null;
         const clock = timing(data), maxTime = clock.phraseSeconds + 2;
         if (!Array.isArray(taps) || taps.length > 1024 || !taps.every(value => Number.isFinite(value) && value >= -.5 && value <= maxTime)) return null;
-        if (!Array.isArray(holds) || holds.length > taps.length || new Set(holds.map(hold => hold?.tapIndex)).size !== holds.length || !holds.every(hold => hold && Number.isInteger(hold.tapIndex) && hold.tapIndex >= 0 && hold.tapIndex < taps.length && Number.isFinite(hold.end) && hold.end >= taps[hold.tapIndex] && hold.end <= maxTime && (hold.cancelled === undefined || typeof hold.cancelled === 'boolean'))) return null;
-        const { beatSeconds } = clock, { starts } = measureStarts(data), performanceTargets = holdTargets(data), targets = performanceTargets.map(event => ({ ...event, time: event.start }));
+        const { beatSeconds } = clock, { starts } = measureStarts(data), performanceTargets = tapTargets(data), targets = performanceTargets.map(event => ({ ...event, time: event.start }));
         const used = new Set(), matches = targets.map(target => {
             let tapIndex = -1, error = Infinity;
             taps.forEach((tap, index) => {
@@ -113,26 +108,21 @@ const ScoreAuditionRules = (() => {
             const extras = taps.filter((tap, index) => !used.has(index) && tap >= start - spec.tolerance && tap < end - spec.tolerance).length;
             const averageError = matched.length ? matched.reduce((sum, match) => sum + match.error, 0) / matched.length : Infinity;
             const accuracy = local.length ? matched.length / local.length : 1;
-            const requiredHolds = local.filter(match => match.required), holdErrors = requiredHolds.filter(match => {
-                if (match.tapIndex < 0) return true;
-                const release = holds.find(hold => hold.tapIndex === match.tapIndex), window = holdReleaseWindow(match, taps[match.tapIndex]);
-                return !release || release.cancelled || release.end < window.earliestEnd - 1e-7 || release.end > window.latestEnd + 1e-7;
-            }).length;
-            const passed = local.length === 0 ? extras === 0 : accuracy >= spec.measureAccuracy && extras <= (data.mode === 'hard' ? 0 : 1) && averageError <= spec.tolerance * .82 && holdErrors === 0;
-            return { number: measure.number, targets: local.length, matched: matched.length, extras, averageError, requiredHolds: requiredHolds.length, holdErrors, passed };
+            const passed = local.length === 0 ? extras === 0 : accuracy >= spec.measureAccuracy && extras <= (data.mode === 'hard' ? 0 : 1) && averageError <= spec.tolerance * .82;
+            return { number: measure.number, targets: local.length, matched: matched.length, extras, averageError, requiredHolds: 0, holdErrors: 0, passed };
         });
         const sections = Array.from({ length: 4 }, (_, index) => {
             const start = Math.floor(index * measures.length / 4), end = Math.floor((index + 1) * measures.length / 4);
             const slice = measures.slice(start, end), passedMeasures = slice.filter(measure => measure.passed).length;
             return { index: index + 1, startMeasure: data.measures[start]?.number ?? start + 1, endMeasure: data.measures[end - 1]?.number ?? end, passedMeasures, totalMeasures: slice.length, passed: passedMeasures / slice.length >= spec.sectionAccuracy };
         });
-        return { targets, matches, measures, sections, score: sections.filter(section => section.passed).length, maxScore: 4, extras: taps.length - used.size, requiredHolds: performanceTargets.filter(event => event.required).length };
+        return { targets, matches, measures, sections, score: sections.filter(section => section.passed).length, maxScore: 4, extras: taps.length - used.size, requiredHolds: 0 };
     }
-    function validResult(mode, scoreId, taps, holds, claimedScore, tempo = null, skipLeadingRests = false) {
+    function validResult(mode, scoreId, taps, claimedScore, tempo = null, skipLeadingRests = false) {
         const source = phrase(mode, tempo, scoreId), data = source && playablePhrase(source, skipLeadingRests === true);
         if (!data || !Number.isInteger(claimedScore)) return false;
-        const analysis = analyze(data, taps, holds);
+        const analysis = analyze(data, taps);
         return !!analysis && claimedScore === analysis.score;
     }
-    return Object.freeze({ scores, visibleScores, score, scoreById, tempoRange, validTempo, modeSpec, phrase, leadingSilentMeasures, playablePhrase, measureStarts, measureAtBeat, metronomeBeats, targetEvents, soundingEvents, holdTargets, holdReleaseWindow, timing, analyze, validResult });
+    return Object.freeze({ scores, visibleScores, score, scoreById, tempoRange, validTempo, modeSpec, phrase, leadingSilentMeasures, playablePhrase, measureStarts, measureAtBeat, metronomeBeats, targetEvents, soundingEvents, tapTargets, holdTargets, timing, analyze, validResult });
 })();

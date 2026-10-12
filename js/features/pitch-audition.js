@@ -142,8 +142,8 @@ const PitchAudition = (() => {
     }
 
     function validScoreResult(message, mode, expectedScoreId = null) {
-        const taps = message.evidence?.taps, holds = message.evidence?.holds, tempo = message.evidence?.tempo, skipLeadingRests = message.evidence?.skipLeadingRests;
-        return (skipLeadingRests === undefined || typeof skipLeadingRests === 'boolean') && (!expectedScoreId || message.scoreId === expectedScoreId) && ScoreAuditionRules.validResult(mode, message.scoreId, taps, holds, message.score, tempo, skipLeadingRests === true);
+        const taps = message.evidence?.taps, tempo = message.evidence?.tempo, skipLeadingRests = message.evidence?.skipLeadingRests;
+        return (skipLeadingRests === undefined || typeof skipLeadingRests === 'boolean') && (!expectedScoreId || message.scoreId === expectedScoreId) && ScoreAuditionRules.validResult(mode, message.scoreId, taps, message.score, tempo, skipLeadingRests === true);
     }
 
     function settle(message) {

@@ -22,11 +22,11 @@ function createScoreAuditionGame(mount, { styleHref = 'styles/game-score-auditio
         } catch { return null; }
     })();
     let score = cachedScore || ScoreAuditionRules.score;
-    const state = { screen: 'intro', songId: score.songId, scoreId: score.id, mode: 'simple', tempo: Math.round(score.tempo), skipLeadingRests: true, page: 0, followStartSystem: 0, scrollTargetSystem: 0, scrollAnimating: false, currentMeasure: 0, countIn: null, countInHistory: [], taps: [], holds: [], analysis: null, payout: null, lastTapPitch: null, soundingPitch: null, dailyEarned: { simple: 0, medium: 0, hard: 0 }, dailyCaps: { simple: 20, medium: 30, hard: 60 }, rulesReady: false, audioStatus: '点击后启用声音' };
+    const state = { screen: 'intro', songId: score.songId, scoreId: score.id, mode: 'simple', tempo: Math.round(score.tempo), skipLeadingRests: true, page: 0, followStartSystem: 0, scrollTargetSystem: 0, scrollAnimating: false, currentMeasure: 0, countIn: null, countInHistory: [], taps: [], analysis: null, payout: null, lastTapPitch: null, lastTapDuration: 0, soundingPitch: null, dailyEarned: { simple: 0, medium: 0, hard: 0 }, dailyCaps: { simple: 20, medium: 30, hard: 60 }, rulesReady: false, audioStatus: '点击后启用声音' };
     const hashId = value => { let hash = 2166136261; for (const char of value) hash = Math.imul(hash ^ char.charCodeAt(0), 16777619); return (hash >>> 0).toString(36).toUpperCase().padStart(7, '0').slice(-7); };
     const randomUnit = () => { const value = new Uint32Array(1); crypto.getRandomValues(value); return value[0] / 4294967296; };
     let questionId = hashId(`${score.id}:${randomUnit()}`);
-    let audioContext = null, output = null, externalSoundEnabled = true, performanceStart = 0, activeNodes = new Set(), timers = [], playFrame = 0, holdFrame = 0, scrollTimer = 0, activePress = null, lastDirectTapAt = -Infinity, lastPlayback = null;
+    let audioContext = null, output = null, externalSoundEnabled = true, performanceStart = 0, activeNodes = new Set(), activeTapVoices = [], activeTapGates = new Set(), timers = [], playFrame = 0, scrollTimer = 0, tapVoiceToken = 0, lastDirectTapAt = -Infinity, lastPlayback = null;
 
     const pageSize = () => matchMedia('(max-width:700px)').matches ? 6 : 12;
     const measuresPerSystem = () => pageSize() / 3;
@@ -226,12 +226,12 @@ function createScoreAuditionGame(mount, { styleHref = 'styles/game-score-auditio
 
     function renderReady() {
         const spec = score.modes[state.mode], clock = ScoreAuditionRules.timing(phrase()), presets = [...new Set([ScoreAuditionRules.tempoRange.min, Math.round(score.tempo * .75), Math.round(score.tempo), ScoreAuditionRules.tempoRange.max])].map(normalizeTempo).map(tempo => `<button type="button" class="score-tempo-preset ${state.tempo === tempo ? 'active' : ''}" data-score-tempo-preset="${tempo}" aria-pressed="${state.tempo === tempo}">${tempo === score.tempo ? '原速' : `${Math.round(tempo / score.tempo * 100)}%`}</button>`).join('');
-        return `<div class="game-body true-score-ready"><div class="stage-top"><div class="stage-copy"><h2>${spec.label} · 全谱演奏</h2><p>${spec.description}。成绩按 4 个乐段结算；短音点按，延音线与超过一拍的长音需要按住，到提示后再松开。</p></div><div class="stage-labels"><span class="chip">${score.meter}</span><span class="chip" data-selected-tempo>♩=${state.tempo}</span><span class="chip" data-score-duration>约 ${Math.ceil(clock.phraseSeconds)} 秒</span></div></div><section class="score-tempo-panel" aria-label="演奏速度"><div class="score-tempo-copy"><strong>选择演奏速度</strong><small>示范、节拍器、滚谱、击打判定与长按时值会同步调整；音高保持不变。</small></div><label class="score-tempo-slider"><input type="range" min="${ScoreAuditionRules.tempoRange.min}" max="${ScoreAuditionRules.tempoRange.max}" step="1" value="${state.tempo}" data-score-tempo aria-label="演奏速度 BPM"><output data-score-tempo-output aria-live="polite">${tempoText()}</output></label><div class="score-tempo-presets" aria-label="常用速度">${presets}</div></section>${leadingRestControl()}${pager()}<div class="score-sheet true-score-sheet">${scoreSVG()}</div><div class="audio-strip"><span>${spec.preview ? `示范包含演奏范围内的全谱音高、时值与按 ${score.meter} 拍号进行的 ${clock.countInBeats} 拍预备拍；每屏显示三行并自动向上滚动。` : `本难度不提供正确示范；可按每页三行查看当前 ${displayMeasures().length} 小节。`}</span><div class="audio-actions"><button class="btn ghost" data-action="restart">返回难度</button>${spec.preview ? '<button class="btn ghost" data-action="preview">▶ 播放全谱示范</button>' : ''}<button class="btn primary" data-action="perform">开始全谱击打</button></div></div></div>`;
+        return `<div class="game-body true-score-ready"><div class="stage-top"><div class="stage-copy"><h2>${spec.label} · 全谱演奏</h2><p>${spec.description}。成绩按 4 个乐段结算；每次点按依次播放下一个有声起拍，延音线续音不重复敲，声音会按谱面时值自动播放完整。</p></div><div class="stage-labels"><span class="chip">${score.meter}</span><span class="chip" data-selected-tempo>♩=${state.tempo}</span><span class="chip" data-score-duration>约 ${Math.ceil(clock.phraseSeconds)} 秒</span></div></div><section class="score-tempo-panel" aria-label="演奏速度"><div class="score-tempo-copy"><strong>选择演奏速度</strong><small>示范、节拍器、滚谱、点按判定与发声时值会同步调整；音高保持不变。</small></div><label class="score-tempo-slider"><input type="range" min="${ScoreAuditionRules.tempoRange.min}" max="${ScoreAuditionRules.tempoRange.max}" step="1" value="${state.tempo}" data-score-tempo aria-label="演奏速度 BPM"><output data-score-tempo-output aria-live="polite">${tempoText()}</output></label><div class="score-tempo-presets" aria-label="常用速度">${presets}</div></section>${leadingRestControl()}${pager()}<div class="score-sheet true-score-sheet">${scoreSVG()}</div><div class="audio-strip"><span>${spec.preview ? `示范包含演奏范围内的全谱音高、时值与按 ${score.meter} 拍号进行的 ${clock.countInBeats} 拍预备拍；每屏显示三行并自动向上滚动。` : `本难度不提供正确示范；可按每页三行查看当前 ${displayMeasures().length} 小节。`}</span><div class="audio-actions"><button class="btn ghost" data-action="restart">返回难度</button>${spec.preview ? '<button class="btn ghost" data-action="preview">▶ 播放全谱示范</button>' : ''}<button class="btn primary" data-action="perform">开始全谱击打</button></div></div></div>`;
     }
 
     function renderPlaying() {
         const measures = displayMeasures(), progress = Math.min(100, ((state.currentMeasure + 1) / measures.length) * 100), current = measures[state.currentMeasure]?.number || score.measures.length;
-        return `<div class="game-body true-score-playing"><div class="performance-status"><strong>正在演奏 · 第 ${current} / ${score.measures.length} 小节</strong><span>${state.taps.length} 次击打 · ${state.holds.length} 次松手</span><i><b style="width:${progress}%"></b></i></div>${countInPanel('playing')}${pager()}<div class="score-sheet true-score-sheet score-follow-sheet ${state.scrollAnimating ? 'score-scroll-up' : ''}">${scoreSVG()}</div><button class="tap-pad" data-action="tap" aria-label="按当前真谱击打；连音和长音需要按住" aria-pressed="false" ${state.countIn === null ? '' : 'disabled'}><strong data-tap-title>${state.countIn === null ? '按谱击打' : '等待预备拍'}</strong><small data-hold-status>${state.countIn === null ? '短音点按；延音线和超过一拍的长音请持续按住' : `${countInSequence()} 结束后再开始击打`}</small><span class="true-score-hold-progress" aria-hidden="true"><i></i></span></button></div>`;
+        return `<div class="game-body true-score-playing"><div class="performance-status"><strong>正在演奏 · 第 ${current} / ${score.measures.length} 小节</strong><span>${state.taps.length} 次击打</span><i><b style="width:${progress}%"></b></i></div>${countInPanel('playing')}${pager()}<div class="score-sheet true-score-sheet score-follow-sheet ${state.scrollAnimating ? 'score-scroll-up' : ''}">${scoreSVG()}</div><button class="tap-pad" data-action="tap" aria-label="按当前真谱节奏点按" ${state.countIn === null ? '' : 'disabled'}><strong data-tap-title>${state.countIn === null ? '按谱点按' : '等待预备拍'}</strong><small data-tap-status>${state.countIn === null ? '每次点按播放下一个起音；短音会清晰收束' : `${countInSequence()} 结束后再开始击打`}</small></button></div>`;
     }
 
     function renderPreview() {
@@ -241,7 +241,7 @@ function createScoreAuditionGame(mount, { styleHref = 'styles/game-score-auditio
 
     function renderResult() {
         const analysis = state.analysis, sections = analysis.sections.map(section => `<article class="section-result ${section.passed ? 'pass' : 'fail'}"><b>${section.index}</b><span>小节 ${section.startMeasure}–${section.endMeasure}</span><strong>${section.passedMeasures} / ${section.totalMeasures} 小节</strong></article>`).join('');
-        return `<div class="game-body final true-score-result"><div class="final-content"><div class="result-ring"><div><strong>${analysis.score}</strong><small>/ 4 段</small></div></div><h2>${analysis.score === 4 ? '整首稳稳接住了' : '全谱已经留下你的演奏记录'}</h2><p>绿色为通过小节，红色为需要再练的小节；连音与长音同时校验按下和松手时机。</p><div class="section-results">${sections}</div>${pager()}<div class="score-sheet true-score-sheet result-score">${scoreSVG()}</div><div class="reward"><div class="reward-amount"><strong><span id="resultRewardAmount">${state.payout ?? analysis.score * (state.mode === 'hard' ? 2 : 1)}</span> ♪</strong><small>本局音符</small></div><p><strong id="resultDailyValue">正在结算…</strong><br><span id="embeddedPayout">逐小节判定已完成；乐段得分用于音符结算。</span></p></div><button class="btn primary block" data-action="restart">再选一次难度</button></div></div>`;
+        return `<div class="game-body final true-score-result"><div class="final-content"><div class="result-ring"><div><strong>${analysis.score}</strong><small>/ 4 段</small></div></div><h2>${analysis.score === 4 ? '整首稳稳接住了' : '全谱已经留下你的演奏记录'}</h2><p>绿色为通过小节，红色为需要再练的小节；只校验每个有声起拍的点按时机。</p><div class="section-results">${sections}</div>${pager()}<div class="score-sheet true-score-sheet result-score">${scoreSVG()}</div><div class="reward"><div class="reward-amount"><strong><span id="resultRewardAmount">${state.payout ?? analysis.score * (state.mode === 'hard' ? 2 : 1)}</span> ♪</strong><small>本局音符</small></div><p><strong id="resultDailyValue">正在结算…</strong><br><span id="embeddedPayout">逐小节判定已完成；乐段得分用于音符结算。</span></p></div><button class="btn primary block" data-action="restart">再选一次难度</button></div></div>`;
     }
 
     function render() {
@@ -273,25 +273,55 @@ function createScoreAuditionGame(mount, { styleHref = 'styles/game-score-auditio
     function scoreTone(event, when, beatSeconds) {
         ScoreInstrumentAudio.play(audioContext,output,score.instrument,frequency(soundingPitch(event.pitch)),when,event.duration*beatSeconds,.12,track);
     }
-    function pitchAtTime(elapsed) {
-        const data = phrase(), { beatSeconds } = ScoreAuditionRules.timing(data), events = ScoreAuditionRules.targetEvents(data);
+    function attackAtTime(elapsed) {
+        const data = phrase(), events = ScoreAuditionRules.tapTargets(data);
         let best = null, distance = Infinity;
         for (const event of events) {
-            const current = Math.abs(event.beat * beatSeconds - elapsed);
+            const current = Math.abs(event.start - elapsed);
             if (current < distance) { best = event; distance = current; }
         }
-        return best?.pitch ? soundingPitch(best.pitch) : null;
+        if (!best?.pitch) return null;
+        const beatSeconds = ScoreAuditionRules.timing(data).beatSeconds;
+        return { ...best, pitch: soundingPitch(best.pitch), duration: best.duration * beatSeconds, notes: (best.notes || [best]).map(note => ({ ...note, pitch: soundingPitch(note.pitch), duration: note.duration * beatSeconds })) };
     }
-    function startTapTone(pitch) {
-        if (!pitch || !audioContext || audioContext.state !== 'running') return null;
-        state.lastTapPitch = pitch;
-        state.soundingPitch = pitch;
-        const note=ScoreInstrumentAudio.play(audioContext,output,score.instrument,frequency(pitch),audioContext.currentTime,null,.12,track);
-        return {pitch,release(){note.release();if(state.soundingPitch===pitch)state.soundingPitch=null;}};
+    function attackAtIndex(index) {
+        const data = phrase(), target = ScoreAuditionRules.tapTargets(data)[index];
+        if (!target?.pitch) return null;
+        const beatSeconds = ScoreAuditionRules.timing(data).beatSeconds;
+        return { ...target, pitch: soundingPitch(target.pitch), duration: target.duration * beatSeconds, notes: (target.notes || [target]).map(note => ({ ...note, pitch: soundingPitch(note.pitch), duration: note.duration * beatSeconds })) };
+    }
+    const pitchAtTime = elapsed => attackAtTime(elapsed)?.pitch || null;
+    function stopTapVoices() {
+        tapVoiceToken++;
+        activeTapVoices.forEach(voice => { try { voice.release(.008); } catch {} });
+        activeTapVoices = [];
+        state.soundingPitch = null;
+    }
+    function createTapVoice(note, volume) {
+        const gate = audioContext.createGain(); gate.gain.value = 1; gate.connect(output); activeTapGates.add(gate);
+        const source = ScoreInstrumentAudio.play(audioContext,gate,score.instrument,frequency(note.pitch),audioContext.currentTime,null,volume,track);
+        let released = false;
+        return { release(fade = Math.max(.012, Math.min(.035, note.duration * .18))) {
+            if (released) return; released = true;
+            const now = audioContext.currentTime, tail = Math.max(.006, fade);
+            gate.gain.cancelScheduledValues(now); gate.gain.setValueAtTime(Math.max(.0001, gate.gain.value), now); gate.gain.exponentialRampToValueAtTime(.0001, now + tail);
+            source?.release(now);
+            timers.push(setTimeout(() => { try { gate.disconnect(); } catch {} activeTapGates.delete(gate); }, (tail + .11) * 1000));
+        } };
+    }
+    function startTapTone(attack) {
+        if (!attack?.pitch || !audioContext || audioContext.state !== 'running') return null;
+        stopTapVoices();
+        const token = ++tapVoiceToken, notes = attack.notes?.length ? attack.notes : [attack], duration = Math.max(...notes.map(note => note.duration));
+        state.lastTapPitch = attack.pitch; state.lastTapDuration = duration; state.soundingPitch = attack.pitch;
+        activeTapVoices = notes.map(note => createTapVoice(note,.12 / Math.sqrt(notes.length)));
+        notes.forEach((note, index) => timers.push(setTimeout(() => { if (tapVoiceToken === token) activeTapVoices[index]?.release(); }, note.duration * 1000)));
+        timers.push(setTimeout(() => { if (tapVoiceToken === token) { activeTapVoices = []; state.soundingPitch = null; } }, (duration + .12) * 1000));
+        return attack;
     }
 
     let sampleLoadToken=0;
-    function clearRuntime() { sampleLoadToken++; state.samplesLoading=false; timers.forEach(clearTimeout); timers = []; cancelAnimationFrame(playFrame); cancelAnimationFrame(holdFrame); playFrame = 0; holdFrame = 0; activePress = null; state.countIn = null; state.soundingPitch = null; for (const node of activeNodes) { try { node.stop(); } catch {} try { node.disconnect(); } catch {} } activeNodes.clear(); }
+    function clearRuntime() { sampleLoadToken++; stopTapVoices(); state.samplesLoading=false; timers.forEach(clearTimeout); timers = []; cancelAnimationFrame(playFrame); playFrame = 0; state.countIn = null; for (const node of activeNodes) { try { node.stop(); } catch {} try { node.disconnect(); } catch {} } activeNodes.clear(); for (const gate of activeTapGates) { try { gate.disconnect(); } catch {} } activeTapGates.clear(); }
     function stopAudio() { clearRuntime(); }
     function scheduleCountIn(start, timing) { for (let beat = 0; beat < timing.countInBeats; beat++) clickTone(start + beat * timing.countInBeatSeconds, beat === 0); }
     function scheduleVisualCountIn(start, timing) {
@@ -304,11 +334,11 @@ function createScoreAuditionGame(mount, { styleHref = 'styles/game-score-auditio
         }, Math.max(0, (start - audioContext.currentTime + index * timing.countInBeatSeconds) * 1000)));
         timers.push(setTimeout(() => {
             state.countIn = null;
-            const panel = $('[data-score-countdown]'), pad = $('[data-action="tap"]'), title = $('[data-tap-title]'), status = $('[data-hold-status]');
+            const panel = $('[data-score-countdown]'), pad = $('[data-action="tap"]'), title = $('[data-tap-title]'), status = $('[data-tap-status]');
             if (panel) panel.hidden = true;
             if (pad) pad.disabled = false;
-            if (title) title.textContent = '按谱击打';
-            if (status) status.textContent = '短音点按；延音线和超过一拍的长音请持续按住';
+            if (title) title.textContent = '按谱点按';
+            if (status) status.textContent = '每次点按播放下一个起音；短音会清晰收束';
         }, Math.max(0, (start - audioContext.currentTime + timing.countInSeconds) * 1000)));
     }
 
@@ -360,54 +390,27 @@ function createScoreAuditionGame(mount, { styleHref = 'styles/game-score-auditio
         if(token!==sampleLoadToken || !externalSoundEnabled)return;
         state.samplesLoading=false;state.sampleStatus=sampled?'Musyng Kite · 乐器采样':'采样未能载入，暂用合成音色；下次播放将重试。';
         const data = phrase(), timing = ScoreAuditionRules.timing(data), start = audioContext.currentTime + .08;
-        performanceStart = start + timing.countInSeconds; state.taps = []; state.holds = []; state.lastTapPitch = null; state.currentMeasure = 0; state.page = 0; state.followStartSystem = 0; state.scrollTargetSystem = 0; state.scrollAnimating = false; state.screen = 'playing'; scheduleVisualCountIn(start, timing); render(); scheduleCountIn(start, timing);
+        performanceStart = start + timing.countInSeconds; state.taps = []; state.lastTapPitch = null; state.currentMeasure = 0; state.page = 0; state.followStartSystem = 0; state.scrollTargetSystem = 0; state.scrollAnimating = false; state.screen = 'playing'; scheduleVisualCountIn(start, timing); render(); scheduleCountIn(start, timing);
         ScoreAuditionRules.metronomeBeats(data).forEach(beat => clickTone(performanceStart + beat.beat * timing.beatSeconds, beat.accent));
         lastPlayback = { kind: 'performance', scoreId: score.id, instrument: score.instrument, tempo: data.tempo, beatSeconds: timing.beatSeconds, countInBeatSeconds: timing.countInBeatSeconds, countInSeconds: timing.countInSeconds, countInClicks: timing.countInBeats, skippedLeadingMeasures: skippedLeadingCount(), playedMeasures: data.measures.length, metronomeClicks: timing.phraseBeats, noteEvents: 0, start, musicStart: performanceStart };
         playFrame = requestAnimationFrame(updatePlayback);
         timers.push(setTimeout(finishPerformance, (timing.countInSeconds + timing.phraseSeconds + .45) * 1000));
     }
-    function updateHoldProgress() {
-        if (!activePress || state.screen !== 'playing' || !audioContext) return;
-        const title = $('[data-tap-title]'), status = $('[data-hold-status]'), bar = $('.true-score-hold-progress i');
-        if (activePress.target) {
-            const now = audioContext.currentTime - performanceStart, window = activePress.releaseWindow, remaining = window.earliestEnd - now, progress = Math.max(0, Math.min(1, (now - activePress.target.start) / (window.earliestEnd - activePress.target.start)));
-            if (title) title.textContent = remaining <= 0 ? '现在可以松开' : '保持按住';
-            if (status) status.textContent = now > window.latestEnd ? '已经超时，请松开' : remaining <= 0 ? '松开后准备下一个音' : `长按 ${Number(activePress.target.beats.toFixed(2))} 拍 · 还需 ${Math.max(0, remaining / ScoreAuditionRules.timing(phrase()).beatSeconds).toFixed(1)} 拍`;
-            if (bar) bar.style.width = `${progress * 100}%`;
-            holdFrame = requestAnimationFrame(updateHoldProgress);
-        } else {
-            if (title) title.textContent = '短音点按';
-            if (status) status.textContent = '松开，准备下一个音';
-            if (bar) bar.style.width = '0%';
-        }
-    }
-    function recordTap(source = 'click') {
-        if (activePress || state.screen !== 'playing' || state.countIn !== null || !audioContext || audioContext.currentTime < performanceStart) return false;
-        const elapsed = audioContext.currentTime - performanceStart, pitch = pitchAtTime(elapsed);
-        const requiredTarget = ScoreAuditionRules.holdTargets(phrase()).filter(target => target.required && Math.abs(target.start - elapsed) <= score.modes[state.mode].tolerance).sort((a, b) => Math.abs(a.start - elapsed) - Math.abs(b.start - elapsed))[0] || null;
-        activePress = { source, tapIndex: state.taps.length, start: elapsed, target: requiredTarget, releaseWindow: requiredTarget ? ScoreAuditionRules.holdReleaseWindow(requiredTarget, elapsed) : null, voice: startTapTone(pitch) };
-        state.taps.push(elapsed); if (lastPlayback) lastPlayback.lastTapPitch = pitch;
-        const pad = $('[data-action="tap"]'); pad?.classList.add('hit'); pad?.setAttribute('aria-pressed', 'true'); updateHoldProgress(); return true;
-    }
-    function releasePress(source = null, cancelled = false) {
-        if (!activePress || (source !== null && source !== activePress.source) || !audioContext) return false;
-        const press = activePress; activePress = null; cancelAnimationFrame(holdFrame); holdFrame = 0;
-        const end = Math.max(press.start, audioContext.currentTime - performanceStart);
-        press.voice?.release();
-        state.holds.push({ tapIndex: press.tapIndex, end, cancelled }); lastDirectTapAt = performance.now();
-        const pad = $('[data-action="tap"]'), title = $('[data-tap-title]'), status = $('[data-hold-status]'), bar = $('.true-score-hold-progress i');
-        pad?.classList.remove('hit'); pad?.setAttribute('aria-pressed', 'false'); if (bar) bar.style.width = '0%';
-        if (title) title.textContent = '按谱击打';
-        if (status) status.textContent = cancelled ? '操作已中断，本次长按不计完成' : press.target && end < press.releaseWindow.earliestEnd - 1e-7 ? '松开太早；长音要等“现在可以松开”' : press.target && end > press.releaseWindow.latestEnd + 1e-7 ? '松开晚了；看到提示即可抬手' : press.target ? '长按完成，准备下一音' : '短音完成，准备下一音';
+    function recordTap() {
+        if (state.screen !== 'playing' || state.countIn !== null || !audioContext || audioContext.currentTime < performanceStart) return false;
+        const elapsed = audioContext.currentTime - performanceStart, attack = attackAtIndex(state.taps.length);
+        startTapTone(attack);
+        state.taps.push(elapsed); if (lastPlayback) { lastPlayback.lastTapPitch = attack?.pitch || null; lastPlayback.lastTapDuration = attack?.duration || 0; }
+        const pad = $('[data-action="tap"]');
+        pad?.classList.add('hit');
+        timers.push(setTimeout(() => pad?.classList.remove('hit'), 90));
         return true;
     }
-    function finishPerformance(forcedTaps = null, forcedHolds = null) {
+    function finishPerformance(forcedTaps = null) {
         if (state.screen !== 'playing') return;
-        if (activePress) releasePress(null, true);
         if (forcedTaps) state.taps = forcedTaps.slice();
-        if (forcedHolds) state.holds = forcedHolds.map(hold => ({ ...hold }));
-        stopAudio(); clearTimeout(scrollTimer); state.countIn = null; state.scrollAnimating = false; state.analysis = ScoreAuditionRules.analyze(phrase(), state.taps, state.holds); state.page = 0; state.screen = 'result'; render();
-        parent.postMessage({ type: 'hjm-pitch-complete', challenge: 'score', id: questionId, mode: state.mode, score: state.analysis.score, scoreId: score.id, evidence: { tempo: state.tempo, skipLeadingRests: state.skipLeadingRests && leadingSilentCount() > 0, taps: state.taps.slice(), holds: state.holds.map(hold => ({ ...hold })) } }, '*');
+        stopAudio(); clearTimeout(scrollTimer); state.countIn = null; state.scrollAnimating = false; state.analysis = ScoreAuditionRules.analyze(phrase(), state.taps); state.page = 0; state.screen = 'result'; render();
+        parent.postMessage({ type: 'hjm-pitch-complete', challenge: 'score', id: questionId, mode: state.mode, score: state.analysis.score, scoreId: score.id, evidence: { tempo: state.tempo, skipLeadingRests: state.skipLeadingRests && leadingSilentCount() > 0, taps: state.taps.slice() } }, '*');
     }
     function startGame() { if (!state.rulesReady) return; state.analysis = null; state.payout = null; state.page = 0; state.screen = 'ready'; render(); parent.postMessage({ type: 'hjm-pitch-start', challenge: 'score', id: questionId, mode: state.mode, scoreId: score.id }, '*'); parent.postMessage({ type: 'hjm-pitch-focus', challenge: 'score' }, '*'); }
 
@@ -439,7 +442,7 @@ function createScoreAuditionGame(mount, { styleHref = 'styles/game-score-auditio
         const mode = event.target.closest('[data-mode]'); if (mode && state.screen === 'intro') { state.mode = mode.dataset.mode; render(); return; }
         const tempoPreset = event.target.closest('[data-score-tempo-preset]'); if (tempoPreset && state.screen === 'ready') { state.tempo = normalizeTempo(tempoPreset.dataset.scoreTempoPreset); render(); return; }
         const action = event.target.closest('[data-action]')?.dataset.action;
-        if (action === 'start') startGame(); else if (action === 'toggle-leading-rests' && state.screen === 'ready') { state.skipLeadingRests = !state.skipLeadingRests; state.page = 0; state.currentMeasure = 0; state.followStartSystem = 0; state.scrollTargetSystem = 0; render(); } else if (action === 'preview') preview(); else if (action === 'stop-preview') { stopAudio(); state.screen = 'ready'; render(); } else if (action === 'perform') beginPerformance(); else if (action === 'tap' && performance.now() - lastDirectTapAt > 300 && recordTap('click')) releasePress('click'); else if (action === 'prev-page') { state.page = clampPage(state.page - 1); render(); } else if (action === 'next-page') { state.page = clampPage(state.page + 1); render(); } else if (action === 'restart') parent.postMessage({ type: 'hjm-pitch-restart', challenge: 'score' }, '*');
+        if (action === 'start') startGame(); else if (action === 'toggle-leading-rests' && state.screen === 'ready') { state.skipLeadingRests = !state.skipLeadingRests; state.page = 0; state.currentMeasure = 0; state.followStartSystem = 0; state.scrollTargetSystem = 0; render(); } else if (action === 'preview') preview(); else if (action === 'stop-preview') { stopAudio(); state.screen = 'ready'; render(); } else if (action === 'perform') beginPerformance(); else if (action === 'tap' && performance.now() - lastDirectTapAt > 300) recordTap(); else if (action === 'prev-page') { state.page = clampPage(state.page - 1); render(); } else if (action === 'next-page') { state.page = clampPage(state.page + 1); render(); } else if (action === 'restart') parent.postMessage({ type: 'hjm-pitch-restart', challenge: 'score' }, '*');
     });
     $('#gameRoot').addEventListener('change', event => {
         if (state.screen !== 'intro') return;
@@ -470,13 +473,8 @@ function createScoreAuditionGame(mount, { styleHref = 'styles/game-score-auditio
         $('#stageSubtitle').textContent = `${score.sourceMeasures} · ${score.meter} · ♩=${state.tempo}${state.tempo === score.tempo ? ' 原速' : ` · ${tempoPercent()}%`}`;
         root.querySelectorAll('[data-score-tempo-preset]').forEach(button => { const active = Number(button.dataset.scoreTempoPreset) === state.tempo; button.classList.toggle('active', active); button.setAttribute('aria-pressed', String(active)); });
     });
-    $('#gameRoot').addEventListener('pointerdown', event => { const pad = event.target.closest('[data-action="tap"]'); if (!pad || event.button !== 0) return; event.preventDefault(); lastDirectTapAt = performance.now(); if (recordTap(`pointer:${event.pointerId}`)) { try { pad.setPointerCapture(event.pointerId); } catch {} } });
-    window.addEventListener('pointerup', event => releasePress(`pointer:${event.pointerId}`), { signal: lifecycle.signal });
-    window.addEventListener('pointercancel', event => releasePress(`pointer:${event.pointerId}`, true), { signal: lifecycle.signal });
-    $('#gameRoot').addEventListener('lostpointercapture', event => releasePress(`pointer:${event.pointerId}`, true));
-    document.addEventListener('keydown', event => { if (event.code === 'Space' && state.screen === 'playing') { event.preventDefault(); if (!event.repeat) { lastDirectTapAt = performance.now(); recordTap('keyboard'); } } }, { signal: lifecycle.signal });
-    document.addEventListener('keyup', event => { if (event.code === 'Space' && state.screen === 'playing') { event.preventDefault(); releasePress('keyboard'); } }, { signal: lifecycle.signal });
-    window.addEventListener('blur', () => releasePress(null, true), { signal: lifecycle.signal });
+    $('#gameRoot').addEventListener('pointerdown', event => { const pad = event.target.closest('[data-action="tap"]'); if (!pad || event.button !== 0) return; event.preventDefault(); lastDirectTapAt = performance.now(); recordTap(); });
+    document.addEventListener('keydown', event => { if (event.code === 'Space' && state.screen === 'playing') { event.preventDefault(); if (!event.repeat) { lastDirectTapAt = performance.now(); recordTap(); } } }, { signal: lifecycle.signal });
     document.addEventListener('pointerdown', event => { if (!event.composedPath().includes(mount)) closeScoreSelect(); }, { signal: lifecycle.signal });
     document.addEventListener('visibilitychange', () => { if (document.hidden && state.screen !== 'result') { const loading=state.samplesLoading;stopAudio();if(loading){state.sampleStatus='准备已暂停，请重新播放。';render();} } }, { signal: lifecycle.signal });
     window.addEventListener('pagehide', stopAudio, { signal: lifecycle.signal });
@@ -488,7 +486,7 @@ function createScoreAuditionGame(mount, { styleHref = 'styles/game-score-auditio
         else if (data?.type === 'hjm-pitch-settled' && state.screen === 'result') { const amount = $('#resultRewardAmount'), daily = $('#resultDailyValue'), note = $('#embeddedPayout'); if (data.ok) { state.payout = Number(data.payout) || 0; if (amount) amount.textContent = state.payout; if (daily) daily.textContent = `今日 ${data.dailyEarned} / ${data.dailyCap} 音符`; if (note) note.textContent = state.payout < Number(data.rawPayout) ? '已按今日剩余额度发放；全谱成绩完整保留。' : '结算完成，逐小节结果可继续翻页复盘。'; } else if (note) note.textContent = String(data.text || '结算失败，请稍后重试。'); }
     }, { signal: lifecycle.signal });
 
-    const api = { state, get score() { return score; }, get questionId() { return questionId; }, scoreSVG, startGame, beginPerformance, preview, finishPerformance, phrase, pitchAtTime, analyze: (taps, holds = []) => ScoreAuditionRules.analyze(phrase(), taps, holds), playbackSnapshot: () => lastPlayback ? { ...lastPlayback, countInSequence: state.countInHistory.slice() } : null, syncPlaybackForTest(measure) { cancelAnimationFrame(playFrame); playFrame = 0; const data = phrase(), next = Math.max(0, Math.min(data.measures.length - 1, measure)), starts = ScoreAuditionRules.measureStarts(data).starts; state.currentMeasure = Math.max(0, next - 1); syncPlaybackPosition(starts[next] * ScoreAuditionRules.timing(data).beatSeconds); }, recordTapForTest(elapsed) { if (!audioContext) return false; performanceStart = audioContext.currentTime - elapsed; state.countIn = null; state.screen = 'playing'; const recorded = recordTap('test'); releasePress('test'); return recorded; }, holdTapForTest(elapsed) { if (!audioContext) return false; performanceStart = audioContext.currentTime - elapsed; state.countIn = null; state.screen = 'playing'; return recordTap('test-hold'); }, releaseTapForTest(elapsed) { if (!audioContext) return false; performanceStart = audioContext.currentTime - elapsed; return releasePress('test-hold'); }, completeForTest(perfect = true) { if (state.screen === 'intro') startGame(); if (state.screen === 'ready') { state.screen = 'playing'; render(); } const data = phrase(), targets = ScoreAuditionRules.holdTargets(data), taps = perfect ? targets.map(event => event.start) : [], holds = perfect ? targets.filter(event => event.required).map(event => ({ tapIndex: event.index, end:event.end })) : []; finishPerformance(taps, holds); } };
+    const api = { state, get score() { return score; }, get questionId() { return questionId; }, scoreSVG, startGame, beginPerformance, preview, finishPerformance, phrase, attackAtTime, attackAtIndex, pitchAtTime, activeTapVoiceCount: () => activeTapVoices.length, analyze: taps => ScoreAuditionRules.analyze(phrase(), taps), playbackSnapshot: () => lastPlayback ? { ...lastPlayback, countInSequence: state.countInHistory.slice() } : null, syncPlaybackForTest(measure) { cancelAnimationFrame(playFrame); playFrame = 0; const data = phrase(), next = Math.max(0, Math.min(data.measures.length - 1, measure)), starts = ScoreAuditionRules.measureStarts(data).starts; state.currentMeasure = Math.max(0, next - 1); syncPlaybackPosition(starts[next] * ScoreAuditionRules.timing(data).beatSeconds); }, recordTapForTest(elapsed) { if (!audioContext) return false; performanceStart = audioContext.currentTime - elapsed; state.countIn = null; state.screen = 'playing'; return recordTap(); }, completeForTest(perfect = true) { if (state.screen === 'intro') startGame(); if (state.screen === 'ready') { state.screen = 'playing'; render(); } const data = phrase(), targets = ScoreAuditionRules.tapTargets(data), taps = perfect ? targets.map(event => event.start) : []; finishPerformance(taps); } };
     api.destroy = () => { lifecycle.abort(); stopAudio(); clearTimeout(scrollTimer); shadow.replaceChildren(); if (window.__scoreAudition === api) delete window.__scoreAudition; };
     window.__scoreAudition = api; render(); return api;
 }
