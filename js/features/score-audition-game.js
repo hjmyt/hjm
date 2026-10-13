@@ -28,7 +28,8 @@ function createScoreAuditionGame(mount, { styleHref = 'styles/game-score-auditio
     let questionId = hashId(`${score.id}:${randomUnit()}`);
     let audioContext = null, output = null, externalSoundEnabled = true, performanceStart = 0, activeNodes = new Set(), activeTapVoices = [], activeTapGates = new Set(), timers = [], playFrame = 0, scrollTimer = 0, tapVoiceToken = 0, lastDirectTapAt = -Infinity, lastPlayback = null;
 
-    const pageSize = () => matchMedia('(max-width:700px)').matches ? 6 : 12;
+    const isMobileLayout = () => matchMedia('(max-width:700px)').matches;
+    const pageSize = () => isMobileLayout() ? 3 : 12;
     const measuresPerSystem = () => pageSize() / 3;
     const sourcePhrase = () => ScoreAuditionRules.phrase(state.mode, state.tempo, score.id);
     const leadingSilentCount = () => ScoreAuditionRules.leadingSilentMeasures(score);
@@ -106,7 +107,7 @@ function createScoreAuditionGame(mount, { styleHref = 'styles/game-score-auditio
     }
 
     function scoreSVG(page = state.page, analysis = state.analysis, currentMeasure = ['preview', 'playing'].includes(state.screen) ? state.currentMeasure : -1) {
-        const measures = displayMeasures(), size = pageSize(), following = ['preview', 'playing'].includes(state.screen), perSystem = measuresPerSystem(), start = following ? state.followStartSystem * perSystem : clampPage(page) * size, renderSize = following && state.scrollAnimating ? size + perSystem : size, subset = measures.slice(start, start + renderSize), width = 980, systemHeight = 150, systems = Math.ceil(subset.length / perSystem), height = 3 * systemHeight + 12;
+        const measures = displayMeasures(), size = pageSize(), following = ['preview', 'playing'].includes(state.screen), perSystem = measuresPerSystem(), start = following ? state.followStartSystem * perSystem : clampPage(page) * size, renderSize = following && state.scrollAnimating ? size + perSystem : size, subset = measures.slice(start, start + renderSize), width = isMobileLayout() ? 560 : 980, systemHeight = 150, systems = Math.ceil(subset.length / perSystem), height = 3 * systemHeight + 12;
         const firstMeasure = subset[0]?.number ?? start + 1, lastMeasure = subset[subset.length - 1]?.number ?? firstMeasure;
         let svg = `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeHTML(score.title)} ${score.part}，第 ${firstMeasure} 至 ${lastMeasure} 小节" data-score-page="${page + 1}" data-score-start-measure="${firstMeasure}"><g class="score-systems-track">`;
         for (let system = 0; system < systems; system++) {

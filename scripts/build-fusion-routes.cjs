@@ -128,6 +128,11 @@ function scriptFromHtml(html, label) {
 while ((match = assignment.exec(wrapper))) {
     const key = match[1];
     const html = JSON.parse(match[2]);
+    // The supplied trilogy wrapper may also contain standalone extras such as
+    // the Fusion classroom.  They do not use the narrative textarea grammar
+    // and are compiled by their own data builder, so leave them untouched here.
+    if (!['rl', 'ep2', 'fm'].includes(key))
+        continue;
     chapters[key] = parseScript(scriptFromHtml(html, key));
     const seen = new Map();
     for (const node of chapters[key]) {

@@ -306,6 +306,14 @@ function bindAppEvents() {
             return enterFusionChapter(d.fusionChapter);
         if (d.fusionNextChapter)
             return enterFusionChapter(d.fusionNextChapter);
+        if (d.fusionClassroom !== undefined)
+            return openFusionClassroom();
+        if (d.fusionClassroomNext !== undefined)
+            return continueFusionClassroom();
+        if (d.fusionClassroomAnswer !== undefined)
+            return answerFusionClassroom(Number(d.fusionClassroomAnswer));
+        if (d.fusionClassroomRestart !== undefined)
+            return restartFusionClassroom();
         if (d.fusionChoice !== undefined)
             return chooseFusion(Number(d.fusionChoice));
         if (d.fusionPageNext !== undefined)

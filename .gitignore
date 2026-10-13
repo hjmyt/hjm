@@ -1,4 +1,14 @@
 docs
+!docs/
+docs/*
+!docs/imagegen/
+docs/imagegen/*
+!docs/imagegen/fusion-v24/
+!docs/imagegen/fusion-v24/**
+!docs/imagegen/fusion-pages/
+!docs/imagegen/fusion-pages/**
+!docs/imagegen/fusion-lala-friendship/
+!docs/imagegen/fusion-lala-friendship/**
 
 # Licensed/private score sources stay local; the browser uses generated JS data.
 assets/scores/source/*.musicxml

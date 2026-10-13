@@ -1,0 +1,109 @@
+{
+  "version": "fusion-v2.4-art-v4",
+  "sourceSheet": "assets/fusion/source/fusion-nodes-v24-additions-v4.png",
+  "grid": { "columns": 4, "rows": 2, "sourceSize": [1536, 1024], "cropSize": [376, 376], "outputSize": [752, 752] },
+  "costumeLocks": {
+    "Jerry": "short messy black hair, rectangular black glasses, black short-sleeve shirt, blue jeans",
+    "Lala": "young adult woman, long brown hair, large white hair bow, cream-white blouse with dark ribbon; violinist",
+    "Shiyuan-v24-chat": "young adult woman, dark hair tied back, deep olive cropped utility jacket, ivory crew-neck top, charcoal trousers; identical in panels 4-6",
+    "Old Du": "adult male saxophonist, short dark hair, rectangular glasses, muted olive shirt"
+  },
+  "panels": [
+    {
+      "panel": 1,
+      "storyPageId": "fm:f2_llc1",
+      "readingPageIds": ["fm:f2_llc1:p2", "fm:f2_llc1:p3"],
+      "semanticImageId": "fusion-v24-lala-rnb-message",
+      "output": "assets/fusion/scenes/nodes/f2_llc1.jpg",
+      "visibleCast": ["Lala"],
+      "contextImmediatelyBefore": "Jerry has just sent Lala his late-night R&B arrangement of Cai Yun Zhui Yue.",
+      "currentStoryBeat": "Lala reacts to the demo on her phone; her violin and bow are nearby but she is not playing.",
+      "contextImmediatelyAfter": "Her rapid messages settle into a sincere compliment for Jerry's arrangement.",
+      "qa": ["one named person only", "white bow and Lala identity", "phone held naturally", "violin and bow supported, not floating"]
+    },
+    {
+      "panel": 2,
+      "storyPageId": "fm:f2_llc2",
+      "readingPageIds": ["fm:f2_llc2:p1", "fm:f2_llc2:p2", "fm:f2_llc2:p3"],
+      "semanticImageId": "fusion-v24-bach-free-swim",
+      "output": "assets/fusion/scenes/nodes/f2_llc2.jpg",
+      "visibleCast": ["Lala", "Jerry"],
+      "contextImmediatelyBefore": "In a Saturday practice room, Lala opens the piano and plays the beginning of Bach's Invention No. 1.",
+      "currentStoryBeat": "Lala plays on the pianist side while Jerry answers with electric guitar beside her.",
+      "contextImmediatelyAfter": "They develop the two-part idea into a three-part fusion piece called Chang You.",
+      "qa": ["exactly two named people", "Lala at pianist side", "white-key front edge faces Lala", "black keys are farther from Lala", "Jerry's guitar is supported and connected", "no mirrored keyboard"]
+    },
+    {
+      "panel": 3,
+      "storyPageId": "fm:f2_llc3",
+      "readingPageIds": ["fm:f2_llc3:p1", "fm:f2_llc3:p2"],
+      "semanticImageId": "fusion-v24-lala-family-reveal",
+      "output": "assets/fusion/scenes/nodes/f2_llc3.jpg",
+      "visibleCast": ["Lala", "Jerry"],
+      "contextImmediatelyBefore": "A late-night harmony argument reaches an impasse.",
+      "currentStoryBeat": "Lala stands with hands on hips and makes Jerry look her in the eyes; Jerry finally recognizes his distant cousin.",
+      "contextImmediatelyAfter": "Jerry understands why she has always been able to challenge him directly.",
+      "qa": ["exactly two named people", "Lala owns the hands-on-hips action", "Jerry reacts rather than copying the pose", "no child or memory figure physically present"]
+    },
+    {
+      "panel": 4,
+      "storyPageId": "fm:f2_sy1",
+      "readingPageIds": ["fm:f2_sy1:p1", "fm:f2_sy1:p2"],
+      "semanticImageId": "fusion-v24-shiyuan-leaving-message",
+      "output": "assets/fusion/scenes/nodes/f2_sy1.jpg",
+      "visibleCast": ["Shiyuan"],
+      "contextImmediatelyBefore": "Rehearsal has ended and the venue is nearly empty.",
+      "currentStoryBeat": "Shiyuan sends Jerry a rare sincere message saying they can still collaborate even if he leaves Hakimi.",
+      "contextImmediatelyAfter": "Jerry realizes she understands that he may not stay forever.",
+      "qa": ["one named person only", "new Shiyuan outfit lock", "phone held naturally", "quiet late-night mood"]
+    },
+    {
+      "panel": 5,
+      "storyPageId": "fm:f2_sy2",
+      "readingPageIds": ["fm:f2_sy2:p1", "fm:f2_sy2:p3"],
+      "semanticImageId": "fusion-v24-shiyuan-apology",
+      "output": "assets/fusion/scenes/nodes/f2_sy2.jpg",
+      "visibleCast": ["Shiyuan"],
+      "contextImmediatelyBefore": "A sound-check follow-up was missed.",
+      "currentStoryBeat": "Shiyuan reviews the equipment list and sends Jerry a careful apology.",
+      "contextImmediatelyAfter": "She promises that every section's equipment will be checked next time.",
+      "qa": ["one named person only", "same outfit as panels 4 and 6", "equipment list belongs to Shiyuan", "cables stay connected and grounded"]
+    },
+    {
+      "panel": 6,
+      "storyPageId": "fm:f2_sy3",
+      "readingPageIds": ["fm:f2_sy3:p2"],
+      "semanticImageId": "fusion-v24-shiyuan-unseen-work",
+      "output": "assets/fusion/scenes/nodes/f2_sy3.jpg",
+      "visibleCast": ["Shiyuan"],
+      "contextImmediatelyBefore": "A difficult online conversation has stalled.",
+      "currentStoryBeat": "Shiyuan sits among venue forms, schedules and milk tea, insisting that she has done the work she is good at.",
+      "contextImmediatelyAfter": "Jerry finally recognizes the invisible logistical work behind the stage.",
+      "qa": ["one named person only", "same outfit as panels 4 and 5", "documents and milk tea rest on surfaces", "no Jerry physical figure"]
+    },
+    {
+      "panel": 7,
+      "storyPageId": "quiz:intro",
+      "readingPageIds": ["quiz:intro:p1", "quiz:intro:p2", "quiz:intro:p3", "quiz:intro:p4", "quiz:intro:p5", "quiz:intro:p6"],
+      "semanticImageId": "fusion-classroom-opening",
+      "output": "assets/fusion/scenes/nodes/fusion-classroom-intro.jpg",
+      "visibleCast": ["Old Du", "Lala"],
+      "contextImmediatelyBefore": "The Hill venue has closed for the night.",
+      "currentStoryBeat": "Old Du taps the music stand and begins a five-minute lesson on jazz fusion while Lala listens as quiz proctor.",
+      "contextImmediatelyAfter": "Seven lesson cards explain the history before a ten-question quiz.",
+      "qa": ["exactly two named people", "Old Du owns and supports the saxophone", "Lala keeps white bow identity", "no Jerry physical figure"]
+    },
+    {
+      "panel": 8,
+      "storyPageId": "quiz:result",
+      "readingPageIds": ["quiz:result:p1"],
+      "semanticImageId": "fusion-classroom-result",
+      "output": "assets/fusion/scenes/nodes/fusion-classroom-result.jpg",
+      "visibleCast": ["Jerry", "Lala"],
+      "contextImmediatelyBefore": "Jerry has answered all ten fusion-history questions.",
+      "currentStoryBeat": "Lala holds up a clean blank answer sheet while Jerry waits for the result.",
+      "contextImmediatelyAfter": "Lala comments on the score and Old Du dismisses the group off-screen.",
+      "qa": ["exactly two named people", "paper is fully blank with no count-sensitive markings", "Jerry identity and clothing", "Old Du is off-screen", "no readable generated text"]
+    }
+  ]
+}

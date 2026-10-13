@@ -553,8 +553,12 @@ const MEMORIES = [
     id: a.id, title: a.title, sub: a.location, asset: a.asset,
     rule: `在第 ${a.chapter} 章读到对应场景`, text: a.text
   })),
-  ...FUSION_ART.map(a => ({
+  ...FUSION_PAGE_ART.map(a => ({
     id: a.id, title: a.title, sub: `融合线 · ${a.location}`, asset: a.asset,
     rule: a.rule || '在融合线读到对应场景', text: a.text
+  })),
+  ...FUSION_CLASSROOM_PAGE_ART.map(a => ({
+    id: a.id, title: a.title, sub: `融合小课堂 · ${a.location}`, asset: a.asset,
+    rule: '在融合小课堂读到对应分页', text: a.text
   }))
 ];

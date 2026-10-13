@@ -1,9 +1,70 @@
 const { chromium } = require('playwright');
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
 const path = require('node:path');
 const { pathToFileURL } = require('node:url');
 
 (async () => {
+  const artPlan = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../docs/imagegen/fusion-v24/plan.json'), 'utf8'));
+  assert.equal(artPlan.panels.length, 8, 'Fusion v2.4 art plan keeps the complete eight-up mapping');
+  assert.equal(new Set(artPlan.panels.map(panel => panel.storyPageId)).size, 8, 'Fusion v2.4 art page ids are unique');
+  assert(artPlan.panels.every(panel => panel.visibleCast.length >= 1 && panel.visibleCast.length <= 2), 'Fusion v2.4 panels keep one or two named characters');
+  assert(artPlan.panels.every(panel => panel.contextImmediatelyBefore && panel.currentStoryBeat && panel.contextImmediatelyAfter && panel.qa.length), 'Fusion v2.4 panels retain context and QA locks');
+  assert.equal(artPlan.sourceSheet, 'assets/fusion/source/fusion-nodes-v24-additions-v4.png');
+  const sheet = fs.readFileSync(path.resolve(__dirname, '..', artPlan.sourceSheet));
+  assert.equal(sheet.readUInt32BE(16), 1536, 'Fusion v2.4 source sheet width stays 1536');
+  assert.equal(sheet.readUInt32BE(20), 1024, 'Fusion v2.4 source sheet height stays 1024');
+  const classroomPlan = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../docs/imagegen/fusion-v24/classroom-plan.json'), 'utf8'));
+  assert.equal(classroomPlan.panels.length, 24, 'Fusion classroom keeps one mapped image for every page');
+  assert.equal(new Set(classroomPlan.panels.map(panel => panel.storyPageId)).size, 24, 'Fusion classroom page ids are unique');
+  assert.equal(new Set(classroomPlan.panels.map(panel => panel.semanticImageId)).size, 24, 'Fusion classroom semantic image ids are unique');
+  assert.equal(new Set(classroomPlan.panels.map(panel => panel.assetKey)).size, 24, 'Fusion classroom asset keys are unique');
+  assert.equal(new Set(classroomPlan.panels.map(panel => panel.output)).size, 24, 'Fusion classroom output files are unique');
+  assert(classroomPlan.panels.every(panel => panel.visibleCast.length <= 2), 'Fusion classroom panels show no more than two named characters');
+  assert(classroomPlan.panels.every(panel => panel.contextImmediatelyBefore && panel.currentStoryBeat && panel.contextImmediatelyAfter && panel.qa.length), 'Fusion classroom panels retain context and QA locks');
+  assert.deepEqual(classroomPlan.sheets, [
+    'assets/fusion/classroom/source/fusion-classroom-01.png',
+    'assets/fusion/classroom/source/fusion-classroom-02.png',
+    'assets/fusion/classroom/source/fusion-classroom-03.png',
+    'assets/fusion/classroom/source/fusion-classroom-result-correction.png'
+  ]);
+  const classroomResult = classroomPlan.panels.find(panel => panel.storyPageId === 'quiz:result:p1');
+  assert.deepEqual(classroomResult.visibleCast, ['Lala', 'Old Du'], 'Classroom result art matches the two speakers physically present');
+  assert.equal(classroomResult.output, 'assets/fusion/classroom/result-01-v2.jpg', 'Classroom result uses the corrected crop');
+  assert(classroomPlan.panels.every(panel => Number.isInteger(panel.sheet) && panel.sheet >= 1 && panel.sheet <= classroomPlan.sheets.length), 'Every classroom panel references a retained source sheet');
+  for (const sourceSheet of classroomPlan.sheets) {
+    const classroomSheet = fs.readFileSync(path.resolve(__dirname, '..', sourceSheet));
+    assert.equal(classroomSheet.readUInt32BE(16), 1536, `${sourceSheet} width stays 1536`);
+    assert.equal(classroomSheet.readUInt32BE(20), 1024, `${sourceSheet} height stays 1024`);
+  }
+  const pageArtPlan = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../docs/imagegen/fusion-pages/plan.json'), 'utf8'));
+  assert.equal(pageArtPlan.totals.pages, 222, 'Fusion trilogy keeps all 222 clickable reading pages');
+  assert.equal(pageArtPlan.totals.generatedPages, 104, 'Every page after a node opening has a newly generated illustration');
+  assert.equal(pageArtPlan.totals.sourceSheets, 13, 'Fusion click-page art retains thirteen eight-up source sheets');
+  assert.equal(new Set(pageArtPlan.panels.map(panel => panel.storyPageId)).size, 222, 'Fusion story page ids are unique');
+  assert.equal(new Set(pageArtPlan.panels.map(panel => panel.semanticImageId)).size, 222, 'Fusion semantic image ids are unique');
+  assert(pageArtPlan.panels.every(panel => panel.visibleCast.length <= 2), 'Fusion click pages show no more than two named characters');
+  assert(pageArtPlan.panels.every(panel => panel.contextImmediatelyBefore && panel.currentStoryBeat && panel.contextImmediatelyAfter && panel.qa.length), 'Fusion click-page plan retains context and QA locks');
+  for (const panel of pageArtPlan.panels.filter(panel => panel.generated))
+    assert(fs.existsSync(path.resolve(__dirname, '..', panel.output)), `Missing Fusion page crop: ${panel.output}`);
+  const friendshipPlan = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../docs/imagegen/fusion-lala-friendship/plan.json'), 'utf8'));
+  assert.deepEqual(friendshipPlan.totals, { panels: 38, main: 30, classroom: 8, sourceSheets: 5 }, 'Every Lala-and-male Fusion image is included in the friendship replacement pass');
+  assert.equal(new Set(friendshipPlan.panels.map(panel => panel.storyPageId)).size, 38, 'Lala friendship replacement page ids are unique');
+  assert.equal(new Set(friendshipPlan.panels.map(panel => panel.output)).size, 38, 'Lala friendship replacement outputs are unique');
+  assert(friendshipPlan.relationshipLock.some(rule => rule.includes('No head touching')), 'Friendship plan explicitly bans intimate contact');
+  assert(friendshipPlan.relationshipLock.some(rule => rule.includes('appears at most once')), 'Friendship plan explicitly bans duplicate copies of the same named character');
+  assert(friendshipPlan.panels.every(panel => panel.qa.some(rule => rule.includes('No head touching')) && panel.qa.some(rule => rule.includes('half a metre'))), 'Every replacement panel inherits the friendship distance lock');
+  const singleLalaPanel = friendshipPlan.panels.find(panel => panel.storyPageId === 'ep2:f2_ll6:p2');
+  assert.equal(singleLalaPanel?.output, 'assets/fusion/friendship/ep2/f2_ll6-p02-single-lala-v2.jpg', 'The corrected single-Lala panel uses a cache-busting asset URL');
+  assert(singleLalaPanel?.qa.some(rule => rule.includes('appears at most once')), 'The corrected panel inherits the no-duplicate-character lock');
+  for (const panel of friendshipPlan.panels)
+    assert(fs.existsSync(path.resolve(__dirname, '..', panel.output)), `Missing Lala friendship crop: ${panel.output}`);
+  const chaoticPlan = JSON.parse(fs.readFileSync(path.resolve(__dirname, '../docs/imagegen/fusion-chaotic-rehearsal-v2/plan.json'), 'utf8'));
+  assert.equal(chaoticPlan.storyPageId, 'rl:fs_02:p1', 'Chaotic rehearsal correction stays bound to its exact story page');
+  assert.deepEqual(chaoticPlan.visibleCast, ['阿齐', '朱老师'], 'Chaotic rehearsal art focuses on the two named characters active in the beat');
+  assert.equal(chaoticPlan.selectedPanel, 1, 'Reviewed panel 1 remains the selected crop');
+  assert.equal(chaoticPlan.output, 'assets/fusion/scenes/chaotic-rehearsal-v2.jpg', 'Chaotic rehearsal uses the versioned cache-busting output');
+  assert(fs.existsSync(path.resolve(__dirname, '..', chaoticPlan.sourceSheet)) && fs.existsSync(path.resolve(__dirname, '..', chaoticPlan.output)), 'Chaotic rehearsal source sheet and selected crop are retained');
   const browser = await chromium.launch({ headless: true, ...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE ? { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE } : {}) });
   try {
     const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
@@ -22,7 +83,7 @@ const { pathToFileURL } = require('node:url');
       const legacy = freshState(); legacy.cards.encounterVersion = 1;
       Object.assign(legacy.chronicle.run, { chapter: 2, ch: 2, name: '旧档', scene: 'menu', flags: { strGroup: 1 } });
       check('Reached chapter two legacy saves recover Jerry', cleanState(legacy).cards.encounters.includes('jerry'));
-      check('Latest supplied trilogy was compiled', FUSION_ROUTES.rl.length === 20 && FUSION_ROUTES.ep2.length === 32 && FUSION_ROUTES.fm.length === 60);
+      check('Latest supplied trilogy was compiled', FUSION_ROUTES.rl.length === 20 && FUSION_ROUTES.ep2.length === 32 && FUSION_ROUTES.fm.length === 66);
       check('Fusion narration reuses the global decorative avatar', FUSION_SPEAKERS['旁白']?.asset === 'avatarNarrator' && fusionSpeakerHTML('旁白', '测试').includes(ASSETS.avatarNarrator) && !fusionSpeakerHTML('旁白', '测试').includes('data-dialogue-card'));
       const emojiPattern = /[\u{1F300}-\u{1FAFF}]/u;
       check('Casual fusion chat messages use visible emoji', FUSION_CHAT_POOL.every(([name, message]) => name === '阿齐' || emojiPattern.test(message)));
@@ -32,9 +93,23 @@ const { pathToFileURL } = require('node:url');
       legacyAqiChat.runs.ep2.lastChat = 'REK';
       const migratedAqiChat = cleanFusion(legacyAqiChat).runs.ep2;
       check('Legacy REK chat progress migrates to A-Qi', migratedAqiChat.chats['阿齐'] === 1 && !('REK' in migratedAqiChat.chats) && migratedAqiChat.lastChat === '阿齐');
-      check('Expression descriptions use the actual emoji glyph', fusionNode('fm', 'f2_dy2').lines.some(line => line.text.includes('「🤷」')) && fusionNode('fm', 'f2_dy3').lines.some(line => line.text.includes('😂')));
+      check('Patched expression prose no longer depends on emoji glyphs', fusionNode('fm', 'f2_dy2').lines.some(line => line.text.includes('耸肩的表情')) && fusionNode('fm', 'f2_dy3').lines.some(line => line.text.includes('一串「哈哈哈」')) && !fusionNode('fm', 'f2_dy3').lines.some(line => line.text.includes('😂')));
       check('Standalone entry update overrides the trilogy opening', fusionNode('rl', 'fs_00').lines[0].text.startsWith('你是一个现代音乐人。'));
-      check('V16 main and chat additions are present', ['f2_m1','f2_m4','f2_llclose','f2_aq1','f2_bsstop','g_pre','g_post'].every(id => Object.values(FUSION_ROUTES).flat().some(node => node.id === id)));
+      check('V2.4 main and chat additions are present', ['f2_m1','f2_m4','f2_llclose','f2_aq1','f2_bsstop','g_pre','g_post','f2_llc1','f2_llc2','f2_llc3','f2_sy1','f2_sy2','f2_sy3'].every(id => Object.values(FUSION_ROUTES).flat().some(node => node.id === id)));
+      check('Patched rehearsal names A-Qi instead of the retired REK label', fusionNode('rl', 'fs_02').lines.some(line => line.text.includes('阿齐的贝斯')) && !fusionNode('rl', 'fs_02').lines.some(line => line.text.includes('REK')));
+      check('Chaotic rehearsal art uses the content-accurate A-Qi and Teacher Zhu replacement', ASSETS.fusionChaoticRehearsal.endsWith('/chaotic-rehearsal-v2.jpg') && JSON.stringify(FUSION_PAGE_ART_BY_ID.get('rl:fs_02:p1')?.visibleCast) === JSON.stringify(['阿齐','朱老师']));
+      check('Lala explanation choices follow the supplied hard and soft branches', JSON.stringify(fusionNode('ep2', 'f2_ll10').choices.map(choice => choice.next)) === JSON.stringify(['f2_ll11soft','f2_ll11soft','f2_ll11soft','f2_ll11']));
+      check('Soft Lala reply preserves the patched next-day setup', fusionNode('ep2', 'f2_ll11soft').lines.length === 5 && fusionNode('ep2', 'f2_ll11soft').lines[0].text.includes('最终没有把消息发给她'));
+      check('Solo backstage choice reaches the supplied stage continuation', fusionNode('fm', 'm_show').choices.at(-1).next === 'm_show2');
+      check('Baoshi CP bridge keeps the expanded conversation and cpGo flag', fusionNode('fm', 'f2_cpgo').lines.length === 4 && fusionNode('fm', 'f2_cpgo').choices[0].flags.includes('cpGo') && fusionNode('fm', 'f2_cpgo').choices[0].score === 2 && fusionNode('fm', 'f2_cpgo').choices[0].next === 'NEXT');
+      check('Fusion classroom source was imported completely', FUSION_CLASSROOM.intro.length === 6 && FUSION_CLASSROOM.lessons.length === 7 && FUSION_CLASSROOM.questions.length === 10);
+      const correctPositions = FUSION_CLASSROOM.questions.map(question => question.answer);
+      check('Classroom correct answers are distributed across all three positions', new Set(correctPositions).size === 3 && correctPositions.some(position => position !== 0));
+      check('Classroom maps every reading page to a different illustration', Object.values(FUSION_CLASSROOM_ART).flat().length === 24 && new Set(Object.values(FUSION_CLASSROOM_ART).flat()).size === 24);
+      check('Every Fusion click page owns one explicit illustration record', FUSION_PAGE_ART.length === 222 && FUSION_PAGE_ART_BY_ID.size === 222 && Object.entries(FUSION_ROUTES).every(([chapter, nodes]) => nodes.every(node => fusionPages(node).every((_, pageIndex) => !!fusionArtForPage(chapter, node, pageIndex)))));
+      check('Pages inside a Fusion node never reuse the same illustration', Object.entries(FUSION_ROUTES).every(([chapter, nodes]) => nodes.every(node => { const assets = fusionPages(node).map((_, pageIndex) => fusionArtForPage(chapter, node, pageIndex).asset); return new Set(assets).size === assets.length; })));
+      check('All thirty main-line Lala-and-male pages use the non-romantic friendship replacements', FUSION_LALA_FRIENDSHIP_ART.filter(art => art.kind === 'main').length === 30 && FUSION_LALA_FRIENDSHIP_ART.filter(art => art.kind === 'main').every(replacement => FUSION_PAGE_ART_BY_ID.get(replacement.storyPageId)?.asset === replacement.asset && ASSETS[replacement.asset] === replacement.output));
+      check('All eight classroom Lala-and-male pages use the non-romantic friendship replacements', FUSION_LALA_FRIENDSHIP_ART.filter(art => art.kind === 'classroom').length === 8 && FUSION_LALA_FRIENDSHIP_ART.filter(art => art.kind === 'classroom').every(replacement => ASSETS[replacement.asset] === replacement.output));
       state.affinity.jerry = 20; goCard('jerry');
       const jerry = cardDef('jerry');
       check('Jerry card uses the supplied SSR profile', jerry.rarity === 'SSR' && jerry.stars === 6 && jerry.profileFields.length === 3 && jerry.stats.some(([name, value]) => name === '心流时长' && value === '6h+'));
@@ -54,9 +129,40 @@ const { pathToFileURL } = require('node:url');
       check('Jerry and Dijie combination removes emo penalty and strengthens the pairing', cardBonus('dijie', ['jerry', 'dijie']) > soloDijie);
       state.affinity.jerry = 21;
       openFusion(true);
-      check('Fusion hub matches Chronicle chrome', !!document.querySelector('#view-fusion .story-library-hero') && !!document.querySelector('#view-fusion .story-tabs') && document.querySelectorAll('#view-fusion .fusion-chapter img').length === 3);
+      check('Fusion hub matches Chronicle chrome and adds the separate classroom', !!document.querySelector('#view-fusion .story-library-hero') && !!document.querySelector('#view-fusion .story-tabs') && document.querySelectorAll('#view-fusion .fusion-chapter img').length === 4 && !!document.querySelector('[data-fusion-classroom]'));
+      check('Old Du stays locked before his first actual Fusion appearance', !cardOwned('laodu') && !availableCardPool().some(card => card.id === 'laodu'));
+      openFusionClassroom();
+      check('Fusion classroom opens with its first unique friendship illustration and no new reward meter', state.fusion.chapter === 'quiz' && state.fusion.classroom.stage === 'intro' && document.querySelector('.cp-novel-art img')?.src.includes('/classroom/friendship/intro-01.jpg') && !('reward' in state.fusion.classroom));
+      check('Classroom page illustration is collected and exposes a detail action', state.memories.includes('fusion_classroom_intro_p1') && !!document.querySelector('.cp-novel-art button[data-memory="fusion_classroom_intro_p1"]'));
+      document.querySelector('.cp-novel-art button').click();
+      check('Clicking classroom art opens its matching memory detail', !$('modalBackdrop').hidden && $('modalContent').querySelector('img')?.src.includes('/classroom/friendship/intro-01.jpg'));
+      $('closeModal').click();
+      const classroomSeenArt = [document.querySelector('.cp-novel-art img')?.src];
+      for (let index = 1; index < FUSION_CLASSROOM.intro.length; index++) { continueFusionClassroom(); classroomSeenArt.push(document.querySelector('.cp-novel-art img')?.src); }
+      continueFusionClassroom();
+      check('Classroom intro advances into all seven lesson cards', state.fusion.classroom.stage === 'lesson' && state.fusion.classroom.index === 0);
+      classroomSeenArt.push(document.querySelector('.cp-novel-art img')?.src);
+      for (let index = 1; index < FUSION_CLASSROOM.lessons.length; index++) { continueFusionClassroom(); classroomSeenArt.push(document.querySelector('.cp-novel-art img')?.src); }
+      continueFusionClassroom();
+      check('Classroom lessons advance into the ten-question quiz', state.fusion.classroom.stage === 'quiz' && state.fusion.classroom.index === 0);
+      for (let index = 0; index < FUSION_CLASSROOM.questions.length; index++) {
+        classroomSeenArt.push(document.querySelector('.cp-novel-art img')?.src);
+        answerFusionClassroom(FUSION_CLASSROOM.questions[index].answer);
+        continueFusionClassroom();
+      }
+      classroomSeenArt.push(document.querySelector('.cp-novel-art img')?.src);
+      check('Every classroom reading page displays a different illustration', classroomSeenArt.length === 24 && new Set(classroomSeenArt).size === 24);
+      check('Classroom completes, records best score and uses the non-romantic Lala and Old Du result art', state.fusion.classroom.stage === 'result' && state.fusion.classroom.done && state.fusion.classroom.best === 10 && document.querySelector('.cp-novel-art img')?.src.includes('/classroom/friendship/result-01.jpg') && state.memories.includes('fusion_classroom_result_p1'));
+      restartFusionClassroom();
+      check('Classroom retry resets progress but preserves completion and best score', state.fusion.classroom.stage === 'intro' && state.fusion.classroom.index === 0 && state.fusion.classroom.done && state.fusion.classroom.best === 10);
+      const legacyFusionWithoutClassroom = freshFusion(); delete legacyFusionWithoutClassroom.classroom; legacyFusionWithoutClassroom.version = 2;
+      check('Legacy fusion saves initialize only the new classroom field', cleanFusion(legacyFusionWithoutClassroom).classroom.stage === 'intro' && cleanFusion(legacyFusionWithoutClassroom).classroom.best === -1);
+      const oldQuizOrder = freshFusion(); Object.assign(oldQuizOrder.classroom, { quizVersion: 1, stage: 'quiz', index: 7, score: 6, selected: 0, answers: [0, 0, 0], best: 8, done: true });
+      const migratedQuizOrder = cleanFusion(oldQuizOrder).classroom;
+      check('Old in-progress quizzes restart at question one after option reordering without losing completion history', migratedQuizOrder.quizVersion === 2 && migratedQuizOrder.stage === 'quiz' && migratedQuizOrder.index === 0 && migratedQuizOrder.score === 0 && migratedQuizOrder.best === 8 && migratedQuizOrder.done);
+      state.fusion.chapter = null; renderFusion();
       enterFusionChapter('rl');
-      check('Old Du stays locked before his first fusion-line mention', !cardOwned('laodu') && !availableCardPool().some(card => card.id === 'laodu'));
+      check('Old Du unlocks when his classroom dialogue is actually reached', cardOwned('laodu') && availableCardPool().some(card => card.id === 'laodu'));
       check('Fusion chapter uses Chronicle reader and shared trilogy music', !!document.querySelector('#view-fusion .cp-novel .cp-novel-dialogue') && !!document.querySelector('#view-fusion .cp-choice') && document.querySelector('[data-music-title]').textContent.includes('some pieces from Jerry'));
       check('Exact-node artwork is collected on arrival', state.memories.includes('fusion_art_hill_arrival') && document.querySelector('.cp-novel-art img')?.src.includes('hill-arrival.jpg'));
       check('Fusion scene art fills the shared desktop reader stage without cropping', getComputedStyle(document.querySelector('.cp-novel-art')).paddingTop === '0px' && getComputedStyle(document.querySelector('.cp-novel-art img')).objectFit === 'contain');
@@ -146,6 +252,7 @@ const { pathToFileURL } = require('node:url');
       while (document.querySelector('[data-fusion-page-next]')) continueFusionPage(); chooseFusion(0);
       while (document.querySelector('[data-fusion-page-next]')) continueFusionPage(); chooseFusion(0);
       check('Subscene returns to the next main scene', state.fusion.runs.rl.current === 'fs_02');
+      check('The chaotic rehearsal page actually renders the content-accurate v2 crop', document.querySelector('.cp-novel-art img')?.src.includes('/chaotic-rehearsal-v2.jpg'));
       check('Old Du unlocks exactly when fs_laodu is first displayed', cardOwned('laodu') && availableCardPool().some(card => card.id === 'laodu'));
       const laoduSpeaker = FUSION_SPEAKERS['老杜'];
       check('Old Du fusion speaker uses his dedicated card avatar', laoduSpeaker?.asset === 'cardLaoduAvatar' && ASSETS[laoduSpeaker.asset] === ASSETS.cardLaoduAvatar);
@@ -215,6 +322,8 @@ const { pathToFileURL } = require('node:url');
       check('Yuerou project dialogue has dedicated card-consistent art', document.querySelector('.cp-novel-art img')?.src.includes('/f2_yrmv-v2.jpg'));
       state.fusion.chapter = 'ep2'; showFusionNode('ep2', 'f2_ll6');
       check('Lala scenes with Jerry use corrected viewpoint artwork', document.querySelector('.cp-novel-art img')?.src.includes('/f2_ll6-v3.jpg'));
+      continueFusionPage();
+      check('The three-part rehearsal page renders one Lala from the cache-busting replacement', document.querySelector('.cp-novel-art img')?.src.includes('/f2_ll6-p02-single-lala-v2.jpg'));
       state.fusion.chapter = 'fm'; showFusionNode('fm', 'f2_aq1');
       check('Aqi scene uses its new plot-specific illustration with Jerry present', document.querySelector('.cp-novel-art img')?.src.includes('/f2_aq1-v2.jpg'));
       check('A-Qi unlocks exactly when his first dialogue is displayed', cardOwned('aqi') && availableCardPool().some(card => card.id === 'aqi'));
@@ -239,9 +348,22 @@ const { pathToFileURL } = require('node:url');
       check('Fusion chat buttons keep consistent row and column spacing', parseFloat(chatGridStyle.rowGap) >= 8 && parseFloat(chatGridStyle.columnGap) >= 8);
       check('Fusion pool primary action is separated from the character grid', actionRect.top - gridRect.bottom >= 11);
       check('Fusion pool action has a dedicated full-width action region', poolAction.children.length === 1 && Math.abs(poolAction.firstElementChild.getBoundingClientRect().width - actionRect.width) < 1);
-      state.fusion.runs.fm.poolStage = 'post';
+      openFusionPool('post', true);
       fusionPoolChat('十元');
-      check('Shiyuan post-show message renders crying and milk-tea emoji', document.querySelector('.fusion-message')?.textContent.includes('😭😭😭') && document.querySelector('.fusion-message')?.textContent.includes('🧋'));
+      check('Shiyuan first v2.4 chat reaches the leaving-Hakimi scene', state.fusion.runs.fm.current === 'f2_sy1' && state.memories.includes(fusionSceneArt('fm', 'f2_sy1').id));
+
+      state.fusion.runs.fm = freshFusionRun(); state.fusion.chapter = 'fm';
+      openFusionPool('story', true); fusionPoolChat('垃垃');
+      openFusionPool('story'); fusionPoolChat('十元');
+      openFusionPool('story'); fusionPoolChat('老杜');
+      openFusionPool('story'); fusionPoolChat('大羊');
+      check('Each Fusion chat session stops after three people', state.fusion.runs.fm.poolCount === 3 && !state.fusion.runs.fm.chats['大羊']);
+      state.fusion.runs.fm = freshFusionRun(); state.fusion.chapter = 'fm';
+      openFusionPool('pre', true); fusionPoolChat('垃垃');
+      openFusionPool('pre'); fusionPoolChat('垃垃');
+      check('The same person can only be selected once per chat session', state.fusion.runs.fm.poolCount === 1 && state.fusion.runs.fm.seen['垃垃'] === 1);
+      openFusionPool('post', true); fusionPoolChat('垃垃');
+      check('A new chat session resets the limit and continues the cumulative route', state.fusion.runs.fm.current === 'f2_llc2' && state.fusion.runs.fm.seen['垃垃'] === 2);
 
       const hiddenChatRoutes = {
         '老杜': ['f2_ldp1', 'f2_ldp2', 'f2_ldp3', 'f2_ldnight'],
@@ -253,7 +375,7 @@ const { pathToFileURL } = require('node:url');
         state.fusion.runs.fm = freshFusionRun();
         state.fusion.chapter = 'fm';
         ids.forEach((id, index) => {
-          state.fusion.runs.fm.poolStage = index < 2 ? 'story' : index === 2 ? 'pre' : 'post';
+          openFusionPool(index < 2 ? 'story' : index === 2 ? 'pre' : 'post', true);
           fusionPoolChat(name);
           check(`${name} chat ${index + 1} reaches ${id} across pool stages`, state.fusion.runs.fm.current === id && state.fusion.runs.fm.seen[name] === index + 1 && state.fusion.runs.fm.chats[name] === index + 1);
         });
@@ -263,7 +385,7 @@ const { pathToFileURL } = require('node:url');
       state.fusion.runs.fm = freshFusionRun();
       state.fusion.chapter = 'fm';
       ['story', 'pre', 'post'].forEach((stage, index) => {
-        state.fusion.runs.fm.poolStage = stage;
+        openFusionPool(stage, true);
         fusionPoolChat('宝石');
         check(`Baoshi chat ${index + 1} reaches ${FUSION_FM_POOL_LINES['宝石'][index]}`, state.fusion.runs.fm.current === FUSION_FM_POOL_LINES['宝石'][index]);
       });
@@ -279,7 +401,7 @@ const { pathToFileURL } = require('node:url');
       pick(0); pick(0); pick(0); finishFusionPool();
       pick(0); finishFusionPool();
       pick(0); pick(3); pick(0); pick(0); finishFusionPool();
-      pick(5);
+      pick(5); pick(0);
       check('Latest third chapter reaches its calculated performance result', ['m_ok','m_bad','m_perfect'].includes(state.fusion.runs.fm.current));
       pick(0); pick(0); finishFusionPool(); pick(1); pick(0);
       check('Latest third chapter reaches and records an ending', state.fusion.runs.fm.ended && state.fusion.runs.fm.ending === 'm_ep2');
@@ -313,17 +435,37 @@ const { pathToFileURL } = require('node:url');
       continueFusionMain();
       check('Accepting the arrangement request restores the next-day micro-film invitation', state.fusion.runs.ep2.current === 'f2_yrmv' && $('view-fusion').innerText.includes('主题曲就是你编的那段'));
       const copy = cleanState(JSON.parse(JSON.stringify(state)));
-      check('Fusion progress survives save cleaning', copy.fusion.runs.rl.done.includes('fs_00') && copy.fusion.runs.ep2.chats['垃垃'] === 1 && copy.affinity.jerry === 21);
+      check('Fusion progress and classroom best survive save cleaning', copy.fusion.runs.rl.done.includes('fs_00') && copy.fusion.runs.ep2.chats['垃垃'] === 1 && copy.fusion.classroom.best === 10 && copy.affinity.jerry === 21);
       save(); return out;
     });
-    const fusionAssets = await page.evaluate(() => [...new Set(FUSION_ART.map(art => ASSETS[art.asset]))]);
+    const fusionAssets = await page.evaluate(() => [...new Set([...FUSION_PAGE_ART.map(art => ASSETS[art.asset]), ...FUSION_CLASSROOM_PAGE_ART.map(art => ASSETS[art.asset])])]);
     for (const asset of fusionAssets)
       assert(await page.evaluate(async src => { const img = new Image(); img.src = src; try { await img.decode(); return img.naturalWidth > 0 && img.naturalHeight > 0; } catch { return false; } }, asset), `Fusion artwork failed to load: ${asset}`);
     await page.reload();
-    assert(await page.evaluate(() => state.affinity.jerry === 21 && state.fusion.runs.ep2.chats['垃垃'] === 1), 'Actual reload preserves Jerry and fusion progress');
+    assert(await page.evaluate(() => state.affinity.jerry === 21 && state.fusion.runs.ep2.chats['垃垃'] === 1 && state.fusion.classroom.best === 10), 'Actual reload preserves Jerry, fusion progress, and classroom best');
     await page.setViewportSize({ width: 390, height: 844 });
     await page.evaluate(() => { state.fusion.chapter = null; route('fusion'); });
     assert(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), 'Fusion hub fits mobile');
+    await page.evaluate(() => {
+      state.fusion.chapter = 'quiz';
+      Object.assign(state.fusion.classroom, { quizVersion: 2, stage: 'quiz', index: 9, score: 7, selected: FUSION_CLASSROOM.questions[9].answer, best: -1, done: false, answers: Array(10).fill(null) });
+      renderFusionClassroom();
+    });
+    await page.waitForTimeout(350);
+    assert(await page.evaluate(() => storyImagePreloads.has(ASSETS.fusionClassroomResult)), 'The final quiz page preloads the immediately following result illustration');
+    assert(await page.evaluate(() => {
+      const reader = document.querySelector('.fusion-classroom'), dialogue = reader.querySelector('.cp-novel-dialogue');
+      const label = reader.querySelector('.fusion-classroom-page-label'), question = reader.querySelector('.fusion-quiz>p');
+      const choice = reader.querySelector('.fusion-quiz-options .cp-choice'), feedback = reader.querySelector('.fusion-quiz-feedback');
+      return document.documentElement.scrollWidth <= innerWidth
+        && dialogue.getBoundingClientRect().top < innerHeight * .4
+        && dialogue.getBoundingClientRect().height <= innerHeight * .72
+        && getComputedStyle(reader.querySelector('.cp-novel-art img')).objectFit === 'cover'
+        && label.getBoundingClientRect().height <= 38
+        && parseFloat(getComputedStyle(question).fontSize) >= 16
+        && parseFloat(getComputedStyle(choice).fontSize) >= 14
+        && parseFloat(getComputedStyle(feedback).fontSize) >= 14;
+    }), 'Fusion classroom uses compact, readable mobile quiz layout without horizontal overflow');
     await page.evaluate(() => { state.fusion.runs.rl = freshFusionRun(); enterFusionChapter('rl'); });
     assert(await page.evaluate(() => getComputedStyle(document.querySelector('.cp-novel-art')).paddingTop === '0px' && getComputedStyle(document.querySelector('.cp-novel-art img')).objectFit === 'cover'), 'Fusion reader uses the shared edge-free full-screen mobile art rule');
     await page.evaluate(() => { state.fusion.chapter = null; route('fusion'); });

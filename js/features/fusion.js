@@ -5,6 +5,12 @@ const FUSION_META = {
     ep2: { title: '第二篇 · 定人选与首排', subtitle: '定人选 · 首次例会 · 首次排练 · 垃垃线十二拍', ends: ['f2_end'], asset: 'fusionChapterDaily', location: '融合组成团 · 第一次排练' },
     fm: { title: '第三篇 · 融合主线', subtitle: '六次排练 · 微信支线 · 融合之夜 · 彩虹姐的尾声', ends: ['m_ep1', 'm_ep2', 'm_ep3'], asset: 'fusionChapterMain', location: '六次排练 · 正式登台' }
 };
+const FUSION_CLASSROOM_META = {
+    title: '番外 · 融合小课堂',
+    subtitle: '老杜主讲 Fusion 音乐史 · 垃垃监考 · 十题小考',
+    asset: 'fusionClassroomIntro1',
+    location: '山丘打烊后 · 五分钟课'
+};
 const FUSION_CHAT_POOL = [
     ['大羊', '大羊发来一段 46 秒语音，主题是「新歌的和弦走向帮我听听」，末尾突然问：「费翔老师，你说我这辈子能靠 SOLO 吃饭吗？🎸」'],
     ['老杜', '老杜给你推了三首冷门的融合爵士，附言：「周六的排练，你坐我旁边，我跟你说说萨克斯怎么跟电声共存。🎷」'],
@@ -24,7 +30,9 @@ const FUSION_FM_POOL_LINES = {
     '大羊': ['f2_dy1', 'f2_dy2', 'f2_dy3', 'f2_rocknight'],
     '笛杰': ['f2_dj1', 'f2_dj2', 'f2_dj3', 'f2_fusenight'],
     '阿齐': ['f2_aq1', 'f2_aq2', 'f2_aq3', 'f2_slap'],
-    '宝石': ['f2_bs1', 'f2_bs2', 'f2_bs3']
+    '宝石': ['f2_bs1', 'f2_bs2', 'f2_bs3'],
+    '垃垃': ['f2_llc1', 'f2_llc2', 'f2_llc3'],
+    '十元': ['f2_sy1', 'f2_sy2', 'f2_sy3']
 };
 const FUSION_FM_POOL = ['老杜', '大羊', '笛杰', '阿齐', '宝石', '垃垃', '十元'];
 const FUSION_SPEAKERS = {
@@ -129,8 +137,6 @@ function enterFusionChapter(key) {
         return;
     }
     state.fusion.chapter = key;
-    const art=FUSION_ART.filter(item=>item.chapter===key).map(item=>ASSETS[item.asset]).filter(Boolean);
-    scheduleStorySequencePreload([...art,...storyAvatarPreloadSources()]);
     const run = fusionRun(key);
     if (!run.current && !run.ended)
         run.current = FUSION_ROUTES[key][0].id;
@@ -257,18 +263,25 @@ function fusionProgressDots(key, run) {
     const filled = Math.min(6, Math.max(1, Math.ceil((read + 1) / Math.max(1, main.length) * 6)));
     return Array.from({ length: 6 }, (_, i) => `<i class="${i < filled ? 'past' : ''}"></i>`).join('');
 }
+function fusionArtForPage(key, node, page) {
+    return FUSION_PAGE_ART_BY_ID.get(`${key}:${node.id}:p${page + 1}`) || null;
+}
 function preloadUpcomingFusionArt(key, node, page, pageCount) {
-    // Pages inside one Fusion node intentionally reuse the same scene art.
-    // At its choice page, warm only explicitly reachable illustrated nodes.
-    if (page < pageCount - 1) return;
+    if (page < pageCount - 1) {
+        const current = fusionArtForPage(key, node, page), next = fusionArtForPage(key, node, page + 1);
+        if (next && next.asset !== current?.asset)
+            scheduleStoryImagePreload(ASSETS[next.asset]);
+        return;
+    }
+    // At a choice page, warm only explicitly reachable illustrated nodes.
     scheduleStoryImagePreload((node.choices || [])
         .map(choice => fusionNode(key, choice.next))
-        .map(next => next && fusionSceneArt(key, next.id))
+        .map(next => next && fusionArtForPage(key, next, 0))
         .map(art => art?.asset && ASSETS[art.asset])
         .filter(Boolean));
 }
 function fusionSceneHTML(key, node) {
-    const run = fusionRun(key), meta = FUSION_META[key], pages = fusionPages(node), page = clamp(run.page || 0, 0, Math.max(0, pages.length - 1)), art = fusionSceneArt(key, node.id);
+    const run = fusionRun(key), meta = FUSION_META[key], pages = fusionPages(node), page = clamp(run.page || 0, 0, Math.max(0, pages.length - 1)), art = fusionArtForPage(key, node, page);
     run.page = page;
     preloadUpcomingFusionArt(key, node, page, pages.length);
     // Entering a character's scene counts as meeting them even when its first page
@@ -299,8 +312,8 @@ function fusionControlsHTML(inChapter = false) {
     return `<div class="cp-controls"><div><button class="btn ghost" ${inChapter ? 'data-fusion-home' : 'data-card-open="jerry"'}>${I('back')}${inChapter ? '篇章选择' : '返回 Jerry 卡牌'}</button>${inChapter ? `<button class="btn ghost" data-fusion-restart="${state.fusion.chapter}">${I('repeat')}重开本篇</button>` : ''}</div><span class="cp-saving"><i></i>融合线进度自动保存</span></div>`;
 }
 function fusionSideHTML(key) {
-    const run = key ? fusionRun(key) : null, collected = FUSION_ART.filter(art => state.memories.includes(art.id)).length;
-    return `<aside class="cp-sidebar fusion-sidebar"><section class="cp-sidepanel cp-goal"><h3>${I('crown')}融合线目标</h3><div class="cp-goal-big">${run ? run.done.length : Object.values(state.fusion.runs).reduce((sum, item) => sum + item.done.length, 0)} <small>个节点已读</small></div><p class="cp-goal-sub">从入线、日常到正式登台，选择会留在各篇存档中。</p><div class="cp-milestones">${Object.entries(FUSION_META).map(([chapter, meta]) => `<span class="${fusionRun(chapter).ended ? 'complete' : ''}">${I(fusionRun(chapter).ended ? 'check' : fusionUnlocked(chapter) ? 'music' : 'lock')}${meta.title}</span>`).join('')}</div></section><section class="cp-sidepanel"><h3>${I('album')}融合回忆</h3><div class="cp-goal-big">${collected} <small>/ ${FUSION_ART.length} 幅场景</small></div><p class="cp-caption">读到对应剧情时自动收藏；相册详情与剧情使用同一张图。</p></section><section class="cp-sidepanel"><h3>${I('music')}融合线配乐</h3><p class="cp-caption">三篇与最终结局页全程循环播放《some pieces from Jerry》；与正传共用配乐开关、音量和切页暂停。</p></section></aside>`;
+    const run = key ? fusionRun(key) : null, collected = FUSION_PAGE_ART.filter(art => state.memories.includes(art.id)).length;
+    return `<aside class="cp-sidebar fusion-sidebar"><section class="cp-sidepanel cp-goal"><h3>${I('crown')}融合线目标</h3><div class="cp-goal-big">${run ? run.done.length : Object.values(state.fusion.runs).reduce((sum, item) => sum + item.done.length, 0)} <small>个节点已读</small></div><p class="cp-goal-sub">从入线、日常到正式登台，选择会留在各篇存档中。</p><div class="cp-milestones">${Object.entries(FUSION_META).map(([chapter, meta]) => `<span class="${fusionRun(chapter).ended ? 'complete' : ''}">${I(fusionRun(chapter).ended ? 'check' : fusionUnlocked(chapter) ? 'music' : 'lock')}${meta.title}</span>`).join('')}</div></section><section class="cp-sidepanel"><h3>${I('album')}融合回忆</h3><div class="cp-goal-big">${collected} <small>/ ${FUSION_PAGE_ART.length} 幅分页场景</small></div><p class="cp-caption">每个点击页都有独立插图；相册详情与剧情使用同一张图。</p></section><section class="cp-sidepanel"><h3>${I('music')}融合线配乐</h3><p class="cp-caption">三篇与最终结局页全程循环播放《some pieces from Jerry》；与正传共用配乐开关、音量和切页暂停。</p></section></aside>`;
 }
 function fusionPageHTML(key, main, reading = false) {
     return `<div class="fusion-shell"><div class="story-reader-toolbar"><button class="btn ghost" data-fusion-home>${I('back')}篇章目录</button><span>${key?FUSION_META[key].title:'融合线'}</span><button class="btn ghost" data-story-tools aria-label="阅读设置与更多">•••</button></div><div class="cp-layout ${reading ? 'cp-reading' : ''}"><div class="cp-maincol"><div id="fusionMain">${main}</div><details class="story-reading-extras"><summary>音乐与篇章记录</summary>${fusionHudHTML(key)}${window.StoryBgm?.controls() || ''}</details></div><details class="cp-reader-details"><summary>融合线近况 · 篇章与回忆 ${I('arrow')}</summary>${fusionSideHTML(key)}</details></div></div>`;
@@ -313,9 +326,14 @@ function renderFusionHub() {
             : run.ended ? '已完成' : run.current ? '进行中' : unlocked ? '可阅读' : '尚未开放';
         return `<button class="fusion-chapter ${unlocked ? '' : 'locked'}" data-fusion-chapter="${key}" ${unlocked ? '' : 'disabled'}><img src="${ASSETS[meta.asset]}" alt="" aria-hidden="true"><span><small>${status}</small><strong>${meta.title}</strong><em>${meta.subtitle}</em></span>${I(unlocked ? 'arrow' : 'lock')}</button>`;
     }).join('');
+    const classroom = state.fusion.classroom;
+    const classroomStatus = classroom.done
+        ? `已完成 · 最佳 ${classroom.best} / ${FUSION_CLASSROOM.questions.length}`
+        : classroom.stage !== 'intro' || classroom.index > 0 ? '进行中' : '随时可听';
+    const classroomRow = `<button class="fusion-chapter fusion-classroom-entry" data-fusion-classroom><img src="${ASSETS[FUSION_CLASSROOM_META.asset]}" alt="" aria-hidden="true"><span><small>${classroomStatus}</small><strong>${FUSION_CLASSROOM_META.title}</strong><em>${FUSION_CLASSROOM_META.subtitle}</em></span>${I('arrow')}</button>`;
     const recent=Object.keys(FUSION_META).reverse().find(key=>fusionRun(key).current);
     const resume=recent?storyResumeCard({image:ASSETS[FUSION_META[recent].asset],title:FUSION_META[recent].title,subtitle:(fusionNode(recent,fusionRun(recent).current)?.title||'故事继续')+' · 第 '+(fusionRun(recent).page+1)+' 页',action:`data-fusion-chapter="${recent}"`}):'';
-    $('view-fusion').innerHTML = `<section class="story-library">${storyLibraryHeader('fusion')}${resume}<div class="story-section-title"><h2>篇章一览</h2><p>每一次合奏，都让我们更靠近彼此。</p></div><div class="fusion-chapters">${rows}</div></section>`;
+    $('view-fusion').innerHTML = `<section class="story-library">${storyLibraryHeader('fusion')}${resume}<div class="story-section-title"><h2>篇章一览</h2><p>每一次合奏，都让我们更靠近彼此。</p></div><div class="fusion-chapters">${rows}${classroomRow}</div></section>`;
 }
 function renderFusion() {
     if (currentView !== 'fusion' || !fusionAccessReady())
@@ -325,12 +343,16 @@ function renderFusion() {
         renderFusionHub();
         return;
     }
+    if (key === 'quiz') {
+        renderFusionClassroom();
+        return;
+    }
     const run = fusionRun(key), meta = FUSION_META[key];
     if (run.ended) {
         const ending = fusionNode(key, run.ending);
         const nextKey = nextFusionChapterKey(key);
         const canContinue = nextKey && fusionUnlocked(nextKey);
-        const chapterArts = FUSION_ART.filter(art => art.chapter === key);
+        const chapterArts = FUSION_PAGE_ART.filter(art => art.chapter === key);
         const collected = chapterArts.filter(art => state.memories.includes(art.id)).length;
         const nextMeta = nextKey ? FUSION_META[nextKey] : null;
         const endingCopy = key === 'rl' && run.ending === 'fs_08'
@@ -356,6 +378,127 @@ function renderFusion() {
     run.current = node.id;
     save();
     $('view-fusion').innerHTML = fusionPageHTML(key, fusionSceneHTML(key, node), true);
+}
+function fusionClassroomArticle({ title, eyebrow, body, actions, art = null }) {
+    if (art) unlock(art.id, false);
+    const visual = art ? `<div class="cp-novel-visual"><div class="cp-novel-heading"><h3>${escapeHTML(title)}</h3><button class="cp-memory-link" data-memory="${art.id}">${I('album')}已收入回忆 · 查看</button></div><figure class="cp-story-art cp-novel-art"><button data-memory="${art.id}" aria-label="查看回忆：${escapeHTML(art.title)}"><img src="${ASSETS[art.asset]}" alt="${escapeHTML(art.text)}" width="752" height="752" decoding="async" fetchpriority="high"></button><figcaption>${escapeHTML(art.location)}</figcaption></figure></div>` : `<div class="cp-novel-heading"><h3>${escapeHTML(title)}</h3></div>`;
+    return `<article class="cp-novel ${art ? 'cp-novel-illustrated' : 'cp-novel-text-only'} fusion-classroom" aria-label="融合小课堂">
+      <header class="cp-novel-top"><span>${FUSION_CLASSROOM_META.title}</span><span>${escapeHTML(eyebrow)}</span><div class="fusion-classroom-best">${state.fusion.classroom.best >= 0 ? `最佳 ${state.fusion.classroom.best} / ${FUSION_CLASSROOM.questions.length}` : '尚未作答'}</div></header>
+      <div class="cp-novel-body">${visual}<div class="cp-novel-dialogue fusion-reader"><div class="fusion-classroom-page-label"><span>${escapeHTML(eyebrow)}</span><strong>${escapeHTML(title)}</strong></div>${body}${actions}</div></div>
+    </article>`;
+}
+function fusionClassroomAsset(stage, index = 0) {
+    const assets = FUSION_CLASSROOM_ART[stage] || [];
+    return assets[clamp(index, 0, Math.max(0, assets.length - 1))] || null;
+}
+function fusionClassroomArt(stage, index = 0) {
+    return FUSION_CLASSROOM_PAGE_ART_BY_ID.get(`${stage}:${index + 1}`) || null;
+}
+function preloadNextFusionClassroomArt(stage, index) {
+    let nextStage = stage, nextIndex = index + 1;
+    const current = FUSION_CLASSROOM_ART[stage] || [];
+    if (nextIndex >= current.length) {
+        nextStage = stage === 'intro' ? 'lesson' : stage === 'lesson' ? 'quiz' : stage === 'quiz' ? 'result' : null;
+        nextIndex = 0;
+    }
+    const asset = nextStage && fusionClassroomAsset(nextStage, nextIndex);
+    if (asset) scheduleStoryImagePreload(ASSETS[asset]);
+}
+function fusionClassroomShell(article) {
+    return `<div class="fusion-shell"><div class="story-reader-toolbar"><button class="btn ghost" data-fusion-home>${I('back')}篇章目录</button><span>${FUSION_CLASSROOM_META.title}</span><button class="btn ghost" data-story-tools aria-label="阅读设置与更多">•••</button></div><div class="cp-layout cp-reading"><div class="cp-maincol"><div id="fusionMain">${article}</div></div></div></div>`;
+}
+function openFusionClassroom() {
+    if (!fusionAccessReady()) return;
+    state.fusion.chapter = 'quiz';
+    save();
+    renderFusion();
+    focusStoryDialogue('#view-fusion');
+}
+function fusionClassroomResultCopy(score) {
+    if (score >= 10) return ['融合之夜 · 满分指挥', '「满分？！Jerry 老师你可以去顶替老杜讲课了哈哈哈(⁎⁍̴̛ᴗ⁍̴̛⁎)」'];
+    if (score >= 7) return ['可以上台了', '「不错嘛，排练合格，小考也合格～」'];
+    if (score >= 4) return ['排练继续', '「唔……回去把老杜的课再听一遍？我借你笔记。」'];
+    return ['先从棉花田听起', '「没关系没关系，音乐史又不考试……等等这就是考试。哈哈哈别灰心，下周补考！」'];
+}
+function renderFusionClassroom() {
+    const progress = state.fusion.classroom;
+    let article;
+    if (progress.stage === 'intro') {
+        progress.index = clamp(progress.index, 0, FUSION_CLASSROOM.intro.length - 1);
+        const line = FUSION_CLASSROOM.intro[progress.index];
+        const body = fusionDialogueHTML([{ who: line.speaker, text: line.text }], FUSION_CLASSROOM_META);
+        const actions = `<div class="cp-choices fusion-choices"><button class="cp-choice" data-fusion-classroom-next><span class="cp-option-n">${String(progress.index + 1).padStart(2, '0')}</span><span>${progress.index + 1 === FUSION_CLASSROOM.intro.length ? '（开始五分钟课）' : '（继续）'}<small>${progress.index + 1} / ${FUSION_CLASSROOM.intro.length}</small></span>${I('arrow')}</button></div>`;
+        preloadNextFusionClassroomArt('intro', progress.index);
+        article = fusionClassroomArticle({ title: '山丘打烊后的保留节目', eyebrow: `开场 ${progress.index + 1} / ${FUSION_CLASSROOM.intro.length}`, body, actions, art: fusionClassroomArt('intro', progress.index) });
+    }
+    else if (progress.stage === 'lesson') {
+        progress.index = clamp(progress.index, 0, FUSION_CLASSROOM.lessons.length - 1);
+        const lesson = FUSION_CLASSROOM.lessons[progress.index];
+        const body = `<section class="fusion-lesson-card"><span>${String(progress.index + 1).padStart(2, '0')} / ${String(FUSION_CLASSROOM.lessons.length).padStart(2, '0')}</span><h4>${escapeHTML(lesson.title)}</h4><p>${escapeHTML(lesson.text)}</p></section>`;
+        const actions = `<div class="cp-choices fusion-choices"><button class="cp-choice" data-fusion-classroom-next><span class="cp-option-n">→</span><span>${progress.index + 1 === FUSION_CLASSROOM.lessons.length ? '（听完了，开始小考）' : '（下一张）'}</span>${I('arrow')}</button></div>`;
+        preloadNextFusionClassroomArt('lesson', progress.index);
+        article = fusionClassroomArticle({ title: lesson.title, eyebrow: `小讲堂 ${progress.index + 1} / ${FUSION_CLASSROOM.lessons.length}`, body, actions, art: fusionClassroomArt('lesson', progress.index) });
+    }
+    else if (progress.stage === 'quiz') {
+        progress.index = clamp(progress.index, 0, FUSION_CLASSROOM.questions.length - 1);
+        const question = FUSION_CLASSROOM.questions[progress.index], selected = progress.selected;
+        preloadNextFusionClassroomArt('quiz', progress.index);
+        const choices = question.options.map((option, index) => {
+            const resultClass = selected === null ? '' : index === question.answer ? ' correct' : index === selected ? ' wrong' : '';
+            return `<button class="cp-choice${resultClass}" data-fusion-classroom-answer="${index}" ${selected === null ? '' : 'disabled'}><span class="cp-option-n">${String(index + 1).padStart(2, '0')}</span><span>${escapeHTML(option)}</span></button>`;
+        }).join('');
+        const feedback = selected === null ? '' : `<div class="fusion-quiz-feedback ${selected === question.answer ? 'correct' : 'wrong'}"><strong>${selected === question.answer ? '✓ 答对了。' : `✗ 答案是「${escapeHTML(question.options[question.answer])}」。`}</strong><p>${escapeHTML(question.explanation)}</p></div><div class="cp-choices fusion-choices"><button class="cp-choice" data-fusion-classroom-next><span class="cp-option-n">→</span><span>${progress.index + 1 === FUSION_CLASSROOM.questions.length ? '（看成绩）' : '（下一题）'}</span>${I('arrow')}</button></div>`;
+        const body = `<section class="fusion-quiz"><p>${escapeHTML(question.prompt)}</p><div class="fusion-quiz-options">${choices}</div>${feedback}</section>`;
+        article = fusionClassroomArticle({ title: question.title, eyebrow: `小考 · 得分 ${progress.score} / ${FUSION_CLASSROOM.questions.length}`, body, actions: '', art: fusionClassroomArt('quiz', progress.index) });
+    }
+    else {
+        const [title, comment] = fusionClassroomResultCopy(progress.score);
+        const body = `${fusionDialogueHTML([{ who: '垃垃', text: comment }, { who: '老杜', text: '老杜收起萨克斯：「行了，都回去吧。周六排练，别迟到。」' }], FUSION_CLASSROOM_META)}<p class="fusion-classroom-finish">—— 番外 · 融合小课堂 · 完 ——</p>`;
+        const actions = `<div class="cp-choices fusion-choices"><button class="cp-choice" data-fusion-classroom-restart><span class="cp-option-n">↺</span><span>再考一次<small>保留历史最佳 ${progress.best} / ${FUSION_CLASSROOM.questions.length}</small></span>${I('repeat')}</button><button class="cp-choice" data-fusion-home><span class="cp-option-n">←</span><span>返回篇章目录</span>${I('arrow')}</button></div>`;
+        article = fusionClassroomArticle({ title, eyebrow: `小考结束 · ${progress.score} / ${FUSION_CLASSROOM.questions.length}`, body, actions, art: fusionClassroomArt('result', 0) });
+    }
+    save();
+    $('view-fusion').innerHTML = fusionClassroomShell(article);
+}
+function continueFusionClassroom() {
+    const progress = state.fusion.classroom;
+    if (state.fusion.chapter !== 'quiz' || progress.stage === 'result') return;
+    if (progress.stage === 'intro') {
+        if (progress.index + 1 < FUSION_CLASSROOM.intro.length) progress.index++;
+        else { progress.stage = 'lesson'; progress.index = 0; }
+    }
+    else if (progress.stage === 'lesson') {
+        if (progress.index + 1 < FUSION_CLASSROOM.lessons.length) progress.index++;
+        else { progress.stage = 'quiz'; progress.index = 0; progress.score = 0; progress.answers = []; progress.selected = null; }
+    }
+    else if (progress.stage === 'quiz' && progress.selected !== null) {
+        if (progress.index + 1 < FUSION_CLASSROOM.questions.length) { progress.index++; progress.selected = null; }
+        else {
+            progress.stage = 'result';
+            progress.done = true;
+            progress.best = Math.max(progress.best, progress.score);
+            progress.selected = null;
+        }
+    }
+    save();
+    renderFusion();
+    focusStoryDialogue('#view-fusion');
+}
+function answerFusionClassroom(index) {
+    const progress = state.fusion.classroom, question = FUSION_CLASSROOM.questions[progress.index];
+    if (state.fusion.chapter !== 'quiz' || progress.stage !== 'quiz' || progress.selected !== null || !question || !Number.isInteger(index) || index < 0 || index >= question.options.length) return;
+    progress.selected = index;
+    progress.answers[progress.index] = index;
+    if (index === question.answer) progress.score++;
+    save();
+    renderFusion();
+}
+function restartFusionClassroom() {
+    const { best, done } = state.fusion.classroom;
+    state.fusion.classroom = { ...freshFusionClassroom(), best, done };
+    state.fusion.chapter = 'quiz';
+    save();
+    renderFusion();
 }
 function finishFusion(key, ending) {
     const run = fusionRun(key);
@@ -434,6 +577,8 @@ function chooseFusion(index) {
     save();
     if (FUSION_META[key].ends.includes(node.id))
         return finishFusion(key, node.id);
+    if (key === 'fm' && node.id === 'f2_cpgo')
+        return unlockFusionCpRoute();
     if (choice.next === 'RESULT')
         return fusionResult();
     if (key === 'fm' && choice.next === 'm_result')
@@ -449,19 +594,17 @@ function chooseFusion(index) {
     if (key === 'ep2' && choice.next === 'NEXT')
         return openFusionChats();
     if (key === 'fm' && choice.next === 'POOL')
-        return openFusionPool('story');
+        return openFusionPool('story', true);
     if (key === 'fm' && choice.next === 'PREPOOL')
-        return openFusionPool('pre');
+        return openFusionPool('pre', true);
     if (key === 'fm' && choice.next === 'POSTPOOL')
-        return openFusionPool('post');
+        return openFusionPool('post', true);
     if (key === 'fm' && choice.next === 'NEXT')
         return openFusionPool(run.poolStage || 'story');
     if (key === 'fm' && ['m_ok', 'm_bad', 'm_perfect'].includes(node.id) && choice.next === 'm_ep')
         return showFusionNode('fm', 'g_post');
     if (choice.next)
         return showFusionNode(key, choice.next);
-    if (key === 'fm' && node.id === 'f2_cpgo')
-        return unlockFusionCpRoute();
     if (key === 'ep2')
         return openFusionChats();
     nextFusionMain(key);
@@ -542,10 +685,14 @@ function continueFusionMain() {
     save();
     nextFusionMain('ep2');
 }
-function openFusionPool(stage) {
+function openFusionPool(stage, resetSession = false) {
     if (!fusionAccessReady()) return;
     const run = fusionRun('fm');
     run.poolStage = stage;
+    if (resetSession) {
+        run.poolCount = 0;
+        run.poolPeople = [];
+    }
     run.flags.poolHub = true;
     save();
     renderFusion();
@@ -553,11 +700,18 @@ function openFusionPool(stage) {
 function renderFusionPool(message = null) {
     const run = fusionRun('fm'), stage = run.poolStage || 'story';
     const label = stage === 'pre' ? '演出前夜 · 微信' : stage === 'post' ? '演出后的深夜 · 微信' : '排练结束 · 微信';
-    const content = `<article class="cp-novel cp-novel-text-only cp-novel-chat" aria-label="融合主线微信支线"><header class="cp-novel-top"><span>${FUSION_META.fm.title}</span><span>${label}</span><div class="cp-novel-progress">${fusionProgressDots('fm', run)}</div></header><div class="cp-novel-body"><div class="cp-novel-dialogue fusion-reader fusion-chat"><div class="fusion-chat-heading"><h3>${message ? '今晚的消息' : '今晚，跟谁聊聊？'}</h3></div>${message ? `${fusionSpeakerHTML(message[0], label)}<div class="fusion-message"><p>${escapeHTML(message[1])}</p></div>${fusionChoiceOwnerHTML()}<div class="cp-choices fusion-choices"><button class="cp-choice" data-fusion-next-main><span class="cp-option-n">01</span><span>（回到通讯录）</span>${I('arrow')}</button></div>` : `<p>这些聊天属于第三篇的排练与演出支线；每位角色的专属事件会按聊天次数依次出现。</p><div class="fusion-chat-grid">${FUSION_FM_POOL.map((name, index) => `<button class="cp-choice" data-fusion-chat="${name}"><span class="cp-option-n">${String(index + 1).padStart(2, '0')}</span><span>${escapeHTML(name)}<small>已聊 ${run.chats[name] || 0} 次</small></span>${I('arrow')}</button>`).join('')}</div><div class="fusion-pool-actions"><button class="cp-choice" data-fusion-pool-end><span class="cp-option-n">→</span><span>${stage === 'pre' ? '（睡吧，明天登台）' : stage === 'post' ? '（尘埃落定）' : '（结束聊天，继续排练）'}</span>${I('arrow')}</button></div>`}</div></div></article>`;
+    const left = Math.max(0, 3 - (run.poolCount || 0));
+    const content = `<article class="cp-novel cp-novel-text-only cp-novel-chat" aria-label="融合主线微信支线"><header class="cp-novel-top"><span>${FUSION_META.fm.title}</span><span>${label}</span><div class="cp-novel-progress">${fusionProgressDots('fm', run)}</div></header><div class="cp-novel-body"><div class="cp-novel-dialogue fusion-reader fusion-chat"><div class="fusion-chat-heading"><h3>${message ? '今晚的消息' : '今晚，跟谁聊聊？'}</h3></div>${message ? `${fusionSpeakerHTML(message[0], label)}<div class="fusion-message"><p>${escapeHTML(message[1])}</p></div>${fusionChoiceOwnerHTML()}<div class="cp-choices fusion-choices"><button class="cp-choice" data-fusion-next-main><span class="cp-option-n">01</span><span>（回到通讯录）</span>${I('arrow')}</button></div>` : `<p>${left ? `今晚还能聊 ${left} 人；同一晚每人限一次。` : '今晚已经聊了三个人，手机该放下了。'}聊天次数只推进本篇剧情，不新增独立好感或羁绊条。</p><div class="fusion-chat-grid">${FUSION_FM_POOL.map((name, index) => { const talked = run.poolPeople.includes(name), disabled = talked || left <= 0; return `<button class="cp-choice" data-fusion-chat="${name}" ${disabled ? 'disabled' : ''}><span class="cp-option-n">${String(index + 1).padStart(2, '0')}</span><span>${escapeHTML(name)}<small>已聊 ${run.chats[name] || 0} 次${talked ? ' · 今晚聊过了' : ''}</small></span>${I('arrow')}</button>`; }).join('')}</div><div class="fusion-pool-actions"><button class="cp-choice" data-fusion-pool-end><span class="cp-option-n">→</span><span>${stage === 'pre' ? '（睡吧，明天登台）' : stage === 'post' ? '（尘埃落定）' : '（结束聊天，继续排练）'}</span>${I('arrow')}</button></div>`}</div></div></article>`;
     $('view-fusion').innerHTML = fusionPageHTML('fm', content, true);
 }
 function fusionPoolChat(name) {
     const run = fusionRun('fm'), lines = FUSION_FM_POOL_LINES[name] || [];
+    if ((run.poolCount || 0) >= 3 || run.poolPeople.includes(name)) {
+        renderFusionPool();
+        return;
+    }
+    run.poolCount = (run.poolCount || 0) + 1;
+    run.poolPeople.push(name);
     run.chats[name] = (run.chats[name] || 0) + 1;
     run.chatTotal++;
     run.lastChat = name;

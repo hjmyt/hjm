@@ -450,7 +450,7 @@ const ASSETS = {
   "cardXiaojieCover": "assets/xiaojie-card-cover.webp",
   "cardXiaojieAvatar": "assets/xiaojie-card-avatar.webp",
   "fusionHillArrival": "assets/fusion/scenes/hill-arrival.jpg",
-  "fusionChaoticRehearsal": "assets/fusion/scenes/chaotic-rehearsal.jpg",
+  "fusionChaoticRehearsal": "assets/fusion/scenes/chaotic-rehearsal-v2.jpg",
   "fusionOneMicrophone": "assets/fusion/scenes/one-microphone.jpg",
   "fusionMoonCanon": "assets/fusion/scenes/moon-canon.jpg",
   "fusionSplitNight": "assets/fusion/scenes/split-night.jpg",

@@ -1,10 +1,13 @@
 'use strict';
 
 function freshFusionRun() {
-    return { current: null, page: 0, done: [], flags: {}, score: 0, ended: false, ending: null, chats: {}, chatTotal: 0, seen: {}, lastChat: null, poolStage: null };
+    return { current: null, page: 0, done: [], flags: {}, score: 0, ended: false, ending: null, chats: {}, chatTotal: 0, seen: {}, lastChat: null, poolStage: null, poolCount: 0, poolPeople: [] };
+}
+function freshFusionClassroom() {
+    return { quizVersion: 2, stage: 'intro', index: 0, score: 0, best: -1, done: false, answers: [], selected: null };
 }
 function freshFusion() {
-    return { version: 2, invited: false, chapter: null, runs: { rl: freshFusionRun(), ep2: freshFusionRun(), fm: freshFusionRun() } };
+    return { version: 3, invited: false, chapter: null, classroom: freshFusionClassroom(), runs: { rl: freshFusionRun(), ep2: freshFusionRun(), fm: freshFusionRun() } };
 }
 function cleanFusion(raw) {
     const clean = freshFusion();
@@ -45,8 +48,27 @@ function cleanFusion(raw) {
         if (key === 'ep2' && run.lastChat === 'REK')
             run.lastChat = '阿齐';
         run.poolStage = ['story', 'pre', 'post'].includes(source.poolStage) ? source.poolStage : null;
+        run.poolCount = Number.isFinite(Number(source.poolCount)) ? clamp(Math.floor(Number(source.poolCount)), 0, 3) : 0;
+        run.poolPeople = Array.isArray(source.poolPeople) ? [...new Set(source.poolPeople.filter(name => typeof name === 'string').map(name => name.slice(0, 12)))].slice(0, 3) : [];
     }
-    clean.chapter = ['rl', 'ep2', 'fm'].includes(raw.chapter) ? raw.chapter : null;
+    const classroom = raw.classroom;
+    if (classroom && typeof classroom === 'object') {
+        const currentQuiz = Number(classroom.quizVersion) === clean.classroom.quizVersion;
+        clean.classroom.stage = ['intro', 'lesson', 'quiz', 'result'].includes(classroom.stage) ? classroom.stage : 'intro';
+        clean.classroom.index = Number.isFinite(Number(classroom.index)) ? clamp(Math.floor(Number(classroom.index)), 0, 99) : 0;
+        clean.classroom.score = Number.isFinite(Number(classroom.score)) ? clamp(Math.floor(Number(classroom.score)), 0, 10) : 0;
+        clean.classroom.best = Number.isFinite(Number(classroom.best)) ? clamp(Math.floor(Number(classroom.best)), -1, 10) : -1;
+        clean.classroom.done = classroom.done === true;
+        clean.classroom.answers = Array.isArray(classroom.answers) ? classroom.answers.slice(0, 10).map(value => clamp(Math.floor(Number(value)), -1, 9)) : [];
+        clean.classroom.selected = Number.isFinite(Number(classroom.selected)) ? clamp(Math.floor(Number(classroom.selected)), 0, 9) : null;
+        if (!currentQuiz && clean.classroom.stage === 'quiz') {
+            clean.classroom.index = 0;
+            clean.classroom.score = 0;
+            clean.classroom.answers = [];
+            clean.classroom.selected = null;
+        }
+    }
+    clean.chapter = ['rl', 'ep2', 'fm', 'quiz'].includes(raw.chapter) ? raw.chapter : null;
     // v1 had no invitation bit. Only actual saved reading proves an old visit.
     clean.invited = raw.version >= 2 ? raw.invited === true :
         Object.values(clean.runs).some(run => !!run.current || run.done.length > 0 || run.ended);

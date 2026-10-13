@@ -33,6 +33,17 @@ crop_grid_1536() {
   done
 }
 
+crop_grid_1536_centered() {
+  sheet=$1; shift
+  index=0
+  for id in "$@"; do
+    col=$((index % 4)); row=$((index / 4))
+    x=$((col * 384 + 4)); y=$((row * 512 + 68))
+    ffmpeg -y -loglevel error -i "$sheet" -vf "crop=376:376:$x:$y,scale=752:752" -q:v 2 "$output/nodes/$id.jpg"
+    index=$((index + 1))
+  done
+}
+
 crop_grid_1254() {
   sheet=$1; shift
   index=0
@@ -60,6 +71,15 @@ crop_grid_1774() {
     index=$((index + 1))
   done
 }
+
+# Content-accurate correction for “第三幕 · 一锅粥”. The eight-up sheet
+# contains eight reviewed candidates of the same beat; panel 1 was selected
+# for its clear A-Qi/Teacher Zhu faces, intact bass and visible string-section
+# congestion. The versioned output also invalidates the previous cached art.
+ffmpeg -y -loglevel error \
+  -i "$root/assets/fusion/source/fusion-chaotic-rehearsal-candidates-v2.png" \
+  -vf 'crop=376:376:4:68,scale=752:752' -q:v 2 \
+  "$output/chaotic-rehearsal-v2.jpg"
 
 crop_grid_1254 "$root/assets/fusion/source/fusion-nodes-00.png" fs_01 fs_laodu fs_dayang fs_yuerou fs_yrok fs_yrno fs_leave fs_tim
 crop_grid_1536 "$root/assets/fusion/source/fusion-nodes-01.png" fs_yr2 fs_dj fs_05 fs_06wait fs_06 fs_rush fs_07 f2_00
@@ -96,6 +116,12 @@ crop_grid_1536 "$root/assets/fusion/source/fusion-nodes-complete-07.png" \
   f2_dj3 f2_fusenight m_ep m_ep1 m_ep2 m_ep3 fusion-qa-empty fusion-qa-notebook
 crop_grid_1536 "$root/assets/fusion/source/fusion-nodes-shared-fixes.png" \
   f2_cpgo-v2 f2_aq1-v2 fusion-qa-keyboard fusion-qa-sax fusion-qa-call fusion-qa-bow fusion-qa-lala fusion-qa-room
+
+# v2.4 additions: three Lala chats and three Shiyuan chats. The standalone
+# classroom now has one unique image per page and is rebuilt separately by
+# scripts/crop-fusion-classroom-art.py.
+crop_grid_1536_centered "$root/assets/fusion/source/fusion-nodes-v24-additions-v4.png" \
+  f2_llc1 f2_llc2 f2_llc3 f2_sy1 f2_sy2 f2_sy3
 
 # Old Du identity pass. Both source sheets were generated as exact 4 x 2
 # grids from the canonical portrait in assets/laodu-portrait.webp. Versioned

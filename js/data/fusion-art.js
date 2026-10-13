@@ -16,7 +16,8 @@ const FUSION_GENERATED_NODE_ART = new Set([
   'm_talk_dy','m_talk_dj','m_talk_ll','m_sd_ld','m_sd_dy','m_sd_ll','m_sd_dj','m_show2',
   'm_ok','m_bad','m_perfect','f2_ldp1','f2_ldp2','f2_ldp2a','f2_ldp2b','f2_ldp3',
   'f2_ldp3a','f2_ldnight','f2_dy1','f2_dy2','f2_dy3','f2_rocknight','f2_dj1','f2_dj2',
-  'f2_dj3','f2_fusenight','m_ep','m_ep1','m_ep2','m_ep3','f2_cpgo'
+  'f2_dj3','f2_fusenight','m_ep','m_ep1','m_ep2','m_ep3','f2_cpgo',
+  'f2_llc1','f2_llc2','f2_llc3','f2_sy1','f2_sy2','f2_sy3'
 ]);
 // Use a new filename when a replacement changes a character's canonical look,
 // so browsers cannot keep showing the old crop from their image cache.
@@ -90,8 +91,64 @@ const FUSION_MEMORY_DETAILS = {
   f2_bsstop: {
     rule: '第三篇与宝石第 3 次专属聊天时，选择“客套安慰两句”',
     text: '宝石绕着飞鸿讲了三次：和声、柠檬水、扒谱，还有那句没能说完的“你觉得，飞鸿他——”。Jerry 客套地把一切归为朋友之间的寻常，宝石只回了一个“哦”，从此再也没有提起飞鸿；有些话错过那一次，就没有第二次了。选择“愿闻其详”则会正式解锁宝石×飞鸿 CP 线。'
+  },
+  f2_llc1: {
+    rule: '第三篇与垃垃第 1 次专属聊天时触发',
+    text: 'Jerry 把《彩云追月》的五声音阶放进松弛的 R&B 律动；深夜收到小样的垃垃一分钟连发十一条消息，最后认真告诉他：这样的改编值得被更多人听见。'
+  },
+  f2_llc2: {
+    rule: '第三篇与垃垃第 2 次专属聊天时触发',
+    text: '垃垃从巴赫《二部创意曲》弹出第一条旋律，Jerry 用电吉他把动机接进 fusion。两个人在琴房写到关灯，为共同完成的曲子取名《畅游》。'
+  },
+  f2_llc3: {
+    rule: '第三篇与垃垃第 3 次专属聊天时触发',
+    text: '一次深夜的和声争论里，垃垃终于逼 Jerry 看着她的眼睛。记忆里的暑假与小提琴重叠起来，他才认出眼前的人就是失联多年的远房表妹。'
+  },
+  f2_sy1: {
+    rule: '第三篇与十元第 1 次专属聊天时触发',
+    text: '排练散场后，十元难得说出一句不是客套的话：就算 Jerry 有一天离开哈基米，两个人仍然可以继续合作。'
+  },
+  f2_sy2: {
+    rule: '第三篇与十元第 2 次专属聊天时触发',
+    text: '十元重新核完每个声部的设备清单，认真为调音跟进失误道歉。道歉学得很慢，但她终于学会了。'
+  },
+  f2_sy3: {
+    rule: '第三篇与十元第 3 次专属聊天时触发',
+    text: '场地、报备、节目单、奶茶和档期表从不站在舞台光里，却一直有人在做。Jerry 终于看见了十元擅长并承担的全部工作。'
   }
 };
+const FUSION_CLASSROOM_ART = {
+  intro: Array.from({ length: 6 }, (_, index) => `fusionClassroomIntro${index + 1}`),
+  lesson: Array.from({ length: 7 }, (_, index) => `fusionClassroomLesson${index + 1}`),
+  quiz: Array.from({ length: 10 }, (_, index) => `fusionClassroomQuiz${index + 1}`),
+  result: ['fusionClassroomResult']
+};
+for (const [stage, assets] of Object.entries(FUSION_CLASSROOM_ART)) {
+  const folder = stage === 'result' ? 'result' : stage;
+  assets.forEach((asset, index) => {
+    ASSETS[asset] = stage === 'result'
+      ? 'assets/fusion/classroom/result-01-v2.jpg'
+      : `assets/fusion/classroom/${folder}-${String(index + 1).padStart(2, '0')}.jpg`;
+  });
+}
+const FUSION_CLASSROOM_STAGE_LABELS = {
+  intro: '开场',
+  lesson: '五分钟课',
+  quiz: '小考',
+  result: '结业'
+};
+const FUSION_CLASSROOM_PAGE_ART = Object.entries(FUSION_CLASSROOM_ART).flatMap(([stage, assets]) => assets.map((asset, index) => ({
+  id: `fusion_classroom_${stage}_p${index + 1}`,
+  stage,
+  page: index + 1,
+  asset,
+  title: `融合小课堂 · ${FUSION_CLASSROOM_STAGE_LABELS[stage]}${stage === 'result' ? '' : ` ${index + 1}/${assets.length}`}`,
+  location: '山丘打烊后 · 五分钟课',
+  text: stage === 'result'
+    ? '垃垃拿着空白成绩纸回应小考结果，老杜稳妥收好萨克斯，宣布融合小课堂结束。'
+    : `融合小课堂${FUSION_CLASSROOM_STAGE_LABELS[stage]}第 ${index + 1} 页的独立剧情插图。`
+})));
+const FUSION_CLASSROOM_PAGE_ART_BY_ID = new Map(FUSION_CLASSROOM_PAGE_ART.map(art => [`${art.stage}:${art.page}`, art]));
 const FUSION_ART = Object.entries(FUSION_ROUTES).flatMap(([chapter, nodes]) => nodes.map((node, index) => {
   const legacy = FUSION_LEGACY_ART[node.id];
   let asset = legacy?.[1];

@@ -32,6 +32,8 @@
 .fusion-chapter em { color:#73839a; font-size:12px; line-height:1.8; font-style:normal; }
 .fusion-chapter>.icon { flex:none; color:#8297b7; }
 .fusion-chapter.locked { opacity:.55; cursor:default; filter:saturate(.45); }
+.fusion-classroom-entry { border-color:#dac9a5; background:linear-gradient(110deg,#fdf9ef,#fffdf8); }
+.fusion-classroom-entry small { color:#967343; }
 .fusion-shell .cp-novel-illustrated .cp-novel-body { grid-template-columns:minmax(0,1fr) minmax(280px,36%); }
 .fusion-shell .cp-novel .cp-novel-art { width:min(100%,340px); transform:rotate(1deg); }
 .fusion-shell .cp-novel-art button { aspect-ratio:1; }
@@ -54,6 +56,24 @@
 .fusion-pool-actions .cp-choice { min-width:0; }
 .fusion-message { padding:18px; margin:16px 0; border:1px solid #f0e5d6; border-radius:14px; background:#fffaf1; }
 .fusion-message p { margin:0; white-space:pre-wrap; line-height:1.9; color:#425069; }
+.fusion-classroom-best { margin-left:auto; color:#8d7752; font-size:11px; font-weight:700; letter-spacing:.7px; }
+.fusion-classroom-page-label { display:flex; align-items:baseline; justify-content:space-between; gap:12px; margin:0 0 12px; padding:0 2px 10px; border-bottom:1px solid #e9dde2; }
+.fusion-classroom-page-label span { color:#8a7290; font-size:10px; font-weight:800; letter-spacing:1px; }
+.fusion-classroom-page-label strong { color:#3e4e68; font:700 18px var(--serif); text-align:right; }
+.fusion-lesson-card,.fusion-quiz { border:1px solid #e7dfcf; border-radius:18px; background:linear-gradient(145deg,#fffdf8,#f8f5ee); padding:24px; box-shadow:0 10px 28px #273b5d0a; }
+.fusion-lesson-card>span { color:#a17d48; font-size:10px; font-weight:800; letter-spacing:2px; }
+.fusion-lesson-card h4 { margin:8px 0 12px; color:#344761; font:700 23px var(--serif); }
+.fusion-lesson-card p,.fusion-quiz>p { margin:0; color:#53647b; line-height:1.95; }
+.fusion-quiz>p { color:#35465f; font:700 17px/1.75 var(--serif); }
+.fusion-quiz-options { display:grid; gap:10px; margin-top:18px; }
+.fusion-quiz-options .cp-choice.correct { border-color:#72aa8b; background:#eff9f3; }
+.fusion-quiz-options .cp-choice.wrong { border-color:#c78088; background:#fff1f2; }
+.fusion-quiz-options .cp-choice:disabled { opacity:1; cursor:default; }
+.fusion-quiz-feedback { margin-top:18px; padding:16px 18px; border-radius:14px; line-height:1.75; }
+.fusion-quiz-feedback.correct { background:#edf8f2; color:#376c53; }
+.fusion-quiz-feedback.wrong { background:#fff0f1; color:#8e4d58; }
+.fusion-quiz-feedback p { margin:6px 0 0; color:inherit; }
+.fusion-classroom-finish { margin:24px 0 0; color:#9a7a4e; text-align:center; letter-spacing:1.4px; }
 .fusion-ending { text-align:center; padding-block:60px; }
 .fusion-ending h2 { margin:12px 0; font:700 28px var(--serif); }
 .fusion-ending p { color:#758298; line-height:1.8; }
@@ -77,6 +97,19 @@
   .fusion-chat-grid { grid-template-columns:1fr; }
   .fusion-ending-actions .btn { width:100%; }
   .fusion-shell .cp-layout:not(.cp-reading)>.cp-sidebar { grid-template-columns:1fr; }
+  #view-fusion .fusion-classroom.cp-novel-illustrated .cp-novel-dialogue { left:8px; right:8px; bottom:8px; max-height:72%; padding:11px 10px 10px; border-radius:16px; background:#fffdf9f7; }
+  #view-fusion .fusion-classroom.cp-novel-illustrated .cp-novel-art img { object-fit:cover; object-position:center; }
+  .fusion-classroom-page-label { margin-bottom:8px; padding-bottom:7px; }
+  .fusion-classroom-page-label span { font-size:10px; }
+  .fusion-classroom-page-label strong { font-size:17px; }
+  .fusion-classroom .fusion-lesson-card,.fusion-classroom .fusion-quiz { padding:14px 12px; border-radius:14px; }
+  .fusion-classroom .fusion-lesson-card h4 { margin:5px 0 8px; font-size:20px; }
+  .fusion-classroom .fusion-lesson-card p { font-size:15px; line-height:1.75; }
+  .fusion-classroom .fusion-quiz>p { font-size:16px; line-height:1.72; }
+  .fusion-classroom .fusion-quiz-options { gap:8px; margin-top:12px; }
+  #view-fusion .fusion-classroom .fusion-quiz-options .cp-choice { min-height:52px; padding:10px 11px; font-size:14px; line-height:1.55; }
+  .fusion-classroom .fusion-quiz-feedback { margin-top:12px; padding:12px; font-size:14px; line-height:1.7; }
+  .fusion-classroom .fusion-quiz-feedback p { font-size:14px; }
 }
 @media (prefers-reduced-motion:reduce) {
   .fusion-chapter:hover:not(:disabled),.fusion-shell .cp-novel .cp-novel-art { transform:none; }

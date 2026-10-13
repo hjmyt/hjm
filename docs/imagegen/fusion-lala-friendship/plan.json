@@ -1,0 +1,1095 @@
+{
+  "version": "fusion-lala-friendship-v2",
+  "purpose": "Replace every Fusion image where Lala and a male character share the frame with clearly non-romantic friendship, bandmate, mentor/student, or cousin-like staging.",
+  "grid": {
+    "columns": 4,
+    "rows": 2,
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "crop": [
+      376,
+      376
+    ],
+    "outputSize": [
+      752,
+      752
+    ]
+  },
+  "relationshipLock": [
+    "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+    "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+    "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+    "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+    "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+  ],
+  "totals": {
+    "panels": 38,
+    "main": 30,
+    "classroom": 8,
+    "sourceSheets": 5
+  },
+  "panels": [
+    {
+      "kind": "main",
+      "storyPageId": "rl:fs_03:p2",
+      "semanticImageId": "fusion-rl-fs_03-p2-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "你跳上了舞台边的音箱，拍了拍手：「各位，听我说一句——」 你花了十分钟，给全场科普为什么音域打架会让听感一团糟：电声的频段占了中低频，弦乐全被埋在了底下。然后你挨个声部帮大家调整：贝斯让出 200Hz，吉他收掉一点中频，弦乐的整体位置往上提。",
+      "currentStoryBeat": "Jerry：乱糟糟的音墙，一点一点变得清晰。就在这时候，一个齐刘海、半扎马尾的女生站了起来，隔着混乱的人群问你： 垃垃：「弦乐这边完全听不到。能不能，给我们一个麦。」",
+      "contextImmediatelyAfter": "你认出她了——上次在山丘跟你 JAM 过一轮的小提琴。好像叫……垃垃。",
+      "assetKey": "fusionFriendship_rl_fs_03_p2",
+      "output": "assets/fusion/friendship/rl/fs_03-p02.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 1,
+      "panel": 1,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-01.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "rl:fs_03:p3",
+      "semanticImageId": "fusion-rl-fs_03-p3-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "乱糟糟的音墙，一点一点变得清晰。就在这时候，一个齐刘海、半扎马尾的女生站了起来，隔着混乱的人群问你： 「弦乐这边完全听不到。能不能，给我们一个麦。」",
+      "currentStoryBeat": "Jerry：你认出她了——上次在山丘跟你 JAM 过一轮的小提琴。好像叫……垃垃。",
+      "contextImmediatelyAfter": "当晚勉强能排练了。电声乐在山丘的舞台上，弦乐组转移到了门外——借着月光，拉起了卡农。 人群渐渐散开，你看清了那些哈基米的乐手：TIM 在角落记谱，悦柔在跟新人说笑，笛杰靠着墙吹一段没谱的笛子。月色很好。",
+      "assetKey": "fusionFriendship_rl_fs_03_p3",
+      "output": "assets/fusion/friendship/rl/fs_03-p03.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 1,
+      "panel": 2,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-01.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "rl:fs_05:p1",
+      "semanticImageId": "fusion-rl-fs_05-p1-friendship-v2",
+      "visibleCast": [
+        "垃垃",
+        "Jerry"
+      ],
+      "contextImmediatelyBefore": "笛杰见你过来，把笛子从嘴边挪开，笑了笑。你们聊了一段旋律的起承转合，他忽然说：「其实我不太会说话。你上次 JAM 的那段，我回去想了一个礼拜。」 月光下，笛声又响起来了。这次你听懂了他在吹什么。",
+      "currentStoryBeat": "垃垃：排练第一轮结束，一部分乐手开始收乐器。垃垃朝你走了两步，站定，像是有话要说，又没说。 Jerry：你看见她这个样子，停下了手里的活。",
+      "contextImmediatelyAfter": "（过了一会儿，她开口了：）「我有事想请教一下。」她停了停，「其实我们七月，有个音乐会。」 周围收乐器的声音很杂。你朝门口偏了偏头。",
+      "assetKey": "fusionFriendship_rl_fs_05_p1",
+      "output": "assets/fusion/friendship/rl/fs_05-p01.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 1,
+      "panel": 3,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-01.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "rl:fs_06wait:p1",
+      "semanticImageId": "fusion-rl-fs_06wait-p1-friendship-v2",
+      "visibleCast": [
+        "垃垃",
+        "Jerry"
+      ],
+      "contextImmediatelyBefore": "排练第一轮结束，一部分乐手开始收乐器。垃垃朝你走了两步，站定，像是有话要说，又没说。 你看见她这个样子，停下了手里的活。",
+      "currentStoryBeat": "垃垃：（过了一会儿，她开口了：）「我有事想请教一下。」她停了停，「其实我们七月，有个音乐会。」 Jerry：周围收乐器的声音很杂。你朝门口偏了偏头。",
+      "contextImmediatelyAfter": "「借一步说话。」 你把她带到了山丘外面。夜风一吹，酒吧里的喧闹就远了。",
+      "assetKey": "fusionFriendship_rl_fs_06wait_p1",
+      "output": "assets/fusion/friendship/rl/fs_06wait-p01.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 1,
+      "panel": 4,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-01.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "rl:fs_06wait:p2",
+      "semanticImageId": "fusion-rl-fs_06wait-p2-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "（过了一会儿，她开口了：）「我有事想请教一下。」她停了停，「其实我们七月，有个音乐会。」 周围收乐器的声音很杂。你朝门口偏了偏头。",
+      "currentStoryBeat": "Jerry：「借一步说话。」 Jerry：你把她带到了山丘外面。夜风一吹，酒吧里的喧闹就远了。",
+      "contextImmediatelyAfter": "门外的路灯把两个人的影子拉得很长。垃垃抱着琴，开口了： 「你今天也看到了，乐手们什么水平。」",
+      "assetKey": "fusionFriendship_rl_fs_06wait_p2",
+      "output": "assets/fusion/friendship/rl/fs_06wait-p02.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 1,
+      "panel": 5,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-01.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "rl:fs_06:p2",
+      "semanticImageId": "fusion-rl-fs_06-p2-friendship-v2",
+      "visibleCast": [
+        "垃垃",
+        "Jerry"
+      ],
+      "contextImmediatelyBefore": "门外的路灯把两个人的影子拉得很长。垃垃抱着琴，开口了： 「你今天也看到了，乐手们什么水平。」",
+      "currentStoryBeat": "垃垃：「所以我想问你……要不要留下来？」她顿了顿，「——如果是你呢？」 Jerry：——你，听成了另一句话。",
+      "contextImmediatelyAfter": "你的脑子飞快转了一圈：留下来？这是要请我留下来当哈基米的音乐总监？！",
+      "assetKey": "fusionFriendship_rl_fs_06_p2",
+      "output": "assets/fusion/friendship/rl/fs_06-p02.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 1,
+      "panel": 6,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-01.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "rl:fs_06:p3",
+      "semanticImageId": "fusion-rl-fs_06-p3-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "「所以我想问你……要不要留下来？」她顿了顿，「——如果是你呢？」 ——你，听成了另一句话。",
+      "currentStoryBeat": "Jerry：你的脑子飞快转了一圈：留下来？这是要请我留下来当哈基米的音乐总监？！",
+      "contextImmediatelyAfter": "你一口答应下来。垃垃愣了两秒，想解释什么，但你已经转身走向了人群。 第二天，你带着全套企划书杀回山丘，音箱、灯光、节目单，大张旗鼓。可是人心不是设备——乐手们各有各的想法，弦乐和电声互不买账，排练一次比一次散。",
+      "assetKey": "fusionFriendship_rl_fs_06_p3",
+      "output": "assets/fusion/friendship/rl/fs_06-p03.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 1,
+      "panel": 7,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-01.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "ep2:f2_ll1:p2",
+      "semanticImageId": "fusion-ep2-f2_ll1-p2-friendship-v2",
+      "visibleCast": [
+        "垃垃",
+        "Jerry"
+      ],
+      "contextImmediatelyBefore": "垃垃回得很快。 「jerry 老师什么事呀？」",
+      "currentStoryBeat": "垃垃：「谢谢你来哈基米(⁎⁍̴̛ᴗ⁍̴̛⁎)抱紧大腿哈哈哈」 Jerry：你把融合组的构想讲完。她听完，语气正了正。",
+      "contextImmediatelyAfter": "「需要我做什么，你直接说。」",
+      "assetKey": "fusionFriendship_ep2_f2_ll1_p2",
+      "output": "assets/fusion/friendship/ep2/f2_ll1-p02.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 1,
+      "panel": 8,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-01.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "ep2:f2_ll3:p2",
+      "semanticImageId": "fusion-ep2-f2_ll3-p2-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "面试完弦乐手，你约垃垃在山丘对名单。她翻着名单，忽然说了一句： 「古典乐手改演奏习惯，很难。揉弦、弓段、律动，全都得拆开重来——不一定能符合你的要求。」",
+      "currentStoryBeat": "Jerry：她说完就看着你，等你的答案。你知道，这句话怎么接，比名单本身重要。",
+      "contextImmediatelyAfter": "晚上，你把乐队 toneso 获奖的那首曲子发给垃垃，想听听她这种耳朵挑剔的人怎么说。 十分钟后，她回了：",
+      "assetKey": "fusionFriendship_ep2_f2_ll3_p2",
+      "output": "assets/fusion/friendship/ep2/f2_ll3-p02.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 2,
+      "panel": 1,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-02.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "ep2:f2_ll5:p1",
+      "semanticImageId": "fusion-ep2-f2_ll5-p1-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "你坐在琴房里，看着这行字，很久没有动。 夸奖这种东西，你从小到大听得多了。可不知道为什么，这一句看完，心里有一种说不清的感觉——像有人在你写过的谱子上，用铅笔轻轻画了一个圈。",
+      "currentStoryBeat": "Jerry：几天后，你把自己一首压箱底的原创发给她，附言：「这首个人特色很鲜明，你听听。」 垃垃：这次她过了很久才回。然后，你收到了一篇乐评——以她的标准，堪称论文。",
+      "contextImmediatelyAfter": "「开头三秒的底噪不是瑕疵，是老唱片在转。主歌里，地球已经毁灭了，太空基地里最后一个人类，用铁皮和塑料搭了一间二十世纪的小屋，每天按时起床、浇花、给自己做早餐——他在模仿古人类的生活，虽然他没有见过。」 「副歌点火的时候，他站在观测窗前，朝着地球的方向，开了一罐啤酒。桥段降下来，基地断电了，他就着应急灯翻一本旧相册，一页一页，翻得很慢。」",
+      "assetKey": "fusionFriendship_ep2_f2_ll5_p1",
+      "output": "assets/fusion/friendship/ep2/f2_ll5-p01.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 2,
+      "panel": 2,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-02.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "ep2:f2_ll6:p2",
+      "semanticImageId": "fusion-ep2-f2_ll6-p2-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "融合组乐手最终确定了，你首先要给他们开一次例会。 例会定在山丘。你来得早，推门进去的时候，弦乐组正在排路演的曲子。",
+      "currentStoryBeat": "Jerry：然后你看见了垃垃——从一提的谱架，跑到二提的空位，又蹲回三提的角落。一个人，三个声部，行云流水。 旁白：其他乐手在她身后追着她的影子跑。",
+      "contextImmediatelyAfter": "例会上轮到你讲融合组的排练章程。你刚开口，肚子叫了——抬头一看表，晚上七点半，饭点。 台下二十多双眼睛看着你。垃垃坐在最后一排，手里转着一支笔。",
+      "assetKey": "fusionFriendship_ep2_f2_ll6_p2",
+      "output": "assets/fusion/friendship/ep2/f2_ll6-p02-single-lala-v2.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 2,
+      "panel": 3,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-02.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "ep2:f2_ll7rage:p1",
+      "semanticImageId": "fusion-ep2-f2_ll7rage-p1-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "例会上轮到你讲融合组的排练章程。你刚开口，肚子叫了——抬头一看表，晚上七点半，饭点。 台下二十多双眼睛看着你。垃垃坐在最后一排，手里转着一支笔。",
+      "currentStoryBeat": "Jerry：你讲了四十分钟。讲到和声编配的时候，后排传来一声脆响——垃垃把笔拍在了谱架上。 垃垃：（她站起来，声音不大，整个屋子都听见了：）「受不了，饿死了。」她拎起琴盒就走，走到门口，回头补了一刀：「你一点都不在意女生的感受，难怪是个寡佬。」",
+      "contextImmediatelyAfter": "门在她身后关上。全场安静。老杜小声说：「她说得对，我叫外卖吧。」",
+      "assetKey": "fusionFriendship_ep2_f2_ll7rage_p1",
+      "output": "assets/fusion/friendship/ep2/f2_ll7rage-p01.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 2,
+      "panel": 4,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-02.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "ep2:f2_chase:p1",
+      "semanticImageId": "fusion-ep2-f2_chase-p1-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "门在她身后关上。全场安静。老杜小声说：「她说得对，我叫外卖吧。」",
+      "currentStoryBeat": "Jerry：你在走廊追上了她。 垃垃：（她停下脚步，语气缓了下来：）「你回去上课，大家都在等。」她顿了顿，「刚才……是我太饿了。」",
+      "contextImmediatelyAfter": "这是她的道歉方式——你能听出来。但你也能听出来，她并不打算再多说一句。",
+      "assetKey": "fusionFriendship_ep2_f2_chase_p1",
+      "output": "assets/fusion/friendship/ep2/f2_chase-p01.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 2,
+      "panel": 5,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-02.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "ep2:f2_chase:p2",
+      "semanticImageId": "fusion-ep2-f2_chase-p2-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "你在走廊追上了她。 （她停下脚步，语气缓了下来：）「你回去上课，大家都在等。」她顿了顿，「刚才……是我太饿了。」",
+      "currentStoryBeat": "Jerry：这是她的道歉方式——你能听出来。但你也能听出来，她并不打算再多说一句。",
+      "contextImmediatelyAfter": "当晚，你在微信上给她发了消息。",
+      "assetKey": "fusionFriendship_ep2_f2_chase_p2",
+      "output": "assets/fusion/friendship/ep2/f2_chase-p02.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 2,
+      "panel": 6,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-02.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "ep2:f2_ll8:p2",
+      "semanticImageId": "fusion-ep2-f2_ll8-p2-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "融合组第一次正式排练。人到齐了，谱架支好了——你扫了一圈，血压上来了：没有键盘。 十元跑前跑后地解释：对接出了岔子，键盘租用的单子漏传了。你压着的那股火，没压住。",
+      "currentStoryBeat": "Jerry：你声音很大。整个排练室没人敢说话。 垃垃：这时候，垃垃从谱架后面抬起头。",
+      "contextImmediatelyAfter": "「要不要让柠檬送过来？他今天休息，但人就在附近。」",
+      "assetKey": "fusionFriendship_ep2_f2_ll8_p2",
+      "output": "assets/fusion/friendship/ep2/f2_ll8-p02.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 2,
+      "panel": 7,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-02.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "ep2:f2_ll8:p3",
+      "semanticImageId": "fusion-ep2-f2_ll8-p3-friendship-v2",
+      "visibleCast": [
+        "垃垃",
+        "Jerry"
+      ],
+      "contextImmediatelyBefore": "你声音很大。整个排练室没人敢说话。 这时候，垃垃从谱架后面抬起头。",
+      "currentStoryBeat": "垃垃：「要不要让柠檬送过来？他今天休息，但人就在附近。」",
+      "contextImmediatelyAfter": "等键盘的两个小时里，你忙着打电话协调、改排期。一回头，垃垃趴在椅子上睡着了。",
+      "assetKey": "fusionFriendship_ep2_f2_ll8_p3",
+      "output": "assets/fusion/friendship/ep2/f2_ll8-p03.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 2,
+      "panel": 8,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-02.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "ep2:f2_ll11b:p1",
+      "semanticImageId": "fusion-ep2-f2_ll11b-p1-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "你看着那个表情包，笑了一下，又有点说不上来的失落。",
+      "currentStoryBeat": "Jerry：你认了，她反而停了几分钟。然后—— 垃垃：「你甚至不如柠檬。柠檬生气，最多沉默不语。他从不迁怒别人。」",
+      "contextImmediatelyAfter": "你盯着这行字，回了四个字： 「你骂得真脏。」",
+      "assetKey": "fusionFriendship_ep2_f2_ll11b_p1",
+      "output": "assets/fusion/friendship/ep2/f2_ll11b-p01.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 3,
+      "panel": 1,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-03.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "ep2:f2_ll11c:p1",
+      "semanticImageId": "fusion-ep2-f2_ll11c-p1-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "好像这个字，已经在她心里过了很多遍，只是今天才说出口。",
+      "currentStoryBeat": "Jerry：你辩解了两句。她的回复很短： 垃垃：「哦。」",
+      "contextImmediatelyAfter": "然后，就没有了。没有后续，没有延长赛——她真的就当这件事没发生过。对话框沉回了列表底部，像一块石头落回水底。 （她从不主动骂人。你不开这个口，她就不会开口。）",
+      "assetKey": "fusionFriendship_ep2_f2_ll11c_p1",
+      "output": "assets/fusion/friendship/ep2/f2_ll11c-p01.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 3,
+      "panel": 2,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-03.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "fm:m_r4:p2",
+      "semanticImageId": "fusion-fm-m_r4-p2-friendship-v2",
+      "visibleCast": [
+        "垃垃",
+        "Jerry"
+      ],
+      "contextImmediatelyBefore": "第四次排练前，出了状况：Bill 拒绝提供身份证号，演出报备过不了。 十元提议换人。你看着群里吵成一团的留言，没有表态。",
+      "currentStoryBeat": "垃垃：（排练间隙，垃垃忽然开口：）「我每次都听不到自己的声音。」她把弓放下，「solo 的编写，也一直没有思路。」 旁白：整个屋子都安静了。她很少主动要东西。",
+      "contextImmediatelyAfter": "（关于换人，你心里有了偏向——有些事，让该承担的人去承担。） 垃垃还站在那里，等着你回答她那个问题。",
+      "assetKey": "fusionFriendship_fm_m_r4_p2",
+      "output": "assets/fusion/friendship/fm/m_r4-p02.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 3,
+      "panel": 3,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-03.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "fm:m_r4b:p1",
+      "semanticImageId": "fusion-fm-m_r4b-p1-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "（排练间隙，垃垃忽然开口：）「我每次都听不到自己的声音。」她把弓放下，「solo 的编写，也一直没有思路。」 整个屋子都安静了。她很少主动要东西。",
+      "currentStoryBeat": "Jerry：（关于换人，你心里有了偏向——有些事，让该承担的人去承担。） 垃垃：垃垃还站在那里，等着你回答她那个问题。",
+      "contextImmediatelyAfter": "第五次排练，两件事摆在桌面上：调音方案还没定；十元的 rap 词，还一个字都没写出来。 十元蹲在角落，对着手机念念有词，一脸生无可恋。",
+      "assetKey": "fusionFriendship_fm_m_r4b_p1",
+      "output": "assets/fusion/friendship/fm/m_r4b-p01.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 3,
+      "panel": 4,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-03.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "fm:m_talk_ll:p2",
+      "semanticImageId": "fusion-fm-m_talk_ll-p2-friendship-v2",
+      "visibleCast": [
+        "垃垃",
+        "Jerry"
+      ],
+      "contextImmediatelyBefore": "垃垃把你的稿子从头到尾看了一遍，拿起笔，在第三页画了一条线。 「这里，讲到乐团历史的时候，顺序反了。应该先讲人，再讲事。」她又翻到第七页，「PPT 这一页的字太多了，观众看不清。」",
+      "currentStoryBeat": "垃垃：四十分钟后，你的讲稿变得干净了。她把所有人的出场顺序、上下场的动线、甚至灯光的提示，都重新标了一遍。",
+      "contextImmediatelyAfter": "登台那天，后台乱而有序。调音台的光标跳着，乐手们在做最后的热身。 开场前还有二十分钟。你看见他们都在——有的在角落，有的在门边，有的对着镜子。",
+      "assetKey": "fusionFriendship_fm_m_talk_ll_p2",
+      "output": "assets/fusion/friendship/fm/m_talk_ll-p02.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 3,
+      "panel": 5,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-03.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "fm:f2_llc2:p2",
+      "semanticImageId": "fusion-fm-f2_llc2-p2-friendship-v2",
+      "visibleCast": [
+        "垃垃",
+        "Jerry"
+      ],
+      "contextImmediatelyBefore": "周六下午，琴房。垃垃说有个东西，要当面给你听。 她打开琴盖，弹了巴赫《二部创意曲》的开头——C 大调，第一条。两条旋律线像两尾鱼，各游各的，又谁也离不开谁。",
+      "currentStoryBeat": "垃垃：「就弹这么多。剩下的，是你的。」 Jerry：你把吉他接上音箱。巴赫的动机在你手里拐了个弯，挂上七和弦，滑进一段 fusion 的律动。她眼睛一亮，左手立刻跟了上来——两条线，变成了三条。",
+      "contextImmediatelyAfter": "古典乐手的骨架，融合音乐人的血肉。那天你们写到琴房关灯，管理员来敲门。曲子的最后一页，她写了两个字： ——《畅游》。",
+      "assetKey": "fusionFriendship_fm_f2_llc2_p2",
+      "output": "assets/fusion/friendship/fm/f2_llc2-p02.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 3,
+      "panel": 6,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-03.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "fm:f2_llc2:p3",
+      "semanticImageId": "fusion-fm-f2_llc2-p3-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "「就弹这么多。剩下的，是你的。」 你把吉他接上音箱。巴赫的动机在你手里拐了个弯，挂上七和弦，滑进一段 fusion 的律动。她眼睛一亮，左手立刻跟了上来——两条线，变成了三条。",
+      "currentStoryBeat": "Jerry：古典乐手的骨架，融合音乐人的血肉。那天你们写到琴房关灯，管理员来敲门。曲子的最后一页，她写了两个字： 旁白：——《畅游》。",
+      "contextImmediatelyAfter": "（巴赫的十五首《二部创意曲》，本是写给儿子们的练琴教材。两条独立的旋律互相追逐、彼此成全——三百年前的人，早就玩过「融合」了。）",
+      "assetKey": "fusionFriendship_fm_f2_llc2_p3",
+      "output": "assets/fusion/friendship/fm/f2_llc2-p03.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 3,
+      "panel": 7,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-03.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "fm:f2_llc3:p1",
+      "semanticImageId": "fusion-fm-f2_llc3-p1-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "（巴赫的十五首《二部创意曲》，本是写给儿子们的练琴教材。两条独立的旋律互相追逐、彼此成全——三百年前的人，早就玩过「融合」了。）",
+      "currentStoryBeat": "Jerry：深夜，你们又在为一段和声争。你引经据典，从伯克利讲到调式互换，正说到兴头上—— 垃垃：「停。」",
+      "contextImmediatelyAfter": "她叉起了腰。 「jerry。你看着我的眼睛。你真的，一点都不记得我了吗？」",
+      "assetKey": "fusionFriendship_fm_f2_llc3_p1",
+      "output": "assets/fusion/friendship/fm/f2_llc3-p01.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 3,
+      "panel": 8,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-03.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "fm:f2_llc3:p2",
+      "semanticImageId": "fusion-fm-f2_llc3-p2-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "深夜，你们又在为一段和声争。你引经据典，从伯克利讲到调式互换，正说到兴头上—— 「停。」",
+      "currentStoryBeat": "旁白：她叉起了腰。 垃垃：「jerry。你看着我的眼睛。你真的，一点都不记得我了吗？」",
+      "contextImmediatelyAfter": "你愣住了。那双眼睛逼你在记忆里翻找——然后，一个扎着冲天辫、抱着一把四分之一尺寸小提琴的小女孩，从很远的夏天里走了出来。 外婆家的院子。蝉。一个跟在你身后喊「哥哥等等我」的小尾巴。",
+      "assetKey": "fusionFriendship_fm_f2_llc3_p2",
+      "output": "assets/fusion/friendship/fm/f2_llc3-p02.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 4,
+      "panel": 1,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-04.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "fm:f2_llc3:p3",
+      "semanticImageId": "fusion-fm-f2_llc3-p3-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "她叉起了腰。 「jerry。你看着我的眼睛。你真的，一点都不记得我了吗？」",
+      "currentStoryBeat": "Jerry：你愣住了。那双眼睛逼你在记忆里翻找——然后，一个扎着冲天辫、抱着一把四分之一尺寸小提琴的小女孩，从很远的夏天里走了出来。 Jerry：外婆家的院子。蝉。一个跟在你身后喊「哥哥等等我」的小尾巴。",
+      "contextImmediatelyAfter": "——远房表妹。小时候每年暑假都一起玩。后来她搬了家，你出去学琴，两家的联系，就这么断了。 你张了张嘴，半天只憋出一句：「……你怎么不早说。」",
+      "assetKey": "fusionFriendship_fm_f2_llc3_p3",
+      "output": "assets/fusion/friendship/fm/f2_llc3-p03.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 4,
+      "panel": 2,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-04.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "fm:f2_llc3:p4",
+      "semanticImageId": "fusion-fm-f2_llc3-p4-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "你愣住了。那双眼睛逼你在记忆里翻找——然后，一个扎着冲天辫、抱着一把四分之一尺寸小提琴的小女孩，从很远的夏天里走了出来。 外婆家的院子。蝉。一个跟在你身后喊「哥哥等等我」的小尾巴。",
+      "currentStoryBeat": "Jerry：——远房表妹。小时候每年暑假都一起玩。后来她搬了家，你出去学琴，两家的联系，就这么断了。 Jerry：你张了张嘴，半天只憋出一句：「……你怎么不早说。」",
+      "contextImmediatelyAfter": "「我想看看某人什么时候能自己想起来哈哈哈」 「结果等了整整三篇。」",
+      "assetKey": "fusionFriendship_fm_f2_llc3_p4",
+      "output": "assets/fusion/friendship/fm/f2_llc3-p04.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 4,
+      "panel": 3,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-04.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "fm:f2_llc3:p5",
+      "semanticImageId": "fusion-fm-f2_llc3-p5-friendship-v2",
+      "visibleCast": [
+        "垃垃",
+        "Jerry"
+      ],
+      "contextImmediatelyBefore": "——远房表妹。小时候每年暑假都一起玩。后来她搬了家，你出去学琴，两家的联系，就这么断了。 你张了张嘴，半天只憋出一句：「……你怎么不早说。」",
+      "currentStoryBeat": "垃垃：「我想看看某人什么时候能自己想起来哈哈哈」 垃垃：「结果等了整整三篇。」",
+      "contextImmediatelyAfter": "你忽然明白了——为什么整个山丘，只有她敢当面拍你的谱架；为什么例会那晚全屋子的人都不敢吭声，只有她把笔拍出了脆响。 一物降一物。你自命不凡了这么多年，她一叉腰，你就怂了。",
+      "assetKey": "fusionFriendship_fm_f2_llc3_p5",
+      "output": "assets/fusion/friendship/fm/f2_llc3-p05.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 4,
+      "panel": 4,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-04.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "fm:f2_llc3:p6",
+      "semanticImageId": "fusion-fm-f2_llc3-p6-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "「我想看看某人什么时候能自己想起来哈哈哈」 「结果等了整整三篇。」",
+      "currentStoryBeat": "Jerry：你忽然明白了——为什么整个山丘，只有她敢当面拍你的谱架；为什么例会那晚全屋子的人都不敢吭声，只有她把笔拍出了脆响。 Jerry：一物降一物。你自命不凡了这么多年，她一叉腰，你就怂了。",
+      "contextImmediatelyAfter": "（成就达成 · 妹控的自我修养 —— 原来不是被拿捏，是被血脉压制。）",
+      "assetKey": "fusionFriendship_fm_f2_llc3_p6",
+      "output": "assets/fusion/friendship/fm/f2_llc3-p06.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 4,
+      "panel": 5,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-04.png"
+    },
+    {
+      "kind": "main",
+      "storyPageId": "fm:f2_llc3:p7",
+      "semanticImageId": "fusion-fm-f2_llc3-p7-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "垃垃"
+      ],
+      "contextImmediatelyBefore": "你忽然明白了——为什么整个山丘，只有她敢当面拍你的谱架；为什么例会那晚全屋子的人都不敢吭声，只有她把笔拍出了脆响。 一物降一物。你自命不凡了这么多年，她一叉腰，你就怂了。",
+      "currentStoryBeat": "旁白：（成就达成 · 妹控的自我修养 —— 原来不是被拿捏，是被血脉压制。）",
+      "contextImmediatelyAfter": "排练散场后的深夜，十元忽然连发了几条消息。 「jerry 老师，问你个事。」",
+      "assetKey": "fusionFriendship_fm_f2_llc3_p7",
+      "output": "assets/fusion/friendship/fm/f2_llc3-p07.jpg",
+      "qa": [
+        "only visibleCast may appear as named characters",
+        "no floating or broken instruments",
+        "no extra fingers or limbs",
+        "no readable text or watermark",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 4,
+      "panel": 6,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-04.png"
+    },
+    {
+      "kind": "classroom",
+      "storyPageId": "quiz:intro:p1",
+      "semanticImageId": "classroom-after-hours-friendship-v2",
+      "visibleCast": [
+        "Old Du",
+        "Lala"
+      ],
+      "contextImmediatelyBefore": "The Hill venue has closed.",
+      "currentStoryBeat": "Old Du and Lala prepare the quiet room for the retained late-night class.",
+      "contextImmediatelyAfter": "Old Du starts the lesson.",
+      "assetKey": "fusionClassroomIntro1",
+      "output": "assets/fusion/classroom/friendship/intro-01.jpg",
+      "qa": [
+        "two named people",
+        "empty venue",
+        "music stands grounded",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 4,
+      "panel": 7,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-04.png"
+    },
+    {
+      "kind": "classroom",
+      "storyPageId": "quiz:intro:p2",
+      "semanticImageId": "classroom-old-du-opens-friendship-v2",
+      "visibleCast": [
+        "Old Du",
+        "Lala"
+      ],
+      "contextImmediatelyBefore": "Everyone has taken a seat.",
+      "currentStoryBeat": "Old Du taps the stand with his saxophone supported across his lap.",
+      "contextImmediatelyAfter": "He defines Fusion.",
+      "assetKey": "fusionClassroomIntro2",
+      "output": "assets/fusion/classroom/friendship/intro-02.jpg",
+      "qa": [
+        "Old Du owns saxophone",
+        "saxophone supported",
+        "Lala listens",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 4,
+      "panel": 8,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-04.png"
+    },
+    {
+      "kind": "classroom",
+      "storyPageId": "quiz:intro:p3",
+      "semanticImageId": "classroom-fusion-definition-friendship-v2",
+      "visibleCast": [
+        "Old Du",
+        "Lala"
+      ],
+      "contextImmediatelyBefore": "Old Du announces the topic.",
+      "currentStoryBeat": "Saxophone, electric guitar and amplifier illustrate jazz meeting rock.",
+      "contextImmediatelyAfter": "He connects the idea to the Hill group.",
+      "assetKey": "fusionClassroomIntro3",
+      "output": "assets/fusion/classroom/friendship/intro-03.jpg",
+      "qa": [
+        "guitar on stand",
+        "no floating instruments",
+        "Lala takes notes",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 5,
+      "panel": 1,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-05.png"
+    },
+    {
+      "kind": "classroom",
+      "storyPageId": "quiz:intro:p5",
+      "semanticImageId": "classroom-lala-proctor-friendship-v2",
+      "visibleCast": [
+        "Lala",
+        "Jerry"
+      ],
+      "contextImmediatelyBefore": "Old Du finishes the premise.",
+      "currentStoryBeat": "Lala cheerfully becomes proctor while Jerry reacts.",
+      "contextImmediatelyAfter": "The five-minute lesson begins.",
+      "assetKey": "fusionClassroomIntro5",
+      "output": "assets/fusion/classroom/friendship/intro-05.jpg",
+      "qa": [
+        "blank papers",
+        "Jerry identity",
+        "Lala white bow",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 5,
+      "panel": 2,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-05.png"
+    },
+    {
+      "kind": "classroom",
+      "storyPageId": "quiz:lesson:p5",
+      "semanticImageId": "classroom-bossa-river-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "Lala"
+      ],
+      "contextImmediatelyBefore": "The class surveys 1970s fusion.",
+      "currentStoryBeat": "Jerry plays a gentle acoustic rhythm for Lala on a Brazilian seaside terrace.",
+      "contextImmediatelyAfter": "Old Du returns to jazz harmony.",
+      "assetKey": "fusionClassroomLesson5",
+      "output": "assets/fusion/classroom/friendship/lesson-05.jpg",
+      "qa": [
+        "Jerry identity",
+        "Lala identity",
+        "guitar supported",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 5,
+      "panel": 3,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-05.png"
+    },
+    {
+      "kind": "classroom",
+      "storyPageId": "quiz:lesson:p7",
+      "semanticImageId": "classroom-fusion-to-us-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "Lala"
+      ],
+      "contextImmediatelyBefore": "The harmony foundation is explained.",
+      "currentStoryBeat": "Jerry and Lala combine electric guitar and violin beside a bamboo flute stand.",
+      "contextImmediatelyAfter": "The ten-question quiz starts.",
+      "assetKey": "fusionClassroomLesson7",
+      "output": "assets/fusion/classroom/friendship/lesson-07.jpg",
+      "qa": [
+        "Jerry identity",
+        "Lala identity",
+        "violin and bow correct",
+        "flute supported",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 5,
+      "panel": 4,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-05.png"
+    },
+    {
+      "kind": "classroom",
+      "storyPageId": "quiz:question:p10",
+      "semanticImageId": "classroom-question-frequency-friendship-v2",
+      "visibleCast": [
+        "Jerry",
+        "Lala"
+      ],
+      "contextImmediatelyBefore": "Question ten returns to the first night at the Hill.",
+      "currentStoryBeat": "Jerry separates frequencies at the console while Lala plays violin.",
+      "contextImmediatelyAfter": "The answer explains making room for strings.",
+      "assetKey": "fusionClassroomQuiz10",
+      "output": "assets/fusion/classroom/friendship/question-10.jpg",
+      "qa": [
+        "Jerry identity",
+        "Lala identity",
+        "violin and bow correct",
+        "console grounded",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 5,
+      "panel": 5,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-05.png"
+    },
+    {
+      "kind": "classroom",
+      "storyPageId": "quiz:result:p1",
+      "semanticImageId": "classroom-result-lala-old-du-friendship-v2",
+      "visibleCast": [
+        "Lala",
+        "Old Du"
+      ],
+      "contextImmediatelyBefore": "Jerry has answered all ten questions and the score is already known.",
+      "currentStoryBeat": "Lala reacts to the score with a completely blank result sheet while Old Du rests his intact saxophone across his lap and closes the late-night class.",
+      "contextImmediatelyAfter": "Old Du tells everyone to go home and not be late for Saturday rehearsal.",
+      "assetKey": "fusionClassroomResult",
+      "output": "assets/fusion/classroom/friendship/result-01.jpg",
+      "qa": [
+        "Lala identity",
+        "Old Du identity",
+        "Jerry absent",
+        "paper completely blank",
+        "saxophone intact and supported",
+        "Lala and every male character are ordinary friends, bandmates, teacher/student colleagues, or distant cousins only; never a romantic couple.",
+        "Each named character appears at most once in the physical frame; never duplicate a person to depict movement, time slices, multiple parts, or repeated actions.",
+        "Keep at least half a metre of personal space, or place a table, music stand, instrument, or separate chairs clearly between them.",
+        "No head touching, hair touching, hugs, arms around shoulders, handholding, cheek-to-cheek poses, body leaning, lap contact, flirtatious gaze, blush, hearts, or couple-photo composition.",
+        "Use upright, task-focused body language. Their attention should rest on rehearsal, instruments, scores, equipment, the stage, or the practical conversation."
+      ],
+      "sheet": 5,
+      "panel": 6,
+      "sourceSheet": "assets/fusion/friendship/source/fusion-lala-friendship-05.png"
+    }
+  ]
+}
