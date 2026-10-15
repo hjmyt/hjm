@@ -26,7 +26,7 @@ function syncUnifiedBonds(source) { source.affinity = Chronicle.syncBonds(source
 function grantBond(id, amount, { key = null, daily = false } = {}) {
     if (id === 'tangshao')
         id = 'tang';
-    if (id !== 'cat' && !CARD_DEFS.some(c => c.id === id) || !Number.isFinite(amount) || amount <= 0)
+    if (!petForBond(id) && !CARD_DEFS.some(c => c.id === id) || !Number.isFinite(amount) || amount <= 0)
         return 0;
     const p = bondProgress(), dailyType = daily === 'performance' ? 'performance' : 'companion', dailyKey = dailyType + ':' + id;
     const dailyLimit = dailyType === 'performance' ? BOND_RULES.dailyPerformance : BOND_RULES.dailyCompanion;
@@ -38,7 +38,7 @@ function grantBond(id, amount, { key = null, daily = false } = {}) {
         p.daily.counts[dailyKey] = (p.daily.counts[dailyKey] || 0) + 1;
         amount = 1;
     }
-    const before = id === 'cat' ? state.cat.aff : state.affinity[id] || 0;
+    const before = petForBond(id) ? petStats(petForBond(id).id).aff : state.affinity[id] || 0;
     // 100 is the normal cap. Imported historic values above it are retained, never reduced.
     const after = Math.max(before, Math.min(100, before + Math.min(BOND_RULES.maxSingleGain, Math.floor(amount))));
     return applyBondValue(id, after);
@@ -90,9 +90,9 @@ function purchasePaidBondGift(id, cost, gain) {
     return true;
 }
 function applyBondValue(id, after) {
-    const before = id === 'cat' ? state.cat.aff : state.affinity[id] || 0;
-    if (id === 'cat')
-        state.cat.aff = after;
+    const before = petForBond(id) ? petStats(petForBond(id).id).aff : state.affinity[id] || 0;
+    if (petForBond(id))
+        petStats(petForBond(id).id).aff = after;
     else
         state.affinity[id] = after;
     if (id === 'kongge' && after >= 35 && trio().kongge.career)
@@ -101,9 +101,9 @@ function applyBondValue(id, after) {
         unlock('qiqi_sisters');
     if (id === 'dijie' && after >= 35 && expansion().dijie.perfectConcerts >= 100)
         unlock('dijie_gold');
-    if (id !== 'cat' && before < BOND_RULES.hidden && after >= BOND_RULES.hidden)
+    if (!petForBond(id) && before < BOND_RULES.hidden && after >= BOND_RULES.hidden)
         toast(`${CARD_DEFS.find(c => c.id === id).name}羁绊分达到 35 · 隐藏技能门槛已达成`, true);
-    if (id !== 'cat' && typeof Chronicle !== 'undefined')
+    if (!petForBond(id) && typeof Chronicle !== 'undefined')
         Chronicle.onBondChanged?.(id, before, after);
     return after - before;
 }

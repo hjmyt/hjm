@@ -1,5 +1,8 @@
 # 浏览器回归检查
 
+- `node tests/pet-house.cjs`：三只猫独立名字／羁绊／状态／每日额度／收藏、真实单猫 v16 结构迁移与幂等、受保护新字段、刷新／导入／重置、保存失败回滚、备份恢复及损坏启动禁止覆盖。
+- `node tests/pet-room.cjs`：三猫选择与新素材、完整静音视频 file/HTTP 播放、后台／切页／暂停／失败重试与减少动态效果、喂食边界、休息按钮与冷却、保存失败回滚、旧档／刷新保留、相册换图以及 320～1440px 布局。素材和重建说明见 `assets/pet/README.md`。
+
 使用 Node.js 与 Playwright Chromium。可通过 `PLAYWRIGHT_CHROMIUM_EXECUTABLE` 指定本机 Chromium 可执行文件。
 
 - `node tests/chapter-unlocks.cjs`：对话解锁、招募、旧存档、移动端。
@@ -51,6 +54,7 @@
 - `node tests/weekly-stories.cjs`：六章连续开场、晚期事件、训练周开放、摸底失败续读、旧档迁移、提前结局、刷新和桌面/手机布局。
 
 - `node tests/album-art.cjs`：328 段回忆图片映射、64 张原相册独立插图、已收藏优先并按解锁顺序排列、未解锁保护、旧收藏刷新、桌面/手机完整构图、详情与纪念图下载，以及直接打开 HTML 时的完整原图保存回退。
+- `node tests/anatomy-image-fixes.cjs`：四张人物／手部／乐器修正版的源图留存、正式资源路径、分页 `visibleCast`、输出尺寸与格式，以及新文件名缓存失效映射。
 
 - `node tests/chronicle-art.cjs`：153 张不同场景插图、156 个场景绑定、到达收藏、分支隔离、旧档补齐与幂等、刷新保存、相册链接、四种屏宽的 28 个布局组合。
 

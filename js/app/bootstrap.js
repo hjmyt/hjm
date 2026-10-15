@@ -3,6 +3,7 @@
 // Single entry point. Loading/cleaning a save may call any feature's migration helpers.
 loadState();
 bindAppEvents();
+mountPetRoom();
 bindAppAnchors();
 Chronicle.mount();
 // Cards follow reached dialogue, including chapter supplements.

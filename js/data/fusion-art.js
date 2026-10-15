@@ -22,6 +22,7 @@ const FUSION_GENERATED_NODE_ART = new Set([
 // Use a new filename when a replacement changes a character's canonical look,
 // so browsers cannot keep showing the old crop from their image cache.
 const FUSION_NODE_ASSET_FILES = {
+  f2_mine: 'f2_mine-anatomyfix-202610.jpg',
   f2_bsstop: 'f2_bsstop-bf202610.jpg',
   f2_bs3: 'f2_bs3-bf202610.jpg',
   f2_bs2: 'f2_bs2-bf202610.jpg',

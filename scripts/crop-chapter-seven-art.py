@@ -37,6 +37,10 @@ def main():
             'python3', str(ROOT / 'scripts/crop-yeshiyang-art.py'),
             '--kind', 'chapter-seven'
         ], check=True)
+    subprocess.run([
+        'python3', str(ROOT / 'scripts/build-anatomy-image-fixes-2026-10.py'),
+        '--kind', 'chapter-seven'
+    ], check=True)
 
 if __name__ == '__main__':
     main()

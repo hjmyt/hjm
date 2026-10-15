@@ -37,7 +37,11 @@ const url=pathToFileURL(path.resolve(__dirname,'../index.html')).href;
     }
    };
   },modern);
-  await page.goto(url);return {page,context};
+  await page.goto(url);
+  // Current startup always presents the welcome layer. A muted entrance must
+  // not unlock synthesis or start BGM before the first cat interaction.
+  await page.locator('[data-music-enter-muted]').tap();
+  return {page,context};
  }
  const signal=page=>page.waitForFunction(()=>window.synthPeak>.00001);
  const noStory=async page=>assert.equal(await page.locator('#storyBgmAudio').getAttribute('src'),null,'No story BGM needed to unlock synthesis');

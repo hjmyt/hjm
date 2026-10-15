@@ -1,0 +1,741 @@
+{
+  "version": 1,
+  "economy": {
+    "version": 4,
+    "claimed": {},
+    "training": {},
+    "giftCards": {},
+    "daily": {
+      "date": "2026-10-15",
+      "rhythm": 0,
+      "pitchNotes": {
+        "simple": 0,
+        "medium": 0,
+        "hard": 0
+      },
+      "claims": {}
+    }
+  },
+  "bondProgress": {
+    "version": 1,
+    "claimed": {},
+    "daily": {
+      "date": "2026-10-15",
+      "counts": {
+        "catGift:cat": 3,
+        "companion:cat": 1
+      }
+    }
+  },
+  "created": 1791997784598,
+  "nickname": "乐团新人",
+  "catName": "旧档团宠",
+  "cat": {
+    "hunger": 33,
+    "mood": 64,
+    "energy": 19,
+    "pets": 12
+  },
+  "completed": [],
+  "memories": [
+    "first",
+    "purr",
+    "photo",
+    "trust"
+  ],
+  "best": {},
+  "storyProgress": {},
+  "daily": {
+    "date": "2026-10-15",
+    "pet": false,
+    "story": false,
+    "rhythm": false,
+    "claimed": false
+  },
+  "gift": false,
+  "sound": true,
+  "cards": {
+    "edition": 19,
+    "zhuNight": false,
+    "sourceCast": {
+      "performances": 0,
+      "xiaozhou": {
+        "confidence": 45,
+        "solos": 0,
+        "praised": false,
+        "compared": false
+      },
+      "lemon": {
+        "ended": false,
+        "lastChallenge": -1,
+        "result": ""
+      },
+      "dayang": {
+        "online": true
+      },
+      "baoshi": {
+        "purity": 0
+      }
+    },
+    "qiqi": {
+      "nextPartyAt": 0,
+      "mood": {},
+      "cared": [],
+      "sisters": false,
+      "fan": 0,
+      "presence": 0,
+      "lastStage": null
+    },
+    "lala": {
+      "version": 2,
+      "cover": "second",
+      "transcribed": false,
+      "autoRecap": true
+    },
+    "trio": {
+      "version": 1,
+      "tim": {
+        "route": null
+      },
+      "ye": {
+        "closed": false,
+        "invitation": false
+      },
+      "kongge": {
+        "satiety": 20,
+        "satisfaction": 0,
+        "career": false
+      },
+      "energy": {
+        "bingbing": 100,
+        "mobius": 100,
+        "ria": 100,
+        "bingbing_intp": 100,
+        "wanglaoshi": 100,
+        "sammy": 100,
+        "winnie": 100,
+        "jiukuangkuang": 100,
+        "fuge": 100,
+        "lia": 100,
+        "zouzou": 100,
+        "zenta": 100,
+        "jinsang": 100,
+        "tang": 100,
+        "lala": 100,
+        "azhe": 100,
+        "shiyuan": 100,
+        "zhu": 100,
+        "tim": 100,
+        "yeshiyang": 100,
+        "kongge": 100,
+        "orange": 100,
+        "feihong": 100,
+        "dijie": 100,
+        "rek": 100,
+        "aqi": 100,
+        "qiqi": 100,
+        "lemon": 100,
+        "xiaozhou": 100,
+        "goose": 100,
+        "xiaota": 100,
+        "dayang": 100,
+        "baoshi": 100,
+        "huangyx": 100,
+        "jerry": 100,
+        "yuerou": 100,
+        "laodu": 100,
+        "xuezi": 100,
+        "xiaojie": 100
+      },
+      "daily": {
+        "date": "2026-10-15",
+        "practice": false
+      }
+    },
+    "expansion": {
+      "dijie": {
+        "instrument": 0,
+        "emo": false,
+        "mood": 0,
+        "perfectConcerts": 0
+      },
+      "azhe": {
+        "tickets": 0,
+        "applauseMs": 0,
+        "encores": 0
+      },
+      "shiyuan": {
+        "happiness": 0
+      },
+      "daily": {
+        "date": "2026-10-15",
+        "script": false,
+        "greet": false
+      }
+    },
+    "fuge": {
+      "streak": 0
+    },
+    "jinsang": {
+      "highlightBonus": 0
+    },
+    "tickets": 3,
+    "pulls": 0,
+    "pity": 0,
+    "encounterVersion": 3,
+    "encounters": [],
+    "selected": null,
+    "team": [],
+    "form": "normal",
+    "prepared": null,
+    "blackUntil": 0,
+    "collection": {
+      "bingbing": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "mobius": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "ria": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "bingbing_intp": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "wanglaoshi": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "sammy": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "winnie": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "jiukuangkuang": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "fuge": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "lia": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "zouzou": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "zenta": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "jinsang": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "tang": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "lala": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "azhe": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "shiyuan": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "zhu": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "tim": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "yeshiyang": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "kongge": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "orange": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "feihong": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "dijie": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "rek": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "aqi": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "qiqi": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "lemon": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "xiaozhou": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "goose": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "xiaota": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "bill": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "dayang": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "baoshi": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "huangyx": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "jerry": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "yuerou": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "laodu": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "xuezi": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      },
+      "xiaojie": {
+        "owned": false,
+        "xp": 0,
+        "copies": 0
+      }
+    },
+    "daily": {
+      "date": "2026-10-15",
+      "gifts": {},
+      "eye": false,
+      "winnieAssists": 0
+    },
+    "history": []
+  },
+  "fusion": {
+    "version": 3,
+    "invited": false,
+    "chapter": null,
+    "classroom": {
+      "quizVersion": 2,
+      "stage": "intro",
+      "index": 0,
+      "score": 0,
+      "best": -1,
+      "done": false,
+      "answers": [],
+      "selected": null
+    },
+    "runs": {
+      "rl": {
+        "current": null,
+        "page": 0,
+        "done": [],
+        "flags": {},
+        "score": 0,
+        "ended": false,
+        "ending": null,
+        "chats": {},
+        "chatTotal": 0,
+        "seen": {},
+        "lastChat": null,
+        "poolStage": null,
+        "poolCount": 0,
+        "poolPeople": []
+      },
+      "ep2": {
+        "current": null,
+        "page": 0,
+        "done": [],
+        "flags": {},
+        "score": 0,
+        "ended": false,
+        "ending": null,
+        "chats": {},
+        "chatTotal": 0,
+        "seen": {},
+        "lastChat": null,
+        "poolStage": null,
+        "poolCount": 0,
+        "poolPeople": []
+      },
+      "fm": {
+        "current": null,
+        "page": 0,
+        "done": [],
+        "flags": {},
+        "score": 0,
+        "ended": false,
+        "ending": null,
+        "chats": {},
+        "chatTotal": 0,
+        "seen": {},
+        "lastChat": null,
+        "poolStage": null,
+        "poolCount": 0,
+        "poolPeople": []
+      }
+    }
+  },
+  "chronicle": {
+    "chapterSeven": {
+      "active": false,
+      "scene": "q_start",
+      "page": 0,
+      "flags": {},
+      "done": {},
+      "read": [],
+      "ending": null,
+      "endings": [],
+      "run": 1,
+      "unity": 0,
+      "qiqi": 0,
+      "azhe": 0,
+      "rev": 0,
+      "previewed": null
+    },
+    "personal": {
+      "active": false,
+      "selected": null,
+      "rev": 0,
+      "tech": 20,
+      "unlocks": {},
+      "storyUnlocks": {},
+      "routes": {}
+    },
+    "version": 3,
+    "runNo": 1,
+    "claimed": [],
+    "endings": [],
+    "chapterEndings": {},
+    "completedChapters": [],
+    "slots": {},
+    "chapter2Start": null,
+    "chapter3Start": null,
+    "chapter4Start": null,
+    "chapter5Start": null,
+    "chapter6Start": null,
+    "run": {
+      "weekly": {
+        "version": 2,
+        "done": [],
+        "active": 1,
+        "side": [],
+        "recaps": {},
+        "approach": null,
+        "training": {},
+        "trainingWeek": 1
+      },
+      "chapter": 1,
+      "sourceMode": "chapter1",
+      "events": {
+        "sponsor": null,
+        "boundary": null,
+        "bill": null
+      },
+      "name": "",
+      "inst": "",
+      "ch": 1,
+      "week": 1,
+      "tech": 5,
+      "dark": {
+        "feihong": 0,
+        "dijie": 0
+      },
+      "bar": {
+        "order": null,
+        "returnTo": null,
+        "closed": false,
+        "closureSeen": false
+      },
+      "flags": {},
+      "scene": "start",
+      "rev": 0,
+      "log": [],
+      "journal": [],
+      "battle": null,
+      "live": null,
+      "chat": "lala",
+      "ending": null,
+      "previewedEnding": null,
+      "legacyEnded": false
+    }
+  },
+  "wallet": {
+    "v": 1,
+    "n": "1gwxplg",
+    "c": "0xvm4hv.1f9szhl"
+  },
+  "bondVault": {
+    "v": 16,
+    "values": {
+      "cat": {
+        "n": "t9pi0t",
+        "c": "0q5cad4.0pxexkb"
+      },
+      "bingbing": {
+        "n": "1urb4t3",
+        "c": "097ebyg.1k31cno"
+      },
+      "mobius": {
+        "n": "pbbj5",
+        "c": "1lhws92.19y61zi"
+      },
+      "ria": {
+        "n": "g2eqcv",
+        "c": "0dw2g25.1gamjg2"
+      },
+      "bingbing_intp": {
+        "n": "1973gnv",
+        "c": "18y3rh6.0y19tia"
+      },
+      "wanglaoshi": {
+        "n": "1oj4887",
+        "c": "06odwsp.0yri2ik"
+      },
+      "sammy": {
+        "n": "159cdh5",
+        "c": "11xy3eh.19rba0u"
+      },
+      "winnie": {
+        "n": "1fa9cdo",
+        "c": "08xrz37.10pzp6d"
+      },
+      "jiukuangkuang": {
+        "n": "3qtdgz",
+        "c": "14zdw72.01awa3i"
+      },
+      "fuge": {
+        "n": "dey80l",
+        "c": "0iu450r.0sxxant"
+      },
+      "lia": {
+        "n": "17mzq01",
+        "c": "1e1wg71.02egv1z"
+      },
+      "zouzou": {
+        "n": "ny59oe",
+        "c": "0h54eog.0rflbn9"
+      },
+      "zenta": {
+        "n": "840p95",
+        "c": "1q2rabl.1prjhzy"
+      },
+      "jinsang": {
+        "n": "1t590jd",
+        "c": "0niuotn.1nxwa90"
+      },
+      "tang": {
+        "n": "1cbe5ff",
+        "c": "0spuz06.0s30rna"
+      },
+      "lala": {
+        "n": "fho312",
+        "c": "1935zex.0t7wqjm"
+      },
+      "azhe": {
+        "n": "mdctap",
+        "c": "0ldr8z4.0x9uwbc"
+      },
+      "shiyuan": {
+        "n": "1ho7pl6",
+        "c": "1da9vja.1fdzdx4"
+      },
+      "zhu": {
+        "n": "1no3vxu",
+        "c": "0vhqigf.1caqwm0"
+      },
+      "tim": {
+        "n": "1eb9zl3",
+        "c": "0cyxixb.1tusxpb"
+      },
+      "yeshiyang": {
+        "n": "tqauqz",
+        "c": "135j4e2.1g9brxe"
+      },
+      "kongge": {
+        "n": "x0e3gn",
+        "c": "0qoskh5.0kcoomu"
+      },
+      "orange": {
+        "n": "1xm9ojc",
+        "c": "1akc5nv.0w9z21h"
+      },
+      "feihong": {
+        "n": "8x4a55",
+        "c": "12upcin.08228y4"
+      },
+      "dijie": {
+        "n": "6i7pno",
+        "c": "0r423al.0q9qzwt"
+      },
+      "rek": {
+        "n": "1ag01xy",
+        "c": "0ycnm4i.1mkbkw7"
+      },
+      "aqi": {
+        "n": "1an5h71",
+        "c": "0xlu1p5.01qzcfl"
+      },
+      "qiqi": {
+        "n": "12xnva2",
+        "c": "0rzoxng.01he2qk"
+      },
+      "lemon": {
+        "n": "120vp8c",
+        "c": "1v6f1al.1fqtwjj"
+      },
+      "xiaozhou": {
+        "n": "zn7vvm",
+        "c": "1llbjia.06suxvw"
+      },
+      "goose": {
+        "n": "o3cap0",
+        "c": "01kuyis.0hns8r0"
+      },
+      "xiaota": {
+        "n": "imwb6u",
+        "c": "1e59k5h.0i9nqhk"
+      },
+      "bill": {
+        "n": "15fcf6o",
+        "c": "0q04hjh.0il1fvl"
+      },
+      "dayang": {
+        "n": "1lowvt6",
+        "c": "1eo632g.1qg37y7"
+      },
+      "baoshi": {
+        "n": "bre7je",
+        "c": "0iwlv41.1559346"
+      },
+      "huangyx": {
+        "n": "nxiq0g",
+        "c": "0os2ao1.0sbr85t"
+      },
+      "jerry": {
+        "n": "36wkxs",
+        "c": "1g6p9ok.0lu9na6"
+      },
+      "yuerou": {
+        "n": "4kbigf",
+        "c": "0xhpbp7.1fzz9qg"
+      },
+      "laodu": {
+        "n": "1daf940",
+        "c": "1u2w347.0ja9wsy"
+      },
+      "xuezi": {
+        "n": "htqxhm",
+        "c": "1mqmcv6.1ka8az1"
+      },
+      "xiaojie": {
+        "n": "gcuttp",
+        "c": "0rso9n3.0yjgsjf"
+      }
+    }
+  },
+  "levelVault": {
+    "v": 3,
+    "orchestra": {
+      "n": "d7u1v",
+      "c": "0uw723p.11h2ep9"
+    },
+    "band": {
+      "n": "1ql4fj4",
+      "c": "0pj5tdp.0ri4jjv"
+    },
+    "claimed": [],
+    "claimGuard": {
+      "n": "12c1h8m",
+      "c": "03qnaov.08wzabn"
+    }
+  }
+}

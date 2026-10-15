@@ -10323,7 +10323,7 @@ Object.assign(ASSETS, {
   "chapter7_q_event3_alone_read7": "assets/chronicle/chapter-seven/q_event3_alone_read7.webp",
   "chapter7_q_event3_read1": "assets/chronicle/chapter-seven/q_event3_read1.webp",
   "chapter7_q_event3_read11": "assets/chronicle/chapter-seven/q_event3_read11.webp",
-  "chapter7_q_event3_read14": "assets/chronicle/chapter-seven/q_event3_read14.webp",
+  "chapter7_q_event3_read14": "assets/chronicle/chapter-seven/q_event3_read14-anatomyfix-202610.webp",
   "chapter7_q_confront1_read1": "assets/chronicle/chapter-seven/q_confront1_read1.webp",
   "chapter7_q_confront2_read1": "assets/chronicle/chapter-seven/q_confront2_read1.webp",
   "chapter7_q_confront2_read8": "assets/chronicle/chapter-seven/q_confront2_read8.webp",

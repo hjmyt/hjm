@@ -52,3 +52,6 @@ runpy.run_path(str(ROOT / "scripts/crop-yeshiyang-art.py"))["rebuild"]("chronicl
 
 # Restore the original chapter-two/four hidden-ending branches and their album art.
 runpy.run_path(str(ROOT / "scripts/crop-original-hidden-endings.py"))["rebuild"]()
+
+# Reapply the reviewed single-image anatomy fixes after every historical atlas.
+runpy.run_path(str(ROOT / "scripts/build-anatomy-image-fixes-2026-10.py"))["rebuild"]("chronicle")

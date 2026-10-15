@@ -146,14 +146,17 @@ function openWallet(wallet) {
 function persistedState() {
     syncUnifiedBonds(state);
     syncGlobalLevels(state);
+    petHouse(state);
     const snapshot = JSON.parse(JSON.stringify(state));
     snapshot.wallet = sealCoins(state.coins);
     snapshot.bondVault = sealBonds(state);
     snapshot.levelVault = sealLevels(state);
+    snapshot.petBondVault = sealPetBonds(state);
     delete snapshot.coins;
     delete snapshot.affinity;
     delete snapshot.progression;
     delete snapshot.cat.aff;
+    for (const pet of Object.values(snapshot.petHouse.cats)) delete pet.aff;
     delete snapshot.chronicle.bonds;
     for (const run of allChronicleRuns(snapshot.chronicle)) {
         delete run.aff;
@@ -161,7 +164,7 @@ function persistedState() {
     }
     return snapshot;
 }
-function freshState() { const d = { version: 1, economy: freshEconomy(), bondProgress: freshBondProgress(), progression: freshProgression(), created: Date.now(), nickname: '乐团新人', catName: '哈基米', coins: ECONOMY_RULES.start, cat: { aff: 0, hunger: 76, mood: 84, energy: 72, pets: 0 }, completed: [], memories: ['first'], affinity: Object.fromEntries(SAVE_CARD_DEFS.map(c => [c.id, 0])), best: {}, storyProgress: {}, daily: { date: dateKey(), pet: false, story: false, rhythm: false, claimed: false }, gift: false, sound: true, cards: freshCards(), fusion: freshFusion(), chronicle: Chronicle.fresh() }; syncUnifiedBonds(d); syncGlobalLevels(d); return d; }
+function freshState() { const d = { version: 1, economy: freshEconomy(), bondProgress: freshBondProgress(), progression: freshProgression(), created: Date.now(), nickname: '乐团新人', catName: '哈基米', coins: ECONOMY_RULES.start, cat: { aff: 0, hunger: 76, mood: 84, energy: 72, pets: 0 }, petHouse: freshPetHouse(), completed: [], memories: ['first'], affinity: Object.fromEntries(SAVE_CARD_DEFS.map(c => [c.id, 0])), best: {}, storyProgress: {}, daily: { date: dateKey(), pet: false, story: false, rhythm: false, claimed: false }, gift: false, sound: true, cards: freshCards(), fusion: freshFusion(), chronicle: Chronicle.fresh() }; syncUnifiedBonds(d); syncGlobalLevels(d); return d; }
 function cleanState(obj) {
     if (!obj || typeof obj !== 'object' || obj.version !== 1)
         throw new Error('存档格式不正确');
@@ -175,6 +178,7 @@ function cleanState(obj) {
     for (const k of ['aff', 'hunger', 'mood', 'energy'])
         d.cat[k] = number(obj.cat?.[k], d.cat[k], 0, 100);
     d.cat.pets = number(obj.cat?.pets, 0);
+    d.petHouse = cleanPetHouse(obj.petHouse);
     d.completed = Array.isArray(obj.completed) ? [...new Set(obj.completed.filter(x => CHARACTERS.some(c => c.id === x)))] : [];
     d.memories = Array.isArray(obj.memories) ? [...new Set(['first', ...obj.memories.filter(x => MEMORIES.some(m => m.id === x))])] : ['first'];
     for (const c of SAVE_CARD_DEFS)
@@ -215,6 +219,7 @@ function cleanState(obj) {
         for (const run of allChronicleRuns(d.chronicle))
             run.aff = {};
     }
+    restorePetBonds(d, obj);
     d.progression = obj.levelVault ? openLevels(obj.levelVault) : cleanProgression(obj.progression, d.chronicle);
     if (!obj.economy)
         seedLegacyEconomy(d);

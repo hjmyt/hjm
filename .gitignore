@@ -9,6 +9,8 @@ docs/imagegen/*
 !docs/imagegen/fusion-pages/**
 !docs/imagegen/fusion-lala-friendship/
 !docs/imagegen/fusion-lala-friendship/**
+!docs/imagegen/anatomy-fixes-2026-10/
+!docs/imagegen/anatomy-fixes-2026-10/**
 
 # Licensed/private score sources stay local; the browser uses generated JS data.
 assets/scores/source/*.musicxml

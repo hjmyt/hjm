@@ -50,6 +50,7 @@
 <link id="rhythmAuditionGameStyle" rel="stylesheet" href="styles/game-rhythm-audition.css?v=fbb08ead5498" media="not all">
 <link id="scoreAuditionGameStyle" rel="stylesheet" href="styles/game-score-audition.css?v=14207c0b8b5f" media="not all">
 <link rel="stylesheet" href="styles/story-redesign.css?v=e616deffa917">
+<link rel="stylesheet" href="styles/pet.css?v=1d0f68b578a6">
 </head>
 <body>
 <div class="shell">
@@ -77,7 +78,7 @@
  <div id="cardEvent" class="home-premiere"></div>
  <div class="home-grid">
   <article class="card home-feature" id="homeFeature" aria-label="当前陪伴角色"></article>
-  <article class="card pet-card"><div class="section-card-top"><h2 class="section-title"><span data-icon="paw"></span>喵咪休息室</h2><span class="label-tag" id="petMoodTag">等你摸摸</span></div><div class="pet-scene"><div class="pet-bubble pet-speech">你来啦！<br>今天也想贴贴。</div><button class="cat-touch" data-care="pet" aria-label="摸摸哈基米"><img data-asset="cat" alt="戴着金色小铃铛的灰白猫咪哈基米"></button><div class="pet-caption">轻轻点一下，收获一声呼噜</div></div><div class="pet-progress"><div class="progress-label"><span><span class="pet-name">哈基米</span>的羁绊分</span><span class="pet-aff-text">0 / 100</span></div><div class="progress-track"><div class="progress-fill pet-aff-bar"></div></div></div><div class="pet-actions"><button class="btn" data-care="pet"><span data-icon="hand"></span>摸摸</button><button class="btn" data-care="feed"><span data-icon="fish"></span>喂食 <small>10 ♪</small></button><button class="btn" data-care="play"><span data-icon="ball"></span>逗逗猫</button></div></article>
+  <article class="card pet-card"><div class="section-card-top"><h2 class="section-title"><span data-icon="paw"></span>喵咪休息室</h2><span class="label-tag" id="petMoodTag">等你摸摸</span></div><div class="pet-scene"><div class="pet-bubble pet-speech">你来啦！<br>今天也想贴贴。</div><button class="cat-touch" data-care="pet" aria-label="摸摸哈基米"><img data-asset="cat" alt="戴奶白蝴蝶结的橘色虎斑小猫"></button><div class="pet-caption">轻轻点一下，收获一声呼噜</div></div><div class="pet-progress"><div class="progress-label"><span><span class="pet-name">哈基米</span>的羁绊分</span><span class="pet-aff-text">0 / 100</span></div><div class="progress-track"><div class="progress-fill pet-aff-bar"></div></div></div><div class="pet-actions"><button class="btn" data-care="pet"><span data-icon="hand"></span>摸摸</button><button class="btn" data-care="feed"><span data-icon="fish"></span>喂食 <small data-pet-cost>5 ♪</small></button><button class="btn" data-care="play"><span data-icon="ball"></span>逗逗猫</button></div></article>
  </div>
  <div class="roster-heading"><div><h2><span data-icon="cards"></span>把每一次相遇，收进卡册。</h2><p class="tiny" id="homeCollectionCount"></p></div><button class="text-btn" data-route="cards">全部卡牌<span data-icon="arrow"></span></button></div><div class="home-card-rail" id="homeRoster" aria-label="角色卡牌详情入口"></div>
  <div class="lower-title"><h2>把喜欢，慢慢收集起来</h2><span class="tiny">LITTLE THINGS, BIG FEELINGS</span></div>
@@ -89,8 +90,40 @@
  <div class="daily-strip"><div class="daily-left"><span data-icon="sparkles"></span><div><div class="daily-title">今日份的小幸福</div><div class="daily-sub">故事、陪伴与达标演奏，慢慢积累音符</div></div></div><div class="daily-items" id="dailyItems"></div><button class="btn secondary small" id="dailyClaim">领取 10 ♪</button></div>
 </section>
 <section id="view-care" class="view" hidden aria-label="喵咪小屋">
- <div class="screen-head"><div><div class="eyebrow">A SOFT PLACE TO LAND</div><h2>有猫在等你的日子</h2><p>不必赶进度。今天的任务，只是陪它待一会儿。</p></div><button class="btn ghost small" id="renamePet"><span data-icon="edit"></span>给猫起名</button></div>
- <div class="care-grid"><article class="card big-pet"><div class="section-card-top"><h3 class="section-title"><span data-icon="paw"></span><span class="pet-name">哈基米</span>的小角落</h3><span class="label-tag">乐团第 <span id="togetherDays">1</span> 天</span></div><div class="pet-scene"><div class="pet-bubble pet-speech">你来啦！<br>今天也想贴贴。</div><button class="cat-touch" data-care="pet" aria-label="轻轻摸摸猫咪"><img data-asset="cat" alt="窝在排练室的灰白猫咪"></button><div class="pet-caption">猫咪永远记得，对它温柔的人。</div></div><div class="pet-actions"><button class="btn" data-care="pet"><span data-icon="hand"></span>摸摸</button><button class="btn" data-care="feed"><span data-icon="fish"></span>喂食 10 ♪</button><button class="btn" data-care="play"><span data-icon="ball"></span>逗猫</button><button class="btn" data-care="rest"><span data-icon="moon"></span>休息</button></div></article><div class="care-side"><article class="card care-data"><h3>今天，也是被偏爱的小猫</h3><div class="pet-progress"><div class="progress-label"><span>我们的羁绊分</span><span class="pet-aff-text">0 / 100</span></div><div class="progress-track"><div class="progress-fill pet-aff-bar"></div></div></div><div id="petNeeds"></div><p class="tiny">摸摸不消耗音符；喂食消耗 10 音符、羁绊分 +1，每天最多 3 次；摸摸与逗猫每日合计最多 +1 分；逗猫会花一点精力。休息能恢复精力，离开页面也不会让猫咪变差。</p></article><article class="card camera-card"><span class="activity-icon cream"><span data-icon="camera"></span></span><div><h3 class="section-title">把这声呼噜，收藏起来</h3><p>拍张纪念照，存进你的回忆相册。</p><button class="btn secondary small" id="takePhoto"><span data-icon="camera"></span>拍一张合影</button></div></article><div style="padding:7px 13px"><div class="small-quote">“喜欢你这件事，<br>小猫从来不会藏起来。”</div></div></div></div>
+ <article class="card pet-concert"><div class="pet-concert-head"><div><span class="pet-room-kicker">THREE CATS · ONE BAND</span><h3>三只猫的小小舞台</h3></div><button class="text-btn" id="petMotionToggle" aria-pressed="true"><span data-icon="pause"></span>暂停动画</button></div><div class="pet-concert-screen"><img id="petConcertPoster" data-asset="catVideoPoster" alt="橘猫、白猫和灰猫主唱一起演出" width="960" height="540"><video id="petRoomVideo" muted playsinline loop preload="none" aria-label="三只猫同台演出的十秒短片" hidden></video></div><p>一起演出的小日常 · 展示不结算音符或羁绊</p></article>
+ <div class="screen-head pet-room-head"><div><div class="eyebrow">LITTLE PAWS · LITTLE PAUSES</div><h2>把今天，调成小猫的节奏。</h2><p>晒晒太阳，听听音乐。你的小小听众，一直在这里。</p></div><button class="btn ghost small" id="renamePet"><span data-icon="edit"></span>给猫起名</button></div>
+ <div class="care-grid">
+  <article class="card big-pet">
+   <div class="section-card-top"><div><span class="pet-room-kicker">HAKIMI'S MUSIC ROOM</span><h3 class="section-title"><span data-icon="paw"></span><span class="pet-name">哈基米</span>的音乐小窝</h3></div><span class="label-tag">陪伴第 <span id="togetherDays">1</span> 天</span></div>
+   <div class="pet-pose-picker" role="group" aria-label="选择要陪伴的猫咪">
+    <button type="button" data-pet-pose-select="idle" aria-pressed="true"><img data-asset="cat" alt="" width="48" height="48"><span><span data-pet-picker-name>哈基米</span><small>橘猫 · 羁绊 0</small></span></button>
+    <button type="button" data-pet-pose-select="rest" aria-pressed="false"><img data-asset="catRest" alt="" width="48" height="48"><span><span data-pet-picker-name>棉花糖</span><small>白猫 · 羁绊 0</small></span></button>
+    <button type="button" data-pet-pose-select="music" aria-pressed="false"><img data-asset="catMusic" alt="" width="48" height="48"><span><span data-pet-picker-name>小主唱</span><small>灰猫 · 羁绊 0</small></span></button>
+   </div>
+   <div class="pet-scene pet-room-scene" data-pet-pose="idle">
+    <div class="pet-room-window" aria-hidden="true"><span data-icon="sun"></span></div>
+    <div class="pet-scene-label"><span class="pet-scene-dot"></span><span id="petPoseLabel">橘猫的小窝</span></div>
+    <div class="pet-bubble pet-speech" role="status">你来啦！今天也想贴贴。</div>
+    <button class="cat-touch pet-room-cat" data-care="pet" aria-label="轻轻摸摸猫咪">
+     <img id="petRoomImage" data-asset="cat" alt="戴奶白蝴蝶结的橘色虎斑小猫" width="800" height="800">
+    </button>
+    <div class="pet-caption" id="petPoseCaption">奶白蝴蝶结，和一条偷偷打拍子的尾巴。</div>
+   </div>
+   <div class="pet-room-toolbar"><span>轻点小猫，听一声呼噜</span><span>只照顾当前选中的猫咪</span></div>
+   <div class="pet-actions">
+    <button class="btn" data-care="pet"><span data-icon="hand"></span><span>摸摸<small>温柔陪伴</small></span></button>
+    <button class="btn" data-care="feed"><span data-icon="fish"></span><span>小鱼干<small data-pet-cost>5 ♪ / 次</small></span></button>
+    <button class="btn" data-care="play"><span data-icon="ball"></span><span>逗逗猫<small>精力 −10</small></span></button>
+    <button class="btn" data-care="rest"><span data-icon="moon"></span><span>休息一下<small>精力 +25</small></span></button>
+   </div>
+  </article>
+  <div class="care-side">
+   <article class="card care-data"><span class="pet-room-kicker">OUR LITTLE EVERYDAY</span><h3>今天，也被小猫偏爱。</h3><div class="pet-progress"><div class="progress-label"><span>我们的羁绊分</span><span class="pet-aff-text">0 / 100</span></div><div class="progress-track"><div class="progress-fill pet-aff-bar"></div></div></div><div id="petNeeds"></div><div class="pet-daily-note"><span data-icon="fish"></span><span id="petFeedQuota">今日小鱼干 0 / 5 次</span></div><p class="tiny" id="petCareRules"></p><p class="pet-safe-note"><span data-icon="heart"></span>离开一会儿也没关系，小猫会好好等你。</p></article>
+   <article class="card camera-card pet-photo-card"><img id="petPhotoImage" data-asset="cat" alt="戴奶白蝴蝶结的橘色小猫" width="160" height="160"><div><span class="pet-room-kicker">A MOMENT TO KEEP</span><h3 class="section-title"><span class="pet-name">哈基米</span>的专属纪念</h3><p>为平凡的一天，留一张软乎乎的纪念。</p><button class="btn secondary small" id="takePhoto"><span data-icon="camera"></span>收藏这只小猫</button></div></article>
+
+   <p class="pet-room-quote">“你的每一次停留，<br>都是小猫喜欢的小节。”</p>
+  </div>
+ </div>
 </section>
 <section id="view-story" class="view" hidden aria-label="心动故事">
  <div class="cp-switch"><button class="btn ghost" data-route="chronicle"><span data-icon="album"></span>乐团正传</button><button class="btn cp-current" data-route="story"><span data-icon="heart"></span>心动故事</button><span class="cp-switch-note">正传会改变周目，日常仍可以轻松相遇。</span></div>
@@ -149,18 +182,19 @@
 <!-- Classic scripts intentionally preserve file:// support. Keep dependency order; bootstrap is last. -->
 <script defer src="js/core/utils.js?v=55122f0926d4"></script>
 <script defer src="js/ui/icons.js?v=917f32c79a18"></script>
-<script defer src="js/data/assets.js?v=4d1b25d095be"></script>
-<script defer src="js/data/chapter-seven.js?v=fc28d5f15260"></script>
+<script defer src="js/data/assets.js?v=b66153bedcf8"></script>
+<script defer src="js/data/chapter-seven.js?v=bcc252eae26d"></script>
+<script defer src="js/data/pet.js?v=d0544d42257d"></script>
 <script defer src="js/data/characters.js?v=be3fb8e69e14"></script>
 <script defer src="js/data/chronicle-art.js?v=ad4fe25dfdde"></script>
 <script defer src="js/data/story-cinematics.js?v=a16df03f1bbf"></script>
 <script defer src="js/data/personal-routes.js?v=f51277c625b4"></script>
 <script defer src="js/data/fusion-routes.js?v=49794a2da9b5"></script>
 <script defer src="js/data/fusion-classroom.js?v=e38510f6ec06"></script>
-<script defer src="js/data/fusion-art.js?v=7c456c25aeb7"></script>
+<script defer src="js/data/fusion-art.js?v=0ee7d809f34a"></script>
 <script defer src="js/data/fusion-page-art.js?v=1b7e5ae61d20"></script>
 <script defer src="js/data/fusion-friendship-art.js?v=86fc4462dd22"></script>
-<script defer src="js/data/memories.js?v=315c0386dcb4"></script>
+<script defer src="js/data/memories.js?v=78b183854722"></script>
 <script defer src="js/data/cards.js?v=b469aad77c98"></script>
 <script defer src="js/data/stories.js?v=7b8e1b84ac47"></script>
 <script defer src="js/data/tracks.js?v=e8ee85c95080"></script>
@@ -169,10 +203,11 @@
 <script defer src="js/data/chronicle-training.js?v=40d62315e815"></script>
 <script defer src="js/data/chronicle-weeks.js?v=c9c4b4ca957d"></script>
 <script defer src="js/core/economy.js?v=1648af93278e"></script>
-<script defer src="js/core/bonds.js?v=b53503cc3d50"></script>
+<script defer src="js/core/pet-house.js?v=3450a5fb3b82"></script>
+<script defer src="js/core/bonds.js?v=3af0e9d02297"></script>
 <script defer src="js/core/progression.js?v=abf0ff927c18"></script>
 <script defer src="js/core/fusion-state.js?v=94212e58458c"></script>
-<script defer src="js/core/state.js?v=74cc9f11a3cb"></script>
+<script defer src="js/core/state.js?v=5b0c2af12ecc"></script>
 <script defer src="js/cards/state.js?v=584e8bab322e"></script>
 <script defer src="js/cards/model.js?v=5cd776cba7ba"></script>
 <script defer src="js/cards/preload.js?v=b6f969c3349f"></script>
@@ -208,10 +243,10 @@
 <script defer src="js/audio/score-samples.js?v=2a81b26bc28e"></script>
 <script defer src="js/audio/score-instruments.js?v=0852ddd45fd3"></script>
 <script defer src="js/audio/synth.js?v=cea3e0c34de6"></script>
-<script defer src="js/features/pet.js?v=b8723df27691"></script>
+<script defer src="js/features/pet.js?v=400bba283ebb"></script>
 <script defer src="js/data/gift-keys.js?v=a8649d050684"></script>
 <script defer src="js/features/gift-cards.js?v=2637d2115ed5"></script>
-<script defer src="js/features/settings.js?v=696725564075"></script>
+<script defer src="js/features/settings.js?v=67324f58ab03"></script>
 <script defer src="js/features/stories.js?v=a60f57044e15"></script>
 <script defer src="js/features/album.js?v=8aa5b65b3401"></script>
 <script defer src="js/features/rhythm.js?v=fec9c17c6355"></script>
@@ -243,7 +278,7 @@
 <script defer src="js/ui/paw-gift.js?v=9d4277e2a159"></script>
 <script defer src="js/ui/common.js?v=4336bd0c13e2"></script>
 <script defer src="js/ui/shell.js?v=7ba604dd0ac8"></script>
-<script defer src="js/app/events.js?v=2892a83ee749"></script>
-<script defer src="js/app/bootstrap.js?v=66bcea9e0c37"></script>
+<script defer src="js/app/events.js?v=01ec29b2f989"></script>
+<script defer src="js/app/bootstrap.js?v=e21261a6009e"></script>
 </body>
 </html>

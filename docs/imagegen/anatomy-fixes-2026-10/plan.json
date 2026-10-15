@@ -1,0 +1,68 @@
+{
+  "generatedAt": "2026-10-14",
+  "generator": "Codex built-in imagegen",
+  "prompt": "docs/imagegen/anatomy-fixes-2026-10/prompts.md",
+  "assets": [
+    {
+      "id": "q_event3_read14",
+      "kind": "chapter-seven",
+      "source": "assets/chronicle/chapter-seven/source/q_event3_read14-anatomyfix-202610.webp",
+      "output": "assets/chronicle/chapter-seven/q_event3_read14-anatomyfix-202610.webp",
+      "format": "WEBP",
+      "size": [1024, 1024],
+      "quality": 92,
+      "visibleCast": ["qiqi"],
+      "references": ["assets/chronicle/chapter-seven/q_event3_read14.webp", "assets/qiqi-portrait.webp"],
+      "contextImmediatelyBefore": "柒柒在门口停下，说她不是为了别人，而是为了自己。",
+      "currentStoryBeat": "柒柒推开山丘的门，独自走进雨夜。",
+      "contextImmediatelyAfter": "冰冰在场外看着她的背影，说她变了。",
+      "qa": ["only Qiqi is visible", "no instrument, case or strap", "dark crimson chapter-seven qipao", "correct hands and door interaction"]
+    },
+    {
+      "id": "f2_mine",
+      "kind": "fusion",
+      "source": "assets/fusion/source/f2_mine-anatomyfix-202610.webp",
+      "output": "assets/fusion/scenes/nodes/f2_mine-anatomyfix-202610.jpg",
+      "format": "JPEG",
+      "size": [752, 752],
+      "quality": 94,
+      "visibleCast": ["lala"],
+      "references": ["assets/fusion/scenes/nodes/f2_mine.jpg", "assets/characters/source/lala-reference-2026-10.png"],
+      "contextImmediatelyBefore": "Jerry 看到垃垃夸奖他编写的段落。",
+      "currentStoryBeat": "垃垃在排练室立即用手机回复，她只喜欢 Jerry 老师编的那一段。",
+      "contextImmediatelyAfter": "Jerry 独自在琴房里被这句夸奖触动。",
+      "qa": ["only Lala is visible", "official white-bow identity", "one phone and two correct hands", "intact violin rests separately in its case"]
+    },
+    {
+      "id": "scene_1_live_intro",
+      "kind": "chronicle",
+      "source": "assets/chronicle/scenes/source/scene_1_live_intro-anatomyfix-202610.webp",
+      "output": "assets/chronicle/scenes/scene_1_live_intro-anatomyfix-202610.webp",
+      "format": "WEBP",
+      "size": [440, 440],
+      "quality": 92,
+      "visibleCast": ["shiyuan"],
+      "references": ["assets/chronicle/scenes/scene_1_live_intro.webp", "assets/shiyuan-portrait-v2.webp"],
+      "contextImmediatelyBefore": "商场快闪开始，驻足的人越来越多。",
+      "currentStoryBeat": "十元在休止拍持琴，向玩家声部做出轮到你的提示。",
+      "contextImmediatelyAfter": "玩家深呼吸并开始自己的声部。",
+      "qa": ["official Shiyuan identity", "one intact lowered violin", "bow rests independently on the music stand", "no bow or instrument intersection"]
+    },
+    {
+      "id": "tang",
+      "kind": "album",
+      "source": "assets/album/source/tang-anatomyfix-202610.webp",
+      "output": "assets/album/tang-anatomyfix-202610.webp",
+      "format": "WEBP",
+      "size": [440, 440],
+      "quality": 92,
+      "visibleCast": ["tang"],
+      "explicitGroupException": "four anonymous adult orchestra friends",
+      "references": ["assets/album/tang.webp", "assets/characters/source/tang-2026-10.png"],
+      "contextImmediatelyBefore": "汤少通常站在镜头后，团员准备拍排练合照。",
+      "currentStoryBeat": "相机在三脚架上倒计时，汤少第一次进入合照中央。",
+      "contextImmediatelyAfter": "这张合照证明摄影师也被大家记住。",
+      "qa": ["exactly five people", "Tang matches official identity", "all anonymous faces, hair and outfits are distinct", "intact lowered instruments and correct hands"]
+    }
+  ]
+}

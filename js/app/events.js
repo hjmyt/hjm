@@ -140,7 +140,15 @@ function bindAppEvents() {
             toast('今日份的小幸福已收好 · 音符 +10 · 邀请券 +1', true);
         }
     };
-    $('takePhoto').onclick = () => { unlock('photo'); save(); renderGlobal(); showMemory('photo'); };
+    $('takePhoto').onclick = () => {
+        if (!storageOK) { toast('存档保护中，请先从设置恢复存档。'); return; }
+        const memories = [...state.memories];
+        const id = selectedPetDef().photo;
+        unlock(id, false);
+        if (!save()) { state.memories = memories; return; }
+        renderGlobal();
+        showMemory(id);
+    };
     $('importInput').onchange = async (e) => { await importSave(e.target.files[0]); e.target.value = ''; };
     RhythmScoreStage.bind();
     $('startGame').onclick = startGame;

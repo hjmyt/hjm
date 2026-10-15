@@ -24,7 +24,7 @@ const MEMORIES = [
     "sub": "为普通的一天按下快门",
     "asset": "memory_photo",
     "rule": "在喵咪小屋拍一张照片",
-    "text": "排练室有点乱，窗边的光刚刚好。你和它都不需要摆姿势。"
+    "text": "窗边的光刚刚好。橘猫抬头看你，普通的一天也有了值得珍藏的瞬间。"
   },
   {
     "id": "stage",
@@ -562,3 +562,13 @@ const MEMORIES = [
     rule: '在融合小课堂读到对应分页', text: a.text
   }))
 ];
+
+
+// Each new cat earns its own mementos; legacy IDs remain assigned to orange.
+for (const pet of PET_DEFS.filter(p => p.id !== 'orange')) {
+    MEMORIES.push(
+        { id: pet.purr, title: `${pet.label}的一声呼噜`, sub: `${pet.label} · 第一次摸摸`, asset: pet.asset, rule: `第一次摸摸${pet.label}`, text: '你轻轻伸出手，它把小小的信任放进你的掌心。' },
+        { id: pet.photo, title: `${pet.label}的陪伴纪念`, sub: `${pet.label} · 小屋纪念照`, asset: pet.asset, rule: `在小屋为${pet.label}拍照`, text: '这一刻，只属于你和这只小猫。' },
+        { id: pet.trust, title: `${pet.label}选中了你`, sub: `${pet.label} · 羁绊达到 60`, asset: pet.asset, rule: `${pet.label}羁绊达到 60`, text: '它听见你的脚步，就知道喜欢的人回来了。' }
+    );
+}

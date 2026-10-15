@@ -135,3 +135,6 @@ crop_grid_1774 "$root/assets/fusion/source/fusion-nodes-laodu-02.png" \
 
 # Canonical Baoshi/Feihong portrait refresh, including corrected Jerry scenes.
 python3 "$root/scripts/crop-baoshi-feihong-art.py" --kind fusion
+
+# Reapply the reviewed Lala/phone anatomy fix after the historical node atlas.
+python3 "$root/scripts/build-anatomy-image-fixes-2026-10.py" --kind fusion

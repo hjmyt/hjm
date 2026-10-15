@@ -7,11 +7,14 @@ const { createHash } = require('node:crypto');
 const http = require('node:http');
 const root = path.resolve(__dirname, '..');
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'docs/imagegen/album-art.json')));
-const catalog = vm.runInNewContext(fs.readFileSync(path.join(root, 'js/data/assets.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/chapter-seven.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/chronicle-art.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/personal-routes.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/fusion-routes.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/fusion-art.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/memories.js'), 'utf8') + '\n({ASSETS,MEMORIES})');
+const catalog = vm.runInNewContext(fs.readFileSync(path.join(root, 'js/data/assets.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/chapter-seven.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/chronicle-art.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/personal-routes.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/fusion-routes.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/fusion-art.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/fusion-page-art.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/pet.js'), 'utf8') + '\n' + fs.readFileSync(path.join(root, 'js/data/memories.js'), 'utf8') + '\n({ASSETS,MEMORIES})');
 assert.equal(manifest.length, 64);
 assert.equal(new Set(manifest.map(m => m.id)).size, 64);
 assert.equal(new Set(manifest.map(m => createHash('sha256').update(fs.readFileSync(path.join(root, m.asset))).digest('hex'))).size, 64, 'Every event has a distinct image');
-for (const m of manifest) assert.equal(catalog.ASSETS[catalog.MEMORIES.find(x => x.id === m.id).asset], m.asset);
+// Pet references now supersede these two historical album crops. Keep the
+// original reconstruction manifest and stable collection IDs intact.
+const petReplacements = { photo: 'assets/pet/hakimi-bow-trio-202610.webp', trust: 'assets/pet/hakimi-bow-trio-202610.webp' };
+for (const m of manifest) assert.equal(catalog.ASSETS[catalog.MEMORIES.find(x => x.id === m.id).asset], petReplacements[m.id] || m.asset);
 for (const m of catalog.MEMORIES) assert(fs.statSync(path.join(root, catalog.ASSETS[m.asset])).size > 0);
 const server = http.createServer((req, res) => {
   const file = path.resolve(root, '.' + new URL(req.url, 'http://localhost').pathname);

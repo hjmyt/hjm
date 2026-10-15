@@ -37,3 +37,6 @@ runpy.run_path(str(ROOT / "scripts/crop-tang-art.py"))["rebuild"]("album")
 
 # Apply Yeshiyang's black-coat identity refresh last.
 runpy.run_path(str(ROOT / "scripts/crop-yeshiyang-art.py"))["rebuild"]("album")
+
+# Reapply the reviewed single-image anatomy fixes after every historical atlas.
+runpy.run_path(str(ROOT / "scripts/build-anatomy-image-fixes-2026-10.py"))["rebuild"]("album")
