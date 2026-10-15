@@ -1,0 +1,559 @@
+{
+  "version": 1,
+  "game": {
+    "currentRoom": "tower",
+    "inventory": [
+      "diary_page",
+      "wine_bottle",
+      "soul_fragment",
+      "assembled_letter",
+      "candle",
+      "silver_key",
+      "repaired_score",
+      "registry"
+    ],
+    "usedItems": [
+      "quill",
+      "requiem",
+      "iron_key",
+      "tower_key"
+    ],
+    "selectedItem": null,
+    "flags": {
+      "diary_count": 3,
+      "nameclue_qiqi": true,
+      "nameclue_jerry": true,
+      "read_portrait_name": true,
+      "nameclue_bingbing": true,
+      "nameclue_siyang": true,
+      "nameclue_lala": true,
+      "talk_lala_1_0": true,
+      "talk_lala_1_1": true,
+      "talk_lala_1_2": true,
+      "talk_lala_1_3": true,
+      "answered_lala": true,
+      "loop2_pending": false,
+      "loop3_pending": false,
+      "talk_lala_3_0": true,
+      "talk_lala_3_1": true
+    },
+    "loop": 3,
+    "loopTriggered": {
+      "2": true,
+      "3": true
+    },
+    "doors": {
+      "study": true,
+      "music": false,
+      "bedroom": false,
+      "cellar": true,
+      "tower": true
+    },
+    "puzzleSolved": {
+      "piano": true,
+      "bookshelf": true,
+      "dresser": false,
+      "wine": false,
+      "organ": false,
+      "mirror": false,
+      "harpsichord": false,
+      "flute": false
+    },
+    "npcQuests": {
+      "siyang": {
+        "started": false,
+        "done": false
+      },
+      "bingbing": {
+        "started": false,
+        "done": false
+      },
+      "dijie": {
+        "started": false,
+        "done": false
+      },
+      "qiqi": {
+        "started": false,
+        "done": false
+      },
+      "tim": {
+        "started": false,
+        "done": false
+      },
+      "jerry": {
+        "started": false,
+        "done": true
+      },
+      "shiyuan": {
+        "started": false,
+        "done": false
+      },
+      "lala": {
+        "started": true,
+        "done": true
+      },
+      "adrian": {
+        "started": false,
+        "done": false,
+        "stage": 0
+      }
+    },
+    "moveCount": 20,
+    "candleLit": true,
+    "adrianChasing": false,
+    "roomVisitCount": {
+      "study_L1": 2,
+      "music_L1": 2,
+      "bedroom_L1": 1,
+      "hall_L1": 2,
+      "dining_L1": 2,
+      "cellar_L1": 1,
+      "hall_L2": 2,
+      "study_L2": 1,
+      "dining_L2": 1,
+      "hall_L3": 2,
+      "study_L3": 1,
+      "dining_L3": 1,
+      "cellar_L3": 1,
+      "tower_L3": 1
+    },
+    "countdown": {
+      "active": false,
+      "endTime": 0,
+      "timerId": null,
+      "offeredKeepsake": false,
+      "remaining": 0
+    },
+    "names": {
+      "siyang": true,
+      "bingbing": false,
+      "dijie": false,
+      "qiqi": false,
+      "jerry": false,
+      "lala": true
+    },
+    "nextMorning": false,
+    "soulProtected": false
+  },
+  "phase": "playing",
+  "notes": [
+    {
+      "text": "大厅里，壁炉的余烬还在冒烟。盔甲静静地站在角落。远处传来风声……奇怪的是，同伴们的名字，你一个也叫不出口了——像是被这座古堡悄悄吞掉了。",
+      "room": "大厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "你取走了一支白蜡烛。火光在黑暗中显得格外温暖，但也让阴影变得更加浓重。",
+      "room": "大厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "你掀开挂毯一角，壁炉的灰烬中露出半张烧焦的信纸。",
+      "room": "大厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "钢琴发出一声低沉的共鸣。书房的方向传来门锁开启的声音！",
+      "room": "大厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "书房里弥漫着旧书和松香的味道。书架上的书脊在烛光下泛着暗光。",
+      "room": "书房",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "书架后方的暗格咔哒一声弹开。里面躺着一把银钥匙、一张残缺的乐谱、一支羽毛笔——还有一页被摩挲得发软的日记（第1页，共三页）。",
+      "room": "书房",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "你转动地球仪，底座弹开一个小暗格。里面有一把刻着玫瑰花纹的钥匙，还有一支音叉。暗格内侧还贴着一张褪色的剧团海报残片：\"著名占卜师薇薇安女士，万圣节特邀演出——让水晶球替你说话。\"",
+      "room": "书房",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "银钥匙转动，音乐室的门缓缓打开。",
+      "room": "书房",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "音乐室里陈列着几百年前的乐器。大键琴的琴弦在月光下泛光。",
+      "room": "音乐室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "大键琴发出一声刺耳的\"狼嚎\"，然后所有音都校准了。",
+      "room": "音乐室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "玫瑰钥匙打开了卧室的门。里面出奇地安静。",
+      "room": "音乐室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "卧室的四柱床帐幔低垂。梳妆台上积了一层薄灰。",
+      "room": "主卧",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "你掀开床幔，在床垫缝隙中发现了一张泛黄的信纸。",
+      "room": "主卧",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "珠宝盒咔哒一声打开。里面有一枚怀表、一枚戒指、和一张信件残片。",
+      "room": "主卧",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "音乐室的大键琴……琴弦在微微颤动。没有人碰它。",
+      "room": "音乐室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "书房很安静。但书架上……似乎有本书的位置变了。",
+      "room": "书房",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "大厅里，壁炉的余烬还在冒烟。盔甲静静地站在角落。远处传来风声……",
+      "room": "大厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "餐厅的长桌上摆着未动的晚餐。肖像画中的人脸被划掉了。空气中有股霉味。",
+      "room": "餐厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "你检查长餐桌的抽屉，里面有一把铁钥匙，还有一张折叠的纸——是古堡登记簿的残页。",
+      "room": "餐厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "你翻开肖像画，画框背面的暗格里藏着半张烧焦的信纸。暗格内侧刻着两行字：\"A & F —— 吾爱，1823年冬。\"下面还有一行小一些的：\"Isabella —— 吾之小妹，愿月光宽恕你我。\"",
+      "room": "餐厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "你敲碎了一小块镜子。碎片中……映出的不是你的脸。",
+      "room": "餐厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "已选中「古堡登记簿」。再次点击使用/查看，或点选场景中的人物与物品试试。",
+      "room": "餐厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "你又回到了大厅。壁炉的火光摇曳，但比刚才暗了一些。",
+      "room": "大厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "\"塞巴斯蒂安……\"执事怔住了，制服上的铜扣忽然泛起旧光，\"对，塞巴斯蒂安。我侍奉了艾德里安家族二十七年。我想起来了——关于这座古堡，关于那本登记簿上被涂掉的名字。\"",
+      "room": "大厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "餐厅里，晚餐还是原样。但肖像画……好像比刚才更旧了。",
+      "room": "餐厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "铁钥匙打开了通往地下室的暗门。一股冷风涌上来。",
+      "room": "餐厅",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "蜡烛照亮了地下室的一角。酒架上排列着标有年份的酒瓶。",
+      "room": "地下室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "你记住了登记簿上的名字：\"管家塞巴斯蒂安，侍奉艾德里安家族二十七年。\"——大厅里那位戴领结的执事，听到这个名字会有反应吗？",
+      "room": "地下室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "蜡烛照亮了酒架。最老的那瓶酒——1791年。标签上写着：\"天才与美酒都不能久存。\"瓶塞内侧还烙着一行小字：\"满月之夜，由塞勒涅女士执杯占卜。\"",
+      "room": "地下室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "\"塞勒涅……月亮的名字。\"她朝你眨眨眼，水晶球里的血雾散开了一角，\"满月之夜，他们确实这样喊我。作为交换，我告诉你塔楼的钥匙在哪里——不过得先答对我的题。\"",
+      "room": "地下室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "垃垃拿着水晶球，球里是一片血雾：\"我算了一卦……这个古堡里有很强的执念。不是怨念，是爱，被误解的爱。但已经被污染了。\"",
+      "room": "地下室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "\"菲利克斯的灵魂被封印在餐厅的音乐盒里。只有光才能打开那个盒子。\"",
+      "room": "地下室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "\"但打开盒子之后……你要做好准备。灵魂不会原谅一个没有真相的人。\"",
+      "room": "地下室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "\"想上塔楼？先回答我一个问题。小提琴的秘密，你知道多少？\"",
+      "room": "地下室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "瓶塞上的名字——\"塞勒涅女士\"。地下室里那位紫袍女巫，听到这个名字会想起满月之夜的。",
+      "room": "地下室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "垃垃露出神秘的微笑：\"没错，三个纯五度。G→D是一个，D→A是一个，A→E是一个。水晶球里的琴亮了……这把钥匙给你。\"",
+      "room": "地下室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "塔楼钥匙打开了最后一扇门。月光像瀑布一样倾泻下来。",
+      "room": "地下室",
+      "loop": 1,
+      "horror": false
+    },
+    {
+      "text": "你回到了大厅，但壁炉的火已经灭了。挂毯上有一大片暗色的污渍，不像是水渍。盔甲……它的姿势变了。它刚才不是面对着门的。",
+      "room": "大厅",
+      "loop": 2,
+      "horror": false
+    },
+    {
+      "text": "你取走了一支白蜡烛。火光在黑暗中显得格外温暖，但也让阴影变得更加浓重。",
+      "room": "大厅",
+      "loop": 2,
+      "horror": false
+    },
+    {
+      "text": "钢琴发出一声低沉的共鸣。书房的方向传来门锁开启的声音！",
+      "room": "大厅",
+      "loop": 2,
+      "horror": false
+    },
+    {
+      "text": "书房里，笛杰不见了。书架上多了一本书，封面上没有名字，只有一个记号：A&F。地上有脚印，从书架延伸到门口，然后消失了。",
+      "room": "书房",
+      "loop": 2,
+      "horror": false
+    },
+    {
+      "text": "书架后方的暗格咔哒一声弹开。里面躺着一把银钥匙、一张残缺的乐谱、一支羽毛笔——还有一页被摩挲得发软的日记（第2页，共三页）。",
+      "room": "书房",
+      "loop": 2,
+      "horror": false
+    },
+    {
+      "text": "大厅里，盔甲的影子投在墙上，像是一个举起手臂的人。",
+      "room": "大厅",
+      "loop": 2,
+      "horror": false
+    },
+    {
+      "text": "餐厅里，长桌上的晚餐没有被动过——但它们已经腐烂了，像是放了好几个星期。肖像画中流血了，暗红色的液体顺着画框滴到地板上。",
+      "room": "餐厅",
+      "loop": 2,
+      "horror": false
+    },
+    {
+      "text": "你用碎镜片反射烛光，照进了音乐盒的缝隙。盒盖弹开，一道柔和的蓝光飘了出来——那是菲利克斯的灵魂残音，被封印了两百年。它绕着你转了三圈，最后安静地落在你掌心，像一只终于找到归途的鸟。",
+      "room": "餐厅",
+      "loop": 2,
+      "horror": false
+    },
+    {
+      "text": "已选中「焦信A」。再次点击使用/查看，或点选场景中的人物与物品试试。",
+      "room": "餐厅",
+      "loop": 2,
+      "horror": false
+    },
+    {
+      "text": "四张信件残片在你手中微微发热……它们可以拼合在一起！",
+      "room": "餐厅",
+      "loop": 2,
+      "horror": false
+    },
+    {
+      "text": "艾德里安的身影从黑暗中逼近——他掌心的血光几乎触到你的咽喉。突然，你怀里的灵魂残音亮了。他的手指停在半空，剧烈地颤抖起来。",
+      "room": "餐厅",
+      "loop": 2,
+      "horror": true
+    },
+    {
+      "text": "你擦干眼泪，将完整的信折好，贴近心口收好。",
+      "room": "餐厅",
+      "loop": 2,
+      "horror": false
+    },
+    {
+      "text": "灵魂残音在你掌心轻轻发烫。你忽然明白了——只要它还在你身边，艾德里安就不会真正伤害你。他不是不敢，是不忍：他不会伤害菲利克斯看着的人。",
+      "room": "餐厅",
+      "loop": 2,
+      "horror": false
+    },
+    {
+      "text": "\"是你……你一直在看着我们，对吗？\"艾德里安踉跄后退，血红色的眼睛里第一次有了别的颜色。他退进黑暗里，声音飘过来：\"我不会伤害他看着的人。走吧——趁我还记得。\"",
+      "room": "餐厅",
+      "loop": 2,
+      "horror": true
+    },
+    {
+      "text": "大厅里，盔甲倒在地上，手里攥着半张乐谱。壁炉的火重新燃起来了，但火焰是蓝色的。你知道，这是最后一次了。",
+      "room": "大厅",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "你取走了一支白蜡烛。火光在黑暗中显得格外温暖，但也让阴影变得更加浓重。",
+      "room": "大厅",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "钢琴发出一声低沉的共鸣。书房的方向传来门锁开启的声音！",
+      "room": "大厅",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "书房里，笛杰的竹笛还挂在墙上，但笛身裂开了。书架上所有的书都打开了，每一页都写着同一个名字。",
+      "room": "书房",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "书架后方的暗格咔哒一声弹开。里面躺着一把银钥匙、一张残缺的乐谱、一支羽毛笔——还有一页被摩挲得发软的日记（第3页，共三页）。",
+      "room": "书房",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "已选中「安魂曲谱」。再次点击使用/查看，或点选场景中的人物与物品试试。",
+      "room": "书房",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "大厅里，盔甲倒在地上，手里攥着半张乐谱。壁炉的火重新燃起来了，但火焰是蓝色的。你知道，这是最后一次了。",
+      "room": "大厅",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "餐厅里，肖像画恢复了原样——被划掉的脸重新出现了。那是菲利克斯。他在笑。宝石和飞鸿不见了，只在桌上留下了一张字条。",
+      "room": "餐厅",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "你检查长餐桌的抽屉，里面有一把铁钥匙，还有一张折叠的纸——是古堡登记簿的残页。",
+      "room": "餐厅",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "铁钥匙打开了通往地下室的暗门。一股冷风涌上来。",
+      "room": "餐厅",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "地下室的酒架倒塌了，露出后面的暗门。血手印汇聚成一条线，指向塔楼的方向。",
+      "room": "地下室",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "酒架上积满了灰尘。1791年的那瓶已经被你取走了。瓶塞内侧烙着一行小字：\"满月之夜，由塞勒涅女士执杯占卜。\"",
+      "room": "地下室",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "垃垃的水晶球变成了一片空白：\"执念快要走到尽头了。这是最后一次循环，也是最后一次答题。\"",
+      "room": "地下室",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "\"塔楼的钥匙，最后一次给你。答完这题，去把他们的故事讲完。\"",
+      "room": "地下室",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "垃垃笑了：\"没错，八个。八度——循环的尽头，也是新的开始。去吧，替他们把曲子弹完。\"",
+      "room": "地下室",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "塔楼钥匙打开了最后一扇门。月光像瀑布一样倾泻下来。",
+      "room": "地下室",
+      "loop": 3,
+      "horror": false
+    },
+    {
+      "text": "塔楼顶部，艾德里安站在月光中。他不再可怕了。他只是一个等了两百年的人。",
+      "room": "月光塔楼",
+      "loop": 3,
+      "horror": false
+    }
+  ],
+  "hints": {},
+  "elapsed": 17350.59999999404,
+  "mode": "scene",
+  "focusedNpc": null,
+  "dialogue": "塔楼顶部，艾德里安站在月光中。他不再可怕了。他只是一个等了两百年的人。",
+  "transition": {
+    "title": "🌅 真相",
+    "text": "四张信纸在你手中拼合。字迹清晰，墨迹犹新，像那个人刚刚搁下笔。你读完了它。读到一个灵魂在雪地里走了一夜，只为等一扇不会再开的门。然后你听见了——风琴的声音。不是幻觉。有人在弹。这一次，不是追捕。是等待。是有人把两百年的长夜折成一封信，等你替他把回信送回去。"
+  },
+  "chase": null
+}

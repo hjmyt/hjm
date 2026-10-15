@@ -1,0 +1,144 @@
+/* Characters, objects and exits share one authored room image. */
+.castle-immersive #scene-area{bottom:var(--castle-scene-bottom,0px);}
+/* Reserve the complete dialogue footprint before typing starts. Scene sizing
+   observes this panel, so wrapping text and its footer must never resize it. */
+.castle-immersive .dialogue-panel{
+  height:190px;min-height:0;max-height:none;display:grid;
+  grid-template-rows:auto minmax(0,1fr) 26px;
+}
+.castle-immersive #dialogue-box{min-height:0;max-height:none;overflow-y:auto;}
+.castle-immersive .dialogue-next{
+  position:static;grid-row:3;align-self:end;justify-self:end;
+  margin:0;padding:0 5px;line-height:20px;
+}
+@media(orientation:portrait) and (max-width:720px){
+  .castle-immersive .dialogue-panel{height:130px;grid-template-rows:auto minmax(0,1fr) 22px;}
+}
+@media(orientation:landscape) and (max-height:600px){
+  .castle-immersive .dialogue-panel{height:96px;grid-template-rows:auto minmax(0,1fr) 18px;}
+  .castle-immersive .dialogue-next{line-height:16px;}
+}
+@media(orientation:landscape) and (max-height:600px) and (min-width:701px){
+  .castle-immersive .scene-door[data-side]{transform:translate(-50%,-50%);}
+}
+@media(orientation:landscape) and (max-height:360px){
+  .castle-immersive .dialogue-panel{height:84px;}
+}
+.castle-immersive .npc{top:var(--cast-y,60%);}
+.castle-immersive .people-panel{left:var(--castle-art-center-x,50%);}
+/* Mobile gameplay gives the scene the full viewport; tools move to Settings. */
+@media(max-width:1000px){
+  .castle-immersive.is-playing .castle-header{display:none;}
+  .castle-immersive.is-playing #game-container{height:100dvh;}
+  .castle-immersive.is-playing #scene-area{top:0;}
+  .castle-immersive.is-playing .scene-toolbar{top:max(12px,env(safe-area-inset-top));left:14px;right:74px;}
+  .castle-immersive.is-playing .scene-toolbar>div:first-child{padding:5px 10px;}
+  .castle-immersive.is-playing .scene-toolbar .eyebrow{display:none;}
+  .castle-immersive.is-playing .scene-toolbar h1{font-size:16px;letter-spacing:3px;margin:0;}
+  .castle-immersive.is-playing #save-status{top:0;}
+  .castle-immersive.is-playing #countdown-ui{top:max(12px,env(safe-area-inset-top));}
+  .castle-immersive.is-playing #achievement{top:48px;}
+  #settings-game-tools:not(:empty){padding:20px 0 16px;margin-bottom:18px;border-bottom:1px solid #b49a5b44;}
+  #settings-game-tools .header-status{margin:0 0 14px;justify-content:space-between;gap:10px;}
+  #settings-game-tools .loop-badge{font-size:11px;padding:7px 9px;}
+  #settings-game-tools #elapsed{font-size:13px;}
+  #settings-game-tools nav{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  #settings-game-tools nav button,#settings-game-tools nav a{
+    display:flex;align-items:center;justify-content:center;min-height:42px;
+    padding:10px 8px;background:#182332;border:1px solid #b49a5b55;font-size:11px;
+  }
+  .castle-immersive #settings-game-tools #fullscreen-btn{display:flex;}
+}
+/* A landscape phone can use the full height for the room. Keep the reader
+   beside it rather than subtracting its height from the illustration. */
+@media(max-width:1000px) and (orientation:landscape) and (max-height:600px){
+  .castle-immersive.is-playing #scene-area{
+    right:calc(68px + clamp(180px,28vw,260px));bottom:0;
+  }
+  .castle-immersive .dialogue-panel{
+    top:16px;bottom:auto;left:auto;right:62px;transform:none;
+    width:clamp(180px,28vw,260px);height:calc(100dvh - 32px);
+    padding:12px;grid-template-rows:auto minmax(0,1fr) 24px;
+  }
+  .castle-immersive .dialogue-heading{flex-wrap:wrap;gap:4px;}
+  .castle-immersive .dialogue-heading #notes-btn{margin:0 0 3px auto;}
+  .castle-immersive .dialogue-next{line-height:20px;}
+  .castle-immersive.is-playing .scene-toolbar{right:calc(74px + clamp(180px,28vw,260px));}
+  .castle-immersive.is-playing #countdown-ui{left:14px;top:52px;transform:none;}
+}
+.castle-immersive .npc.offscreen{left:50%;top:42%;}
+@media(max-width:1000px){
+  .castle-immersive.is-playing #scene-area{right:0;bottom:0;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none;}
+  .castle-immersive #room-art{
+    position:absolute;left:calc(50% + var(--castle-pan-x,0px));top:calc(var(--castle-art-local-center-y,50%) + var(--castle-pan-y,0px));transform:translate(-50%,-50%);
+    width:var(--castle-art-width,100%);height:var(--castle-art-height,100%);
+    object-fit:contain;-webkit-user-drag:none;
+  }
+  .castle-immersive #scene-hotspots,.castle-immersive #scene-doors{left:calc(50% + var(--castle-pan-x,0px));top:calc(var(--castle-art-local-center-y,50%) + var(--castle-pan-y,0px));}
+  .castle-immersive #scene-area .people-panel{position:absolute;left:calc(50% + var(--castle-pan-x,0px));top:calc(var(--castle-art-local-center-y,50%) + var(--castle-pan-y,0px));}
+  .castle-immersive #scene-area .npc{touch-action:none;}
+  .castle-immersive .dialogue-panel{
+    left:13px;right:13px;top:auto;bottom:87px;transform:none;
+    width:auto;height:130px;background:linear-gradient(180deg,#07121ab8,#07121aeb);
+    border-color:#c6aa6866;backdrop-filter:blur(6px);box-shadow:0 8px 24px #0005;
+  }
+  .castle-immersive #dialogue-box{text-shadow:0 1px 5px #000;}
+  .castle-immersive[data-castle-overview=true] .dialogue-panel{visibility:hidden;pointer-events:none;}
+}
+#scene-pan-controls{position:absolute;top:max(12px,env(safe-area-inset-top));right:12px;z-index:20;display:flex;gap:3px;background:#071019d9;border:1px solid #b49a5b77;}
+#scene-pan-controls button{min-width:36px;min-height:36px;padding:4px 8px;color:#ead9b7;font-size:12px;}
+#scene-pan-controls button:disabled{opacity:.3;}
+#scene-pan-left,#scene-pan-right{font-size:24px!important;}
+#scene-pan-tip{position:absolute;z-index:20;left:14px;top:54px;padding:5px 10px;font-size:9px;white-space:nowrap;color:#e6ce9d;background:#071019b3;border:1px solid #b49a5b44;pointer-events:none;}
+@media(max-width:1000px) and (orientation:landscape) and (max-height:600px){
+  .castle-immersive.is-playing #scene-area{right:58px;}
+  .castle-immersive .dialogue-panel{left:auto;right:68px;bottom:12px;width:clamp(280px,48vw,460px);height:114px;}
+  .castle-immersive.is-playing .scene-toolbar{right:280px;}
+  #scene-pan-controls{right:66px;}
+}
+@media(max-width:1000px) and (orientation:landscape) and (max-height:360px){
+  .castle-immersive .dialogue-panel{height:98px;}
+}
+.castle-immersive.is-playing .orientation-tip{display:none;}
+.castle-immersive[data-castle-drawer=explore] .explore-panel{display:block;}
+.castle-immersive .explore-panel .object-tray{
+  position:static;display:grid;grid-template-columns:1fr 1fr;inset:auto;width:auto;
+  gap:8px;margin-top:16px;
+}
+.castle-immersive .explore-panel .object-tray button{
+  min-height:44px;padding:9px;font-size:11px;letter-spacing:0;
+}
+.castle-immersive #explore-people{display:grid;gap:7px;}
+.castle-immersive #explore-people button{
+  display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 10px;
+  border:1px solid #cbb07855;background:#182332;color:#ead9b7;text-align:left;font-size:12px;
+}
+#explore-people button>span{color:#e6c78c;font-size:19px;}
+#explore-people button>small{margin-left:auto;white-space:nowrap;color:#aab7c8;font-size:10px;}
+.castle-immersive #scene-hotspots .hotspot{padding:7px;min-width:36px;min-height:36px;}
+.castle-immersive .hotspot span{font-size:10px;padding:4px 7px;}
+.castle-immersive .scene-door{min-height:40px;padding:6px 9px;}
+.castle-immersive .scene-door svg{width:18px;height:27px;}
+.castle-immersive .scene-door strong{font-size:10px;}
+.castle-immersive .scene-door small{font-size:8px;margin-top:3px;}
+@media(max-width:1000px){
+  .castle-immersive #scene-hotspots .hotspot{min-width:40px;min-height:40px;gap:0;}
+  .castle-immersive #scene-hotspots .hotspot span{display:none;}
+  .castle-immersive #scene-hotspots .hotspot:focus-visible span{display:block;position:absolute;top:32px;left:0;white-space:nowrap;}
+  .castle-immersive .npc{min-height:36px;padding:5px 7px;gap:0;max-width:150px;}
+  .castle-immersive .npc-avatar{display:none;}
+  .castle-immersive .npc-name{font-size:10px;white-space:normal;line-height:1.4;}
+  .castle-immersive .scene-door{padding:5px 7px;min-height:36px;gap:5px;}
+  .castle-immersive .scene-door svg{width:15px;height:23px;}
+}
+@media(orientation:landscape) and (max-height:600px){
+  .castle-immersive .npc-name{font-size:9px;}
+  .castle-immersive .npc{max-width:122px;}
+  .castle-immersive .scene-door strong{font-size:9px;letter-spacing:0;}
+  .castle-immersive .scene-door small{display:none;}
+  .castle-immersive .scene-door{min-height:32px;}
+}
+@media(max-width:700px){
+  .castle-immersive .scene-door{min-width:32px;min-height:32px;padding:5px;justify-content:center;}
+  .castle-immersive .scene-door>span{display:none;}
+}

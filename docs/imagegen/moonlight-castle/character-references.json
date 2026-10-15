@@ -1,0 +1,49 @@
+{
+  "bingbing": {
+    "name": "冰冰",
+    "full": "assets/characters/bingbing-full-2026-10.webp",
+    "avatar": "assets/characters/bingbing-avatar-2026-10.webp"
+  },
+  "lala": {
+    "name": "垃垃",
+    "full": "assets/cardLala.webp",
+    "avatar": "assets/cardLala.webp"
+  },
+  "shiyuan": {
+    "name": "十元",
+    "full": "assets/shiyuan-portrait-v2.webp"
+  },
+  "tim": {
+    "name": "TIM",
+    "full": "assets/characters/tim-full-2026-10.webp",
+    "avatar": "assets/characters/tim-avatar-2026-10.webp"
+  },
+  "yeshiyang": {
+    "name": "叶思阳",
+    "full": "assets/characters/yeshiyang-black-full-2026-10.webp",
+    "avatar": "assets/characters/yeshiyang-black-avatar-2026-10.webp"
+  },
+  "feihong": {
+    "name": "飞鸿",
+    "full": "assets/characters/feihong-full-2026-10.webp",
+    "avatar": "assets/characters/feihong-avatar-2026-10.webp"
+  },
+  "dijie": {
+    "name": "笛杰",
+    "full": "assets/dijie-portrait-v2.webp"
+  },
+  "qiqi": {
+    "name": "柒柒",
+    "full": "assets/qiqi-portrait.webp"
+  },
+  "baoshi": {
+    "name": "宝石",
+    "full": "assets/characters/baoshi-full-2026-10.webp",
+    "avatar": "assets/characters/baoshi-avatar-2026-10.webp"
+  },
+  "jerry": {
+    "name": "Jerry",
+    "full": "assets/jerry-portrait.webp",
+    "avatar": "assets/jerry-avatar.webp"
+  }
+}

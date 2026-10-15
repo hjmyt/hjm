@@ -1,0 +1,259 @@
+[
+  {
+    "id": "exterior",
+    "source": "assets/moonlight-castle/source/environments-v1.png",
+    "cell": 1,
+    "rect": {
+      "left": 2,
+      "top": 2,
+      "width": 508,
+      "height": 380
+    },
+    "visibleCast": [],
+    "output": "assets/moonlight-castle/exterior.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "hall",
+    "source": "assets/moonlight-castle/source/environments-v1.png",
+    "cell": 2,
+    "rect": {
+      "left": 514,
+      "top": 2,
+      "width": 508,
+      "height": 380
+    },
+    "visibleCast": [],
+    "output": "assets/moonlight-castle/hall.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "dining",
+    "source": "assets/moonlight-castle/source/environments-v1.png",
+    "cell": 3,
+    "rect": {
+      "left": 2,
+      "top": 386,
+      "width": 508,
+      "height": 380
+    },
+    "visibleCast": [],
+    "output": "assets/moonlight-castle/dining.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "study",
+    "source": "assets/moonlight-castle/source/environments-v1.png",
+    "cell": 4,
+    "rect": {
+      "left": 514,
+      "top": 386,
+      "width": 508,
+      "height": 380
+    },
+    "visibleCast": [],
+    "output": "assets/moonlight-castle/study.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "music",
+    "source": "assets/moonlight-castle/source/environments-v1.png",
+    "cell": 5,
+    "rect": {
+      "left": 2,
+      "top": 770,
+      "width": 508,
+      "height": 380
+    },
+    "visibleCast": [],
+    "output": "assets/moonlight-castle/music.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "bedroom",
+    "source": "assets/moonlight-castle/source/environments-v1.png",
+    "cell": 6,
+    "rect": {
+      "left": 514,
+      "top": 770,
+      "width": 508,
+      "height": 380
+    },
+    "visibleCast": [],
+    "output": "assets/moonlight-castle/bedroom.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "cellar",
+    "source": "assets/moonlight-castle/source/environments-v1.png",
+    "cell": 7,
+    "rect": {
+      "left": 2,
+      "top": 1154,
+      "width": 508,
+      "height": 380
+    },
+    "visibleCast": [],
+    "output": "assets/moonlight-castle/cellar.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "tower",
+    "source": "assets/moonlight-castle/source/environments-v1.png",
+    "cell": 8,
+    "rect": {
+      "left": 514,
+      "top": 1154,
+      "width": 508,
+      "height": 380
+    },
+    "visibleCast": [],
+    "output": "assets/moonlight-castle/tower.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "hall-conversation",
+    "source": "assets/moonlight-castle/source/cast-v1.png",
+    "cell": 1,
+    "rect": {
+      "left": 2,
+      "top": 2,
+      "width": 508,
+      "height": 359
+    },
+    "visibleCast": [
+      "yeshiyang",
+      "tim"
+    ],
+    "output": "assets/moonlight-castle/hall-conversation.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "dining-isabella",
+    "source": "assets/moonlight-castle/source/cast-v1.png",
+    "cell": 2,
+    "rect": {
+      "left": 514,
+      "top": 2,
+      "width": 508,
+      "height": 359
+    },
+    "visibleCast": [
+      "bingbing"
+    ],
+    "output": "assets/moonlight-castle/dining-isabella.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "dining-witnesses",
+    "source": "assets/moonlight-castle/source/cast-v1.png",
+    "cell": 3,
+    "rect": {
+      "left": 2,
+      "top": 367,
+      "width": 508,
+      "height": 352
+    },
+    "visibleCast": [
+      "baoshi",
+      "feihong"
+    ],
+    "output": "assets/moonlight-castle/dining-witnesses.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "study-conversation",
+    "source": "assets/moonlight-castle/source/cast-v1.png",
+    "cell": 4,
+    "rect": {
+      "left": 514,
+      "top": 367,
+      "width": 508,
+      "height": 352
+    },
+    "visibleCast": [
+      "dijie",
+      "qiqi"
+    ],
+    "output": "assets/moonlight-castle/study-conversation.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "music-cecil",
+    "source": "assets/moonlight-castle/source/cast-v1.png",
+    "cell": 5,
+    "rect": {
+      "left": 2,
+      "top": 726,
+      "width": 508,
+      "height": 359
+    },
+    "visibleCast": [
+      "jerry"
+    ],
+    "output": "assets/moonlight-castle/music-cecil.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "bedroom-conversation",
+    "source": "assets/moonlight-castle/source/cast-v1.png",
+    "cell": 6,
+    "rect": {
+      "left": 514,
+      "top": 726,
+      "width": 508,
+      "height": 359
+    },
+    "visibleCast": [
+      "shiyuan"
+    ],
+    "output": "assets/moonlight-castle/bedroom-conversation.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "cellar-selene",
+    "source": "assets/moonlight-castle/source/cast-v1.png",
+    "cell": 7,
+    "rect": {
+      "left": 2,
+      "top": 1091,
+      "width": 508,
+      "height": 443
+    },
+    "visibleCast": [
+      "lala"
+    ],
+    "output": "assets/moonlight-castle/cellar-selene.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "id": "dawn-requiem",
+    "source": "assets/moonlight-castle/source/cast-v1.png",
+    "cell": 8,
+    "rect": {
+      "left": 514,
+      "top": 1091,
+      "width": 508,
+      "height": 443
+    },
+    "visibleCast": [],
+    "output": "assets/moonlight-castle/dawn-requiem.webp",
+    "width": 960,
+    "height": 720
+  }
+]

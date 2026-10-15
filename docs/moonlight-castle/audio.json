@@ -1,0 +1,67 @@
+[
+  {
+    "id": "wrong-end",
+    "suppliedFile": "Wrong end.mp3",
+    "asset": "assets/audio/moonlight-castle/wrong-end.mp3",
+    "bytes": 5084705,
+    "source": "用户提供；本任务按原文件接入，未混用其他配乐",
+    "durationSeconds": 229.214,
+    "stream": {
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 2
+    }
+  },
+  {
+    "id": "sunrise",
+    "suppliedFile": "He 结局日出 BGM(1).mp3",
+    "asset": "assets/audio/moonlight-castle/sunrise.mp3",
+    "bytes": 3603304,
+    "source": "用户提供；本任务按原文件接入，未混用其他配乐",
+    "durationSeconds": 157.974,
+    "stream": {
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 2
+    }
+  },
+  {
+    "id": "loop-one",
+    "suppliedFile": "1 周目 BGM.mp3",
+    "asset": "assets/audio/moonlight-castle/loop-one.mp3",
+    "bytes": 3029465,
+    "source": "用户提供；本任务按原文件接入，未混用其他配乐",
+    "durationSeconds": 127.413,
+    "stream": {
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 2
+    }
+  },
+  {
+    "id": "loop-two",
+    "suppliedFile": "二周目 Bgm(1).mp3",
+    "asset": "assets/audio/moonlight-castle/loop-two.mp3",
+    "bytes": 2789272,
+    "source": "用户提供；本任务按原文件接入，未混用其他配乐",
+    "durationSeconds": 114.334,
+    "stream": {
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 2
+    }
+  },
+  {
+    "id": "loop-three",
+    "suppliedFile": "3三周目 BGM(宝石飞鸿Be曲).mp3",
+    "asset": "assets/audio/moonlight-castle/loop-three.mp3",
+    "bytes": 1831001,
+    "source": "用户提供；本任务按原文件接入，未混用其他配乐",
+    "durationSeconds": 78.814,
+    "stream": {
+      "codec_name": "mp3",
+      "sample_rate": "48000",
+      "channels": 2
+    }
+  }
+]

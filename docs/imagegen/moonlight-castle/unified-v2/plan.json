@@ -1,0 +1,147 @@
+[
+  {
+    "room": "hall",
+    "visibleCast": [
+      "yeshiyang",
+      "tim"
+    ],
+    "id": "hall-unified-v2",
+    "source": "assets/moonlight-castle/source/unified-v2.png",
+    "cell": 1,
+    "rect": {
+      "left": 2,
+      "top": 2,
+      "width": 508,
+      "height": 380
+    },
+    "output": "assets/moonlight-castle/hall-unified-v2.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "room": "dining",
+    "visibleCast": [
+      "bingbing",
+      "baoshi",
+      "feihong"
+    ],
+    "groupException": "同一餐厅内三位实际在场人物与可调查物品同时可见，按用户要求的统一探索场景显式设置群像例外",
+    "id": "dining-unified-v2",
+    "source": "assets/moonlight-castle/source/unified-v2.png",
+    "cell": 2,
+    "rect": {
+      "left": 514,
+      "top": 2,
+      "width": 508,
+      "height": 380
+    },
+    "output": "assets/moonlight-castle/dining-unified-v2.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "room": "study",
+    "visibleCast": [
+      "dijie",
+      "qiqi"
+    ],
+    "id": "study-unified-v2",
+    "source": "assets/moonlight-castle/source/unified-v2.png",
+    "cell": 3,
+    "rect": {
+      "left": 2,
+      "top": 386,
+      "width": 508,
+      "height": 380
+    },
+    "output": "assets/moonlight-castle/study-unified-v2.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "room": "music",
+    "visibleCast": [
+      "jerry"
+    ],
+    "id": "music-unified-v2",
+    "source": "assets/moonlight-castle/source/unified-v2.png",
+    "cell": 4,
+    "rect": {
+      "left": 514,
+      "top": 386,
+      "width": 508,
+      "height": 380
+    },
+    "output": "assets/moonlight-castle/music-unified-v2.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "room": "bedroom",
+    "visibleCast": [
+      "shiyuan"
+    ],
+    "id": "bedroom-unified-v2",
+    "source": "assets/moonlight-castle/source/unified-v2.png",
+    "cell": 5,
+    "rect": {
+      "left": 2,
+      "top": 770,
+      "width": 508,
+      "height": 380
+    },
+    "output": "assets/moonlight-castle/bedroom-unified-v2.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "room": "cellar",
+    "visibleCast": [
+      "lala"
+    ],
+    "id": "cellar-unified-v2",
+    "source": "assets/moonlight-castle/source/unified-v2.png",
+    "cell": 6,
+    "rect": {
+      "left": 514,
+      "top": 770,
+      "width": 508,
+      "height": 380
+    },
+    "output": "assets/moonlight-castle/cellar-unified-v2.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "room": "tower",
+    "visibleCast": [],
+    "id": "tower-unified-v2",
+    "source": "assets/moonlight-castle/source/unified-v2.png",
+    "cell": 7,
+    "rect": {
+      "left": 2,
+      "top": 1154,
+      "width": 508,
+      "height": 380
+    },
+    "output": "assets/moonlight-castle/tower-unified-v2.webp",
+    "width": 960,
+    "height": 720
+  },
+  {
+    "room": "dawn",
+    "visibleCast": [],
+    "id": "dawn-unified-v2",
+    "source": "assets/moonlight-castle/source/unified-v2.png",
+    "cell": 8,
+    "rect": {
+      "left": 514,
+      "top": 1154,
+      "width": 508,
+      "height": 380
+    },
+    "output": "assets/moonlight-castle/dawn-unified-v2.webp",
+    "width": 960,
+    "height": 720
+  }
+]

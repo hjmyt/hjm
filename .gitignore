@@ -14,3 +14,8 @@ docs/imagegen/*
 
 # Licensed/private score sources stay local; the browser uses generated JS data.
 assets/scores/source/*.musicxml
+
+!docs/moonlight-castle/
+!docs/moonlight-castle/**
+!docs/imagegen/moonlight-castle/
+!docs/imagegen/moonlight-castle/**

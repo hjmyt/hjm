@@ -3,6 +3,7 @@
 // Single entry point. Loading/cleaning a save may call any feature's migration helpers.
 loadState();
 bindAppEvents();
+bindMoonlightCastleEntry();
 mountPetRoom();
 bindAppAnchors();
 Chronicle.mount();

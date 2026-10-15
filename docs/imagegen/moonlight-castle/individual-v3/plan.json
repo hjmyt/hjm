@@ -1,0 +1,268 @@
+[
+  {
+    "id": "hall-exploration-v3",
+    "room": "hall",
+    "source": "assets/moonlight-castle/source/individual-v3/hall.png",
+    "output": "assets/moonlight-castle/hall-exploration-v3.webp",
+    "width": 1448,
+    "height": 1086,
+    "sourceWidth": 1448,
+    "sourceHeight": 1086,
+    "visibleCast": [
+      "yeshiyang",
+      "tim"
+    ],
+    "groupException": null,
+    "positions": [
+      {
+        "id": "yeshiyang",
+        "x": 42,
+        "y": 56
+      },
+      {
+        "id": "tim",
+        "x": 67,
+        "y": 56
+      }
+    ],
+    "costumes": {
+      "yeshiyang": {
+        "identity": "成年男性，微乱卷短黑发，矩形黑框眼镜",
+        "outfit": "黑色执事制服、领结、铜扣、长外套"
+      },
+      "tim": {
+        "identity": "成年男性，利落短黑发，矩形深色眼镜",
+        "outfit": "银色骑士铠甲，露头，初见空手"
+      }
+    },
+    "prompt": "docs/imagegen/moonlight-castle/individual-v3/hall-prompt.txt",
+    "generation": "single-image",
+    "referenceBoard": "docs/imagegen/moonlight-castle/individual-v3/hall-references.png"
+  },
+  {
+    "id": "dining-exploration-v3",
+    "room": "dining",
+    "source": "assets/moonlight-castle/source/individual-v3/dining.png",
+    "output": "assets/moonlight-castle/dining-exploration-v3.webp",
+    "width": 1448,
+    "height": 1086,
+    "sourceWidth": 1448,
+    "sourceHeight": 1086,
+    "visibleCast": [
+      "bingbing",
+      "baoshi",
+      "feihong"
+    ],
+    "groupException": "本房间三位实际在场人物需与调查物品同屏可点",
+    "positions": [
+      {
+        "id": "bingbing",
+        "x": 51,
+        "y": 50
+      },
+      {
+        "id": "baoshi",
+        "x": 78,
+        "y": 57
+      }
+    ],
+    "costumes": {
+      "bingbing": {
+        "identity": "成年女性，侧分长黑发，白花发饰、垂坠耳饰",
+        "outfit": "白色挂脖无袖长裙"
+      },
+      "baoshi": {
+        "identity": "成年男性，柔和脸型、蓬松略长黑发、无眼镜",
+        "outfit": "黑色衬衫"
+      },
+      "feihong": {
+        "identity": "成年男性，较短利落黑发、矩形深色眼镜",
+        "outfit": "白外衫、黑T、银链、黑手套"
+      }
+    },
+    "prompt": "docs/imagegen/moonlight-castle/individual-v3/dining-prompt.txt",
+    "generation": "single-image",
+    "referenceBoard": "docs/imagegen/moonlight-castle/individual-v3/dining-references.png"
+  },
+  {
+    "id": "study-exploration-v3",
+    "room": "study",
+    "source": "assets/moonlight-castle/source/individual-v3/study.png",
+    "output": "assets/moonlight-castle/study-exploration-v3.webp",
+    "width": 1448,
+    "height": 1086,
+    "sourceWidth": 1448,
+    "sourceHeight": 1086,
+    "visibleCast": [
+      "dijie",
+      "qiqi"
+    ],
+    "groupException": null,
+    "positions": [
+      {
+        "id": "dijie",
+        "x": 41,
+        "y": 57
+      },
+      {
+        "id": "qiqi",
+        "x": 64,
+        "y": 57
+      }
+    ],
+    "costumes": {
+      "dijie": {
+        "identity": "成年男性，微乱深色头发",
+        "outfit": "灰格衬衫、浅色内搭，持竹笛"
+      },
+      "qiqi": {
+        "identity": "成年女性，深发盘起",
+        "outfit": "粉色花纹旗袍戏服、深紫披肩、金色装饰，持塔罗牌"
+      }
+    },
+    "prompt": "docs/imagegen/moonlight-castle/individual-v3/study-prompt.txt",
+    "generation": "single-image",
+    "referenceBoard": "docs/imagegen/moonlight-castle/individual-v3/study-references.png"
+  },
+  {
+    "id": "music-exploration-v3",
+    "room": "music",
+    "source": "assets/moonlight-castle/source/individual-v3/music.png",
+    "output": "assets/moonlight-castle/music-exploration-v3.webp",
+    "width": 1448,
+    "height": 1086,
+    "sourceWidth": 1448,
+    "sourceHeight": 1086,
+    "visibleCast": [
+      "jerry"
+    ],
+    "groupException": null,
+    "positions": [
+      {
+        "id": "jerry",
+        "x": 48,
+        "y": 60
+      }
+    ],
+    "costumes": {
+      "jerry": {
+        "identity": "成年男性，短乱黑发、矩形眼镜",
+        "outfit": "黑短袖、蓝牛仔裤，持小号"
+      }
+    },
+    "prompt": "docs/imagegen/moonlight-castle/individual-v3/music-prompt.txt",
+    "generation": "single-image",
+    "referenceBoard": "docs/imagegen/moonlight-castle/individual-v3/music-references.png"
+  },
+  {
+    "id": "bedroom-exploration-v3",
+    "room": "bedroom",
+    "source": "assets/moonlight-castle/source/individual-v3/bedroom.png",
+    "output": "assets/moonlight-castle/bedroom-exploration-v3.webp",
+    "width": 1448,
+    "height": 1086,
+    "sourceWidth": 1448,
+    "sourceHeight": 1086,
+    "visibleCast": [
+      "shiyuan"
+    ],
+    "groupException": null,
+    "positions": [
+      {
+        "id": "shiyuan",
+        "x": 55,
+        "y": 61
+      }
+    ],
+    "costumes": {
+      "shiyuan": {
+        "identity": "成年女性，短棕黑卷发、金色花饰",
+        "outfit": "黑色长袖长裙女仆装、白围裙、白领、白女仆发带"
+      }
+    },
+    "prompt": "docs/imagegen/moonlight-castle/individual-v3/bedroom-prompt.txt",
+    "generation": "single-image",
+    "referenceBoard": "docs/imagegen/moonlight-castle/individual-v3/bedroom-references.png"
+  },
+  {
+    "id": "cellar-exploration-v3",
+    "room": "cellar",
+    "source": "assets/moonlight-castle/source/individual-v3/cellar.png",
+    "output": "assets/moonlight-castle/cellar-exploration-v3.webp",
+    "width": 1448,
+    "height": 1086,
+    "sourceWidth": 1448,
+    "sourceHeight": 1086,
+    "visibleCast": [
+      "lala"
+    ],
+    "groupException": null,
+    "positions": [
+      {
+        "id": "lala",
+        "x": 51,
+        "y": 62
+      }
+    ],
+    "costumes": {
+      "lala": {
+        "identity": "成年女性，棕色侧马尾、浅色蝴蝶结",
+        "outfit": "紫色女巫袍、深色裙，持水晶球"
+      }
+    },
+    "prompt": "docs/imagegen/moonlight-castle/individual-v3/cellar-prompt.txt",
+    "generation": "single-image",
+    "referenceBoard": "docs/imagegen/moonlight-castle/individual-v3/cellar-references.png"
+  },
+  {
+    "id": "tower-exploration-v3",
+    "room": "tower",
+    "source": "assets/moonlight-castle/source/individual-v3/tower.png",
+    "output": "assets/moonlight-castle/tower-exploration-v3.webp",
+    "width": 1448,
+    "height": 1086,
+    "sourceWidth": 1448,
+    "sourceHeight": 1086,
+    "visibleCast": [],
+    "groupException": null,
+    "positions": [],
+    "costumes": {},
+    "prompt": "docs/imagegen/moonlight-castle/individual-v3/tower-prompt.txt",
+    "generation": "single-image",
+    "referenceBoard": null
+  },
+  {
+    "id": "dawn-exploration-v3",
+    "room": "dawn",
+    "source": "assets/moonlight-castle/source/individual-v3/dawn.png",
+    "output": "assets/moonlight-castle/dawn-exploration-v3.webp",
+    "width": 1448,
+    "height": 1086,
+    "sourceWidth": 1448,
+    "sourceHeight": 1086,
+    "visibleCast": [],
+    "groupException": null,
+    "positions": [],
+    "costumes": {},
+    "prompt": "docs/imagegen/moonlight-castle/individual-v3/dawn-prompt.txt",
+    "generation": "single-image",
+    "referenceBoard": null
+  },
+  {
+    "id": "exterior-exploration-v3",
+    "room": "exterior",
+    "source": "assets/moonlight-castle/source/individual-v3/exterior.png",
+    "output": "assets/moonlight-castle/exterior-exploration-v3.webp",
+    "width": 1448,
+    "height": 1086,
+    "sourceWidth": 1448,
+    "sourceHeight": 1086,
+    "visibleCast": [],
+    "groupException": null,
+    "positions": [],
+    "costumes": {},
+    "prompt": "docs/imagegen/moonlight-castle/individual-v3/exterior-prompt.txt",
+    "generation": "single-image",
+    "referenceBoard": null
+  }
+]
