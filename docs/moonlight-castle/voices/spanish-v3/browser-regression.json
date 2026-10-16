@@ -1,0 +1,47 @@
+{
+  "complete": true,
+  "results": [
+    {
+      "test": "architecture",
+      "exitCode": 0,
+      "seconds": 1.6,
+      "log": "/private/tmp/hjm-spanish-test-architecture.log"
+    },
+    {
+      "test": "economy",
+      "exitCode": 0,
+      "seconds": 9.4,
+      "log": "/private/tmp/hjm-spanish-test-economy.log"
+    },
+    {
+      "test": "unified-bonds",
+      "exitCode": 0,
+      "seconds": 6.1,
+      "log": "/private/tmp/hjm-spanish-test-unified-bonds.log"
+    },
+    {
+      "test": "moonlight-castle-voices",
+      "exitCode": 0,
+      "seconds": 12.3,
+      "log": "/private/tmp/hjm-spanish-test-moonlight-castle-voices.log"
+    },
+    {
+      "test": "moonlight-castle",
+      "exitCode": 0,
+      "seconds": 40.2,
+      "log": "/private/tmp/hjm-spanish-test-moonlight-castle.log"
+    },
+    {
+      "test": "moonlight-castle-sound",
+      "exitCode": 0,
+      "seconds": 5.3,
+      "log": "/private/tmp/hjm-spanish-test-moonlight-castle-sound.log"
+    },
+    {
+      "test": "moonlight-castle-object-regions",
+      "exitCode": 0,
+      "seconds": 2.6,
+      "log": "/private/tmp/hjm-spanish-test-moonlight-castle-object-regions.log"
+    }
+  ]
+}

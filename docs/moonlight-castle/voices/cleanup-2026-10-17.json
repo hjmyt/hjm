@@ -1,0 +1,2427 @@
+{
+  "date": "2026-10-17",
+  "reason": "User requested direct removal of unused previous castle voice recordings; no audio backup retained.",
+  "complete": true,
+  "deleted": [
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-67141c6bd25e69.mp3",
+      "bytes": 189965,
+      "sha256": "a6a135499fcae7413ee9c8686dc416f37842c24da8093f85d086bf2542361734"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-c0660f019231b7.mp3",
+      "bytes": 160207,
+      "sha256": "9bed5082ace626510290f79ad4c925b427160823c1be7e0dac33c34be274dd89"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-5fdbbe909769a9.mp3",
+      "bytes": 92623,
+      "sha256": "0b24ccce45db38b0ac9bfd87f95dc1e309801ea958c7512c28390ab2e710f924"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a949f0b63d23e6.mp3",
+      "bytes": 123719,
+      "sha256": "19dc73da54af7b3e9ca93ec5a1b4532a3dce21ea3d5580a74ccdd92cbd1ac4e7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-6a5b4a29386689.mp3",
+      "bytes": 64205,
+      "sha256": "1be0492f4a256c445009066e9551d69321f411281ebb2813f9cbf24972d7a052"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-f46c67edbf4583.mp3",
+      "bytes": 54414,
+      "sha256": "fbc7ba7579ec2bc64fcc4823a54c002a40cca7c1ddc3af01ac6a09ed510dc029"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-f64b23ea1cca5b.mp3",
+      "bytes": 55183,
+      "sha256": "6b6f019435a407e569b632c0e405fd1a5ba2bbcb1712abec52f42523a9074e6e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-f71bb42e8cf72b.mp3",
+      "bytes": 125068,
+      "sha256": "88c15344b9c3885f69f855ea8e5ddd107780daf3e8a6652c6a74a039ae7a468b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a10e93ababb245.mp3",
+      "bytes": 37322,
+      "sha256": "fa99fd09d778ae4538b1f0fd9af424baa45df46044e63cbcff02fb2efdc6982e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-37fe1b9356bcff.mp3",
+      "bytes": 154829,
+      "sha256": "b283abfff8da66f6388517643993f38982775faecee1913149be065d2374e4aa"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-97eeb24f8bae93.mp3",
+      "bytes": 126224,
+      "sha256": "05e9caae90b753eeffc1665621e510af914a662e3406b7651998f4d662cf2005"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-fd2a5d762b18e7.mp3",
+      "bytes": 75723,
+      "sha256": "a4649670cac43e3e07d339e95ced86c70d0cdf294300ed8559583c6297474f73"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-045713baf6a6d9.mp3",
+      "bytes": 68241,
+      "sha256": "29d356fe00a28f876c033eb5f165efceaf6ac5bc25aaa768fd69bd2d80701700"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-b1b818b04cfdd2.mp3",
+      "bytes": 218573,
+      "sha256": "4f467e8fa38be7945c894b6d59db9af019f8d06655e23e5f3c479a9a394b062a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-c85558dd74b562.mp3",
+      "bytes": 125638,
+      "sha256": "2e233c8a3155cfcab4edd61225e20a347ee054c3da8d2ce144511c0cfe0dc78b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-2ce8a5fe2e1d4c.mp3",
+      "bytes": 96268,
+      "sha256": "ad34c691660e8bc175c0ecd497b9d3eadaecfe4769b8348d93ca3df3896fb689"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-5848b5a46f0911.mp3",
+      "bytes": 56525,
+      "sha256": "6ac9c79c154345fdd61ea3b1a6915c6aa0b976bb8ebaf5f8c4f22c8cc0d2eaa5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a0e390f921543d.mp3",
+      "bytes": 52683,
+      "sha256": "ed73ce2bd868229f4b01639356ce981a4dfc6bd2ddc119f502dc2626ebc0e5bc"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-73068d2c8e0213.mp3",
+      "bytes": 126216,
+      "sha256": "ef1b21cec1020e9932e4c64b923933020fbd1700a47d5e684514726f17013897"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-4a4a42e4fd7382.mp3",
+      "bytes": 154445,
+      "sha256": "a5749afa3c5f03724fb20855f99d97769958d3c17e7e4f0e791c65508ab74776"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-04250ac65e336e.mp3",
+      "bytes": 189389,
+      "sha256": "1f6a3b4c866389429e481efbcbd26944d3afa2618b979aa5eca4f6eff70166f3"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-5d928f379ac5f8.mp3",
+      "bytes": 56910,
+      "sha256": "c2f88f53ffd8f223755495c0abf6834e58a561496c372adcc01377020a62277d"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-eddb02aa77b7c6.mp3",
+      "bytes": 106642,
+      "sha256": "8b1d4f5b81e4e3d8da91220ef4d806fc387c5e8d99152097fb11bc9146f74256"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-791ad45e4d490c.mp3",
+      "bytes": 152132,
+      "sha256": "56cfb29402e94cf8a61e7a9d6a0c7c5af19fa23cf15095e6d82b6db9a0e95260"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-c75b8c801027ed.mp3",
+      "bytes": 48847,
+      "sha256": "ac54f5f12263dfa4c03d9530f25ff8add302162c683e9b60ac2d673d583335c3"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-f16e8b39f67222.mp3",
+      "bytes": 68618,
+      "sha256": "2eb4b8f27dbf9750b82489727c55d65e4ecd7bf8619e8657bad8908d93e6ee10"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-c0593a222292ef.mp3",
+      "bytes": 95499,
+      "sha256": "0dd6058d284d8664b761cd466d3521090717b002bd88b0fcfcbbbbf9f1eaa4ba"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-671f3c614c085f.mp3",
+      "bytes": 126419,
+      "sha256": "e43ed8716f5d3bd715f842372e690e584213a122a3962df06cae4759ae04c8d3"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-bf2e95058a8b29.mp3",
+      "bytes": 54414,
+      "sha256": "fbc7ba7579ec2bc64fcc4823a54c002a40cca7c1ddc3af01ac6a09ed510dc029"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-1c04e17513dd4a.mp3",
+      "bytes": 79950,
+      "sha256": "ebe00872cd58b1b11b87b8efc85fe84347ba1a73f5850ac157fd6164d36c1fb2"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-dc37e742c8739b.mp3",
+      "bytes": 45771,
+      "sha256": "12c7e31d50033bd300f394d435c636daef10ec168b63bd55f2be230859466ac7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-c2b37a5257943b.mp3",
+      "bytes": 80521,
+      "sha256": "e338fec661ae50e6a315b81e170b585828718d1062f545c76537c0b427670772"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a53a850e24eadf.mp3",
+      "bytes": 81101,
+      "sha256": "2479199ee61cfadcbfb51fd2cd3052c790c1b439999b7fac50142efe3009ff82"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-af5599a56c1cf6.mp3",
+      "bytes": 71885,
+      "sha256": "5e34365f12d4fc82c718456ebe3c5fbdc4adcab65a19362228c70c231e4e3da1"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-bb8c20431d231c.mp3",
+      "bytes": 113354,
+      "sha256": "63891c5ea362991ee947c03b451c237d0bf65caca591ee328fda8bc68b687208"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-6eba9728d506c1.mp3",
+      "bytes": 45967,
+      "sha256": "10274e21611870eb50d3752b7e1f1e0aaff5a908ee2015d58ac8392bd617a877"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-195887487bc39f.mp3",
+      "bytes": 43660,
+      "sha256": "a18e76e21e29a797bd3697737be5d90d4bf2488b6d9fc40d1e2fbb77a5e8acbe"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-0a8c596936b00f.mp3",
+      "bytes": 158861,
+      "sha256": "0c55248f2cfdfcd67e7b2dbbce32ae69150bd4bab81b22197f297b509f6f9ace"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-2de18c1cebac01.mp3",
+      "bytes": 106834,
+      "sha256": "56ace84117879bd9e7c5e30a87aaba22d473b0c20ce2e0d0485bef5393a94e51"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-5ffa557e4f0594.mp3",
+      "bytes": 106061,
+      "sha256": "145df8cfd8fed55e78a9080c19c4d06d203cdb70e12e4174224033781dedd597"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-49c575edcbcded.mp3",
+      "bytes": 32143,
+      "sha256": "f960bf725df916dbb19bfa10133ec3f3602a508b9be2a90895f585e09565a8c5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a9a6955f18dda5.mp3",
+      "bytes": 83786,
+      "sha256": "9f1f97385a802c90cedc34b593796a1574f076e1cd8367dfe5e1ad1f690785b6"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-9a8128017d06de.mp3",
+      "bytes": 127747,
+      "sha256": "a49bd56d1186d0968a334cca90b91242fb2acdf6103b9b0438ec7f0aaf3191f6"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-ef2c2ef8fccc7a.mp3",
+      "bytes": 99151,
+      "sha256": "45a25334470fe4c228b0d5e31e81ed46b8b96103dd9eaec35abab45140945ca8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-2dadb07ef71008.mp3",
+      "bytes": 108751,
+      "sha256": "4ef1c7e099fe6a836d79216eeacc4cc77a49e11d098d11352be61becb4bfdb01"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a81c3ea1f63a78.mp3",
+      "bytes": 154445,
+      "sha256": "a5749afa3c5f03724fb20855f99d97769958d3c17e7e4f0e791c65508ab74776"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-59e4ad6567baa4.mp3",
+      "bytes": 33103,
+      "sha256": "617d0cc58758ab466166e3d5986f08af908fd4d38801f109ca64e4e6bce07198"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-39045fe10b9261.mp3",
+      "bytes": 41165,
+      "sha256": "ce9233cbff94db19c4320c6ccc073709547e425ea64aa91b1b1af106b9c43ed5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-d560a85c80e45c.mp3",
+      "bytes": 96653,
+      "sha256": "6ef7ebc74a42add442c18d152478be33ca27a32dc4069079a1d22aa6aa65641e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-09036b8b713970.mp3",
+      "bytes": 130253,
+      "sha256": "19f87e45abf12b37098c8a7a54a47d387a64e83dc824160a4249057cba2c3601"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-1fc42e71ee987d.mp3",
+      "bytes": 45195,
+      "sha256": "74790e07e550d70feca5d564a03b1e2dd1da5e46d5c857a1282d2b39fcfc9365"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-3f38087b056784.mp3",
+      "bytes": 69389,
+      "sha256": "dd869b9196841405d33ec28fc50b564afdb9e0c65d07bbc9b7dd647ec8b3e119"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-f484088b0cdd43.mp3",
+      "bytes": 70733,
+      "sha256": "a743d43608d952e86768ad6e8dfd96260452a303392b355b0e780a67ac91bc2b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-d398f60528a290.mp3",
+      "bytes": 107978,
+      "sha256": "f1154aea3811a0c28ceefd992006cb82d43e6fda6f146e0a62065196a5f8ae83"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-e63edd5df0e51a.mp3",
+      "bytes": 98183,
+      "sha256": "6a4cee369efccb16eb1aafa7b7e25b371ae6bc94286b40c69a2f19f420ee775e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-02dc2cd21a7116.mp3",
+      "bytes": 78985,
+      "sha256": "b7e074c7c9b6b298fbeac9af4b098476ced62f95a51e63afbb946ef5df8f2336"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-0a4fb3c5fe8271.mp3",
+      "bytes": 153293,
+      "sha256": "901f4d71f321d6b8e9654d47e2bc69397ef6c44189da651b24b7afe9a51607f9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-b6b51640338018.mp3",
+      "bytes": 93390,
+      "sha256": "b28605e785830f4f40ece531c903e6cc16dc0f35733ae66483a4c3421573f382"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-50d44e977c062b.mp3",
+      "bytes": 31568,
+      "sha256": "5edac1ac750904ee63a21822f2c041011506a838f6fad3c20252667c95ea9e81"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-ade94b6e7d35c9.mp3",
+      "bytes": 87243,
+      "sha256": "3317175161981a8665d58380176d354fc70d53ea3c5f315b8ceb7960fc093809"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-8bb13f5d464972.mp3",
+      "bytes": 89169,
+      "sha256": "2053447d77dbcb9701a884c9474c5ca01be8054de5e0c4592b4c08c79c254339"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-871a012929c3ad.mp3",
+      "bytes": 72849,
+      "sha256": "cef52da9ee59f66a7f8ebcd318c33ab93de9ddbb1984210142f740954c47a0ed"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-6d955d2e61f7be.mp3",
+      "bytes": 82054,
+      "sha256": "d93c85442507e6b5710c82cce6ca35c22dadb9d1f82e6ae6f5137c8014a8e890"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-1bd7d9353af762.mp3",
+      "bytes": 44242,
+      "sha256": "33931ff705ccc30a35aec1e7c356eca25bfb7e1aa8d25b0b9722f30d6cb0a102"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-062163be044023.mp3",
+      "bytes": 99910,
+      "sha256": "aa02026a190662db2d351cf4c8add2483d15c5d3e4734525141156bf828f71bc"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-22acaa43dd46f2.mp3",
+      "bytes": 95500,
+      "sha256": "e4431c0b44a4ee1ca5556b2352253ef6a4cd59d5955682b9d29dd3dc8f370736"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-1153749403e7ed.mp3",
+      "bytes": 86668,
+      "sha256": "56050b8f215c6c197491da1f1bd0873c95bdb9d274cc8714ed9dae58c097935f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-368a38f4358b74.mp3",
+      "bytes": 95697,
+      "sha256": "fb347a96971cf2cae2fc1fbaf879af3c7d4dcb74a7c348174d1d4e459415bd46"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-7d74e5b74e8b22.mp3",
+      "bytes": 32906,
+      "sha256": "5d5693ab6f7dcc30312e449e893881382bfbc06b875c40956048163e0d25114a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-b3a17d035032c0.mp3",
+      "bytes": 119305,
+      "sha256": "640141b2c61b07676c71471c8a8af27351569e932dd32ad394ad95ddaa817cf6"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-f13039a53f60ec.mp3",
+      "bytes": 51921,
+      "sha256": "aa4ce8fc14018b6767dbb7210a1732d3dbfd83b7808f1cadc1c0d284d1d23fe2"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-6a920892d16c11.mp3",
+      "bytes": 81870,
+      "sha256": "38557c3729a3773bd2721e8baac3cec22999850fefdb6b9cac54ada7945def24"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-0ae622759c9ef3.mp3",
+      "bytes": 123535,
+      "sha256": "3f3b2416d73979434b3060f6331fc6ceae7dd5966fde3cff5f43d87753a72157"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-d6140a90c6a4da.mp3",
+      "bytes": 65163,
+      "sha256": "e1960b2e2c287af2afd18c896a6f3a5f2d4ddaf2948a8a5d4c387b5c03287ab9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-60d5514e6d8805.mp3",
+      "bytes": 107596,
+      "sha256": "bce05c719abd6c39694954697fabdfa49f3c1de40761becf1b27f060dd720438"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-f3a41ec72a0df6.mp3",
+      "bytes": 38862,
+      "sha256": "28d344444d0893b6c8b443d87a29403900a7e9a2a9805509488d52b1caef2067"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-53c97f4b4f3ba3.mp3",
+      "bytes": 53261,
+      "sha256": "16481beea65839d52fed55c9a10e8a639bbebfb267a9e16e27980d808fc2a09f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-08d8394555ce48.mp3",
+      "bytes": 54986,
+      "sha256": "af504a5ff91d16411283b6f1ca8821cc809751493bf315da47954b88e1e386b9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-09608af36e3632.mp3",
+      "bytes": 144266,
+      "sha256": "164f2bd26381381d06c39c67f9217754b3370a5b04177b4a14237d4672dcd4ff"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-802b8e7e154311.mp3",
+      "bytes": 99529,
+      "sha256": "f81c99affb4af2f4a07431ee944930b123db4bc7c17e42bac05798e2264c7367"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-50322339dfd2f0.mp3",
+      "bytes": 32531,
+      "sha256": "d7773c5cbf2fcaa69bb4355517d80e05d4d7737b572614b4b6319793a824ae53"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-13bb5a3a2b908f.mp3",
+      "bytes": 30410,
+      "sha256": "c133f332e10b9d4cda1b3054f57e6d658d90639ec8404e508a1fc22c3d633d97"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-f430737295b1b1.mp3",
+      "bytes": 39054,
+      "sha256": "b01a5c16485bc2d61b7b059b78930b59a661d4b6a220798fe4b24dd55ec2960a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-2320b55e6f6e37.mp3",
+      "bytes": 198029,
+      "sha256": "9ff2ae24e49a2f277605a6c132706bed66ce889b94a9c982e4c9ab46cde727fd"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-1c6a4653461f93.mp3",
+      "bytes": 35596,
+      "sha256": "b6f0bcb3b3d9b2ecfd1d63c0fa6414f2b8cfb0ed5ed96f936421f0cee34e553f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-99adaade7ae9aa.mp3",
+      "bytes": 34445,
+      "sha256": "e9f4e269b51aef4af65c93cc759c5847916d75c351f61e7477b22b98c70ebcbe"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-23e223546a3778.mp3",
+      "bytes": 27532,
+      "sha256": "0c435e0d6a4719dac3345dc008dae7d16eb08245aef0656d9957af20823ea9eb"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-c2f0d62788e32c.mp3",
+      "bytes": 68046,
+      "sha256": "111f1482dc0a11269987d252aa8a94b748edc56281f4e75aecc0ec2aee5f8909"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-ec6ea205085703.mp3",
+      "bytes": 57483,
+      "sha256": "9694dad640d3d068cc3fd31b2a71b246cca9bc4e3d7b9f776dada6cca1fe900c"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-fc3f06a8760515.mp3",
+      "bytes": 42893,
+      "sha256": "1a916e0ae0c9e5e52008b8eb30824f76fa7692dbc5c23fba910e57d6898acaa3"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-60edbfed3600a9.mp3",
+      "bytes": 78027,
+      "sha256": "b44568e3b7faca1d7a1ec768e9ff45b0390cc84c05078fcc8576999a69d4a64c"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a9f3e5a5f5f37d.mp3",
+      "bytes": 49227,
+      "sha256": "ffdd65e1c1010fbcb6676e036e1afcd380c8b2571844419cb141cd563795c63c"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-36a58fdf39f47e.mp3",
+      "bytes": 78987,
+      "sha256": "28dd3f8ae97863db67385532d7d71fb803ed408f6b7762b718e251488995f507"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-c8352e1c9cf947.mp3",
+      "bytes": 155981,
+      "sha256": "9154ba161fd0441a8abcf986ad09725d5c0e4330832d11b17ee75b51b65ba838"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-e971793590ba38.mp3",
+      "bytes": 77263,
+      "sha256": "07a31560263748f329cf5335af701c2cdb20d64e9e9a4d89a0c22f9bd2a1454e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-01bf778ba28b9f.mp3",
+      "bytes": 66509,
+      "sha256": "72ba9ee8b2a2e6f41d6496fba1e4891f20dfb939c6b852e25fe2af05ade57346"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-e83684536d17e0.mp3",
+      "bytes": 23502,
+      "sha256": "1a782b9ea18015167ea189ea0a3594d6acf95332db70b4f3b83e85a42263dd57"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-015ae201632883.mp3",
+      "bytes": 142155,
+      "sha256": "f2c7a1a12b7a2dfb41296f0e234523254b70606fc9826d786da77da950b92a29"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-28691c254972b4.mp3",
+      "bytes": 48653,
+      "sha256": "01be9eb56e6ae0f47b1631fd74b5efefdee4ded92c4614e21c712e72de2fcdf8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-2e4e19c841f38c.mp3",
+      "bytes": 32140,
+      "sha256": "5391c2b7dc6c6d5696be75d0d4edf2711fa589c496da4aabd88773017a5dd0e1"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-08a43bf96e112f.mp3",
+      "bytes": 62667,
+      "sha256": "80e48b2496819f4b154d03156b581e7db9cde4be53c7de382e8992da5b684d62"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-8ae95c7c4ef488.mp3",
+      "bytes": 107981,
+      "sha256": "6afb7150ee62978ee5e6d1152f263afed8020e3368642f67243a5afe8bf95d88"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-937ccc331184bb.mp3",
+      "bytes": 30796,
+      "sha256": "82620cc0e5b038e165d31d48a605288613c05457dd7da0db6c0a0dfad0a37fab"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-be1eca6099f154.mp3",
+      "bytes": 84172,
+      "sha256": "bb11f14dd89208fd44dd260eac0d0a2648e615e88bfd7d7a52ef827cff79c492"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-ed471296265101.mp3",
+      "bytes": 102220,
+      "sha256": "d98055f34f47a80c97df6c6a3af7a65f564751c3dd85f15de0259f1d9063ce8f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-230d4f017b3bea.mp3",
+      "bytes": 105102,
+      "sha256": "d1529607f4d23c0c519eb5fabce67945c16a951e608fe2229445c593cee72e5e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a6a331c59ab2e9.mp3",
+      "bytes": 69579,
+      "sha256": "b645e2b526460d4650a0d803e628f11c8c8a5179408bc6eb8c5713e0658960ba"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-534ab54e6dca9b.mp3",
+      "bytes": 36751,
+      "sha256": "ff2e1bfac13ebb970ebdb3add3de771abb864f8baa1439ea12180c18a87085aa"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a4b7aee02d223e.mp3",
+      "bytes": 109710,
+      "sha256": "73b9000c2e13e17a45e81bbad586fff8b0d5043cf360471199030d657e767335"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-8e4d0d291411e4.mp3",
+      "bytes": 83974,
+      "sha256": "6cc23d3857716cf79db07354f30a823c804c5910623e004fc0f1250e0d7ddbd7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-f1151f4935c047.mp3",
+      "bytes": 170763,
+      "sha256": "83320e23a905c28654fdd331cfa9e288d7859764c6fc741a56ea5716fb41cbdf"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-d12259a00aa5f3.mp3",
+      "bytes": 180746,
+      "sha256": "fecb308d3d7f453793895b437b7faa1dc9a8c32f95a52c293ed17abe198f29dd"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-252e9948520ad3.mp3",
+      "bytes": 126216,
+      "sha256": "ef1b21cec1020e9932e4c64b923933020fbd1700a47d5e684514726f17013897"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-1020ef0747dfb7.mp3",
+      "bytes": 45583,
+      "sha256": "f0de4a4b9e75c4bd72d1713ece123ddf1f376ffe08783d47434148404acfb2de"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a6284c6adeba82.mp3",
+      "bytes": 113745,
+      "sha256": "96a435b31b93b7ccde05ab242e10c8295205c98dc4c5abf0211b23e9bc1e0918"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-b59f5ef689a5b3.mp3",
+      "bytes": 84172,
+      "sha256": "2f84bc18bf54e4aa145c3bd9222f3e0c1253d6f4971903827d75bb3b92d33c8e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-d71d7abc92648e.mp3",
+      "bytes": 83596,
+      "sha256": "3381ff96375d1e31c3c24327f1d9651c9e96d9770d8ee3a73197dacd180fdf06"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-20bde117f22a0c.mp3",
+      "bytes": 67471,
+      "sha256": "03db3e9fd3a2036ed0ebdcb58a327c7b962c24ff2e9990262b65c95b474693d1"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-7f9fbd3efb32a8.mp3",
+      "bytes": 161549,
+      "sha256": "67158803391d375c864a375c01f4f8868889f06e945850c714c084806510083a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-c6c69ef1f1f8c8.mp3",
+      "bytes": 84359,
+      "sha256": "4546b968a6074584621ced190881afa99e94f5a053d18567f08dc4024a3c3d77"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-43d62dbab66ab4.mp3",
+      "bytes": 173456,
+      "sha256": "ac2b070fbae15662b3950d23c065cf94816f2e5f8b02f2110edc665b7f396693"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-878b8ea783e28b.mp3",
+      "bytes": 73418,
+      "sha256": "11a516fb309b5cc64d50e61520218913d719782c993f2bdeefbbe0d65a8bb061"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-5252a2c230cad3.mp3",
+      "bytes": 69390,
+      "sha256": "e5947f76988ebc095fad6154226a81335e30628eb0a8d49fc4d520758566fcf8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-0a3a12803637b6.mp3",
+      "bytes": 192651,
+      "sha256": "db76fb97ca9513446b7164cc0f9864cf663cf4ca09faa859c11da62fec694809"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-1be15e1785e0a7.mp3",
+      "bytes": 88398,
+      "sha256": "0ac841a5005e4782bdfd23562e019a559e21f2b40191b9533075c5b7577fecf8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-eb94e942d74ca1.mp3",
+      "bytes": 87244,
+      "sha256": "d32672a75bfa2265e07f8eac5536e989da3976ec4531f375994d0b67cd083666"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a798c7199fa90f.mp3",
+      "bytes": 182663,
+      "sha256": "5d084a5dc52c02bb73a39e9ed0507efd8ef8d63519c5960c62132a73ee02e0e5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-517bb42a64b2b0.mp3",
+      "bytes": 74767,
+      "sha256": "5ccaff67e83172542855b643963301232bba94391aedabb6de5e47aab4c83222"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a4a7b30756626f.mp3",
+      "bytes": 130253,
+      "sha256": "dc71a662ca2fb4a2a97c95d400127a391121510d172c6b9883f2cb79790b411d"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-d6d30679f4b2e2.mp3",
+      "bytes": 161357,
+      "sha256": "b46c86559fedaa1369ae5302ffeef4f9960ab209f70ae73f3e4f1a0e6f9bf932"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-1dd3f8a42eb52d.mp3",
+      "bytes": 178449,
+      "sha256": "a3f11d1c04de2af18216e068b2e5adc37d4e0268e5e19e1cfc77db537647b5b0"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-ffd53e1875fc45.mp3",
+      "bytes": 142541,
+      "sha256": "c17c1a23b544046343676149ae6d495337a1836ada04607e8869d2939cf08c19"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-cfeaec797439d8.mp3",
+      "bytes": 80721,
+      "sha256": "716a2d2fe9c5518ee3082ac98d073619e71ccfcb0a0f140e7e1b63e2ff6b63f3"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-9f86526d7fb67e.mp3",
+      "bytes": 87822,
+      "sha256": "a6e07fcc2953bec461def7e481cdef782fb4f8722f40d662059cc968f0d153f2"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-059d435b7592fb.mp3",
+      "bytes": 383309,
+      "sha256": "4cc2b015f73094e545bf0e6de7aa394100e0f0ef94f3769919d21deee81cc4e2"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-012261c0485388.mp3",
+      "bytes": 113937,
+      "sha256": "91fd0a588cecf6d3338a9583703414ae65bf67bb6c1fdc918f0230b732f66ed2"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-1359a649ddb474.mp3",
+      "bytes": 60938,
+      "sha256": "065cd255324bebebe43581f1645cb837e6ff85739202a25e120564f79e12395b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-417421b216ec33.mp3",
+      "bytes": 71695,
+      "sha256": "4fb5ac5355e55e40ffa3cdf6f7b4df0cecc1c8e69c29f6dd2a8e52d0cea6be96"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-13588fd88ce736.mp3",
+      "bytes": 74763,
+      "sha256": "66b55904f8c71b884e39b7b25d30f9a4de674dc51ba31aeb18d26f284dc72cea"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-c28b07f01e2c99.mp3",
+      "bytes": 220289,
+      "sha256": "0422c75df51fa984594e11b84eec51cb248c22b5dc342661ac2e3aa265c842b8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-b0cbe077ceb18a.mp3",
+      "bytes": 142930,
+      "sha256": "3a37309fdcee869819aa3b3b0c532281f85e24f914f8d1b853013a7616fae690"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-187d5abfd40ac3.mp3",
+      "bytes": 64593,
+      "sha256": "3bddf80def3e1a168ebcbfbb1cd70513a52353a70a9c19dd5f52a7bbef6760b5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-e06148e8ae2aeb.mp3",
+      "bytes": 55563,
+      "sha256": "42a44ca84d3583b07d08f431e1f4db3d7b8ab01bd55dba12bf5e0ebdd47317f7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-5ca391fb5d77b0.mp3",
+      "bytes": 78991,
+      "sha256": "c3d2215bc00ceaedd310f75f4db1ee7455bd1bef059852ccafd82a443119aba5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-96e79f1c493e50.mp3",
+      "bytes": 76492,
+      "sha256": "7528594f2dceffbeac4367d3cd479ae82ff785d31c2d6daa83f03c38d376a054"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-1155d5281722ac.mp3",
+      "bytes": 95297,
+      "sha256": "2ee11dd06e9e4cd6e4e9682206ab8fdf8139933e0d65c6c0ae827244b1b9631b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-f744410a2df30d.mp3",
+      "bytes": 55952,
+      "sha256": "12022760835464e46a6ca608ec06e9888d098e74ea233c36fc59e1ec0318ebe7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-182187c6c4b857.mp3",
+      "bytes": 32333,
+      "sha256": "72be1f26b607c7cf59f352343da983a7691ae61d50756ab348ab317fd291705e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-156e311cb5102e.mp3",
+      "bytes": 53647,
+      "sha256": "8853e1bee678e83dc5d17359af8c85c656c841d0a28a1757ab01fafdc6d0a056"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-cf66ddf9976946.mp3",
+      "bytes": 28111,
+      "sha256": "aeb85c7c8d6ed68c5efa8cf3ea14f6655b8e92c3d76f8cb0a19417f34d99e82b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-b7a9103cdf16da.mp3",
+      "bytes": 65740,
+      "sha256": "cdb3f2b21e95726287ac9caa656a2fcac98e5685f5307137a8290e0ef611af41"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-e124ec3d9068e6.mp3",
+      "bytes": 38861,
+      "sha256": "8fc2ebddc94e1c1573ce0ed95a898d8fdc77a4003cd2ab96c1f2e3d8d5daf7c7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-0c429d3d5636d6.mp3",
+      "bytes": 48844,
+      "sha256": "6e38ede4aeb4bc27cb9d48c65882ffdd077503dbfcaea82e2e345cabd9857d16"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-49ed216939ac8f.mp3",
+      "bytes": 29840,
+      "sha256": "13be499ae146d41b23166c811f79209b3f1a47bce2fadca4d8cbd7686f7ca37a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-c2c0701dadb51f.mp3",
+      "bytes": 55947,
+      "sha256": "e8c51cbb4eb462d226701ebd566e72fe7ef2d17fd27b3cb9d10875e78bd28d83"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-5e7ba725566e8d.mp3",
+      "bytes": 57291,
+      "sha256": "e9da46ca46e67a69b228b55393fe62a785e92027232977202ac19f25f8014b9e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-5d5f0806e22de8.mp3",
+      "bytes": 56141,
+      "sha256": "a569ad96d26fc99e5c362983c87ef5d8ff501cb336cdfd1d6cdc84627481afeb"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-685e4360857562.mp3",
+      "bytes": 76299,
+      "sha256": "02a1d7c62803e342a3b4ab1d0506b86e9aa2c3b97cd7f32e1ce82c81a01c4764"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-b0bd9acc43a205.mp3",
+      "bytes": 107979,
+      "sha256": "a7865e3a27130b88508426dd876e751ade52c4267433d515b7c40241c221c16e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-57183b76483eed.mp3",
+      "bytes": 26382,
+      "sha256": "46f2cccdddce99f9f4b2b3a0e6ab323218fca9153e69212e61ebccc3edd55d70"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-23e663ba151f88.mp3",
+      "bytes": 57486,
+      "sha256": "d108576e76fcd4e6048ea54a167ed7a1e0cb2d2b640019c4891e9974cd43ad57"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-428226d067c5ba.mp3",
+      "bytes": 51146,
+      "sha256": "094fac06314c54fc5cc1cd8646806f9424ccf578ecc0a5decd8171d393b3d710"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-36d8126b85d0c8.mp3",
+      "bytes": 119694,
+      "sha256": "078ab75b274845a10866e9edd6a83e8456edd2d7f68d375df4316863c3276903"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-fecc4fcf8a9f94.mp3",
+      "bytes": 78029,
+      "sha256": "3e161e6d6dd81d27ed2f6bb9dbde78edc8a0757800721126ab0c43bcaafd2911"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-f54fa1c180aee2.mp3",
+      "bytes": 69569,
+      "sha256": "0fdf720ad6d0565a1950cf8532830c8a9363d692ad8e9b43fd1322135deba324"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-24b7488dd31026.mp3",
+      "bytes": 77062,
+      "sha256": "ae041a98aad2bd018666893a2c973aab4dc29f725b7080717dddca85adb1ab27"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-7ebb080998d0e3.mp3",
+      "bytes": 103180,
+      "sha256": "ce16828695c7c873fedd725a95b19bfd62aa5ff79362a600d71896979d61d175"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-f4b96a6439e9ef.mp3",
+      "bytes": 48653,
+      "sha256": "01be9eb56e6ae0f47b1631fd74b5efefdee4ded92c4614e21c712e72de2fcdf8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-2fdfe4a7a1c0b3.mp3",
+      "bytes": 131591,
+      "sha256": "8ff472528e22f62c363e62272a636f6ce3286cf187fb2bbf6e1facc4ae3132cb"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-7d0ef51af89359.mp3",
+      "bytes": 98184,
+      "sha256": "158c15e221fb28fea088041ac94824051b527fb227c0518562d36ba2b5ba2ef8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-fa7d2997dc26d9.mp3",
+      "bytes": 64205,
+      "sha256": "1be0492f4a256c445009066e9551d69321f411281ebb2813f9cbf24972d7a052"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-ee9e800116399f.mp3",
+      "bytes": 107210,
+      "sha256": "fdca08706de5ffd5cf44ff830e8353b17dc0d847fc69fefe27c8af69aac7b346"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-a72145bc04c64d.mp3",
+      "bytes": 106444,
+      "sha256": "c714fc7d69e5659e36f500fd7116a7d89fd205abb2a0475bede6459f65d83485"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-ef30a9e412fb3e.mp3",
+      "bytes": 69766,
+      "sha256": "68959acf0943c10e7f249de224deeba65acc23398a294e880d6caefe9f3c44a0"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-2c92227464bd4c.mp3",
+      "bytes": 69775,
+      "sha256": "218799f233cd20ae32e162b30df278f73d670715706b5849dd5b846f0e6fd98a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/line-4ddc4b96c9f663.mp3",
+      "bytes": 72658,
+      "sha256": "65911cb8ea015a49893c835e2ffae15eef82ab643d1131f33893faf880249213"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/adrian-2bfd9bb9439f93.wav",
+      "bytes": 346668,
+      "sha256": "54e38171412735d6234f084827a32c75998afcbce17d78cc68d74b9e0949359f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/siyang-ca75ca01f2dcf2.wav",
+      "bytes": 226348,
+      "sha256": "090edc096e22550e0f2abcae5f0fe0c485c6b4d5ad862d20232cda364aef6511"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/bingbing-4c3c13bb1e6cb0.wav",
+      "bytes": 336940,
+      "sha256": "c1f931c1ff1842d9829f1ec8c2bd7c14404b2327a1e692e005670354a9a73cc5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/qiqi-eda2fc33a2b947.wav",
+      "bytes": 488492,
+      "sha256": "f895c3c0378a072962607bc4d78bba18a6767fad7a86577760a01ea550692aa8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/jerry-408f0970dd7eec.wav",
+      "bytes": 585260,
+      "sha256": "a8818cece6a235ee22762f37af6698d573efc6f1d4053db4a441ae7d3b753f27"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/dijie-68cedbc836d18e.wav",
+      "bytes": 535084,
+      "sha256": "b7d48d9b4ed3272b713249c9c3d73a768b33df2e548c4f3fe5d9a3781e77f8f6"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/jerry-d5b1a01390afdd.wav",
+      "bytes": 426028,
+      "sha256": "f3f2e5e4b4886c7fab61a5ba5367d3c2c38ac436247e93612155cfad11394593"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/lala-33ba76d19f9666.wav",
+      "bytes": 440876,
+      "sha256": "1823c51ef4596c55ad99d3b7b6ab09972becf44a0700bb5243289a427be8f720"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/tim-a0960a92ee20fe.wav",
+      "bytes": 359980,
+      "sha256": "abcdd25d433cb7eab210b9883cbdf3b92fe0e40307faeb948b87c23bcee3e414"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/dijie-9741adbb6850a2.wav",
+      "bytes": 786080,
+      "sha256": "3e74c5e4ef63e46110d57293a5d6a6df430d2f339607d0d516c7d06fdd160c38"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/lala-f397954f9c1811.wav",
+      "bytes": 673440,
+      "sha256": "e8d5f07e92bde14a18f95a9b6cc8c232f353652253faeb442d47dd7a5a42c880"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/siyang-c90f4728185e07.wav",
+      "bytes": 467500,
+      "sha256": "39be9187f9c6c3ece569af0d67e47a15262cc11511f688fb08d7ffe2c564c233"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/qiqi-bc6e467c2a9f08.wav",
+      "bytes": 328236,
+      "sha256": "82f22c69836fb3d80d724e226ca9a70ae5decf72f5f270a341c6f12c13105197"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/bingbing-daaf08d6a2ecc8.wav",
+      "bytes": 362540,
+      "sha256": "f2a3d255da634045515d9b3b2e1e54766456055c5c9c0764034c8d6c8b5f9fee"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/siyang-1f9571e117f97d.wav",
+      "bytes": 585888,
+      "sha256": "a2a5bae783b45c3e76d0b5a128170460edcbfa92f613045e32fc4fa896cf9dec"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/siyang-82b2bfeaa77313.wav",
+      "bytes": 512556,
+      "sha256": "f405af9704940e290b1a6a0dab73d8effba5e3430866104c6a3c9ec652c380a3"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/siyang-5a51180e038007.wav",
+      "bytes": 472620,
+      "sha256": "5f2db2e5d8d880afc167c6a9091edd9c066ea09fdf1caacbc5d34a3971036485"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/shiyuan-f35b92755654b4.wav",
+      "bytes": 230444,
+      "sha256": "9a2d9efe28aa344d628ed2cb63d35232dfa6bf04eb282ec449cffa4fbbf81e70"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/siyang-11c6225cfe9504.wav",
+      "bytes": 249900,
+      "sha256": "c57aa3acffd2150b22ddf7fded3375427de6c130e656d4764c6b9dfe10dfe7c5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/siyang-63eab0f0b04f3a.wav",
+      "bytes": 270380,
+      "sha256": "69367ce085e47e761f7e410ae0ef828ad42fedadc1fa32eeaeea3666568a25dc"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/baoshi-843d1785eced8c.wav",
+      "bytes": 129068,
+      "sha256": "d763f86b9e9c281e6ae30d4fb5f6f51921e1c77bf5524f248cda32a337257b5c"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-4350bb53ffab93.wav",
+      "bytes": 636064,
+      "sha256": "cec76a7f02058a506d7c7e2ed58d728bae144edb1a3eaa6f584665d2fc569148"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-56145d3d96aa28.wav",
+      "bytes": 107052,
+      "sha256": "4e49398bf4859de3f316520ffb2e522c4c713d47bb80a56b2df79cfe79af894d"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/feihong-6e5f621260b87b.wav",
+      "bytes": 187436,
+      "sha256": "6d99c77dda46a38f0890a75f070367ad0025f2708541b27f94374918661a4ebb"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-72c15b2c88dcb8.wav",
+      "bytes": 167980,
+      "sha256": "ead762a72bb7b152bc15f82c96cd0726edf4e1e0cfcc4aab9b2a81fddbcebe7a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/felix-f554b1c7087f6c.wav",
+      "bytes": 344108,
+      "sha256": "440624510c53f8aecf46a146ad39a9b84337ecf4798c7c503fcd9de3585d3c35"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-d4f7f667a802e3.wav",
+      "bytes": 246316,
+      "sha256": "5d8282967a6dbc87f3acb452deebf51c941195f789f6ca108e94d94c563432c7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-66ca0f7923d752.wav",
+      "bytes": 124972,
+      "sha256": "d5136e29fcb16b1a7674722fddfe5ed825ca19e731c0823d30b3a50a68740356"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-fefc61fbce1a9c.wav",
+      "bytes": 970400,
+      "sha256": "1016a5932186a6bfc593f5edb6c22785de62322186da479e5e072b448a4e212e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-2d08881a92535d.wav",
+      "bytes": 471084,
+      "sha256": "92a1328370f32d2ece3b0eb096db30e806d827f3a4f483bd61e9596b030ef91c"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-ef07c05bf7355c.wav",
+      "bytes": 286764,
+      "sha256": "19227ab2569690fa558e8c3cfb95c17fb0121b5f43d972f2c35215e1f6a05683"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-fec7a7514fc43b.wav",
+      "bytes": 235052,
+      "sha256": "28523c0630de77e58a334aff57ef098ffcef5c9c1988ca108c26fadf53d84289"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-3b356670a92567.wav",
+      "bytes": 63020,
+      "sha256": "d543f13608e9bd8842beb397440efd2f815dcf3205cbe51f7a875eeb73344bb0"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-f69949d22dbfe2.wav",
+      "bytes": 441900,
+      "sha256": "f4719f3cbf26f1a464913343410c4119ba63e9e37673b9f44124eeb9a6d65f67"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-f36fa390f8e296.wav",
+      "bytes": 312364,
+      "sha256": "22730b92de6b2ba9b7399df2efdcf13ad4c7709aa2145c1ab6ba78aa379347d9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-cb8d8089be773b.wav",
+      "bytes": 182828,
+      "sha256": "c1b89aaa836a51cf3f3afabe3694866620f2d9081edf627fefe824ebaac6ea24"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-9b5cf9ffc13252.wav",
+      "bytes": 157228,
+      "sha256": "7b66a1fa2f017c539aade2fc81b49837e97a51d3021ef29677e0c982a8bb7d92"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-967312e7e0387b.wav",
+      "bytes": 684704,
+      "sha256": "354ef208da64e94761b5838d96849a5857b490e21617dfbfce8d26a6cd812f71"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-7b079913f4565b.wav",
+      "bytes": 283180,
+      "sha256": "a7f8de045e077d9a7f043a8f517617eaa159d1fb4952af06bf0e2371a1f524bc"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/feihong-272d5057702b81.wav",
+      "bytes": 242220,
+      "sha256": "6c2bea710b71f4327372dd953267c603031c5d93ee4e65fc6efd520e71245426"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-19ca58455dd2cf.wav",
+      "bytes": 301100,
+      "sha256": "75a28c8e918b182bbe8f7c927e88bc6eec86104c3c902256391488b52cf47b73"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-9e8ad7a6ba751f.wav",
+      "bytes": 384556,
+      "sha256": "d2677fdd1b3a83eda3f1951c747cef2f0afba69991aefde3cb10b48d9136d25a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/baoshi-9feacad582f55c.wav",
+      "bytes": 198700,
+      "sha256": "181b47041d4d2c6ae46cab613f47aafe92c10774ab60429bd16ec387f65c35c4"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-ca1c152874bf18.wav",
+      "bytes": 231468,
+      "sha256": "87082caeeba221b98868c4aa7bd50dbd7fa5c8f228bc3a0db2bbeea0387f5e44"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-3e2481d4815202.wav",
+      "bytes": 279084,
+      "sha256": "6cf41f0587d72286c9441925f04ac8e0a84945e99bbecb569e1449950b527fac"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-37576e83f9601f.wav",
+      "bytes": 371244,
+      "sha256": "528fa6f336d1bca0e019f4edc0e0d43cf93c05b9be798c21c6e151d5c16a6ccb"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-fb7c2c863c071e.wav",
+      "bytes": 381996,
+      "sha256": "fa627899cc90cd528c3e664a9912c3afe47723bff53c0438c4c48669d1099700"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-12b81ebbf8ce09.wav",
+      "bytes": 155692,
+      "sha256": "b84c01d424d3780eec91ec0ce7c763edb5f8a41c1cf2a2e2ff178c363943d926"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-05af8ae1b55fd1.wav",
+      "bytes": 84524,
+      "sha256": "bf1953e01b3f585dfd22afb022e7745c4cb2e39c4564b8e1856b79adcbd07a72"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-3650d9d1aa3560.wav",
+      "bytes": 162860,
+      "sha256": "069ee0da5995fd8ae3fbe076ba178c4ff78018bc6b66f273dae22005c70214a8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-03f323a2228959.wav",
+      "bytes": 194604,
+      "sha256": "e85a7b8529d2082a44f0ef867e001c6fac30f8ca560516440aef901b1b5de10b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-e13a336e84a616.wav",
+      "bytes": 95788,
+      "sha256": "3bc03c4d757556ebd1f523298f96d5736dcb038137983b996391a7dfedf5ec28"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-aac321fce3589e.wav",
+      "bytes": 504992,
+      "sha256": "56b4831330a52e54dd2b8c63782d0fc403873351fb9258ea970920d32892042b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-2fd337c9cea74f.wav",
+      "bytes": 512160,
+      "sha256": "cba73ed5ec8b22dadaa2eee01b32277af5ce69c63516d1bb093e42fbdb5da22b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-7a7255c13ad9d1.wav",
+      "bytes": 158252,
+      "sha256": "f70d374484216512b72fa56e80cfab2eb3ef5c0e33a88664f178f582327b0e16"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-f3cb24dcae1c63.wav",
+      "bytes": 220716,
+      "sha256": "24a0c059043075720b1f0ec488bac2aabb0b0f7121499fa080a8a54752dabda0"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-0f02e39a3229ef.wav",
+      "bytes": 358444,
+      "sha256": "9357bd7a45f66a53d975afd401d0e6d97253a4b431096aa5d01dbc3cab615c0f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/feihong-25e8d3d9fbb1e9.wav",
+      "bytes": 405548,
+      "sha256": "56f641684066f2cfa5c51cf2b25da3043d37b6077cd2a89557626affd3bd880d"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-4d63a914b55749.wav",
+      "bytes": 209452,
+      "sha256": "ad3c233d677e2c4981e1f57db932c5a839a8782be02d43bd390750747d670edf"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-e8584cd94021d6.wav",
+      "bytes": 618028,
+      "sha256": "d53856afc417d716e3155bb32ed0df77da6c7f8f01f6028caca17badab223806"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-0abe1acdc4fdaf.wav",
+      "bytes": 247340,
+      "sha256": "f515201ba5162fef1cccf243f93f67455ebd9e608a3197eb7641baba35afa8ea"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-86a087dca6e252.wav",
+      "bytes": 528428,
+      "sha256": "1ee3ae31b7546ba1e7c54358bac5e8875b3eecad8648e26239ce8b0687a505c0"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-4bfc9f7acbb549.wav",
+      "bytes": 424492,
+      "sha256": "8aab8c59e569a87c0522921c4f31b3767dbb2a0046ac957dc7d7998ae2ed5e1f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-62d3fd9d3a90a7.wav",
+      "bytes": 365100,
+      "sha256": "1527cf31d1e997651c417ccbd14b1cc423749b423f058e6f59804ee71ed0bcfb"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-9e6e603c903135.wav",
+      "bytes": 140844,
+      "sha256": "1c67c33fd041a9aef87b46abdfccc046c8033ee223c27c6c319fec024ef969cc"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-fd3b88a4503751.wav",
+      "bytes": 285228,
+      "sha256": "6adb19d82227da4d1d1be4d09f7662f0742c67ee18cb01fb6f9a48bdf41ff205"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-f60da82ac7d6b2.wav",
+      "bytes": 372268,
+      "sha256": "b049935bc6535f3fcbb47e486f12fb7b9fff3cb3b197974884454390d02d825e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-eaa122ee512c75.wav",
+      "bytes": 364588,
+      "sha256": "048cd79e0f731a8596bc842097225912efa2487123fbecc4ff08952f75d2e793"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-d785799f3b6518.wav",
+      "bytes": 792224,
+      "sha256": "fd1dd657ea4f5816777b33e3095265aafd77b48cfaf0411fa0c399624f671ca2"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-d9358c49da4a47.wav",
+      "bytes": 154156,
+      "sha256": "93b6535f103d514947368b189459324da0b4ab995abd289ad76944c22af99a9f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-ae4697b44909b2.wav",
+      "bytes": 196140,
+      "sha256": "a0b3a654ccde65649a23b3577f1d6aaea2ed0c52fc70bdc0ce777491dabfd9b7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-de12b3133c6e44.wav",
+      "bytes": 128556,
+      "sha256": "3eeb27288509724309f4765aef4e2dc4d914a771d698b0937022feee7c43c926"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-f484abb1b817cd.wav",
+      "bytes": 242220,
+      "sha256": "30cfad3bd73a87944a88811fa70d33b9578c0cc7729adb5c49fa04bfc67d4624"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/feihong-8b426c2d01571f.wav",
+      "bytes": 233004,
+      "sha256": "fe749dba097f85ed7b0675e343297fcdaab410c23c36fbf25b3e17b7b490c552"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-5ce5db92c9ee54.wav",
+      "bytes": 542880,
+      "sha256": "796d5e20671217f0346b1bc4f22b7207320422f53585aba7d4888dda0c5fa8d5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-1d718aed7bb088.wav",
+      "bytes": 470176,
+      "sha256": "0ee059a2812b2708e8600a820ded15a17a358eb4ec48e4836357a359e4eec348"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-f25d605d3cff6c.wav",
+      "bytes": 286252,
+      "sha256": "cf81486e3ebea08f56196e07b08cc9e4260044d6320173b2d4341b2660cdcd8f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-034dd184ada920.wav",
+      "bytes": 323628,
+      "sha256": "d4f4073dce971ddd5a8791b0ede111134f721485d00ff106354b0b2749e3257d"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-07de0610795e45.wav",
+      "bytes": 484396,
+      "sha256": "2b7b1b6fc65d35daa50b36f4b261bcc9014bf5fae1d8a72130ae681456d8ded9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-f27c33fbe36581.wav",
+      "bytes": 322092,
+      "sha256": "7ded90c61da19df2826abf4d149db64fa4b8ddc13648ee9cc3759ed065302e77"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-144b74d566645e.wav",
+      "bytes": 402988,
+      "sha256": "a77bd1cc8cba0361f543972fbb13148c3f9dc6649fdfb5e6c61c9d689f2a0175"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-d75acaa5925f7b.wav",
+      "bytes": 796832,
+      "sha256": "6a9e0d83df926b1ada2125dc3bb08a0e0ad09b8050617f7ffb60ebdf71d3b52f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-9008ff7c26016e.wav",
+      "bytes": 72236,
+      "sha256": "c16a2395cd556d76ecc336b3ca0b86f5913b289c6f15c509a78898a26986bf4f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-4a82e6988c4643.wav",
+      "bytes": 448044,
+      "sha256": "50c3392d8087ee451a28c12b9e987cfd8b6d7d09c6ab0d89eab4c69eb3c793a6"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-02dec68b5750c6.wav",
+      "bytes": 198700,
+      "sha256": "06cc936763368a9b15afb04d169a7824a9bf96ad2fb74001688c8a8ba3eacf47"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-262c96bbd29594.wav",
+      "bytes": 348716,
+      "sha256": "c86c9b8a8be55542315754a48d1f6d66bc6fd1b77d92755b52efe13f8746b569"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-01c992c0c29095.wav",
+      "bytes": 504364,
+      "sha256": "ab99accac93fbabcbef16bff0693620ccca76bc1b18c4b0a21870e1a08f5d400"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-fef53db3a8a90f.wav",
+      "bytes": 242220,
+      "sha256": "b93538b4d4fa95ad91246511ac5b72057bcfde170dc33c41736e003b1c2105d7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-ba0b4f84f8bb42.wav",
+      "bytes": 185388,
+      "sha256": "8c136e49456cd35b8e160ca9945346f6d3b939cf4d9341ea145fa98702194b92"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-656e533fbc8eef.wav",
+      "bytes": 972960,
+      "sha256": "c38897a71d84d035fa570214cac11b379203156e7687be0054de6158fd8469ad"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-8789587ccbc73f.wav",
+      "bytes": 180268,
+      "sha256": "eb4d036b370f023722a33207216d1e1ffcc780d8a1925f02ec8e974df9db8a73"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-dd462b96fbcfd7.wav",
+      "bytes": 328236,
+      "sha256": "5d08b1c79b201fedb1f5c25234b07750a3539cb1f864c827bd85de8a2348e8c9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-dab2af6e97209e.wav",
+      "bytes": 306220,
+      "sha256": "74ada49693226be534517b3e1914504e49a19696b48c650cd57679ec23f91157"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-dcdd08bc460428.wav",
+      "bytes": 209452,
+      "sha256": "7fc8dd60cfce68dd8dd07293aeb886afa6f7a2434d639b1ff490e9e20102e4a1"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-9049879a07b6b0.wav",
+      "bytes": 544928,
+      "sha256": "00efb6d3345d3c245a556379beb1ffe404d78ad6948d235a132569382f4383ac"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-5124037ad17e02.wav",
+      "bytes": 291372,
+      "sha256": "0cd750caf424aaaa638d2424922a9a9c78c535cfb09139334d23cd965d8f6246"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-ef529f84c5f3ea.wav",
+      "bytes": 293932,
+      "sha256": "23e26970b63ea1fda7715c4159a22a6c6d271e3ca7c482c16df8e1edb58848f2"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-bada431914adcc.wav",
+      "bytes": 178732,
+      "sha256": "48f20c65f8cb08994da438304b321964eead2bf846e0cd5289fd7a808489b31d"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-74aa1fdffd5491.wav",
+      "bytes": 161836,
+      "sha256": "d7219633bc8cfaf9296c1984d8ba571ad96a1a5b7105e2fc517a90e93591dac3"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-e9f0899a133360.wav",
+      "bytes": 518700,
+      "sha256": "8ec9c3855e9bec40167c6106ebd1a599affb7e1af34bc177ccc9eace69111901"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-d47a24ef050ec5.wav",
+      "bytes": 72236,
+      "sha256": "43587d755274d3c9c0e50ae1f889bb76b7dc6361f464522d84eb93f3b9f5467c"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-ee959a42043046.wav",
+      "bytes": 149548,
+      "sha256": "b2df4938a7bad77bc28b8644d35e3f5bd971c7aaa4780f479bb848b784842cbf"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-dd8fc6db9dae1e.wav",
+      "bytes": 286252,
+      "sha256": "d17424559d042e0dc6637497a2190090fff4bb1dddfe42fab2f0f727b19ad4e9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-4a5aaac492aa93.wav",
+      "bytes": 268332,
+      "sha256": "3f18a0a60b4d8d284604483760555e66312c991af067789f57c984fb9daf9902"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-134799f4e406c5.wav",
+      "bytes": 308780,
+      "sha256": "533fe4baaec3aaac4bd2617891616464210215ad780fdafdcd9bb4520a843954"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-3f1db653e032f6.wav",
+      "bytes": 404012,
+      "sha256": "483392aa8d99e6d5ce2486776536cebbabd2424dce20292e376c5e9ac1351ac4"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/felix-3274a008fb4044.wav",
+      "bytes": 198700,
+      "sha256": "971b9e0125027e74dfc8543cda50b5b0deb532af39657c33c576aee0815d6b53"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-47e6e964ee3b62.wav",
+      "bytes": 913056,
+      "sha256": "4c45ccf4431a981e535b2482b57625ecf586664b95acf292c65ca5a677c1b2d7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/baoshi-ffef51d85cc06b.wav",
+      "bytes": 468524,
+      "sha256": "c568b85d9a8d759c2c98e0e95445ebe995fc6803afd950ba19b792df3edbb238"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-94f245844106b3.wav",
+      "bytes": 644256,
+      "sha256": "97585d64cb39d02d895a7805c3ad53b00c58601ac8645750cb572b2522e90dd6"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-568ea9cfd52be3.wav",
+      "bytes": 280620,
+      "sha256": "b74b3aac9a98d9fa3798398cd624b93634d69a50ade8ed5874e55c21dd387cc0"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-3db00ec491c815.wav",
+      "bytes": 515744,
+      "sha256": "6f2b62a073a3ac346996a451da02b0268d33bd846821f7594fad44719e24e981"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-a94d3e62ddf939.wav",
+      "bytes": 279596,
+      "sha256": "756f5ec9628f1f1427df3e48e304f9bfb19100460e45e1067b3d817b1f51a059"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-0e70629a16db06.wav",
+      "bytes": 343084,
+      "sha256": "182fc7b5bde0da577c571cc164f962a7ea0748b360aa1b65a83a6d111fa44e58"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-9bd6bb32f0ef5c.wav",
+      "bytes": 226348,
+      "sha256": "831aaec0d0d2719445796af519af91567544e0dcbbf9a6e9a234edc374d8fc21"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-ed8d6aa3369f4a.wav",
+      "bytes": 305196,
+      "sha256": "5e9781ca1ea352b144da20830a1eb0f606737466280a9b3a81bcc9302971ed6b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-9ebabf95b9539b.wav",
+      "bytes": 270380,
+      "sha256": "288d333e6442e77bdb2710ccfe307cc8cec1c1af8e39e60b16cc667847d135ff"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-1d1b646cea9709.wav",
+      "bytes": 499756,
+      "sha256": "ef9e8c616428c5bbf1b292010c54c0cff9807afb645ea734cc166be77d1547dc"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-3be4892dbd4611.wav",
+      "bytes": 557216,
+      "sha256": "a21e98ccc2683e5bb459a5c938b14fe879c8399deb02a2d3f7f328199b4a7764"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-27b0f0c496b433.wav",
+      "bytes": 243756,
+      "sha256": "1e923b90ef370f05b20a3f28ac7160f331d811876a71d0c259577517dc399b00"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-567a894c32fd1c.wav",
+      "bytes": 193580,
+      "sha256": "868e6a14d8ed73ea8ebce2a4494b003bc9e1a9f8fa176d46505408bb30a6e356"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-69cb81a9db1b90.wav",
+      "bytes": 106540,
+      "sha256": "f5ee20dcfb88842803ab96d37a9b6b4c1dbfbe903094043ab810f61ec8361c22"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-208746a79d53f8.wav",
+      "bytes": 519212,
+      "sha256": "93087edbafbea83ec6964767934396d359dca5446f06ed5501f54389a46186b4"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-c9295afc737bad.wav",
+      "bytes": 145964,
+      "sha256": "670e8d29ad924bc9aa66a96dbcd94f8c71dc019117ff69a688dde35b4ba11b29"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-28c016c60d431d.wav",
+      "bytes": 236588,
+      "sha256": "7e23e52051930d998b410a9ce4911c63adfc4d95c09391b75b0a90c0898ef349"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-9594341a56e803.wav",
+      "bytes": 90668,
+      "sha256": "fd4be0397e947e64a2e41d97127e84997bffeb199734c60a42489868556a7c75"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-f685e61a3d07e8.wav",
+      "bytes": 404012,
+      "sha256": "f8e69b278b4721b81140b57a7dd0f665d5e92286da58d55dd507f49a973bc262"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-a81b07274291f4.wav",
+      "bytes": 87084,
+      "sha256": "b175f7bc034b772522fb717ef07131020657f26e3a121e29fcc1d0f56daeb9aa"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-cd71ff6e1c8da2.wav",
+      "bytes": 406572,
+      "sha256": "a91cac82def83bf75053ff353c126513d3ab9a8ae22e43d1c5ddc4d67f15f8a9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-e98134cdeb628b.wav",
+      "bytes": 204332,
+      "sha256": "ee389ad41e7e32a6f0ab2a12d79f7d5d214ff92299c633f9f2cebc80e3c35295"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-88ec372d4bfe6a.wav",
+      "bytes": 269356,
+      "sha256": "98c0e61828f373853066beb6a4b013a46e2ffeb7fcf558c6d4c508e6ae378f18"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-7a5c6408f2a0e3.wav",
+      "bytes": 604832,
+      "sha256": "ebdbacf33c7dcfad9eb44bdad651f90ed279c6216478df29ea3574b60a8555b5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-a82a8f6473f310.wav",
+      "bytes": 615468,
+      "sha256": "a53c03063082f4ce0be462b7c65f477377885b525a8ebdd0a3d2000d5199ad3f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-a19da40d3cf302.wav",
+      "bytes": 296492,
+      "sha256": "b74cd6fe708c50213cce793e2ba533fa17b14e41bdf8b44b14a4a02e34151187"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-360d77393b4ac3.wav",
+      "bytes": 303660,
+      "sha256": "8f0646af5adfb99cc7dcfdec5e6e6949d35706f99ef53fef77b96aed54d0154c"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-f2b32a1db6734e.wav",
+      "bytes": 119340,
+      "sha256": "74b05b0bef69b3fe7ca8aa189b221b20ea384e75e20c8ee7186f0adcdf04f493"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-08b01abb8880ee.wav",
+      "bytes": 380972,
+      "sha256": "8b7b39772aee1c7c2489b84a44dfe7fcad1fea1f80be8b33eebf4283c520c406"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-22d3484c58abf0.wav",
+      "bytes": 225324,
+      "sha256": "1f84111f0bc97ce2f4fef3b3a21a5f08c64791c83651441d209576112d25c312"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-79006e8162a5ab.wav",
+      "bytes": 184876,
+      "sha256": "e2c2e6176ebe2478494d0b42cd5cbaf21c419c45fa71f702be8aeb26e20938db"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-331a41073ee241.wav",
+      "bytes": 184876,
+      "sha256": "dde4fa603b15d4eade79cb38f624dd1d18d1185fa56e096234b56e1ddb22f3d4"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-d0a9c73bacaf9d.wav",
+      "bytes": 311340,
+      "sha256": "4bb8ee9c68b3f8f09ab064c0286686f8e78309fdba072fba8a1c194cfdc46c83"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/feihong-ac93b929dc8c0f.wav",
+      "bytes": 276524,
+      "sha256": "a90cd8940082fdb3a201425212b1456366a0654631a3837ae218a3c4601a32ee"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-3a531b25490614.wav",
+      "bytes": 154668,
+      "sha256": "71a039770f7fe78030ad20be69ba42d3820735c0623742bad773e46bfa8097d7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-f930071b92f13b.wav",
+      "bytes": 546464,
+      "sha256": "3dca3bd66f408396faea4de7ea08212816cd26eeaf5c11e7f18a2cabf40956e0"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-5f0721f161d841.wav",
+      "bytes": 166444,
+      "sha256": "4aed0b553f1c1afa7e0debc74eef15c5d03db0b364e6a1f797dbe9a440862262"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-3e6dfc7d830f40.wav",
+      "bytes": 294956,
+      "sha256": "1f9f5c0d1ebb8aea8a45765462acf576f494b8c83747b25f45f06211d360291a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-5161fe09ca8bac.wav",
+      "bytes": 294956,
+      "sha256": "48458acf8109b09555428e70bbc466a36900330e17c1a7a7b1c2fb4ae8db4a39"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-01f1dd96b6effa.wav",
+      "bytes": 308268,
+      "sha256": "4e3f497c87730842f307497687f8f5bad2fd8a8c06e64b86c3b32e1c5c3624f0"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-f7226cd5363961.wav",
+      "bytes": 600224,
+      "sha256": "f9cb89a6a9de15f87b51b439916d5dad8a7ddd0614a0dcacae9e9b98a71165d5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-d0a4860fb651a7.wav",
+      "bytes": 515232,
+      "sha256": "c539833d1d5a2f3c36e97625251669c8d745e7472ed8552cc6cd27449768092d"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-0ba391db2fd1e8.wav",
+      "bytes": 356396,
+      "sha256": "60c83738006d48a617c425f29fadad72f68c9e74f68448002525f688dd495306"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/feihong-271af0ce04c3e9.wav",
+      "bytes": 580140,
+      "sha256": "0e4341d1e35af0536349a3549f093b079db30a56e116c6092a13431418a3b5bf"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-052702c69fe366.wav",
+      "bytes": 91180,
+      "sha256": "f5e00085bb4d7c046592285eb2d3d1be8d89fec209144770e07e2005edc3f55a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-99b342141b4afa.wav",
+      "bytes": 199724,
+      "sha256": "ae4e5d1c71a7bb4bb16e19928a5e8e42fc6e1c13d678ea375d61bfc6f7b7b5f8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-831153dcae8ad0.wav",
+      "bytes": 215596,
+      "sha256": "4f69e5b922b68ad431cde7cde80f21f2fdf83ffcfe60f9f1b4fcdf2b162c685e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-25188e813f06f2.wav",
+      "bytes": 405036,
+      "sha256": "ca17ceae38a332cc9f74dbc2b4eb4039d3815a17fc2ca0a02d563649b830585a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-cc1c2b0473f65d.wav",
+      "bytes": 988320,
+      "sha256": "1301447029a6eef876bb22d6058189027ffb7caf40e48b97b826c2e67dd41ec5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-fbf71a43d58620.wav",
+      "bytes": 342572,
+      "sha256": "96a54df004523dd4f6c0ae5e2446671750be782eef8431c81dd511b02da5fed9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-6ff7ad242fb74b.wav",
+      "bytes": 143404,
+      "sha256": "acf592a04cfd4dba0a992a473eec6916983e809542abe4f394e4578eb1834c1a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-fac937b9b05ee5.wav",
+      "bytes": 424492,
+      "sha256": "2902c777fec7804211072f3cd1f5b8c4c155bce3cc396131c05d57fda3efef54"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-a5f7cd13ab7a30.wav",
+      "bytes": 447020,
+      "sha256": "3c9c5d9a999b252c08f5d1678856e0af30ec1cbde206d8200be6d873c8c7674f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-675af5e72a1842.wav",
+      "bytes": 72748,
+      "sha256": "e0a26325b61ae3fe8bb33c711204932b08918e468b00fa13adc1f5e839897b02"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-51a6afb5e82f1d.wav",
+      "bytes": 148524,
+      "sha256": "ece8297d038812f54b14c6eab8dc855b56c451d3ee456dc25f4dad3c8b72ad4d"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-04552650fb0dec.wav",
+      "bytes": 284204,
+      "sha256": "3d6209b8af81d331e0df725392a26a5a3a47836ef519a73efea155cf94a1f825"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-206c5e4283ce40.wav",
+      "bytes": 883360,
+      "sha256": "b249e6eb4d5150477e18abe2964b78c2ab7ca42a4480a0617e9c571608f4b1f2"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-d913499f524b9f.wav",
+      "bytes": 402988,
+      "sha256": "8cfd507f44ced7ad1312aa24a70282442157577ae031f9e15fe04eb3315eb7c0"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-af4999e35edce2.wav",
+      "bytes": 700576,
+      "sha256": "b95b5b67153e0513541a09f834359837ebe3dffb4e0448c308a7c3bf98b11530"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-9ed5e81db91dfd.wav",
+      "bytes": 330796,
+      "sha256": "bb93d651bed6fdd7e0d22e96d425a6e9ceb7985eacace1a5f6c10416b9726daa"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-f0b3d269aa3682.wav",
+      "bytes": 212012,
+      "sha256": "6d9c943356b0d95d1db33073392f3d5d310c27172b6fddd69c4a06c79fb28fde"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-1ea20cfd3deb14.wav",
+      "bytes": 178732,
+      "sha256": "1d10521fb19ba0a671176042bd81b06cbbc41b07adbb703794239123bd6ab3e1"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-ab52573cedd095.wav",
+      "bytes": 298540,
+      "sha256": "62a07b3c4f83313486e02b3799e2d9a15c4b2124599f0e53c97502236696d431"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-036df366ee35dc.wav",
+      "bytes": 571040,
+      "sha256": "0b1ac62c48add7f560df203e6f303b5ddb7d4940b1be4218057c79ea11b70fa5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-aaa7e0002fa855.wav",
+      "bytes": 323116,
+      "sha256": "de6796b290cfc787aa21094cd108e40096958c5de48bda2e4857a9a67530552e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/baoshi-dcdf2c07e8c4f8.wav",
+      "bytes": 189996,
+      "sha256": "1335ca618e0ce23399b376c2303098eabb53d59be725c63b37e40a8239806106"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-ee8e596b3690d4.wav",
+      "bytes": 470060,
+      "sha256": "9ed5946cf4b82c0f5f66c65b0e05415442737d5fa139ce43556afec0215bf9d4"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-852f68756c6897.wav",
+      "bytes": 418464,
+      "sha256": "ab11751b86a2393df880061944d7c1cd8b19f7bbcf4cb83e4e7a9fd075ecbcd5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-fc4a9d1f5ee93a.wav",
+      "bytes": 321068,
+      "sha256": "8371e6b0cb65c8c7fbd8f975978eac6c486eb629e4428a3c63ec66fe4723d574"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-e2b1155c950476.wav",
+      "bytes": 119340,
+      "sha256": "9c90c42bc99e57a051beb9f9b1644c096f6b5fa4c5210a57388ac3169eb66774"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-4bd918c9dce72d.wav",
+      "bytes": 512556,
+      "sha256": "e740ffefa40e117997e5110a80a1c223067fed6bde5a147edb2407b72cb7163a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-988f026eeedbe4.wav",
+      "bytes": 137260,
+      "sha256": "42058539786c3bff82106584639e0e2451f9dc824ff92552e0acebc0085f768b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-977a9fa43e20b2.wav",
+      "bytes": 491168,
+      "sha256": "9a20d015b0906e04468f184825b8b72bfcd4e08ebb80caecb3584e3c99395c74"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-4976038ed92e36.wav",
+      "bytes": 358444,
+      "sha256": "d8c5360b05acecf0bef811370776b792134ce4eee633550f9e0bd145b04bc146"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-c57d696d1ef6f4.wav",
+      "bytes": 745632,
+      "sha256": "ad5e123ce18b7ebc18ca9ff39b1a8ac5051a8abdf1c339ff064e36391f13cc1a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-1c09f81be60d22.wav",
+      "bytes": 124972,
+      "sha256": "282d9c8f5e4e92361c285c9b8feb7c99599457ec1fae5806b044603ba2566fb9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-816db80583a867.wav",
+      "bytes": 270892,
+      "sha256": "d5d5a71f9e846d9c1e624fc914f5148991b1ba8b5cc788f119f6df19435fc6b4"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-5442059f3296f0.wav",
+      "bytes": 543276,
+      "sha256": "35683797ba168fff5fb33574b2ab3ab1bb700d730f3362a4e6e6448011b214c0"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-bac629eab90680.wav",
+      "bytes": 134700,
+      "sha256": "bb5bde0a1451fbacde19dfce52e7f229952d76681c878c69e829b8e6610bec87"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-bbda10310570ef.wav",
+      "bytes": 276524,
+      "sha256": "77a6f3daea1918fdfc9342cf33da8d7a3719c6a2880bc46c128d3da67a0a3981"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-8008bdd04f2118.wav",
+      "bytes": 188972,
+      "sha256": "d9e9ea90bf503a0661397ae09926494c9e7db07d750b4d9e43f80275e1489e1c"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-048f6faf7589c3.wav",
+      "bytes": 539296,
+      "sha256": "715889ecc538a79aaef0b12a6480f6b51fefae9f9aab3d47aa7d2d08868480cb"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-7b7184a7cbc325.wav",
+      "bytes": 401452,
+      "sha256": "fd892158909105a3c3edb5ba276bda317669f82304163a00de55806cd877d5fd"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-86f0ae71e831ee.wav",
+      "bytes": 440364,
+      "sha256": "b2dbc08ac758598525530be76166928de8661f7f34f666cf2a200e5abaaf9ef1"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-c009a8663ce05c.wav",
+      "bytes": 177708,
+      "sha256": "2f5dee0b2f08767a2f9fcf76a3c17ffcc61aa3d646a359ee846648427de00563"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-7ccc3994be7e59.wav",
+      "bytes": 641580,
+      "sha256": "d1d01231c701529d47ec7ecd0a296ea76b80fa70d3d45fdd3d7f97d15822a7e5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-8841ecc3e0492e.wav",
+      "bytes": 368684,
+      "sha256": "d17187a75c370de25d436a4c004d9f7187619b0703154213ae7a2e69d714b4d7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-122ca8b63d99d3.wav",
+      "bytes": 735904,
+      "sha256": "87632a98a452eeb1a9c8cce27ad3860bdbcd0d5814b886ea8a6cb875bcf99527"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/jerry-576b0513be2572.wav",
+      "bytes": 341548,
+      "sha256": "5cb8c2a5eff76267cea7c19eaec0d1e294b5805cdc6d9dbfacec1cf70c0a4c5d"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-1e69cc09ef1389.wav",
+      "bytes": 269356,
+      "sha256": "b555a8403bedb15b4b13b037bc7334159854122cd333e4d634a7882453fd3a76"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-6c192557a04fa7.wav",
+      "bytes": 239148,
+      "sha256": "698e478db97b96ecd821e9296dc077b683e475f356eab37461f04b08171f2fa4"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-0d9aebae92b296.wav",
+      "bytes": 444460,
+      "sha256": "53e6034c20adef6cffbf4f085c55b5160f4581135b8fca892f8f3a5a73704e70"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-d3cde42a9db60e.wav",
+      "bytes": 254508,
+      "sha256": "97f87d8a1772fa43f0730c2edf3523269b7a91e40c95b1333e2cade87338f1f8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-31b0fa790082e2.wav",
+      "bytes": 468128,
+      "sha256": "74fd3a30370078650cf6238a61954a4d576d843fe596ad3115bd774b62dac588"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/baoshi-a1b4cdc16931d9.wav",
+      "bytes": 166444,
+      "sha256": "99f6d119e2f975ee132e15d21b38a306b6d04fa5f435ae1f894b6df05681da62"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-abd61aedb7e003.wav",
+      "bytes": 155692,
+      "sha256": "aab918b4f0491c840a1cbf61b2e752ba091e4913f40ddb9ef31449ad224de471"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-fc36d55b51cb7c.wav",
+      "bytes": 62508,
+      "sha256": "e7af1d131a7ca88a5f2f6b8e0153d93cac1f30d1240a56139471f10efd33d92e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-9be7256114a1ec.wav",
+      "bytes": 445484,
+      "sha256": "0677bbfb8c66c43d6256c6ca8acd3e066f24556cd1d61ae8f32896f61aa22bb9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/siyang-0913655351c7ec.wav",
+      "bytes": 207404,
+      "sha256": "a94981768daa1c24246b1ced7dd77f808fe83c52327a770d788877f2acae52f9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-bb2e5ba81fe8a6.wav",
+      "bytes": 486560,
+      "sha256": "472805a0769d51cf68d329aeed8d905a88c15ae02eb42acba6cab8457344baeb"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-9695a1f6d8c247.wav",
+      "bytes": 826016,
+      "sha256": "00588095fcc5c04a3d22b1009c03972a162934220b78078c72219a237a345276"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-8bffb431731022.wav",
+      "bytes": 397868,
+      "sha256": "3bb9fb9dc4227bd6e649931c60206e812d0bfafccef8e702ff8ef8207fcaf7f5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-c2e9f1335f6481.wav",
+      "bytes": 242732,
+      "sha256": "e4205252fc711d2aeab794eedd96641898e40bd29ec5d9f1c1d35a2c9eabda1d"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/feihong-d66bc17b4c70f6.wav",
+      "bytes": 416300,
+      "sha256": "7b82959c363ada08e32bfd72f7a48fd62992553146a07189a86e2343029490ff"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-9696f5d3a30ab8.wav",
+      "bytes": 453164,
+      "sha256": "c6839820e98c14f1e5d07808e03d6df74123a64fa593f0f5829fe42fd6992a62"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-3bd9a4268ab6e8.wav",
+      "bytes": 132652,
+      "sha256": "032678871979b4d1434163efa27f4535230f5e8d7686aca3704465c4d619c52c"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-af4871fbcea835.wav",
+      "bytes": 202284,
+      "sha256": "b9befa6596159448adb1b69fbe77659cb832a16a2e825f9475f7a5cb4865c21c"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-2d396eada0c23e.wav",
+      "bytes": 833068,
+      "sha256": "9ca229c82b2e136c53140419f128c7414d62692ea7f23d15964689d63f0de891"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-b823c3c44b757b.wav",
+      "bytes": 155692,
+      "sha256": "597c4ebbf48ae01b6faf0e7f93d62e19f14ee91f99a2f153cf927f95d739c454"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-0696e4c85325a4.wav",
+      "bytes": 572576,
+      "sha256": "de40ca5c39f6cf76f1f387eff9084c30c119250f6f7f0d16ff2b30006fa4b6d5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-5fbeac5fb72d30.wav",
+      "bytes": 351276,
+      "sha256": "c7c2e5f2520539b1ba23e2b75b2d5b132f6f6362f9ad1f2621a85f1249ba38c4"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-af2fe5dd2dbe6c.wav",
+      "bytes": 338988,
+      "sha256": "7f568be6badba9a3c6e282df34bc26b0d880df252276c13800c86c85cb43813e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-c474308c7e978f.wav",
+      "bytes": 370732,
+      "sha256": "a9496ea8792ca9ce91f010b0d43c91f999e36b9ff76d04fd7dfd614e150365ac"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-468ef04b6711e6.wav",
+      "bytes": 480812,
+      "sha256": "b2c9e8950e8fa6bf07ddc4aaeab996b3ef59490c7703fd87e78531dfbacbdad3"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-f1c11a165fa46c.wav",
+      "bytes": 180268,
+      "sha256": "13e155475ad7e9785b8f855eb9588128a8d0b316cc88a84691515f15c0f7acfd"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/dijie-48858e439f7fcd.wav",
+      "bytes": 463916,
+      "sha256": "ca3e8853a6e20287ae7cda39d657b2dd029b9146246ece0e329957840507d9ab"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-98904baa040a4a.wav",
+      "bytes": 269356,
+      "sha256": "648b08aeba4d0cda2c18717b42aba0bea297097465fc51a68eeedd0418d90b1d"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-252106ba2f62bd.wav",
+      "bytes": 270892,
+      "sha256": "05e8b04c8ac11634786d10b5e9c6d5da1b1f6305b80da384b14618a63f3d7361"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/qiqi-9a78ef5a42aa01.wav",
+      "bytes": 363564,
+      "sha256": "9e834aa44b38b96e0c29a1b9dbc1fad7508e54756821e065ccc9499424c872cd"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-c324e779732ef6.wav",
+      "bytes": 352812,
+      "sha256": "7c388fc4b2ae0162f4c6d640da54f10f2c275829582568a6425f971abd26c514"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-ef1b34d4be82bd.wav",
+      "bytes": 1088672,
+      "sha256": "eb77c3427cffc25957f4a6323cbcf41740275a7570103c4b67a063050867a985"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-865d154de976f1.wav",
+      "bytes": 242220,
+      "sha256": "6f06ba4c27bb123fe170cb76f370dd21fddec0ee699ffc8073668dbcf22002a9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-775d9cb7d7bd64.wav",
+      "bytes": 147500,
+      "sha256": "5ca8e051e08bdff6491f10cb73773544b85ce76d6a66d951d79acb56c8a182ca"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-88d063ffefff94.wav",
+      "bytes": 160300,
+      "sha256": "1e15419b7ab41b91b8c731eacb90a88f516ca1be46ff966e79787a473e24b102"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-6170162e9448a7.wav",
+      "bytes": 250924,
+      "sha256": "0e257785678bcac5206ce8995b51368f13dc226e9ab1551cc7f0173e917897ed"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-b02fc11758d0b4.wav",
+      "bytes": 330796,
+      "sha256": "24ee51e4398cf93f0426e0d657ff4e480586575105e5f09a1f802b9ed47b9c31"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/baoshi-72c42b17f8a4cf.wav",
+      "bytes": 358956,
+      "sha256": "599fb98b4e29d56e97f57d396a0e56bc9d7620840e23bb3c2ea1fceddeaf6f62"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-faf5affd31e238.wav",
+      "bytes": 562336,
+      "sha256": "abd4e4841458b532155c0e423dabc684c9bb53c7557bebe71ca1c3ec49e9a18b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-161256b3bd8c3a.wav",
+      "bytes": 141356,
+      "sha256": "31fd398706be2178ec158d9643407b221a71ccdd9b19e8e42324f6a506362eab"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-4b16363aaee613.wav",
+      "bytes": 169516,
+      "sha256": "52e2465acb183f96fb4577354ada7926e6dcad30aada3f5d327f98e751ce4272"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-1856ee30b0614f.wav",
+      "bytes": 169004,
+      "sha256": "012c7b6260280ba1358dae30da8a2c88a462187f90981be93195e3a922129e02"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/tim-9e21bf4e66cecc.wav",
+      "bytes": 144940,
+      "sha256": "2a62c7ead38db2d062dd0646563634bf51b0f5479fd8ec128265a0ecac8c81e8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-ea6b778bd53478.wav",
+      "bytes": 431148,
+      "sha256": "86feb35a751517a86c003ad4e9ba9897c93ad093b53750a3713c7f8fdea8d118"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-3e20ae0daa84dc.wav",
+      "bytes": 160300,
+      "sha256": "b96256e678d7e4d53de15da56dd57bea6738ab360e54ead827be13d205551566"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-0fb1b819da6b4e.wav",
+      "bytes": 402476,
+      "sha256": "c13e07e32ce028127f3bf9975463203b2fca190dfdffe6decc4edac402deaeb8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-d804b262954dee.wav",
+      "bytes": 154668,
+      "sha256": "ac57ec9e8e122ba2f3c796c849e8c897b1902490879fd626e343310773a32d3e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/shiyuan-dbca4af5ed7cc7.wav",
+      "bytes": 549420,
+      "sha256": "cdf5485a29db50906b6389f173a8cfee6a1f821b5202664f4b22a6c618e60cd1"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-b7916ee287d35d.wav",
+      "bytes": 169004,
+      "sha256": "7e86ce594146ad0b27eba1d8ac5b200c6d0d6b072a8ce425d84e7b5aa87275b3"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/adrian-d3aa2b80cd554b.wav",
+      "bytes": 1026208,
+      "sha256": "b928a5ad522615ad8651e6d66b63976eae449957a2ce5245b17c884046f53878"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/lala-23eb1fe7a70c9f.wav",
+      "bytes": 272940,
+      "sha256": "b7138d25325667896afe58ed9294efd03c3cbeb546b92038e45ef67528d8f6d8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/emotional-v2/bingbing-3d96e6dad062ff.wav",
+      "bytes": 325676,
+      "sha256": "979c4720614ef56c9c6547627c872d8d84daa7d349fb6c1bb4061a92a1c40c31"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/qiqi-es-58a7589fa28d2c.json",
+      "bytes": 492,
+      "sha256": "90c245a61666e490215b738f349f38c9febe9d9eb06e79c9e74108362b7ae538"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-22f7fb9f533799.wav",
+      "bytes": 188460,
+      "sha256": "4f0a7a6731f92643a39156692354d0bcb4e921f4829ca0f7b61d225c7da7bd39"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/adrian-es-e67f3cb1886a36.json",
+      "bytes": 482,
+      "sha256": "c53d5f3fcb1adda864f4121b65099f153edfa6a196a868567edf2342e50a1780"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/adrian-es-824a72f5c439fc.wav",
+      "bytes": 742048,
+      "sha256": "00fc78906175cf1f0f2861825b8fe9408a25c9657074de831883ddd8b3c8e20e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/siyang-es-8abe9614b2d6fd.json",
+      "bytes": 329,
+      "sha256": "c5d4e473a6fa566e41173b7a16a0f347053035e7b0e1b7a5a3bbfdcdb2928a9b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-1a7bba49a78176.wav",
+      "bytes": 509484,
+      "sha256": "17816441a3e4da325b86c421a1c40e4f986de0766de37d168c0bc793ccbfc29b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-2c8dbe243d7dd7.json",
+      "bytes": 468,
+      "sha256": "a633a5bd04b2172558443cde0b91758e4f55c9d873bec0e099256a08cc6744a8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-1ebf443ef19d11.wav",
+      "bytes": 308780,
+      "sha256": "dee2a7363cd65e8a500aa3ca71d7523ba8e28f60ff508eae0f5e6ee597b20a32"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/shiyuan-es-b1fa802eb49838.json",
+      "bytes": 355,
+      "sha256": "d94fbff65d92c314a9d98f5c8feb0e4f90e14ce2fbcf9aa200ec1e21c84e2d94"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/tim-es-2c6bc8a45f3cbe.wav",
+      "bytes": 350252,
+      "sha256": "9ae1537f6fa92edb8ff36220ec99761c5ae1d99fba4e8ce2a7c710cf5bf0ef5e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-ba1bc1840c4dcd.json",
+      "bytes": 422,
+      "sha256": "5cc9f6dff2658a0156b4ddb48155f282a397b6896a466e6277018b9ff3dcf53b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/bingbing-es-7c89c57a1a6173.wav",
+      "bytes": 362540,
+      "sha256": "d56d44e9b66c17e29f3ee195467c05ccf7a52e00f0378638b19a8be580496c71"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-ba1bc1840c4dcd.wav",
+      "bytes": 348204,
+      "sha256": "c58aefc493645e19b5b6ce641432c0a82b558ca3dde8b4594d7c6083676e440e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/adrian-es-96e30b0e32449a.wav",
+      "bytes": 516140,
+      "sha256": "1c11893866ff706de373fc0bbd2f715d8fd213d235f13d9c2ea774d366ec121f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-3ea6d4e6a77e58.json",
+      "bytes": 373,
+      "sha256": "5f0b25d7ba688c070209aa4a537a1b51bf432b7e77494ef131bc2fcb1df59b08"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-228580d6178630.json",
+      "bytes": 346,
+      "sha256": "ac1580917b947414a4e8e2d7f36155793e36b0c85f4fa954e9d0b639a8a039c2"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/adrian-es-e67f3cb1886a36.wav",
+      "bytes": 538668,
+      "sha256": "ffc1eb5bba44e2f34b882e05533983da842f0580289f43bc720620d61d5a52aa"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/jerry-es-95119f165bd146.wav",
+      "bytes": 387628,
+      "sha256": "20d3d9d8541cbde4342f975cdf3410e08b03173b3195e84f723b7858cd530dc9"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/adrian-es-2f1ff5a9225b4d.json",
+      "bytes": 508,
+      "sha256": "6478e4bc9be0e773135e04699ba4b99ea0ac91bf77db2f82a2dc851f23829189"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/qiqi-es-58a7589fa28d2c.wav",
+      "bytes": 422956,
+      "sha256": "e7af3ecdbf214c62a7a85b64484e8e4ad14b5fb37fdb245b17c976b5185505d8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/adrian-es-824a72f5c439fc.json",
+      "bytes": 528,
+      "sha256": "e73f5f7a559e0b6a3647936f511e4b824abf1964fabe131c15b55fdeafd60a3e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/siyang-es-8abe9614b2d6fd.wav",
+      "bytes": 46636,
+      "sha256": "a12cda0771078a7ab94c9cb2b7eff288891af9b12413317c85b42e0ae9fe0024"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/tim-es-8af17f1e37d0f5.wav",
+      "bytes": 668832,
+      "sha256": "f974d970a3b8dd970c06845c09850df8af83f11f18ecc0981ac5c4c39c3b4276"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-3ea6d4e6a77e58.wav",
+      "bytes": 234540,
+      "sha256": "8ff504fe63ad906014b5138894191f3af121b88ab532f4f64779b2bd07c11518"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-228580d6178630.wav",
+      "bytes": 150572,
+      "sha256": "fba350f1f26b7ed2f1dbae938c45c4ef1281b6c20c7f6b3be04e00e6340d3861"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-314763da8c397d.wav",
+      "bytes": 584236,
+      "sha256": "082b546b78e9e3d1c7606a9ecb607cd1f2ed51a9f8863e59690fa4108787cdc0"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-1a7bba49a78176.json",
+      "bytes": 472,
+      "sha256": "c3061cff28dc51af6b9b52d84b3eb7234280546a539b36b060cf8ab4c319ad9b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/adrian-es-2f1ff5a9225b4d.wav",
+      "bytes": 658988,
+      "sha256": "bcde7dae1ef046b24e1fd7d4ad660fc8edb7be4c8293ae22e9741efa4f1fa077"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/adrian-es-8934131cbabc08.wav",
+      "bytes": 622124,
+      "sha256": "20e3aa91d292bf0b14815027c04f7fca8d2b54b440bcf4095a6a1601628fa531"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-2c8dbe243d7dd7.wav",
+      "bytes": 452652,
+      "sha256": "78f25a27b1f2217c746fc8e97afb56a939195d16920ef8588f1524c6dfa85b62"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-4c1deaf963f27f.json",
+      "bytes": 364,
+      "sha256": "9c55346ca9cd65b75dc15a2ed4a8c59f0da89d106b21157c60dc4bbbacb94de5"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/bingbing-es-e131e03a0495cf.wav",
+      "bytes": 527404,
+      "sha256": "b9214f3a27b465d58305b4605f313fe8a04b45ebee552768fb587266eb65cb86"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/jerry-es-95119f165bd146.json",
+      "bytes": 428,
+      "sha256": "b5095ed2f3147a76ab3e7244ce664b12add65fef48748c789010b8aa8e67e7d6"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-dc7bfe950f30a9.json",
+      "bytes": 413,
+      "sha256": "c86d716849d7a218f2b2a7491b9f90f44388a626b3dd122f636275df59ebef88"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-dc7bfe950f30a9.wav",
+      "bytes": 319020,
+      "sha256": "3c04eac1096f468b2d288829f2aab42017c63119f80fdf715609c07f8e56d029"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/bingbing-es-7c89c57a1a6173.json",
+      "bytes": 434,
+      "sha256": "8cdd6c03d973ce9f48a1d70b1446b3ac7487eec8a021dc8ffa13e8b5777db01f"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/adrian-es-0e764b2751e198.json",
+      "bytes": 341,
+      "sha256": "2fb31538ddf11ecb39032ac5f7c2eb4b68432833d66bb6e8a70c5ef6d9c0182c"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/adrian-es-96e30b0e32449a.json",
+      "bytes": 479,
+      "sha256": "ba5034683d76eaf7d63d5c0a8e473f33e34dabfd06e5a59ee0842b1cfc5cbc9d"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/adrian-es-8934131cbabc08.json",
+      "bytes": 489,
+      "sha256": "dc3109e7134d34ce89fc80bd4dc2551f3770f58e0181aa15138fe91e8caa3b37"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-a43fedb5e5aad0.json",
+      "bytes": 398,
+      "sha256": "fb270f0b4e33a0145d9dffb5c7a1767ebade2dc581575cb6d158a3d31971a347"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-850610f0d9b448.wav",
+      "bytes": 527916,
+      "sha256": "a2dcfc82c01f85ed88df1eb3aaa66951e6f869f91ffb5ae76687876ddd8ade9b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/tim-es-8af17f1e37d0f5.json",
+      "bytes": 515,
+      "sha256": "56e75f989d8d84cafd6e4672c5a1ceff3974c7d4296fff5a7fe64e08920aea2c"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-0ab6dd9f0a43e9.json",
+      "bytes": 495,
+      "sha256": "94a87bcc3f2955ea54a23789ea82412468cc6e955997bff099b9d698749f0e8b"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/tim-es-2c6bc8a45f3cbe.json",
+      "bytes": 409,
+      "sha256": "9189b0ec3138ec4bc60d2857ce998060046cb64d06da740f5ac6f5aa60bc0b62"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/adrian-es-0e764b2751e198.wav",
+      "bytes": 138284,
+      "sha256": "f66258c61e0d4f17797a46cf7ad004178875077cf1e2b89186962459808fd863"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/bingbing-es-e131e03a0495cf.json",
+      "bytes": 455,
+      "sha256": "9c12c3fda6707ac6969b117c710310d03487834e058e75722b6869eeb2cb69d7"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-1ebf443ef19d11.json",
+      "bytes": 405,
+      "sha256": "2751347aada05bff7941e6984fb1100f4432b8ac7df2248895b36db6d232e2d6"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-96fab2b7fe4c4c.wav",
+      "bytes": 469548,
+      "sha256": "7e9ba8a1f3d540df31a11e8beec11fb424898ab3b150e7ce3a408da1d09017d8"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-a43fedb5e5aad0.wav",
+      "bytes": 351276,
+      "sha256": "5cdffad88bddb123835569a2d4d38ed909216f6ba9e31f49e2bd6cae56746fbe"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-96fab2b7fe4c4c.json",
+      "bytes": 445,
+      "sha256": "a6d08b782c3fd7090151e352d51747b88b7b0e19593aeccfbe609151ece3b4cb"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-4c1deaf963f27f.wav",
+      "bytes": 193580,
+      "sha256": "f95716adfa5de021f488cdb2fa88c35395bd863789cc53b369aed2103f9cb94a"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-576230c1e2c822.json",
+      "bytes": 461,
+      "sha256": "1d834fb9e71d72da265ee3fbc309c858667436be039c372e7c89934b50bbca32"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-0ab6dd9f0a43e9.wav",
+      "bytes": 580140,
+      "sha256": "92cd497e2769b04753bc276df08d0bd2a22d7c021ec6c210cfd3c412da73e97e"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/shiyuan-es-b1fa802eb49838.wav",
+      "bytes": 124972,
+      "sha256": "39ba6e5cb9a4b0781c9b565fb7185623e5489d0a37684e52d5356a9843cee636"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-22f7fb9f533799.json",
+      "bytes": 357,
+      "sha256": "3678572843ab4d0da0aa4ea50da18b013d71f8135f0f6883db6663641ccc76c2"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-850610f0d9b448.json",
+      "bytes": 480,
+      "sha256": "1623d783a8b9c086853d349d55d8c530b9e0c7d8b0e6f9f24d6af7df46437ced"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-576230c1e2c822.wav",
+      "bytes": 459820,
+      "sha256": "72f56afd447428e1473a70676939b3a2109d497e4da4517ec0477d6966174674"
+    },
+    {
+      "path": "assets/audio/moonlight-castle/voices/source/spanish-v3/dijie-es-314763da8c397d.json",
+      "bytes": 475,
+      "sha256": "e1929c9e53bac2f283f2862938249058540884d1baeecb0de30713907adec38d"
+    }
+  ],
+  "deletedFiles": 483,
+  "freedBytes": 114467184,
+  "keptProductionMp3": 161,
+  "keptSourceWav": 222,
+  "characterReferencesPreserved": true
+}

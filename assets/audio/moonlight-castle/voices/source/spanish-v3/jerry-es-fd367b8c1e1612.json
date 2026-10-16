@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "7756ec3d68ac2fdd80f2aa1892071c09116c719e887a297ca7ed025e58ac77dc",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "jerry",
+  "referenceSha256": "639dfd96692b3392f0d9de0a7cfaa1f898138a950c1a3251c9929d0f8515fff4",
+  "text": "Este será el último concierto. Para ellos.",
+  "duration": 4.597551020408163,
+  "seconds": 6.36
+}

@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "0b5d2c284e051cc26ed68005c32092cddb2589e22f0c5ac845c548c91a8eaea0",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "qiqi",
+  "referenceSha256": "87726902f1e419f37935b565757023e126ddefb8d105e2aed41eabfaf931dd47",
+  "text": "Mi verdadero nombre es un acertijo. No es el que usáis ahora.",
+  "duration": 4.144761904761904,
+  "seconds": 12.68
+}

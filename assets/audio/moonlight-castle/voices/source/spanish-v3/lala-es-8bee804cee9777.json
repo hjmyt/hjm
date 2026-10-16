@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "342af766500df8ad52b840c36f984a26f2aa2dccffd821c3d74797303c6547af",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "lala",
+  "referenceSha256": "59211808263a0d1ee9b94861f3926f8503ddcc371a9f3345b6831572edc71cca",
+  "text": "Selene... El nombre de la luna.",
+  "duration": 2.2987755102040817,
+  "seconds": 5.06
+}

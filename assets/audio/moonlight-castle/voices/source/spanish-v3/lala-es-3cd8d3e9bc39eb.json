@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "cfcd8a6e56e4b58d4158a892c6b97f5d0345e3046623b4eaca91e235c67d82f8",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "lala",
+  "referenceSha256": "59211808263a0d1ee9b94861f3926f8503ddcc371a9f3345b6831572edc71cca",
+  "text": "Última pregunta. En el piano, desde un do hasta el siguiente do agudo, ¿cuántas teclas blancas hay, contando la primera y la última?",
+  "duration": 8.13859410430839,
+  "seconds": 8.9
+}

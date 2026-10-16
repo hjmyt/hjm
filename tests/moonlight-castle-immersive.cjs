@@ -1,3 +1,4 @@
+const {clickObject}=require('./helpers/castle-objects.cjs');
 const{chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),{pathToFileURL}=require('node:url');
 const root=path.resolve(__dirname,'..'),url=pathToFileURL(path.join(root,'moonlight-castle.html')).href,fixture=JSON.parse(fs.readFileSync(path.join(root,'tests/fixtures/moonlight-castle-v1.json')));
 let b;
@@ -42,12 +43,12 @@ let b;
   if(width<=1000){assert.equal(layout.header,'none');assert.equal(layout.parent,'settings-game-tools');assert.equal(layout.container.top,0);assert.equal(layout.container.height,height);assert.equal(layout.scene.top,0,'Scene reclaims the old header and room-title bands');}
   else{assert.notEqual(layout.header,'none');assert.equal(await p.locator('.castle-header #castle-tools').count(),1,'Desktop restores the same controls to its header');}
  }
- await p.setViewportSize({width:844,height:390});await p.locator('.castle-dock [data-castle-drawer=explore]').tap();await p.locator('#object-tray [data-examine=candle]').tap();assert(await p.evaluate(()=>hasItem('candle')));await p.locator('.castle-dock [data-castle-drawer=inventory]').tap();await p.locator('.inv-slot').tap();assert.equal(await p.evaluate(()=>G.selectedItem),'candle');await p.locator('[aria-label="收起背包"]').tap();
+ await p.setViewportSize({width:844,height:390});await clickObject(p,'candle');assert(await p.evaluate(()=>hasItem('candle')));await p.locator('.castle-dock [data-castle-drawer=inventory]').tap();await p.locator('.inv-slot').tap();assert.equal(await p.evaluate(()=>G.selectedItem),'candle');await p.locator('[aria-label="收起背包"]').tap();
  // A map tile is an actual room entry; physical doors appear immediately on unlock.
  await p.locator('.castle-dock [data-castle-drawer=map]').tap();
  assert(await p.locator('#castle-map-nodes [data-travel=study]').isDisabled(),'Locked study cannot be entered from the map');
  await p.locator('[aria-label="收起地图"]').tap();
- await p.locator('.castle-dock [data-castle-drawer=explore]').tap();await p.locator('#object-tray [data-examine=piano]').tap();
+ await clickObject(p,'piano');
  for(const i of [0,2,4,6,1])await p.locator('.piano-key:not(.black)').nth(i).tap();
  const studyDoor=p.locator('#scene-doors [data-exit=study]');
  assert(await studyDoor.isVisible());assert((await studyDoor.getAttribute('class')).includes('unlocked'));

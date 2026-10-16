@@ -1,20 +1,36 @@
-const{chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),{pathToFileURL}=require('node:url');
+const{chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto'),{pathToFileURL}=require('node:url');
 const root=path.resolve(__dirname,'..'),doc=path.join(root,'docs/moonlight-castle/voices');
 const plan=JSON.parse(fs.readFileSync(path.join(doc,'plan.json'))),report=JSON.parse(fs.readFileSync(path.join(doc,'audio-report.json')));
-assert.equal(plan.version,2);assert.equal(Object.keys(plan.cast).length,12);assert(report.complete,'The emotional voice build must be complete before delivery');assert.deepEqual(report.missing,[]);
+assert.equal(plan.version,3);assert.equal(plan.engine,'IndexTTS-2.5');assert.equal(plan.language,'es');assert.equal(report.language,'es');assert.equal(Object.keys(plan.cast).length,12);assert(report.complete,'The emotional voice build must be complete before delivery');assert.deepEqual(report.missing,[]);
 const scope={};vm.runInNewContext(fs.readFileSync(path.join(root,'js/data/moonlight-castle-voices.js'),'utf8')+';globalThis.lines=CASTLE_VOICE_LINES;',scope);
 const entries=scope.lines,clips=new Map(plan.clips.map(clip=>[clip.id,clip]));
+const sourceQA=JSON.parse(fs.readFileSync(path.join(doc,'spanish-v3/source-qa.json'))),reviewed=new Map(sourceQA.clips.map(row=>[row.id,row]));
+assert(sourceQA.complete&&sourceQA.transcribed&&sourceQA.serial);assert.equal(sourceQA.language,'es');assert.equal(reviewed.size,plan.clips.length);
 for(const clip of plan.clips){
- assert(clip.source.includes('/emotional-v2/'),'Flat pilot takes never enter the current build');
+ assert(clip.source.includes('/spanish-v3/'),'Only the new Spanish takes enter this build');assert.equal(clip.language,'es');assert(!/[\u4e00-\u9fff]/.test(clip.text),'Spoken text is Spanish');assert(clip.sourceZh?.length);
  assert(fs.existsSync(path.join(root,clip.source)));assert.equal(clip.emotionVector.length,8);assert(clip.emotionVector.every(value=>Number.isFinite(value)&&value>=0));
+ const qa=reviewed.get(clip.id);assert(qa?.transcript);assert.equal(qa.expected,clip.text);assert.equal(qa.sha256,crypto.createHash('sha256').update(fs.readFileSync(path.join(root,clip.source))).digest('hex'),'QA applies to the exact delivered source');assert(qa.saturatedFraction<=.001,'Excessive upstream clipping was retaken');
  for(const field of ['contextBefore','currentBeat','contextAfter','delivery','emotion'])assert(clip[field]?.length,clip.id+' '+field);
  assert(!/[<>]/.test(clip.text),'No HTML or stage directions in synthesized speech');
 }
 for(const line of plan.lines){
  if(!line.clips.length){assert(!entries[line.source]);continue;}
- const entry=entries[line.source];assert(entry,line.id+' is packaged');assert.equal(entry.id,line.id);assert(fs.existsSync(path.join(root,entry.asset)));assert(entry.duration>.25);assert(entry.asset.endsWith('.mp3'));
+ const entry=entries[line.source];assert(entry,line.id+' is packaged');assert.equal(entry.id,line.id);assert(fs.existsSync(path.join(root,entry.asset)));assert(entry.duration>.25);assert.equal(entry.language,'es');assert.equal(entry.spokenText,line.spokenText);assert(entry.asset.endsWith('.mp3'));
  const speakers=[...new Set(line.clips.map(id=>clips.get(id).speaker))];assert.deepEqual([...entry.speakers],speakers,line.id+' explicit speakers');
 }
+const registry=JSON.parse(fs.readFileSync(path.join(root,'assets/characters/voices/registry.json')));
+assert.equal(Object.values(registry.characters).filter(p=>p.sourceKind==='user-provided').length,11);
+for(const [id,p] of Object.entries(plan.cast)){
+ const metadata=registry.characters[id];assert(metadata);assert.equal(p.reference,metadata.reference);
+ assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,p.reference))).digest('hex'),p.referenceSha256);
+ assert.equal(p.referenceSha256,metadata.sha256);
+ assert.deepEqual(JSON.parse(fs.readFileSync(path.join(root,p.metadata))),metadata,'Per-character metadata agrees with the reusable registry');
+ assert.equal(p.pitch,id==='felix'?1.3:0,'Provided voices retain their original pitch');
+ assert(fs.existsSync(path.join(root,metadata.original)),'Original user references are retained');
+ assert.equal(crypto.createHash('sha256').update(fs.readFileSync(path.join(root,metadata.original))).digest('hex'),metadata.originalSha256,'Original reference remains unmodified');
+}
+assert.equal(registry.characters.siyang.cardId,'yeshiyang');
+assert.equal(registry.characters.felix.sourceKind,'existing-reference-user-confirmed');
 const line=id=>plan.lines.find(line=>line.id===id),emotion=id=>line(id).clips.map(id=>clips.get(id).emotion);
 assert.deepEqual([...entries[line('talk.servants.1.0.text').source].speakers],['baoshi','feihong']);
 assert(!line('talk.servants.4.3.text').clips.length,'The word dream in narration is not dialogue');
@@ -37,8 +53,10 @@ let browser;
  await page.goto(url);await page.click('#start-btn');assert.equal(await page.evaluate(()=>castleVoiceEvents.length),0,'Unvoiced narration never starts a character clip');
  await page.locator('#npc-siyang').click();
  await page.waitForFunction(()=>castleVoiceEvents.length===1);
+ assert.equal(await page.evaluate(()=>CastleVoice.player.lang),'es');
+ assert.equal(await page.locator('#castle-voice-replay').getAttribute('aria-label'),'重听本句西班牙语配音');
  assert.equal(await page.evaluate(()=>castleVoiceEvents.at(-1).src),entries[line('name.siyang.ask').source].asset);
- await page.waitForTimeout(100);assert(Math.abs((await page.evaluate(()=>CastleAudio.audio.volume))-.08)<.015,'BGM ducks to 20% while the actor speaks');
+ await page.waitForTimeout(100);assert(Math.abs((await page.evaluate(()=>CastleAudio.bgmVolume))-.02)<.005,'BGM ducks to 5% while the actor speaks');
  assert.equal(await page.evaluate(()=>CastleVoice.player.volume),.8,'Voice is clearly above the ducked BGM at the default mix');
  await page.evaluate(()=>CastleVoice.player.currentTime=1.25);
  await page.click('#pause-btn');assert(await page.evaluate(()=>CastleVoice.player.paused));
@@ -47,10 +65,10 @@ let browser;
  assert.equal(await page.evaluate(()=>castleVoiceEvents.at(-1).src),entries[other.source].asset);assert.equal(await page.evaluate(()=>castleVoiceEvents.at(-1).time),0,'New dialogue replaces rather than overlaps');
  await page.click('#castle-voice-replay');assert.equal(await page.evaluate(()=>castleVoiceEvents.at(-1).time),0);
  const count=await page.evaluate(()=>castleVoiceEvents.length);await page.evaluate(()=>CastleUI.sync());assert.equal(await page.evaluate(()=>castleVoiceEvents.length),count,'Redraw never replays speech');
- await page.evaluate(()=>finishCastleVoice(CastleVoice.player));await page.waitForTimeout(300);assert(Math.abs((await page.evaluate(()=>CastleAudio.audio.volume))-.4)<.015,'BGM returns after speech');
+ await page.evaluate(()=>finishCastleVoice(CastleVoice.player));await page.waitForTimeout(700);assert(Math.abs((await page.evaluate(()=>CastleAudio.bgmVolume))-.4)<.015,'BGM returns after speech');
  await page.evaluate(text=>{window.failNextCastleVoice=true;showText(text);},other.source);
  await page.waitForFunction(()=>document.getElementById('castle-voice-replay').textContent.includes('重试'));
- assert(Math.abs((await page.evaluate(()=>CastleAudio.audio.volume))-.4)<.015,'Blocked playback never leaves music ducked');
+ await page.waitForTimeout(700);assert(Math.abs((await page.evaluate(()=>CastleAudio.bgmVolume))-.4)<.015,'Blocked playback never leaves music ducked');
  await page.click('#castle-voice-replay');assert.equal(await page.locator('#castle-voice-replay').textContent(),'▶ 重听');
  await page.evaluate(()=>{window.castleFollowups=0;CastleVoice.afterSpeech(()=>castleFollowups++,100);});
  await page.waitForTimeout(350);assert.equal(await page.evaluate(()=>castleFollowups),0,'Automatic follow-up waits for actual audio completion');
@@ -95,7 +113,7 @@ let browser;
  await page.evaluate(()=>{CastleUI.mark();CastleUI.persist();});
  await page.reload();await page.click('#continue-btn');assert.equal(await page.evaluate(()=>castleVoiceEvents.length),0,'Ending restoration never briefly autoplays the saved speech');
  assert(await page.locator('#overlay-voice-replay').isVisible());await page.click('#overlay-voice-replay');assert.equal(await page.evaluate(()=>castleVoiceEvents.length),1);
- assert.deepEqual(errors,[]);console.log('PASS: complete emotional voice corpus, explicit cast/context/moods, auto playback, replacement/replay, voice/BGM mix, volume/mute, pause/background and silent save continuation.');
+ assert.deepEqual(errors,[]);console.log('PASS: complete IndexTTS-2.5 Spanish voice corpus, provided reusable voice references, explicit cast/context/moods, auto playback, replacement/replay, voice/BGM mix, volume/mute, pause/background and silent save continuation.');
  await context.close();
  // Use the browser decoder and real local media once, independently of the
  // deterministic playback fixture above. This catches corrupt MP3 delivery.

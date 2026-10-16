@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "ca5ee5cdac4940dd28ed9e688e313ee2cf3b05075c343fc6d62c62948a6bd65e",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "adrian",
+  "referenceSha256": "ec4cb8ba8632a01aab283bdf18ac8cc441f953cfce7ec5951445d5a04c8a846b",
+  "text": "Otro que sabe correr. Interesante.",
+  "duration": 4.725260770975057,
+  "seconds": 11.21
+}

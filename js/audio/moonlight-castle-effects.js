@@ -1,7 +1,10 @@
 'use strict';
 // Locally synthesized Foley and resonant strings: no downloads or extra media.
 const CastleSfx = (() => {
-  const durations = {'piano-unlock':2.5,unlock:.8,door:1.3,locked:.45,mechanism:1.05,glass:.9,'music-box':1.65,'tuning-wolf':1.5,'tuning-pure':1.5,'tuning-tritone':1.5};
+  const durations = {'piano-unlock':2.5,unlock:.8,door:1.3,locked:.45,mechanism:1.05,glass:.9,'music-box':1.65,'tuning-wolf':1.5,'tuning-pure':1.5,'tuning-tritone':1.5,
+    'touch-piano':.65,'touch-metal':.38,'touch-cloth':.42,'touch-flame':.5,
+    'touch-wood':.36,'touch-clockwork':.55,'touch-glass':.48,'touch-paper':.46,
+    'touch-flute':.6,'touch-harpsichord':.7,'touch-wine':.58,'touch-organ':.85};
   function render(id,rate) {
     if(!Object.hasOwn(durations,id))return null;
     const data=new Float32Array(Math.ceil(durations[id]*rate));
@@ -29,7 +32,31 @@ const CastleSfx = (() => {
       ring(start+.14,.13,1160,.16,35,.3);scrape(start+.14,.045,.26,4300);
       ring(start+.27,.29,105,.22,15,.15);scrape(start+.23,.18,.25,700);
     }
-    if(id==='piano-unlock'){
+    if(id==='touch-piano'){
+      ring(0,.6,130.81,.3,6,.16);ring(.015,.5,196,.12,7,.1);scrape(0,.045,.25,1400);
+    }else if(id==='touch-metal'){
+      ring(0,.34,640,.24,13,.5);ring(.025,.3,1177,.15,15,.3);scrape(0,.07,.25,4600);
+    }else if(id==='touch-cloth'){
+      scrape(0,.23,.75,2400);scrape(.15,.23,.5,3600);
+    }else if(id==='touch-flame'){
+      scrape(0,.3,.7,1500);scrape(.17,.22,.45,4800);ring(.02,.15,180,.1,20);
+    }else if(id==='touch-wood'){
+      ring(0,.2,155,.32,21,.15);ring(.075,.22,228,.22,20,.2);scrape(0,.22,.36,900);
+    }else if(id==='touch-clockwork'){
+      scrape(0,.3,.4,900);ring(.035,.19,820,.22,27,.25);ring(.18,.23,1090,.18,23,.25);
+    }else if(id==='touch-glass'){
+      ring(0,.42,1670,.23,10,.1);ring(.015,.4,2470,.14,12,.2);scrape(0,.035,.22,4800);
+    }else if(id==='touch-paper'){
+      scrape(0,.16,.7,4200);scrape(.12,.19,.65,2300);scrape(.28,.13,.5,5500);
+    }else if(id==='touch-flute'){
+      ring(0,.5,523.25,.26,7,.02);ring(.01,.44,1046.5,.045,9);scrape(0,.2,.2,1300);
+    }else if(id==='touch-harpsichord'){
+      ring(0,.64,207.65,.27,7,.6);ring(.012,.5,415.3,.1,9,.3);scrape(0,.035,.22,5000);
+    }else if(id==='touch-wine'){
+      ring(0,.45,740,.23,10,.3);ring(.06,.45,1180,.17,12,.2);scrape(.02,.28,.34,650);
+    }else if(id==='touch-organ'){
+      ring(0,.78,98,.28,4,.1);ring(.015,.75,196,.15,5,.06);scrape(0,.3,.19,700);
+    }else if(id==='piano-unlock'){
       for(const [freq,level]of [[65.406,.3],[98,.12],[130.813,.17],[196,.07],[261.626,.06]])ring(0,2.35,freq,level,1.9,.12);
       scrape(0,.055,.17,2300);latch(.62);
     }else if(id==='unlock')latch();

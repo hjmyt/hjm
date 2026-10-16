@@ -104,13 +104,6 @@
 }
 .castle-immersive.is-playing .orientation-tip{display:none;}
 .castle-immersive[data-castle-drawer=explore] .explore-panel{display:block;}
-.castle-immersive .explore-panel .object-tray{
-  position:static;display:grid;grid-template-columns:1fr 1fr;inset:auto;width:auto;
-  gap:8px;margin-top:16px;
-}
-.castle-immersive .explore-panel .object-tray button{
-  min-height:44px;padding:9px;font-size:11px;letter-spacing:0;
-}
 .castle-immersive #explore-people{display:grid;gap:7px;}
 .castle-immersive #explore-people button{
   display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 10px;
@@ -118,16 +111,23 @@
 }
 #explore-people button>span{color:#e6c78c;font-size:19px;}
 #explore-people button>small{margin-left:auto;white-space:nowrap;color:#aab7c8;font-size:10px;}
-.castle-immersive #scene-hotspots .hotspot{padding:7px;min-width:36px;min-height:36px;}
-.castle-immersive .hotspot span{font-size:10px;padding:4px 7px;}
+/* Invisible object silhouettes share the artwork's exact pan/zoom plane.
+   No minimum touch size: it would enlarge small props into their neighbours. */
+.castle-immersive #scene-hotspots .object-region{
+  display:block;position:absolute;transform:none;padding:0;margin:0;
+  min-width:0;min-height:0;max-width:none;border:0;border-radius:0;
+  background:transparent;box-shadow:none;opacity:1;outline:none;
+  appearance:none;-webkit-appearance:none;animation:none;transition:none;cursor:pointer;pointer-events:auto;
+  -webkit-tap-highlight-color:transparent;
+}
+.castle-immersive #scene-hotspots .object-region:focus-visible{
+  background:#e6c78c22;box-shadow:inset 0 0 0 2px #e6c78c;
+}
 .castle-immersive .scene-door{min-height:40px;padding:6px 9px;}
 .castle-immersive .scene-door svg{width:18px;height:27px;}
 .castle-immersive .scene-door strong{font-size:10px;}
 .castle-immersive .scene-door small{font-size:8px;margin-top:3px;}
 @media(max-width:1000px){
-  .castle-immersive #scene-hotspots .hotspot{min-width:40px;min-height:40px;gap:0;}
-  .castle-immersive #scene-hotspots .hotspot span{display:none;}
-  .castle-immersive #scene-hotspots .hotspot:focus-visible span{display:block;position:absolute;top:32px;left:0;white-space:nowrap;}
   .castle-immersive .npc{min-height:36px;padding:5px 7px;gap:0;max-width:150px;}
   .castle-immersive .npc-avatar{display:none;}
   .castle-immersive .npc-name{font-size:10px;white-space:normal;line-height:1.4;}

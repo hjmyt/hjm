@@ -315,27 +315,19 @@ const CASTLE_ROOMS = {
     "targets": [
       [
         "piano",
-        "破损钢琴",
-        22,
-        64
+        "破损钢琴"
       ],
       [
         "armor",
-        "盔甲",
-        92,
-        48
+        "盔甲"
       ],
       [
         "tapestry",
-        "挂毯",
-        52,
-        15
+        "挂毯"
       ],
       [
         "candle",
-        "蜡烛",
-        9,
-        48
+        "蜡烛"
       ]
     ],
     "exits": [
@@ -354,27 +346,19 @@ const CASTLE_ROOMS = {
     "targets": [
       [
         "table",
-        "长餐桌",
-        30,
-        70
+        "长餐桌"
       ],
       [
         "portrait_dining",
-        "肖像暗格",
-        33,
-        22
+        "肖像暗格"
       ],
       [
         "musicbox",
-        "音乐盒",
-        48,
-        75
+        "音乐盒"
       ],
       [
         "mirror",
-        "镜子",
-        93,
-        23
+        "镜子"
       ]
     ],
     "exits": [
@@ -393,21 +377,15 @@ const CASTLE_ROOMS = {
     "targets": [
       [
         "bookshelf",
-        "神秘书架",
-        26,
-        30
+        "神秘书架"
       ],
       [
         "globe",
-        "地球仪",
-        86,
-        54
+        "地球仪"
       ],
       [
         "flute_stand",
-        "竹笛架",
-        16,
-        67
+        "竹笛架"
       ]
     ],
     "exits": [
@@ -425,15 +403,11 @@ const CASTLE_ROOMS = {
     "targets": [
       [
         "harpsichord",
-        "大键琴",
-        78,
-        64
+        "大键琴"
       ],
       [
         "violin_case",
-        "小提琴盒",
-        15,
-        64
+        "小提琴盒"
       ]
     ],
     "exits": [
@@ -451,15 +425,11 @@ const CASTLE_ROOMS = {
     "targets": [
       [
         "bed",
-        "四柱床",
-        24,
-        62
+        "四柱床"
       ],
       [
         "dresser",
-        "梳妆台",
-        83,
-        58
+        "梳妆台"
       ]
     ],
     "exits": [
@@ -476,9 +446,7 @@ const CASTLE_ROOMS = {
     "targets": [
       [
         "wine",
-        "酒架",
-        30,
-        30
+        "酒架"
       ]
     ],
     "exits": [
@@ -496,9 +464,7 @@ const CASTLE_ROOMS = {
     "targets": [
       [
         "organ",
-        "古老风琴",
-        35,
-        64
+        "古老风琴"
       ]
     ],
     "exits": [
@@ -507,6 +473,56 @@ const CASTLE_ROOMS = {
   }
 };
 const CASTLE_NPC_CARDS={siyang:'yeshiyang',tim:'tim',bingbing:'bingbing',servants:'baoshi',dijie:'dijie',qiqi:'qiqi',jerry:'jerry',shiyuan:'shiyuan',lala:'lala'};
+// Percent coordinates in each original artwork, not viewport coordinates.
+// Concave outlines exclude foreground characters and neighbouring furniture;
+// small objects sit above the broad furniture beneath them.
+const CASTLE_OBJECT_REGIONS = {
+  'hall-exploration-v3': {
+    piano: {outline:[[0,51],[31,36],[33,39],[29,50],[36,55],[37,65],[33,69],[34,81],[31,82],[29,70],[15,71],[12,82],[9,81],[10,69],[0,65]]},
+    armor: {outline:[[91,32],[95,33],[96,39],[99,42],[98,54],[96,59],[97,72],[100,74],[99,78],[84,78],[84,74],[88,71],[89,58],[86,49],[87,42],[90,39]]},
+    tapestry: {outline:[[35,0],[67,0],[67,31],[63,34],[38,34],[35,31]]},
+    candle: {layer:2,outline:[[5,43],[10,43],[12,54],[10,59],[9,67],[13,69],[13,72],[2,72],[2,69],[6,66],[5,59],[3,55]]}
+  },
+  'dining-exploration-v3': {
+    table: {outline:[[0,51],[31,57],[84,68],[84,77],[78,82],[47,81],[28,88],[5,73],[0,67]]},
+    portrait_dining: {outline:[[27,10],[38,5],[41,29],[30,33]]},
+    musicbox: {layer:2,outline:[[42.5,64.5],[49.7,62.5],[55.5,65],[55.5,71.7],[47.2,73.6],[42.5,71]]},
+    mirror: {outline:[[93,2],[98,3],[100,8],[100,47],[90,48],[89,12],[90,6]]}
+  },
+  'study-exploration-v3': {
+    bookshelf: {outline:[[18,0],[68,0],[68,17],[58,17],[53,29],[50,28],[50,10],[38,10],[38,17],[34,24],[32,61],[18,65]]},
+    globe: {outline:[[80,37],[88,33],[95,35],[100,42],[100,58],[96,63],[97,69],[83,70],[81,64],[78,55],[78,44]]},
+    flute_stand: {layer:2,outline:[[8,52],[27,51],[29,84],[24,88],[4,89],[3,74]]}
+  },
+  'music-exploration-v3': {
+    harpsichord: {outline:[[58,51],[76,50],[77,32],[85,29],[93,41],[100,43],[100,65],[90,69],[88,86],[84,88],[84,70],[78,67],[65,64],[64,80],[60,81]]},
+    violin_case: {outline:[[2,52],[14,49],[20,50],[23,57],[26,58],[27,62],[18,64],[4,63],[1,59]]}
+  },
+  'bedroom-exploration-v3': {
+    bed: {outline:[[15,0],[70,0],[70,17],[68,17],[68,30],[65,30],[65,11],[51,10],[50,73],[48,77],[37,77],[36,69],[18,69],[17,62],[15,58]]},
+    dresser: {outline:[[89,20],[97,20],[100,26],[100,77],[94,79],[93,60],[81,59],[75,62],[74,78],[72,77],[71,50],[83,49],[84,30]]}
+  },
+  'cellar-exploration-v3': {
+    wine: {outline:[[30,17],[33,10],[45,5],[51,8],[52,14],[70,17],[73,20],[73,46],[62,46],[60,35],[56,23],[51,19],[46,20],[43,27],[41,34],[39,43],[38,53],[37,60],[30,61]]}
+  },
+  'tower-exploration-v3': {
+    organ: {outline:[[10,55],[15,54],[15,28],[21,19],[26,17],[29,8],[32,10],[34,0],[39,0],[43,16],[47,23],[51,38],[50,55],[56,56],[57,77],[50,79],[49,65],[31,64],[30,78],[11,79]]}
+  },
+  'dawn-exploration-v3': {
+    organ: {outline:[[10,54],[15,53],[15,27],[21,19],[26,16],[29,7],[32,9],[34,0],[39,0],[43,15],[48,24],[51,38],[50,55],[56,56],[57,77],[50,79],[49,65],[31,64],[30,79],[11,80]]}
+  }
+};
+
+// Contact sounds describe the object's material. Puzzle completion cues remain
+// separate, so inspecting a locked box never sounds as if it has opened.
+const CASTLE_OBJECT_SOUNDS = {
+  piano:'touch-piano',armor:'touch-metal',tapestry:'touch-cloth',candle:'touch-flame',
+  table:'touch-wood',portrait_dining:'touch-wood',musicbox:'touch-clockwork',mirror:'touch-glass',
+  bookshelf:'touch-paper',globe:'touch-clockwork',flute_stand:'touch-flute',
+  harpsichord:'touch-harpsichord',violin_case:'touch-wood',bed:'touch-cloth',
+  dresser:'touch-wood',wine:'touch-wine',organ:'touch-organ'
+};
+
 const CASTLE_ART = {
   "hall-exploration-v3": {
     "visibleCast": [

@@ -1,0 +1,20 @@
+{
+  "id": "feihong",
+  "name": "飞鸿",
+  "aliases": [],
+  "reference": "assets/characters/voices/feihong/reference.wav",
+  "original": "assets/characters/voices/feihong/reference-original.wav",
+  "sha256": "dd42743579b5a3396ff4cb7cb161abf3beec0a8b5d7f97e3ff84aa93fde871b9",
+  "originalSha256": "b6491e74037980a20ed0b540401cbb46e16cb223fe483fbd9874b0642c1bca70",
+  "duration": 12.728167,
+  "sampleRate": 24000,
+  "channels": 1,
+  "sourceKind": "user-provided",
+  "sourceFilename": "飞鸿.wav",
+  "confirmedAt": "2026-10-16",
+  "defaultPitchSemitones": 0,
+  "actingPolicy": "Preserve this reference timbre; choose restrained emotion and natural pauses from the actual line context; no generic stock voice or automatic pitch shift.",
+  "cardId": "feihong",
+  "voiceIdentityIndependentOfLanguage": true,
+  "preferredEngine": "IndexTTS-2.5"
+}

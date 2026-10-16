@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "ea7e53877f72193aef65971ac0b7ba5fa495ee276a2192523c2e85e2cd69fd61",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "lala",
+  "referenceSha256": "59211808263a0d1ee9b94861f3926f8503ddcc371a9f3345b6831572edc71cca",
+  "text": "El alma de Félix está sellada dentro de la caja de música del comedor. Solo la luz puede abrirla.",
+  "duration": 6.246167800453515,
+  "seconds": 7.66
+}

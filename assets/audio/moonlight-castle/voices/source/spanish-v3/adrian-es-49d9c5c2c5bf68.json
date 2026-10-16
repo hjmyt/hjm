@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "bfc9b86fb0c5ca0aef2df805b9996f3fb97b5a0ecb7b9611deb077ef7f89c61b",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "adrian",
+  "referenceSha256": "ec4cb8ba8632a01aab283bdf18ac8cc441f953cfce7ec5951445d5a04c8a846b",
+  "text": "Esta noche no saldrá nadie. Mientras no se ponga la luna, la puerta seguirá cerrada.",
+  "duration": 8.010884353741497,
+  "seconds": 10.69
+}

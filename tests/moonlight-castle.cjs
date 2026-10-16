@@ -1,3 +1,4 @@
+const {clickObject}=require('./helpers/castle-objects.cjs');
 const { chromium }=require('playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http');
 const {pathToFileURL}=require('node:url');
@@ -27,7 +28,7 @@ let browser;
  await p.waitForFunction(()=>!CastleAudio.audio.paused);assert((await p.evaluate(()=>CastleAudio.audio.src)).includes('loop-one.mp3'));
  if(!requests.some(r=>r.includes('/dining-exploration-v3.webp')))await p.waitForRequest(r=>r.url().includes('/dining-exploration-v3.webp'),{timeout:5000});
  assert(requests.some(r=>r.includes('/dining-exploration-v3.webp')),'Next accessible room is preloaded from the unified hall');
- const inspect=async id=>{await p.locator('.castle-dock [data-castle-drawer=explore]').click();await p.locator('#object-tray [data-examine="'+id+'"]').click();};
+ const inspect=async id=>clickObject(p,id);
  const exit=async id=>{await p.locator('.castle-dock [data-castle-drawer=map]').click();await p.locator('#castle-map-nodes [data-travel="'+id+'"]').click();};
  const close=async()=>{if(await p.locator('#modal-overlay.active').count())await p.click('#modal-close');};
  const use=async name=>{await p.locator('.castle-dock [data-castle-drawer=inventory]').click();const b=p.locator('.inv-slot').filter({has:p.locator('.name',{hasText:new RegExp('^'+name+'$')})});await b.click();await b.click();};
@@ -61,7 +62,7 @@ let browser;
  // Three deterministic branches use the naturally reached pre-ending fixture.
  for(const movement of [1,2]){
    const c=await browser.newContext(),q=await c.newPage();await q.goto(url);const v=structuredClone(finalFixture);v.game.flags.diary_count=1;v.game.inventory=v.game.inventory.filter(id=>!['wine_bottle','ring','pocket_watch'].includes(id));v.game.flags.gave_final=movement===2;
-   await q.evaluate(({key,v})=>localStorage.setItem(key,JSON.stringify(v)),{key,v});await q.reload();await q.click('#continue-btn');await q.locator('.castle-dock [data-castle-drawer=explore]').click();await q.locator('#object-tray [data-examine=organ]').click();await q.locator('#modal-body button').filter({hasText:'奏响'}).click();assert.equal(await q.evaluate(()=>G.endingMovement),movement);await c.close();
+   await q.evaluate(({key,v})=>localStorage.setItem(key,JSON.stringify(v)),{key,v});await q.reload();await q.click('#continue-btn');await clickObject(q,'organ');await q.locator('#modal-body button').filter({hasText:'奏响'}).click();assert.equal(await q.evaluate(()=>G.endingMovement),movement);await c.close();
  }
  // Reached v1 fixture exercises countdown, paused wall time, chase and wrong-end routing.
  await p.evaluate(v=>{localStorage.setItem(CastleSave.key,JSON.stringify(v));},finalFixture);await p.reload();await p.click('#continue-btn');
@@ -84,6 +85,6 @@ let browser;
    const size=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth,images:[...document.querySelectorAll('#play-layout img')].filter(n=>!n.complete||!n.naturalWidth).map(n=>n.src)}));assert(size.doc<=size.view+1,'No overflow '+width);assert(await p.evaluate(()=>document.documentElement.scrollHeight<=innerHeight+1),'Single screen game '+width);assert.deepEqual(size.images,[]);
    await p.screenshot({path:'/tmp/hjm-castle-'+width+'.png',fullPage:true});
  }
- const filePage=await context.newPage();await filePage.goto(pathToFileURL(path.join(root,'moonlight-castle.html')).href);await filePage.click('#start-btn');await filePage.locator('.castle-dock [data-castle-drawer=explore]').click();await filePage.locator('#object-tray [data-examine=candle]').click();assert(await filePage.evaluate(()=>hasItem('candle')));await filePage.close();
+ const filePage=await context.newPage();await filePage.goto(pathToFileURL(path.join(root,'moonlight-castle.html')).href);await filePage.click('#start-btn');await clickObject(filePage,'candle');assert(await filePage.evaluate(()=>hasItem('candle')));await filePage.close();
  assert.deepEqual(errors,[]);console.log('PASS: castle entry, full three-loop play, all endings, soundtrack, pause, save recovery/import, art/preload and responsive file/HTTP play.');
 })().catch(e=>{console.error(e);process.exitCode=1;}).finally(async()=>{await browser?.close();server.close();});

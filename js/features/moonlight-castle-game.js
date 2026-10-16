@@ -722,6 +722,9 @@ function updateQuestMarkers() {
 
 function examine(item) {
   if (G.adrianChasing) { showText('艾德里安就在附近……现在不能分心！', true); return; }
+  if (CASTLE_ROOMS[G.currentRoom].targets.some(([id]) => id === item)) {
+    CastleAudio.effect(CASTLE_OBJECT_SOUNDS[item]);
+  }
 
   // ========== 大厅物品 ==========
   if (item === 'piano') {

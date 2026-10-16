@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "a34c4e877f01ad49a113b909cffde5d35bca8891dce97709374daabb53f0b5fd",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "adrian",
+  "referenceSha256": "ec4cb8ba8632a01aab283bdf18ac8cc441f953cfce7ec5951445d5a04c8a846b",
+  "text": "Quería ir a la cocina. Tras doscientos años sin comer, le apetecía probar el pan moderno.",
+  "duration": 7.825124716553288,
+  "seconds": 10.25
+}

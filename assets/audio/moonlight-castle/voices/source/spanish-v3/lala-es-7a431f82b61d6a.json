@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "be3624d0e7fdcc6b8e0fa4ff6ed6d4d88f14fea961f216091d425be186cdb57e",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "lala",
+  "referenceSha256": "59211808263a0d1ee9b94861f3926f8503ddcc371a9f3345b6831572edc71cca",
+  "text": "Las cuerdas al aire del violín, de la más gruesa a la más fina, son sol, re, la y mi. Entre cuerdas vecinas hay una quinta justa. De la cuerda más grave a la más aguda, ¿cuántas quintas justas hay?",
+  "duration": 12.645895691609978,
+  "seconds": 20.23
+}

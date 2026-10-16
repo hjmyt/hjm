@@ -2,7 +2,7 @@
 const CastleAudio = (() => {
   let enabled = true, volume = .4, key = '', active = false, context = null, master = null, voices = new Set(), blocked = false, epoch = 0;
   const effects=new Map();
-  let volumeFrame=0,bgmTarget=-1,dialoguePlaying=false;
+  let volumeFrame=0,bgmTarget=-1,dialoguePlaying=false,bgmGain=null;
   const audio = new Audio();audio.loop=true;audio.preload='none';audio.id='castleBgm';
   const tracks={'loop-one':'第一周目 · 古堡来客','loop-two':'第二周目 · 月光倒影','loop-three':'第三周目 · 最后的回信','wrong-end':'Wrong Ending','sunrise':'日出之后'};
   try {const p=JSON.parse(localStorage.getItem('hjm-moonlight-audio-v1'));if(p){enabled=p.enabled!==false;volume=Number.isFinite(p.volume)?Math.max(0,Math.min(1,p.volume)):.4;}} catch {}
@@ -13,17 +13,26 @@ const CastleAudio = (() => {
     document.getElementById('music-title').textContent=tracks[key]||'配乐将在进入后播放';
   }
   function mix(immediate=false){
-    const next=volume*(dialoguePlaying ? .2 : voices.size ? .42 : 1);
+    const next=volume*Math.min(dialoguePlaying ? .05 : 1,voices.size ? .18 : 1);
     if(!immediate&&next===bgmTarget)return;
     bgmTarget=next;window.cancelAnimationFrame(volumeFrame);volumeFrame=0;
+    const from=bgmGain?bgmGain.gain.value:audio.volume,duration=next<from?25:600;
+    if(bgmGain){
+      const now=context.currentTime;bgmGain.gain.cancelScheduledValues(now);bgmGain.gain.setValueAtTime(from,now);
+      if(immediate)bgmGain.gain.setValueAtTime(next,now);else bgmGain.gain.linearRampToValueAtTime(next,now+duration/1000);
+      return;
+    }
     if(immediate){audio.volume=next;return;}
-    const from=audio.volume,start=performance.now(),duration=next<from?55:260;
+    const start=performance.now();
     const step=now=>{const progress=Math.min(1,(now-start)/duration);audio.volume=Math.max(0,Math.min(1,from+(next-from)*progress));if(progress<1)volumeFrame=window.requestAnimationFrame(step);else volumeFrame=0;};
     volumeFrame=window.requestAnimationFrame(step);
   }
   function stopVoices(){epoch++;for(const v of voices){try{v.stop();}catch{}}voices.clear();mix(true);}
   function sync(next=key) {
     if(next!==key){key=next;audio.src='assets/audio/moonlight-castle/'+key+'.mp3';blocked=false;}
+    // iOS media-element volume can ignore JS writes. Route HTTP music through
+    // a real gain node; file:// retains native playback to avoid opaque CORS.
+    if(active&&enabled&&volume>0&&!CastleClock.paused)connectBgm();
     mix();
     if(master)master.gain.value=volume;
     if(!active||!enabled||CastleClock.paused){audio.pause();stopVoices();paint();if(typeof CastleVoice!=='undefined')CastleVoice.sync();return;}
@@ -35,15 +44,25 @@ const CastleAudio = (() => {
   function preferences(){try{localStorage.setItem('hjm-moonlight-audio-v1',JSON.stringify({enabled,volume}));}catch{}}
   function toggle(){enabled=blocked?true:!enabled;blocked=false;preferences();sync();}
   function canPlay(){return active&&enabled&&volume>0&&!CastleClock.paused;}
+  function ensureContext(){
+    if(context)return true;
+    const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return false;
+    context=new AC();master=context.createGain();master.gain.value=volume;
+    const limiter=context.createDynamicsCompressor();limiter.threshold.value=-9;limiter.knee.value=6;limiter.ratio.value=10;limiter.attack.value=.001;limiter.release.value=.15;
+    master.connect(limiter);limiter.connect(context.destination);return true;
+  }
+  function connectBgm(){
+    if(location.protocol==='file:')return;
+    try{
+      if(!ensureContext())return;
+      if(!bgmGain){const gain=context.createGain();gain.gain.value=bgmTarget<0?volume:bgmTarget;context.createMediaElementSource(audio).connect(gain);gain.connect(context.destination);bgmGain=gain;audio.volume=1;}
+      if(context.state!=='running')context.resume().catch(()=>{});
+    }catch{} // Native audio remains available when Web Audio is unsupported.
+  }
   function play(build){
     if(!canPlay())return false;
     try {
-      const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return false;
-      if(!context){
-        context=new AC();master=context.createGain();master.gain.value=volume;
-        const limiter=context.createDynamicsCompressor();limiter.threshold.value=-6;limiter.knee.value=6;limiter.ratio.value=6;limiter.attack.value=.003;limiter.release.value=.15;
-        master.connect(limiter);limiter.connect(context.destination);
-      }
+      if(!ensureContext())return false;
       const token=epoch;
       const start=()=>{if(token===epoch&&canPlay())build();};
       if(context.state==='running')start();else context.resume().then(start).catch(()=>{});
@@ -68,9 +87,9 @@ const CastleAudio = (() => {
         const samples=CastleSfx.render(id,context.sampleRate),buffer=context.createBuffer(1,samples.length,context.sampleRate);
         buffer.copyToChannel(samples,0);effects.set(id,buffer);
       }
-      const source=context.createBufferSource(),gain=context.createGain();source.buffer=effects.get(id);gain.gain.value=1.15;
+      const source=context.createBufferSource(),gain=context.createGain();source.buffer=effects.get(id);gain.gain.value=1.6;
       source.connect(gain);gain.connect(master);track(source,gain);source.start(context.currentTime+Math.max(0,delay));
     });
   }
-  return {sync,toggle,tone,effect,start(){active=true;sync();},stop(){active=false;audio.pause();stopVoices();if(typeof CastleVoice!=='undefined')CastleVoice.stop();},setVolume(value){if(!Number.isFinite(value))return;volume=Math.max(0,Math.min(1,value));preferences();sync();},dialogueActive(value){const next=!!value;if(next!==dialoguePlaying){dialoguePlaying=next;mix();}},get audible(){return canPlay();},get enabled(){return enabled;},get volume(){return volume;},audio};
+  return {sync,toggle,tone,effect,start(){active=true;sync();},stop(){active=false;audio.pause();stopVoices();if(typeof CastleVoice!=='undefined')CastleVoice.stop();},setVolume(value){if(!Number.isFinite(value))return;volume=Math.max(0,Math.min(1,value));preferences();sync();},dialogueActive(value){const next=!!value;if(next!==dialoguePlaying){dialoguePlaying=next;mix();}},get audible(){return canPlay();},get enabled(){return enabled;},get volume(){return volume;},get bgmVolume(){return bgmGain?bgmGain.gain.value:audio.volume;},audio};
 })();

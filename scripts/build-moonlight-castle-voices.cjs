@@ -2,22 +2,8 @@
 const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..'),dir=path.join(root,'docs/moonlight-castle/voices');
 const {moods,directions,retakes}=require('../docs/moonlight-castle/voices/acting-directions.cjs');
-const refs='/Users/hxj/.agents/skills/indextts2-local-tts/assets/voice_refs';
-const profiles={
- siyang:['叶思阳','男声_中性_稳定旁白_male003',0,'克制、沉着，像压低声音讲述秘密的青年执事'],
- tim:['Tim','男声_中性_稳定旁白_male002',-2,'稳重、坚定、可靠，守护者的青年男声'],
- dijie:['笛杰','男声_中性_自然旁白_male001',.4,'温和、清晰、有书卷气的青年男声'],
- jerry:['Jerry','男声_中性_稳定旁白_male004',.6,'明亮、轻松、自然，铜管乐手的青年男声'],
- baoshi:['宝石','男声_中性_沉稳内省_male005',.5,'柔软、含蓄、略带迟疑，青年男声'],
- feihong:['飞鸿','男声_中性_自然旁白_male001',-1.4,'清晰、利落、略带紧张，青年男声'],
- adrian:['艾德里安','男声_悲伤_孤独星空_male002',-1.3,'低沉、孤独、深情，压住两百年的悲伤'],
- felix:['菲利克斯','男声_中性_稳定旁白_male003',1.3,'温柔、明净、坚定，像在原谅爱人的青年男声'],
- bingbing:['冰冰','女声_中性_稳定旁白_female005',0,'轻柔、清冷、细腻，压低声音的青年女声'],
- shiyuan:['十元','女声_中性_稳定旁白_female002',0,'亲切、自然、细腻的青年女声'],
- qiqi:['柒柒','女声_中性_温和叙述_female001',-.6,'知性、从容、带一点神秘感的青年女声'],
- lala:['垃垃','女声_中性_城市纪实_female004',.4,'慵懒、神秘、略带俏皮的青年女声']
-};
-const cast=Object.fromEntries(Object.entries(profiles).map(([id,[name,ref,pitch,style]])=>[id,{name,reference:refs+'/'+ref+'/reference.wav',source:refs+'/'+ref+'/source.txt',pitch,style}]));
+const registry=JSON.parse(fs.readFileSync(path.join(root,'assets/characters/voices/registry.json')));
+const cast=Object.fromEntries(Object.entries(registry.characters).map(([id,p])=>[id,{name:p.name,reference:p.reference,source:p.original,pitch:p.defaultPitchSemitones,style:p.actingPolicy}]));
 const scope={};const data=fs.readFileSync(path.join(root,'js/data/moonlight-castle.js'),'utf8'),game=fs.readFileSync(path.join(root,'js/features/moonlight-castle-game.js'),'utf8');
 vm.runInNewContext(data+'\n'+game+'\n;globalThis.catalog={DIALOGUES,NAME_PUZZLES,KEEPSAKE_NAMES};',scope);
 const {DIALOGUES,NAME_PUZZLES,KEEPSAKE_NAMES}=scope.catalog;
@@ -115,10 +101,5 @@ for(let i=0;i<lines.length;i++){
  for(const key of line.clips){const clip=clips.get(key);clip.contextBefore=line.contextBefore;clip.currentBeat=line.source;clip.contextAfter=line.contextAfter;}
 }
 const plan={version:2,engine:'IndexTTS2 local MPS, explicit per-line and per-utterance emotions',emotionOrder:['happy','angry','sad','afraid','disgusted','melancholic','surprised','calm'],cast,lines,clips:[...clips.values()]};
-fs.mkdirSync(dir,{recursive:true});fs.writeFileSync(path.join(dir,'plan.json'),JSON.stringify(plan,null,2)+'\n');
-fs.mkdirSync(path.join(root,'assets/audio/moonlight-castle/voices/source/emotional-v2'),{recursive:true});
-const priority=['talk.shiyuan.1.0.text','talk.adrian.1.3.text','talk.adrian.3.0.text','talk.adrian.4.0.text','name.siyang.ask','name.bingbing.reveal'];
-const remaining=plan.clips.filter(c=>!fs.existsSync(path.join(root,c.source))).sort((a,b)=>{const ai=priority.indexOf(a.lineId),bi=priority.indexOf(b.lineId);return(ai<0?999:ai)-(bi<0?999:bi);});
-const jobs=remaining.map(c=>({voice:cast[c.speaker].reference,text:c.synthesisText||c.text,output:path.join(root,c.source),emotion_vector:c.emotionVector,emotion_weight:1}));
-fs.writeFileSync(path.join(dir,'pending.jsonl'),jobs.map(j=>JSON.stringify(j)).join('\n')+'\n');
-console.log(JSON.stringify({lines:lines.length,clips:clips.size,characters:Object.keys(cast).length,spokenCharacters:plan.clips.reduce((n,c)=>n+c.text.length,0),pending:jobs.length}));
+fs.mkdirSync(dir,{recursive:true});
+require('./lib/build-castle-spanish-voices.cjs')(plan,root);

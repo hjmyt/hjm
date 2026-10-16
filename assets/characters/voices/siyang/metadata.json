@@ -1,0 +1,25 @@
+{
+  "id": "siyang",
+  "name": "叶思阳",
+  "aliases": [
+    "叶执事",
+    "执事",
+    "siyang",
+    "yeshiyang"
+  ],
+  "reference": "assets/characters/voices/siyang/reference.wav",
+  "original": "assets/characters/voices/siyang/reference-original.wav",
+  "sha256": "74762b3fc730f4e4cb6c1f2063acd56365cba67df6149e2186b2130647f5a8fa",
+  "originalSha256": "8f1e1e4258d788e6547d3f40e9b3479ad8122931a384d4dd88203b3c06a114b8",
+  "duration": 5.888,
+  "sampleRate": 24000,
+  "channels": 1,
+  "sourceKind": "user-provided",
+  "sourceFilename": "叶执事.wav",
+  "confirmedAt": "2026-10-16",
+  "defaultPitchSemitones": 0,
+  "actingPolicy": "Preserve this reference timbre; choose restrained emotion and natural pauses from the actual line context; no generic stock voice or automatic pitch shift.",
+  "cardId": "yeshiyang",
+  "voiceIdentityIndependentOfLanguage": true,
+  "preferredEngine": "IndexTTS-2.5"
+}

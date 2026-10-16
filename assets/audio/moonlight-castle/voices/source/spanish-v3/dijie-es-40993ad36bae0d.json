@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "2b542faa1498e1c501272edec98d784530fcdff5ac1474240c1a2f2bfcc7a8e0",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "dijie",
+  "referenceSha256": "6264a1798b57ff62deeef683b4b79cb1438e16557b89da00e0bbc413e5e68a1b",
+  "text": "El diario... El conde escribió que, sin él, la música había perdido su sentido.",
+  "duration": 7.964444444444444,
+  "seconds": 9.12
+}

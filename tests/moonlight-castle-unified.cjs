@@ -1,3 +1,4 @@
+const {clickObject,installControlPoint}=require('./helpers/castle-objects.cjs');
 const{chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),{pathToFileURL}=require('node:url');
 const root=path.resolve(__dirname,'..'),plan=JSON.parse(fs.readFileSync(path.join(root,'docs/imagegen/moonlight-castle/individual-v3/plan.json')));
 assert.equal(plan.length,9);assert.equal(new Set(plan.map(scene=>scene.source)).size,9,'Each room and cover uses its own generated source');
@@ -19,7 +20,7 @@ let browser;
 (async()=>{
  browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});
  const context=await browser.newContext({viewport:{width:844,height:390},isMobile:true,hasTouch:true}),page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
- await page.goto(pathToFileURL(path.join(root,'moonlight-castle.html')).href);await page.click('#start-btn');
+ await installControlPoint(page);await page.goto(pathToFileURL(path.join(root,'moonlight-castle.html')).href);await page.click('#start-btn');
  assert.equal(await page.locator('[data-scene-mode]').count(),0,'No investigation/people mode switch remains');
  const rooms=plan.filter(scene=>!['dawn','exterior'].includes(scene.room)).map(scene=>scene.room);
  const failures=[];
@@ -30,7 +31,7 @@ let browser;
    await page.waitForFunction(()=>{const img=document.getElementById('room-art');return img.complete&&img.naturalWidth>1000;});await page.waitForTimeout(70);
    const readScene=()=>page.evaluate(()=>{
     const image=document.getElementById('room-art'),dialogue=document.querySelector('.dialogue-panel').getBoundingClientRect();
-    const controls=[...document.querySelectorAll('#scene-hotspots button,#people-tray button,#scene-doors button')].map(node=>{const r=node.getBoundingClientRect(),hit=document.elementFromPoint(r.x+r.width/2,r.y+r.height/2);return{label:node.getAttribute('aria-label')||node.textContent,x:r.x,y:r.y,right:r.right,bottom:r.bottom,hit:hit?.closest('button')===node};});
+    const controls=[...document.querySelectorAll('#scene-hotspots button,#people-tray button,#scene-doors button')].map(node=>{const r=node.getBoundingClientRect(),point=window.castleControlPoint(node);return{label:node.getAttribute('aria-label')||node.textContent,x:r.x,y:r.y,right:r.right,bottom:r.bottom,hit:!!point};});
     return{dialogueHidden:getComputedStyle(document.querySelector('.dialogue-panel')).visibility==='hidden',ratio:image.naturalWidth/image.naturalHeight,source:image.getAttribute('src'),image:image.getBoundingClientRect().toJSON(),stage:document.getElementById('scene-area').getBoundingClientRect().toJSON(),hotspots:document.getElementById('scene-hotspots').getBoundingClientRect().toJSON(),dialogue:dialogue.toJSON(),controls,overflows:document.documentElement.scrollWidth>innerWidth+1||document.documentElement.scrollHeight>innerHeight+1};
    });
    let state=await readScene();
@@ -43,21 +44,21 @@ let browser;
     if(width===390||width===844){await page.waitForTimeout(550);await page.screenshot({path:'/tmp/hjm-castle-panorama-'+room+'-'+width+'.png'});}
     await page.click('#scene-overview');state=await readScene();
    }
-   for(const control of state.controls){const d=state.dialogue,clear=state.dialogueHidden||control.right<=d.left||control.x>=d.right||control.bottom<=d.top||control.y>=d.bottom;if(!(control.x>=-1&&control.y>=0&&control.right<=width+1&&control.bottom<=height&&clear))failures.push(room+' '+width+' control clear of dialogue: '+JSON.stringify(control));if(!control.hit)failures.push(room+' '+width+' clickable center: '+JSON.stringify(control));}
+   for(const control of state.controls){const d=state.dialogue,clear=state.dialogueHidden||control.right<=d.left||control.x>=d.right||control.bottom<=d.top||control.y>=d.bottom;if(!(control.x>=-1&&control.y>=0&&control.right<=width+1&&control.bottom<=height&&clear))failures.push(room+' '+width+' control clear of dialogue: '+JSON.stringify(control));if(!control.hit)failures.push(room+' '+width+' physical click area: '+JSON.stringify(control));}
    if(width===844||width===390)await page.screenshot({path:'/tmp/hjm-castle-unified-'+room+'-'+width+'.png'});
   }
  }
  assert.deepEqual(failures,[]);
  await page.setViewportSize({width:844,height:390});await page.evaluate(()=>{G.currentRoom='bedroom';CastleUI.sync();});await page.waitForTimeout(100);
  const source=await page.locator('#room-art').getAttribute('src');
- await page.locator('#scene-hotspots [data-examine=bed]').tap();assert.equal(await page.locator('#room-art').getAttribute('src'),source,'Investigation retains characters in the same scene');
+ await clickObject(page,'bed');assert.equal(await page.locator('#room-art').getAttribute('src'),source,'Investigation retains characters in the same scene');
  await page.locator('#people-tray [data-npc=shiyuan]').tap();assert.equal(await page.locator('#room-art').getAttribute('src'),source,'Conversation retains investigative objects');
- await page.locator('.castle-dock [data-castle-drawer=explore]').tap();assert(await page.locator('#explore-people [data-npc=shiyuan]').isVisible());assert(await page.locator('#object-tray [data-examine=dresser]').isVisible());
- await page.locator('#object-tray [data-examine=dresser]').tap();assert(await page.locator('#modal-overlay.active').isVisible());
+ await page.locator('.castle-dock [data-castle-drawer=explore]').tap();assert(await page.locator('#explore-people [data-npc=shiyuan]').isVisible());assert.equal(await page.locator('#object-tray').count(),0,'Exploration drawer does not reveal undiscovered objects');
+ await page.locator('[aria-label=收起探索]').tap();await clickObject(page,'dresser');assert(await page.locator('#modal-overlay.active').isVisible());
  await page.evaluate(()=>{closeModal();const old=CastleUI.snapshot;old.mode='objects';CastleSave.write(old);});
  await page.reload();await page.click('#continue-btn');
  assert(await page.locator('#people-tray [data-npc=shiyuan]').isVisible(),'Old investigation-mode saves restore the unified scene');
  assert(await page.locator('#scene-hotspots [data-examine=bed]').isVisible());
  assert((await page.locator('#room-art').getAttribute('src')).includes('bedroom-exploration-v3'));
- assert.deepEqual(errors,[]);console.log('PASS: 9 independent sources, cast/costume locks, unified interactions, seven rooms in five viewports, proportional portrait panorama and complete overview with matching hotspots and touch targets clear of dialogue.');
+ assert.deepEqual(errors,[]);console.log('PASS: 9 independent sources, cast/costume locks, unified interactions, seven rooms in five viewports, proportional portrait panorama and complete overview with matching object silhouettes and usable touch targets clear of dialogue.');
 })().catch(e=>{console.error(e);process.exitCode=1;}).finally(async()=>{await browser?.close();});

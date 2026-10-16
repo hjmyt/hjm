@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "7a75c7c0dc4dc0bd0dac6eb7c4b0b80ae4e4a197f1877688c0cccc79fd8ed749",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "lala",
+  "referenceSha256": "59211808263a0d1ee9b94861f3926f8503ddcc371a9f3345b6831572edc71cca",
+  "text": "En el temperamento igual de doce notas, ¿cuántos semitonos tiene una quinta justa, por ejemplo de do a sol?",
+  "duration": 6.42031746031746,
+  "seconds": 8.0
+}

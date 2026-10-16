@@ -1,6 +1,7 @@
 docs
 !docs/
 docs/*
+!docs/character-voices.md
 !docs/imagegen/
 docs/imagegen/*
 !docs/imagegen/fusion-v24/

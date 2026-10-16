@@ -1,0 +1,23 @@
+{
+  "id": "felix",
+  "name": "菲利克斯",
+  "aliases": [],
+  "reference": "assets/characters/voices/felix/reference.wav",
+  "original": "assets/characters/voices/felix/reference-original.wav",
+  "sha256": "d4e552ce558980455ebfe22340c62120835fa07e1f7c68b16999ae3e8edeca86",
+  "originalSha256": "d4e552ce558980455ebfe22340c62120835fa07e1f7c68b16999ae3e8edeca86",
+  "duration": 6.18,
+  "sampleRate": 24000,
+  "channels": 1,
+  "sourceKind": "existing-reference-user-confirmed",
+  "sourceFilename": "/Users/hxj/.agents/skills/indextts2-local-tts/assets/voice_refs/男声_中性_稳定旁白_male003/reference.wav",
+  "confirmedAt": "2026-10-16",
+  "defaultPitchSemitones": 1.3,
+  "actingPolicy": "Preserve this reference timbre; choose restrained emotion and natural pauses from the actual line context; no generic stock voice or automatic pitch shift.",
+  "cardId": null,
+  "voiceIdentityIndependentOfLanguage": true,
+  "preferredEngine": "IndexTTS-2.5",
+  "referenceProvenance": "assets/characters/voices/felix/source.txt",
+  "sourceDataset": "ATH-MaaS/CSEMOTIONS",
+  "sourceLicense": "Apache-2.0"
+}

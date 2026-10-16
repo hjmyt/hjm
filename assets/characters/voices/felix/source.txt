@@ -1,0 +1,8 @@
+dataset: ATH-MaaS/CSEMOTIONS
+dataset_url: https://huggingface.co/datasets/ATH-MaaS/CSEMOTIONS
+license: Apache-2.0
+row_idx: 3146
+speaker: male003
+emotion: neutral
+text: “当然会，你永远是我生命中最重要的人。”他毫不犹豫地回答。
+intended_use: local IndexTTS2 reference voice; do not describe as a specific real person or copyrighted character

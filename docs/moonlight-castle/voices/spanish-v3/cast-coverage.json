@@ -1,0 +1,199 @@
+{
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "displayRecords": 162,
+  "voicedRecords": 161,
+  "clips": 222,
+  "cast": [
+    {
+      "speaker": "baoshi",
+      "name": "宝石",
+      "reference": "assets/characters/voices/baoshi/reference.wav",
+      "referenceSha256": "033688b071b798936eac70ad504100c3a101f7d9f4f9722a983de3b94aa51075",
+      "clips": 5,
+      "emotions": [
+        "grief",
+        "panic",
+        "relief"
+      ]
+    },
+    {
+      "speaker": "feihong",
+      "name": "飞鸿",
+      "reference": "assets/characters/voices/feihong/reference.wav",
+      "referenceSha256": "dd42743579b5a3396ff4cb7cb161abf3beec0a8b5d7f97e3ff84aa93fde871b9",
+      "clips": 6,
+      "emotions": [
+        "fear",
+        "grief",
+        "tender"
+      ]
+    },
+    {
+      "speaker": "shiyuan",
+      "name": "十元",
+      "reference": "assets/characters/voices/shiyuan/reference.wav",
+      "referenceSha256": "2268adf7c194547a091d932244f6454c75581ea800a235665f520a40241aeba6",
+      "clips": 15,
+      "emotions": [
+        "choked",
+        "fear",
+        "grief",
+        "panic",
+        "playful",
+        "resolve",
+        "suspicion",
+        "tender"
+      ]
+    },
+    {
+      "speaker": "lala",
+      "name": "垃垃",
+      "reference": "assets/characters/voices/lala/reference.wav",
+      "referenceSha256": "59211808263a0d1ee9b94861f3926f8503ddcc371a9f3345b6831572edc71cca",
+      "clips": 23,
+      "emotions": [
+        "fear",
+        "grief",
+        "instruct",
+        "mystery",
+        "playful",
+        "relief",
+        "resolve",
+        "suspicion",
+        "tender"
+      ]
+    },
+    {
+      "speaker": "dijie",
+      "name": "笛杰",
+      "reference": "assets/characters/voices/dijie/reference.wav",
+      "referenceSha256": "6264a1798b57ff62deeef683b4b79cb1438e16557b89da00e0bbc413e5e68a1b",
+      "clips": 19,
+      "emotions": [
+        "choked",
+        "fear",
+        "grief",
+        "playful",
+        "relief",
+        "resolve",
+        "surprise",
+        "suspicion",
+        "tender"
+      ]
+    },
+    {
+      "speaker": "bingbing",
+      "name": "冰冰",
+      "reference": "assets/characters/voices/bingbing/reference.wav",
+      "referenceSha256": "7887f742a0a2aee9652ce3dac665cf1c7302b68583986b6adb16c623859a551a",
+      "clips": 18,
+      "emotions": [
+        "choked",
+        "confess",
+        "fear",
+        "grief",
+        "playful",
+        "relief",
+        "resolve",
+        "surprise",
+        "tender"
+      ]
+    },
+    {
+      "speaker": "adrian",
+      "name": "艾德里安",
+      "reference": "assets/characters/voices/adrian/reference.wav",
+      "referenceSha256": "ec4cb8ba8632a01aab283bdf18ac8cc441f953cfce7ec5951445d5a04c8a846b",
+      "clips": 77,
+      "emotions": [
+        "choked",
+        "confess",
+        "fear",
+        "grief",
+        "panic",
+        "playful",
+        "relief",
+        "resolve",
+        "surprise",
+        "suspicion",
+        "tender",
+        "threat"
+      ]
+    },
+    {
+      "speaker": "jerry",
+      "name": "Jerry",
+      "reference": "assets/characters/voices/jerry/reference.wav",
+      "referenceSha256": "639dfd96692b3392f0d9de0a7cfaa1f898138a950c1a3251c9929d0f8515fff4",
+      "clips": 13,
+      "emotions": [
+        "panic",
+        "playful",
+        "resolve",
+        "surprise",
+        "suspicion"
+      ]
+    },
+    {
+      "speaker": "tim",
+      "name": "Tim",
+      "reference": "assets/characters/voices/tim/reference.wav",
+      "referenceSha256": "ad342b1d87b6032f70b2286f56681e673c05f19ec7aabfb83bfcc890a2fa85f7",
+      "clips": 11,
+      "emotions": [
+        "playful",
+        "relief",
+        "resolve",
+        "suspicion",
+        "tender"
+      ]
+    },
+    {
+      "speaker": "siyang",
+      "name": "叶思阳",
+      "reference": "assets/characters/voices/siyang/reference.wav",
+      "referenceSha256": "74762b3fc730f4e4cb6c1f2063acd56365cba67df6149e2186b2130647f5a8fa",
+      "clips": 18,
+      "emotions": [
+        "fear",
+        "grief",
+        "panic",
+        "playful",
+        "relief",
+        "resolve",
+        "surprise",
+        "suspicion",
+        "tender"
+      ]
+    },
+    {
+      "speaker": "qiqi",
+      "name": "柒柒",
+      "reference": "assets/characters/voices/qiqi/reference.wav",
+      "referenceSha256": "87726902f1e419f37935b565757023e126ddefb8d105e2aed41eabfaf931dd47",
+      "clips": 15,
+      "emotions": [
+        "confess",
+        "fear",
+        "grief",
+        "mystery",
+        "playful",
+        "relief",
+        "resolve",
+        "suspicion",
+        "tender"
+      ]
+    },
+    {
+      "speaker": "felix",
+      "name": "菲利克斯",
+      "reference": "assets/characters/voices/felix/reference.wav",
+      "referenceSha256": "d4e552ce558980455ebfe22340c62120835fa07e1f7c68b16999ae3e8edeca86",
+      "clips": 2,
+      "emotions": [
+        "tender"
+      ]
+    }
+  ]
+}

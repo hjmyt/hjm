@@ -1,0 +1,20 @@
+{
+  "id": "shiyuan",
+  "name": "十元",
+  "aliases": [],
+  "reference": "assets/characters/voices/shiyuan/reference.wav",
+  "original": "assets/characters/voices/shiyuan/reference-original.wav",
+  "sha256": "2268adf7c194547a091d932244f6454c75581ea800a235665f520a40241aeba6",
+  "originalSha256": "3730f29d36d85df510d6a8abe3e913ac5c94fbec188cbcf116b53b02fc638e04",
+  "duration": 4.414,
+  "sampleRate": 24000,
+  "channels": 1,
+  "sourceKind": "user-provided",
+  "sourceFilename": "十元.wav",
+  "confirmedAt": "2026-10-16",
+  "defaultPitchSemitones": 0,
+  "actingPolicy": "Preserve this reference timbre; choose restrained emotion and natural pauses from the actual line context; no generic stock voice or automatic pitch shift.",
+  "cardId": "shiyuan",
+  "voiceIdentityIndependentOfLanguage": true,
+  "preferredEngine": "IndexTTS-2.5"
+}

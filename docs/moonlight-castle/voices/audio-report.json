@@ -1,1458 +1,1783 @@
 {
+  "version": 3,
+  "engine": "IndexTTS-2.5",
+  "language": "es",
   "complete": true,
   "missing": [],
   "lines": [
     {
       "id": "name.siyang.ask",
-      "asset": "assets/audio/moonlight-castle/voices/line-252e9948520ad3.mp3",
-      "duration": 15.693,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-df0dbb0c2dd7a2.mp3",
+      "duration": 14.318,
       "speakers": [
         "siyang"
       ],
-      "bytes": 126216
+      "language": "es",
+      "spokenText": "¿Puedes oírme? Este castillo se ha tragado mi nombre. No el que tengo ahora, sino el que tenía hace doscientos años, cuando estaba en este mismo salón. Encuéntralo. Solo así recordaré lo que tengo que decirte.",
+      "bytes": 115272
     },
     {
       "id": "name.siyang.reveal",
-      "asset": "assets/audio/moonlight-castle/voices/line-b0bd9acc43a205.mp3",
-      "duration": 13.394,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-89d9cead3307e8.mp3",
+      "duration": 9.266,
       "speakers": [
         "siyang"
       ],
-      "bytes": 107979
+      "language": "es",
+      "spokenText": "Sebastián... Sí, Sebastián. Serví a la familia de Adrián durante veintisiete años. Ya recuerdo... el castillo y aquel nombre tachado del registro.",
+      "bytes": 74955
     },
     {
       "id": "name.bingbing.ask",
-      "asset": "assets/audio/moonlight-castle/voices/line-ee9e800116399f.mp3",
-      "duration": 13.315,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-3de7d7dd276776.mp3",
+      "duration": 15.206,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 107210
+      "language": "es",
+      "spokenText": "¿Cuánto tiempo llevo con este vestido blanco? Me llamaban... me llamaban... No lo recuerdo. Creo que hay algo grabado detrás del marco, pero no me atrevo a mirarlo.",
+      "bytes": 122378
     },
     {
       "id": "name.bingbing.reveal",
-      "asset": "assets/audio/moonlight-castle/voices/line-af5599a56c1cf6.mp3",
-      "duration": 8.892,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-d01eeb97e45ed5.mp3",
+      "duration": 8.514,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 71885
+      "language": "es",
+      "spokenText": "Isabella... Gracias. Ahora te contaré lo que sé de ese cuadro y de Félix... como su prima.",
+      "bytes": 68813
     },
     {
       "id": "name.dijie.ask",
-      "asset": "assets/audio/moonlight-castle/voices/line-a798c7199fa90f.mp3",
-      "duration": 22.747,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-d3dd8e3ba0472c.mp3",
+      "duration": 21.421,
       "speakers": [
         "dijie"
       ],
-      "bytes": 182663
+      "language": "es",
+      "spokenText": "El conde me contrató para enseñarle una melodía de Oriente. Grabó mi apellido en el soporte de la flauta para agradecérmelo. Tardé siete meses en llegar desde Oriente hasta este castillo. Y ahora ni siquiera puedo decir mi apellido. ¿Podrías mirar esa flauta por mí?",
+      "bytes": 172103
     },
     {
       "id": "name.dijie.reveal",
-      "asset": "assets/audio/moonlight-castle/voices/line-bb8c20431d231c.mp3",
-      "duration": 14.072,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-2e2f837b922508.mp3",
+      "duration": 15.737,
       "speakers": [
         "dijie"
       ],
-      "bytes": 113354
+      "language": "es",
+      "spokenText": "Lin... Sí, mi apellido es Lin. Siete meses en un barco. Con tanto mareo, lo había olvidado todo. Ahora recuerdo: el conde aprendía Luz de luna para tocársela a alguien. Te contaré cuanto sé.",
+      "bytes": 126602
     },
     {
       "id": "name.qiqi.ask",
-      "asset": "assets/audio/moonlight-castle/voices/line-062163be044023.mp3",
-      "duration": 12.402,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-d8f8ededcbf51e.mp3",
+      "duration": 12.115,
       "speakers": [
         "qiqi"
       ],
-      "bytes": 99910
+      "language": "es",
+      "spokenText": "Mi verdadero nombre es un acertijo. No es el que usáis ahora. Está escrito en un cartel, escondido dentro de algo que contiene el mundo entero. Encuéntralo y mis profecías volverán a tener sentido.",
+      "bytes": 97606
     },
     {
       "id": "name.qiqi.reveal",
-      "asset": "assets/audio/moonlight-castle/voices/line-c2b37a5257943b.mp3",
-      "duration": 9.98,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-14ea23eb64c279.mp3",
+      "duration": 8.642,
       "speakers": [
         "qiqi"
       ],
-      "bytes": 80521
+      "language": "es",
+      "spokenText": "¡Vivian! El nombre del cartel, sin una sola sílaba equivocada. Bien. A cambio, te explicaré lo que significa de verdad la profecía.",
+      "bytes": 69961
     },
     {
       "id": "name.jerry.ask",
-      "asset": "assets/audio/moonlight-castle/voices/line-a949f0b63d23e6.mp3",
-      "duration": 15.374,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-9303655466ca11.mp3",
+      "duration": 19.322,
       "speakers": [
         "jerry"
       ],
-      "bytes": 123719
+      "language": "es",
+      "spokenText": "Ese clave está terriblemente desafinado. Pero el más desafinado soy yo: ya ni siquiera sé afinar mi propio nombre. Afiné los instrumentos de este castillo hace doscientos años. Mi tarjeta debería seguir sujeta al atril... creo.",
+      "bytes": 155399
     },
     {
       "id": "name.jerry.reveal",
-      "asset": "assets/audio/moonlight-castle/voices/line-a9a6955f18dda5.mp3",
-      "duration": 10.376,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-7e17efd91142b8.mp3",
+      "duration": 13.122,
       "speakers": [
         "jerry"
       ],
-      "bytes": 83786
+      "language": "es",
+      "spokenText": "¡Cecil! ¡Sí, Cecil! Ya he recuperado la afinación. Escucha: ese instrumento guarda un secreto. Un intervalo que se niega a sonar en armonía. Te lo explicaré.",
+      "bytes": 105674
     },
     {
       "id": "name.lala.ask",
-      "asset": "assets/audio/moonlight-castle/voices/line-c85558dd74b562.mp3",
-      "duration": 15.604,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-41ab02d89d6448.mp3",
+      "duration": 14.039,
       "speakers": [
         "lala"
       ],
-      "bytes": 125638
+      "language": "es",
+      "spokenText": "Mi bola de cristal lo muestra todo, menos mi propio nombre. El que gritaban hace doscientos años, alzando las copas bajo la luna llena. Está marcado en un recipiente muy, muy antiguo. De esos que todavía pueden embriagarte.",
+      "bytes": 112966
     },
     {
       "id": "name.lala.reveal",
-      "asset": "assets/audio/moonlight-castle/voices/line-802b8e7e154311.mp3",
-      "duration": 12.352,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-db5393ca5a9efd.mp3",
+      "duration": 11.854,
       "speakers": [
         "lala"
       ],
-      "bytes": 99529
+      "language": "es",
+      "spokenText": "Selene... El nombre de la luna. Sí, así me llamaban las noches de luna llena. A cambio, te diré dónde está la llave de la torre. Pero antes tendrás que responder bien a mi pregunta.",
+      "bytes": 95497
     },
     {
       "id": "talk.siyang.1.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-09036b8b713970.mp3",
-      "duration": 16.179,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-7766af2fced746.mp3",
+      "duration": 9.755,
       "speakers": [
         "siyang"
       ],
-      "bytes": 130253
+      "language": "es",
+      "spokenText": "Este castillo... no es el que alquilé. Al menos, no es el mismo. Este uniforme apareció solo sobre mi cuerpo. Y en el registro hay un nombre tachado que antes no estaba.",
+      "bytes": 78797
     },
     {
       "id": "talk.siyang.1.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-fecc4fcf8a9f94.mp3",
-      "duration": 9.661,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-879859bbceb518.mp3",
+      "duration": 7.408,
       "speakers": [
         "siyang"
       ],
-      "bytes": 78029
+      "language": "es",
+      "spokenText": "¿Cuánto lleva fuera Feihong? ¿Media hora? ¿Una hora? No lo recuerdo. Aquí el tiempo... no funciona como debería.",
+      "bytes": 59981
     },
     {
       "id": "talk.siyang.1.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-5848b5a46f0911.mp3",
-      "duration": 6.969,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-9218f807646f73.mp3",
+      "duration": 5.453,
       "speakers": [
         "siyang"
       ],
-      "bytes": 56525
+      "language": "es",
+      "spokenText": "Mira esa armadura. No dejo de pensar que se mueve. No toda... los dedos.",
+      "bytes": 44429
     },
     {
       "id": "talk.siyang.2.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-01bf778ba28b9f.mp3",
-      "duration": 8.226,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-1c8ff683664b16.mp3",
+      "duration": 4.642,
       "speakers": [
         "siyang"
       ],
-      "bytes": 66509
+      "language": "es",
+      "spokenText": "Tú... también has muerto una vez, ¿verdad? Lo noto. Hay algo en ti que ha cambiado.",
+      "bytes": 37901
     },
     {
       "id": "talk.siyang.2.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-37fe1b9356bcff.mp3",
-      "duration": 19.266,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-cc0d52f5750cf2.mp3",
+      "duration": 12.584,
       "speakers": [
         "siyang"
       ],
-      "bytes": 154829
+      "language": "es",
+      "spokenText": "Este castillo está atrapado en un ciclo. Con cada vuelta deja ver un poco más de la verdad. La primera vez que morí, vi un cuadro: dos hombres abrazados. Uno tenía el rostro tachado.",
+      "bytes": 101453
     },
     {
       "id": "talk.siyang.2.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-99adaade7ae9aa.mp3",
-      "duration": 4.211,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-d9d4ec021d6b46.mp3",
+      "duration": 5.249,
       "speakers": [
         "siyang"
       ],
-      "bytes": 34445
+      "language": "es",
+      "spokenText": "Enséñame lo que hayas encontrado. Cualquier cosa que tenga que ver con este castillo.",
+      "bytes": 42701
     },
     {
       "id": "talk.siyang.2.2.giftText",
-      "asset": "assets/audio/moonlight-castle/voices/line-a6284c6adeba82.mp3",
-      "duration": 14.126,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-bd9dda9c00109d.mp3",
+      "duration": 13.24,
       "speakers": [
         "siyang"
       ],
-      "bytes": 113745
+      "language": "es",
+      "spokenText": "Una carta quemada... Es la letra de Adrián. Espera. No se la escribió a otra persona, sino a sí mismo. Se está culpando. Junto a la chimenea... allí era donde a Félix más le gustaba sentarse.",
+      "bytes": 106641
     },
     {
       "id": "talk.siyang.3.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-5d5f0806e22de8.mp3",
-      "duration": 6.927,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-bc8572a0603460.mp3",
+      "duration": 6.098,
       "speakers": [
         "siyang"
       ],
-      "bytes": 56141
+      "language": "es",
+      "spokenText": "El ciclo ha terminado. Mira, el fuego de la chimenea vuelve a arder. Es azul. Pero ya no tengo miedo.",
+      "bytes": 49613
     },
     {
       "id": "talk.siyang.3.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-fc3f06a8760515.mp3",
-      "duration": 5.277,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-3bf48958c4ac73.mp3",
+      "duration": 4.446,
       "speakers": [
         "siyang"
       ],
-      "bytes": 42893
+      "language": "es",
+      "spokenText": "Adrián y Félix... al final fueron felices. Al menos, en esta historia.",
+      "bytes": 36365
     },
     {
       "id": "talk.siyang.4.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-e124ec3d9068e6.mp3",
-      "duration": 4.769,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-ab91d4c440eceb.mp3",
+      "duration": 4.079,
       "speakers": [
         "siyang"
       ],
-      "bytes": 38861
+      "language": "es",
+      "spokenText": "Qué extraño... Ahora se puede leer aquel nombre que estaba tachado.",
+      "bytes": 33293
     },
     {
       "id": "talk.siyang.4.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-a4a7b30756626f.mp3",
-      "duration": 16.178,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-91b1b819cf54e9.mp3",
+      "duration": 16.202,
       "speakers": [
         "siyang"
       ],
-      "bytes": 130253
+      "language": "es",
+      "spokenText": "Ah, por cierto. Anoche creo que no era el mayordomo... Quiero decir, en el sueño. Llevaba un uniforme de hace doscientos años y pasé la noche junto a la chimenea, guardando la puerta para los dos señores. Quizá todos formamos parte de este castillo alguna vez.",
+      "bytes": 130445
     },
     {
       "id": "talk.bingbing.1.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-c75b8c801027ed.mp3",
-      "duration": 6.017,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-3e9ae657885791.mp3",
+      "duration": 5.124,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 48847
+      "language": "es",
+      "spokenText": "Tú... no eres él. Pero él tampoco va a volver.",
+      "bytes": 41743
     },
     {
       "id": "talk.bingbing.1.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-ef2c2ef8fccc7a.mp3",
-      "duration": 12.294,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-8941cb1defbc96.mp3",
+      "duration": 11.485,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 99151
+      "language": "es",
+      "spokenText": "Hay dos personas en el retrato. A una le han borrado la cara con un cuchillo. Los cortes son recientes. No de hace doscientos años. De hace un momento.",
+      "bytes": 92623
     },
     {
       "id": "talk.bingbing.1.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-534ab54e6dca9b.mp3",
-      "duration": 4.498,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-b5dda8b4f9203d.mp3",
+      "duration": 5.026,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 36751
+      "language": "es",
+      "spokenText": "No mires el cuadro demasiado tiempo. Te devolverá la mirada.",
+      "bytes": 40975
     },
     {
       "id": "talk.bingbing.2.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-20bde117f22a0c.mp3",
-      "duration": 8.333,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-5616c22d046780.mp3",
+      "duration": 7.84,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 67471
+      "language": "es",
+      "spokenText": "Has vuelto. Sabía que volverías. Con cada ciclo, el cuadro sangra un poco más.",
+      "bytes": 63439
     },
     {
       "id": "talk.bingbing.2.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-0ae622759c9ef3.mp3",
-      "duration": 15.347,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-e2026c91d75996.mp3",
+      "duration": 12.136,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 123535
+      "language": "es",
+      "spokenText": "Me llamo Isabella. Fui prima de Adrián. Yo lo amaba, pero él amaba al violinista. A Félix, el hijo de una familia noble venida a menos.",
+      "bytes": 97807
     },
     {
       "id": "talk.bingbing.2.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-cf66ddf9976946.mp3",
-      "duration": 3.41,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-916f23aa0fef82.mp3",
+      "duration": 4.648,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 28111
+      "language": "es",
+      "spokenText": "Dame lo que hayas descubierto. Sobre ese cuadro.",
+      "bytes": 37903
     },
     {
       "id": "talk.bingbing.2.2.giftText",
-      "asset": "assets/audio/moonlight-castle/voices/line-671f3c614c085f.mp3",
-      "duration": 15.715,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-56ff39669ede38.mp3",
+      "duration": 16.971,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 126419
+      "language": "es",
+      "spokenText": "La carta quemada marcada con una be... Es la letra de Félix. Espera, ¿está perdonando a Adrián? ¿Después de que lo echara? Entonces... ya sabía que la carta era falsa. Y aun así eligió perdonarlo.",
+      "bytes": 136595
     },
     {
       "id": "talk.bingbing.3.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-6eba9728d506c1.mp3",
-      "duration": 5.65,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-b0faa82c8c706f.mp3",
+      "duration": 5.935,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 45967
+      "language": "es",
+      "spokenText": "Por fin pueden mostrarse juntos. No como un escándalo, sino como... amor.",
+      "bytes": 48271
     },
     {
       "id": "talk.bingbing.3.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-f64b23ea1cca5b.mp3",
-      "duration": 6.794,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-221f162695c9f5.mp3",
+      "duration": 8.526,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 55183
+      "language": "es",
+      "spokenText": "Al final, Isabella se casó con otro. Pero cada año, en este mismo día, venía a dejar un ramo de flores.",
+      "bytes": 69007
     },
     {
       "id": "talk.bingbing.4.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-517bb42a64b2b0.mp3",
-      "duration": 9.25,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-6a06b5344b7cbb.mp3",
+      "duration": 12.941,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 74767
+      "language": "es",
+      "spokenText": "Me llamo Isabella. En el sueño, llevé ese nombre durante doscientos años. Ahora por fin puedo decirlo: primo, no te culpo. Nunca te he culpado.",
+      "bytes": 104335
     },
     {
       "id": "talk.bingbing.4.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-2c92227464bd4c.mp3",
-      "duration": 8.639,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-3789d53da36b83.mp3",
+      "duration": 12.069,
       "speakers": [
         "bingbing"
       ],
-      "bytes": 69775
+      "language": "es",
+      "spokenText": "Llevo doscientos años viéndolos desde el cuadro. Ya he tenido tiempo de sobra. Gracias por devolvernos nuestros nombres. A todos, uno por uno.",
+      "bytes": 97231
     },
     {
       "id": "talk.dijie.1.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-22acaa43dd46f2.mp3",
-      "duration": 11.851,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-d8f1324a8f34fe.mp3",
+      "duration": 11.73,
       "speakers": [
         "dijie"
       ],
-      "bytes": 95500
+      "language": "es",
+      "spokenText": "El dueño de este castillo... parece tener miedo de la flauta. Cada vez que toco, la habitación entera tiembla. Como si algo luchara dentro de las paredes.",
+      "bytes": 94540
     },
     {
       "id": "talk.dijie.1.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-ed471296265101.mp3",
-      "duration": 12.679,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-c9c2c84420a7eb.mp3",
+      "duration": 13.426,
       "speakers": [
         "dijie"
       ],
-      "bytes": 102220
+      "language": "es",
+      "spokenText": "Me contrataron porque el conde quería aprender una melodía de Oriente. Dijo que quería sorprender a alguien. Pero, cuando llegué, esa persona ya no estaba.",
+      "bytes": 108172
     },
     {
       "id": "talk.dijie.1.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-195887487bc39f.mp3",
-      "duration": 5.37,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-638a42ea9ee1f9.mp3",
+      "duration": 7.173,
       "speakers": [
         "dijie"
       ],
-      "bytes": 43660
+      "language": "es",
+      "spokenText": "La escala pentatónica puede apaciguar a los espíritus. Pero no estoy seguro del orden...",
+      "bytes": 58060
     },
     {
       "id": "talk.dijie.2.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-0c429d3d5636d6.mp3",
-      "duration": 6.011,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-3af9cb44ed9196.mp3",
+      "duration": 6.586,
       "speakers": [
         "dijie"
       ],
-      "bytes": 48844
+      "language": "es",
+      "spokenText": "El ciclo lo ha vuelto todo más frágil. Incluso la verdad.",
+      "bytes": 53452
     },
     {
       "id": "talk.dijie.2.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-96e79f1c493e50.mp3",
-      "duration": 9.461,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-424954acd7f63e.mp3",
+      "duration": 10.434,
       "speakers": [
         "dijie"
       ],
-      "bytes": 76492
+      "language": "es",
+      "spokenText": "Ya sé cuál era la melodía de Oriente que el conde aprendía para Félix. Se llama Luz de luna. Pero no es de Beethoven. La escribió el propio conde.",
+      "bytes": 84172
     },
     {
       "id": "talk.dijie.2.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-be1eca6099f154.mp3",
-      "duration": 10.44,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-11e13b14119769.mp3",
+      "duration": 13.333,
       "speakers": [
         "dijie"
       ],
-      "bytes": 84172
+      "language": "es",
+      "spokenText": "Félix siempre quiso viajar a Oriente. A la Ruta de la Seda. Decía que su música era como el agua, como el viento. Por él, el conde aprendió en secreto unas palabras en chino.",
+      "bytes": 107404
     },
     {
       "id": "talk.dijie.2.3.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-1c6a4653461f93.mp3",
-      "duration": 4.361,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-88d023a0bb370d.mp3",
+      "duration": 5.496,
       "speakers": [
         "dijie"
       ],
-      "bytes": 35596
+      "language": "es",
+      "spokenText": "Enséñame lo que sepas. Sobre la música de este castillo.",
+      "bytes": 44620
     },
     {
       "id": "talk.dijie.2.3.giftText",
-      "asset": "assets/audio/moonlight-castle/voices/line-97eeb24f8bae93.mp3",
-      "duration": 15.685,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-0aee95d7f69472.mp3",
+      "duration": 17.583,
       "speakers": [
         "dijie"
       ],
-      "bytes": 126224
+      "language": "es",
+      "spokenText": "El diario... El conde escribió que, sin él, la música había perdido su sentido. Compuso incontables piezas, pero ninguna tenía título. Solo una marca: A y F. Adrián y Félix.",
+      "bytes": 141392
     },
     {
       "id": "talk.dijie.3.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-937ccc331184bb.mp3",
-      "duration": 3.759,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-db327671234db5.mp3",
+      "duration": 4.451,
       "speakers": [
         "dijie"
       ],
-      "bytes": 30796
+      "language": "es",
+      "spokenText": "Por fin pueden escuchar juntos el amanecer.",
+      "bytes": 36364
     },
     {
       "id": "talk.dijie.4.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-eb94e942d74ca1.mp3",
-      "duration": 10.82,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-e501ff6b8dbf6f.mp3",
+      "duration": 12.639,
       "speakers": [
         "dijie"
       ],
-      "bytes": 87244
+      "language": "es",
+      "spokenText": "La flauta agrietada se ha reparado sola. Escucha... Me enseñó esta melodía el conde de mi sueño. Dijo que la tocara el día en que volvieran a encontrarse.",
+      "bytes": 101836
     },
     {
       "id": "talk.dijie.4.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-1153749403e7ed.mp3",
-      "duration": 10.733,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-1498f1e0d71942.mp3",
+      "duration": 13.229,
       "speakers": [
         "dijie"
       ],
-      "bytes": 86668
+      "language": "es",
+      "spokenText": "Al final me hizo una pregunta. La luna está preciosa esta noche... En vuestra lengua de Oriente, ¿esa frase significa algo más? Creo que lo he entendido.",
+      "bytes": 106636
     },
     {
       "id": "talk.qiqi.1.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-60edbfed3600a9.mp3",
-      "duration": 9.672,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-51643d22b5c4dd.mp3",
+      "duration": 7.618,
       "speakers": [
         "qiqi"
       ],
-      "bytes": 78027
+      "language": "es",
+      "spokenText": "Macbeth era un buen hombre, hasta que oyó la profecía: ningún hombre nacido de mujer podría hacerle daño. Por eso se creyó invencible.",
+      "bytes": 61707
     },
     {
       "id": "talk.qiqi.1.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-c0593a222292ef.mp3",
-      "duration": 11.854,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-d581ada8b0db88.mp3",
+      "duration": 11.697,
       "speakers": [
         "qiqi"
       ],
-      "bytes": 95499
+      "language": "es",
+      "spokenText": "Pero olvidó un detalle: su enemigo, Macduff, había nacido por cesárea. La profecía era un juego de palabras. La tragedia de Adrián fue igual. No oyó la verdad, sino lo que quería oír.",
+      "bytes": 94347
     },
     {
       "id": "talk.qiqi.1.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-685e4360857562.mp3",
-      "duration": 9.447,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-1509b2996ea916.mp3",
+      "duration": 9.014,
       "speakers": [
         "qiqi"
       ],
-      "bytes": 76299
+      "language": "es",
+      "spokenText": "Las tres brujas dijeron que solo la luz de la luna podía despertar al traidor dormido. Pero ¿quién es el traidor? ¿El expulsado, o quien cerró la puerta?",
+      "bytes": 72843
     },
     {
       "id": "talk.qiqi.2.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-5e7ba725566e8d.mp3",
-      "duration": 7.061,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-1a3075384f060d.mp3",
+      "duration": 4.857,
       "speakers": [
         "qiqi"
       ],
-      "bytes": 57291
+      "language": "es",
+      "spokenText": "Con cada ciclo, la profecía se vuelve más clara. Ahora puedo oírla entera.",
+      "bytes": 39627
     },
     {
       "id": "talk.qiqi.2.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-a6a331c59ab2e9.mp3",
-      "duration": 8.611,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-be6eaf1fbb7174.mp3",
+      "duration": 8.522,
       "speakers": [
         "qiqi"
       ],
-      "bytes": 69579
+      "language": "es",
+      "spokenText": "Solo la luz de la luna despertará al traidor dormido. Solo la verdad lavará las manos manchadas de sangre. Solo el alma abrirá la puerta cerrada.",
+      "bytes": 69003
     },
     {
       "id": "talk.qiqi.2.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-0a3a12803637b6.mp3",
-      "duration": 23.999,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-6a950f390d762c.mp3",
+      "duration": 14.623,
       "speakers": [
         "qiqi"
       ],
-      "bytes": 192651
+      "language": "es",
+      "spokenText": "La carta falsa... fue obra de la madre del conde. No soportaba que su hijo amara a un hombre. Creyó que bastaba con separarlos. No sabía que, para Adrián, perder a Félix era perderlo todo. Incluso la razón.",
+      "bytes": 117771
     },
     {
       "id": "talk.qiqi.2.3.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-f1151f4935c047.mp3",
-      "duration": 21.243,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-328eb9746e5657.mp3",
+      "duration": 12.872,
       "speakers": [
         "qiqi"
       ],
-      "bytes": 170763
+      "language": "es",
+      "spokenText": "Adrián y Félix me recuerdan a una novela inglesa, Maurice. Dos hombres se aman en la Inglaterra victoriana: uno es valiente y el otro, cobarde. Adrián no es Macbeth. Es ese Maurice que huye ante el amor.",
+      "bytes": 103755
     },
     {
       "id": "talk.qiqi.3.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-ade94b6e7d35c9.mp3",
-      "duration": 10.818,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-89e0a23c548fa7.mp3",
+      "duration": 10.775,
       "speakers": [
         "qiqi"
       ],
-      "bytes": 87243
+      "language": "es",
+      "spokenText": "La profecía se ha cumplido. Pero sin tragedia. La luz de la luna despertó al alma dormida. La verdad lavó las manos ensangrentadas. Y el alma abrió la puerta cerrada.",
+      "bytes": 86859
     },
     {
       "id": "talk.qiqi.4.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-1fc42e71ee987d.mp3",
-      "duration": 5.554,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-41c7d4a574f2fc.mp3",
+      "duration": 6.026,
       "speakers": [
         "qiqi"
       ],
-      "bytes": 45195
+      "language": "es",
+      "spokenText": "Esta mañana he sacado la última carta: el Sol. Al derecho. La profecía ya pertenece al pasado.",
+      "bytes": 49035
     },
     {
       "id": "talk.qiqi.4.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-015ae201632883.mp3",
-      "duration": 17.671,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-f595fd0cb8ecb3.mp3",
+      "duration": 13.169,
       "speakers": [
         "qiqi"
       ],
-      "bytes": 142155
+      "language": "es",
+      "spokenText": "¿Sabes? Si Macbeth pudiera empezar de nuevo, quizá elegiría no creer en la profecía. Por suerte, en este castillo hubo alguien más obstinado que el destino. Félix, que estuvo dispuesto a perdonar durante doscientos años.",
+      "bytes": 106059
     },
     {
       "id": "talk.tim.1.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-08d8394555ce48.mp3",
-      "duration": 6.785,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-ca283348274144.mp3",
+      "duration": 11.288,
       "speakers": [
         "tim"
       ],
-      "bytes": 54986
+      "language": "es",
+      "spokenText": "Mi espada ha desaparecido. No, no es una espada... es el arco del violín. Aquí lo llaman arco de crin. Detrás de la armadura hay una pista.",
+      "bytes": 91082
     },
     {
       "id": "talk.tim.1.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-a10e93ababb245.mp3",
-      "duration": 4.574,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-5009697a242e25.mp3",
+      "duration": 7.233,
       "speakers": [
         "tim"
       ],
-      "bytes": 37322
+      "language": "es",
+      "spokenText": "Llevo mucho tiempo protegiendo este castillo. No como caballero, sino como... testigo.",
+      "bytes": 58634
     },
     {
       "id": "talk.tim.2.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-428226d067c5ba.mp3",
-      "duration": 6.303,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-5c41589b4fbfda.mp3",
+      "duration": 7.795,
       "speakers": [
         "tim"
       ],
-      "bytes": 51146
+      "language": "es",
+      "spokenText": "El ciclo me está consumiendo. Pero, si aún puedo seguir en pie, es porque me queda algo por hacer.",
+      "bytes": 63050
     },
     {
       "id": "talk.tim.2.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-d398f60528a290.mp3",
-      "duration": 13.396,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-b713f56e9d08de.mp3",
+      "duration": 15.339,
       "speakers": [
         "tim"
       ],
-      "bytes": 107978
+      "language": "es",
+      "spokenText": "Los vi bailar bajo la luna. No era un baile de salón. Se abrazaban con fuerza, como náufragos aferrándose el uno al otro. Adrián dijo que, si el mundo no les daba un lugar, construiría otro mundo.",
+      "bytes": 123530
     },
     {
       "id": "talk.tim.2.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-7d74e5b74e8b22.mp3",
-      "duration": 4.022,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-98787baa36a0f8.mp3",
+      "duration": 4.648,
       "speakers": [
         "tim"
       ],
-      "bytes": 32906
+      "language": "es",
+      "spokenText": "Dame el arco. Es la llave para abrir la armadura.",
+      "bytes": 37898
     },
     {
       "id": "talk.tim.2.2.giftText",
-      "asset": "assets/audio/moonlight-castle/voices/line-f430737295b1b1.mp3",
-      "duration": 4.788,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-2ebc8f123df0eb.mp3",
+      "duration": 7.84,
       "speakers": [
         "tim"
       ],
-      "bytes": 39054
+      "language": "es",
+      "spokenText": "¡Buena espada! Quiero decir, buen arco. Úsalo para abrir la armadura. Descubrirás la verdad.",
+      "bytes": 63438
     },
     {
       "id": "talk.tim.3.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-13bb5a3a2b908f.mp3",
-      "duration": 3.698,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-f258dacdfd6096.mp3",
+      "duration": 4.78,
       "speakers": [
         "tim"
       ],
-      "bytes": 30410
+      "language": "es",
+      "spokenText": "He cumplido mi misión. Por fin están juntos.",
+      "bytes": 39050
     },
     {
       "id": "talk.tim.4.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-878b8ea783e28b.mp3",
-      "duration": 9.096,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-9a7e28818a2cf8.mp3",
+      "duration": 13.077,
       "speakers": [
         "tim"
       ],
-      "bytes": 73418
+      "language": "es",
+      "spokenText": "Después de doscientos años, por fin puede descansar. Quédatelo. Como recuerdo, no como arma. Quien hizo del sonido su espada ya la ha dejado descansar.",
+      "bytes": 105290
     },
     {
       "id": "talk.tim.4.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-09608af36e3632.mp3",
-      "duration": 17.938,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-b0606255a5d922.mp3",
+      "duration": 11.636,
       "speakers": [
         "tim"
       ],
-      "bytes": 144266
+      "language": "es",
+      "spokenText": "No protegí este castillo por deber. Lo hice porque alguien tenía que recordar el hermoso amor que hubo aquí. Ahora... todos vosotros lo recordaréis por mí.",
+      "bytes": 93770
     },
     {
       "id": "talk.jerry.1.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-60d5514e6d8805.mp3",
-      "duration": 13.366,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-0889ed24309767.mp3",
+      "duration": 16.063,
       "speakers": [
         "jerry"
       ],
-      "bytes": 107596
+      "language": "es",
+      "spokenText": "La acústica de este lugar es increíble. Aunque da un poco de miedo. Ese clave es de mil setecientos veinte y está afinado en temperamento mesotónico. Tiene un intervalo muy áspero: la quinta del lobo. ¿Puedes encontrarlo?",
+      "bytes": 129292
     },
     {
       "id": "talk.jerry.2.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-b59f5ef689a5b3.mp3",
-      "duration": 10.429,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-ac34c0e9dddac7.mp3",
+      "duration": 10.771,
       "speakers": [
         "jerry"
       ],
-      "bytes": 84172
+      "language": "es",
+      "spokenText": "El ciclo hace demasiado ruido. Cada vez que empieza, todos los sonidos se superponen. Ahora puedo oír las interpretaciones de hace doscientos años.",
+      "bytes": 86860
     },
     {
       "id": "talk.jerry.2.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-7ebb080998d0e3.mp3",
-      "duration": 12.8,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-a79a8cdf1666f7.mp3",
+      "duration": 11.901,
       "speakers": [
         "jerry"
       ],
-      "bytes": 103180
+      "language": "es",
+      "spokenText": "El clave está tocando solo. Es el primer movimiento de Claro de luna. Pero no la versión de Beethoven: es un arreglo del conde. Adaptó para clave la parte del violín.",
+      "bytes": 95884
     },
     {
       "id": "talk.jerry.2.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-2e4e19c841f38c.mp3",
-      "duration": 3.931,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-2e9c0c5d94ec1e.mp3",
+      "duration": 5.858,
       "speakers": [
         "jerry"
       ],
-      "bytes": 32140
+      "language": "es",
+      "spokenText": "Dame el diapasón. Es la clave para afinar ese instrumento.",
+      "bytes": 47692
     },
     {
       "id": "talk.jerry.2.2.giftText",
-      "asset": "assets/audio/moonlight-castle/voices/line-f744410a2df30d.mp3",
-      "duration": 6.908,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-389cb1c260b2d8.mp3",
+      "duration": 9.286,
       "speakers": [
         "jerry"
       ],
-      "bytes": 55952
+      "language": "es",
+      "spokenText": "La nota la, a cuatrocientos quince hercios. La referencia del Barroco. Con ella, la quinta del lobo quedará al descubierto.",
+      "bytes": 74960
     },
     {
       "id": "talk.jerry.3.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-23e223546a3778.mp3",
-      "duration": 3.35,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-210a575ced9397.mp3",
+      "duration": 4.776,
       "speakers": [
         "jerry"
       ],
-      "bytes": 27532
+      "language": "es",
+      "spokenText": "Este será el último concierto. Para ellos.",
+      "bytes": 38860
     },
     {
       "id": "talk.jerry.4.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-2ce8a5fe2e1d4c.mp3",
-      "duration": 11.935,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-3279f54146becf.mp3",
+      "duration": 13.064,
       "speakers": [
         "jerry"
       ],
-      "bytes": 96268
+      "language": "es",
+      "spokenText": "¿A que no sabes qué? Han desaparecido todos esos ruidos de mis oídos. Ahora solo escucho una cosa: un dúo de clave y violín que llega de la torre. No ha dejado de sonar.",
+      "bytes": 105292
     },
     {
       "id": "talk.jerry.4.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-f71bb42e8cf72b.mp3",
-      "duration": 15.537,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-22dc0c72d63080.mp3",
+      "duration": 19.448,
       "speakers": [
         "jerry"
       ],
-      "bytes": 125068
+      "language": "es",
+      "spokenText": "Por cierto, en mi sueño afiné aquel clave. Probé de todo: afinación justa, temperamento mesotónico y temperamento igual. ¿Adivinas cuál acabamos usando? Ninguno. El conde dijo que ningún sistema podía definir el intervalo entre él y su amado.",
+      "bytes": 156364
     },
     {
       "id": "talk.shiyuan.1.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-bf2e95058a8b29.mp3",
-      "duration": 6.717,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-e8ce2ec3732478.mp3",
+      "duration": 6.096,
       "speakers": [
         "shiyuan"
       ],
-      "bytes": 54414
+      "language": "es",
+      "spokenText": "Mientras limpiaba la habitación encontré algo debajo del colchón. No me atrevo a mirarlo...",
+      "bytes": 49422
     },
     {
       "id": "talk.shiyuan.1.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-5252a2c230cad3.mp3",
-      "duration": 8.589,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-b7ac4c24e28f39.mp3",
+      "duration": 7.551,
       "speakers": [
         "shiyuan"
       ],
-      "bytes": 69390
+      "language": "es",
+      "spokenText": "La contraseña del tocador... Creo que tiene que ver con la música. La pieza favorita de la señora tiene un tema de catorce notas.",
+      "bytes": 61134
     },
     {
       "id": "talk.shiyuan.1.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-1c04e17513dd4a.mp3",
-      "duration": 9.906,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-c30a722a4fd0a7.mp3",
+      "duration": 5.773,
       "speakers": [
         "shiyuan"
       ],
-      "bytes": 79950
+      "language": "es",
+      "spokenText": "Baoshi y Feihong... No van a volver. Lo sé. He oído sus voces. Dentro de la pared.",
+      "bytes": 46926
     },
     {
       "id": "talk.shiyuan.2.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-1be15e1785e0a7.mp3",
-      "duration": 10.964,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-9dc717b7379311.mp3",
+      "duration": 6.038,
       "speakers": [
         "shiyuan"
       ],
-      "bytes": 88398
+      "language": "es",
+      "spokenText": "El ciclo me ha devuelto muchos recuerdos. En otra vida... quizá de verdad fui doncella aquí.",
+      "bytes": 49038
     },
     {
       "id": "talk.shiyuan.2.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-230d4f017b3bea.mp3",
-      "duration": 13.05,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-6a25530e213a62.mp3",
+      "duration": 10.207,
       "speakers": [
         "shiyuan"
       ],
-      "bytes": 105102
+      "language": "es",
+      "spokenText": "Vi al conde y al señor Félix. Dormían en la misma habitación. El conde le componía una pieza tras otra. Ninguna tenía título. Solo una marca: A y F.",
+      "bytes": 82446
     },
     {
       "id": "talk.shiyuan.2.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-c2f0d62788e32c.mp3",
-      "duration": 8.404,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-322d99a3111c0b.mp3",
+      "duration": 9.837,
       "speakers": [
         "shiyuan"
       ],
-      "bytes": 68046
+      "language": "es",
+      "spokenText": "El señor Félix siempre hablaba de Oriente. De la Ruta de la Seda. Por él, el conde contrató a músicos orientales e incluso aprendió unas palabras en chino.",
+      "bytes": 79374
     },
     {
       "id": "talk.shiyuan.2.3.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-57183b76483eed.mp3",
-      "duration": 3.212,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-7dc39a52375f07.mp3",
+      "duration": 2.87,
       "speakers": [
         "shiyuan"
       ],
-      "bytes": 26382
+      "language": "es",
+      "spokenText": "Dame lo que sepas. Sobre ellos dos.",
+      "bytes": 23694
     },
     {
       "id": "talk.shiyuan.2.3.giftText",
-      "asset": "assets/audio/moonlight-castle/voices/line-2de18c1cebac01.mp3",
-      "duration": 13.271,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-72b13ef3778757.mp3",
+      "duration": 8.012,
       "speakers": [
         "shiyuan"
       ],
-      "bytes": 106834
+      "language": "es",
+      "spokenText": "El señor Félix escondió esta carta bajo el colchón. Ya conocía la verdad antes de perdonar al conde. Y eligió perdonarlo.",
+      "bytes": 64786
     },
     {
       "id": "talk.shiyuan.3.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-5d928f379ac5f8.mp3",
-      "duration": 7.017,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-39ec8b75044c9e.mp3",
+      "duration": 6.098,
       "speakers": [
         "shiyuan"
       ],
-      "bytes": 56910
+      "language": "es",
+      "spokenText": "Por fin descansan en paz. Todos los años, este mismo día, vendré a dejar un ramo de flores blancas.",
+      "bytes": 49614
     },
     {
       "id": "talk.shiyuan.4.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-b6b51640338018.mp3",
-      "duration": 11.576,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-79413df6538058.mp3",
+      "duration": 10.619,
       "speakers": [
         "shiyuan"
       ],
-      "bytes": 93390
+      "language": "es",
+      "spokenText": "¿Ya estáis todos despiertos? Bien. ¿Quién me explica por qué falta media bolsa de harina en la cocina y hay dos servicios más en la mesa? Bueno, dejémoslo. Vamos a desayunar.",
+      "bytes": 85710
     },
     {
       "id": "talk.shiyuan.4.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-36d8126b85d0c8.mp3",
-      "duration": 14.88,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-73aac4460cafdf.mp3",
+      "duration": 14.31,
       "speakers": [
         "shiyuan"
       ],
-      "bytes": 119694
+      "language": "es",
+      "spokenText": "En mi sueño fui doncella. Cada mañana llevaba el desayuno a los dos señores. Un día dibujaron dos letras con mermelada sobre el pan. La A y la F. Qué casualidad, ¿verdad? Esta mañana también estaban en nuestra mesa.",
+      "bytes": 115278
     },
     {
       "id": "talk.lala.1.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-13588fd88ce736.mp3",
-      "duration": 9.249,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-80495e03af51b7.mp3",
+      "duration": 10.578,
       "speakers": [
         "lala"
       ],
-      "bytes": 74763
+      "language": "es",
+      "spokenText": "He consultado el destino... En este castillo hay un apego muy poderoso. No es rencor. Es amor, un amor malinterpretado. Pero algo lo ha corrompido.",
+      "bytes": 85323
     },
     {
       "id": "talk.lala.1.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-ec6ea205085703.mp3",
-      "duration": 7.101,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-11979e0012f12a.mp3",
+      "duration": 6.424,
       "speakers": [
         "lala"
       ],
-      "bytes": 57483
+      "language": "es",
+      "spokenText": "El alma de Félix está sellada dentro de la caja de música del comedor. Solo la luz puede abrirla.",
+      "bytes": 52107
     },
     {
       "id": "talk.lala.1.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-08a43bf96e112f.mp3",
-      "duration": 7.736,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-612abff12da2f0.mp3",
+      "duration": 6.922,
       "speakers": [
         "lala"
       ],
-      "bytes": 62667
+      "language": "es",
+      "spokenText": "Pero, cuando la abras... debes estar preparado. Esa alma no perdonará a alguien que no conozca la verdad.",
+      "bytes": 56139
     },
     {
       "id": "talk.lala.1.3.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-dc37e742c8739b.mp3",
-      "duration": 5.629,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-07cb0a900b1b16.mp3",
+      "duration": 6.099,
       "speakers": [
         "lala"
       ],
-      "bytes": 45771
+      "language": "es",
+      "spokenText": "¿Quieres subir a la torre? Contéstame antes una pregunta. ¿Cuánto sabes de los secretos del violín?",
+      "bytes": 49611
     },
     {
       "id": "talk.lala.1.3.rewardText",
-      "asset": "assets/audio/moonlight-castle/voices/line-871a012929c3ad.mp3",
-      "duration": 9.016,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-68ae06894ced21.mp3",
+      "duration": 8.428,
       "speakers": [
         "lala"
       ],
-      "bytes": 72849
-    },
-    {
-      "id": "talk.lala.1.3.ansQuestion",
-      "asset": "assets/audio/moonlight-castle/voices/line-eddb02aa77b7c6.mp3",
-      "duration": 13.245,
-      "speakers": [
-        "lala"
-      ],
-      "bytes": 106642
-    },
-    {
-      "id": "talk.lala.2.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-a0e390f921543d.mp3",
-      "duration": 6.497,
-      "speakers": [
-        "lala"
-      ],
-      "bytes": 52683
-    },
-    {
-      "id": "talk.lala.2.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-fd2a5d762b18e7.mp3",
-      "duration": 9.369,
-      "speakers": [
-        "lala"
-      ],
-      "bytes": 75723
-    },
-    {
-      "id": "talk.lala.2.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-a9f3e5a5f5f37d.mp3",
-      "duration": 6.053,
-      "speakers": [
-        "lala"
-      ],
-      "bytes": 49227
-    },
-    {
-      "id": "talk.lala.2.2.rewardText",
-      "asset": "assets/audio/moonlight-castle/voices/line-cfeaec797439d8.mp3",
-      "duration": 9.986,
-      "speakers": [
-        "lala"
-      ],
-      "bytes": 80721
-    },
-    {
-      "id": "talk.lala.2.2.ansQuestion",
-      "asset": "assets/audio/moonlight-castle/voices/line-1bd7d9353af762.mp3",
-      "duration": 5.426,
-      "speakers": [
-        "lala"
-      ],
-      "bytes": 44242
-    },
-    {
-      "id": "talk.lala.3.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-e06148e8ae2aeb.mp3",
-      "duration": 6.845,
-      "speakers": [
-        "lala"
-      ],
-      "bytes": 55563
-    },
-    {
-      "id": "talk.lala.3.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-c2c0701dadb51f.mp3",
-      "duration": 6.898,
-      "speakers": [
-        "lala"
-      ],
-      "bytes": 55947
-    },
-    {
-      "id": "talk.lala.3.1.rewardText",
-      "asset": "assets/audio/moonlight-castle/voices/line-045713baf6a6d9.mp3",
-      "duration": 8.441,
-      "speakers": [
-        "lala"
-      ],
+      "language": "es",
+      "spokenText": "Exacto: tres quintas justas. De sol a re, de re a la y de la a mi. El instrumento de la bola de cristal se ha iluminado. Toma, aquí está la llave.",
       "bytes": 68241
     },
     {
-      "id": "talk.lala.3.1.ansQuestion",
-      "asset": "assets/audio/moonlight-castle/voices/line-4ddc4b96c9f663.mp3",
-      "duration": 8.986,
+      "id": "talk.lala.1.3.ansQuestion",
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-80370b893ec93f.mp3",
+      "duration": 12.822,
       "speakers": [
         "lala"
       ],
-      "bytes": 72658
+      "language": "es",
+      "spokenText": "Las cuerdas al aire del violín, de la más gruesa a la más fina, son sol, re, la y mi. Entre cuerdas vecinas hay una quinta justa. De la cuerda más grave a la más aguda, ¿cuántas quintas justas hay?",
+      "bytes": 103378
+    },
+    {
+      "id": "talk.lala.2.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-3b1d3534a25617.mp3",
+      "duration": 7.19,
+      "speakers": [
+        "lala"
+      ],
+      "language": "es",
+      "spokenText": "Con cada ciclo, ese apego se hace más fuerte. Pero también hay buenas noticias: el alma desea ser liberada.",
+      "bytes": 58251
+    },
+    {
+      "id": "talk.lala.2.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-7695ba8284721b.mp3",
+      "duration": 7.047,
+      "speakers": [
+        "lala"
+      ],
+      "language": "es",
+      "spokenText": "Adrián no es un demonio. Solo es alguien que cometió un error. Alguien a quien el amor llevó a perder la razón.",
+      "bytes": 57099
+    },
+    {
+      "id": "talk.lala.2.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-71105d4b1f715f.mp3",
+      "duration": 7.642,
+      "speakers": [
+        "lala"
+      ],
+      "language": "es",
+      "spokenText": "¿Otra vez está cerrada la puerta de la torre? Así son los ciclos. Responde otra pregunta. Esta será un poco más difícil.",
+      "bytes": 61899
+    },
+    {
+      "id": "talk.lala.2.2.rewardText",
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-9f12bcb3bb85b1.mp3",
+      "duration": 8.931,
+      "speakers": [
+        "lala"
+      ],
+      "language": "es",
+      "spokenText": "Siete semitonos. Después de la octava, la quinta justa es el intervalo más limpio. Como debió ser el amor de aquellos dos. Toma la llave.",
+      "bytes": 72273
+    },
+    {
+      "id": "talk.lala.2.2.ansQuestion",
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-40522d1872da57.mp3",
+      "duration": 6.596,
+      "speakers": [
+        "lala"
+      ],
+      "language": "es",
+      "spokenText": "En el temperamento igual de doce notas, ¿cuántos semitonos tiene una quinta justa, por ejemplo de do a sol?",
+      "bytes": 53458
+    },
+    {
+      "id": "talk.lala.3.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-189f182ef01946.mp3",
+      "duration": 5.852,
+      "speakers": [
+        "lala"
+      ],
+      "language": "es",
+      "spokenText": "Ese apego está a punto de extinguirse. Este es el último ciclo. Y la última pregunta.",
+      "bytes": 47499
+    },
+    {
+      "id": "talk.lala.3.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-e4cb6dd1acbeea.mp3",
+      "duration": 4.98,
+      "speakers": [
+        "lala"
+      ],
+      "language": "es",
+      "spokenText": "Te doy la llave de la torre por última vez. Responde y ve a terminar su historia.",
+      "bytes": 40587
+    },
+    {
+      "id": "talk.lala.3.1.rewardText",
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-dcb6c130c74c6d.mp3",
+      "duration": 5.821,
+      "speakers": [
+        "lala"
+      ],
+      "language": "es",
+      "spokenText": "Exacto, ocho. La octava: el final del ciclo y un nuevo comienzo. Ve y termina esa melodía por ellos.",
+      "bytes": 47313
+    },
+    {
+      "id": "talk.lala.3.1.ansQuestion",
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-f2edb1d0aa4549.mp3",
+      "duration": 8.314,
+      "speakers": [
+        "lala"
+      ],
+      "language": "es",
+      "spokenText": "Última pregunta. En el piano, desde un do hasta el siguiente do agudo, ¿cuántas teclas blancas hay, contando la primera y la última?",
+      "bytes": 67282
     },
     {
       "id": "talk.lala.4.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-36a58fdf39f47e.mp3",
-      "duration": 9.778,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-02971e64575a4b.mp3",
+      "duration": 9.71,
       "speakers": [
         "lala"
       ],
-      "bytes": 78987
+      "language": "es",
+      "spokenText": "Mi bola de cristal se ha vaciado. No está rota. Simplemente, todo ese apego se ha desvanecido. Toma, puedes jugar con ella. Consérvala como recuerdo.",
+      "bytes": 78411
     },
     {
       "id": "talk.lala.4.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-d6140a90c6a4da.mp3",
-      "duration": 8.048,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-d558cacb63ac2e.mp3",
+      "duration": 9.122,
       "speakers": [
         "lala"
       ],
-      "bytes": 65163
+      "language": "es",
+      "spokenText": "Para la próxima actividad del grupo, elegid otro sitio. Aunque... me alegro de haber venido. Hay historias que alguien tiene que escuchar hasta el final.",
+      "bytes": 73803
     },
     {
       "id": "talk.servants.1.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-417421b216ec33.mp3",
-      "duration": 8.858,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-cabb982e35e4e0.mp3",
+      "duration": 10.088,
       "speakers": [
         "baoshi",
         "feihong"
       ],
-      "bytes": 71695
+      "language": "es",
+      "spokenText": "No debí venir... Está todo tan oscuro... Salí a echar un vistazo y después... dejé de ser yo.",
+      "bytes": 81487
     },
     {
       "id": "talk.servants.1.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-1020ef0747dfb7.mp3",
-      "duration": 5.606,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-551df4c41aab38.mp3",
+      "duration": 5.06,
       "speakers": [
         "feihong"
       ],
-      "bytes": 45583
+      "language": "es",
+      "spokenText": "El rostro tachado de aquel retrato... se parece al mío.",
+      "bytes": 41167
     },
     {
       "id": "talk.servants.2.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-5fdbbe909769a9.mp3",
-      "duration": 11.474,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-3ce05dd505cefb.mp3",
+      "duration": 9.686,
       "speakers": [
         "baoshi"
       ],
-      "bytes": 92623
+      "language": "es",
+      "spokenText": "El ciclo nos ha devuelto los recuerdos. No es la primera vez que venimos. La otra vez tampoco conseguimos salir.",
+      "bytes": 78223
     },
     {
       "id": "talk.servants.2.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-e971793590ba38.mp3",
-      "duration": 9.563,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-de1986b478a2f8.mp3",
+      "duration": 13.055,
       "speakers": [
         "feihong"
       ],
-      "bytes": 77263
+      "language": "es",
+      "spokenText": "Pero no guardamos rencor. Este castillo nos necesita como... testigos. Cada vez que alguien descubre la verdad, nuestras almas pesan un poco menos.",
+      "bytes": 105103
     },
     {
       "id": "talk.servants.3.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-49c575edcbcded.mp3",
-      "duration": 3.931,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-993512afdb7f71.mp3",
+      "duration": 3.957,
       "speakers": [
         "baoshi"
       ],
-      "bytes": 32143
+      "language": "es",
+      "spokenText": "Gracias. Por fin podemos seguir nuestro camino.",
+      "bytes": 32335
     },
     {
       "id": "talk.servants.4.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-c0660f019231b7.mp3",
-      "duration": 19.932,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-a58a2ff42f3b4a.mp3",
+      "duration": 17.293,
       "speakers": [
         "feihong"
       ],
-      "bytes": 160207
+      "language": "es",
+      "spokenText": "He tenido un sueño larguísimo. Llevaba doscientos años andando por este castillo, sin encontrar la salida. Pero lo extraño es que... alguien me sostuvo de la mano todo el tiempo.",
+      "bytes": 139087
     },
     {
       "id": "talk.servants.4.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-5ca391fb5d77b0.mp3",
-      "duration": 9.792,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-e2b485ddbeb638.mp3",
+      "duration": 11.434,
       "speakers": [
         "feihong"
       ],
-      "bytes": 78991
+      "language": "es",
+      "spokenText": "No os riáis... He soñado que Baoshi fue mi amante en otra vida. Nos perdimos bajo la luna. Pasé una vida entera buscándolo.",
+      "bytes": 92239
     },
     {
       "id": "talk.servants.4.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-2dadb07ef71008.mp3",
-      "duration": 13.496,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-7bf3c85db0b47d.mp3",
+      "duration": 13.016,
       "speakers": [
         "baoshi"
       ],
-      "bytes": 108751
+      "language": "es",
+      "spokenText": "Yo también soñé contigo. Soñé que esperaba tu regreso. Esperé muchísimo tiempo. Y entonces volviste de verdad. Cubierto de nieve.",
+      "bytes": 104911
     },
     {
       "id": "talk.servants.4.4.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-59e4ad6567baa4.mp3",
-      "duration": 4.043,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-8b58db0cbc35c8.mp3",
+      "duration": 5.192,
       "speakers": [
         "shiyuan"
       ],
-      "bytes": 33103
+      "language": "es",
+      "spokenText": "¡Si ya estáis despiertos, venid a ayudar! ¿Vamos a preparar el desayuno del grupo o no?",
+      "bytes": 42319
     },
     {
       "id": "talk.adrian.1.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-53c97f4b4f3ba3.mp3",
-      "duration": 6.558,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-ebca84f7f325f0.mp3",
+      "duration": 10.981,
       "speakers": [
         "adrian"
       ],
-      "bytes": 53261
+      "language": "es",
+      "spokenText": "Otro visitante... Siempre hacéis lo mismo. Entráis con vuestras velas y vuestra curiosidad en una noche que no os pertenece.",
+      "bytes": 88589
     },
     {
       "id": "talk.adrian.1.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-7f9fbd3efb32a8.mp3",
-      "duration": 20.108,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-8309465e5c51d6.mp3",
+      "duration": 20.32,
       "speakers": [
         "adrian"
       ],
-      "bytes": 161549
+      "language": "es",
+      "spokenText": "¿Sabes quién fue el último que entró en esta torre? Fue mi luz de luna. Aquella noche nevó sin descanso, y yo permanecí junto a la ventana. Lo dejé fuera con mis propias manos. Y después pasé doscientos años encerrándome dentro.",
+      "bytes": 163277
     },
     {
       "id": "talk.adrian.1.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-3f38087b056784.mp3",
-      "duration": 8.579,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-1439462e4129ca.mp3",
+      "duration": 10.068,
       "speakers": [
         "adrian"
       ],
-      "bytes": 69389
+      "language": "es",
+      "spokenText": "Lo he echado tanto de menos. Como si esas noches interminables solo existieran para añorarlo.",
+      "bytes": 81293
     },
     {
       "id": "talk.adrian.1.3.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-f4b96a6439e9ef.mp3",
-      "duration": 5.978,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-1db2bb4439c352.mp3",
+      "duration": 8.19,
       "speakers": [
         "adrian"
       ],
-      "bytes": 48653
+      "language": "es",
+      "spokenText": "Esta noche no saldrá nadie. Mientras no se ponga la luna, la puerta seguirá cerrada.",
+      "bytes": 66317
     },
     {
       "id": "talk.adrian.2.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-8ae95c7c4ef488.mp3",
-      "duration": 13.407,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-9cd8ff1179f981.mp3",
+      "duration": 13.088,
       "speakers": [
         "adrian"
       ],
-      "bytes": 107981
+      "language": "es",
+      "spokenText": "Has vuelto. En doscientos años, muy pocos lo han hecho. Pero tú eres distinto. Llevas su aroma: resina, cuerdas de tripa... y la nieve de aquel invierno.",
+      "bytes": 105485
     },
     {
       "id": "talk.adrian.2.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-04250ac65e336e.mp3",
-      "duration": 23.584,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-a4fba52c2c3164.mp3",
+      "duration": 28.987,
       "speakers": [
         "adrian"
       ],
-      "bytes": 189389
+      "language": "es",
+      "spokenText": "Siempre quiso ir a Oriente. Decía que allí la música era como el agua y el viento, y que cada grano de arena de la Ruta de la Seda podía cantar. Aprendí una frase en chino para su cumpleaños: la luna está preciosa esta noche. Pero, antes de poder decírsela, él se adentró en la nieve. Solo después comprendí que aquella frase no hablaba de la luna.",
+      "bytes": 232589
     },
     {
       "id": "talk.adrian.2.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-b1b818b04cfdd2.mp3",
-      "duration": 27.219,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-ec68f3ca630da0.mp3",
+      "duration": 28.412,
       "speakers": [
         "adrian"
       ],
-      "bytes": 218573
+      "language": "es",
+      "spokenText": "Mi madre nos leyó el destino. Dijo que acabaríamos destruyéndonos. Respondí que no me importaba. Y ella dijo: a ti no, pero a él sí. Por eso creí en la carta que falsificó. No porque creyera la mentira. Tenía miedo de que tuviera razón, de que alguien como yo no mereciera una luz de luna tan pura.",
+      "bytes": 227981
     },
     {
       "id": "talk.adrian.2.3.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-2320b55e6f6e37.mp3",
-      "duration": 24.653,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-bc38958a8e2b57.mp3",
+      "duration": 24.295,
       "speakers": [
         "adrian"
       ],
-      "bytes": 198029
+      "language": "es",
+      "spokenText": "Macbeth decía que tenía las manos llenas de sangre. Las mías nunca quedarán limpias. Pero hay algo más sucio que la sangre: la cobardía. Lo amaba. Pero amaba más a ese yo del que el mundo no se burlaría. Lo eché y creí que así ya no tendría que admitir nada.",
+      "bytes": 195149
     },
     {
       "id": "talk.adrian.2.4.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-c8352e1c9cf947.mp3",
-      "duration": 19.402,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-5905f8bc685072.mp3",
+      "duration": 19.031,
       "speakers": [
         "adrian"
       ],
-      "bytes": 155981
+      "language": "es",
+      "spokenText": "Llevo doscientos años tocando cada noche aquel réquiem inconcluso. Cada nota dice: perdóname. Pero los muertos no oyen la música. La oyen los vivos que se detienen a escuchar. Como tú.",
+      "bytes": 152909
     },
     {
       "id": "talk.adrian.2.5.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-0a8c596936b00f.mp3",
-      "duration": 19.763,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-dbfcae99585e61.mp3",
+      "duration": 20.96,
       "speakers": [
         "adrian"
       ],
-      "bytes": 158861
+      "language": "es",
+      "spokenText": "Me queda poco tiempo. Con cada ciclo me parezco más a una bestia. La próxima vez que despierte quizá ya no te reconozca. Si has traído algo suyo, lo que sea, dámelo ahora. Con ese poco de calor puedo contener el castillo por ti.",
+      "bytes": 168461
     },
     {
       "id": "talk.adrian.3.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-4a4a42e4fd7382.mp3",
-      "duration": 19.218,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-63739a0e3b31b0.mp3",
+      "duration": 24.622,
       "speakers": [
         "adrian"
       ],
-      "bytes": 154445
+      "language": "es",
+      "spokenText": "Has traído su alma. Y también... su perdón. Durante doscientos años imaginé nuestro reencuentro. Siempre me derrumbaba en la primera frase. Ahora que está aquí de verdad, solo quiero preguntarle... ¿has pasado frío todos estos años?",
+      "bytes": 197645
     },
     {
       "id": "talk.adrian.3.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-059d435b7592fb.mp3",
-      "duration": 47.828,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-6bad6b3f42173c.mp3",
+      "duration": 53.855,
       "speakers": [
         "adrian"
       ],
-      "bytes": 383309
+      "language": "es",
+      "spokenText": "Escribí nuestra vida en tres movimientos. El primero fue el encuentro. El segundo, la desconfianza. El tercero... nunca conseguí escribirlo. No quería admitir que fuera un adiós definitivo. Esta noche, termínalo por mí. Que él lo escuche. Esta vez, seré yo quien espere al otro lado de la puerta. Hasta que me perdone. El movimiento que tocará el órgano no depende de mí. Depende de lo que hayas recuperado: mi confesión, el año en que nos conocimos, sus promesas. Cuanto más traigas, más se parecerá esta despedida a un reencuentro.",
+      "bytes": 431501
     },
     {
       "id": "talk.adrian.4.0.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-fa7d2997dc26d9.mp3",
-      "duration": 7.928,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-1acca3198f6817.mp3",
+      "duration": 10.254,
       "speakers": [
         "adrian"
       ],
-      "bytes": 64205
+      "language": "es",
+      "spokenText": "Has venido. El amanecer es hermoso, ¿verdad? Después de doscientos años, descubro por primera vez que la luz también da calor.",
+      "bytes": 82829
     },
     {
       "id": "talk.adrian.4.1.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-ffd53e1875fc45.mp3",
-      "duration": 17.716,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-cc6d56c5b9d132.mp3",
+      "duration": 23.122,
       "speakers": [
         "adrian"
       ],
-      "bytes": 142541
+      "language": "es",
+      "spokenText": "Esta mañana Félix me dijo: así que este es el color del amanecer. Le respondí: a tu lado, todos los colores son hermosos. Se rio de mí por seguir siendo un zalamero a mis doscientos años. Quería ir a la cocina. Tras doscientos años sin comer, le apetecía probar el pan moderno.",
+      "bytes": 185741
     },
     {
       "id": "talk.adrian.4.2.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-0a4fb3c5fe8271.mp3",
-      "duration": 19.078,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-9ea1be943d730d.mp3",
+      "duration": 21.227,
       "speakers": [
         "adrian"
       ],
-      "bytes": 153293
+      "language": "es",
+      "spokenText": "Mi madre se equivocaba. El amor no nos destruye. Lo que lo destruye todo es no atreverse a amar. He tardado doscientos años en entenderlo. Por suerte, él fue más listo. Ya me había perdonado aquella noche en la nieve. Solo esperaba a que yo se lo preguntara.",
+      "bytes": 170573
     },
     {
       "id": "talk.adrian.4.3.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-5ffa557e4f0594.mp3",
-      "duration": 13.17,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-2ceb9820e7a445.mp3",
+      "duration": 14.603,
       "speakers": [
         "adrian"
       ],
-      "bytes": 106061
+      "language": "es",
+      "spokenText": "Siempre creí que aquellas noches interminables servían para echarlo de menos. Ahora lo entiendo: servían para esperar. Y él es la persona con quien quiero esperar el amanecer.",
+      "bytes": 117581
     },
     {
       "id": "talk.adrian.4.4.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-d560a85c80e45c.mp3",
-      "duration": 11.996,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-1ede6502650661.mp3",
+      "duration": 11.878,
       "speakers": [
         "adrian"
       ],
-      "bytes": 96653
+      "language": "es",
+      "spokenText": "Aún quedan muchas cosas nuestras en el castillo. Puedes mirarlas si te apetece. Ya no pertenecen a fantasmas... Solo son recuerdos que el tiempo había olvidado.",
+      "bytes": 95693
     },
     {
       "id": "talk.adrian.4.5.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-f484088b0cdd43.mp3",
-      "duration": 8.738,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-8c37411e0fdba2.mp3",
+      "duration": 9.998,
       "speakers": [
         "adrian"
       ],
-      "bytes": 70733
+      "language": "es",
+      "spokenText": "Por cierto, si encuentras algo interesante, tráemelo. Me gustaría... compartir nuestra historia una vez más.",
+      "bytes": 80717
     },
     {
       "id": "talk.adrian.4.5.giftText",
-      "asset": "assets/audio/moonlight-castle/voices/line-1dd3f8a42eb52d.mp3",
-      "duration": 22.204,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-dc8ec729655201.mp3",
+      "duration": 24.556,
       "speakers": [
         "adrian"
       ],
-      "bytes": 178449
+      "language": "es",
+      "spokenText": "Lo dibujé yo. Aquel invierno se sentaba junto al fuego a tocar el violín. La luz le acariciaba el perfil y yo lo dibujaba a escondidas. Pensé que haría muchos retratos, hasta verlo envejecer, hasta que los dos tuviéramos el pelo blanco. Pero solo llegué a terminar este.",
+      "bytes": 197265
     },
     {
       "id": "talk.adrian.4.6.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-67141c6bd25e69.mp3",
-      "duration": 23.642,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-f03ede07e69c2d.mp3",
+      "duration": 27.706,
       "speakers": [
         "adrian"
       ],
-      "bytes": 189965
+      "language": "es",
+      "spokenText": "Ese pañuelo... siempre lo llevaba encima. Decía que el ciruelo era el valor del invierno y el bambú, la esperanza de la primavera. Yo bordé esos dos pétalos. Las puntadas eran horribles y me pinché tres veces. Pero él no dejó de decir que era precioso. Toda su vida... aunque su vida fue demasiado corta.",
+      "bytes": 222413
     },
     {
       "id": "talk.adrian.4.6.giftText",
-      "asset": "assets/audio/moonlight-castle/voices/line-f13039a53f60ec.mp3",
-      "duration": 6.391,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-d58a807cb5bfb3.mp3",
+      "duration": 6.126,
       "speakers": [
         "adrian"
       ],
-      "bytes": 51921
+      "language": "es",
+      "spokenText": "Gracias por devolvérmelo. Esta vez no volveré a perderlo. Nunca más.",
+      "bytes": 49809
     },
     {
       "id": "talk.adrian.4.7.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-d6d30679f4b2e2.mp3",
-      "duration": 20.073,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-741a8ee827d3f0.mp3",
+      "duration": 19.247,
       "speakers": [
         "adrian"
       ],
-      "bytes": 161357
+      "language": "es",
+      "spokenText": "Ah, esa cuerda rota... La corté el día que perdí la razón. Creí que, sin música, dejaría de recordarlo. Me equivocaba. En aquellos años sin música no pude recordar nada... salvo a él.",
+      "bytes": 154637
     },
     {
       "id": "talk.adrian.4.7.giftText",
-      "asset": "assets/audio/moonlight-castle/voices/line-368a38f4358b74.mp3",
-      "duration": 11.87,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-5917bab84f81b3.mp3",
+      "duration": 14.896,
       "speakers": [
         "adrian"
       ],
-      "bytes": 95697
+      "language": "es",
+      "spokenText": "Quiero convertirla en una joya nueva. No para nosotros, sino para este castillo. Para recordar todas esas palabras que no nos atrevimos a decir y que, al final, se hicieron eternas.",
+      "bytes": 119889
     },
     {
       "id": "talk.adrian.4.8.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-39045fe10b9261.mp3",
-      "duration": 5.051,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-232437987d742d.mp3",
+      "duration": 8.724,
       "speakers": [
         "adrian"
       ],
-      "bytes": 41165
+      "language": "es",
+      "spokenText": "Esta página de la partitura... Creí que la había quemado hace mucho.",
+      "bytes": 70541
     },
     {
       "id": "talk.adrian.4.8.giftText",
-      "asset": "assets/audio/moonlight-castle/voices/line-012261c0485388.mp3",
-      "duration": 14.152,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-0c613e92489149.mp3",
+      "duration": 22.639,
       "speakers": [
         "adrian"
       ],
-      "bytes": 113937
+      "language": "es",
+      "spokenText": "Fue el primer dúo que compusimos. Él decía que el clave sonaba demasiado fuerte y yo, que el violín era estridente. Discutimos toda la tarde. Al final decidimos ceder un poco cada uno. Como en la vida juntos. Después de doscientos años, esta nota sigue afinada.",
+      "bytes": 181905
     },
     {
       "id": "talk.adrian.4.9.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-182187c6c4b857.mp3",
-      "duration": 3.938,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-7922ba568b5994.mp3",
+      "duration": 5.207,
       "speakers": [
         "adrian"
       ],
-      "bytes": 32333
+      "language": "es",
+      "spokenText": "Los gemelos... Había olvidado estos gemelos.",
+      "bytes": 42317
     },
     {
       "id": "talk.adrian.4.9.giftText",
-      "asset": "assets/audio/moonlight-castle/voices/line-8bb13f5d464972.mp3",
-      "duration": 11.048,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-cae78d857ea6a1.mp3",
+      "duration": 11.749,
       "speakers": [
         "adrian"
       ],
-      "bytes": 89169
+      "language": "es",
+      "spokenText": "Mil mañanas... Pero solo llegué a escribir hasta la tercera. Después ya no pude seguir. Ahora ellos lo recuerdan por mí.",
+      "bytes": 94737
     },
     {
       "id": "talk.adrian.4.10.text",
-      "asset": "assets/audio/moonlight-castle/voices/line-e83684536d17e0.mp3",
-      "duration": 2.842,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-71abfbf5eecf05.mp3",
+      "duration": 5.301,
       "speakers": [
         "adrian"
       ],
-      "bytes": 23502
+      "language": "es",
+      "spokenText": "El mapa de las estrellas... Lo has encontrado.",
+      "bytes": 43086
     },
     {
       "id": "talk.adrian.4.10.giftText",
-      "asset": "assets/audio/moonlight-castle/voices/line-b0cbe077ceb18a.mp3",
-      "duration": 17.77,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-28b89b631dff05.mp3",
+      "duration": 25.154,
       "speakers": [
         "adrian"
       ],
-      "bytes": 142930
+      "language": "es",
+      "spokenText": "Aquella noche dijo que, según una leyenda oriental, esas dos estrellas solo se ven una vez al año. Le propuse que nosotros nos viéramos todos los días por ellas. Después... pasé doscientos años mirando las estrellas solo. Ya no hace falta.",
+      "bytes": 202066
     },
     {
       "id": "special.keepsake-refused",
-      "asset": "assets/audio/moonlight-castle/voices/line-187d5abfd40ac3.mp3",
-      "duration": 7.972,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-cd982eef1cbd71.mp3",
+      "duration": 9.268,
       "speakers": [
         "adrian"
       ],
-      "bytes": 64593
+      "language": "es",
+      "spokenText": "¿Vienes con las manos vacías? No has traído ni una sola cosa suya... Entonces, tampoco tú saldrás de aquí.",
+      "bytes": 74961
     },
     {
       "id": "special.protected",
-      "asset": "assets/audio/moonlight-castle/voices/line-f16e8b39f67222.mp3",
-      "duration": 8.495,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-98e8fbc6c789ac.mp3",
+      "duration": 13.136,
       "speakers": [
         "adrian"
       ],
-      "bytes": 68618
+      "language": "es",
+      "spokenText": "Eres tú... Has estado mirándonos todo este tiempo, ¿verdad? No haré daño a nadie a quien él proteja. Vete... mientras aún lo recuerde.",
+      "bytes": 105866
     },
     {
       "id": "special.mirror-soul",
-      "asset": "assets/audio/moonlight-castle/voices/line-b7a9103cdf16da.mp3",
-      "duration": 8.115,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-72a3cdfc9c7b0f.mp3",
+      "duration": 7.11,
       "speakers": [
         "felix"
       ],
-      "bytes": 65740
+      "language": "es",
+      "spokenText": "Llévale mi carta. Dile que la nieve de fuera no es fría. Lo frío de verdad es ese instrumento que él custodia a solas.",
+      "bytes": 57676
     },
     {
       "id": "special.organ-blocked",
-      "asset": "assets/audio/moonlight-castle/voices/line-23e663ba151f88.mp3",
-      "duration": 7.102,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-0363eccb77cd42.mp3",
+      "duration": 7.164,
       "speakers": [
         "adrian"
       ],
-      "bytes": 57486
+      "language": "es",
+      "spokenText": "¿Crees que una carta bastará para conmoverme? Lo quiero a él... Tráeme su alma.",
+      "bytes": 58062
     },
     {
       "id": "special.keepsake-active",
-      "asset": "assets/audio/moonlight-castle/voices/line-50d44e977c062b.mp3",
-      "duration": 3.855,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-61ca010b531e49.mp3",
+      "duration": 6.663,
       "speakers": [
         "adrian"
       ],
-      "bytes": 31568
+      "language": "es",
+      "spokenText": "No te preocupes por mí. Queda poco tiempo. Ve a buscar sus cartas.",
+      "bytes": 54032
     },
     {
       "id": "special.forgiven",
-      "asset": "assets/audio/moonlight-castle/voices/line-02dc2cd21a7116.mp3",
-      "duration": 9.788,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-81668450c277c4.mp3",
+      "duration": 10.564,
       "speakers": [
         "adrian"
       ],
-      "bytes": 78985
+      "language": "es",
+      "spokenText": "Me ha perdonado... Después de doscientos años, ya me había perdonado. Solo esperaba a que yo... se lo preguntara.",
+      "bytes": 85321
     },
     {
       "id": "special.requiem-ready",
-      "asset": "assets/audio/moonlight-castle/voices/line-6a920892d16c11.mp3",
-      "duration": 10.145,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-949bd3030c0881.mp3",
+      "duration": 8.474,
       "speakers": [
         "adrian"
       ],
-      "bytes": 81870
+      "language": "es",
+      "spokenText": "Aún no hemos terminado esta pieza. Pero esta vez él la oirá. Tocaré para él. Y para el amanecer.",
+      "bytes": 68622
     },
     {
       "id": "special.soul-fragment",
-      "asset": "assets/audio/moonlight-castle/voices/line-f3a41ec72a0df6.mp3",
-      "duration": 4.754,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-c12d36f0ff8ee0.mp3",
+      "duration": 4.972,
       "speakers": [
         "felix"
       ],
-      "bytes": 38862
+      "language": "es",
+      "spokenText": "Tráelo de vuelta, por favor. Y a mí... devuélveme a su lado.",
+      "bytes": 40590
     },
     {
       "id": "special.chase-taunt-run",
-      "asset": "assets/audio/moonlight-castle/voices/line-49ed216939ac8f.mp3",
-      "duration": 3.643,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-1bef4e894fdbe6.mp3",
+      "duration": 4.238,
       "speakers": [
         "adrian"
       ],
-      "bytes": 29840
+      "language": "es",
+      "spokenText": "Corres bien. Pero el castillo es mío.",
+      "bytes": 34640
     },
     {
       "id": "special.chase-taunt-shadow",
-      "asset": "assets/audio/moonlight-castle/voices/line-50322339dfd2f0.mp3",
-      "duration": 3.981,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-bd60c85a46bd75.mp3",
+      "duration": 4.903,
       "speakers": [
         "adrian"
       ],
-      "bytes": 32531
+      "language": "es",
+      "spokenText": "Otro que sabe correr. Interesante.",
+      "bytes": 40019
     },
     {
       "id": "transition.loop2",
-      "asset": "assets/audio/moonlight-castle/voices/line-b3a17d035032c0.mp3",
-      "duration": 14.823,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-05c903f7f43e87.mp3",
+      "duration": 16.011,
       "speakers": [
         "adrian"
       ],
-      "bytes": 119305
+      "language": "es",
+      "spokenText": "¿Sabes quién fue el último que entró en esta torre? Fue mi luz de luna. Lo dejé fuera con mis propias manos. Y pasé doscientos años encerrándome dentro.",
+      "bytes": 128905
     },
     {
       "id": "organ.farewell",
-      "asset": "assets/audio/moonlight-castle/voices/line-c6c69ef1f1f8c8.mp3",
-      "duration": 10.459,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-e2b0bf0e5d28d1.mp3",
+      "duration": 13.843,
       "speakers": [
         "adrian"
       ],
-      "bytes": 84359
+      "language": "es",
+      "spokenText": "Llevo doscientos años tocando cada noche los dos primeros movimientos. El tercero... no me atrevo. Pero esta noche es distinta. Esta noche, la luna nos escucha.",
+      "bytes": 111431
     },
     {
       "id": "organ.reunion",
-      "asset": "assets/audio/moonlight-castle/voices/line-8e4d0d291411e4.mp3",
-      "duration": 10.409,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-ac14c03fd71d19.mp3",
+      "duration": 14.31,
       "speakers": [
         "adrian"
       ],
-      "bytes": 83974
+      "language": "es",
+      "spokenText": "Llevo doscientos años tocando cada noche los dos primeros movimientos. El tercero... no me atrevo. Pero esta noche es distinta. Esta noche, la luna nos escucha.",
+      "bytes": 115270
     },
     {
       "id": "organ.diary",
-      "asset": "assets/audio/moonlight-castle/voices/line-791ad45e4d490c.mp3",
-      "duration": 18.93,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-4c4a11e8a0507e.mp3",
+      "duration": 23.529,
       "speakers": [
         "adrian"
       ],
-      "bytes": 152132
+      "language": "es",
+      "spokenText": "Llevo doscientos años tocando cada noche los dos primeros movimientos. El tercero... no me atrevo. Pero esta noche es distinta. Esta noche, la luna nos escucha. Has traído toda nuestra vida... Entonces, el último movimiento no será una despedida. Será un reencuentro.",
+      "bytes": 188996
     },
     {
       "id": "organ.ring",
-      "asset": "assets/audio/moonlight-castle/voices/line-9a8128017d06de.mp3",
-      "duration": 15.886,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-b1ee6b77f6dbcb.mp3",
+      "duration": 20.81,
       "speakers": [
         "adrian"
       ],
-      "bytes": 127747
+      "language": "es",
+      "spokenText": "Llevo doscientos años tocando cada noche los dos primeros movimientos. El tercero... no me atrevo. Pero esta noche es distinta. Esta noche, la luna nos escucha. Lo había guardado todo... Él también lo había guardado todo.",
+      "bytes": 167299
     },
     {
       "id": "keepsake.ring",
-      "asset": "assets/audio/moonlight-castle/voices/line-ef30a9e412fb3e.mp3",
-      "duration": 8.636,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-f06c585a951fe9.mp3",
+      "duration": 12.305,
       "speakers": [
         "adrian"
       ],
-      "bytes": 69766
+      "language": "es",
+      "spokenText": "Las marcas del interior siguen igual que cuando él la calentaba entre sus manos. Con este poco de tiempo... ve y trae lo que falta.",
+      "bytes": 99142
     },
     {
       "id": "keepsake.pocket_watch",
-      "asset": "assets/audio/moonlight-castle/voices/line-9f86526d7fb67e.mp3",
-      "duration": 10.887,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-b2cb668f41ff1e.mp3",
+      "duration": 12.045,
       "speakers": [
         "adrian"
       ],
-      "bytes": 87822
+      "language": "es",
+      "spokenText": "El tiempo se detuvo en aquel instante porque yo no me atrevía a seguir adelante. Ahora me toca a mí darte algo de tiempo.",
+      "bytes": 97038
     },
     {
       "id": "keepsake.wine_bottle",
-      "asset": "assets/audio/moonlight-castle/voices/line-a53a850e24eadf.mp3",
-      "duration": 10.055,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-0c28ebc3374442.mp3",
+      "duration": 12.683,
       "speakers": [
         "adrian"
       ],
-      "bytes": 81101
+      "language": "es",
+      "spokenText": "Mil setecientos noventa y uno... El año en que nos conocimos. Deja aquí la botella. Ve a encontrar lo que falta. Yo contendré el castillo por ti.",
+      "bytes": 102221
     },
     {
       "id": "keepsake.diary_page",
-      "asset": "assets/audio/moonlight-castle/voices/line-a72145bc04c64d.mp3",
-      "duration": 13.213,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-a1a9d0d4419bc6.mp3",
+      "duration": 14.442,
       "speakers": [
         "adrian"
       ],
-      "bytes": 106444
+      "language": "es",
+      "spokenText": "Lo has encontrado... Lo que intenté quemar tres veces, sin conseguirlo. ¡Antes de que pierda el control del todo, corre! ¡Ve a buscar lo que falta!",
+      "bytes": 116236
     },
     {
       "id": "keepsake.silver_key",
-      "asset": "assets/audio/moonlight-castle/voices/line-d71d7abc92648e.mp3",
-      "duration": 10.365,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-30ef318a87ed8a.mp3",
+      "duration": 13.836,
       "speakers": [
         "adrian"
       ],
-      "bytes": 83596
+      "language": "es",
+      "spokenText": "La llave de la sala de música... Él decía que, cuando tocaba, podía hacer saltar hasta las cerraduras. Está bien. Con este poco de tiempo podrás seguir buscando.",
+      "bytes": 111436
     },
     {
       "id": "ending.1",
-      "asset": "assets/audio/moonlight-castle/voices/line-c28b07f01e2c99.mp3",
-      "duration": 27.45,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-6f64348267ad7f.mp3",
+      "duration": 27.287,
       "speakers": [
         "adrian"
       ],
-      "bytes": 220289
+      "language": "es",
+      "spokenText": "Él... ¿me ha perdonado? Félix... Perdóname. Te he echado tanto de menos. Como si esas noches interminables solo existieran para añorarte. He guardado un tesoro en este castillo. No es oro ni plata. Es algo que no volví a ver desde aquella noche de invierno: el amanecer. Ahora me lo devuelvo a mí mismo. Y también a él.",
+      "bytes": 218945
     },
     {
       "id": "ending.2",
-      "asset": "assets/audio/moonlight-castle/voices/line-1155d5281722ac.mp3",
-      "duration": 11.811,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-e70105d1e4e43f.mp3",
+      "duration": 16.242,
       "speakers": [
         "adrian"
       ],
-      "bytes": 95297
+      "language": "es",
+      "spokenText": "Entonces... me has esperado todo este tiempo. Dime... ¿sigue habiendo luz de luna en el mundo de ahora? Me alegro tanto. Esta vez seré yo quien no te suelte.",
+      "bytes": 130625
     },
     {
       "id": "ending.3",
-      "asset": "assets/audio/moonlight-castle/voices/line-f54fa1c180aee2.mp3",
-      "duration": 8.602,
+      "asset": "assets/audio/moonlight-castle/voices/es-v3/line-fb0263c883a5f0.mp3",
+      "duration": 11.06,
       "speakers": [
         "adrian"
       ],
-      "bytes": 69569
+      "language": "es",
+      "spokenText": "¡Félix! Tenías razón. Me basta con la mitad de la luna. La otra mitad... la veremos juntos al amanecer.",
+      "bytes": 89153
     }
   ],
-  "duration": 1773.76,
-  "bytes": 14309406
+  "duration": 1864.23,
+  "bytes": 15033822
 }

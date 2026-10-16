@@ -1,3 +1,4 @@
+const {clickObject}=require('./helpers/castle-objects.cjs');
 const{chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),{pathToFileURL}=require('node:url');
 const root=path.resolve(__dirname,'..'),scope={};
 vm.runInNewContext(fs.readFileSync(path.join(root,'js/audio/moonlight-castle-effects.js'),'utf8')+';globalThis.sfx=CastleSfx;',scope);
@@ -14,7 +15,7 @@ function energy(start,end){let sum=0;for(let i=Math.floor(start*44100);i<end*441
 assert(energy(.1,.4)>.001);assert(energy(.63,.83)>energy(1.4,1.6)*4);
 assert.equal(scope.sfx.render('unknown',44100),null);
 // A listening preview built from the exact production PCM, at normal game volume.
-const wav=Buffer.alloc(44+piano.length*2);wav.write('RIFF');wav.writeUInt32LE(wav.length-8,4);wav.write('WAVEfmt ',8);wav.writeUInt32LE(16,16);wav.writeUInt16LE(1,20);wav.writeUInt16LE(1,22);wav.writeUInt32LE(44100,24);wav.writeUInt32LE(88200,28);wav.writeUInt16LE(2,32);wav.writeUInt16LE(16,34);wav.write('data',36);wav.writeUInt32LE(piano.length*2,40);piano.forEach((value,i)=>wav.writeInt16LE(Math.round(value*1.15*.4*32767),44+i*2));fs.writeFileSync('/tmp/hjm-castle-piano-unlock.wav',wav);
+const wav=Buffer.alloc(44+piano.length*2);wav.write('RIFF');wav.writeUInt32LE(wav.length-8,4);wav.write('WAVEfmt ',8);wav.writeUInt32LE(16,16);wav.writeUInt16LE(1,20);wav.writeUInt16LE(1,22);wav.writeUInt32LE(44100,24);wav.writeUInt32LE(88200,28);wav.writeUInt16LE(2,32);wav.writeUInt16LE(16,34);wav.write('data',36);wav.writeUInt32LE(piano.length*2,40);piano.forEach((value,i)=>wav.writeInt16LE(Math.round(value*1.6*.4*32767),44+i*2));fs.writeFileSync('/tmp/hjm-castle-piano-unlock.wav',wav);
 let browser;
 (async()=>{
  browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});
@@ -28,7 +29,8 @@ let browser;
    ctx.createGain=()=>wrapConnect(gain());
    ctx.createBufferSource=()=>{
     const node=wrapConnect(source()),start=node.start.bind(node),stop=node.stop.bind(node);let event;
-    node.start=(...args)=>{const g=links.get(node),master=links.get(g),samples=node.buffer.getChannelData(0);let energy=0;for(const value of samples)energy+=value*value;event={duration:node.buffer.duration,rms:Math.sqrt(energy/samples.length)*g.gain.value*master.gain.value,volume:master.gain.value,stopped:false};window.castleSoundEvents.push(event);return start(...args);};
+    node.start=(...args)=>{const g=links.get(node),master=links.get(g),samples=node.buffer.getChannelData(0);let energy=0;for(const value of samples)energy+=value*value;event={duration:node.buffer.duration,rms:Math.sqrt(energy/samples.length)*g.gain.value*master.gain.value,gain:g.gain.value,volume:master.gain.value,stopped:false};window.castleSoundEvents.push(event);return start(...args);};
+    node.addEventListener('ended',()=>{if(event)event.ended=true;});
     node.stop=(...args)=>{if(event)event.stopped=true;return stop(...args);};return node;
    };
    ctx.createOscillator=()=>{const node=wrapConnect(oscillator()),start=node.start.bind(node);node.start=(...args)=>{const master=links.get(links.get(node));window.castleToneEvents.push({frequency:node.frequency.value,volume:master.gain.value});return start(...args);};return node;};
@@ -40,16 +42,19 @@ let browser;
  await page.goto(url);await page.click('#start-btn');
  const door=async room=>{const overview=page.locator('#scene-overview');if(await overview.isVisible()&&await overview.getAttribute('aria-pressed')!=='true')await overview.tap();await page.locator('#scene-doors [data-exit='+room+']').tap();};
  assert.equal(await page.evaluate(()=>castleSoundEvents.length),0,'Entering/restore does not replay action sounds');
- await page.locator('.castle-dock [data-castle-drawer=explore]').tap();await page.locator('#object-tray [data-examine=piano]').tap();
+ await clickObject(page,'piano');
+ await page.waitForFunction(()=>castleSoundEvents.length>0);
+ assert.equal(await page.evaluate(()=>castleSoundEvents.length),1,'One actual object tap plays one contact cue');
+ assert.equal(await page.evaluate(()=>castleSoundEvents[0].duration),.65,'The piano has its own string contact sound');
  for(const i of [0,2,4,6,1])await page.locator('.piano-key:not(.black)').nth(i).tap();
  await page.waitForFunction(()=>castleSoundEvents.some(event=>event.duration===2.5));
  await page.waitForTimeout(100);
- assert(await page.evaluate(()=>Math.abs(CastleAudio.audio.volume-CastleAudio.volume*.42)<.015),'BGM ducks while effects play');
+ assert(await page.evaluate(()=>Math.abs(CastleAudio.bgmVolume-CastleAudio.volume*.18)<.015),'BGM ducks while effects play');
  assert.equal(await page.evaluate(()=>G.doors.study),true);
  assert.equal(await page.evaluate(()=>castleSoundEvents.filter(event=>event.duration===2.5).length),1,'Real solution plays one resonance-plus-unlock cue');
  assert.equal(await page.evaluate(()=>castleToneEvents.length),5,'Piano keys keep their note feedback');
  await page.evaluate(()=>{CastleUI.sync();showText('钢琴发出一声低沉的共鸣。书房的方向传来门锁开启的声音！');});await page.waitForTimeout(120);
- assert.equal(await page.evaluate(()=>castleSoundEvents.length),1,'Re-render and repeated narration never synthesize effects from text');
+ assert.equal(await page.evaluate(()=>castleSoundEvents.length),2,'Re-render and repeated narration never synthesize effects from text');
  await door('study');assert.equal(await page.evaluate(()=>G.currentRoom),'study');
  assert.equal(await page.evaluate(()=>castleSoundEvents.at(-1).duration),1.3,'Entering a room plays the wooden door');
  await door('music');
@@ -59,7 +64,7 @@ let browser;
  assert.equal(await page.evaluate(()=>castleSoundEvents.filter(event=>event.duration===.8).length),1,'Using a key plays one metal unlock cue');
  assert.equal(await page.evaluate(()=>castleSoundEvents.at(-1).duration),1.3,'The unlocked door then opens');
  await page.locator('.castle-dock [data-castle-drawer=music]').tap();
- await page.click('#pause-btn');assert(await page.evaluate(()=>castleSoundEvents.every(event=>event.stopped)),'Pause stops both current resonance and door sources');
+ await page.click('#pause-btn');assert(await page.evaluate(()=>castleSoundEvents.every(event=>event.stopped||event.ended)),'Pause leaves no active resonance or door sources');
  const pausedCount=await page.evaluate(()=>castleSoundEvents.length);await page.evaluate(()=>{CastleAudio.effect('unlock');CastleAudio.tone(440);});assert.equal(await page.evaluate(()=>castleSoundEvents.length),pausedCount);
  await page.click('#resume-btn');await page.waitForTimeout(120);assert.equal(await page.evaluate(()=>castleSoundEvents.length),pausedCount,'Resume never replays interrupted effects');
  await page.click('#castle-sound');await page.evaluate(()=>{CastleAudio.effect('glass');CastleAudio.tone(440);});assert.equal(await page.evaluate(()=>castleSoundEvents.length),pausedCount,'Mute gates effects');
@@ -73,6 +78,41 @@ let browser;
  await page.evaluate(()=>{CastleUI.mark();CastleUI.persist();});await page.reload();await page.click('#continue-btn');assert.equal(await page.evaluate(()=>castleSoundEvents.length),0,'Save continuation does not replay previous unlock');
  await page.evaluate(()=>{CastleAudio.effect('door');window.dispatchEvent(new Event('pagehide'));});assert(await page.evaluate(()=>castleSoundEvents.at(-1).stopped),'Leaving the page stops effects');
  await page.evaluate(()=>window.dispatchEvent(new Event('pageshow')));await page.click('#resume-btn');assert(await page.evaluate(()=>CastleAudio.effect('unlock')),'Returning from page cache can play new actions');
- await page.waitForTimeout(1250);assert(await page.evaluate(()=>Math.abs(CastleAudio.audio.volume-CastleAudio.volume)<.015),'BGM smoothly returns after the final effect ends');
- assert.deepEqual(errors,[]);console.log('PASS: audible finite unclipped cues, real piano/door actions, explicit event wiring, shared note/effect volume, mute/zero, pause/background/pagehide/cache return and no save/re-render replay.');
+ await page.waitForTimeout(1600);assert(await page.evaluate(()=>Math.abs(CastleAudio.bgmVolume-CastleAudio.volume)<.015),'BGM smoothly returns after the final effect ends');
+ // Touch every physical object, including already investigated/empty props.
+ const rooms=await page.evaluate(()=>Object.entries(CASTLE_ROOMS).map(([room,r])=>({room,targets:r.targets.map(([id])=>({id,sound:CASTLE_OBJECT_SOUNDS[id]}))})));
+ for(const {room,targets} of rooms){
+  await page.evaluate(room=>{closeModal();CastleVoice.stop();G.currentRoom=room;G.loop=1;G.sunrise=false;G.adrianChasing=false;G.inventory=['candle','mirror_shard','wine_bottle','bow','brass_key','iron_key','rose_key','soul_fragment'];Object.keys(G.names).forEach(id=>G.names[id]=true);CastleUI.sync();},room);
+  for(const {id,sound} of targets){
+   assert(sound&&buffers.has(sound),id+' has an explicit material sound');
+   await page.evaluate(()=>closeModal());const before=await page.evaluate(()=>castleSoundEvents.length);
+   await clickObject(page,id);
+   const events=await page.evaluate(before=>castleSoundEvents.slice(before),before);
+   assert.equal(events.length,1,id+' actual touch plays exactly one contact sound in this state');
+   assert(Math.abs(events[0].duration-buffers.get(sound).length/44100)<.0001,id+' uses its material cue');
+   assert(Math.abs(events[0].gain-1.6)<1e-6,'Effects are louder than the former 1.15 gain');assert(events[0].rms>.003,id+' reaches the real source graph audibly');
+  }
+ }
+ await page.evaluate(()=>{closeModal();G.currentRoom='cellar';CastleUI.sync();});
+ const repeat=await page.evaluate(()=>castleSoundEvents.length);await clickObject(page,'wine');await clickObject(page,'wine');
+ assert.equal(await page.evaluate(()=>castleSoundEvents.length),repeat+2,'Previously investigated objects still acknowledge each new tap');
+ await page.evaluate(()=>CastleAudio.dialogueActive(true));await page.waitForTimeout(70);
+ assert(await page.evaluate(()=>Math.abs(CastleAudio.bgmVolume-CastleAudio.volume*.05)<.005),'Effects never raise the music over the stronger dialogue duck');
+ await page.evaluate(()=>{CastleAudio.dialogueActive(false);CastleAudio.toggle();});const muted=await page.evaluate(()=>castleSoundEvents.length);
+ await clickObject(page,'wine');assert.equal(await page.evaluate(()=>castleSoundEvents.length),muted,'Real object taps respect total mute');
+ await page.evaluate(()=>{CastleAudio.toggle();G.adrianChasing=true;examine('wine');G.adrianChasing=false;});
+ assert.equal(await page.evaluate(()=>castleSoundEvents.length),muted,'Rejected investigation during a chase makes no contact sound');
+ const peaks=await page.evaluate(async()=>{
+  const result=[];
+  for(const id of CastleSfx.ids){
+   const samples=CastleSfx.render(id,44100),ctx=new OfflineAudioContext(1,samples.length+22050,44100),gain=ctx.createGain(),limiter=ctx.createDynamicsCompressor();
+   gain.gain.value=1.6;limiter.threshold.value=-9;limiter.knee.value=6;limiter.ratio.value=10;limiter.attack.value=.001;limiter.release.value=.15;gain.connect(limiter);limiter.connect(ctx.destination);
+   const buffer=ctx.createBuffer(1,samples.length,44100);buffer.copyToChannel(samples,0);
+   for(const delay of [0,.07,.14]){const source=ctx.createBufferSource();source.buffer=buffer;source.connect(gain);source.start(delay);}
+   const rendered=await ctx.startRendering();let peak=0;for(const v of rendered.getChannelData(0))peak=Math.max(peak,Math.abs(v));result.push({id,peak});
+  }
+  return result;
+ });
+ for(const {id,peak} of peaks)assert(peak>.01&&peak<1,id+' loud repeated taps remain below clipping through the production limiter: '+peak);
+ assert.deepEqual(errors,[]);console.log('PASS: all 17 real object taps and repeat feedback, material cues, louder gain/stronger BGM duck, maximum-volume overlapping waveforms below clipping, piano/doors, mute/zero/pause/background/cache return and no save/re-render replay.');
 })().catch(e=>{console.error(e);process.exitCode=1;}).finally(async()=>{await browser?.close();});

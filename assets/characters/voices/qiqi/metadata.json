@@ -1,0 +1,20 @@
+{
+  "id": "qiqi",
+  "name": "柒柒",
+  "aliases": [],
+  "reference": "assets/characters/voices/qiqi/reference.wav",
+  "original": "assets/characters/voices/qiqi/reference-original.wav",
+  "sha256": "87726902f1e419f37935b565757023e126ddefb8d105e2aed41eabfaf931dd47",
+  "originalSha256": "9a5881fe79f2b2850ee8ab2717f1667713fdffefda77a09f519cf266bf010a12",
+  "duration": 7.58,
+  "sampleRate": 24000,
+  "channels": 1,
+  "sourceKind": "user-provided",
+  "sourceFilename": "柒柒.wav",
+  "confirmedAt": "2026-10-16",
+  "defaultPitchSemitones": 0,
+  "actingPolicy": "Preserve this reference timbre; choose restrained emotion and natural pauses from the actual line context; no generic stock voice or automatic pitch shift.",
+  "cardId": "qiqi",
+  "voiceIdentityIndependentOfLanguage": true,
+  "preferredEngine": "IndexTTS-2.5"
+}

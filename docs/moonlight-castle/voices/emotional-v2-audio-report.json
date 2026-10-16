@@ -1,0 +1,1458 @@
+{
+  "complete": true,
+  "missing": [],
+  "lines": [
+    {
+      "id": "name.siyang.ask",
+      "asset": "assets/audio/moonlight-castle/voices/line-252e9948520ad3.mp3",
+      "duration": 15.693,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 126216
+    },
+    {
+      "id": "name.siyang.reveal",
+      "asset": "assets/audio/moonlight-castle/voices/line-b0bd9acc43a205.mp3",
+      "duration": 13.394,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 107979
+    },
+    {
+      "id": "name.bingbing.ask",
+      "asset": "assets/audio/moonlight-castle/voices/line-ee9e800116399f.mp3",
+      "duration": 13.315,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 107210
+    },
+    {
+      "id": "name.bingbing.reveal",
+      "asset": "assets/audio/moonlight-castle/voices/line-af5599a56c1cf6.mp3",
+      "duration": 8.892,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 71885
+    },
+    {
+      "id": "name.dijie.ask",
+      "asset": "assets/audio/moonlight-castle/voices/line-a798c7199fa90f.mp3",
+      "duration": 22.747,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 182663
+    },
+    {
+      "id": "name.dijie.reveal",
+      "asset": "assets/audio/moonlight-castle/voices/line-bb8c20431d231c.mp3",
+      "duration": 14.072,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 113354
+    },
+    {
+      "id": "name.qiqi.ask",
+      "asset": "assets/audio/moonlight-castle/voices/line-062163be044023.mp3",
+      "duration": 12.402,
+      "speakers": [
+        "qiqi"
+      ],
+      "bytes": 99910
+    },
+    {
+      "id": "name.qiqi.reveal",
+      "asset": "assets/audio/moonlight-castle/voices/line-c2b37a5257943b.mp3",
+      "duration": 9.98,
+      "speakers": [
+        "qiqi"
+      ],
+      "bytes": 80521
+    },
+    {
+      "id": "name.jerry.ask",
+      "asset": "assets/audio/moonlight-castle/voices/line-a949f0b63d23e6.mp3",
+      "duration": 15.374,
+      "speakers": [
+        "jerry"
+      ],
+      "bytes": 123719
+    },
+    {
+      "id": "name.jerry.reveal",
+      "asset": "assets/audio/moonlight-castle/voices/line-a9a6955f18dda5.mp3",
+      "duration": 10.376,
+      "speakers": [
+        "jerry"
+      ],
+      "bytes": 83786
+    },
+    {
+      "id": "name.lala.ask",
+      "asset": "assets/audio/moonlight-castle/voices/line-c85558dd74b562.mp3",
+      "duration": 15.604,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 125638
+    },
+    {
+      "id": "name.lala.reveal",
+      "asset": "assets/audio/moonlight-castle/voices/line-802b8e7e154311.mp3",
+      "duration": 12.352,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 99529
+    },
+    {
+      "id": "talk.siyang.1.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-09036b8b713970.mp3",
+      "duration": 16.179,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 130253
+    },
+    {
+      "id": "talk.siyang.1.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-fecc4fcf8a9f94.mp3",
+      "duration": 9.661,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 78029
+    },
+    {
+      "id": "talk.siyang.1.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-5848b5a46f0911.mp3",
+      "duration": 6.969,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 56525
+    },
+    {
+      "id": "talk.siyang.2.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-01bf778ba28b9f.mp3",
+      "duration": 8.226,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 66509
+    },
+    {
+      "id": "talk.siyang.2.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-37fe1b9356bcff.mp3",
+      "duration": 19.266,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 154829
+    },
+    {
+      "id": "talk.siyang.2.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-99adaade7ae9aa.mp3",
+      "duration": 4.211,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 34445
+    },
+    {
+      "id": "talk.siyang.2.2.giftText",
+      "asset": "assets/audio/moonlight-castle/voices/line-a6284c6adeba82.mp3",
+      "duration": 14.126,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 113745
+    },
+    {
+      "id": "talk.siyang.3.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-5d5f0806e22de8.mp3",
+      "duration": 6.927,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 56141
+    },
+    {
+      "id": "talk.siyang.3.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-fc3f06a8760515.mp3",
+      "duration": 5.277,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 42893
+    },
+    {
+      "id": "talk.siyang.4.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-e124ec3d9068e6.mp3",
+      "duration": 4.769,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 38861
+    },
+    {
+      "id": "talk.siyang.4.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-a4a7b30756626f.mp3",
+      "duration": 16.178,
+      "speakers": [
+        "siyang"
+      ],
+      "bytes": 130253
+    },
+    {
+      "id": "talk.bingbing.1.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-c75b8c801027ed.mp3",
+      "duration": 6.017,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 48847
+    },
+    {
+      "id": "talk.bingbing.1.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-ef2c2ef8fccc7a.mp3",
+      "duration": 12.294,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 99151
+    },
+    {
+      "id": "talk.bingbing.1.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-534ab54e6dca9b.mp3",
+      "duration": 4.498,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 36751
+    },
+    {
+      "id": "talk.bingbing.2.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-20bde117f22a0c.mp3",
+      "duration": 8.333,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 67471
+    },
+    {
+      "id": "talk.bingbing.2.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-0ae622759c9ef3.mp3",
+      "duration": 15.347,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 123535
+    },
+    {
+      "id": "talk.bingbing.2.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-cf66ddf9976946.mp3",
+      "duration": 3.41,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 28111
+    },
+    {
+      "id": "talk.bingbing.2.2.giftText",
+      "asset": "assets/audio/moonlight-castle/voices/line-671f3c614c085f.mp3",
+      "duration": 15.715,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 126419
+    },
+    {
+      "id": "talk.bingbing.3.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-6eba9728d506c1.mp3",
+      "duration": 5.65,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 45967
+    },
+    {
+      "id": "talk.bingbing.3.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-f64b23ea1cca5b.mp3",
+      "duration": 6.794,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 55183
+    },
+    {
+      "id": "talk.bingbing.4.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-517bb42a64b2b0.mp3",
+      "duration": 9.25,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 74767
+    },
+    {
+      "id": "talk.bingbing.4.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-2c92227464bd4c.mp3",
+      "duration": 8.639,
+      "speakers": [
+        "bingbing"
+      ],
+      "bytes": 69775
+    },
+    {
+      "id": "talk.dijie.1.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-22acaa43dd46f2.mp3",
+      "duration": 11.851,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 95500
+    },
+    {
+      "id": "talk.dijie.1.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-ed471296265101.mp3",
+      "duration": 12.679,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 102220
+    },
+    {
+      "id": "talk.dijie.1.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-195887487bc39f.mp3",
+      "duration": 5.37,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 43660
+    },
+    {
+      "id": "talk.dijie.2.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-0c429d3d5636d6.mp3",
+      "duration": 6.011,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 48844
+    },
+    {
+      "id": "talk.dijie.2.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-96e79f1c493e50.mp3",
+      "duration": 9.461,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 76492
+    },
+    {
+      "id": "talk.dijie.2.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-be1eca6099f154.mp3",
+      "duration": 10.44,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 84172
+    },
+    {
+      "id": "talk.dijie.2.3.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-1c6a4653461f93.mp3",
+      "duration": 4.361,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 35596
+    },
+    {
+      "id": "talk.dijie.2.3.giftText",
+      "asset": "assets/audio/moonlight-castle/voices/line-97eeb24f8bae93.mp3",
+      "duration": 15.685,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 126224
+    },
+    {
+      "id": "talk.dijie.3.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-937ccc331184bb.mp3",
+      "duration": 3.759,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 30796
+    },
+    {
+      "id": "talk.dijie.4.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-eb94e942d74ca1.mp3",
+      "duration": 10.82,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 87244
+    },
+    {
+      "id": "talk.dijie.4.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-1153749403e7ed.mp3",
+      "duration": 10.733,
+      "speakers": [
+        "dijie"
+      ],
+      "bytes": 86668
+    },
+    {
+      "id": "talk.qiqi.1.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-60edbfed3600a9.mp3",
+      "duration": 9.672,
+      "speakers": [
+        "qiqi"
+      ],
+      "bytes": 78027
+    },
+    {
+      "id": "talk.qiqi.1.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-c0593a222292ef.mp3",
+      "duration": 11.854,
+      "speakers": [
+        "qiqi"
+      ],
+      "bytes": 95499
+    },
+    {
+      "id": "talk.qiqi.1.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-685e4360857562.mp3",
+      "duration": 9.447,
+      "speakers": [
+        "qiqi"
+      ],
+      "bytes": 76299
+    },
+    {
+      "id": "talk.qiqi.2.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-5e7ba725566e8d.mp3",
+      "duration": 7.061,
+      "speakers": [
+        "qiqi"
+      ],
+      "bytes": 57291
+    },
+    {
+      "id": "talk.qiqi.2.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-a6a331c59ab2e9.mp3",
+      "duration": 8.611,
+      "speakers": [
+        "qiqi"
+      ],
+      "bytes": 69579
+    },
+    {
+      "id": "talk.qiqi.2.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-0a3a12803637b6.mp3",
+      "duration": 23.999,
+      "speakers": [
+        "qiqi"
+      ],
+      "bytes": 192651
+    },
+    {
+      "id": "talk.qiqi.2.3.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-f1151f4935c047.mp3",
+      "duration": 21.243,
+      "speakers": [
+        "qiqi"
+      ],
+      "bytes": 170763
+    },
+    {
+      "id": "talk.qiqi.3.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-ade94b6e7d35c9.mp3",
+      "duration": 10.818,
+      "speakers": [
+        "qiqi"
+      ],
+      "bytes": 87243
+    },
+    {
+      "id": "talk.qiqi.4.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-1fc42e71ee987d.mp3",
+      "duration": 5.554,
+      "speakers": [
+        "qiqi"
+      ],
+      "bytes": 45195
+    },
+    {
+      "id": "talk.qiqi.4.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-015ae201632883.mp3",
+      "duration": 17.671,
+      "speakers": [
+        "qiqi"
+      ],
+      "bytes": 142155
+    },
+    {
+      "id": "talk.tim.1.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-08d8394555ce48.mp3",
+      "duration": 6.785,
+      "speakers": [
+        "tim"
+      ],
+      "bytes": 54986
+    },
+    {
+      "id": "talk.tim.1.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-a10e93ababb245.mp3",
+      "duration": 4.574,
+      "speakers": [
+        "tim"
+      ],
+      "bytes": 37322
+    },
+    {
+      "id": "talk.tim.2.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-428226d067c5ba.mp3",
+      "duration": 6.303,
+      "speakers": [
+        "tim"
+      ],
+      "bytes": 51146
+    },
+    {
+      "id": "talk.tim.2.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-d398f60528a290.mp3",
+      "duration": 13.396,
+      "speakers": [
+        "tim"
+      ],
+      "bytes": 107978
+    },
+    {
+      "id": "talk.tim.2.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-7d74e5b74e8b22.mp3",
+      "duration": 4.022,
+      "speakers": [
+        "tim"
+      ],
+      "bytes": 32906
+    },
+    {
+      "id": "talk.tim.2.2.giftText",
+      "asset": "assets/audio/moonlight-castle/voices/line-f430737295b1b1.mp3",
+      "duration": 4.788,
+      "speakers": [
+        "tim"
+      ],
+      "bytes": 39054
+    },
+    {
+      "id": "talk.tim.3.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-13bb5a3a2b908f.mp3",
+      "duration": 3.698,
+      "speakers": [
+        "tim"
+      ],
+      "bytes": 30410
+    },
+    {
+      "id": "talk.tim.4.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-878b8ea783e28b.mp3",
+      "duration": 9.096,
+      "speakers": [
+        "tim"
+      ],
+      "bytes": 73418
+    },
+    {
+      "id": "talk.tim.4.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-09608af36e3632.mp3",
+      "duration": 17.938,
+      "speakers": [
+        "tim"
+      ],
+      "bytes": 144266
+    },
+    {
+      "id": "talk.jerry.1.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-60d5514e6d8805.mp3",
+      "duration": 13.366,
+      "speakers": [
+        "jerry"
+      ],
+      "bytes": 107596
+    },
+    {
+      "id": "talk.jerry.2.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-b59f5ef689a5b3.mp3",
+      "duration": 10.429,
+      "speakers": [
+        "jerry"
+      ],
+      "bytes": 84172
+    },
+    {
+      "id": "talk.jerry.2.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-7ebb080998d0e3.mp3",
+      "duration": 12.8,
+      "speakers": [
+        "jerry"
+      ],
+      "bytes": 103180
+    },
+    {
+      "id": "talk.jerry.2.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-2e4e19c841f38c.mp3",
+      "duration": 3.931,
+      "speakers": [
+        "jerry"
+      ],
+      "bytes": 32140
+    },
+    {
+      "id": "talk.jerry.2.2.giftText",
+      "asset": "assets/audio/moonlight-castle/voices/line-f744410a2df30d.mp3",
+      "duration": 6.908,
+      "speakers": [
+        "jerry"
+      ],
+      "bytes": 55952
+    },
+    {
+      "id": "talk.jerry.3.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-23e223546a3778.mp3",
+      "duration": 3.35,
+      "speakers": [
+        "jerry"
+      ],
+      "bytes": 27532
+    },
+    {
+      "id": "talk.jerry.4.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-2ce8a5fe2e1d4c.mp3",
+      "duration": 11.935,
+      "speakers": [
+        "jerry"
+      ],
+      "bytes": 96268
+    },
+    {
+      "id": "talk.jerry.4.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-f71bb42e8cf72b.mp3",
+      "duration": 15.537,
+      "speakers": [
+        "jerry"
+      ],
+      "bytes": 125068
+    },
+    {
+      "id": "talk.shiyuan.1.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-bf2e95058a8b29.mp3",
+      "duration": 6.717,
+      "speakers": [
+        "shiyuan"
+      ],
+      "bytes": 54414
+    },
+    {
+      "id": "talk.shiyuan.1.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-5252a2c230cad3.mp3",
+      "duration": 8.589,
+      "speakers": [
+        "shiyuan"
+      ],
+      "bytes": 69390
+    },
+    {
+      "id": "talk.shiyuan.1.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-1c04e17513dd4a.mp3",
+      "duration": 9.906,
+      "speakers": [
+        "shiyuan"
+      ],
+      "bytes": 79950
+    },
+    {
+      "id": "talk.shiyuan.2.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-1be15e1785e0a7.mp3",
+      "duration": 10.964,
+      "speakers": [
+        "shiyuan"
+      ],
+      "bytes": 88398
+    },
+    {
+      "id": "talk.shiyuan.2.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-230d4f017b3bea.mp3",
+      "duration": 13.05,
+      "speakers": [
+        "shiyuan"
+      ],
+      "bytes": 105102
+    },
+    {
+      "id": "talk.shiyuan.2.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-c2f0d62788e32c.mp3",
+      "duration": 8.404,
+      "speakers": [
+        "shiyuan"
+      ],
+      "bytes": 68046
+    },
+    {
+      "id": "talk.shiyuan.2.3.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-57183b76483eed.mp3",
+      "duration": 3.212,
+      "speakers": [
+        "shiyuan"
+      ],
+      "bytes": 26382
+    },
+    {
+      "id": "talk.shiyuan.2.3.giftText",
+      "asset": "assets/audio/moonlight-castle/voices/line-2de18c1cebac01.mp3",
+      "duration": 13.271,
+      "speakers": [
+        "shiyuan"
+      ],
+      "bytes": 106834
+    },
+    {
+      "id": "talk.shiyuan.3.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-5d928f379ac5f8.mp3",
+      "duration": 7.017,
+      "speakers": [
+        "shiyuan"
+      ],
+      "bytes": 56910
+    },
+    {
+      "id": "talk.shiyuan.4.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-b6b51640338018.mp3",
+      "duration": 11.576,
+      "speakers": [
+        "shiyuan"
+      ],
+      "bytes": 93390
+    },
+    {
+      "id": "talk.shiyuan.4.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-36d8126b85d0c8.mp3",
+      "duration": 14.88,
+      "speakers": [
+        "shiyuan"
+      ],
+      "bytes": 119694
+    },
+    {
+      "id": "talk.lala.1.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-13588fd88ce736.mp3",
+      "duration": 9.249,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 74763
+    },
+    {
+      "id": "talk.lala.1.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-ec6ea205085703.mp3",
+      "duration": 7.101,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 57483
+    },
+    {
+      "id": "talk.lala.1.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-08a43bf96e112f.mp3",
+      "duration": 7.736,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 62667
+    },
+    {
+      "id": "talk.lala.1.3.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-dc37e742c8739b.mp3",
+      "duration": 5.629,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 45771
+    },
+    {
+      "id": "talk.lala.1.3.rewardText",
+      "asset": "assets/audio/moonlight-castle/voices/line-871a012929c3ad.mp3",
+      "duration": 9.016,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 72849
+    },
+    {
+      "id": "talk.lala.1.3.ansQuestion",
+      "asset": "assets/audio/moonlight-castle/voices/line-eddb02aa77b7c6.mp3",
+      "duration": 13.245,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 106642
+    },
+    {
+      "id": "talk.lala.2.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-a0e390f921543d.mp3",
+      "duration": 6.497,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 52683
+    },
+    {
+      "id": "talk.lala.2.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-fd2a5d762b18e7.mp3",
+      "duration": 9.369,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 75723
+    },
+    {
+      "id": "talk.lala.2.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-a9f3e5a5f5f37d.mp3",
+      "duration": 6.053,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 49227
+    },
+    {
+      "id": "talk.lala.2.2.rewardText",
+      "asset": "assets/audio/moonlight-castle/voices/line-cfeaec797439d8.mp3",
+      "duration": 9.986,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 80721
+    },
+    {
+      "id": "talk.lala.2.2.ansQuestion",
+      "asset": "assets/audio/moonlight-castle/voices/line-1bd7d9353af762.mp3",
+      "duration": 5.426,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 44242
+    },
+    {
+      "id": "talk.lala.3.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-e06148e8ae2aeb.mp3",
+      "duration": 6.845,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 55563
+    },
+    {
+      "id": "talk.lala.3.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-c2c0701dadb51f.mp3",
+      "duration": 6.898,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 55947
+    },
+    {
+      "id": "talk.lala.3.1.rewardText",
+      "asset": "assets/audio/moonlight-castle/voices/line-045713baf6a6d9.mp3",
+      "duration": 8.441,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 68241
+    },
+    {
+      "id": "talk.lala.3.1.ansQuestion",
+      "asset": "assets/audio/moonlight-castle/voices/line-4ddc4b96c9f663.mp3",
+      "duration": 8.986,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 72658
+    },
+    {
+      "id": "talk.lala.4.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-36a58fdf39f47e.mp3",
+      "duration": 9.778,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 78987
+    },
+    {
+      "id": "talk.lala.4.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-d6140a90c6a4da.mp3",
+      "duration": 8.048,
+      "speakers": [
+        "lala"
+      ],
+      "bytes": 65163
+    },
+    {
+      "id": "talk.servants.1.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-417421b216ec33.mp3",
+      "duration": 8.858,
+      "speakers": [
+        "baoshi",
+        "feihong"
+      ],
+      "bytes": 71695
+    },
+    {
+      "id": "talk.servants.1.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-1020ef0747dfb7.mp3",
+      "duration": 5.606,
+      "speakers": [
+        "feihong"
+      ],
+      "bytes": 45583
+    },
+    {
+      "id": "talk.servants.2.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-5fdbbe909769a9.mp3",
+      "duration": 11.474,
+      "speakers": [
+        "baoshi"
+      ],
+      "bytes": 92623
+    },
+    {
+      "id": "talk.servants.2.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-e971793590ba38.mp3",
+      "duration": 9.563,
+      "speakers": [
+        "feihong"
+      ],
+      "bytes": 77263
+    },
+    {
+      "id": "talk.servants.3.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-49c575edcbcded.mp3",
+      "duration": 3.931,
+      "speakers": [
+        "baoshi"
+      ],
+      "bytes": 32143
+    },
+    {
+      "id": "talk.servants.4.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-c0660f019231b7.mp3",
+      "duration": 19.932,
+      "speakers": [
+        "feihong"
+      ],
+      "bytes": 160207
+    },
+    {
+      "id": "talk.servants.4.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-5ca391fb5d77b0.mp3",
+      "duration": 9.792,
+      "speakers": [
+        "feihong"
+      ],
+      "bytes": 78991
+    },
+    {
+      "id": "talk.servants.4.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-2dadb07ef71008.mp3",
+      "duration": 13.496,
+      "speakers": [
+        "baoshi"
+      ],
+      "bytes": 108751
+    },
+    {
+      "id": "talk.servants.4.4.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-59e4ad6567baa4.mp3",
+      "duration": 4.043,
+      "speakers": [
+        "shiyuan"
+      ],
+      "bytes": 33103
+    },
+    {
+      "id": "talk.adrian.1.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-53c97f4b4f3ba3.mp3",
+      "duration": 6.558,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 53261
+    },
+    {
+      "id": "talk.adrian.1.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-7f9fbd3efb32a8.mp3",
+      "duration": 20.108,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 161549
+    },
+    {
+      "id": "talk.adrian.1.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-3f38087b056784.mp3",
+      "duration": 8.579,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 69389
+    },
+    {
+      "id": "talk.adrian.1.3.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-f4b96a6439e9ef.mp3",
+      "duration": 5.978,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 48653
+    },
+    {
+      "id": "talk.adrian.2.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-8ae95c7c4ef488.mp3",
+      "duration": 13.407,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 107981
+    },
+    {
+      "id": "talk.adrian.2.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-04250ac65e336e.mp3",
+      "duration": 23.584,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 189389
+    },
+    {
+      "id": "talk.adrian.2.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-b1b818b04cfdd2.mp3",
+      "duration": 27.219,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 218573
+    },
+    {
+      "id": "talk.adrian.2.3.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-2320b55e6f6e37.mp3",
+      "duration": 24.653,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 198029
+    },
+    {
+      "id": "talk.adrian.2.4.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-c8352e1c9cf947.mp3",
+      "duration": 19.402,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 155981
+    },
+    {
+      "id": "talk.adrian.2.5.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-0a8c596936b00f.mp3",
+      "duration": 19.763,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 158861
+    },
+    {
+      "id": "talk.adrian.3.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-4a4a42e4fd7382.mp3",
+      "duration": 19.218,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 154445
+    },
+    {
+      "id": "talk.adrian.3.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-059d435b7592fb.mp3",
+      "duration": 47.828,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 383309
+    },
+    {
+      "id": "talk.adrian.4.0.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-fa7d2997dc26d9.mp3",
+      "duration": 7.928,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 64205
+    },
+    {
+      "id": "talk.adrian.4.1.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-ffd53e1875fc45.mp3",
+      "duration": 17.716,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 142541
+    },
+    {
+      "id": "talk.adrian.4.2.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-0a4fb3c5fe8271.mp3",
+      "duration": 19.078,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 153293
+    },
+    {
+      "id": "talk.adrian.4.3.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-5ffa557e4f0594.mp3",
+      "duration": 13.17,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 106061
+    },
+    {
+      "id": "talk.adrian.4.4.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-d560a85c80e45c.mp3",
+      "duration": 11.996,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 96653
+    },
+    {
+      "id": "talk.adrian.4.5.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-f484088b0cdd43.mp3",
+      "duration": 8.738,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 70733
+    },
+    {
+      "id": "talk.adrian.4.5.giftText",
+      "asset": "assets/audio/moonlight-castle/voices/line-1dd3f8a42eb52d.mp3",
+      "duration": 22.204,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 178449
+    },
+    {
+      "id": "talk.adrian.4.6.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-67141c6bd25e69.mp3",
+      "duration": 23.642,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 189965
+    },
+    {
+      "id": "talk.adrian.4.6.giftText",
+      "asset": "assets/audio/moonlight-castle/voices/line-f13039a53f60ec.mp3",
+      "duration": 6.391,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 51921
+    },
+    {
+      "id": "talk.adrian.4.7.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-d6d30679f4b2e2.mp3",
+      "duration": 20.073,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 161357
+    },
+    {
+      "id": "talk.adrian.4.7.giftText",
+      "asset": "assets/audio/moonlight-castle/voices/line-368a38f4358b74.mp3",
+      "duration": 11.87,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 95697
+    },
+    {
+      "id": "talk.adrian.4.8.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-39045fe10b9261.mp3",
+      "duration": 5.051,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 41165
+    },
+    {
+      "id": "talk.adrian.4.8.giftText",
+      "asset": "assets/audio/moonlight-castle/voices/line-012261c0485388.mp3",
+      "duration": 14.152,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 113937
+    },
+    {
+      "id": "talk.adrian.4.9.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-182187c6c4b857.mp3",
+      "duration": 3.938,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 32333
+    },
+    {
+      "id": "talk.adrian.4.9.giftText",
+      "asset": "assets/audio/moonlight-castle/voices/line-8bb13f5d464972.mp3",
+      "duration": 11.048,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 89169
+    },
+    {
+      "id": "talk.adrian.4.10.text",
+      "asset": "assets/audio/moonlight-castle/voices/line-e83684536d17e0.mp3",
+      "duration": 2.842,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 23502
+    },
+    {
+      "id": "talk.adrian.4.10.giftText",
+      "asset": "assets/audio/moonlight-castle/voices/line-b0cbe077ceb18a.mp3",
+      "duration": 17.77,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 142930
+    },
+    {
+      "id": "special.keepsake-refused",
+      "asset": "assets/audio/moonlight-castle/voices/line-187d5abfd40ac3.mp3",
+      "duration": 7.972,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 64593
+    },
+    {
+      "id": "special.protected",
+      "asset": "assets/audio/moonlight-castle/voices/line-f16e8b39f67222.mp3",
+      "duration": 8.495,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 68618
+    },
+    {
+      "id": "special.mirror-soul",
+      "asset": "assets/audio/moonlight-castle/voices/line-b7a9103cdf16da.mp3",
+      "duration": 8.115,
+      "speakers": [
+        "felix"
+      ],
+      "bytes": 65740
+    },
+    {
+      "id": "special.organ-blocked",
+      "asset": "assets/audio/moonlight-castle/voices/line-23e663ba151f88.mp3",
+      "duration": 7.102,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 57486
+    },
+    {
+      "id": "special.keepsake-active",
+      "asset": "assets/audio/moonlight-castle/voices/line-50d44e977c062b.mp3",
+      "duration": 3.855,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 31568
+    },
+    {
+      "id": "special.forgiven",
+      "asset": "assets/audio/moonlight-castle/voices/line-02dc2cd21a7116.mp3",
+      "duration": 9.788,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 78985
+    },
+    {
+      "id": "special.requiem-ready",
+      "asset": "assets/audio/moonlight-castle/voices/line-6a920892d16c11.mp3",
+      "duration": 10.145,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 81870
+    },
+    {
+      "id": "special.soul-fragment",
+      "asset": "assets/audio/moonlight-castle/voices/line-f3a41ec72a0df6.mp3",
+      "duration": 4.754,
+      "speakers": [
+        "felix"
+      ],
+      "bytes": 38862
+    },
+    {
+      "id": "special.chase-taunt-run",
+      "asset": "assets/audio/moonlight-castle/voices/line-49ed216939ac8f.mp3",
+      "duration": 3.643,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 29840
+    },
+    {
+      "id": "special.chase-taunt-shadow",
+      "asset": "assets/audio/moonlight-castle/voices/line-50322339dfd2f0.mp3",
+      "duration": 3.981,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 32531
+    },
+    {
+      "id": "transition.loop2",
+      "asset": "assets/audio/moonlight-castle/voices/line-b3a17d035032c0.mp3",
+      "duration": 14.823,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 119305
+    },
+    {
+      "id": "organ.farewell",
+      "asset": "assets/audio/moonlight-castle/voices/line-c6c69ef1f1f8c8.mp3",
+      "duration": 10.459,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 84359
+    },
+    {
+      "id": "organ.reunion",
+      "asset": "assets/audio/moonlight-castle/voices/line-8e4d0d291411e4.mp3",
+      "duration": 10.409,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 83974
+    },
+    {
+      "id": "organ.diary",
+      "asset": "assets/audio/moonlight-castle/voices/line-791ad45e4d490c.mp3",
+      "duration": 18.93,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 152132
+    },
+    {
+      "id": "organ.ring",
+      "asset": "assets/audio/moonlight-castle/voices/line-9a8128017d06de.mp3",
+      "duration": 15.886,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 127747
+    },
+    {
+      "id": "keepsake.ring",
+      "asset": "assets/audio/moonlight-castle/voices/line-ef30a9e412fb3e.mp3",
+      "duration": 8.636,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 69766
+    },
+    {
+      "id": "keepsake.pocket_watch",
+      "asset": "assets/audio/moonlight-castle/voices/line-9f86526d7fb67e.mp3",
+      "duration": 10.887,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 87822
+    },
+    {
+      "id": "keepsake.wine_bottle",
+      "asset": "assets/audio/moonlight-castle/voices/line-a53a850e24eadf.mp3",
+      "duration": 10.055,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 81101
+    },
+    {
+      "id": "keepsake.diary_page",
+      "asset": "assets/audio/moonlight-castle/voices/line-a72145bc04c64d.mp3",
+      "duration": 13.213,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 106444
+    },
+    {
+      "id": "keepsake.silver_key",
+      "asset": "assets/audio/moonlight-castle/voices/line-d71d7abc92648e.mp3",
+      "duration": 10.365,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 83596
+    },
+    {
+      "id": "ending.1",
+      "asset": "assets/audio/moonlight-castle/voices/line-c28b07f01e2c99.mp3",
+      "duration": 27.45,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 220289
+    },
+    {
+      "id": "ending.2",
+      "asset": "assets/audio/moonlight-castle/voices/line-1155d5281722ac.mp3",
+      "duration": 11.811,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 95297
+    },
+    {
+      "id": "ending.3",
+      "asset": "assets/audio/moonlight-castle/voices/line-f54fa1c180aee2.mp3",
+      "duration": 8.602,
+      "speakers": [
+        "adrian"
+      ],
+      "bytes": 69569
+    }
+  ],
+  "duration": 1773.76,
+  "bytes": 14309406
+}

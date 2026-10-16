@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "clips": {
+    "dijie-07de0610795e45": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-96fab2b7fe4c4c",
+      "originalSaturatedFraction": 0.002956
+    },
+    "dijie-48858e439f7fcd": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-576230c1e2c822",
+      "originalSaturatedFraction": 0.00214
+    },
+    "dijie-e13a336e84a616": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-228580d6178630",
+      "originalSaturatedFraction": 0.002471
+    },
+    "dijie-2fd337c9cea74f": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-850610f0d9b448",
+      "originalSaturatedFraction": 0.002224
+    },
+    "bingbing-4350bb53ffab93": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "bingbing-es-e131e03a0495cf",
+      "originalSaturatedFraction": 0.001464
+    },
+    "dijie-1d1b646cea9709": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-1a7bba49a78176",
+      "originalSaturatedFraction": 0.001209
+    },
+    "dijie-e9f0899a133360": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-314763da8c397d",
+      "originalSaturatedFraction": 0.002047
+    },
+    "dijie-22d3484c58abf0": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-1ebf443ef19d11",
+      "originalSaturatedFraction": 0.004049
+    },
+    "dijie-852f68756c6897": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-2c8dbe243d7dd7",
+      "originalSaturatedFraction": 0.009059
+    },
+    "dijie-0d9aebae92b296": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-0ab6dd9f0a43e9",
+      "originalSaturatedFraction": 0.002737
+    },
+    "dijie-ba0b4f84f8bb42": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-3ea6d4e6a77e58",
+      "originalSaturatedFraction": 0.00151
+    },
+    "dijie-28c016c60d431d": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-a43fedb5e5aad0",
+      "originalSaturatedFraction": 0.001446
+    },
+    "dijie-b823c3c44b757b": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-22f7fb9f533799",
+      "originalSaturatedFraction": 0.004501
+    },
+    "dijie-51a6afb5e82f1d": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-4c1deaf963f27f",
+      "originalSaturatedFraction": 0.00496
+    },
+    "dijie-d0a9c73bacaf9d": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-ba1bc1840c4dcd",
+      "originalSaturatedFraction": 0.002332
+    },
+    "dijie-6c192557a04fa7": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "dijie-es-dc7bfe950f30a9",
+      "originalSaturatedFraction": 0.003555
+    },
+    "tim-036df366ee35dc": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "tim-es-8af17f1e37d0f5",
+      "originalSaturatedFraction": 0.00131
+    },
+    "adrian-977a9fa43e20b2": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "adrian-es-2f1ff5a9225b4d",
+      "originalSaturatedFraction": 0.001545
+    },
+    "adrian-bb2e5ba81fe8a6": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "adrian-es-e67f3cb1886a36",
+      "originalSaturatedFraction": 0.002105
+    },
+    "adrian-5ce5db92c9ee54": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "adrian-es-96e30b0e32449a",
+      "originalSaturatedFraction": 0.001104
+    },
+    "adrian-1d718aed7bb088": {
+      "vocoderPeak": 0.94,
+      "reason": "Retain dynamics before upstream PCM clipping; original saturated sample fraction exceeded 0.1%.",
+      "superseded": "adrian-es-824a72f5c439fc",
+      "originalSaturatedFraction": 0.002197
+    },
+    "siyang-3b356670a92567": {
+      "vocoderPeak": 0.94,
+      "reason": "Polish Spanish phrasing for natural oral delivery and unambiguous musical/name pronunciation.",
+      "superseded": "siyang-es-8abe9614b2d6fd"
+    },
+    "bingbing-0e70629a16db06": {
+      "vocoderPeak": 0.94,
+      "reason": "Polish Spanish phrasing for natural oral delivery and unambiguous musical/name pronunciation.",
+      "superseded": "bingbing-es-7c89c57a1a6173"
+    },
+    "qiqi-3db00ec491c815": {
+      "vocoderPeak": 0.94,
+      "reason": "Polish Spanish phrasing for natural oral delivery and unambiguous musical/name pronunciation.",
+      "superseded": "qiqi-es-58a7589fa28d2c"
+    },
+    "jerry-360d77393b4ac3": {
+      "vocoderPeak": 0.94,
+      "reason": "Polish Spanish phrasing for natural oral delivery and unambiguous musical/name pronunciation.",
+      "superseded": "jerry-es-95119f165bd146"
+    },
+    "shiyuan-56145d3d96aa28": {
+      "vocoderPeak": 0.94,
+      "reason": "Polish Spanish phrasing for natural oral delivery and unambiguous musical/name pronunciation.",
+      "superseded": "shiyuan-es-b1fa802eb49838"
+    },
+    "adrian-faf5affd31e238": {
+      "vocoderPeak": 0.94,
+      "reason": "Polish Spanish phrasing for natural oral delivery and unambiguous musical/name pronunciation.",
+      "superseded": "adrian-es-8934131cbabc08"
+    },
+    "tim-f0b3d269aa3682": {
+      "seed": 109,
+      "vocoderPeak": 0.94,
+      "reason": "Conservative retake after ASR appended an unexpected trailing word.",
+      "superseded": "tim-es-2c6bc8a45f3cbe"
+    },
+    "adrian-69cb81a9db1b90": {
+      "seed": 109,
+      "vocoderPeak": 0.94,
+      "reason": "Conservative retake after ASR appended an unexpected trailing word.",
+      "superseded": "adrian-es-0e764b2751e198"
+    }
+  }
+}

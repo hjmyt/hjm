@@ -9,6 +9,13 @@ const CastleUI = (() => {
   const painted={};
   function paint(id,html){if(painted[id]===html)return;painted[id]=html;el(id).innerHTML=html;}
   const art=id=>'assets/moonlight-castle/'+id+'.webp';
+  function objectRegion(image,id,name){
+    const region=CASTLE_OBJECT_REGIONS[image]?.[id];if(!region)return '';
+    const points=region.outline,x=Math.min(...points.map(p=>p[0])),y=Math.min(...points.map(p=>p[1]));
+    const width=Math.max(...points.map(p=>p[0]))-x,height=Math.max(...points.map(p=>p[1]))-y;
+    const clip=points.map(p=>((p[0]-x)/width*100).toFixed(3)+'% '+((p[1]-y)/height*100).toFixed(3)+'%').join(',');
+    return '<button type="button" class="hotspot object-region" data-examine="'+id+'" style="left:'+x+'%;top:'+y+'%;width:'+width+'%;height:'+height+'%;clip-path:polygon('+clip+');z-index:'+(region.layer||1)+'" aria-label="调查'+name+'"></button>';
+  }
   function outcomeArt(id,key){
     const image=el(id),entry=CASTLE_OVERLAY_ART[key];
     if(!image||!entry||image.dataset.artId===entry.id)return;
@@ -210,9 +217,8 @@ const CastleUI = (() => {
     paint('castle-map-nodes',Object.entries(CASTLE_ROOMS).map(([id,r])=>mapNode(id,r)).join(''));
     renderDoors();
     frameLayout();
-    paint('scene-hotspots',room.targets.map(([id,name,x,y])=>'<button type="button" class="hotspot" data-examine="'+id+'" style="left:'+x+'%;top:'+y+'%" aria-label="调查'+name+'"><i></i><span>'+name+'</span></button>').join(''));
-    paint('object-tray',room.targets.map(([id,name],i)=>'<button type="button" data-examine="'+id+'"><small>'+String(i+1).padStart(2,'0')+'</small>'+name+'<span>⌕</span></button>').join(''));
-    el('scene-caption').textContent=G.sunrise&&G.currentRoom==='tower'?'第一缕晨光，终于落在琴键上':'点击人物交谈，点击烛光标记调查';
+    paint('scene-hotspots',room.targets.map(([id,name])=>objectRegion(image,id,name)).join(''));
+    el('scene-caption').textContent=G.sunrise&&G.currentRoom==='tower'?'第一缕晨光，终于落在琴键上':'点击画面中的物品调查，点击人物交谈';
     paint('room-exits',room.exits.map(exit=>'<button type="button" data-exit="'+exit+'"><span>'+(['hall','dining'].includes(exit)||G.doors[exit]?'↗':'♙')+'</span><div><small>'+(['hall','dining'].includes(exit)||G.doors[exit]?'前往':'寻找钥匙')+'</small>'+CASTLE_ROOMS[exit].name+'</div><span>→</span></button>').join(''));
   }
   function sync(){
@@ -400,7 +406,6 @@ const CastleUI = (() => {
     el('deselect-btn').onclick=()=>{G.selectedItem=null;renderInventory();mark();};el('export-btn').onclick=()=>exportSave();el('restart-btn').onclick=confirmRestart;el('retry-btn').onclick=confirmRestart;
     el('sunrise-btn').onclick=()=>{el('ending-screen').classList.remove('active');enterSunriseMode();sync();};
     el('loop-btn').onclick=()=>{closeModal();continueLoop();focusedNpc=null;sync();};
-    el('reveal-btn').onclick=()=>{const b=el('reveal-btn'),on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',String(on));el('scene-hotspots').classList.toggle('muted-markers',!on);};
     document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b||b.disabled)return;if(b.dataset.examine)action('examine',b.dataset.examine);if(b.dataset.npc)action('npc',b.dataset.npc);if(b.dataset.exit)action('exit',b.dataset.exit);if(b.dataset.travel)travelTo(b.dataset.travel);if(b.dataset.castleDrawer)setDrawer(b.dataset.castleDrawer);if(b.hasAttribute('data-close-drawer'))setDrawer(null);if(started)mark();});
     const chaseButton=el('chase-btn');
     chaseButton.addEventListener('pointerdown',e=>{if(chasePointer!==null||CastleClock.paused)return;chasePointer=e.pointerId;chaseButton.setPointerCapture(e.pointerId);startHoldBreath(e);mark();});

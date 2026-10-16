@@ -1,10 +1,11 @@
+const {installControlPoint}=require('./helpers/castle-objects.cjs');
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),path=require('node:path'),{pathToFileURL}=require('node:url');
 let browser;
 (async()=>{
  browser=await chromium.launch({headless:true,...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE?{executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE}:{})});
  const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true}),page=await context.newPage(),errors=[];
  page.on('pageerror',error=>errors.push(error.message));
- await page.goto(pathToFileURL(path.resolve(__dirname,'../moonlight-castle.html')).href);await page.click('#start-btn');
+ await installControlPoint(page);await page.goto(pathToFileURL(path.resolve(__dirname,'../moonlight-castle.html')).href);await page.click('#start-btn');
  await page.waitForTimeout(650);
  const geometry=()=>page.evaluate(()=>{
   const rect=id=>document.getElementById(id).getBoundingClientRect().toJSON(),image=document.getElementById('room-art');
@@ -42,12 +43,12 @@ let browser;
    await page.evaluate(room=>{G.currentRoom=room;CastleUI.sync();},room);await page.waitForTimeout(80);
    const reachable=new Set();
    const sample=async()=>{
-    for(const id of await page.evaluate(()=>[...document.querySelectorAll('#scene-hotspots button,#people-tray button,#scene-doors button')].flatMap((node,i)=>{const r=node.getBoundingClientRect(),x=r.x+r.width/2,y=r.y+r.height/2;return document.elementFromPoint(x,y)?.closest('button')===node?[i]:[];})))reachable.add(id);
+    for(const id of await page.evaluate(()=>[...document.querySelectorAll('#scene-hotspots button,#people-tray button,#scene-doors button')].flatMap((node,i)=>{return window.castleControlPoint(node)?[i]:[];})))reachable.add(id);
    };
    const scan=async()=>{const from=height*.55,to=Math.max(100,height*.15);await sample();await page.mouse.move(width/2,from);await page.mouse.down();await page.mouse.move(width/2,to,{steps:4});await page.mouse.up();await sample();await page.mouse.move(width/2,to);await page.mouse.down();await page.mouse.move(width/2,from,{steps:4});await page.mouse.up();await sample();};
    for(let i=0;i<8&&!await page.locator('#scene-pan-left').isDisabled();i++)await page.click('#scene-pan-left');await scan();
    for(let i=0;i<8&&!await page.locator('#scene-pan-right').isDisabled();i++){await page.click('#scene-pan-right');await scan();}
-   const labels=await page.locator('#scene-hotspots button,#people-tray button,#scene-doors button').allTextContents();assert.deepEqual(labels.filter((label,i)=>!reachable.has(i)),[],room+' all controls reachable by panning at '+width);
+   const labels=await page.locator('#scene-hotspots button,#people-tray button,#scene-doors button').evaluateAll(nodes=>nodes.map(n=>n.getAttribute('aria-label')||n.textContent));assert.deepEqual(labels.filter((label,i)=>!reachable.has(i)),[],room+' all controls reachable by panning at '+width);
   }
  }
  await page.click('#scene-overview');assert(await page.locator('#scene-pan-left').isDisabled()&&await page.locator('#scene-pan-right').isDisabled());

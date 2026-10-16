@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "d4cd7de6cab806548bee1e943f4ffa8322e476f20ba83a8ffd1ad7b959870278",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "adrian",
+  "referenceSha256": "ec4cb8ba8632a01aab283bdf18ac8cc441f953cfce7ec5951445d5a04c8a846b",
+  "text": "Eres tú... Has estado mirándonos todo este tiempo, ¿verdad?",
+  "duration": 5.328979591836735,
+  "seconds": 10.73
+}

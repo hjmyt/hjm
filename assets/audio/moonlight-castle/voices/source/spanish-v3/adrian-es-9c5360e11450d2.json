@@ -1,0 +1,10 @@
+{
+  "recipeSha256": "1233aa0fb36edb5b59feeb55fee29cdce196d9c07cdc7a49ea06449497ffc240",
+  "engine": "IndexTTS-2.5",
+  "language": "es",
+  "speaker": "adrian",
+  "referenceSha256": "ec4cb8ba8632a01aab283bdf18ac8cc441f953cfce7ec5951445d5a04c8a846b",
+  "text": "Esta página de la partitura...",
+  "duration": 3.1346938775510202,
+  "seconds": 6.7
+}

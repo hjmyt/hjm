@@ -1,0 +1,20 @@
+{
+  "id": "bingbing",
+  "name": "冰冰",
+  "aliases": [],
+  "reference": "assets/characters/voices/bingbing/reference.wav",
+  "original": "assets/characters/voices/bingbing/reference-original.wav",
+  "sha256": "7887f742a0a2aee9652ce3dac665cf1c7302b68583986b6adb16c623859a551a",
+  "originalSha256": "ba414c39e185bd1c60135befca823cfbb9e65f17bfc71dcc9b8de1050b68444c",
+  "duration": 4.76825,
+  "sampleRate": 24000,
+  "channels": 1,
+  "sourceKind": "user-provided",
+  "sourceFilename": "冰冰.wav",
+  "confirmedAt": "2026-10-16",
+  "defaultPitchSemitones": 0,
+  "actingPolicy": "Preserve this reference timbre; choose restrained emotion and natural pauses from the actual line context; no generic stock voice or automatic pitch shift.",
+  "cardId": "bingbing",
+  "voiceIdentityIndependentOfLanguage": true,
+  "preferredEngine": "IndexTTS-2.5"
+}

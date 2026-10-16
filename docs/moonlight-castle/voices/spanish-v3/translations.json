@@ -1,0 +1,1352 @@
+{
+  "version": 1,
+  "language": "es",
+  "glossary": {
+    "艾德里安": "Adrián",
+    "菲利克斯": "Félix",
+    "塞巴斯蒂安": "Sebastián",
+    "伊莎贝拉": "Isabella",
+    "薇薇安": "Vivian",
+    "塞勒涅": "Selene",
+    "塞西尔": "Cecil",
+    "林": "Lin",
+    "大键琴": "clave",
+    "纯五度": "quinta justa",
+    "狼五度": "quinta del lobo",
+    "中音律": "temperamento mesotónico"
+  },
+  "clips": {
+    "siyang-01c992c0c29095": {
+      "sourceZh": "你能听见吗？我的名字……被这座古堡吃掉了。不是我现在这个名字——是两百年前，我站在这座大厅里时的那个名字。",
+      "speaker": "siyang",
+      "lineId": "name.siyang.ask",
+      "textEs": "¿Puedes oírme? Este castillo se ha tragado mi nombre. No el que tengo ahora, sino el que tenía hace doscientos años, cuando estaba en este mismo salón."
+    },
+    "siyang-7a7255c13ad9d1": {
+      "sourceZh": "找到它，我才能想起我要告诉你什么。",
+      "speaker": "siyang",
+      "lineId": "name.siyang.ask",
+      "textEs": "Encuéntralo. Solo así recordaré lo que tengo que decirte."
+    },
+    "siyang-675af5e72a1842": {
+      "sourceZh": "塞巴斯蒂安……",
+      "speaker": "siyang",
+      "lineId": "name.siyang.reveal",
+      "textEs": "Sebastián..."
+    },
+    "siyang-aac321fce3589e": {
+      "sourceZh": "对，塞巴斯蒂安。我侍奉了艾德里安家族二十七年。我想起来了——关于这座古堡，关于那本登记簿上被涂掉的名字。",
+      "speaker": "siyang",
+      "lineId": "name.siyang.reveal",
+      "textEs": "Sí, Sebastián. Serví a la familia de Adrián durante veintisiete años. Ya recuerdo... el castillo y aquel nombre tachado del registro."
+    },
+    "bingbing-c009a8663ce05c": {
+      "sourceZh": "我穿这条白裙子多久了？",
+      "speaker": "bingbing",
+      "lineId": "name.bingbing.ask",
+      "textEs": "¿Cuánto tiempo llevo con este vestido blanco?"
+    },
+    "bingbing-f60da82ac7d6b2": {
+      "sourceZh": "他们叫我……叫我……我想不起来。画框后面好像刻着什么，可我不敢看。",
+      "speaker": "bingbing",
+      "lineId": "name.bingbing.ask",
+      "textEs": "Me llamaban... me llamaban... No lo recuerdo. Creo que hay algo grabado detrás del marco, pero no me atrevo a mirarlo."
+    },
+    "bingbing-d47a24ef050ec5": {
+      "sourceZh": "伊莎贝拉……",
+      "speaker": "bingbing",
+      "lineId": "name.bingbing.reveal",
+      "textEs": "Isabella..."
+    },
+    "bingbing-19ca58455dd2cf": {
+      "sourceZh": "谢谢你。现在，让我告诉你关于那幅画、关于菲利克斯的事——以表妹的身份。",
+      "speaker": "bingbing",
+      "lineId": "name.bingbing.reveal",
+      "textEs": "Gracias. Ahora te contaré lo que sé de ese cuadro y de Félix... como su prima."
+    },
+    "dijie-07de0610795e45": {
+      "sourceZh": "伯爵聘请我来教一支东方的曲子，还把我的姓氏刻在笛架上作为谢礼。",
+      "speaker": "dijie",
+      "lineId": "name.dijie.ask",
+      "textEs": "El conde me contrató para enseñarle una melodía de Oriente. Grabó mi apellido en el soporte de la flauta para agradecérmelo."
+    },
+    "dijie-48858e439f7fcd": {
+      "sourceZh": "从东方到这座古堡，我走了七个月。可现在，我连自己姓什么都叫不出口了。你替我去看看那支笛子？",
+      "speaker": "dijie",
+      "lineId": "name.dijie.ask",
+      "textEs": "Tardé siete meses en llegar desde Oriente hasta este castillo. Y ahora ni siquiera puedo decir mi apellido. ¿Podrías mirar esa flauta por mí?"
+    },
+    "dijie-e13a336e84a616": {
+      "sourceZh": "林……对，我姓林。",
+      "speaker": "dijie",
+      "lineId": "name.dijie.reveal",
+      "textEs": "Lin... Sí, mi apellido es Lin."
+    },
+    "dijie-2fd337c9cea74f": {
+      "sourceZh": "七个月的海船，晕得我什么都忘了。现在想起来了——伯爵学那首《月光》，是要吹给一个人听。我把知道的都告诉你。",
+      "speaker": "dijie",
+      "lineId": "name.dijie.reveal",
+      "textEs": "Siete meses en un barco. Con tanto mareo, lo había olvidado todo. Ahora recuerdo: el conde aprendía Luz de luna para tocársela a alguien. Te contaré cuanto sé."
+    },
+    "qiqi-ae4697b44909b2": {
+      "sourceZh": "我的真名是个谜语——不是你们现在叫我的这个。",
+      "speaker": "qiqi",
+      "lineId": "name.qiqi.ask",
+      "textEs": "Mi verdadero nombre es un acertijo. No es el que usáis ahora."
+    },
+    "qiqi-f27c33fbe36581": {
+      "sourceZh": "它被写在一张海报上，藏在一个「装着整个世界的东西」里。找到它，我的预言才作数。",
+      "speaker": "qiqi",
+      "lineId": "name.qiqi.ask",
+      "textEs": "Está escrito en un cartel, escondido dentro de algo que contiene el mundo entero. Encuéntralo y mis profecías volverán a tener sentido."
+    },
+    "qiqi-fc36d55b51cb7c": {
+      "sourceZh": "薇薇安！",
+      "speaker": "qiqi",
+      "lineId": "name.qiqi.reveal",
+      "textEs": "¡Vivian!"
+    },
+    "qiqi-5fbeac5fb72d30": {
+      "sourceZh": "海报上的名字，一个音都没错。那么，作为回报——让我告诉你预言真正的意思。",
+      "speaker": "qiqi",
+      "lineId": "name.qiqi.reveal",
+      "textEs": "El nombre del cartel, sin una sola sílaba equivocada. Bien. A cambio, te explicaré lo que significa de verdad la profecía."
+    },
+    "jerry-dd462b96fbcfd7": {
+      "sourceZh": "那架大键琴走调走得厉害，可最走调的是我——我连自己叫什么都校不准了。",
+      "speaker": "jerry",
+      "lineId": "name.jerry.ask",
+      "textEs": "Ese clave está terriblemente desafinado. Pero el más desafinado soy yo: ya ni siquiera sé afinar mi propio nombre."
+    },
+    "jerry-576b0513be2572": {
+      "sourceZh": "我两百年前给这座古堡调过琴，名片应该还别在谱架上……大概。",
+      "speaker": "jerry",
+      "lineId": "name.jerry.ask",
+      "textEs": "Afiné los instrumentos de este castillo hace doscientos años. Mi tarjeta debería seguir sujeta al atril... creo."
+    },
+    "jerry-988f026eeedbe4": {
+      "sourceZh": "塞西尔！对，塞西尔！",
+      "speaker": "jerry",
+      "lineId": "name.jerry.reveal",
+      "textEs": "¡Cecil! ¡Sí, Cecil!"
+    },
+    "jerry-fc4a9d1f5ee93a": {
+      "sourceZh": "音准回来了。听着，那架琴有个秘密——关于一个不肯和谐的音程。我讲给你听。",
+      "speaker": "jerry",
+      "lineId": "name.jerry.reveal",
+      "textEs": "Ya he recuperado la afinación. Escucha: ese instrumento guarda un secreto. Un intervalo que se niega a sonar en armonía. Te lo explicaré."
+    },
+    "lala-ea6b778bd53478": {
+      "sourceZh": "水晶球里什么都看得见，就是看不见我自己的名字——两百年前，满月之夜，人们举着酒杯喊的那个名字。",
+      "speaker": "lala",
+      "lineId": "name.lala.ask",
+      "textEs": "Mi bola de cristal lo muestra todo, menos mi propio nombre. El que gritaban hace doscientos años, alzando las copas bajo la luna llena."
+    },
+    "lala-865d154de976f1": {
+      "sourceZh": "它被烙在一件很老、很老的容器上——老到会醉人的那种。",
+      "speaker": "lala",
+      "lineId": "name.lala.ask",
+      "textEs": "Está marcado en un recipiente muy, muy antiguo. De esos que todavía pueden embriagarte."
+    },
+    "lala-e2b1155c950476": {
+      "sourceZh": "塞勒涅……月亮的名字。",
+      "speaker": "lala",
+      "lineId": "name.lala.reveal",
+      "textEs": "Selene... El nombre de la luna."
+    },
+    "lala-fac937b9b05ee5": {
+      "sourceZh": "满月之夜，他们确实这样喊我。作为交换，我告诉你塔楼的钥匙在哪里——不过得先答对我的题。",
+      "speaker": "lala",
+      "lineId": "name.lala.reveal",
+      "textEs": "Sí, así me llamaban las noches de luna llena. A cambio, te diré dónde está la llave de la torre. Pero antes tendrás que responder bien a mi pregunta."
+    },
+    "siyang-967312e7e0387b": {
+      "sourceZh": "这座古堡……不是我租下的那座。至少不是同一座。这身制服是自动出现在我身上的。还有登记簿……上面多了一行被涂掉的名字。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.1.0.text",
+      "textEs": "Este castillo... no es el que alquilé. Al menos, no es el mismo. Este uniforme apareció solo sobre mi cuerpo. Y en el registro hay un nombre tachado que antes no estaba."
+    },
+    "siyang-cd71ff6e1c8da2": {
+      "sourceZh": "飞鸿出去多久了？半小时？一小时？我记不清了。这里的时间……不太对劲。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.1.1.text",
+      "textEs": "¿Cuánto lleva fuera Feihong? ¿Media hora? ¿Una hora? No lo recuerdo. Aquí el tiempo... no funciona como debería."
+    },
+    "siyang-f36fa390f8e296": {
+      "sourceZh": "你看那个盔甲。我总觉得它在动。不是整个动，是……手指。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.1.2.text",
+      "textEs": "Mira esa armadura. No dejo de pensar que se mueve. No toda... los dedos."
+    },
+    "siyang-262c96bbd29594": {
+      "sourceZh": "你……也死过一次了，对吗？我能看出来。你身上的气息和之前不一样了。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.2.0.text",
+      "textEs": "Tú... también has muerto una vez, ¿verdad? Lo noto. Hay algo en ti que ha cambiado."
+    },
+    "siyang-d785799f3b6518": {
+      "sourceZh": "这座古堡在循环。每次循环，真相就会多露出一点。我第一次死的时候，看到了一幅画——两个男人抱在一起。其中一个被划掉了脸。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.2.1.text",
+      "textEs": "Este castillo está atrapado en un ciclo. Con cada vuelta deja ver un poco más de la verdad. La primera vez que morí, vi un cuadro: dos hombres abrazados. Uno tenía el rostro tachado."
+    },
+    "siyang-bada431914adcc": {
+      "sourceZh": "把你知道的给我看看。任何关于这座古堡的东西。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.2.2.text",
+      "textEs": "Enséñame lo que hayas encontrado. Cualquier cosa que tenga que ver con este castillo."
+    },
+    "siyang-dd8fc6db9dae1e": {
+      "sourceZh": "焦信……这是艾德里安的笔迹。等等，不是写给别人的，是写给自己的。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.2.2.giftText",
+      "textEs": "Una carta quemada... Es la letra de Adrián. Espera. No se la escribió a otra persona, sino a sí mismo."
+    },
+    "siyang-134799f4e406c5": {
+      "sourceZh": "他在责备自己。壁炉旁……那是菲利克斯最喜欢坐的地方。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.2.2.giftText",
+      "textEs": "Se está culpando. Junto a la chimenea... allí era donde a Félix más le gustaba sentarse."
+    },
+    "siyang-ab52573cedd095": {
+      "sourceZh": "循环结束了。你看，壁炉的火重新燃起来了。是蓝色的。但我不再害怕了。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.3.0.text",
+      "textEs": "El ciclo ha terminado. Mira, el fuego de la chimenea vuelve a arder. Es azul. Pero ya no tengo miedo."
+    },
+    "siyang-f3cb24dcae1c63": {
+      "sourceZh": "艾德里安和菲利克斯……他们最后是幸福的。至少在这个故事里。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.3.1.text",
+      "textEs": "Adrián y Félix... al final fueron felices. Al menos, en esta historia."
+    },
+    "siyang-0913655351c7ec": {
+      "sourceZh": "奇怪……上面那行被涂黑的名字，现在能看清了。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.4.0.text",
+      "textEs": "Qué extraño... Ahora se puede leer aquel nombre que estaba tachado."
+    },
+    "siyang-3b356670a92567": {
+      "sourceZh": "对了，",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.4.1.text",
+      "textEs": "Ah, por cierto."
+    },
+    "siyang-31b0fa790082e2": {
+      "sourceZh": "昨晚上我好像不是管家……我是说，在梦里。我穿着两百年前的制服，站在壁炉边，替两位主人挡了一夜的门。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.4.1.text",
+      "textEs": "Anoche creo que no era el mayordomo... Quiero decir, en el sueño. Llevaba un uniforme de hace doscientos años y pasé la noche junto a la chimenea, guardando la puerta para los dos señores."
+    },
+    "siyang-8008bdd04f2118": {
+      "sourceZh": "也许我们每个人都曾是这座古堡的一部分。",
+      "speaker": "siyang",
+      "lineId": "talk.siyang.4.1.text",
+      "textEs": "Quizá todos formamos parte de este castillo alguna vez."
+    },
+    "bingbing-f484abb1b817cd": {
+      "sourceZh": "你……不是他。但他也不会来了。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.1.0.text",
+      "textEs": "Tú... no eres él. Pero él tampoco va a volver."
+    },
+    "bingbing-208746a79d53f8": {
+      "sourceZh": "肖像画中有两个人。但其中一个的脸被刀划掉了。刀痕……是新的。不是两百年前的。是刚才。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.1.1.text",
+      "textEs": "Hay dos personas en el retrato. A una le han borrado la cara con un cuchillo. Los cortes son recientes. No de hace doscientos años. De hace un momento."
+    },
+    "bingbing-79006e8162a5ab": {
+      "sourceZh": "别盯着画看太久。它会盯回来。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.1.2.text",
+      "textEs": "No mires el cuadro demasiado tiempo. Te devolverá la mirada."
+    },
+    "bingbing-af2fe5dd2dbe6c": {
+      "sourceZh": "你回来了。我知道你会回来。每一次循环，画就会多流一点血。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.2.0.text",
+      "textEs": "Has vuelto. Sabía que volverías. Con cada ciclo, el cuadro sangra un poco más."
+    },
+    "bingbing-4350bb53ffab93": {
+      "sourceZh": "我叫伊莎贝拉。我曾经是艾德里安的表妹。我爱他，但他爱的是那个拉小提琴的。菲利克斯。一个没落贵族的儿子。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.2.1.text",
+      "textEs": "Me llamo Isabella. Fui prima de Adrián. Yo lo amaba, pero él amaba al violinista. A Félix, el hijo de una familia noble venida a menos."
+    },
+    "bingbing-6ff7ad242fb74b": {
+      "sourceZh": "把你知道的给我。关于那幅画的。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.2.2.text",
+      "textEs": "Dame lo que hayas descubierto. Sobre ese cuadro."
+    },
+    "bingbing-0e70629a16db06": {
+      "sourceZh": "焦信B……这是菲利克斯的笔迹。等等，他在原谅艾德里安？在知道被赶出去之后？",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.2.2.giftText",
+      "textEs": "La carta quemada marcada con una be... Es la letra de Félix. Espera, ¿está perdonando a Adrián? ¿Después de que lo echara?"
+    },
+    "bingbing-3d96e6dad062ff": {
+      "sourceZh": "原来……他早就知道信是伪造的。他还是选择原谅。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.2.2.giftText",
+      "textEs": "Entonces... ya sabía que la carta era falsa. Y aun así eligió perdonarlo."
+    },
+    "bingbing-fef53db3a8a90f": {
+      "sourceZh": "他们终于可以一起被看见了。不是作为丑闻，是作为……爱。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.3.0.text",
+      "textEs": "Por fin pueden mostrarse juntos. No como un escándalo, sino como... amor."
+    },
+    "bingbing-ef07c05bf7355c": {
+      "sourceZh": "伊莎贝拉最后嫁给了别人。但她每年的这一天，都会来这里献一束花。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.3.1.text",
+      "textEs": "Al final, Isabella se casó con otro. Pero cada año, en este mismo día, venía a dejar un ramo de flores."
+    },
+    "bingbing-8789587ccbc73f": {
+      "sourceZh": "我叫伊莎贝拉。在梦里，我叫了两百年。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.4.0.text",
+      "textEs": "Me llamo Isabella. En el sueño, llevé ese nombre durante doscientos años."
+    },
+    "bingbing-4d63a914b55749": {
+      "sourceZh": "现在我终于可以说——表哥，我不怪你了。从来都没有。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.4.0.text",
+      "textEs": "Ahora por fin puedo decirlo: primo, no te culpo. Nunca te he culpado."
+    },
+    "bingbing-b7916ee287d35d": {
+      "sourceZh": "我在画里看着他们两百年，够本了。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.4.1.text",
+      "textEs": "Llevo doscientos años viéndolos desde el cuadro. Ya he tenido tiempo de sobra."
+    },
+    "bingbing-99b342141b4afa": {
+      "sourceZh": "谢谢你把我们所有人的名字，一个一个找了回来。",
+      "speaker": "bingbing",
+      "lineId": "talk.bingbing.4.1.text",
+      "textEs": "Gracias por devolvernos nuestros nombres. A todos, uno por uno."
+    },
+    "dijie-1d1b646cea9709": {
+      "sourceZh": "这座古堡的主人……好像很怕笛子。我一吹笛，整个房间都在震动。像是有什么东西在墙里挣扎。",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.1.0.text",
+      "textEs": "El dueño de este castillo... parece tener miedo de la flauta. Cada vez que toco, la habitación entera tiembla. Como si algo luchara dentro de las paredes."
+    },
+    "dijie-e9f0899a133360": {
+      "sourceZh": "我被聘请来，是因为伯爵想学一首东方的曲子。说是要给某个人惊喜。但我来了之后，那个人已经不在了。",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.1.1.text",
+      "textEs": "Me contrataron porque el conde quería aprender una melodía de Oriente. Dijo que quería sorprender a alguien. Pero, cuando llegué, esa persona ya no estaba."
+    },
+    "dijie-22d3484c58abf0": {
+      "sourceZh": "五声音阶可以镇压邪灵。但我不确定顺序……",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.1.2.text",
+      "textEs": "La escala pentatónica puede apaciguar a los espíritus. Pero no estoy seguro del orden..."
+    },
+    "dijie-c2e9f1335f6481": {
+      "sourceZh": "循环让一切都变脆弱了。包括真相。",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.2.0.text",
+      "textEs": "El ciclo lo ha vuelto todo más frágil. Incluso la verdad."
+    },
+    "dijie-852f68756c6897": {
+      "sourceZh": "伯爵为菲利克斯学的那首东方曲子……我知道是什么了。是一首叫《月光》的曲子。但不是贝多芬的。是伯爵自己写的。",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.2.1.text",
+      "textEs": "Ya sé cuál era la melodía de Oriente que el conde aprendía para Félix. Se llama Luz de luna. Pero no es de Beethoven. La escribió el propio conde."
+    },
+    "dijie-0d9aebae92b296": {
+      "sourceZh": "菲利克斯一直想去东方。 silk road。他说那里的音乐像流水，像风。伯爵为了他，偷偷学了几句中文。",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.2.2.text",
+      "textEs": "Félix siempre quiso viajar a Oriente. A la Ruta de la Seda. Decía que su música era como el agua, como el viento. Por él, el conde aprendió en secreto unas palabras en chino."
+    },
+    "dijie-ba0b4f84f8bb42": {
+      "sourceZh": "把你知道的给我。关于这座古堡的音乐。",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.2.3.text",
+      "textEs": "Enséñame lo que sepas. Sobre la música de este castillo."
+    },
+    "dijie-28c016c60d431d": {
+      "sourceZh": "日记……伯爵说'没有他，音乐失去了意义'。",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.2.3.giftText",
+      "textEs": "El diario... El conde escribió que, sin él, la música había perdido su sentido."
+    },
+    "dijie-f685e61a3d07e8": {
+      "sourceZh": "他写了无数首曲子，但没有一首有名字。只有一个记号：A&F。Adrian and Felix。",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.2.3.giftText",
+      "textEs": "Compuso incontables piezas, pero ninguna tenía título. Solo una marca: A y F. Adrián y Félix."
+    },
+    "dijie-b823c3c44b757b": {
+      "sourceZh": "他们终于可以一起听日出了。",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.3.0.text",
+      "textEs": "Por fin pueden escuchar juntos el amanecer."
+    },
+    "dijie-51a6afb5e82f1d": {
+      "sourceZh": "裂开的笛子自己长好了。你听——",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.4.0.text",
+      "textEs": "La flauta agrietada se ha reparado sola. Escucha..."
+    },
+    "dijie-d0a9c73bacaf9d": {
+      "sourceZh": "这曲子是我梦里的伯爵教我的。他说，等他们重逢那天，要我吹这个。",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.4.0.text",
+      "textEs": "Me enseñó esta melodía el conde de mi sueño. Dijo que la tocara el día en que volvieran a encontrarse."
+    },
+    "dijie-3bd9a4268ab6e8": {
+      "sourceZh": "他最后还问了我一句话。",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.4.1.text",
+      "textEs": "Al final me hizo una pregunta."
+    },
+    "dijie-6c192557a04fa7": {
+      "sourceZh": "'今晚的月色真美'——用你们东方的话，是不是还有别的意思？",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.4.1.text",
+      "textEs": "La luna está preciosa esta noche... En vuestra lengua de Oriente, ¿esa frase significa algo más?"
+    },
+    "dijie-9594341a56e803": {
+      "sourceZh": "我想我懂了。",
+      "speaker": "dijie",
+      "lineId": "talk.dijie.4.1.text",
+      "textEs": "Creo que lo he entendido."
+    },
+    "qiqi-144b74d566645e": {
+      "sourceZh": "麦克白是个好人，直到他听到了预言。'没有一个妇人所生的人可以伤害你。'他因此以为自己无敌。",
+      "speaker": "qiqi",
+      "lineId": "talk.qiqi.1.0.text",
+      "textEs": "Macbeth era un buen hombre, hasta que oyó la profecía: ningún hombre nacido de mujer podría hacerle daño. Por eso se creyó invencible."
+    },
+    "qiqi-3db00ec491c815": {
+      "sourceZh": "但麦克白忘了——麦克德夫是剖腹产出生的。预言是文字游戏。艾德里安的悲剧也一样。他听到的不是真相，是他想听到的。",
+      "speaker": "qiqi",
+      "lineId": "talk.qiqi.1.1.text",
+      "textEs": "Pero olvidó un detalle: su enemigo, Macduff, había nacido por cesárea. La profecía era un juego de palabras. La tragedia de Adrián fue igual. No oyó la verdad, sino lo que quería oír."
+    },
+    "qiqi-7b7184a7cbc325": {
+      "sourceZh": "三女巫说：'只有月光能唤醒沉睡的叛徒。'但谁是叛徒？被赶出去的人，还是关门的人？",
+      "speaker": "qiqi",
+      "lineId": "talk.qiqi.1.2.text",
+      "textEs": "Las tres brujas dijeron que solo la luz de la luna podía despertar al traidor dormido. Pero ¿quién es el traidor? ¿El expulsado, o quien cerró la puerta?"
+    },
+    "qiqi-5161fe09ca8bac": {
+      "sourceZh": "循环每一次，预言就会更清晰。我现在能听到完整的话了。",
+      "speaker": "qiqi",
+      "lineId": "talk.qiqi.2.0.text",
+      "textEs": "Con cada ciclo, la profecía se vuelve más clara. Ahora puedo oírla entera."
+    },
+    "qiqi-4976038ed92e36": {
+      "sourceZh": "'只有月光能唤醒沉睡的叛徒，只有真相能洗净染血的手，只有灵魂能打开锁住的门。'",
+      "speaker": "qiqi",
+      "lineId": "talk.qiqi.2.1.text",
+      "textEs": "Solo la luz de la luna despertará al traidor dormido. Solo la verdad lavará las manos manchadas de sangre. Solo el alma abrirá la puerta cerrada."
+    },
+    "qiqi-cc1c2b0473f65d": {
+      "sourceZh": "伪造信的事……是伯爵夫人干的。她无法忍受自己的儿子爱上一个男人。她以为拆散他们就够了。她不知道，对艾德里安来说，失去菲利克斯就等于失去一切。包括理智。",
+      "speaker": "qiqi",
+      "lineId": "talk.qiqi.2.2.text",
+      "textEs": "La carta falsa... fue obra de la madre del conde. No soportaba que su hijo amara a un hombre. Creyó que bastaba con separarlos. No sabía que, para Adrián, perder a Félix era perderlo todo. Incluso la razón."
+    },
+    "qiqi-206c5e4283ce40": {
+      "sourceZh": "艾德里安和菲利克斯的关系……让我想起一本英国小说，《莫里斯》。两个男人在维多利亚时代的英国相爱，一个勇敢，一个懦弱。艾德里安不是麦克白，他是那个在爱面前逃跑的莫里斯。",
+      "speaker": "qiqi",
+      "lineId": "talk.qiqi.2.3.text",
+      "textEs": "Adrián y Félix me recuerdan a una novela inglesa, Maurice. Dos hombres se aman en la Inglaterra victoriana: uno es valiente y el otro, cobarde. Adrián no es Macbeth. Es ese Maurice que huye ante el amor."
+    },
+    "qiqi-ee8e596b3690d4": {
+      "sourceZh": "预言实现了。但不是以悲剧的方式。月光唤醒了沉睡的灵魂，真相洗净了染血的手，灵魂打开了锁住的门。",
+      "speaker": "qiqi",
+      "lineId": "talk.qiqi.3.0.text",
+      "textEs": "La profecía se ha cumplido. Pero sin tragedia. La luz de la luna despertó al alma dormida. La verdad lavó las manos ensangrentadas. Y el alma abrió la puerta cerrada."
+    },
+    "qiqi-0abe1acdc4fdaf": {
+      "sourceZh": "最后一张牌，我今早翻开了——太阳。正位。预言彻底翻篇了。",
+      "speaker": "qiqi",
+      "lineId": "talk.qiqi.4.0.text",
+      "textEs": "Esta mañana he sacado la última carta: el Sol. Al derecho. La profecía ya pertenece al pasado."
+    },
+    "qiqi-c474308c7e978f": {
+      "sourceZh": "你知道吗，麦克白要是能重来一次，也许会选择不相信预言。",
+      "speaker": "qiqi",
+      "lineId": "talk.qiqi.4.1.text",
+      "textEs": "¿Sabes? Si Macbeth pudiera empezar de nuevo, quizá elegiría no creer en la profecía."
+    },
+    "qiqi-9a78ef5a42aa01": {
+      "sourceZh": "幸好，这座古堡里的故事，有一个比预言更固执的人——一个愿意原谅两百年的菲利克斯。",
+      "speaker": "qiqi",
+      "lineId": "talk.qiqi.4.1.text",
+      "textEs": "Por suerte, en este castillo hubo alguien más obstinado que el destino. Félix, que estuvo dispuesto a perdonar durante doscientos años."
+    },
+    "tim-f25d605d3cff6c": {
+      "sourceZh": "我的剑不见了。不，不是剑——是琴弓。这里的人叫它马尾弓。盔甲后面有线索。",
+      "speaker": "tim",
+      "lineId": "talk.tim.1.0.text",
+      "textEs": "Mi espada ha desaparecido. No, no es una espada... es el arco del violín. Aquí lo llaman arco de crin. Detrás de la armadura hay una pista."
+    },
+    "tim-567a894c32fd1c": {
+      "sourceZh": "我守护这座古堡很久了。不是作为骑士，作为……见证者。",
+      "speaker": "tim",
+      "lineId": "talk.tim.1.1.text",
+      "textEs": "Llevo mucho tiempo protegiendo este castillo. No como caballero, sino como... testigo."
+    },
+    "tim-816db80583a867": {
+      "sourceZh": "循环在侵蚀我。但我还能站在这里，就说明还有事情没做完。",
+      "speaker": "tim",
+      "lineId": "talk.tim.2.0.text",
+      "textEs": "El ciclo me está consumiendo. Pero, si aún puedo seguir en pie, es porque me queda algo por hacer."
+    },
+    "tim-036df366ee35dc": {
+      "sourceZh": "我见过他们在月光下跳舞。不是交际舞，是两个人紧紧抱在一起，像溺水的人抓住彼此。艾德里安说，如果世界容不下他们，他就要建一个世界。",
+      "speaker": "tim",
+      "lineId": "talk.tim.2.1.text",
+      "textEs": "Los vi bailar bajo la luna. No era un baile de salón. Se abrazaban con fuerza, como náufragos aferrándose el uno al otro. Adrián dijo que, si el mundo no les daba un lugar, construiría otro mundo."
+    },
+    "tim-4b16363aaee613": {
+      "sourceZh": "把琴弓给我。那是打开盔甲的钥匙。",
+      "speaker": "tim",
+      "lineId": "talk.tim.2.2.text",
+      "textEs": "Dame el arco. Es la llave para abrir la armadura."
+    },
+    "tim-f0b3d269aa3682": {
+      "sourceZh": "好剑！……我是说好弓。用它打开盔甲吧。你会发现真相的。",
+      "speaker": "tim",
+      "lineId": "talk.tim.2.2.giftText",
+      "textEs": "¡Buena espada! Quiero decir, buen arco. Úsalo para abrir la armadura. Descubrirás la verdad."
+    },
+    "tim-3a531b25490614": {
+      "sourceZh": "我的任务完成了。他们终于在一起了。",
+      "speaker": "tim",
+      "lineId": "talk.tim.3.0.text",
+      "textEs": "He cumplido mi misión. Por fin están juntos."
+    },
+    "tim-1c09f81be60d22": {
+      "sourceZh": "两百年了，它终于可以休息了。",
+      "speaker": "tim",
+      "lineId": "talk.tim.4.0.text",
+      "textEs": "Después de doscientos años, por fin puede descansar."
+    },
+    "tim-d3cde42a9db60e": {
+      "sourceZh": "这个你留着。不是作为武器——作为纪念。以音为剑的人，已经把剑放下了。",
+      "speaker": "tim",
+      "lineId": "talk.tim.4.0.text",
+      "textEs": "Quédatelo. Como recuerdo, no como arma. Quien hizo del sonido su espada ya la ha dejado descansar."
+    },
+    "tim-9e21bf4e66cecc": {
+      "sourceZh": "我守护这座古堡，不是因为职责。",
+      "speaker": "tim",
+      "lineId": "talk.tim.4.1.text",
+      "textEs": "No protegí este castillo por deber."
+    },
+    "tim-e8584cd94021d6": {
+      "sourceZh": "是因为总有人要替他们记得，这里有过一场多好的爱情。现在……你们所有人都替我记得了。",
+      "speaker": "tim",
+      "lineId": "talk.tim.4.1.text",
+      "textEs": "Lo hice porque alguien tenía que recordar el hermoso amor que hubo aquí. Ahora... todos vosotros lo recordaréis por mí."
+    },
+    "jerry-7a5c6408f2a0e3": {
+      "sourceZh": "这地方 acoustics 绝了。就是有点阴森。那架大键琴是1720年的，用的是中音律。有个音程特别刺耳，叫狼五度。你能找出来吗？",
+      "speaker": "jerry",
+      "lineId": "talk.jerry.1.0.text",
+      "textEs": "La acústica de este lugar es increíble. Aunque da un poco de miedo. Ese clave es de mil setecientos veinte y está afinado en temperamento mesotónico. Tiene un intervalo muy áspero: la quinta del lobo. ¿Puedes encontrarlo?"
+    },
+    "jerry-2d08881a92535d": {
+      "sourceZh": "循环太吵了。每次重新开始，所有声音都会叠加。我现在能听到两百年前的演奏。",
+      "speaker": "jerry",
+      "lineId": "talk.jerry.2.0.text",
+      "textEs": "El ciclo hace demasiado ruido. Cada vez que empieza, todos los sonidos se superponen. Ahora puedo oír las interpretaciones de hace doscientos años."
+    },
+    "jerry-f930071b92f13b": {
+      "sourceZh": "大键琴在自动演奏。是《月光奏鸣曲》的第一乐章。但不是贝多芬的版本……是伯爵改编的。他把小提琴的部分改成了大键琴。",
+      "speaker": "jerry",
+      "lineId": "talk.jerry.2.1.text",
+      "textEs": "El clave está tocando solo. Es el primer movimiento de Claro de luna. Pero no la versión de Beethoven: es un arreglo del conde. Adaptó para clave la parte del violín."
+    },
+    "jerry-5f0721f161d841": {
+      "sourceZh": "把音叉给我。那是校准大键琴的关键。",
+      "speaker": "jerry",
+      "lineId": "talk.jerry.2.2.text",
+      "textEs": "Dame el diapasón. Es la clave para afinar ese instrumento."
+    },
+    "jerry-360d77393b4ac3": {
+      "sourceZh": "A=415Hz，巴洛克的黄金标准。有了它，狼五度就会现形。",
+      "speaker": "jerry",
+      "lineId": "talk.jerry.2.2.giftText",
+      "textEs": "La nota la, a cuatrocientos quince hercios. La referencia del Barroco. Con ella, la quinta del lobo quedará al descubierto."
+    },
+    "jerry-9e6e603c903135": {
+      "sourceZh": "这是最后的合奏。为他们。",
+      "speaker": "jerry",
+      "lineId": "talk.jerry.3.0.text",
+      "textEs": "Este será el último concierto. Para ellos."
+    },
+    "jerry-048f6faf7589c3": {
+      "sourceZh": "你猜怎么着？我耳朵里那些重叠的杂音全没了。现在我只听得见一个声音——大键琴和小提琴的合奏，从塔楼传下来，没停过。",
+      "speaker": "jerry",
+      "lineId": "talk.jerry.4.0.text",
+      "textEs": "¿A que no sabes qué? Han desaparecido todos esos ruidos de mis oídos. Ahora solo escucho una cosa: un dúo de clave y violín que llega de la torre. No ha dejado de sonar."
+    },
+    "jerry-8841ecc3e0492e": {
+      "sourceZh": "对了，我在梦里把那架大键琴调好了。纯律，中音律，十二平均律，全试了一遍。",
+      "speaker": "jerry",
+      "lineId": "talk.jerry.4.1.text",
+      "textEs": "Por cierto, en mi sueño afiné aquel clave. Probé de todo: afinación justa, temperamento mesotónico y temperamento igual."
+    },
+    "jerry-aaa7e0002fa855": {
+      "sourceZh": "你猜最后用的是哪种？——都不是。伯爵说，他和他爱人的音程，不需要律制来定义。",
+      "speaker": "jerry",
+      "lineId": "talk.jerry.4.1.text",
+      "textEs": "¿Adivinas cuál acabamos usando? Ninguno. El conde dijo que ningún sistema podía definir el intervalo entre él y su amado."
+    },
+    "shiyuan-568ea9cfd52be3": {
+      "sourceZh": "我在收拾房间的时候，在床垫下面发现了东西。我不敢看……",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.1.0.text",
+      "textEs": "Mientras limpiaba la habitación encontré algo debajo del colchón. No me atrevo a mirarlo..."
+    },
+    "shiyuan-62d3fd9d3a90a7": {
+      "sourceZh": "梳妆台的密码……我猜和音乐有关。女主人最喜欢的一首曲子，有14个音符的主题。",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.1.1.text",
+      "textEs": "La contraseña del tocador... Creo que tiene que ver con la música. La pieza favorita de la señora tiene un tema de catorce notas."
+    },
+    "shiyuan-a5f7cd13ab7a30": {
+      "sourceZh": "宝石和飞鸿……他们不会回来了。我知道。我听到他们的声音。从墙里。",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.1.2.text",
+      "textEs": "Baoshi y Feihong... No van a volver. Lo sé. He oído sus voces. Dentro de la pared."
+    },
+    "shiyuan-4a82e6988c4643": {
+      "sourceZh": "循环让我想起了很多事。我前世……也许真的在这里当过女仆。",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.2.0.text",
+      "textEs": "El ciclo me ha devuelto muchos recuerdos. En otra vida... quizá de verdad fui doncella aquí."
+    },
+    "shiyuan-3be4892dbd4611": {
+      "sourceZh": "我见过伯爵和菲利克斯先生。他们睡在一间房里。伯爵为他写了一首又一首曲子，每一首都没有名字，只有一个记号：A&F。",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.2.1.text",
+      "textEs": "Vi al conde y al señor Félix. Dormían en la misma habitación. El conde le componía una pieza tras otra. Ninguna tenía título. Solo una marca: A y F."
+    },
+    "shiyuan-0ba391db2fd1e8": {
+      "sourceZh": "菲利克斯先生总说起东方。 silk road。伯爵为了他，聘请了东方的乐手，还学了几句中文。",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.2.2.text",
+      "textEs": "El señor Félix siempre hablaba de Oriente. De la Ruta de la Seda. Por él, el conde contrató a músicos orientales e incluso aprendió unas palabras en chino."
+    },
+    "shiyuan-bac629eab90680": {
+      "sourceZh": "把你知道的给我。关于他们的。",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.2.3.text",
+      "textEs": "Dame lo que sepas. Sobre ellos dos."
+    },
+    "shiyuan-dbca4af5ed7cc7": {
+      "sourceZh": "菲利克斯先生在床垫下藏了这封信……他在原谅伯爵之前，就已经知道了真相。他选择了原谅。",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.2.3.giftText",
+      "textEs": "El señor Félix escondió esta carta bajo el colchón. Ya conocía la verdad antes de perdonar al conde. Y eligió perdonarlo."
+    },
+    "shiyuan-a19da40d3cf302": {
+      "sourceZh": "他们终于安息了。每年的这一天，我都会来这里，放一束白色的花。",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.3.0.text",
+      "textEs": "Por fin descansan en paz. Todos los años, este mismo día, vendré a dejar un ramo de flores blancas."
+    },
+    "shiyuan-d913499f524b9f": {
+      "sourceZh": "都醒了？正好——谁来说说，为什么厨房里的面粉少了半袋，餐桌上多了两套餐具？",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.4.0.text",
+      "textEs": "¿Ya estáis todos despiertos? Bien. ¿Quién me explica por qué falta media bolsa de harina en la cocina y hay dos servicios más en la mesa?"
+    },
+    "shiyuan-56145d3d96aa28": {
+      "sourceZh": "……算了。先吃饭吧。",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.4.0.text",
+      "textEs": "Bueno, dejémoslo. Vamos a desayunar."
+    },
+    "shiyuan-331a41073ee241": {
+      "sourceZh": "我在梦里当了女仆，天天给两位主人送早餐。",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.4.1.text",
+      "textEs": "En mi sueño fui doncella. Cada mañana llevaba el desayuno a los dos señores."
+    },
+    "shiyuan-04552650fb0dec": {
+      "sourceZh": "有一天的早餐，他们在面包上用果酱画了两个字母。A，和F。",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.4.1.text",
+      "textEs": "Un día dibujaron dos letras con mermelada sobre el pan. La A y la F."
+    },
+    "shiyuan-f1c11a165fa46c": {
+      "sourceZh": "你说巧不巧，今早的餐桌上，也有。",
+      "speaker": "shiyuan",
+      "lineId": "talk.shiyuan.4.1.text",
+      "textEs": "Qué casualidad, ¿verdad? Esta mañana también estaban en nuestra mesa."
+    },
+    "lala-9e8ad7a6ba751f": {
+      "sourceZh": "我算了一卦……这个古堡里有很强的执念。不是怨念，是爱，被误解的爱。但已经被污染了。",
+      "speaker": "lala",
+      "lineId": "talk.lala.1.0.text",
+      "textEs": "He consultado el destino... En este castillo hay un apego muy poderoso. No es rencor. Es amor, un amor malinterpretado. Pero algo lo ha corrompido."
+    },
+    "lala-dab2af6e97209e": {
+      "sourceZh": "菲利克斯的灵魂被封印在餐厅的音乐盒里。只有光才能打开那个盒子。",
+      "speaker": "lala",
+      "lineId": "talk.lala.1.1.text",
+      "textEs": "El alma de Félix está sellada dentro de la caja de música del comedor. Solo la luz puede abrirla."
+    },
+    "lala-034dd184ada920": {
+      "sourceZh": "但打开盒子之后……你要做好准备。灵魂不会原谅一个没有真相的人。",
+      "speaker": "lala",
+      "lineId": "talk.lala.1.2.text",
+      "textEs": "Pero, cuando la abras... debes estar preparado. Esa alma no perdonará a alguien que no conozca la verdad."
+    },
+    "lala-6170162e9448a7": {
+      "sourceZh": "想上塔楼？先回答我一个问题。小提琴的秘密，你知道多少？",
+      "speaker": "lala",
+      "lineId": "talk.lala.1.3.text",
+      "textEs": "¿Quieres subir a la torre? Contéstame antes una pregunta. ¿Cuánto sabes de los secretos del violín?"
+    },
+    "lala-25188e813f06f2": {
+      "sourceZh": "没错，三个纯五度。G→D是一个，D→A是一个，A→E是一个。水晶球里的琴亮了……这把钥匙给你。",
+      "speaker": "lala",
+      "lineId": "talk.lala.1.3.rewardText",
+      "textEs": "Exacto: tres quintas justas. De sol a re, de re a la y de la a mi. El instrumento de la bola de cristal se ha iluminado. Toma, aquí está la llave."
+    },
+    "lala-f7226cd5363961": {
+      "sourceZh": "小提琴四根空弦从粗到细依次是G、D、A、E，相邻两根之间都是纯五度。从最低的G到最高的E，一共跨越了几个纯五度？",
+      "speaker": "lala",
+      "lineId": "talk.lala.1.3.ansQuestion",
+      "textEs": "Las cuerdas al aire del violín, de la más gruesa a la más fina, son sol, re, la y mi. Entre cuerdas vecinas hay una quinta justa. De la cuerda más grave a la más aguda, ¿cuántas quintas justas hay?"
+    },
+    "lala-3e2481d4815202": {
+      "sourceZh": "循环每一次，执念就会更强。但也有好消息——灵魂在渴望被释放。",
+      "speaker": "lala",
+      "lineId": "talk.lala.2.0.text",
+      "textEs": "Con cada ciclo, ese apego se hace más fuerte. Pero también hay buenas noticias: el alma desea ser liberada."
+    },
+    "lala-fb7c2c863c071e": {
+      "sourceZh": "艾德里安不是恶魔。他只是一个犯了错的人。一个因为爱而疯掉的人。",
+      "speaker": "lala",
+      "lineId": "talk.lala.2.1.text",
+      "textEs": "Adrián no es un demonio. Solo es alguien que cometió un error. Alguien a quien el amor llevó a perder la razón."
+    },
+    "lala-9ebabf95b9539b": {
+      "sourceZh": "塔楼的门又锁上了？循环就是这样。再答一题吧，这次难一点。",
+      "speaker": "lala",
+      "lineId": "talk.lala.2.2.text",
+      "textEs": "¿Otra vez está cerrada la puerta de la torre? Así son los ciclos. Responde otra pregunta. Esta será un poco más difícil."
+    },
+    "lala-4bfc9f7acbb549": {
+      "sourceZh": "七个半音。纯五度是除了八度之外最干净的音程——就像那两个人之间，本来该有的样子。钥匙拿去。",
+      "speaker": "lala",
+      "lineId": "talk.lala.2.2.rewardText",
+      "textEs": "Siete semitonos. Después de la octava, la quinta justa es el intervalo más limpio. Como debió ser el amor de aquellos dos. Toma la llave."
+    },
+    "lala-ca1c152874bf18": {
+      "sourceZh": "在十二平均律里，一个纯五度（比如 C 到 G）包含几个半音？",
+      "speaker": "lala",
+      "lineId": "talk.lala.2.2.ansQuestion",
+      "textEs": "En el temperamento igual de doce notas, ¿cuántos semitonos tiene una quinta justa, por ejemplo de do a sol?"
+    },
+    "lala-3e6dfc7d830f40": {
+      "sourceZh": "执念快要走到尽头了。这是最后一次循环，也是最后一次答题。",
+      "speaker": "lala",
+      "lineId": "talk.lala.3.0.text",
+      "textEs": "Ese apego está a punto de extinguirse. Este es el último ciclo. Y la última pregunta."
+    },
+    "lala-5124037ad17e02": {
+      "sourceZh": "塔楼的钥匙，最后一次给你。答完这题，去把他们的故事讲完。",
+      "speaker": "lala",
+      "lineId": "talk.lala.3.1.text",
+      "textEs": "Te doy la llave de la torre por última vez. Responde y ve a terminar su historia."
+    },
+    "lala-eaa122ee512c75": {
+      "sourceZh": "没错，八个。八度——循环的尽头，也是新的开始。去吧，替他们把曲子弹完。",
+      "speaker": "lala",
+      "lineId": "talk.lala.3.1.rewardText",
+      "textEs": "Exacto, ocho. La octava: el final del ciclo y un nuevo comienzo. Ve y termina esa melodía por ellos."
+    },
+    "lala-08b01abb8880ee": {
+      "sourceZh": "最后一题：钢琴上从一个 C 到高八度的下一个 C，一共经过几个白键（首尾都算）？",
+      "speaker": "lala",
+      "lineId": "talk.lala.3.1.ansQuestion",
+      "textEs": "Última pregunta. En el piano, desde un do hasta el siguiente do agudo, ¿cuántas teclas blancas hay, contando la primera y la última?"
+    },
+    "lala-23eb1fe7a70c9f": {
+      "sourceZh": "我的水晶球空了。不是坏了——是里面装的执念，全都散了。",
+      "speaker": "lala",
+      "lineId": "talk.lala.4.0.text",
+      "textEs": "Mi bola de cristal se ha vaciado. No está rota. Simplemente, todo ese apego se ha desvanecido."
+    },
+    "lala-ee959a42043046": {
+      "sourceZh": "拿着玩吧，就当是个纪念品。",
+      "speaker": "lala",
+      "lineId": "talk.lala.4.0.text",
+      "textEs": "Toma, puedes jugar con ella. Consérvala como recuerdo."
+    },
+    "lala-66ca0f7923d752": {
+      "sourceZh": "下次团建别找这种地方了。",
+      "speaker": "lala",
+      "lineId": "talk.lala.4.1.text",
+      "textEs": "Para la próxima actividad del grupo, elegid otro sitio."
+    },
+    "lala-831153dcae8ad0": {
+      "sourceZh": "不过……也挺好的。有些故事，总得有人听完。",
+      "speaker": "lala",
+      "lineId": "talk.lala.4.1.text",
+      "textEs": "Aunque... me alegro de haber venido. Hay historias que alguien tiene que escuchar hasta el final."
+    },
+    "baoshi-dcdf2c07e8c4f8": {
+      "sourceZh": "我不该来的……这里好黑……",
+      "speaker": "baoshi",
+      "lineId": "talk.servants.1.0.text",
+      "textEs": "No debí venir... Está todo tan oscuro..."
+    },
+    "feihong-6e5f621260b87b": {
+      "sourceZh": "我出去看了一眼，然后……我就不是我了。",
+      "speaker": "feihong",
+      "lineId": "talk.servants.1.0.text",
+      "textEs": "Salí a echar un vistazo y después... dejé de ser yo."
+    },
+    "feihong-8b426c2d01571f": {
+      "sourceZh": "那边肖像画里被划掉的脸……像是我自己的脸。",
+      "speaker": "feihong",
+      "lineId": "talk.servants.1.1.text",
+      "textEs": "El rostro tachado de aquel retrato... se parece al mío."
+    },
+    "baoshi-ffef51d85cc06b": {
+      "sourceZh": "循环让我们想起了。我们不是第一次来这里。上一次，我们也没有离开。",
+      "speaker": "baoshi",
+      "lineId": "talk.servants.2.0.text",
+      "textEs": "El ciclo nos ha devuelto los recuerdos. No es la primera vez que venimos. La otra vez tampoco conseguimos salir."
+    },
+    "feihong-25e8d3d9fbb1e9": {
+      "sourceZh": "但我们不怨恨。这座古堡需要我们。作为……见证者。每一次有人解开真相，我们的灵魂就会轻一点。",
+      "speaker": "feihong",
+      "lineId": "talk.servants.2.1.text",
+      "textEs": "Pero no guardamos rencor. Este castillo nos necesita como... testigos. Cada vez que alguien descubre la verdad, nuestras almas pesan un poco menos."
+    },
+    "baoshi-a1b4cdc16931d9": {
+      "sourceZh": "谢谢你。我们终于可以去下一个地方了。",
+      "speaker": "baoshi",
+      "lineId": "talk.servants.3.0.text",
+      "textEs": "Gracias. Por fin podemos seguir nuestro camino."
+    },
+    "feihong-271af0ce04c3e9": {
+      "sourceZh": "……我做了一个好长好长的梦。梦见我在这座古堡里走了两百年，一直找不到出口。",
+      "speaker": "feihong",
+      "lineId": "talk.servants.4.0.text",
+      "textEs": "He tenido un sueño larguísimo. Llevaba doscientos años andando por este castillo, sin encontrar la salida."
+    },
+    "feihong-272d5057702b81": {
+      "sourceZh": "但奇怪的是——梦里有个人一直牵着我的手。",
+      "speaker": "feihong",
+      "lineId": "talk.servants.4.0.text",
+      "textEs": "Pero lo extraño es que... alguien me sostuvo de la mano todo el tiempo."
+    },
+    "feihong-d66bc17b4c70f6": {
+      "sourceZh": "说出来你们别笑……我梦见宝石是我上辈子的恋人。我们在月光下走散了，我找了整整一辈子。",
+      "speaker": "feihong",
+      "lineId": "talk.servants.4.1.text",
+      "textEs": "No os riáis... He soñado que Baoshi fue mi amante en otra vida. Nos perdimos bajo la luna. Pasé una vida entera buscándolo."
+    },
+    "baoshi-72c42b17f8a4cf": {
+      "sourceZh": "……我也梦见你了。我梦见我等你回来，等了很久很久。",
+      "speaker": "baoshi",
+      "lineId": "talk.servants.4.2.text",
+      "textEs": "Yo también soñé contigo. Soñé que esperaba tu regreso. Esperé muchísimo tiempo."
+    },
+    "baoshi-9feacad582f55c": {
+      "sourceZh": "然后你真的回来了。带着一身雪。",
+      "speaker": "baoshi",
+      "lineId": "talk.servants.4.2.text",
+      "textEs": "Y entonces volviste de verdad. Cubierto de nieve."
+    },
+    "shiyuan-1ea20cfd3deb14": {
+      "sourceZh": "醒了就过来帮忙！团建早餐还做不做了？",
+      "speaker": "shiyuan",
+      "lineId": "talk.servants.4.4.text",
+      "textEs": "¡Si ya estáis despiertos, venid a ayudar! ¿Vamos a preparar el desayuno del grupo o no?"
+    },
+    "adrian-252106ba2f62bd": {
+      "sourceZh": "又一个访客……你们总是这样，带着蜡烛和好奇心，走进不属于你们的夜晚。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.1.0.text",
+      "textEs": "Otro visitante... Siempre hacéis lo mismo. Entráis con vuestras velas y vuestra curiosidad en una noche que no os pertenece."
+    },
+    "adrian-9695a1f6d8c247": {
+      "sourceZh": "你知道上一个走进这座塔楼的人是谁吗？是我的月光。那晚的雪下了一整夜，我在窗后站了一整夜。我亲手把他关在了门外——然后用两百年，把自己关进了门里。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.1.1.text",
+      "textEs": "¿Sabes quién fue el último que entró en esta torre? Fue mi luz de luna. Aquella noche nevó sin descanso, y yo permanecí junto a la ventana. Lo dejé fuera con mis propias manos. Y después pasé doscientos años encerrándome dentro."
+    },
+    "adrian-c324e779732ef6": {
+      "sourceZh": "我一直很想念他。仿佛那些漫漫长夜，就是用来想念他的。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.1.2.text",
+      "textEs": "Lo he echado tanto de menos. Como si esas noches interminables solo existieran para añorarlo."
+    },
+    "adrian-d4f7f667a802e3": {
+      "sourceZh": "今晚，没有人能离开。月光不落，大门不开。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.1.3.text",
+      "textEs": "Esta noche no saldrá nadie. Mientras no se ponga la luna, la puerta seguirá cerrada."
+    },
+    "adrian-0696e4c85325a4": {
+      "sourceZh": "你回来了。两百年里，回来过的人屈指可数。但你不一样——你身上有他的气息。松香、羊肠弦，还有那年冬天的雪。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.2.0.text",
+      "textEs": "Has vuelto. En doscientos años, muy pocos lo han hecho. Pero tú eres distinto. Llevas su aroma: resina, cuerdas de tripa... y la nieve de aquel invierno."
+    },
+    "adrian-122ca8b63d99d3": {
+      "sourceZh": "他总想去东方。说那里的音乐像流水，像风，丝绸之路上的每一粒沙子都会唱歌。我偷偷学了一句中文，想在他生日那天说给他听——'今晚的月色真美'。可我还没来得及说，",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.2.1.text",
+      "textEs": "Siempre quiso ir a Oriente. Decía que allí la música era como el agua y el viento, y que cada grano de arena de la Ruta de la Seda podía cantar. Aprendí una frase en chino para su cumpleaños: la luna está preciosa esta noche. Pero, antes de poder decírsela,"
+    },
+    "adrian-4a5aaac492aa93": {
+      "sourceZh": "他就走进了雪里。后来我才知道，那句话说的不是月色。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.2.1.text",
+      "textEs": "él se adentró en la nieve. Solo después comprendí que aquella frase no hablaba de la luna."
+    },
+    "adrian-fefc61fbce1a9c": {
+      "sourceZh": "我母亲给我们算过命。她说我们会毁了彼此。我说我不在乎。她说：'你不在乎，他在乎。'所以我信了她伪造的那封信——不是因为我信了谎言，是因为我害怕。怕她是对的，怕我这样的人，",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.2.2.text",
+      "textEs": "Mi madre nos leyó el destino. Dijo que acabaríamos destruyéndonos. Respondí que no me importaba. Y ella dijo: a ti no, pero a él sí. Por eso creí en la carta que falsificó. No porque creyera la mentira. Tenía miedo de que tuviera razón, de que alguien como yo"
+    },
+    "adrian-abd61aedb7e003": {
+      "sourceZh": "配不上那样干净的月光。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.2.2.text",
+      "textEs": "no mereciera una luz de luna tan pura."
+    },
+    "adrian-d3aa2b80cd554b": {
+      "sourceZh": "麦克白说'满手血腥'。我的手永远洗不干净。但比血更脏的，是懦弱。我爱他，却更爱那个不会被世界嘲笑的自己。我把他推出门外，以为把他推出去了，就什么都不用承认了。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.2.3.text",
+      "textEs": "Macbeth decía que tenía las manos llenas de sangre. Las mías nunca quedarán limpias. Pero hay algo más sucio que la sangre: la cobardía. Lo amaba. Pero amaba más a ese yo del que el mundo no se burlaría. Lo eché y creí que así ya no tendría que admitir nada."
+    },
+    "adrian-d75acaa5925f7b": {
+      "sourceZh": "两百年了，我每天晚上都在弹那首没写完的安魂曲。每一个音符都是一句'对不起'。可死去的人听不见音乐——听得见音乐的，只有活着的、愿意停下来听的人。比如你。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.2.4.text",
+      "textEs": "Llevo doscientos años tocando cada noche aquel réquiem inconcluso. Cada nota dice: perdóname. Pero los muertos no oyen la música. La oyen los vivos que se detienen a escuchar. Como tú."
+    },
+    "adrian-9be7256114a1ec": {
+      "sourceZh": "我的时间不多了。每一次循环，我都变得更像一头野兽……下一次醒来，我可能就认不出你了。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.2.5.text",
+      "textEs": "Me queda poco tiempo. Con cada ciclo me parezco más a una bestia. La próxima vez que despierte quizá ya no te reconozca."
+    },
+    "adrian-8bffb431731022": {
+      "sourceZh": "如果你带了什么——任何一件他的东西——现在就给我。我能用那点温度，替你压住这座古堡。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.2.5.text",
+      "textEs": "Si has traído algo suyo, lo que sea, dámelo ahora. Con ese poco de calor puedo contener el castillo por ti."
+    },
+    "adrian-3e20ae0daa84dc": {
+      "sourceZh": "你带来了他的灵魂。还有……他的原谅。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.3.0.text",
+      "textEs": "Has traído su alma. Y también... su perdón."
+    },
+    "adrian-7ccc3994be7e59": {
+      "sourceZh": "两百年了，我排练了无数次重逢，每一次都在第一句话就崩溃。现在他真的来了，我却只想问一句——这些年，你冷吗？",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.3.0.text",
+      "textEs": "Durante doscientos años imaginé nuestro reencuentro. Siempre me derrumbaba en la primera frase. Ahora que está aquí de verdad, solo quiero preguntarle... ¿has pasado frío todos estos años?"
+    },
+    "adrian-ef1b34d4be82bd": {
+      "sourceZh": "我把我们的一生写成了三个乐章。第一乐章是相遇，第二乐章是猜忌，第三乐章……我始终写不下去。因为我不肯承认那就是永别。今夜，请你替我把它弹完。让他听见——这一次，",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.3.1.text",
+      "textEs": "Escribí nuestra vida en tres movimientos. El primero fue el encuentro. El segundo, la desconfianza. El tercero... nunca conseguí escribirlo. No quería admitir que fuera un adiós definitivo. Esta noche, termínalo por mí. Que él lo escuche. Esta vez,"
+    },
+    "adrian-9bd6bb32f0ef5c": {
+      "sourceZh": "换我在门外等，等到他原谅为止。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.3.1.text",
+      "textEs": "seré yo quien espere al otro lado de la puerta. Hasta que me perdone."
+    },
+    "adrian-af4999e35edce2": {
+      "sourceZh": "风琴会奏出哪一章，不取决于我——取决于你一路上带回来了什么。我的忏悔，我们相遇的那一年，他的誓言……你带回得越多，这场告别就越像重逢。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.3.1.text",
+      "textEs": "El movimiento que tocará el órgano no depende de mí. Depende de lo que hayas recuperado: mi confesión, el año en que nos conocimos, sus promesas. Cuanto más traigas, más se parecerá esta despedida a un reencuentro."
+    },
+    "adrian-fbf71a43d58620": {
+      "sourceZh": "你来了。日出很美，对吗？两百年了，我第一次知道，原来光是有温度的。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.0.text",
+      "textEs": "Has venido. El amanecer es hermoso, ¿verdad? Después de doscientos años, descubro por primera vez que la luz también da calor."
+    },
+    "adrian-977a9fa43e20b2": {
+      "sourceZh": "菲利克斯今早对我说：'原来日出是这种颜色。'我说：'是站在你身边，看什么颜色都好看。'他笑我两百岁了还油嘴滑舌。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.1.text",
+      "textEs": "Esta mañana Félix me dijo: así que este es el color del amanecer. Le respondí: a tu lado, todos los colores son hermosos. Se rio de mí por seguir siendo un zalamero a mis doscientos años."
+    },
+    "adrian-ed8d6aa3369f4a": {
+      "sourceZh": "他想去厨房找点吃的——两百年没吃东西了，他说想尝尝现代的面包。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.1.text",
+      "textEs": "Quería ir a la cocina. Tras doscientos años sin comer, le apetecía probar el pan moderno."
+    },
+    "adrian-9ed5e81db91dfd": {
+      "sourceZh": "我母亲错了。爱不会毁了彼此。只有不敢去爱，才会毁掉一切。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.2.text",
+      "textEs": "Mi madre se equivocaba. El amor no nos destruye. Lo que lo destruye todo es no atreverse a amar."
+    },
+    "adrian-bb2e5ba81fe8a6": {
+      "sourceZh": "我花了两百年才明白这个道理。幸好他比我聪明——他在雪地里走的那一夜，就已经原谅我了。他只是等我亲口问一句。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.2.text",
+      "textEs": "He tardado doscientos años en entenderlo. Por suerte, él fue más listo. Ya me había perdonado aquella noche en la nieve. Solo esperaba a que yo se lo preguntara."
+    },
+    "adrian-faf5affd31e238": {
+      "sourceZh": "我一直以为，那些漫漫长夜是用来想念他的。现在我知道了——长夜是用来等的。而他，是用来一起等日出的。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.3.text",
+      "textEs": "Siempre creí que aquellas noches interminables servían para echarlo de menos. Ahora lo entiendo: servían para esperar. Y él es la persona con quien quiero esperar el amanecer."
+    },
+    "adrian-5ce5db92c9ee54": {
+      "sourceZh": "这座古堡里还有很多我们的东西。如果你感兴趣，可以随意看看。它们不再属于幽灵了……它们只是一些被时间遗忘的纪念品。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.4.text",
+      "textEs": "Aún quedan muchas cosas nuestras en el castillo. Puedes mirarlas si te apetece. Ya no pertenecen a fantasmas... Solo son recuerdos que el tiempo había olvidado."
+    },
+    "adrian-37576e83f9601f": {
+      "sourceZh": "对了，如果你找到什么有趣的东西，可以拿来给我看看。我很想……再和别人分享一次我们的故事。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.5.text",
+      "textEs": "Por cierto, si encuentras algo interesante, tráemelo. Me gustaría... compartir nuestra historia una vez más."
+    },
+    "adrian-47e6e964ee3b62": {
+      "sourceZh": "这是我画的。那个冬天，他坐在壁炉旁拉琴，火光落在他的侧脸上，我偷偷画的。我以为我还会画很多张，画到他老去，画到我们都白头……但我只来得及画完这一张。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.5.giftText",
+      "textEs": "Lo dibujé yo. Aquel invierno se sentaba junto al fuego a tocar el violín. La luz le acariciaba el perfil y yo lo dibujaba a escondidas. Pensé que haría muchos retratos, hasta verlo envejecer, hasta que los dos tuviéramos el pelo blanco. Pero solo llegué a terminar este."
+    },
+    "adrian-656e533fbc8eef": {
+      "sourceZh": "那块手帕……他总带在身上。说梅花是冬天的勇气，竹子是春天的希望。那两瓣梅花是我绣的，针脚很丑，扎破了三次手指。但他一直说好看，说了整整一辈子——虽然他的一辈子，太短了。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.6.text",
+      "textEs": "Ese pañuelo... siempre lo llevaba encima. Decía que el ciruelo era el valor del invierno y el bambú, la esperanza de la primavera. Yo bordé esos dos pétalos. Las puntadas eran horribles y me pinché tres veces. Pero él no dejó de decir que era precioso. Toda su vida... aunque su vida fue demasiado corta."
+    },
+    "adrian-88ec372d4bfe6a": {
+      "sourceZh": "谢谢你还给我。这一次，我不会再弄丢了。再也不会了。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.6.giftText",
+      "textEs": "Gracias por devolvérmelo. Esta vez no volveré a perderlo. Nunca más."
+    },
+    "adrian-a81b07274291f4": {
+      "sourceZh": "啊，这根断弦……",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.7.text",
+      "textEs": "Ah, esa cuerda rota..."
+    },
+    "adrian-c57d696d1ef6f4": {
+      "sourceZh": "那是我发疯那天剪断的。我以为没有音乐，就不会想起他。但我错了。没有音乐的那些年，我什么都想不起来——除了他。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.7.text",
+      "textEs": "La corté el día que perdí la razón. Creí que, sin música, dejaría de recordarlo. Me equivocaba. En aquellos años sin música no pude recordar nada... salvo a él."
+    },
+    "adrian-d0a4860fb651a7": {
+      "sourceZh": "我想把它做成一件新的首饰。不是给我们的……是给这座古堡的。作为纪念——纪念所有不敢说出口、最后却成了永恒的话。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.7.giftText",
+      "textEs": "Quiero convertirla en una joya nueva. No para nosotros, sino para este castillo. Para recordar todas esas palabras que no nos atrevimos a decir y que, al final, se hicieron eternas."
+    },
+    "adrian-9008ff7c26016e": {
+      "sourceZh": "这页谱子……",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.8.text",
+      "textEs": "Esta página de la partitura..."
+    },
+    "adrian-de12b3133c6e44": {
+      "sourceZh": "我以为我早就烧了它。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.8.text",
+      "textEs": "Creí que la había quemado hace mucho."
+    },
+    "adrian-1d718aed7bb088": {
+      "sourceZh": "这是我们写的第一首合奏。他说大键琴太吵，我说小提琴太尖，吵了一下午。最后我们决定——各让一步，像过日子一样。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.8.giftText",
+      "textEs": "Fue el primer dúo que compusimos. Él decía que el clave sonaba demasiado fuerte y yo, que el violín era estridente. Discutimos toda la tarde. Al final decidimos ceder un poco cada uno. Como en la vida juntos."
+    },
+    "adrian-12b81ebbf8ce09": {
+      "sourceZh": "两百年了，这个音还是准的。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.8.giftText",
+      "textEs": "Después de doscientos años, esta nota sigue afinada."
+    },
+    "adrian-9b5cf9ffc13252": {
+      "sourceZh": "袖扣……我都忘了这对袖扣。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.9.text",
+      "textEs": "Los gemelos... Había olvidado estos gemelos."
+    },
+    "adrian-01f1dd96b6effa": {
+      "sourceZh": "一千个清晨……结果我只来得及写到第三个清晨，就写不下去了。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.9.giftText",
+      "textEs": "Mil mañanas... Pero solo llegué a escribir hasta la tercera. Después ya no pude seguir."
+    },
+    "adrian-161256b3bd8c3a": {
+      "sourceZh": "现在，它们替我记着了。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.9.giftText",
+      "textEs": "Ahora ellos lo recuerdan por mí."
+    },
+    "adrian-f2b32a1db6734e": {
+      "sourceZh": "星图……你找到它了。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.10.text",
+      "textEs": "El mapa de las estrellas... Lo has encontrado."
+    },
+    "adrian-94f245844106b3": {
+      "sourceZh": "那晚他说，东方传说里这对星星一年只能见一面。我说那我们替他们天天见。后来……后来我一个人看了两百年的星星。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.10.giftText",
+      "textEs": "Aquella noche dijo que, según una leyenda oriental, esas dos estrellas solo se ven una vez al año. Le propuse que nosotros nos viéramos todos los días por ellas. Después... pasé doscientos años mirando las estrellas solo."
+    },
+    "adrian-05af8ae1b55fd1": {
+      "sourceZh": "现在不用了。",
+      "speaker": "adrian",
+      "lineId": "talk.adrian.4.10.giftText",
+      "textEs": "Ya no hace falta."
+    },
+    "adrian-b02fc11758d0b4": {
+      "sourceZh": "空手而来？你连一件他的东西都没有带回来……那你也别想走了。",
+      "speaker": "adrian",
+      "lineId": "special.keepsake-refused",
+      "textEs": "¿Vienes con las manos vacías? No has traído ni una sola cosa suya... Entonces, tampoco tú saldrás de aquí."
+    },
+    "adrian-88d063ffefff94": {
+      "sourceZh": "是你……你一直在看着我们，对吗？",
+      "speaker": "adrian",
+      "lineId": "special.protected",
+      "textEs": "Eres tú... Has estado mirándonos todo este tiempo, ¿verdad?"
+    },
+    "adrian-e98134cdeb628b": {
+      "sourceZh": "我不会伤害他看着的人。走吧——趁我还记得。",
+      "speaker": "adrian",
+      "lineId": "special.protected",
+      "textEs": "No haré daño a nadie a quien él proteja. Vete... mientras aún lo recuerde."
+    },
+    "felix-f554b1c7087f6c": {
+      "sourceZh": "帮我把信带给他。告诉他，门外的雪不冷——真正冷的，是他一个人守着的那架琴。",
+      "speaker": "felix",
+      "lineId": "special.mirror-soul",
+      "textEs": "Llévale mi carta. Dile que la nieve de fuera no es fría. Lo frío de verdad es ese instrumento que él custodia a solas."
+    },
+    "adrian-ef529f84c5f3ea": {
+      "sourceZh": "你以为一封信就能打动我吗？我要的是他……把他的灵魂带来。",
+      "speaker": "adrian",
+      "lineId": "special.organ-blocked",
+      "textEs": "¿Crees que una carta bastará para conmoverme? Lo quiero a él... Tráeme su alma."
+    },
+    "adrian-3650d9d1aa3560": {
+      "sourceZh": "别管我……时间不多，去找他的信。",
+      "speaker": "adrian",
+      "lineId": "special.keepsake-active",
+      "textEs": "No te preocupes por mí. Queda poco tiempo. Ve a buscar sus cartas."
+    },
+    "adrian-0fb1b819da6b4e": {
+      "sourceZh": "……他原谅我了。两百年了，他早就原谅我了。他只是在等我……亲口问一句。",
+      "speaker": "adrian",
+      "lineId": "special.forgiven",
+      "textEs": "Me ha perdonado... Después de doscientos años, ya me había perdonado. Solo esperaba a que yo... se lo preguntara."
+    },
+    "adrian-86f0ae71e831ee": {
+      "sourceZh": "这首曲子……我们还没有写完。但这一次，他会听到的。这一次，我弹给他听，也弹给日出听。",
+      "speaker": "adrian",
+      "lineId": "special.requiem-ready",
+      "textEs": "Aún no hemos terminado esta pieza. Pero esta vez él la oirá. Tocaré para él. Y para el amanecer."
+    },
+    "felix-3274a008fb4044": {
+      "sourceZh": "请把他带回来。也请……把我带回到他身边。",
+      "speaker": "felix",
+      "lineId": "special.soul-fragment",
+      "textEs": "Tráelo de vuelta, por favor. Y a mí... devuélveme a su lado."
+    },
+    "adrian-775d9cb7d7bd64": {
+      "sourceZh": "跑得不错。但古堡是我的。",
+      "speaker": "adrian",
+      "lineId": "special.chase-taunt-run",
+      "textEs": "Corres bien. Pero el castillo es mío."
+    },
+    "adrian-74aa1fdffd5491": {
+      "sourceZh": "又一个会跑的。有意思。",
+      "speaker": "adrian",
+      "lineId": "special.chase-taunt-shadow",
+      "textEs": "Otro que sabe correr. Interesante."
+    },
+    "adrian-af4871fbcea835": {
+      "sourceZh": "你知道上一个走进这座塔楼的人是谁吗？",
+      "speaker": "adrian",
+      "lineId": "transition.loop2",
+      "textEs": "¿Sabes quién fue el último que entró en esta torre?"
+    },
+    "adrian-3f1db653e032f6": {
+      "sourceZh": "是我的月光。我亲手把他关在了门外，又用两百年，把自己关进了门里。",
+      "speaker": "adrian",
+      "lineId": "transition.loop2",
+      "textEs": "Fue mi luz de luna. Lo dejé fuera con mis propias manos. Y pasé doscientos años encerrándome dentro."
+    },
+    "adrian-9696f5d3a30ab8": {
+      "sourceZh": "两百年了，我每晚都弹前两章。第三乐章……我不敢弹。但今晚不一样——今晚，月光在听。",
+      "speaker": "adrian",
+      "lineId": "organ.farewell",
+      "textEs": "Llevo doscientos años tocando cada noche los dos primeros movimientos. El tercero... no me atrevo. Pero esta noche es distinta. Esta noche, la luna nos escucha."
+    },
+    "adrian-f69949d22dbfe2": {
+      "sourceZh": "两百年了，我每晚都弹前两章。第三乐章……我不敢弹。但今晚不一样——今晚，月光在听。",
+      "speaker": "adrian",
+      "lineId": "organ.reunion",
+      "textEs": "Llevo doscientos años tocando cada noche los dos primeros movimientos. El tercero... no me atrevo. Pero esta noche es distinta. Esta noche, la luna nos escucha."
+    },
+    "adrian-5442059f3296f0": {
+      "sourceZh": "两百年了，我每晚都弹前两章。第三乐章……我不敢弹。但今晚不一样——今晚，月光在听。",
+      "speaker": "adrian",
+      "lineId": "organ.diary",
+      "textEs": "Llevo doscientos años tocando cada noche los dos primeros movimientos. El tercero... no me atrevo. Pero esta noche es distinta. Esta noche, la luna nos escucha."
+    },
+    "adrian-bbda10310570ef": {
+      "sourceZh": "原来你把我们的一生都带来了。那最后一章，就不是永别——是重逢。",
+      "speaker": "adrian",
+      "lineId": "organ.diary",
+      "textEs": "Has traído toda nuestra vida... Entonces, el último movimiento no será una despedida. Será un reencuentro."
+    },
+    "adrian-468ef04b6711e6": {
+      "sourceZh": "两百年了，我每晚都弹前两章。第三乐章……我不敢弹。但今晚不一样——今晚，月光在听。",
+      "speaker": "adrian",
+      "lineId": "organ.ring",
+      "textEs": "Llevo doscientos años tocando cada noche los dos primeros movimientos. El tercero... no me atrevo. Pero esta noche es distinta. Esta noche, la luna nos escucha."
+    },
+    "adrian-03f323a2228959": {
+      "sourceZh": "他都留着……原来他也都留着。",
+      "speaker": "adrian",
+      "lineId": "organ.ring",
+      "textEs": "Lo había guardado todo... Él también lo había guardado todo."
+    },
+    "adrian-02dec68b5750c6": {
+      "sourceZh": "内侧的刻痕……还和他焐热它的时候一样。",
+      "speaker": "adrian",
+      "lineId": "keepsake.ring",
+      "textEs": "Las marcas del interior siguen igual que cuando él la calentaba entre sus manos."
+    },
+    "adrian-d9358c49da4a47": {
+      "sourceZh": "我用这点时间……换你把剩下的带回来。",
+      "speaker": "adrian",
+      "lineId": "keepsake.ring",
+      "textEs": "Con este poco de tiempo... ve y trae lo que falta."
+    },
+    "adrian-7b079913f4565b": {
+      "sourceZh": "时间停在那一刻，是因为我不敢往前走。",
+      "speaker": "adrian",
+      "lineId": "keepsake.pocket_watch",
+      "textEs": "El tiempo se detuvo en aquel instante porque yo no me atrevía a seguir adelante."
+    },
+    "adrian-72c15b2c88dcb8": {
+      "sourceZh": "现在，换我给你争取一点时间。",
+      "speaker": "adrian",
+      "lineId": "keepsake.pocket_watch",
+      "textEs": "Ahora me toca a mí darte algo de tiempo."
+    },
+    "adrian-d804b262954dee": {
+      "sourceZh": "1791年……我们相识的那一年。",
+      "speaker": "adrian",
+      "lineId": "keepsake.wine_bottle",
+      "textEs": "Mil setecientos noventa y uno... El año en que nos conocimos."
+    },
+    "adrian-98904baa040a4a": {
+      "sourceZh": "这瓶酒先押在我这里——去把剩下的找齐，我替你挡住这座古堡。",
+      "speaker": "adrian",
+      "lineId": "keepsake.wine_bottle",
+      "textEs": "Deja aquí la botella. Ve a encontrar lo que falta. Yo contendré el castillo por ti."
+    },
+    "adrian-a94d3e62ddf939": {
+      "sourceZh": "你找到了……我烧了三次都没烧成的东西。",
+      "speaker": "adrian",
+      "lineId": "keepsake.diary_page",
+      "textEs": "Lo has encontrado... Lo que intenté quemar tres veces, sin conseguirlo."
+    },
+    "adrian-fd3b88a4503751": {
+      "sourceZh": "在我彻底失控之前——快去，把剩下的都找回来。",
+      "speaker": "adrian",
+      "lineId": "keepsake.diary_page",
+      "textEs": "¡Antes de que pierda el control del todo, corre! ¡Ve a buscar lo que falta!"
+    },
+    "adrian-27b0f0c496b433": {
+      "sourceZh": "音乐室的钥匙……他总说我弹琴的声音能把锁都震开。",
+      "speaker": "adrian",
+      "lineId": "keepsake.silver_key",
+      "textEs": "La llave de la sala de música... Él decía que, cuando tocaba, podía hacer saltar hasta las cerraduras."
+    },
+    "adrian-dcdd08bc460428": {
+      "sourceZh": "好，我用这点时间，换你继续找下去。",
+      "speaker": "adrian",
+      "lineId": "keepsake.silver_key",
+      "textEs": "Está bien. Con este poco de tiempo podrás seguir buscando."
+    },
+    "adrian-69cb81a9db1b90": {
+      "sourceZh": "他……原谅我了？",
+      "speaker": "adrian",
+      "lineId": "ending.1",
+      "textEs": "Él... ¿me ha perdonado?"
+    },
+    "adrian-4bd918c9dce72d": {
+      "sourceZh": "菲利克斯……对不起。我一直很想念你。仿佛那些漫漫长夜，就是用来想念你的。",
+      "speaker": "adrian",
+      "lineId": "ending.1",
+      "textEs": "Félix... Perdóname. Te he echado tanto de menos. Como si esas noches interminables solo existieran para añorarte."
+    },
+    "adrian-9049879a07b6b0": {
+      "sourceZh": "我在这古堡里留了一件宝藏。不是金银，是那个冬夜之后，我再也没有见过的——日出。现在，我把它还给自己，也还给他。",
+      "speaker": "adrian",
+      "lineId": "ending.1",
+      "textEs": "He guardado un tesoro en este castillo. No es oro ni plata. Es algo que no volví a ver desde aquella noche de invierno: el amanecer. Ahora me lo devuelvo a mí mismo. Y también a él."
+    },
+    "adrian-c9295afc737bad": {
+      "sourceZh": "原来……你一直在等我。",
+      "speaker": "adrian",
+      "lineId": "ending.2",
+      "textEs": "Entonces... me has esperado todo este tiempo."
+    },
+    "adrian-cb8d8089be773b": {
+      "sourceZh": "告诉我……现在的世界，还有月光吗？",
+      "speaker": "adrian",
+      "lineId": "ending.2",
+      "textEs": "Dime... ¿sigue habiendo luz de luna en el mundo de ahora?"
+    },
+    "adrian-1856ee30b0614f": {
+      "sourceZh": "那太好了。这一次，换我不松手了。",
+      "speaker": "adrian",
+      "lineId": "ending.2",
+      "textEs": "Me alegro tanto. Esta vez seré yo quien no te suelte."
+    },
+    "adrian-052702c69fe366": {
+      "sourceZh": "菲利克斯！",
+      "speaker": "adrian",
+      "lineId": "ending.3",
+      "textEs": "¡Félix!"
+    },
+    "adrian-1e69cc09ef1389": {
+      "sourceZh": "你说得对。月光分我一半就够了——剩下的一半，我们一起去看日出。",
+      "speaker": "adrian",
+      "lineId": "ending.3",
+      "textEs": "Tenías razón. Me basta con la mitad de la luna. La otra mitad... la veremos juntos al amanecer."
+    }
+  }
+}

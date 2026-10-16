@@ -7,8 +7,8 @@ const CastleVoice = (() => {
   const normalize=text=>String(text).replace(/<br\s*\/?\s*>/gi,'\n').replace(/<[^>]+>/g,'').replace(/&amp;/g,'&').replace(/\s+/g,' ').trim();
   function paint(){
     const toggle=document.getElementById('castle-voice-toggle');
-    for(const id of ['castle-voice-replay','overlay-voice-replay','modal-voice-replay']){const replay=document.getElementById(id);if(replay){replay.hidden=!line;replay.textContent=blocked?'↻ 重试配音':'▶ 重听';replay.setAttribute('aria-label',blocked?'重试本句配音':'重听本句配音');}}
-    if(toggle){toggle.setAttribute('aria-pressed',String(enabled));toggle.textContent=enabled?'人物配音：开启':'人物配音：关闭';}
+    for(const id of ['castle-voice-replay','overlay-voice-replay','modal-voice-replay']){const replay=document.getElementById(id);if(replay){replay.hidden=!line;replay.textContent=blocked?'↻ 重试配音':'▶ 重听';replay.setAttribute('aria-label',blocked?'重试本句配音':line?.language==='es'?'重听本句西班牙语配音':'重听本句配音');}}
+    if(toggle){toggle.setAttribute('aria-pressed',String(enabled));toggle.textContent=enabled?'西语配音：开启':'西语配音：关闭';}
     const volume=document.getElementById('castle-voice-volume');if(volume&&document.activeElement!==volume)volume.value=Math.round(level*100);
   }
   function duck(value){CastleAudio.dialogueActive(value);}
@@ -18,7 +18,7 @@ const CastleVoice = (() => {
     if(!pending||!line||!enabled||!level||!CastleAudio.audible||blocked){player.pause();duck(false);paint();return;}
     if(!player.paused){duck(true);return;}
     if(starting)return;
-    const token=epoch;starting=true;
+    const token=epoch;starting=true;duck(true);
     player.play().then(()=>{
       if(token!==epoch)return;
       starting=false;
@@ -28,6 +28,7 @@ const CastleVoice = (() => {
   }
   function remember(text,autoplay=false){
     sequence++;continuations.clear();stop();inModal=false;line=CASTLE_VOICE_LINES[normalize(text)]||null;
+    player.lang=line?.language||'es';
     if(line&&autoplay){player.src=line.asset;pending=true;sync();}paint();
   }
   function replay(){if(!line)return;const current=line;stop();line=current;if(!enabled){enabled=true;preferences();}player.src=line.asset;pending=true;sync();}
