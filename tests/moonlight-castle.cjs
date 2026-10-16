@@ -25,6 +25,7 @@ let browser;
  await p.click('#moonlightPumpkin');await p.locator('#modalContent a[href="moonlight-castle.html"]').click();await p.click('#start-btn');
  mainSave=await p.evaluate(()=>Object.fromEntries(Object.entries(localStorage).filter(([k])=>!k.startsWith('hjm-moonlight'))));
  await p.waitForFunction(()=>!CastleAudio.audio.paused);assert((await p.evaluate(()=>CastleAudio.audio.src)).includes('loop-one.mp3'));
+ if(!requests.some(r=>r.includes('/dining-exploration-v3.webp')))await p.waitForRequest(r=>r.url().includes('/dining-exploration-v3.webp'),{timeout:5000});
  assert(requests.some(r=>r.includes('/dining-exploration-v3.webp')),'Next accessible room is preloaded from the unified hall');
  const inspect=async id=>{await p.locator('.castle-dock [data-castle-drawer=explore]').click();await p.locator('#object-tray [data-examine="'+id+'"]').click();};
  const exit=async id=>{await p.locator('.castle-dock [data-castle-drawer=map]').click();await p.locator('#castle-map-nodes [data-travel="'+id+'"]').click();};

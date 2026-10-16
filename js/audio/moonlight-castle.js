@@ -2,18 +2,18 @@
 const CastleAudio = (() => {
   let enabled = true, volume = .4, key = '', active = false, context = null, master = null, voices = new Set(), blocked = false, epoch = 0;
   const effects=new Map();
-  let volumeFrame=0,bgmTarget=-1;
+  let volumeFrame=0,bgmTarget=-1,dialoguePlaying=false;
   const audio = new Audio();audio.loop=true;audio.preload='none';audio.id='castleBgm';
   const tracks={'loop-one':'第一周目 · 古堡来客','loop-two':'第二周目 · 月光倒影','loop-three':'第三周目 · 最后的回信','wrong-end':'Wrong Ending','sunrise':'日出之后'};
   try {const p=JSON.parse(localStorage.getItem('hjm-moonlight-audio-v1'));if(p){enabled=p.enabled!==false;volume=Number.isFinite(p.volume)?Math.max(0,Math.min(1,p.volume)):.4;}} catch {}
   function paint() {
     const b=document.getElementById('castle-sound');if(!b)return;
     b.textContent=!enabled?'♪ 已静音':blocked?'♪ 点此重试':'♪ 声音';b.setAttribute('aria-pressed',String(enabled));
-    b.setAttribute('aria-label',enabled?'关闭古堡配乐与音效':'开启古堡配乐与音效');
+    b.setAttribute('aria-label',enabled?'关闭古堡全部声音':'开启古堡全部声音');
     document.getElementById('music-title').textContent=tracks[key]||'配乐将在进入后播放';
   }
   function mix(immediate=false){
-    const next=volume*(voices.size ? .42 : 1);
+    const next=volume*(dialoguePlaying ? .2 : voices.size ? .42 : 1);
     if(!immediate&&next===bgmTarget)return;
     bgmTarget=next;window.cancelAnimationFrame(volumeFrame);volumeFrame=0;
     if(immediate){audio.volume=next;return;}
@@ -26,10 +26,11 @@ const CastleAudio = (() => {
     if(next!==key){key=next;audio.src='assets/audio/moonlight-castle/'+key+'.mp3';blocked=false;}
     mix();
     if(master)master.gain.value=volume;
-    if(!active||!enabled||CastleClock.paused){audio.pause();stopVoices();paint();return;}
+    if(!active||!enabled||CastleClock.paused){audio.pause();stopVoices();paint();if(typeof CastleVoice!=='undefined')CastleVoice.sync();return;}
     if(!volume)stopVoices();
     if(audio.paused) audio.play().then(()=>{blocked=false;paint();}).catch(()=>{blocked=true;paint();});
     paint();
+    if(typeof CastleVoice!=='undefined')CastleVoice.sync();
   }
   function preferences(){try{localStorage.setItem('hjm-moonlight-audio-v1',JSON.stringify({enabled,volume}));}catch{}}
   function toggle(){enabled=blocked?true:!enabled;blocked=false;preferences();sync();}
@@ -71,5 +72,5 @@ const CastleAudio = (() => {
       source.connect(gain);gain.connect(master);track(source,gain);source.start(context.currentTime+Math.max(0,delay));
     });
   }
-  return {sync,toggle,tone,effect,start(){active=true;sync();},stop(){active=false;audio.pause();stopVoices();},setVolume(value){if(!Number.isFinite(value))return;volume=Math.max(0,Math.min(1,value));preferences();sync();},get enabled(){return enabled;},get volume(){return volume;},audio};
+  return {sync,toggle,tone,effect,start(){active=true;sync();},stop(){active=false;audio.pause();stopVoices();if(typeof CastleVoice!=='undefined')CastleVoice.stop();},setVolume(value){if(!Number.isFinite(value))return;volume=Math.max(0,Math.min(1,value));preferences();sync();},dialogueActive(value){const next=!!value;if(next!==dialoguePlaying){dialoguePlaying=next;mix();}},get audible(){return canPlay();},get enabled(){return enabled;},get volume(){return volume;},audio};
 })();

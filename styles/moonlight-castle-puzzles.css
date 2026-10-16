@@ -2,13 +2,21 @@
 .piano-key {
   width:36px; height:100px; background:linear-gradient(180deg,#e8dcc8,#b8a888);
   border:1px solid #8a7a6a; border-radius:0 0 3px 3px; cursor:pointer;
+  transition:transform 60ms,background 60ms,box-shadow 60ms;
 }
 .piano-key.black {
   width:22px; height:60px; background:linear-gradient(180deg,#2a2a2a,#1a1a1a);
   border-color:#1a1a1a; position:relative; z-index:2; margin:0 -12px;
 }
-.piano-key:active { background:#d4c4a8; }
-.piano-key.black:active { background:#3a3a3a; }
+.piano-key:active,.piano-key.is-pressed,.piano-key.is-held {
+  background:linear-gradient(180deg,#ffe7a3,#d6a95b);border-color:#efc779;
+  transform:translateY(3px);box-shadow:inset 0 5px 10px #5e3d2870,0 0 16px #e1b66488;
+}
+.piano-key.black:active,.piano-key.black.is-pressed,.piano-key.black.is-held {
+  background:linear-gradient(180deg,#ac864c,#503724);border-color:#e3bd7c;
+  box-shadow:inset 0 4px 7px #24170c99,0 0 14px #e1b66499;
+}
+@media(prefers-reduced-motion:reduce){.piano-key{transition:none}.piano-key:active,.piano-key.is-pressed,.piano-key.is-held{transform:none}}
 
 .bamboo-tubes { display:flex; justify-content:center; gap:12px; margin:15px 0; }
 .bamboo-tube {

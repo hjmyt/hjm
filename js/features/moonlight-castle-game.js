@@ -105,18 +105,21 @@ function showText(text, horror) {
   template.innerHTML = String(text).replace(/<br\s*\/?\s*>/gi, '\n');
   CastleDialogue.set(template.textContent, !!horror);
   CastleUI.note(CastleDialogue.text, !!horror);
+  CastleVoice.speak(CastleDialogue.text);
 }
 
 function addHorrorText(text) {
-  setTimeout(() => showText(text, true), 500);
+  CastleVoice.afterSpeech(() => showText(text, true), 500);
 }
 
 function openModal(html) {
-  document.getElementById('modal-body').innerHTML = html;
+  document.getElementById('modal-body').innerHTML = html+'<button type="button" id="modal-voice-replay" class="text-button castle-modal-voice" hidden>▶ 重听</button>';
+  document.getElementById('modal-voice-replay').onclick=()=>CastleVoice.replay();
   document.getElementById('modal-overlay').classList.add('active');
   document.getElementById('modal-close').focus();
 }
 function closeModal() {
+  CastleVoice.closeModal();
   document.getElementById('modal-overlay').classList.remove('active');
   document.getElementById('notes-btn')?.focus({preventScroll:true});
   pianoSequence = [];
@@ -304,9 +307,15 @@ function gotoRoom(room) {
 
   // Chase mechanic - only in Loop 2+ (suppressed while keepsake binds Adrian)
   if (G.loop >= 2 && G.loop < 4 && !G.countdown.active && G.moveCount > 4 && G.moveCount % 6 === 0 && room !== 'tower') {
-    setTimeout(() => {
-      if (!G.adrianChasing && !G.sunrise && !G.countdown.active && G.loop >= 2 && G.loop < 4) triggerAdrian();
-    }, 2000);
+    const encounter=()=>{
+      if(G.adrianChasing||G.sunrise||G.countdown.active||G.loop<2||G.loop>=4)return;
+      if(['loop-transition','ending-screen','we-screen'].some(id=>document.getElementById(id).classList.contains('active')))return;
+      // Let the actor finish and let a pending question open first. This only
+      // defers a new encounter; an active chase and the keepsake clock continue.
+      if(CastleVoice.busy||document.getElementById('modal-overlay').classList.contains('active')){setTimeout(encounter,250);return;}
+      triggerAdrian();
+    };
+    setTimeout(encounter,2000);
   }
 
   maybeTriggerLoop3();
@@ -800,7 +809,7 @@ function examine(item) {
       const extra = G.loop >= 2 && G.loop < 4 ? '肖像画的流血停止了。被划掉的脸……边缘开始变得清晰。那是菲利克斯。他在笑，像是隔着两百年的灰尘，对你一个人笑。' : G.loop >= 4 ? '肖像画恢复了原样，两个年轻人微笑着看向彼此。画框背面刻着："A & F —— 吾爱，1823年冬。"' : '肖像画中有两个人。但其中一个的脸被刀划掉了。画框背面用刀刻着："A & F —— 吾爱，1823年冬。"画框角落还有一行褪色的赠语："Isabella —— 吾之小妹，愿月光宽恕你我。"';
       showText(extra);
       G.flags.read_portrait_name = true;
-      if (G.loop === 1 && !G.names.bingbing) { G.flags.nameclue_bingbing = true; setTimeout(() => showText('画框角落的赠语写着："Isabella——吾之小妹。"餐厅里那位白裙女子，似乎对这个名字有反应……'), 400); }
+      if (G.loop === 1 && !G.names.bingbing) { G.flags.nameclue_bingbing = true; CastleVoice.afterSpeech(() => showText('画框角落的赠语写着："Isabella——吾之小妹。"餐厅里那位白裙女子，似乎对这个名字有反应……'), 400); }
       return;
     }
     showText('你翻开肖像画，画框背面的暗格里藏着半张烧焦的信纸。暗格内侧刻着两行字："A & F —— 吾爱，1823年冬。"下面还有一行小一些的："Isabella —— 吾之小妹，愿月光宽恕你我。"');
@@ -823,7 +832,7 @@ function examine(item) {
       showText('你用碎镜片反射烛光，照进了音乐盒的缝隙。盒盖弹开，一道柔和的蓝光飘了出来——那是菲利克斯的灵魂残音，被封印了两百年。它绕着你转了三圈，最后安静地落在你掌心，像一只终于找到归途的鸟。');
       addItem('soul_fragment');
       showAchievement('灵魂解救', '菲利克斯的残音');
-      setTimeout(() => showText('灵魂残音在你掌心轻轻发烫。你忽然明白了——只要它还在你身边，艾德里安就不会真正伤害你。他不是不敢，是不忍：他不会伤害菲利克斯看着的人。'), 2500);
+      CastleVoice.afterSpeech(() => showText('灵魂残音在你掌心轻轻发烫。你忽然明白了——只要它还在你身边，艾德里安就不会真正伤害你。他不是不敢，是不忍：他不会伤害菲利克斯看着的人。'), 2500);
     }
     return;
   }
@@ -868,7 +877,7 @@ function examine(item) {
       addItem('travel_notes'); return;
     }
     if (hasItem('rose_key')) { showText('地球仪上标注着各个音乐重镇。你转动它，底座传来轻微的咔哒声。暗格内侧贴着一张剧团海报的残片："著名占卜师薇薇安女士，万圣节特邀演出——让水晶球替你说话。"');
-      if (G.loop === 1 && !G.names.qiqi) { G.flags.nameclue_qiqi = true; setTimeout(() => showText('海报残片上的名字——"薇薇安女士"。书房里那位戏服占卜者听到这个名字，或许会想起什么。'), 400); }
+      if (G.loop === 1 && !G.names.qiqi) { G.flags.nameclue_qiqi = true; CastleVoice.afterSpeech(() => showText('海报残片上的名字——"薇薇安女士"。书房里那位戏服占卜者听到这个名字，或许会想起什么。'), 400); }
       return; }
     showText('你转动地球仪，底座弹开一个小暗格。里面有一把刻着玫瑰花纹的钥匙，还有一支音叉。暗格内侧还贴着一张褪色的剧团海报残片："著名占卜师薇薇安女士，万圣节特邀演出——让水晶球替你说话。"');
     CastleAudio.effect('mechanism');
@@ -879,7 +888,7 @@ function examine(item) {
 
   if (item === 'flute_stand') {
     if (G.puzzleSolved.flute) { showText('竹笛已经吹奏过了。笛身的裂纹里透出一点微光。底座上刻着赠语："赠林先生——愿五声入西风。伯爵手书。"');
-      if (G.loop === 1 && !G.names.dijie) { G.flags.nameclue_dijie = true; setTimeout(() => showText('笛架上的赠语——"赠林先生"。书房里那位竹笛乐师，听到这个姓氏会有反应吧。'), 400); }
+      if (G.loop === 1 && !G.names.dijie) { G.flags.nameclue_dijie = true; CastleVoice.afterSpeech(() => showText('笛架上的赠语——"赠林先生"。书房里那位竹笛乐师，听到这个姓氏会有反应吧。'), 400); }
       return; }
     const fp = FLUTE_PUZZLES[Math.min(G.loop, 3)];
     openModal('<h3>竹笛架</h3><p>一支竹笛挂在墙上。底座上刻着一行赠语：<b>"赠林先生——愿五声入西风。伯爵手书。"</b>旁边还刻着：</p>' +
@@ -907,7 +916,7 @@ function examine(item) {
       showText('大键琴已经调好了。'); return;
     }
     if (!hasItem('tuning_fork')) { showText('大键琴走调了。谱架上别着一张褪色的名片："塞西尔 · 铜管与调律——让每个音程都诚实。"需要A=415Hz的音叉才能校准。');
-      if (G.loop === 1 && !G.names.jerry) { G.flags.nameclue_jerry = true; setTimeout(() => showText('名片上的名字——"塞西尔"。音乐室里那位铜管乐手，听到这个名字也许会回过神来。'), 400); }
+      if (G.loop === 1 && !G.names.jerry) { G.flags.nameclue_jerry = true; CastleVoice.afterSpeech(() => showText('名片上的名字——"塞西尔"。音乐室里那位铜管乐手，听到这个名字也许会回过神来。'), 400); }
       return; }
     const hp = HARP_PUZZLES[Math.min(G.loop, 3)];
     let opts = '';
@@ -970,7 +979,7 @@ function examine(item) {
     if (hasItem('wine_bottle')) { showText('酒架上积满了灰尘。1791年的那瓶已经被你取走了。瓶塞内侧烙着一行小字："满月之夜，由塞勒涅女士执杯占卜。"'); return; }
     showText('蜡烛照亮了酒架。最老的那瓶酒——1791年。标签上写着："天才与美酒都不能久存。"瓶塞内侧还烙着一行小字："满月之夜，由塞勒涅女士执杯占卜。"');
     addItem('wine_bottle');
-    if (G.loop === 1 && !G.names.lala) { G.flags.nameclue_lala = true; setTimeout(() => showText('瓶塞上的名字——"塞勒涅女士"。地下室里那位紫袍女巫，听到这个名字会想起满月之夜的。'), 400); }
+    if (G.loop === 1 && !G.names.lala) { G.flags.nameclue_lala = true; CastleVoice.afterSpeech(() => showText('瓶塞上的名字——"塞勒涅女士"。地下室里那位紫袍女巫，听到这个名字会想起满月之夜的。'), 400); }
     return;
   }
 
@@ -1005,11 +1014,13 @@ function examine(item) {
       reason = '你把刻着A&F的戒指和停在11:47的怀表，轻轻放在了琴键旁。誓言与凝固的时间都到齐了——艾德里安看了一眼，声音低下去："他都留着……原来他也都留着。"';
     }
     scheduleStoryImagePreload([CASTLE_OVERLAY_ART['ending'+movement].asset]);
+    const organSpeech='艾德里安的手指悬在琴键上方："两百年了，我每晚都弹前两章。第三乐章……我不敢弹。但今晚不一样——今晚，月光在听。"';
     openModal('<h3>月光风琴</h3>' + CastleUI.modalArt('score') + '<p>补全的乐谱《致菲利克斯的安魂曲》摆在谱架上。菲利克斯的灵魂残音从你掌心升起，安静地落在艾德里安的肩头。</p>' +
-      '<p>艾德里安的手指悬在琴键上方："两百年了，我每晚都弹前两章。第三乐章……我不敢弹。但今晚不一样——今晚，月光在听。"</p>' +
+      '<p>'+organSpeech+'</p>' +
       '<div class="memory-content"><p style="color:#8a9ac8;font-size:12px;margin-bottom:8px;">♪ 你一路带来的东西，决定了这首曲子的走向：</p><p>' + reason + '</p></div>' +
       '<p style="text-align:center;color:#c8b89a;">即将奏响：<b>' + reasonTitle + '</b></p>' +
       '<button class="game-btn" data-ending-movement="' + movement + '" onclick="closeModal();window.playOrgan(' + movement + ')">奏响《致菲利克斯的安魂曲》</button>');
+    CastleVoice.speak(organSpeech+' '+reason,true);
     return;
   }
 }
@@ -1023,9 +1034,9 @@ function renderPianoNoLabels() {
   let html = '<div class="piano-keys">';
   const blacks = [1, 1, 0, 1, 1, 1, 0];
   for (let i = 0; i < 7; i++) {
-    html += '<button type="button" class="piano-key" aria-label="钢琴白键" onclick="window.playPianoKey(' + i + ')"></button>';
+    html += '<button type="button" class="piano-key" data-piano-white="'+i+'" aria-label="钢琴白键" onclick="window.playPianoKey(' + i + ')"></button>';
     if (blacks[i]) {
-      html += '<button type="button" class="piano-key black" aria-label="钢琴黑键" onclick="window.playPianoBlack(' + i + ')"></button>';
+      html += '<button type="button" class="piano-key black" data-piano-black="'+i+'" aria-label="钢琴黑键" onclick="window.playPianoBlack(' + i + ')"></button>';
     }
   }
   html += '</div>';
@@ -1033,6 +1044,7 @@ function renderPianoNoLabels() {
 }
 function playPianoKey(idx) {
   if(G.puzzleSolved.piano)return;
+  CastleUI.pianoFeedback('white',idx);
   CastleAudio.tone([261.63,293.66,329.63,349.23,392,440,493.88][idx]);
   pianoSequence.push(idx);
   const hint = document.getElementById('piano-hint');
@@ -1055,6 +1067,7 @@ function playPianoKey(idx) {
   }
 }
 function playPianoBlack(idx) {
+  CastleUI.pianoFeedback('black',idx);
   CastleAudio.tone([277.18,311.13,369.99,415.30,466.16,554.37,622.25][idx]);
   const hint = document.getElementById('piano-hint');
   pianoSequence = [];
@@ -1154,7 +1167,7 @@ function selectWolf(el, interval) {
     if (G.loop === 3 && hasItem('tuning_fork')) {
       removeItem('tuning_fork'); markUsed('tuning_fork');
       addItem('duet_score');
-      setTimeout(() => showText('你用音叉抵住共鸣箱，三全音的余震里，琴腹深处滑出一页泛黄的乐谱——《相遇变奏曲》，A&F合奏。这是艾德里安两百年都没敢翻开的那一页。'), 1200);
+      CastleVoice.afterSpeech(() => showText('你用音叉抵住共鸣箱，三全音的余震里，琴腹深处滑出一页泛黄的乐谱——《相遇变奏曲》，A&F合奏。这是艾德里安两百年都没敢翻开的那一页。'), 1200);
       showAchievement('隐藏发现', '相遇变奏曲');
     }
     showAchievement('谜题解开', G.loop === 1 ? '找到了狼五度' : G.loop === 2 ? '找到了纯净五度' : '找到了魔鬼音程');
@@ -1229,7 +1242,7 @@ function completeRequiem() {
     '</div>');
 }
 
-function playOrgan(movement) {
+function playOrgan(movement, restoring = false) {
   if (G.puzzleSolved.organ) return;
   G.puzzleSolved.organ = true;
   G.endingMovement = movement;
@@ -1253,6 +1266,7 @@ function playOrgan(movement) {
   document.getElementById('ending-title').textContent = end.title;
   document.getElementById('ending-text').innerHTML = end.text;
   document.getElementById('ending-screen').classList.add('active');
+  if (!restoring) CastleVoice.speak(end.text);
   CastleUI.sync();
 }
 
@@ -1401,7 +1415,7 @@ function talk(npc) {
       G.flags.gave_final = true;
       stopCountdown();
       showText('艾德里安颤抖着接过信件和灵魂残音。他的手指穿过蓝光，但他仿佛能读到每一个字。两行眼泪无声地滑下来："……他原谅我了。两百年了，他早就原谅我了。他只是在等我……亲口问一句。"');
-      setTimeout(() => {
+      CastleVoice.afterSpeech(() => {
         showText('艾德里安小心地把信贴在胸口，走向风琴："这首曲子……我们还没有写完。但这一次，他会听到的。这一次，我弹给他听，也弹给日出听。"');
       }, 3500);
       return;
@@ -1441,7 +1455,7 @@ function talk(npc) {
 
   // Handle checkAnswer
   if (entry.checkAnswer) {
-    setTimeout(() => {
+    CastleVoice.afterSpeech(() => {
       CastleUI.ask(entry.ansQuestion || '请输入答案：', ans => {
       const norm = (ans || '').trim();
       const ok = norm === entry.checkAnswer
@@ -1576,7 +1590,7 @@ function useItem(id) {
       '<p style="color:#8a7a6a;margin-top:10px;">涂黑的名字只露出了最后一个字母：X</p>' +
       '<p style="color:#c8b89a;margin-top:10px;">管家栏写着一行娟秀的小字："管家塞巴斯蒂安，侍奉艾德里安家族二十七年。"</p>' +
       '</div>');
-    if (G.loop === 1 && !G.names.siyang) { G.flags.nameclue_siyang = true; setTimeout(() => showText('你记住了登记簿上的名字："管家塞巴斯蒂安，侍奉艾德里安家族二十七年。"——大厅里那位戴领结的执事，听到这个名字会有反应吗？'), 400); }
+    if (G.loop === 1 && !G.names.siyang) { G.flags.nameclue_siyang = true; CastleVoice.afterSpeech(() => showText('你记住了登记簿上的名字："管家塞巴斯蒂安，侍奉艾德里安家族二十七年。"——大厅里那位戴领结的执事，听到这个名字会有反应吗？'), 400); }
     return;
   }
   if (id === 'mirror_shard') {

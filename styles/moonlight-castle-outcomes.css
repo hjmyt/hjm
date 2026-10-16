@@ -1,4 +1,6 @@
 /* Fullscreen CGs stay fixed behind the independently scrolling story text. */
+.castle-overlay-voice{display:none;position:fixed;top:17px;right:104px;z-index:125;min-height:34px;padding:8px 12px;border:1px solid #c3a56b77;background:#0a111ce8;color:#e4cb98;font-size:11px;}
+.castle-immersive:is([data-castle-phase=ending],[data-castle-phase=transition]) .castle-overlay-voice{display:block;}
 .castle-immersive .narrative-overlay{
   padding:0;gap:0;overflow:hidden;background:#050a10;isolation:isolate;
 }

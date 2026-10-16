@@ -19,6 +19,13 @@ const CastleUI = (() => {
     const entry=CASTLE_OVERLAY_ART[key];if(!entry)return '';
     return '<figure class="modal-story-art" data-art-id="'+entry.id+'"><img src="'+entry.asset+'" alt="'+escapeHTML(entry.alt)+'" fetchpriority="high"></figure>';
   }
+  const pianoFlashes=new WeakMap(),pianoHeld=new Map();
+  function clearPianoHeld(){for(const key of pianoHeld.values())key.classList.remove('is-held');pianoHeld.clear();}
+  function pianoFeedback(kind,index){
+    const key=el('modal-body').querySelector('[data-piano-'+kind+'="'+index+'"]');if(!key)return;
+    window.clearTimeout(pianoFlashes.get(key));key.classList.add('is-pressed');
+    pianoFlashes.set(key,window.setTimeout(()=>{key.classList.remove('is-pressed');pianoFlashes.delete(key);},220));
+  }
   function phase(){return el('we-screen').classList.contains('active')?'wrong':el('ending-screen').classList.contains('active')?'ending':el('loop-transition').classList.contains('active')?'transition':'playing';}
   function elapsed(){return elapsedBase+(started?Math.max(0,CastleClock.now()-enteredAt):0);}
   function snapshot(){
@@ -223,9 +230,11 @@ const CastleUI = (() => {
     if(G.adrianChasing)outcomeArt('chase-art','chase');
     const view=p==='transition'?'loop'+G.loop:p==='ending'?'ending'+G.endingMovement:p==='wrong'?'wrong':G.adrianChasing?'chase':'';
     if(view!==lastNarrativeView){
+      if(['transition','wrong'].includes(p)||G.adrianChasing)CastleVoice.stop(true);
       lastNarrativeView=view;
       const surface=p==='transition'?'loop-transition':p==='ending'?'ending-screen':p==='wrong'?'we-screen':G.adrianChasing?'chase-overlay':null;
       if(surface)el(surface).querySelector('.overlay-card').scrollTop=0;
+      if(p==='transition'&&!restoring)CastleVoice.speak(el('loop-text').innerHTML);
     }
     el('overlay-sound').textContent=CastleAudio.enabled?'♪ 静音':'♪ 开启声音';
     el('overlay-sound').setAttribute('aria-pressed',String(CastleAudio.enabled));CastleAudio.sync(p==='wrong'?'wrong-end':G.sunrise||p==='ending'?'sunrise':['','loop-one','loop-two','loop-three'][G.loop]);
@@ -246,15 +255,17 @@ const CastleUI = (() => {
       if(saved.phase==='transition'){
         el('loop-title').textContent=saved.transition?.title||'循环再次开始';el('loop-text').textContent=saved.transition?.text||'回到大厅，继续寻找真相。';el('loop-transition').classList.add('active');el('loop-btn').style.display='inline-block';
       }
-      if(saved.phase==='ending'){G.puzzleSolved.organ=false;playOrgan(G.endingMovement);}
+      if(saved.phase==='ending'){G.puzzleSolved.organ=false;playOrgan(G.endingMovement,true);}
       if(saved.phase==='wrong')el('we-screen').classList.add('active');
       CastleDialogue.set(saved.dialogue||getRoomDescription(G.currentRoom,G.loop,1),false,false);
+      CastleVoice.remember(saved.phase==='ending'?el('ending-text').innerHTML:saved.phase==='transition'?el('loop-text').innerHTML:CastleDialogue.text);
       if(saved.chase&&saved.phase==='playing'){
         G.adrianChasing=false;G.candleLit=false;triggerAdrian();
         if(G.adrianChasing){clearTimeout(chaseDeathTimer);G.chaseDeadline=CastleClock.now()+saved.chase.remaining;chaseDeathTimer=setTimeout(dieByAdrian,saved.chase.remaining);}
       }
       if(saved.phase==='playing'&&G.loop===1&&G.flags.loop2_pending)setTimeout(triggerLoop2,500);
       if(saved.phase==='playing'&&G.loop===2&&hasItem('assembled_letter')){G.flags.loop3_pending=false;maybeTriggerLoop3();}
+      if(saved.phase==='transition')lastNarrativeView='loop'+G.loop;
       restoring=false;
     }
     CastleAudio.start();sync();persist();
@@ -277,6 +288,7 @@ const CastleUI = (() => {
   }
   function ask(question,answer){
     openModal('<h3>被遗忘的答案</h3><p>'+escapeHTML(question)+'</p><form id="castle-answer-form"><label class="answer-label">你的答案<input id="castle-answer" autocomplete="off" maxlength="80" required></label><button class="game-btn primary" type="submit">确认答案 →</button></form>');
+    CastleVoice.speak(question,true);
     el('castle-answer').focus();el('castle-answer-form').onsubmit=e=>{e.preventDefault();const value=el('castle-answer').value.trim();if(!value)return;closeModal();answer(value);sync();};
   }
   function showNotes(){openModal('<h3>探索手记</h3><p>只记录你亲自看过的线索与对话。</p><ol class="full-notes">'+notes.map(n=>'<li><small>第'+n.loop+'周目 · '+escapeHTML(n.room)+'</small><p>'+escapeHTML(n.text).replace(/\n/g,'<br>')+'</p></li>').join('')+'</ol>');}
@@ -287,6 +299,7 @@ const CastleUI = (() => {
     openModal('<h3>一点烛光</h3><p>'+escapeHTML((table[room]||table.hall)[Math.min(count,2)])+'</p><p class="panel-help">第 '+(count+1)+' 次提示 · 免费</p>');mark();
   }
   function cancelHeldInput(){
+    clearPianoHeld();
     scenePointers.clear();panPointer=null;
     if(!G.adrianChasing)return;
     const button=el('chase-btn');
@@ -333,6 +346,10 @@ const CastleUI = (() => {
     };
     el('dismiss-orientation').onclick=()=>el('orientation-tip').hidden=true;
     el('dialogue-next').onclick=()=>{if(focusedNpc)action('npc',focusedNpc);};
+    el('castle-voice-replay').onclick=()=>CastleVoice.replay();
+    el('overlay-voice-replay').onclick=()=>CastleVoice.replay();
+    el('castle-voice-toggle').onclick=()=>CastleVoice.toggle();
+    el('castle-voice-volume').oninput=e=>CastleVoice.setVolume(Number(e.target.value)/100);
     window.addEventListener('resize',frameLayout);window.addEventListener('orientationchange',()=>window.setTimeout(frameLayout,150));
     el('room-art').addEventListener('load',frameLayout);
     el('scene-overview').onclick=()=>{sceneOverview=!sceneOverview;scenePan=scenePanY=0;sceneZoom=1;frameLayout();};
@@ -377,6 +394,9 @@ const CastleUI = (() => {
     el('castle-volume').value=CastleAudio.volume*100;el('castle-volume').oninput=e=>CastleAudio.setVolume(Number(e.target.value)/100);
     el('castle-sound').onclick=()=>{CastleAudio.toggle();sync();};el('overlay-sound').onclick=()=>{CastleAudio.toggle();sync();};el('pause-btn').onclick=()=>pause(true);el('resume-btn').onclick=()=>pause(false);
     el('modal-close').onclick=closeModal;el('notes-btn').onclick=showNotes;el('hint-btn').onclick=hint;
+    el('modal-body').addEventListener('pointerdown',e=>{const key=e.target.closest('.piano-key');if(!key||e.button!==0)return;pianoHeld.set(e.pointerId,key);key.classList.add('is-held');});
+    const releasePiano=e=>{const key=pianoHeld.get(e.pointerId);pianoHeld.delete(e.pointerId);if(key&&![...pianoHeld.values()].includes(key))key.classList.remove('is-held');};
+    window.addEventListener('pointerup',releasePiano);window.addEventListener('pointercancel',releasePiano);
     el('deselect-btn').onclick=()=>{G.selectedItem=null;renderInventory();mark();};el('export-btn').onclick=()=>exportSave();el('restart-btn').onclick=confirmRestart;el('retry-btn').onclick=confirmRestart;
     el('sunrise-btn').onclick=()=>{el('ending-screen').classList.remove('active');enterSunriseMode();sync();};
     el('loop-btn').onclick=()=>{closeModal();continueLoop();focusedNpc=null;sync();};
@@ -392,11 +412,12 @@ const CastleUI = (() => {
     });
     document.addEventListener('keyup',e=>{if(e.code==='Space'&&G.adrianChasing&&!CastleClock.paused){endHoldBreath(e);sync();}});
     document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelHeldInput();CastleClock.hold('background');mark();persist();CastleAudio.sync();}else{CastleClock.release('background');if(started)pause(true);}});
-    window.addEventListener('blur',()=>{if(started&&G.adrianChasing)pause(true);});
+    window.addEventListener('blur',()=>{clearPianoHeld();if(started&&G.adrianChasing)pause(true);});
     window.addEventListener('pagehide',()=>{mark();persist();CastleDialogue.finish();CastleAudio.stop();});
     window.addEventListener('pageshow',()=>{if(started){pause(true);CastleAudio.start();}});
     window.setInterval(()=>{if(started&&!CastleClock.paused){sync();}},1000);
     CastleAudio.sync();
+    CastleVoice.sync();
   }
   function trapFocus(event){
     const modal=el('modal-overlay').classList.contains('active')?el('modal-overlay'):[el('pause-overlay'),el('we-screen'),el('ending-screen'),el('loop-transition'),el('chase-overlay')].find(n=>n.classList.contains('active'));
@@ -405,6 +426,6 @@ const CastleUI = (() => {
     if(event.shiftKey&&(document.activeElement===first||!modal.contains(document.activeElement))){event.preventDefault();last?.focus();}
     else if(!event.shiftKey&&(document.activeElement===last||!modal.contains(document.activeElement))){event.preventDefault();first?.focus();}
   }
-  return {init,enter,sync,setDrawer,note,ask,action,persist,exportSave,mark,pause,modalArt,get snapshot(){return snapshot();}};
+  return {init,enter,sync,setDrawer,note,ask,action,persist,exportSave,mark,pause,modalArt,pianoFeedback,get snapshot(){return snapshot();}};
 })();
 window.CastleUI=CastleUI;

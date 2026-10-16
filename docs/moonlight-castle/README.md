@@ -8,6 +8,8 @@
 
 场景调查与人物对白保留原稿每字 28 毫秒的打字效果及光标。暂停与后台同步停字，新对白取消上一段动画；手记和现有 v1 存档始终保存完整文本，刷新继续时完整显示已保存的该段对白。
 
+钢琴白键与黑键按下时下压并亮起金色，轻点后保留约 220ms 反馈；触摸按住持续显示，松开、取消和切后台清理。静音时仍有视觉反馈，不显示琴键音名、不改变谜题顺序或重复计入按键。
+
 对白区域按屏幕尺寸预留固定高度及交谈按钮空间，长文在框内滚动；逐字换行、打字结束和交谈按钮显隐不再改变场景图及其热点坐标，避免边阅读边缩放。
 
 手机版（视口宽度不超过 1000px）进入探索后收起顶部「月光古堡」标题栏，主场景从屏幕顶部开始，房间名改成叠在画面上的小标签。周目、时长、声音、暂停、全屏及返回乐团的同一组控件移入「设置」抽屉；封面保留原标题栏，切回桌面宽度时控件回到顶部。无重复控件、额外监听或新存档字段，信物倒计时与故障提示继续可见。
@@ -32,6 +34,7 @@
 - `js/core/moonlight-castle-state.js`：v1 显式独立存档、可读备份、故障原文保护及单调可暂停游戏时钟。
 - `js/audio/moonlight-castle.js`：五首用户 BGM、配乐开关／音量、播放失败重试、后台停止、钢琴与竹笛反馈音。
 - `js/audio/moonlight-castle-effects.js`：本地合成低音琴弦、金属锁扣、木门铰链、暗格、玻璃与音乐盒；不请求外部素材。
+- `js/data/moonlight-castle-voices.js` 与 `js/audio/moonlight-castle-voice.js`：原句到人物录音的显式索引、串行播放、重听、配音音量、配乐自动压低、暂停和后台联动。
 - `js/app/moonlight-castle-bootstrap.js`：唯一独立页面启动入口。
 - `js/features/moonlight-castle-entry.js`：由主游戏最后的 bootstrap 绑定一次南瓜事件。
 - `styles/moonlight-castle-immersive.css`：月光氛围与粒子、过场、发光标记、人物姓名牌、背包／手记／地图／设置抽屉、横屏工具栏和全屏降级。
@@ -62,6 +65,8 @@
 
 ## 美术与回归
 
+人物配音采用本地 IndexTTS2，逐句按所处周目、动作和情绪生成，宝石与飞鸿分别配音。同一句中的惊讶、哽咽、释然等情绪转折单独处理；旁白、动作、文献和明确无声的唇语保留字幕。新对白自动播放，点「重听」可重播；设置中可独立开关、调整人物配音，仍遵循整体静音。说话时 BGM 自动降至原音量的 20%，结束后平滑恢复。自动出题及后续对白等待实际说完，切换场景取消旧句的自动衔接；读档继续只显示旧对白，不自动重播。音色来源、逐句表演指导和串行重建方法见 [人物配音说明](voices/README.md)。
+
 独立高清原图、角色参考、提示词、语义映射与 QA 联系表见 `../imagegen/moonlight-castle/`。正式图重建运行：
 
 ```sh
@@ -74,6 +79,7 @@ node tests/moonlight-castle-immersive.cjs
 node tests/moonlight-castle-typewriter.cjs
 node tests/moonlight-castle-unified.cjs
 node tests/moonlight-castle-sound.cjs
+node tests/moonlight-castle-voices.cjs
 node tests/moonlight-castle-outcomes.cjs
 ```
 

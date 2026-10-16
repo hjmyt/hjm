@@ -7,6 +7,9 @@
   grid-template-rows:auto minmax(0,1fr) 26px;
 }
 .castle-immersive #dialogue-box{min-height:0;max-height:none;overflow-y:auto;}
+.castle-voice-settings{margin:16px 0;padding:12px 0;border-top:1px solid #b49a5b44;border-bottom:1px solid #b49a5b44;}
+.castle-immersive .dialogue-heading #castle-voice-replay{white-space:nowrap;margin-left:auto;font-size:10px;}
+.castle-immersive .dialogue-heading #castle-voice-replay:not([hidden])~#notes-btn{margin-left:4px;}
 .castle-immersive .dialogue-next{
   position:static;grid-row:3;align-self:end;justify-self:end;
   margin:0;padding:0 5px;line-height:20px;
