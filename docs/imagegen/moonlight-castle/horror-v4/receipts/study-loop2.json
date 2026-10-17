@@ -1,0 +1,8 @@
+{
+  "id": "study-loop2",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-23de7224-04df-4f38-8e56-eb03908aba41.png",
+  "source": "assets/moonlight-castle/source/horror-v4/study-loop2.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/study-loop2.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

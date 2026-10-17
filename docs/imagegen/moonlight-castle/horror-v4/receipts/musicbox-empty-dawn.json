@@ -1,0 +1,8 @@
+{
+  "id": "musicbox-empty-dawn",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-c212dc88-37bd-4878-bc64-12003615293d.png",
+  "source": "assets/moonlight-castle/source/horror-v4/musicbox-empty-dawn.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/musicbox-empty-dawn.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

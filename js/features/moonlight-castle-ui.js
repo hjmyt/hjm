@@ -8,9 +8,10 @@ const CastleUI = (() => {
   const el=id=>document.getElementById(id);
   const painted={};
   function paint(id,html){if(painted[id]===html)return;painted[id]=html;el(id).innerHTML=html;}
-  const art=id=>'assets/moonlight-castle/'+id+'.webp';
+  const art=id=>typeof CASTLE_STORY_ART!=='undefined'&&CASTLE_STORY_ART.scenes[id]?.asset||'assets/moonlight-castle/'+id+'.webp';
+  const sceneArt=()=>CastleSceneArt.resolve(G);
   function objectRegion(image,id,name){
-    const region=CASTLE_OBJECT_REGIONS[image]?.[id];if(!region)return '';
+    const region=sceneArt().objectRegions[id];if(!region)return '';
     const points=region.outline,x=Math.min(...points.map(p=>p[0])),y=Math.min(...points.map(p=>p[1]));
     const width=Math.max(...points.map(p=>p[0]))-x,height=Math.max(...points.map(p=>p[1]))-y;
     const clip=points.map(p=>((p[0]-x)/width*100).toFixed(3)+'% '+((p[1]-y)/height*100).toFixed(3)+'%').join(',');
@@ -61,8 +62,8 @@ const CastleUI = (() => {
     const card=cardDef(CASTLE_NPC_CARDS[npc]);return card?'<img src="'+cardImage(card,'avatar')+'" alt="">':'<span aria-hidden="true">☽</span>';
   }
   function castPosition(npc){
-    const cast=CASTLE_ART[imageFor()]?.positions||[];
-    const entry=cast.find(p=>p.id===CASTLE_NPC_CARDS[npc]);
+    const cast=sceneArt().positions||[];
+    const entry=cast.find(p=>CastleSceneArt.castIds(npc).includes(p.id));
     return entry||{x:50,y:45};
   }
   function frameLayout(){
@@ -78,7 +79,7 @@ const CastleUI = (() => {
     document.documentElement.style.setProperty('--castle-scene-bottom',Math.max(0,container.bottom-dialogue.top+10)+'px');
     const box=area.getBoundingClientRect(),image=el('room-art'),ratio=image.naturalWidth/image.naturalHeight||4/3;
     const mobile=window.matchMedia('(max-width:1000px)').matches;
-    const key=imageFor()+':'+box.width+':'+box.height+':'+mobile;
+    const key=sceneArt().geometryKey+':'+box.width+':'+box.height+':'+mobile;
     if(key!==scenePanKey){scenePanKey=key;scenePan=scenePanY=0;sceneZoom=1;sceneOverview=false;panPointer=null;scenePointers.clear();}
     document.body.dataset.castleOverview=String(mobile&&sceneOverview);
     const overviewTop=mobile?64:0;
@@ -120,25 +121,27 @@ const CastleUI = (() => {
   function viewZoom(){return sceneOverview?sceneZoomMin:sceneZoom;}
   function zoomScene(value){sceneOverview=false;sceneZoom=Math.max(sceneZoomMin,Math.min(3,value));frameLayout();}
   function setDrawer(name=null){
+    if(name==='explore'&&sceneArt().isEvent)returnToRoom();
     drawer=drawer===name?null:name;
     document.body.dataset.castleDrawer=drawer||'';
     document.querySelectorAll('[data-castle-drawer]').forEach(b=>b.setAttribute('aria-expanded',String(b.dataset.castleDrawer===drawer)));
     if(drawer==='inventory')el('inventory').querySelector('button')?.focus({preventScroll:true});
   }
   function renderPeople(){
-    const room=CASTLE_ROOMS[G.currentRoom],ids=G.nextMorning&&G.currentRoom==='hall'?['siyang','tim','servants','bingbing','dijie','jerry']:room.cast;
-    el('people-tray').parentElement.classList.toggle('morning-cast',G.nextMorning&&G.currentRoom==='hall');
+    const scene=sceneArt(),contacts=CastleSceneArt.contacts(G),ids=contacts.filter(id=>CastleSceneArt.isPresent(id,G,scene));
+    el('people-tray').parentElement.classList.toggle('ensemble-cast',(scene.visibleCast||[]).length>=8);
+    el('people-tray').parentElement.classList.toggle('morning-cast',G.nextMorning&&G.currentRoom==='hall'&&!scene.asset.includes('/horror-v4/'));
     const key=G.currentRoom+':'+ids.join(',')+':'+imageFor();
     if(key!==renderedPeople){
       renderedPeople=key;
       el('people-tray').innerHTML=ids.map(id=>'<button type="button" class="npc" id="npc-'+id+'" data-npc="'+id+'"><span class="npc-avatar">'+avatar(id)+'</span><span class="npc-name">'+escapeHTML(getNpcDisplayName(id))+'</span><span class="npc-talk">交谈 ↗</span></button>').join('');
     }
     for(const button of el('people-tray').querySelectorAll('[data-npc]')){
-      const npc=button.dataset.npc,cast=CASTLE_ART[imageFor()]?.visibleCast||[];
+      const npc=button.dataset.npc;
       const position=castPosition(npc);
       button.style.setProperty('--cast-x',position.x+'%');
       button.style.setProperty('--cast-y',position.y+'%');
-      button.classList.toggle('offscreen',npc==='servants'?!cast.includes('baoshi'):!cast.includes(CASTLE_NPC_CARDS[npc]));
+      button.classList.remove('offscreen');
     }
     refreshNpcNames();
     // Keep scene nameplates compact; the full identity stays in dialogue/roster.
@@ -147,17 +150,22 @@ const CastleUI = (() => {
       button.querySelector('.npc-name').textContent=puzzle&&(G.names[id]||G.loop>=2)?puzzle.real:name;
       button.setAttribute('aria-label',name+'，点击交谈');button.title=name;
     }
-    paint('explore-people',ids.map(id=>'<button type="button" data-npc="'+id+'"><span>♧</span>'+escapeHTML(getNpcDisplayName(id))+'<small>交谈 ↗</small></button>').join(''));
+    paint('explore-people',contacts.map(id=>{
+      const present=ids.includes(id),label=present?getNpcDisplayName(id):'远处的回声 · '+getNpcDisplayName(id);
+      return '<button type="button" data-npc="'+id+'"'+(present?'':' data-remote-npc="true"')+'><span>'+(present?'♧':'♪')+'</span>'+escapeHTML(label)+'<small>'+(present?'交谈 ↗':'循声交谈 ↗')+'</small></button>';
+    }).join(''));
   }
   function imageFor(){
-    if(G.sunrise&&G.currentRoom==='tower')return 'dawn-exploration-v3';
-    // Morning visitors use a roster; the room composition stays unchanged.
-    return CASTLE_ROOMS[G.currentRoom].art;
+    return sceneArt().id;
   }
   function nextImages(){
     const room=CASTLE_ROOMS[G.currentRoom],targets=[];
-    for(const exit of room.exits){if(canEnter(exit))targets.push(CASTLE_ROOMS[exit].art||exit);}
-    const images=targets.filter(Boolean).map(art);
+    for(const exit of room.exits){if(canEnter(exit))targets.push(CastleSceneArt.resolve(G,{room:exit,baseOnly:true}).asset);}
+    const images=targets.filter(Boolean);
+    const reveal=CastleSceneArt.reveal(G);if(reveal)images.push(reveal.to.asset);
+    if(G.currentRoom==='dining'&&G.loop===3&&typeof CASTLE_STORY_ART!=='undefined'){
+      const portrait=CASTLE_STORY_ART.scenes['dining-loop3-portrait-reveal'];if(portrait)images.push(portrait.asset);
+    }
     if(G.loop===1&&G.flags.loop2_pending)images.push(CASTLE_OVERLAY_ART.loop2.asset);
     if(G.loop===2&&hasItem('assembled_letter'))images.push(CASTLE_OVERLAY_ART.loop3.asset);
     if(G.adrianChasing||G.countdown.active&&G.countdown.endTime-CastleClock.now()<30000)images.push(CASTLE_OVERLAY_ART.wrong.asset);
@@ -188,7 +196,7 @@ const CastleUI = (() => {
     return '<button type="button" class="map-node '+state+'" data-travel="'+id+'" '+(!route?'disabled ':'')+(current?'aria-current="location" ':'')+'aria-label="'+escapeHTML(room.name+' · '+hint)+'"><i></i><span>'+escapeHTML(room.name)+'</span><small>'+escapeHTML(hint)+'</small></button>';
   }
   function renderDoors(){
-    const doors=CASTLE_SCENE_DOORS[G.currentRoom]||[];
+    const doors=sceneArt().doors;
     const symbol='<svg viewBox="0 0 32 42" aria-hidden="true"><path d="M5 39V13a11 11 0 0 1 22 0v26M2 39h28M10 35V14a6 6 0 0 1 12 0v21"/><circle cx="19" cy="25" r="1"/></svg>';
     paint('scene-doors',doors.map(door=>{
       const access=castleDoorAccess(door.room),x=door.x,y=door.y;
@@ -203,12 +211,40 @@ const CastleUI = (() => {
       if(G.currentRoom!==next||G.adrianChasing||CastleClock.paused||phase()!=='playing')break;
     }
   }
+  function renderSceneImage(scene){
+    const image=el('room-art'),backdrop=el('atmosphere-art'),reveal=CastleSceneArt.reveal(G);
+    el('castle-portrait-reveal')?.remove();
+    if(!reveal||scene.id!==reveal.to.id){image.src=scene.asset;backdrop.src=scene.asset;return;}
+    // Preserve the original room and every character pixel. Only the painting
+    // inside its authored polygon is composited from the revealed variation.
+    image.src=reveal.from.asset;backdrop.src=reveal.from.asset;
+    const overlay=document.createElement('img');overlay.id='castle-portrait-reveal';overlay.className='scene-reveal-art';
+    const region=reveal.from.objectRegions?.portrait_dining||scene.objectRegions.portrait_dining;
+    overlay.style.clipPath='polygon('+region.outline.map(([x,y])=>x+'% '+y+'%').join(',')+')';
+    const animate=CastleSceneArt.consumeRevealAnimation(G);
+    overlay.alt='';overlay.setAttribute('aria-hidden','true');overlay.dataset.revealed='true';overlay.dataset.animate=String(animate);
+    overlay.style.opacity=animate?'0':'1';overlay.style.transition=animate?'opacity 1.4s ease':'none';overlay.style.pointerEvents='none';
+    if(!animate)overlay.classList.add('is-revealed');
+    overlay.onload=()=>{
+      if(lastArt!==scene.id||!overlay.isConnected||!animate)return;
+      requestAnimationFrame(()=>requestAnimationFrame(()=>{
+        if(!overlay.isConnected)return;overlay.classList.add('is-revealed');overlay.style.opacity='1';
+      }));
+    };
+    image.after(overlay);overlay.src=reveal.to.asset;
+  }
   function renderScene(){
-    const room=CASTLE_ROOMS[G.currentRoom],image=imageFor();
+    const room=CASTLE_ROOMS[G.currentRoom],scene=sceneArt(),image=imageFor();
     el('room-heading').textContent=room.name;el('room-kicker').textContent=G.sunrise?'AFTER THE SUNRISE':room.subtitle;
-    if(image!==lastArt){lastArt=image;el('room-art').src=art(image);el('atmosphere-art').src=art(image);
-      el('scene-area').classList.remove('scene-arrival');void el('scene-area').offsetWidth;el('scene-area').classList.add('scene-arrival');el('room-art').alt=room.name+' · '+(CASTLE_ART[image]?.visibleCast.map(id=>cardDef(id)?.name||id).join('、')||'古堡环境')+' · 人物与物品同场探索';
+    if(image!==lastArt){lastArt=image;renderSceneImage(scene);
+      el('scene-area').classList.remove('scene-arrival');
+      const portrait=CastleSceneArt.reveal(G);
+      if(!portrait||scene.id!==portrait.to.id){void el('scene-area').offsetWidth;el('scene-area').classList.add('scene-arrival');}
+      el('room-art').alt=scene.alt||room.name+' · '+(scene.visibleCast?.map(id=>cardDef(id)?.name||id).join('、')||'古堡环境')+' · 人物与物品同场探索';
     }
+    el('scene-area').dataset.sceneId=scene.semanticId;
+    el('scene-area').dataset.beatId=scene.beatId||'';
+    el('scene-return').hidden=!scene.isEvent;
     const preload=nextImages();
     if(preload.join('|')!==lastPreload){lastPreload=preload.join('|');scheduleStoryImagePreload(preload);}
     document.body.dataset.castleRoom=G.currentRoom;
@@ -220,6 +256,11 @@ const CastleUI = (() => {
     paint('scene-hotspots',room.targets.map(([id,name])=>objectRegion(image,id,name)).join(''));
     el('scene-caption').textContent=G.sunrise&&G.currentRoom==='tower'?'第一缕晨光，终于落在琴键上':'点击画面中的物品调查，点击人物交谈';
     paint('room-exits',room.exits.map(exit=>'<button type="button" data-exit="'+exit+'"><span>'+(['hall','dining'].includes(exit)||G.doors[exit]?'↗':'♙')+'</span><div><small>'+(['hall','dining'].includes(exit)||G.doors[exit]?'前往':'寻找钥匙')+'</small>'+CASTLE_ROOMS[exit].name+'</div><span>→</span></button>').join(''));
+  }
+  function returnToRoom(){
+    CastleVoice.stop(true);CastleSceneArt.reset();focusedNpc=null;el('speaker-name').textContent='场景调查';
+    CastleDialogue.set(getRoomDescription(G.currentRoom,G.loop,Math.max(1,G.roomVisitCount[G.currentRoom+'_L'+G.loop]||1)),false,false);
+    sync();
   }
   function sync(){
     if(!started)return;
@@ -264,6 +305,7 @@ const CastleUI = (() => {
       if(saved.phase==='ending'){G.puzzleSolved.organ=false;playOrgan(G.endingMovement,true);}
       if(saved.phase==='wrong')el('we-screen').classList.add('active');
       CastleDialogue.set(saved.dialogue||getRoomDescription(G.currentRoom,G.loop,1),false,false);
+      CastleSceneArt.restore(saved,G);
       CastleVoice.remember(saved.phase==='ending'?el('ending-text').innerHTML:saved.phase==='transition'?el('loop-text').innerHTML:CastleDialogue.text);
       if(saved.chase&&saved.phase==='playing'){
         G.adrianChasing=false;G.candleLit=false;triggerAdrian();
@@ -278,9 +320,13 @@ const CastleUI = (() => {
   }
   function action(kind,value){
     if(CastleClock.paused||phase()!=='playing'||el('modal-overlay').classList.contains('active'))return;
-    if(sceneOverview&&['npc','examine'].includes(kind)){sceneOverview=false;sceneZoom=1;scenePan=scenePanY=0;}
+    if(sceneOverview&&['npc','examine'].includes(kind)&&!(kind==='examine'&&value==='portrait_dining'&&G.loop===3)){sceneOverview=false;sceneZoom=1;scenePan=scenePanY=0;}
     if(kind==='examine'){setDrawer(null);focusedNpc=null;el('speaker-name').textContent='场景调查';examine(value);}
-    if(kind==='npc'){setDrawer(null);focusedNpc=value;el('speaker-name').textContent=getNpcDisplayName(value);talk(value);}
+    if(kind==='npc'){
+      if(!CastleSceneArt.contacts(G).includes(value))return;
+      const remote=!CastleSceneArt.isPresent(value,G);
+      setDrawer(null);focusedNpc=value;el('speaker-name').textContent=getNpcDisplayName(value)+(remote?' · 远处的回声':'');talk(value);
+    }
     if(kind==='exit'){
       if(!CASTLE_ROOMS[G.currentRoom].exits.includes(value))return;
       setDrawer(null);
@@ -364,6 +410,8 @@ const CastleUI = (() => {
     el('scene-pan-left').onclick=()=>{scenePan+=el('scene-area').clientWidth*.65;paintPan();};
     el('scene-pan-right').onclick=()=>{scenePan-=el('scene-area').clientWidth*.65;paintPan();};
     const scene=el('scene-area');
+    const returnButton=document.createElement('button');returnButton.id='scene-return';returnButton.className='game-btn scene-return';
+    returnButton.type='button';returnButton.textContent='← 返回房间探索';returnButton.hidden=true;returnButton.onclick=returnToRoom;scene.append(returnButton);
     scene.addEventListener('dragstart',e=>e.preventDefault());
     const beginPan=()=>{
       const points=[...scenePointers.values()],box=scene.getBoundingClientRect();

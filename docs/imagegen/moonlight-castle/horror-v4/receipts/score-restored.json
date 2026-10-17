@@ -1,0 +1,8 @@
+{
+  "id": "score-restored",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-1e6a5c74-35e1-45e5-8d81-bf65d64c0481.png",
+  "source": "assets/moonlight-castle/source/horror-v4/score-restored.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/score-restored.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

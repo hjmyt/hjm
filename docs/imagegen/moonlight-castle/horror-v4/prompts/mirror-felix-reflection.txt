@@ -1,0 +1,22 @@
+DARK HORROR art direction, high-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Roughly three quarters of the room is deep BLUE-BLACK shadow, grimy surfaces, cobwebs, huge unknown dark recesses, eerie cinematic chiaroscuro. Only sparse candles and narrow cold moon edges, readable faces and object silhouettes but NEVER broad golden palace lighting, glamour studio fill, bright hotel, uniform grey brightness, artificial UI glow or vignette-only darkening. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: The player explores this room after the previous loop, keeping the same architecture and card identities.
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): NONE.
+
+Painted/reflected identities only, NOT physical people: felix.
+
+Maximum two named physical characters.
+
+Identity and costume locks:
+Felix: historic nineteenth-century man whose face is explicitly FEIHONG from supplied card: short tidy BLACK hair, rectangular dark GLASSES, angular side profile. Nineteenth-century court dress and ruffled cravat, distinct from Adrian. Spirit only when specified. No blond actor.
+
+Use first reference as composition/costume continuity. Preserve camera, room layout, faces and props except the explicit story changes. Other card refs lock faces, not their modern card clothing.
+
+For this event emphasize the requested physical action, not the old generic standing room pose.
+
+Current story beat: Closeup jagged broken ornate dining mirror. Inside ONE large SHARD only is smiling historic Felix: Feihong exact black-haired adult face with rectangular glasses, nineteenth-century court cravat. He remains a REFLECTION, no physical man outside mirror. No other person.
+
+Context immediately after: The player can investigate objects or speak; mentioned absent people must remain offscreen until their explicit transient encounter.

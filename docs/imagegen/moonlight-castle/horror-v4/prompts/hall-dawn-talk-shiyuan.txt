@@ -1,0 +1,22 @@
+Warm relieved MORNING after the horror night, softly lit dusty nineteenth-century gothic castle, sunrise light, safe calm atmosphere and natural faces. High-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Preserve exact character identity, physical room architecture and costume continuity. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: The player explores this room after the previous loop, keeping the same architecture and card identities.
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): shiyuan.
+
+Painted/reflected identities only, NOT physical people: none.
+
+Maximum two named physical characters.
+
+Identity and costume locks:
+Shiyuan: adult woman, short wavy brown hair, golden star/flower hairpin, exact card face. Proper BLACK LONG-SLEEVED MAID DRESS, long skirt, WHITE APRON, white collar and white maid headband. NO cream knitted blouse.
+
+Use first reference as composition/costume continuity. Preserve camera, room layout, faces and props except the explicit story changes. Other card refs lock faces, not their modern card clothing.
+
+For this event emphasize the requested physical action, not the old generic standing room pose.
+
+Current story beat: Shiyuan in proper black/white long sleeve maid outfit steps out from kitchen doorway with a tray of slightly BURNT BREAD with visibly charred edges, shy cheerful relief, short wavy brown hair gold flowerpin, morning hall warm fire blurred behind. Other party members OFF CAMERA.
+
+Context immediately after: The player can investigate objects or speak; mentioned absent people must remain offscreen until their explicit transient encounter.

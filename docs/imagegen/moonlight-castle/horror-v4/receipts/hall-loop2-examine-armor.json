@@ -1,0 +1,8 @@
+{
+  "id": "hall-loop2-examine-armor",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-fb327534-362f-47a9-b681-96474a79e4a0.png",
+  "source": "assets/moonlight-castle/source/horror-v4/hall-loop2-examine-armor.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/hall-loop2-examine-armor.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

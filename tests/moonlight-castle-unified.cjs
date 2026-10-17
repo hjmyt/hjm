@@ -32,10 +32,10 @@ let browser;
    const readScene=()=>page.evaluate(()=>{
     const image=document.getElementById('room-art'),dialogue=document.querySelector('.dialogue-panel').getBoundingClientRect();
     const controls=[...document.querySelectorAll('#scene-hotspots button,#people-tray button,#scene-doors button')].map(node=>{const r=node.getBoundingClientRect(),point=window.castleControlPoint(node);return{label:node.getAttribute('aria-label')||node.textContent,x:r.x,y:r.y,right:r.right,bottom:r.bottom,hit:!!point};});
-    return{dialogueHidden:getComputedStyle(document.querySelector('.dialogue-panel')).visibility==='hidden',ratio:image.naturalWidth/image.naturalHeight,source:image.getAttribute('src'),image:image.getBoundingClientRect().toJSON(),stage:document.getElementById('scene-area').getBoundingClientRect().toJSON(),hotspots:document.getElementById('scene-hotspots').getBoundingClientRect().toJSON(),dialogue:dialogue.toJSON(),controls,overflows:document.documentElement.scrollWidth>innerWidth+1||document.documentElement.scrollHeight>innerHeight+1};
+    return{dialogueHidden:getComputedStyle(document.querySelector('.dialogue-panel')).visibility==='hidden',ratio:image.naturalWidth/image.naturalHeight,source:image.getAttribute('src'),expectedSource:CastleSceneArt.resolve(G).asset,image:image.getBoundingClientRect().toJSON(),stage:document.getElementById('scene-area').getBoundingClientRect().toJSON(),hotspots:document.getElementById('scene-hotspots').getBoundingClientRect().toJSON(),dialogue:dialogue.toJSON(),controls,overflows:document.documentElement.scrollWidth>innerWidth+1||document.documentElement.scrollHeight>innerHeight+1};
    });
    let state=await readScene();
-   assert(state.source.includes(room+'-exploration-v3'));assert(!state.overflows);
+   assert.equal(state.source,state.expectedSource);assert(state.source.includes('/horror-v4/'));assert(!state.overflows);
    if(width<=1000){
     if(await page.locator('#scene-overview').getAttribute('aria-pressed')==='true'){await page.click('#scene-overview');state=await readScene();}
     assert(Math.abs(state.image.width/state.image.height-state.ratio)<.001,'Portrait never distorts the source aspect ratio at '+width);
@@ -59,6 +59,6 @@ let browser;
  await page.reload();await page.click('#continue-btn');
  assert(await page.locator('#people-tray [data-npc=shiyuan]').isVisible(),'Old investigation-mode saves restore the unified scene');
  assert(await page.locator('#scene-hotspots [data-examine=bed]').isVisible());
- assert((await page.locator('#room-art').getAttribute('src')).includes('bedroom-exploration-v3'));
+ assert.equal(await page.locator('#room-art').getAttribute('src'),await page.evaluate(()=>CastleSceneArt.resolve(G).asset));
  assert.deepEqual(errors,[]);console.log('PASS: 9 independent sources, cast/costume locks, unified interactions, seven rooms in five viewports, proportional portrait panorama and complete overview with matching object silhouettes and usable touch targets clear of dialogue.');
 })().catch(e=>{console.error(e);process.exitCode=1;}).finally(async()=>{await browser?.close();});

@@ -1,0 +1,8 @@
+{
+  "id": "ending-tenderness",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-1ba02eac-f1f0-436a-b6e7-431bdc218f05.png",
+  "source": "assets/moonlight-castle/source/horror-v4/ending-tenderness.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/ending-tenderness.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

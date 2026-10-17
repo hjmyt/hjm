@@ -1,0 +1,23 @@
+Warm relieved MORNING after the horror night, softly lit dusty nineteenth-century gothic castle, sunrise light, safe calm atmosphere and natural faces. High-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Preserve exact character identity, physical room architecture and costume continuity. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: The player explores this room after the previous loop, keeping the same architecture and card identities.
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): baoshi, feihong.
+
+Painted/reflected identities only, NOT physical people: none.
+
+Maximum two named physical characters.
+
+Identity and costume locks:
+Baoshi: adult man, soft mature face, fluffy slightly long BLACK hair, NO GLASSES. ORNATE GOTHIC VAMPIRE couture: black velvet long coat, dark garnet brocade waistcoat, lace jabot, elaborate silver filigree, period trousers and boots. Preserve his exact card face.
+Feihong: adult man, shorter tidy BLACK hair, rectangular dark GLASSES, defined side profile distinct from Baoshi. Lestat / Interview with the Vampire inspired sumptuous long eighteenth/nineteenth-century court coat, dark plum velvet, embroidered waistcoat, ruffled ivory cravat, gloves. Use only the clothing vocabulary, NOT actor likeness, NOT blond hair. Preserve his card identity.
+
+Use first reference as composition/costume continuity. Preserve camera, room layout, faces and props except the explicit story changes. Other card refs lock faces, not their modern card clothing.
+
+For this event emphasize the requested physical action, not the old generic standing room pose.
+
+Current story beat: Morning close scene of Baoshi and Feihong waking on rug, sitting up and rubbing sleepy eyes, STILL HOLDING EACH OTHER HAND with other hands. Baoshi black ornate gothic vampire coat no glasses, Feihong plum Lestat-inspired courtcoat black hair and rectangular glasses. Warm fire dawn behind; other companions remain OFF CAMERA. No Adrian/Felix added.
+
+Context immediately after: The player can investigate objects or speak; mentioned absent people must remain offscreen until their explicit transient encounter.

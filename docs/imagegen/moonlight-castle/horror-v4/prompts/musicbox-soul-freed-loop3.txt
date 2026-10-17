@@ -1,0 +1,17 @@
+Use case: illustration-story. Asset: a single independent high-resolution 4:3 game event illustration, never a collage. Painted anime visual novel style matching the references. No UI, captions, labels or watermark.
+
+Lighting: very dark blue-black castle night with thin moonlight and sparse candle highlights, no daylight.
+
+Input image 1 is the CURRENT PHASE room and lighting reference. Input image 2 preserves only the object design/event action; replace all its old-phase background and lighting.
+
+Context immediately before: The player explores dining during loop3 and investigates this object or encounters Adrian. Remain in this exact phase.
+
+Visible named cast in the current physical location (visibleCast): NONE.
+
+Only the explicitly listed visibleCast may appear physically. All companions in a room reference remain OFF CAMERA in this tight close-up. Painted/reflected identities only: none.
+
+Current story beat: The same black/gold music box is OPEN. One small BLUE soul mote leaves the coherent gold mechanism and gently settles above an anonymous open palm at frame edge; no human face or body, no added jewelry.THIRD LOOP: current room state only. If music room appears in blurred background the harpsichord is open and the self-playing violin stays OUTSIDE the case. No daytime sunlight.
+
+Composition: true tight object close-up. Crop away the distant wall painting and all character bodies, so this does not reveal any portrait early or import old-room people. Preserve matching table wood, runner, box/mirror design from references.
+
+Context immediately after: Player reads the unchanged event subtitle and returns to the SAME loop3 room. No time travel or narrative advancement.

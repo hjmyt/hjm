@@ -1,0 +1,17 @@
+Use case: illustration-story. Asset: a single independent high-resolution 4:3 game event illustration, never a collage. Painted anime visual novel style matching the references. No UI, captions, labels or watermark.
+
+Lighting: very dark blue-black castle night with thin moonlight and sparse candle highlights, no daylight.
+
+Input image 1 is the CURRENT PHASE room and lighting reference. Input image 2 preserves only the object design/event action; replace all its old-phase background and lighting.
+
+Context immediately before: The player explores dining during loop1 and investigates this object or encounters Adrian. Remain in this exact phase.
+
+Visible named cast in the current physical location (visibleCast): NONE.
+
+Only the explicitly listed visibleCast may appear physically. All companions in a room reference remain OFF CAMERA in this tight close-up. Painted/reflected identities only: none.
+
+Current story beat: The same dining mirror is BROKEN, with one missing piece and jagged shards reflecting CURRENT room light/furniture only. No face in the mirror, no people anywhere in this close-up. FIRST LOOP: untouched dinner or initial music-room furnishing; no rotten fruit, blood-tear aftermath or restored morning objects.
+
+Composition: true tight object close-up. Crop away the distant wall painting and all character bodies, so this does not reveal any portrait early or import old-room people. Preserve matching table wood, runner, box/mirror design from references.
+
+Context immediately after: Player reads the unchanged event subtitle and returns to the SAME loop1 room. No time travel or narrative advancement.

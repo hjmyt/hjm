@@ -1,0 +1,8 @@
+{
+  "id": "wrong-ending",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-9b060dc4-dec7-461e-9a7f-f0c08b3a3aae.png",
+  "source": "assets/moonlight-castle/source/horror-v4/wrong-ending.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/wrong-ending.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

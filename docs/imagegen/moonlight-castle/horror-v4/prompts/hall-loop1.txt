@@ -1,0 +1,23 @@
+DARK HORROR art direction, high-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Roughly three quarters of the room is deep BLUE-BLACK shadow, grimy surfaces, cobwebs, huge unknown dark recesses, eerie cinematic chiaroscuro. Only sparse candles and narrow cold moon edges, readable faces and object silhouettes but NEVER broad golden palace lighting, glamour studio fill, bright hotel, uniform grey brightness, artificial UI glow or vignette-only darkening. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: 进入对应房间/阶段，先读本阶段房间描述
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): yeshiyang, tim.
+
+Painted/reflected identities only, NOT physical people: none.
+
+Maximum two named physical characters.
+
+Identity and costume locks:
+Yeshiyang / Sebastian: adult man, short tousled WAVY black hair, rectangular black glasses, soft angular face from his card. Black long butler tailcoat, brass buttons, black bow tie, small SILVER CROSS brooch on chest.
+Tim: adult man, neat short dark hair, rectangular dark glasses, stronger mature face distinct from Sebastian. Silver knight armor, bare head, black underlayers. Initially EMPTY hands. An empty helmeted suit of armor is a separate lifeless prop, never another Tim.
+
+Old room reference is GEOGRAPHY ONLY; completely rebuild the lighting and requested costumes. Card images lock facial identity, not modern clothing.
+
+Keep an explorable wide hall: wooden door far left x8%, door far right x88%, central fireplace x52%, worn heraldic tapestry above x52% y18%, nineteenth-century SQUARE PIANO (horizontal RECTANGULAR cabinet, exposed keyboard, no triangular wing) left foreground x18% y64%, one wax candle on left x7% y52%, empty helmeted armor prop far right x93%. Sebastian around x43%, Tim x65%, both full height, their silhouettes not covering whole clickable objects.
+
+Current story beat: First entry. The fireplace has only a few WEAK RED EMBERS and thin smoke, no tall orange fire. Empty armor stands upright far right facing entrance; its hand is locked shut. Sebastian is tense beside Tim. Cobweb-covered square piano and old tapestry are intact.
+
+Context immediately after: 仅当前房间继续探索；转场后按新房间阶段重新解析

@@ -1,12 +1,18 @@
 const{chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),{pathToFileURL}=require('node:url');
-const root=path.resolve(__dirname,'..'),plan=JSON.parse(fs.readFileSync(path.join(root,'docs/imagegen/moonlight-castle/outcomes-v1/plan.json'))),scope={};
-vm.runInNewContext(fs.readFileSync(path.join(root,'js/data/moonlight-castle.js'),'utf8')+';globalThis.art=CASTLE_OVERLAY_ART;',scope);
-assert.equal(plan.length,8);assert.equal(new Set(plan.map(scene=>scene.source)).size,8);
-for(const scene of plan){
- const entry=scope.art[scene.key];assert.equal(entry.id,scene.id);assert.equal(entry.asset,scene.output);
- assert.equal(scene.generation,'single-image');assert(scene.sourceWidth>=1024&&scene.sourceHeight>=768);assert.deepEqual(scene.visibleCast,[]);
- for(const file of [scene.source,scene.output,scene.prompt])assert(fs.existsSync(path.join(root,file)));
- const prompt=fs.readFileSync(path.join(root,scene.prompt),'utf8');for(const phrase of ['Context immediately before:','Visible named cast in the current physical location:','Current story beat:','Context immediately after:','Only visibleCast may appear'])assert(prompt.includes(phrase));
+const root=path.resolve(__dirname,'..'),plan=JSON.parse(fs.readFileSync(path.join(root,'docs/imagegen/moonlight-castle/horror-v4/plan.json'))),scope={};
+vm.runInNewContext(fs.readFileSync(path.join(root,'js/data/moonlight-castle.js'),'utf8')+'\n'+fs.readFileSync(path.join(root,'js/data/moonlight-castle-story-art.js'),'utf8')+';globalThis.art=CASTLE_OVERLAY_ART;globalThis.scenes=CASTLE_STORY_ART.scenes;',scope);
+const outcomeKeys=['loop2','loop3','wrong','chase','ending1','ending2','ending3','score'];
+const expectedIds={loop2:'loop-death',loop3:'loop-truth',wrong:'wrong-ending',chase:'pursuit',ending1:'ending-grief',ending2:'ending-tenderness',ending3:'ending-farewell',score:'score-restored'};
+const expectedCast={loop2:['adrian'],loop3:[],wrong:['adrian'],chase:['adrian'],ending1:['adrian'],ending2:['adrian','felix'],ending3:['adrian','felix'],score:[]};
+assert.equal(plan.version,4);
+const outcomes=outcomeKeys.map(key=>({key,scene:plan.frames.find(frame=>frame.id===expectedIds[key])}));
+assert(outcomes.every(row=>row.scene),'All eight production outcome pictures were generated');assert.equal(new Set(outcomes.map(({scene})=>scene.source)).size,8);
+for(const {key,scene} of outcomes){
+ const entry=scope.art[key],manifest=scope.scenes[scene.id];assert.equal(entry.id,expectedIds[key]);assert.equal(entry.asset,scene.asset);assert.equal(manifest.asset,entry.asset);
+ assert(entry.asset.startsWith('assets/moonlight-castle/horror-v4/'),'Production outcomes use the new dark character-aware CGs');
+ assert.equal(scene.generation,'single-image');assert(scene.sourceWidth>=1024&&scene.sourceHeight>=768);assert.deepEqual(scene.visibleCast,expectedCast[key]);assert.deepEqual([...manifest.visibleCast],expectedCast[key]);
+ for(const file of [scene.source,scene.asset,scene.prompt])assert(fs.existsSync(path.join(root,file)));
+ const prompt=fs.readFileSync(path.join(root,scene.prompt),'utf8');for(const phrase of ['Context immediately before:','Visible named cast in the current physical location','Current story beat:','Context immediately after:','Only the explicitly listed visibleCast'])assert(prompt.includes(phrase),scene.id+' '+phrase);
 }
 assert.equal(new Set(['ending1','ending2','ending3'].map(key=>scope.art[key].asset)).size,3,'Each movement has its own illustration');
 let browser;
@@ -51,7 +57,7 @@ let browser;
  }
  await set('loop3');await page.click('#loop-btn');await page.evaluate(()=>{G.loop=3;G.inventory=[];G.candleLit=false;G.soulProtected=false;pickChaseMode=()=> 'hold';triggerAdrian();CastleUI.sync();});
  await page.locator('#chase-art').evaluate(node=>node.decode());assert.equal(await page.locator('#chase-art').getAttribute('data-art-id'),'pursuit');
- assert(requests.some(url=>url.includes('overlay-wrong-ending-v1.webp')),'Wrong outcome is available while pursuit is active');
+ assert(requests.some(url=>url.endsWith('/'+scope.art.wrong.asset)),'Wrong outcome is available while pursuit is active');
  await page.evaluate(()=>CastleUI.pause(true));assert(await page.locator('#pause-art').getAttribute('src'));await page.click('#resume-btn');
  await page.evaluate(()=>{clearTimeout(chaseDeathTimer);cancelAnimationFrame(chaseRAF);G.adrianChasing=false;document.getElementById('chase-overlay').classList.remove('active');G.inventory=['assembled_letter'];useItem('assembled_letter');});
  assert.equal(await page.locator('.modal-story-art').getAttribute('data-art-id'),'loop-truth');await page.click('#modal-close');
@@ -59,6 +65,6 @@ let browser;
  await page.click('#modal-close');
  // Preload only the actually selected ending, using the execution-layer inventory rules.
  await page.evaluate(()=>{G.currentRoom='tower';G.loop=3;G.puzzleSolved.organ=false;G.flags.diary_count=0;G.flags.gave_final=false;G.inventory=['assembled_letter','repaired_score','soul_fragment'];examine('organ');});
- await page.waitForTimeout(100);assert(requests.some(url=>url.includes('overlay-ending-grief-v1.webp')));
+ await page.waitForTimeout(100);assert(requests.some(url=>url.endsWith('/'+scope.art.ending1.asset)));
  assert.deepEqual(errors,[]);console.log('PASS: 8 independent semantic CGs, both loops/WE/three endings across five layouts, complete text/actions, v1 continuation, chase/pause, letters/score and selected-ending preload.');
 })().catch(e=>{console.error(e);process.exitCode=1;}).finally(async()=>{await browser?.close();});

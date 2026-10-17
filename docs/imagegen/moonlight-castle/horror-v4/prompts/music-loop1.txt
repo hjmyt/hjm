@@ -1,0 +1,22 @@
+DARK HORROR art direction, high-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Roughly three quarters of the room is deep BLUE-BLACK shadow, grimy surfaces, cobwebs, huge unknown dark recesses, eerie cinematic chiaroscuro. Only sparse candles and narrow cold moon edges, readable faces and object silhouettes but NEVER broad golden palace lighting, glamour studio fill, bright hotel, uniform grey brightness, artificial UI glow or vignette-only darkening. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: 进入对应房间/阶段，先读本阶段房间描述
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): jerry.
+
+Painted/reflected identities only, NOT physical people: none.
+
+Maximum two named physical characters.
+
+Identity and costume locks:
+Jerry / Cecil: adult man, short messy BLACK hair, RECTANGULAR GLASSES, exact card face. NINETEENTH-CENTURY COURT NOBLE uniform: dark navy embroidered frock coat, gold braid, ivory cravat, brocade waistcoat, period trousers/boots. Brass trumpet belongs to him. NO T-shirt or jeans.
+
+Old room reference is GEOGRAPHY ONLY; completely rebuild the lighting and requested costumes. Card images lock facial identity, not modern clothing.
+
+Keep music-room geography: door left x8% y28%, door right x93% y28%, closed long violin CASE on table at left x15% y57%, black/gold HARPSICHORD right half x77% y54% with visible keys. Jerry alone around x47%, full height, with brass trumpet held LOW for tuning rather than always blowing it. Tall curtained windows behind, small scattered candles.
+
+Current story beat: First loop. Jerry noble outfit stands alone tuning a trumpet held low. Harpsichord lid closed except keyboard visible, CLOSED LOCKED VIOLIN CASE on table left. Aged dusty room, near-black recesses. No violin outside case.
+
+Context immediately after: 仅当前房间继续探索；转场后按新房间阶段重新解析

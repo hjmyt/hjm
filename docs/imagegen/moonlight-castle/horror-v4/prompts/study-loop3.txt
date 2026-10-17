@@ -1,0 +1,22 @@
+DARK HORROR art direction, high-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Roughly three quarters of the room is deep BLUE-BLACK shadow, grimy surfaces, cobwebs, huge unknown dark recesses, eerie cinematic chiaroscuro. Only sparse candles and narrow cold moon edges, readable faces and object silhouettes but NEVER broad golden palace lighting, glamour studio fill, bright hotel, uniform grey brightness, artificial UI glow or vignette-only darkening. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: 进入对应房间/阶段，先读本阶段房间描述
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): qiqi.
+
+Painted/reflected identities only, NOT physical people: none.
+
+Maximum two named physical characters.
+
+Identity and costume locks:
+Qiqi / Vivian: adult woman, dark updo and small floral hair ornaments, exact card face. Purple theatrical fortune-teller gown and purple embroidered shawl, holds tarot cards. NOT Lala.
+
+Use first reference as composition/costume continuity. Preserve camera, room layout, faces and props except the explicit story changes. Other card refs lock faces, not their modern card clothing.
+
+Keep library geography: hall door far LEFT x8% y27%, music-room door far RIGHT x94% y27%; large many-level bookshelves across left and central back wall x20-70%; five distinctive puzzle books accessible on shelf x23% y29%; bamboo flute rack left foreground x13% y69%, old globe on right x87% y52%, desk and quill on right foreground x78% y80%. Dijie position x41%, Qiqi x65%, with floor and heads visible.
+
+Current story beat: Third loop. Dijie is STILL ABSENT. Only Qiqi remains. A CRACKED BAMBOO FLUTE hangs horizontally on left wall/rack, clearly split down bamboo body. ALL library books have OPENED unnaturally: open volumes splayed along shelves, loose pages with repetitive handwritten same name (do not need readable lettering); five puzzle books remain a small accessible group. No modern man holding a flute. The flute display at left contains ONLY ONE HORIZONTAL BAMBOO FLUTE. Remove all vertical bamboo tubes, panpipes and spare flute copies from the old rack. Keep the single horizontally supported flute near x14% y56%.
+
+Context immediately after: 仅当前房间继续探索；转场后按新房间阶段重新解析

@@ -1,0 +1,17 @@
+Use case: illustration-story. Asset: a single independent high-resolution 4:3 game event illustration, never a collage. Painted anime visual novel style matching the references. No UI, captions, labels or watermark.
+
+Lighting: MORNING SUNLIGHT, warm golden rays, clean restored castle after the night. Never copy moonlight or blood from the old event reference.
+
+Input image 1 is the CURRENT PHASE room and lighting reference. Input image 2 preserves only the object design/event action; replace all its old-phase background and lighting.
+
+Context immediately before: The player explores dining during dawn and investigates this object or encounters Adrian. Remain in this exact phase.
+
+Visible named cast in the current physical location (visibleCast): NONE.
+
+Only the explicitly listed visibleCast may appear physically. All companions in a room reference remain OFF CAMERA in this tight close-up. Painted/reflected identities only: none.
+
+Current story beat: The same black/gold music box is OPEN. One small BLUE soul mote leaves the coherent gold mechanism and gently settles above an anonymous open palm at frame edge; no human face or body, no added jewelry. This is AFTER SUNRISE: warm clean daylight and calm restored furnishings, no blood, rotten food, night moon or horror shadows.
+
+Composition: true tight object close-up. Crop away the distant wall painting and all character bodies, so this does not reveal any portrait early or import old-room people. Preserve matching table wood, runner, box/mirror design from references.
+
+Context immediately after: Player reads the unchanged event subtitle and returns to the SAME dawn room. No time travel or narrative advancement.

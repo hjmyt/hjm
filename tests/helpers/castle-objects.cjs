@@ -11,7 +11,12 @@ function visibleControlPoint(node){
   return null;
 }
 async function installControlPoint(page){await page.addInitScript({content:'window.castleControlPoint='+visibleControlPoint.toString()});}
+async function returnToExploration(page){
+ const back=page.locator('#scene-return');if(await back.isVisible())await back.click();
+ await page.waitForFunction(()=>{const image=document.getElementById('room-art');return image.complete&&image.naturalWidth>0;});
+}
 async function clickObject(page,id){
+  await returnToExploration(page);
   const overview=page.locator('#scene-overview');
   if(await overview.isVisible()&&await overview.getAttribute('aria-pressed')==='false')await overview.click();
   const target=page.locator('#scene-hotspots [data-examine="'+id+'"]');
@@ -20,4 +25,11 @@ async function clickObject(page,id){
   const touch=await page.evaluate(()=>matchMedia('(pointer:coarse)').matches);
   if(touch)await page.touchscreen.tap(point.x,point.y);else await page.mouse.click(point.x,point.y);
 }
-module.exports={visibleControlPoint,installControlPoint,clickObject};
+async function speakNpc(page,id){
+ const physical=page.locator('#people-tray [data-npc="'+id+'"]');
+ if(await physical.count()){await physical.click();return;}
+ const control=page.locator('.castle-dock [data-castle-drawer=explore]');
+ if(await control.getAttribute('aria-expanded')!=='true')await control.click();
+ await page.locator('#explore-people [data-npc="'+id+'"]').click();
+}
+module.exports={visibleControlPoint,installControlPoint,clickObject,returnToExploration,speakNpc};

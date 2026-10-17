@@ -1,0 +1,8 @@
+{
+  "id": "study-loop2-talk-dijie",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-5ad43580-8bb2-4279-8eed-a65f7c387f64.png",
+  "source": "assets/moonlight-castle/source/horror-v4/study-loop2-talk-dijie.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/study-loop2-talk-dijie.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

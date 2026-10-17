@@ -1,0 +1,22 @@
+DARK HORROR art direction, high-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Roughly three quarters of the room is deep BLUE-BLACK shadow, grimy surfaces, cobwebs, huge unknown dark recesses, eerie cinematic chiaroscuro. Only sparse candles and narrow cold moon edges, readable faces and object silhouettes but NEVER broad golden palace lighting, glamour studio fill, bright hotel, uniform grey brightness, artificial UI glow or vignette-only darkening. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: 进入对应房间/阶段，先读本阶段房间描述
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): NONE.
+
+Painted/reflected identities only, NOT physical people: none.
+
+Maximum two named physical characters.
+
+Identity and costume locks:
+
+
+Use first reference as composition/costume continuity. Preserve camera, room layout, faces and props except the explicit story changes. Other card refs lock faces, not their modern card clothing.
+
+Keep tall gothic tower geography: huge historic PIPE ORGAN on left x28% y47%, keys x30% y60%, organ bench x34% y72%, tall lancet window center-right x70%, spiral stair return far right x94% y27%. Empty floor in front of organ. No floating red sci-fi lasers.
+
+Current story beat: Second-loop arrival. Count is ABSENT. Half a MUSIC SCORE on organ stand. Rectangular door-shaped patch of MOONLIGHT falls on stone floor beneath tall window. Empty bench and no person. Barely lit cold dark tower.
+
+Context immediately after: 仅当前房间继续探索；转场后按新房间阶段重新解析

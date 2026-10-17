@@ -1,4 +1,25 @@
 /* Characters, objects and exits share one authored room image. */
+.castle-immersive #castle-portrait-reveal{
+  display:block;position:absolute;inset:auto;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:var(--castle-art-width,100%);height:var(--castle-art-height,100%);object-fit:contain;
+  opacity:0;transition:opacity 1.4s ease;pointer-events:none;z-index:1;
+}
+.castle-immersive #castle-portrait-reveal.is-revealed{opacity:1;}
+.castle-immersive #scene-return{
+  position:absolute;z-index:21;left:14px;top:54px;min-height:36px;
+  padding:7px 12px;background:#071019df;border:1px solid #b49a5b77;
+  color:#ead9b7;font-size:11px;
+}
+.castle-immersive #scene-return[hidden]{display:none;}
+.castle-immersive #scene-area:has(#scene-return:not([hidden])) #scene-pan-tip{display:none;}
+@media(max-width:1000px){
+  .castle-immersive #castle-portrait-reveal{
+    inset:auto;left:calc(50% + var(--castle-pan-x,0px));
+    top:calc(var(--castle-art-local-center-y,50%) + var(--castle-pan-y,0px));
+    transform:translate(-50%,-50%);width:var(--castle-art-width,100%);
+    height:var(--castle-art-height,100%);-webkit-user-drag:none;
+  }
+}
 .castle-immersive #scene-area{bottom:var(--castle-scene-bottom,0px);}
 /* Reserve the complete dialogue footprint before typing starts. Scene sizing
    observes this panel, so wrapping text and its footer must never resize it. */
@@ -144,4 +165,16 @@
 @media(max-width:700px){
   .castle-immersive .scene-door{min-width:32px;min-height:32px;padding:5px;justify-content:center;}
   .castle-immersive .scene-door>span{display:none;}
+}
+
+/* Ensemble labels sit on clothing, below the seated foreground faces. Keep
+   their footprint compact even in overview, without rescaling the artwork. */
+.castle-immersive .ensemble-cast .npc{min-height:24px;max-width:112px;padding:4px 7px;gap:0;}
+.castle-immersive .ensemble-cast .npc-avatar{display:none;}
+.castle-immersive .ensemble-cast .npc-name{font-size:10px;line-height:1.3;white-space:nowrap;}
+.castle-immersive .ensemble-cast .npc:before{display:none;}
+
+@media(max-width:1000px){
+  .castle-immersive[data-castle-overview=true] .ensemble-cast .npc{min-height:20px;padding:3px 5px;}
+  .castle-immersive[data-castle-overview=true] .ensemble-cast .npc-name{font-size:9px;line-height:1.25;}
 }

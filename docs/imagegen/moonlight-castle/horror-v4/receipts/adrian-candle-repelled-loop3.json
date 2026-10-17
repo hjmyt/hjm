@@ -1,0 +1,8 @@
+{
+  "id": "adrian-candle-repelled-loop3",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-e8732983-039f-46e6-b7b5-1236e893ce6f.png",
+  "source": "assets/moonlight-castle/source/horror-v4/adrian-candle-repelled-loop3.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/adrian-candle-repelled-loop3.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

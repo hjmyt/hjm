@@ -1,0 +1,23 @@
+Warm relieved MORNING after the horror night, softly lit dusty nineteenth-century gothic castle, sunrise light, safe calm atmosphere and natural faces. High-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Preserve exact character identity, physical room architecture and costume continuity. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: 进入对应房间/阶段，先读本阶段房间描述
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): adrian, felix.
+
+Painted/reflected identities only, NOT physical people: none.
+
+Maximum two named physical characters.
+
+Identity and costume locks:
+Adrian: nineteenth-century vampire count whose face is explicitly BAOSHI from the supplied card: soft adult male face, fluffy slightly long BLACK hair, NO GLASSES. Formal dark embroidered court coat, waistcoat and cravat. Night eyes red unless the beat overrides them. Never add a second modern Baoshi when only Adrian is permitted.
+Felix: historic nineteenth-century man whose face is explicitly FEIHONG from supplied card: short tidy BLACK hair, rectangular dark GLASSES, angular side profile. Nineteenth-century court dress and ruffled cravat, distinct from Adrian. Spirit only when specified. No blond actor.
+
+Use first reference as composition/costume continuity. Preserve camera, room layout, faces and props except the explicit story changes. Other card refs lock faces, not their modern card clothing.
+
+Keep tall gothic tower geography: huge historic PIPE ORGAN on left x28% y47%, keys x30% y60%, organ bench x34% y72%, tall lancet window center-right x70%, spiral stair return far right x94% y27%. Empty floor in front of organ. No floating red sci-fi lasers.
+
+Current story beat: Dawn. Adrian stands around x61% in a SIMPLE WHITE SHIRT, eyes warm AMBER (not red), relaxed smile. A warm TRANSLUCENT FELIX spirit (Feihong face, BLACK hair, GLASSES, period court clothes) stands near him x75%, separate distinct face. Open complete score on organ stand, soft golden sunrise through window. No modern vampire costume on Adrian, no angry eyes.
+
+Context immediately after: 仅当前房间继续探索；转场后按新房间阶段重新解析

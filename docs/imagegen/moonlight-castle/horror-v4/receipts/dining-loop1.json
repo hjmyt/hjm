@@ -1,0 +1,8 @@
+{
+  "id": "dining-loop1",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-17ce73b5-bcd4-4674-942e-5d25e701eef4.png",
+  "source": "assets/moonlight-castle/source/horror-v4/dining-loop1.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/dining-loop1-correction.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

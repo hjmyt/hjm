@@ -628,16 +628,18 @@ const CASTLE_ART = {
 
 // The escape-room costumes override card clothing; identity always follows cards.
 const CASTLE_COSTUMES = {
-  yeshiyang:{identity:'成年男性，微乱卷短黑发，矩形黑框眼镜',outfit:'黑色执事制服、领结、铜扣、长外套'},
+  yeshiyang:{identity:'成年男性，微乱卷短黑发，矩形黑框眼镜',outfit:'黑色执事制服、领结、铜扣、长外套，胸前银色十字架装饰'},
   tim:{identity:'成年男性，利落短黑发，矩形深色眼镜',outfit:'银色骑士铠甲，露头，初见空手'},
-  bingbing:{identity:'成年女性，侧分长黑发，白花发饰、垂坠耳饰',outfit:'白色挂脖无袖长裙'},
-  baoshi:{identity:'成年男性，柔和脸型、蓬松略长黑发、无眼镜',outfit:'黑色衬衫'},
-  feihong:{identity:'成年男性，较短利落黑发、矩形深色眼镜',outfit:'白外衫、黑T、银链、黑手套'},
-  dijie:{identity:'成年男性，微乱深色头发',outfit:'灰格衬衫、浅色内搭，持竹笛'},
+  bingbing:{identity:'成年女性，侧分长黑发，白花发饰、垂坠耳饰',outfit:'白色十九世纪克里诺林笼撑大裙摆礼服，参考《飘》斯嘉丽服饰'},
+  baoshi:{identity:'成年男性，柔和脸型、蓬松略长黑发、无眼镜',outfit:'华丽哥特吸血鬼套装，黑绒长外套、暗红织锦马甲、银饰与蕾丝领巾'},
+  feihong:{identity:'成年男性，较短利落黑发、矩形深色眼镜',outfit:'参考《夜访吸血鬼》莱斯特的华丽长外套、刺绣马甲与褶领，保留本人黑发和眼镜'},
+  dijie:{identity:'成年男性，微乱深色头发',outfit:'宋制汉服，上衣隐约竹叶纹，宽袖与长摆，竹笛归本人'},
   qiqi:{identity:'成年女性，深发盘起',outfit:'粉色花纹旗袍戏服、深紫披肩、金色装饰，持塔罗牌'},
-  jerry:{identity:'成年男性，短乱黑发、矩形眼镜',outfit:'黑短袖、蓝牛仔裤，持小号'},
+  jerry:{identity:'成年男性，短乱黑发、矩形眼镜',outfit:'十九世纪宫廷贵族礼服，刺绣长外套、织锦马甲、领巾与长靴，持小号'},
   shiyuan:{identity:'成年女性，短棕黑卷发、金色花饰',outfit:'黑色长袖长裙女仆装、白围裙、白领、白女仆发带'},
-  lala:{identity:'成年女性，棕色侧马尾、浅色蝴蝶结',outfit:'紫色女巫袍、深色裙，持水晶球'}
+  lala:{identity:'成年女性，棕色侧马尾、浅色蝴蝶结',outfit:'紫色女巫袍、深色裙，持水晶球'},
+  adrian:{identity:'旧世人物，面容对应宝石：蓬松略长黑发、柔和成年男性脸型、无眼镜',outfit:'十九世纪宫廷服饰；日出为简单白衬衫和琥珀眼'},
+  felix:{identity:'旧世人物，面容对应飞鸿：较短利落黑发、矩形深色眼镜',outfit:'十九世纪宫廷礼服；画像与灵影不自动算作房间实体人物'}
 };
 
 
@@ -661,12 +663,12 @@ const CASTLE_DOOR_RULES = {
 
 // Explicit narrative beats; selecting art never advances or mutates the save.
 const CASTLE_OVERLAY_ART = {
-  loop2:{id:'loop-death',asset:'assets/moonlight-castle/overlay-loop-death-v1.webp',alt:'熄灭的蜡烛倒在塔楼石地上，血色月光笼罩风琴，长夜即将重新开始'},
-  loop3:{id:'loop-truth',asset:'assets/moonlight-castle/overlay-loop-truth-v1.webp',alt:'四片残信拼成完整的回信，金色微光沿着焦黑纸缝亮起'},
-  wrong:{id:'wrong-ending',asset:'assets/moonlight-castle/overlay-wrong-ending-v1.webp',alt:'熄灭的蜡烛落在走廊，血色月光下的出口已经紧闭'},
-  chase:{id:'pursuit',asset:'assets/moonlight-castle/overlay-pursuit-v1.webp',alt:'红雾涌过古堡长廊，尽头半开的门透出一线蓝光'},
-  ending1:{id:'ending-grief',asset:'assets/moonlight-castle/overlay-ending-grief-v1.webp',alt:'悲怆的慢板：孤独的蓝色残音落在空琴凳上，窗外只有一线黎明'},
-  ending2:{id:'ending-tenderness',asset:'assets/moonlight-castle/overlay-ending-tenderness-v1.webp',alt:'柔情的小快板：蓝金两道残音在琴键上方温柔交织，晨光照亮乐谱'},
-  ending3:{id:'ending-farewell',asset:'assets/moonlight-castle/overlay-ending-farewell-v1.webp',alt:'永别的急板：蓝金光柱从最后的乐谱升起，与塔楼窗外的壮阔日出交汇'},
-  score:{id:'score-restored',asset:'assets/moonlight-castle/overlay-score-restored-v1.webp',alt:'羽毛笔与墨水停在谱架旁，三个乐章的乐谱终于补全'}
+  loop2:{id:'loop-death',asset:'assets/moonlight-castle/horror-v4/loop-death.webp',alt:'塔楼暗影中，宝石面容的艾德里安血红眼睛逼近，熄灭的蜡烛落地'},
+  loop3:{id:'loop-truth',asset:'assets/moonlight-castle/horror-v4/loop-truth.webp',alt:'焦黑的四片残信拼合，微光照亮两百年前的真相'},
+  wrong:{id:'wrong-ending',asset:'assets/moonlight-castle/horror-v4/wrong-ending.webp',alt:'封闭走廊中伯爵逼近，倒地蜡烛熄灭，血月笼罩出口'},
+  chase:{id:'pursuit',asset:'assets/moonlight-castle/horror-v4/pursuit.webp',alt:'几乎漆黑的长廊里，伯爵红眼的身影逼近，门缝透出蓝光'},
+  ending1:{id:'ending-grief',asset:'assets/moonlight-castle/horror-v4/ending-grief.webp',alt:'悲怆的慢板：伯爵跪泣，眼睛褪回蓝色，手穿过蓝色残音，身影渐渐透明'},
+  ending2:{id:'ending-tenderness',asset:'assets/moonlight-castle/horror-v4/ending-tenderness.webp',alt:'柔情的小快板：伯爵与戴眼镜的菲利克斯灵影短暂交叠双手，化为蓝金音符'},
+  ending3:{id:'ending-farewell',asset:'assets/moonlight-castle/horror-v4/ending-farewell.webp',alt:'永别的急板：伯爵向光柱张开双臂、深深鞠躬，与菲利克斯共迎第一个日出'},
+  score:{id:'score-restored',asset:'assets/moonlight-castle/horror-v4/score-restored.webp',alt:'羽毛笔与墨水停在风琴谱架旁，三个乐章的安魂曲终于补全'}
 };

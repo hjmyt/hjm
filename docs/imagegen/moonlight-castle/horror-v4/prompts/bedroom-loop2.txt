@@ -1,0 +1,22 @@
+DARK HORROR art direction, high-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Roughly three quarters of the room is deep BLUE-BLACK shadow, grimy surfaces, cobwebs, huge unknown dark recesses, eerie cinematic chiaroscuro. Only sparse candles and narrow cold moon edges, readable faces and object silhouettes but NEVER broad golden palace lighting, glamour studio fill, bright hotel, uniform grey brightness, artificial UI glow or vignette-only darkening. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: 进入对应房间/阶段，先读本阶段房间描述
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): shiyuan.
+
+Painted/reflected identities only, NOT physical people: none.
+
+Maximum two named physical characters.
+
+Identity and costume locks:
+Shiyuan: adult woman, short wavy brown hair, golden star/flower hairpin, exact card face. Proper BLACK LONG-SLEEVED MAID DRESS, long skirt, WHITE APRON, white collar and white maid headband. NO cream knitted blouse.
+
+Use first reference as composition/costume continuity. Preserve camera, room layout, faces and props except the explicit story changes. Other card refs lock faces, not their modern card clothing.
+
+Keep room geography: old wooden door at left x7% y27%; four-poster bed LEFT x34% y52% with heavy deep-red canopy curtains; dusty dressing table at RIGHT x86% y62%, tall oval mirror x87% y34%; Shiyuan at x57% between bed and dresser, full head/feet, correct maid dress.
+
+Current story beat: Second loop. Bed pillow shows a deep HEAD-SHAPED INDENT though no one lies there. Tall dressing mirror SHATTERED: broken glass scattered on floor, jagged frame. Shiyuan maid with calm unnerving expression and subtly RED eyes. Keep darker night and no sunshine.
+
+Context immediately after: 仅当前房间继续探索；转场后按新房间阶段重新解析

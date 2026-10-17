@@ -1,0 +1,22 @@
+DARK HORROR art direction, high-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Roughly three quarters of the room is deep BLUE-BLACK shadow, grimy surfaces, cobwebs, huge unknown dark recesses, eerie cinematic chiaroscuro. Only sparse candles and narrow cold moon edges, readable faces and object silhouettes but NEVER broad golden palace lighting, glamour studio fill, bright hotel, uniform grey brightness, artificial UI glow or vignette-only darkening. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: 进入对应房间/阶段，先读本阶段房间描述
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): lala.
+
+Painted/reflected identities only, NOT physical people: none.
+
+Maximum two named physical characters.
+
+Identity and costume locks:
+Lala / Selene: adult woman, brown SIDE PONYTAIL, PALE BOW, exact card face. Deep purple witch gown and hooded cape, holds a crystal sphere. NOT Qiqi.
+
+Use first reference as composition/costume continuity. Preserve camera, room layout, faces and props except the explicit story changes. Other card refs lock faces, not their modern card clothing.
+
+Keep windowless underground cellar, stone barrel vault, wine RACK occupies back-left/middle x27-61% y15-70%, accessible old bottles visible, Lala at x60% center-right, globe held near chest. Left stair/wood door x8% y25%, right stair doorway x88% y25% leads upward to tower BUT beyond it remains dark, not an outside daytime landscape. Only a single local candle illuminates one corner. NO broad exterior window.
+
+Current story beat: Second loop. BLOODY HANDPRINTS climb the stone walls all the way to the vaulted CEILING. Crystal ball in Lala hands has a clear CRACK with faint red mist leaking out. Wine racks still intact. Horror cold shadow, no graphic injury.
+
+Context immediately after: 仅当前房间继续探索；转场后按新房间阶段重新解析

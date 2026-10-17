@@ -1,0 +1,8 @@
+{
+  "id": "hall-loop2",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-486ee029-0408-46bb-aafd-e9d06e8c4641.png",
+  "source": "assets/moonlight-castle/source/horror-v4/hall-loop2.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/hall-loop2.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

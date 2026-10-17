@@ -1,0 +1,8 @@
+{
+  "id": "bedroom-dawn",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-357c4cb1-339a-4f40-8b02-a38ae46a632e.png",
+  "source": "assets/moonlight-castle/source/horror-v4/bedroom-dawn.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/bedroom-dawn.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "cellar-loop3",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-cefc2935-6931-43af-97eb-b45f0d8beacb.png",
+  "source": "assets/moonlight-castle/source/horror-v4/cellar-loop3.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/cellar-loop3.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

@@ -1,0 +1,17 @@
+Use case: illustration-story. Asset: a single independent high-resolution 4:3 game event illustration, never a collage. Painted anime visual novel style matching the references. No UI, captions, labels or watermark.
+
+Lighting: very dark blue-black castle night with thin moonlight and sparse candle highlights, no daylight.
+
+Input image 1 is the CURRENT PHASE room and lighting reference. 
+
+Context immediately before: The player explores tower during loop3 and investigates this object or encounters Adrian. Remain in this exact phase.
+
+Visible named cast in the current physical location (visibleCast): adrian.
+
+Only the explicitly listed visibleCast may appear physically. All companions in a room reference remain OFF CAMERA in this tight close-up. Painted/reflected identities only: none.
+
+Current story beat: A lit white wax candle held at frame edge repels a DISTANT Adrian (Baoshi face, fluffy BLACK hair, NO glasses, ornate black court coat) into a dark CORRIDOR doorway. Small distant red eyes, retreating posture. No tower organ or other room-specific props. Third-loop corridor. All same-period identity locks remain.
+
+Preserve exact count face and costume from the first reference.
+
+Context immediately after: Player reads the unchanged event subtitle and returns to the SAME loop3 room. No time travel or narrative advancement.

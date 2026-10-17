@@ -1,0 +1,26 @@
+DARK HORROR art direction, high-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Roughly three quarters of the room is deep BLUE-BLACK shadow, grimy surfaces, cobwebs, huge unknown dark recesses, eerie cinematic chiaroscuro. Only sparse candles and narrow cold moon edges, readable faces and object silhouettes but NEVER broad golden palace lighting, glamour studio fill, bright hotel, uniform grey brightness, artificial UI glow or vignette-only darkening. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: The player explores this room after the previous loop, keeping the same architecture and card identities.
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): bingbing, baoshi, feihong.
+
+Painted/reflected identities only, NOT physical people: adrian, felix.
+
+Explicit group exception: 同一实际地点明确在场的群像
+
+Identity and costume locks:
+Bingbing / Isabella: adult woman, long side-parted black hair, white flower hair ornament, dangling earrings, glamorous card face. WHITE nineteenth-century CRINOLINE HOOP-SKIRT gown inspired by Scarlett in Gone with the Wind: fitted period bodice, lace and full bell-shaped cage-supported skirt. NOT a modern halter dress.
+Baoshi: adult man, soft mature face, fluffy slightly long BLACK hair, NO GLASSES. ORNATE GOTHIC VAMPIRE couture: black velvet long coat, dark garnet brocade waistcoat, lace jabot, elaborate silver filigree, period trousers and boots. Preserve his exact card face.
+Feihong: adult man, shorter tidy BLACK hair, rectangular dark GLASSES, defined side profile distinct from Baoshi. Lestat / Interview with the Vampire inspired sumptuous long eighteenth/nineteenth-century court coat, dark plum velvet, embroidered waistcoat, ruffled ivory cravat, gloves. Use only the clothing vocabulary, NOT actor likeness, NOT blond hair. Preserve his card identity.
+Adrian: nineteenth-century vampire count whose face is explicitly BAOSHI from the supplied card: soft adult male face, fluffy slightly long BLACK hair, NO GLASSES. Formal dark embroidered court coat, waistcoat and cravat. Night eyes red unless the beat overrides them. Never add a second modern Baoshi when only Adrian is permitted.
+Felix: historic nineteenth-century man whose face is explicitly FEIHONG from supplied card: short tidy BLACK hair, rectangular dark GLASSES, angular side profile. Nineteenth-century court dress and ruffled cravat, distinct from Adrian. Spirit only when specified. No blond actor.
+
+Use first reference as composition/costume continuity. Preserve camera, room layout, faces and props except the explicit story changes. Other card refs lock faces, not their modern card clothing.
+
+For this event emphasize the requested physical action, not the old generic standing room pose.
+
+Current story beat: The absent witnesses Baoshi ornate gothic vampire and Feihong glasses plum Lestat-style coat appear fleetingly as two TRANSLUCENT SPIRITS holding hands and smiling farewell. Their lower bodies dissolve into fine notes. Bingbing listens. Double painting restored, no horror gore.
+
+Context immediately after: The player can investigate objects or speak; mentioned absent people must remain offscreen until their explicit transient encounter.

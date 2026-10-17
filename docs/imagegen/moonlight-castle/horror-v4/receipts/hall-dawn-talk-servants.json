@@ -1,0 +1,8 @@
+{
+  "id": "hall-dawn-talk-servants",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-c869d9c0-0b3a-4caa-a333-f29a9471db35.png",
+  "source": "assets/moonlight-castle/source/horror-v4/hall-dawn-talk-servants.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/hall-dawn-talk-servants.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

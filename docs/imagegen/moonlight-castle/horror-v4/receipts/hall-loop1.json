@@ -1,0 +1,9 @@
+{
+  "id":"hall-loop1",
+  "origin":"/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-9ab0dbf4-aeb2-4def-a009-6634c97fc842.png",
+  "source":"assets/moonlight-castle/source/horror-v4/hall-loop1.png",
+  "prompt":"docs/imagegen/moonlight-castle/horror-v4/prompts/hall-loop1.txt",
+  "generation":"single-image",
+  "tool":"image_gen Image2",
+  "correction":"Targeted edit replaced grand piano with nineteenth-century square piano; faces, cross, embers and layout retained."
+}

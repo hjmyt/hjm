@@ -1,4 +1,4 @@
-const {clickObject}=require('./helpers/castle-objects.cjs');
+const {clickObject,speakNpc}=require('./helpers/castle-objects.cjs');
 const { chromium }=require('playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),http=require('node:http');
 const {pathToFileURL}=require('node:url');
@@ -26,8 +26,9 @@ let browser;
  await p.click('#moonlightPumpkin');await p.locator('#modalContent a[href="moonlight-castle.html"]').click();await p.click('#start-btn');
  mainSave=await p.evaluate(()=>Object.fromEntries(Object.entries(localStorage).filter(([k])=>!k.startsWith('hjm-moonlight'))));
  await p.waitForFunction(()=>!CastleAudio.audio.paused);assert((await p.evaluate(()=>CastleAudio.audio.src)).includes('loop-one.mp3'));
- if(!requests.some(r=>r.includes('/dining-exploration-v3.webp')))await p.waitForRequest(r=>r.url().includes('/dining-exploration-v3.webp'),{timeout:5000});
- assert(requests.some(r=>r.includes('/dining-exploration-v3.webp')),'Next accessible room is preloaded from the unified hall');
+ const nextDining=await p.evaluate(()=>CastleSceneArt.resolve(G,{room:'dining',baseOnly:true}).asset);
+ if(!requests.some(r=>r.endsWith('/'+nextDining)))await p.waitForRequest(r=>r.url().endsWith('/'+nextDining),{timeout:5000});
+ assert(requests.some(r=>r.endsWith('/'+nextDining)),'Next accessible semantic room image is preloaded from the unified hall');
  const inspect=async id=>clickObject(p,id);
  const exit=async id=>{await p.locator('.castle-dock [data-castle-drawer=map]').click();await p.locator('#castle-map-nodes [data-travel="'+id+'"]').click();};
  const close=async()=>{if(await p.locator('#modal-overlay.active').count())await p.click('#modal-close');};
@@ -35,7 +36,7 @@ let browser;
  const piano=async loop=>{await inspect('piano');for(const i of ({1:[0,2,4,6,1],2:[3,5,0,2,4],3:[4,6,1,3,5]})[loop])await p.locator('.piano-key:not(.black)').nth(i).click();};
  const books=async loop=>{await inspect('bookshelf');for(const i of ({1:[0,1,2,3,4],2:[2,1,0,3,4],3:[1,4,0,2,3]})[loop])await p.locator('[data-book="'+i+'"]').click();};
  const dresser=async password=>{await inspect('dresser');for(let i=0;i<4;i++)await p.locator('#p'+(i+1)).fill(password[i]);};
- const speak=async npc=>{await p.locator('#people-tray [data-npc="'+npc+'"]').click();};
+ const speak=async npc=>speakNpc(p,npc);
  const answer=async text=>{await p.waitForSelector('#castle-answer');await p.fill('#castle-answer',text);await p.locator('#castle-answer-form button').click();};
  console.log('Entry and audio passed');await inspect('candle');await inspect('tapestry');await piano(1);await exit('study');await books(1);await inspect('globe');await exit('music');await inspect('harpsichord');await p.locator('.puzzle-piece').filter({hasText:'G#-Eb'}).click();await exit('bedroom');await inspect('bed');await dresser('1147');await exit('music');await exit('study');await exit('hall');await exit('dining');await inspect('table');await inspect('portrait_dining');await inspect('mirror');
  console.log('Loop 1 room puzzles passed');
@@ -80,8 +81,8 @@ let browser;
  await p.setInputFiles('#castle-import',{name:'bad.json',mimeType:'application/json',buffer:Buffer.from('{oops')});await p.locator('#modal-body h3').filter({hasText:'无法读取'}).waitFor();assert((await p.locator('#modal-body').innerText()).includes('无法读取'));await close();
  // Mobile, tablet and file:// direct play all retain a single responsive layout.
  for(const width of [320,390,720,768,1440]){
-   await p.setViewportSize({width,height:width<721?844:1000});await p.evaluate(()=>{closeModal();G.sunrise=false;G.loop=3;gotoRoom('dining');CastleUI.sync();});await p.locator('#people-tray [data-npc=servants]').click();
-   await p.waitForFunction(()=>document.getElementById('room-art').complete);assert((await p.locator('#room-art').getAttribute('src')).includes('dining-exploration-v3'));
+   await p.setViewportSize({width,height:width<721?844:1000});await p.evaluate(()=>{closeModal();G.sunrise=false;G.nextMorning=false;G.loop=3;gotoRoom('dining');CastleUI.sync();});await speakNpc(p,'servants');
+   await p.waitForFunction(()=>document.getElementById('room-art').complete);assert.equal(await p.locator('#room-art').getAttribute('src'),await p.evaluate(()=>CastleSceneArt.resolve(G).asset));
    const size=await p.evaluate(()=>({doc:document.documentElement.scrollWidth,view:innerWidth,images:[...document.querySelectorAll('#play-layout img')].filter(n=>!n.complete||!n.naturalWidth).map(n=>n.src)}));assert(size.doc<=size.view+1,'No overflow '+width);assert(await p.evaluate(()=>document.documentElement.scrollHeight<=innerHeight+1),'Single screen game '+width);assert.deepEqual(size.images,[]);
    await p.screenshot({path:'/tmp/hjm-castle-'+width+'.png',fullPage:true});
  }

@@ -1,0 +1,8 @@
+{
+  "id": "tower-loop2",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-d5a1e3af-ee65-4395-b574-f68a556d670a.png",
+  "source": "assets/moonlight-castle/source/horror-v4/tower-loop2.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/tower-loop2.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "bedroom-loop2",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-bd96001d-f160-410b-9d7a-164cc44a79a9.png",
+  "source": "assets/moonlight-castle/source/horror-v4/bedroom-loop2.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/bedroom-loop2.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

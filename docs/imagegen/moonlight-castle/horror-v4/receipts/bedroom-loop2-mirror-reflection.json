@@ -1,0 +1,8 @@
+{
+  "id": "bedroom-loop2-mirror-reflection",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-26472d33-9087-4cee-b76f-c377d1a28c8b.png",
+  "source": "assets/moonlight-castle/source/horror-v4/bedroom-loop2-mirror-reflection.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/bedroom-loop2-mirror-reflection.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

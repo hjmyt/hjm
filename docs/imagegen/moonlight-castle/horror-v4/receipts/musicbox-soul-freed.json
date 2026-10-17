@@ -1,0 +1,8 @@
+{
+  "id": "musicbox-soul-freed",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-b6173494-700f-4790-b127-faf0914b2a10.png",
+  "source": "assets/moonlight-castle/source/horror-v4/musicbox-soul-freed.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/musicbox-soul-freed.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

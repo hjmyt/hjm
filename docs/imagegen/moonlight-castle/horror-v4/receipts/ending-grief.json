@@ -1,0 +1,8 @@
+{
+  "id": "ending-grief",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-49a39b42-a698-4f01-b6e5-bf693fbb7307.png",
+  "source": "assets/moonlight-castle/source/horror-v4/ending-grief.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/ending-grief.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

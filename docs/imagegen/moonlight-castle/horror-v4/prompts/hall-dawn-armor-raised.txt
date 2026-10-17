@@ -1,0 +1,31 @@
+Warm relieved MORNING after the horror night, softly lit dusty nineteenth-century gothic castle, sunrise light, safe calm atmosphere and natural faces. High-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Preserve exact character identity, physical room architecture and costume continuity. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: The player explores this room after the previous loop, keeping the same architecture and card identities.
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): yeshiyang, tim, baoshi, feihong, bingbing, dijie, jerry, qiqi, shiyuan, lala.
+
+Painted/reflected identities only, NOT physical people: none.
+
+Explicit group exception: 同一实际地点明确在场的群像
+
+Identity and costume locks:
+Yeshiyang / Sebastian: adult man, short tousled WAVY black hair, rectangular black glasses, soft angular face from his card. Black long butler tailcoat, brass buttons, black bow tie, small SILVER CROSS brooch on chest.
+Tim: adult man, neat short dark hair, rectangular dark glasses, stronger mature face distinct from Sebastian. Silver knight armor, bare head, black underlayers. Initially EMPTY hands. An empty helmeted suit of armor is a separate lifeless prop, never another Tim.
+Baoshi: adult man, soft mature face, fluffy slightly long BLACK hair, NO GLASSES. ORNATE GOTHIC VAMPIRE couture: black velvet long coat, dark garnet brocade waistcoat, lace jabot, elaborate silver filigree, period trousers and boots. Preserve his exact card face.
+Feihong: adult man, shorter tidy BLACK hair, rectangular dark GLASSES, defined side profile distinct from Baoshi. Lestat / Interview with the Vampire inspired sumptuous long eighteenth/nineteenth-century court coat, dark plum velvet, embroidered waistcoat, ruffled ivory cravat, gloves. Use only the clothing vocabulary, NOT actor likeness, NOT blond hair. Preserve his card identity.
+Bingbing / Isabella: adult woman, long side-parted black hair, white flower hair ornament, dangling earrings, glamorous card face. WHITE nineteenth-century CRINOLINE HOOP-SKIRT gown inspired by Scarlett in Gone with the Wind: fitted period bodice, lace and full bell-shaped cage-supported skirt. NOT a modern halter dress.
+Dijie / Mr Lin: adult man, tousled dark hair, no glasses, same face as card. Chinese SONG-DYNASTY HANFU, pale grey-green cross-collar upper robe with very subtle BAMBOO-LEAF embroidery, long wide sleeves, dark long skirt/trousers and cloth shoes. Bamboo flute belongs to him. NO modern plaid shirt, NO sneakers.
+Jerry / Cecil: adult man, short messy BLACK hair, RECTANGULAR GLASSES, exact card face. NINETEENTH-CENTURY COURT NOBLE uniform: dark navy embroidered frock coat, gold braid, ivory cravat, brocade waistcoat, period trousers/boots. Brass trumpet belongs to him. NO T-shirt or jeans.
+Qiqi / Vivian: adult woman, dark updo and small floral hair ornaments, exact card face. Purple theatrical fortune-teller gown and purple embroidered shawl, holds tarot cards. NOT Lala.
+Shiyuan: adult woman, short wavy brown hair, golden star/flower hairpin, exact card face. Proper BLACK LONG-SLEEVED MAID DRESS, long skirt, WHITE APRON, white collar and white maid headband. NO cream knitted blouse.
+Lala / Selene: adult woman, brown SIDE PONYTAIL, PALE BOW, exact card face. Deep purple witch gown and hooded cape, holds a crystal sphere. NOT Qiqi.
+
+Use first reference as composition/costume continuity. Preserve camera, room layout, faces and props except the explicit story changes. Other card refs lock faces, not their modern card clothing.
+
+For this event emphasize the requested physical action, not the old generic standing room pose.
+
+Current story beat: Same TEN-CHARACTER morning ensemble, preserve every face/clothing/location and warm orange fire. Change only empty helmeted fallen armor at far right: Tim has now stood the EMPTY suit upright facing window, while the living bareheaded Tim remains beside it. Do not erase any companion.
+
+Context immediately after: The player can investigate objects or speak; mentioned absent people must remain offscreen until their explicit transient encounter.

@@ -57,6 +57,7 @@ function refreshNpcNames() {
 let NPC_TALK_COUNT = {};
 
 function startGame() {
+  CastleSceneArt.resetSession();
   CastleUI.enter();
   refreshNpcNames();
   showText('大厅里，壁炉的余烬还在冒烟。盔甲静静地站在角落。远处传来风声……奇怪的是，同伴们的名字，你一个也叫不出口了——像是被这座古堡悄悄吞掉了。');
@@ -99,11 +100,12 @@ const CastleDialogue = (() => {
   return { set, finish, get text() { return fullText; } };
 })();
 
-function showText(text, horror) {
+function showText(text, horror, sceneBeat = null) {
   // Authored formatting is converted to readable text; never display HTML markup.
   const template = document.createElement('div');
   template.innerHTML = String(text).replace(/<br\s*\/?\s*>/gi, '\n');
   CastleDialogue.set(template.textContent, !!horror);
+  CastleSceneArt.observe(CastleDialogue.text,G,sceneBeat);
   CastleUI.note(CastleDialogue.text, !!horror);
   CastleVoice.speak(CastleDialogue.text);
 }
@@ -202,7 +204,7 @@ function offerKeepsakeToAdrian() {
     diary_page: '艾德里安看到那页日记时，整个灵魂都在发抖。"你找到了……我烧了三次都没烧成的东西。"他深吸一口气，"在我彻底失控之前——快去，把剩下的都找回来。"',
     silver_key: '艾德里安认出了那把钥匙。"音乐室的钥匙……他总说我弹琴的声音能把锁都震开。"他苦笑，"好，我用这点时间，换你继续找下去。"'
   };
-  showText('你献出了「' + name + '」。' + lines[found] + '<br><br><span style="color:#cc6666;">⏳ 禁锢生效：在倒计时归零之前，找到并拼齐菲利克斯的信件，否则一切将无法挽回。</span>', true);
+  showText('你献出了「' + name + '」。' + lines[found] + '<br><br><span style="color:#cc6666;">⏳ 禁锢生效：在倒计时归零之前，找到并拼齐菲利克斯的信件，否则一切将无法挽回。</span>', true, 'adrian.keepsake.'+found);
   showAchievement('信物禁锢', '艾德里安暂时平静了');
 }
 function showAchievement(title, desc) {
@@ -291,11 +293,12 @@ function gotoRoom(room) {
   document.querySelectorAll('.scene').forEach(s => s.classList.remove('active'));
   document.getElementById('scene-' + room).classList.add('active');
   G.currentRoom = room;
+  CastleSceneArt.reset();
   G.moveCount++;
 
   // Room descriptions change based on loop and revisit count
   const desc = getRoomDescription(room, G.loop, visitCount);
-  showText(desc);
+  showText(desc,false,room==='bedroom'&&G.loop===2&&visitCount>1?'bedroom.mirror-reflection':null);
 
   // Apply loop visual changes
   applyLoopVisuals(room, G.loop);
@@ -565,15 +568,17 @@ function pickChaseMode() {
 function triggerAdrian() {
   // 灵魂残音庇护：艾德里安不会伤害菲利克斯看着的人
   if (hasItem('soul_fragment')) {
-    showText('艾德里安的身影从黑暗中逼近——他掌心的血光几乎触到你的咽喉。突然，你怀里的灵魂残音亮了。他的手指停在半空，剧烈地颤抖起来。', true);
-    setTimeout(() => {
-      showText('"是你……你一直在看着我们，对吗？"艾德里安踉跄后退，血红色的眼睛里第一次有了别的颜色。他退进黑暗里，声音飘过来："我不会伤害他看着的人。走吧——趁我还记得。"', true);
+    showText('艾德里安的身影从黑暗中逼近——他掌心的血光几乎触到你的咽喉。突然，你怀里的灵魂残音亮了。他的手指停在半空，剧烈地颤抖起来。',true,'adrian.soul-protection');
+    const encounterRoom=G.currentRoom, encounterLoop=G.loop;
+    CastleVoice.afterSpeech(() => {
+      if(G.currentRoom!==encounterRoom||G.loop!==encounterLoop||G.sunrise||CastleSceneArt.beat?.id!=='adrian.soul-protection')return;
+      showText('"是你……你一直在看着我们，对吗？"艾德里安踉跄后退，血红色的眼睛里第一次有了别的颜色。他退进黑暗里，声音飘过来："我不会伤害他看着的人。走吧——趁我还记得。"',true,'adrian.soul-protection');
     }, 2200);
     showAchievement('灵魂庇护', '菲利克斯替你挡下了他');
     return;
   }
   if (hasItem('candle') && G.candleLit) {
-    showText('艾德里安的身影在走廊尽头一闪而过。蜡烛的火光让他无法靠近。', true);
+    showText('艾德里安的身影在走廊尽头一闪而过。蜡烛的火光让他无法靠近。',true,'adrian.candle-repelled');
     return;
   }
   G.adrianChasing = true;
@@ -722,6 +727,7 @@ function updateQuestMarkers() {
 
 function examine(item) {
   if (G.adrianChasing) { showText('艾德里安就在附近……现在不能分心！', true); return; }
+  CastleSceneArt.examine(item,G);
   if (CASTLE_ROOMS[G.currentRoom].targets.some(([id]) => id === item)) {
     CastleAudio.effect(CASTLE_OBJECT_SOUNDS[item]);
   }
@@ -750,8 +756,24 @@ function examine(item) {
       showText('盔甲倒在地上，右手攥成了拳。你轻轻掰开——里面躺着一对银袖扣，扣面上刻着交叉的琴弓与笔。内侧有一行几乎磨平的字："写给他的第一千个清晨。"');
       addItem('cufflinks'); return;
     }
+    if (G.loop === 3) {
+      if (hasItem('brass_key')) {
+        showText('盔甲仍倒在地上，手里攥着半张乐谱。指缝里的黄铜钥匙已经被你取走了。');
+        return;
+      }
+      showText('盔甲倒在地上，手里攥着半张乐谱。你小心避开脆弱的纸边，从它松开的指缝里取出了一把黄铜钥匙。');
+      addItem('brass_key'); showAchievement('获得道具', '黄铜钥匙');
+      return;
+    }
     if (hasItem('brass_key')) { showText('盔甲手中空无一物。你已经拿走了钥匙。'); return; }
-    if (G.loop >= 2) {
+    if (G.loop >= 4) {
+      showText(G.flags.talk_tim_4_0
+        ? 'Tim已经把盔甲扶了起来。你从它松开的指缝里取出一把黄铜钥匙，半张乐谱仍安静地留在它手中。'
+        : '盔甲仍倒在地上，手里攥着半张乐谱。你从它松开的指缝里取出了一把黄铜钥匙。');
+      addItem('brass_key'); showAchievement('获得道具', '黄铜钥匙');
+      return;
+    }
+    if (G.loop === 2) {
       showText('盔甲的姿势变了。它不再面向门口，而是面向墙壁——面向一幅被划掉的肖像。它的手伸向前方，像是在挽留什么。');
       addItem('brass_key'); showAchievement('获得道具', '黄铜钥匙');
       return;
@@ -823,27 +845,27 @@ function examine(item) {
   }
 
   if (item === 'musicbox') {
-    if (hasItem('soul_fragment')) { showText('音乐盒已经空了。'); return; }
+    if (hasItem('soul_fragment')) { showText('音乐盒已经空了。',false,'object.musicbox.empty'); return; }
     if (!hasItem('mirror_shard')) {
       openModal('<h3>音乐盒</h3><p>一个精致的音乐盒，但发条锈死了。盒盖上刻着一行字：</p><p><b>"打开我的不是钥匙，是光。"</b></p><p>音乐盒旁边有一面镜子，也许可以用什么东西反射光线？</p>');
       return;
     }
     CastleAudio.effect('music-box');
     if (G.loop === 1) {
-      showText('你用碎镜片反射烛光，照进了音乐盒的缝隙。盒盖弹开，一道柔和的蓝光飘了出来——但它只是轻轻碰了碰你的手背，又缩了回去。像是认出了你不是它要等的人。');
+      showText('你用碎镜片反射烛光，照进了音乐盒的缝隙。盒盖弹开，一道柔和的蓝光飘了出来——但它只是轻轻碰了碰你的手背，又缩了回去。像是认出了你不是它要等的人。',false,'object.musicbox.refused');
     } else {
-      showText('你用碎镜片反射烛光，照进了音乐盒的缝隙。盒盖弹开，一道柔和的蓝光飘了出来——那是菲利克斯的灵魂残音，被封印了两百年。它绕着你转了三圈，最后安静地落在你掌心，像一只终于找到归途的鸟。');
+      showText('你用碎镜片反射烛光，照进了音乐盒的缝隙。盒盖弹开，一道柔和的蓝光飘了出来——那是菲利克斯的灵魂残音，被封印了两百年。它绕着你转了三圈，最后安静地落在你掌心，像一只终于找到归途的鸟。',false,'object.musicbox.freed');
       addItem('soul_fragment');
       showAchievement('灵魂解救', '菲利克斯的残音');
-      CastleVoice.afterSpeech(() => showText('灵魂残音在你掌心轻轻发烫。你忽然明白了——只要它还在你身边，艾德里安就不会真正伤害你。他不是不敢，是不忍：他不会伤害菲利克斯看着的人。'), 2500);
+      CastleVoice.afterSpeech(() => showText('灵魂残音在你掌心轻轻发烫。你忽然明白了——只要它还在你身边，艾德里安就不会真正伤害你。他不是不敢，是不忍：他不会伤害菲利克斯看着的人。',false,'object.musicbox.freed'), 2500);
     }
     return;
   }
 
   if (item === 'mirror') {
-    if (hasItem('mirror_shard')) { showText('镜子已经碎了，碎片被你收走了。'); return; }
+    if (hasItem('mirror_shard')) { showText('镜子已经碎了，碎片被你收走了。',false,'object.mirror.broken'); return; }
     CastleAudio.effect('glass');
-    showText(G.loop === 1 ? '你敲碎了一小块镜子。碎片中……映出的不是你的脸。' : '你敲碎了一小块镜子。碎片中映出了一个穿礼服的年轻人，他微笑着说："帮我把信带给他。告诉他，门外的雪不冷——真正冷的，是他一个人守着的那架琴。"');
+    showText(G.loop === 1 ? '你敲碎了一小块镜子。碎片中……映出的不是你的脸。' : '你敲碎了一小块镜子。碎片中映出了一个穿礼服的年轻人，他微笑着说："帮我把信带给他。告诉他，门外的雪不冷——真正冷的，是他一个人守着的那架琴。"',false,G.loop===1?'object.mirror.broken':'object.mirror.reflection');
     addItem('mirror_shard');
     return;
   }
@@ -935,7 +957,7 @@ function examine(item) {
   }
 
   if (item === 'violin_case') {
-    if (hasItem('bow')) { showText('小提琴盒是空的。'); return; }
+    if (hasItem('bow')) { showText('小提琴盒是空的。',false,'object.violin.empty'); return; }
     if (G.loop === 1 && !G.npcQuests.tim.started) { showText('一把精致的小提琴盒，但锁着。上面刻着："我的剑，用马尾编成。"'); return; }
     if (G.loop >= 2 && G.usedItems.has('bow')) {
       showText('琴盒里又躺着一把琴弓——循环把它送了回来。弓毛完好，像从未断过。');
@@ -996,7 +1018,7 @@ function examine(item) {
     if (!hasItem('assembled_letter')) { showText('风琴静静地立在月光下。你需要找到真相，才能演奏最后的安魂曲。'); return; }
     if (G.loop === 2) { showText('风琴安静地立在月光下。但琴盖是锁着的——上面写着："先把真相带到塔楼，再来弹我。"你需要先破解所有房间，拼齐菲利克斯的信件。'); return; }
     if (!hasItem('repaired_score')) { showText('你带来了真相，但安魂曲还没有补全。'); return; }
-    if (!hasItem('soul_fragment')) { showText('艾德里安挡住了风琴。"你以为一封信就能打动我吗？我要的是他……把他的灵魂带来。"', true); return; }
+    if (!hasItem('soul_fragment')) { showText('艾德里安挡住了风琴。"你以为一封信就能打动我吗？我要的是他……把他的灵魂带来。"',true,'adrian.blocks-organ'); return; }
     if (G.puzzleSolved.organ) { showText('风琴已经奏响过了。余音还留在月光里。'); return; }
 
     // ====== 结局不由你选择，而由你一路带来了什么决定 ======
@@ -1352,6 +1374,7 @@ function talk(npc) {
 
   const data = DIALOGUES[npc];
   if (!data) return;
+  CastleSceneArt.talk(npc,G);
 
   // ====== 第一循环 · 寻名 ======
   if (G.loop === 1 && NAME_PUZZLES[npc] && !G.names[npc]) {
@@ -1378,7 +1401,7 @@ function talk(npc) {
       return;
     }
     if (G.countdown.active) {
-      showText('艾德里安的身影被一层淡淡的金光笼罩着，像一尊暂时安静的雕像。他的声音直接在你脑海里响起："别管我……时间不多，去找他的信。"');
+      showText('艾德里安的身影被一层淡淡的金光笼罩着，像一尊暂时安静的雕像。他的声音直接在你脑海里响起："别管我……时间不多，去找他的信。"',false,'adrian.bound');
       return;
     }
   }
@@ -1417,9 +1440,9 @@ function talk(npc) {
     if (hasItem('assembled_letter') && hasItem('soul_fragment') && !G.flags.gave_final) {
       G.flags.gave_final = true;
       stopCountdown();
-      showText('艾德里安颤抖着接过信件和灵魂残音。他的手指穿过蓝光，但他仿佛能读到每一个字。两行眼泪无声地滑下来："……他原谅我了。两百年了，他早就原谅我了。他只是在等我……亲口问一句。"');
+      showText('艾德里安颤抖着接过信件和灵魂残音。他的手指穿过蓝光，但他仿佛能读到每一个字。两行眼泪无声地滑下来："……他原谅我了。两百年了，他早就原谅我了。他只是在等我……亲口问一句。"',false,'adrian.final-letter');
       CastleVoice.afterSpeech(() => {
-        showText('艾德里安小心地把信贴在胸口，走向风琴："这首曲子……我们还没有写完。但这一次，他会听到的。这一次，我弹给他听，也弹给日出听。"');
+        showText('艾德里安小心地把信贴在胸口，走向风琴："这首曲子……我们还没有写完。但这一次，他会听到的。这一次，我弹给他听，也弹给日出听。"',false,'adrian.final-letter-to-organ');
       }, 3500);
       return;
     }

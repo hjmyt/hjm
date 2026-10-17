@@ -1,0 +1,3966 @@
+{
+  "version": 4,
+  "frames": [
+    {
+      "id": "hall-loop1",
+      "source": "assets/moonlight-castle/source/horror-v4/hall-loop1.png",
+      "asset": "assets/moonlight-castle/horror-v4/hall-loop1.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/hall-loop1.txt",
+      "visibleCast": [
+        "yeshiyang",
+        "tim"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 277446,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/individual-v3/hall.png",
+        "assets/characters/yeshiyang-black-full-2026-10.webp",
+        "assets/characters/tim-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "hall-loop2",
+      "source": "assets/moonlight-castle/source/horror-v4/hall-loop2.png",
+      "asset": "assets/moonlight-castle/horror-v4/hall-loop2.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/hall-loop2.txt",
+      "visibleCast": [
+        "yeshiyang",
+        "tim"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 281740,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/hall-loop1.png",
+        "assets/characters/yeshiyang-black-full-2026-10.webp",
+        "assets/characters/tim-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "hall-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/hall-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/hall-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/hall-loop3.txt",
+      "visibleCast": [
+        "yeshiyang",
+        "tim"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 313266,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/hall-loop1.png",
+        "assets/characters/yeshiyang-black-full-2026-10.webp",
+        "assets/characters/tim-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "dining-loop1",
+      "source": "assets/moonlight-castle/source/horror-v4/dining-loop1.png",
+      "asset": "assets/moonlight-castle/horror-v4/dining-loop1.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/dining-loop1.txt",
+      "visibleCast": [
+        "bingbing",
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "groupException": "Explicit room group: each named character is physically present and interactable",
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 364294,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/individual-v3/dining.png",
+        "assets/characters/bingbing-full-2026-10.webp",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "dining-loop2",
+      "source": "assets/moonlight-castle/source/horror-v4/dining-loop2.png",
+      "asset": "assets/moonlight-castle/horror-v4/dining-loop2.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/dining-loop2.txt",
+      "visibleCast": [
+        "bingbing",
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "groupException": "Explicit room group: each named character is physically present and interactable",
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 404220,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop1.png",
+        "assets/characters/bingbing-full-2026-10.webp",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "dining-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/dining-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/dining-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/dining-loop3.txt",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 344838,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop1.png",
+        "assets/characters/bingbing-full-2026-10.webp",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "dining-dawn",
+      "source": "assets/moonlight-castle/source/horror-v4/dining-dawn.png",
+      "asset": "assets/moonlight-castle/horror-v4/dining-dawn.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/dining-dawn.txt",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 478610,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop1.png",
+        "assets/characters/bingbing-full-2026-10.webp",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "study-loop1",
+      "source": "assets/moonlight-castle/source/horror-v4/study-loop1.png",
+      "asset": "assets/moonlight-castle/horror-v4/study-loop1.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/study-loop1.txt",
+      "visibleCast": [
+        "dijie",
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 313950,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/individual-v3/study.png",
+        "assets/dijie-portrait-v2.webp",
+        "assets/qiqi-portrait.webp"
+      ]
+    },
+    {
+      "id": "study-loop2",
+      "source": "assets/moonlight-castle/source/horror-v4/study-loop2.png",
+      "asset": "assets/moonlight-castle/horror-v4/study-loop2.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/study-loop2.txt",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 307186,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/study-loop1.png",
+        "assets/qiqi-portrait.webp"
+      ]
+    },
+    {
+      "id": "study-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/study-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/study-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/study-loop3.txt",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 333234,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/study-loop1.png",
+        "assets/qiqi-portrait.webp"
+      ]
+    },
+    {
+      "id": "study-dawn",
+      "source": "assets/moonlight-castle/source/horror-v4/study-dawn.png",
+      "asset": "assets/moonlight-castle/horror-v4/study-dawn.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/study-dawn.txt",
+      "visibleCast": [
+        "dijie",
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 423078,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/study-loop1.png",
+        "assets/dijie-portrait-v2.webp",
+        "assets/qiqi-portrait.webp"
+      ]
+    },
+    {
+      "id": "music-loop1",
+      "source": "assets/moonlight-castle/source/horror-v4/music-loop1.png",
+      "asset": "assets/moonlight-castle/horror-v4/music-loop1.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/music-loop1.txt",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 255592,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/individual-v3/music.png",
+        "assets/jerry-portrait.webp"
+      ]
+    },
+    {
+      "id": "music-loop2",
+      "source": "assets/moonlight-castle/source/horror-v4/music-loop2.png",
+      "asset": "assets/moonlight-castle/horror-v4/music-loop2.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/music-loop2.txt",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 272848,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/music-loop1.png",
+        "assets/jerry-portrait.webp"
+      ]
+    },
+    {
+      "id": "music-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/music-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/music-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/music-loop3.txt",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 294632,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/music-loop1.png",
+        "assets/jerry-portrait.webp"
+      ]
+    },
+    {
+      "id": "music-dawn",
+      "source": "assets/moonlight-castle/source/horror-v4/music-dawn.png",
+      "asset": "assets/moonlight-castle/horror-v4/music-dawn.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/music-dawn.txt",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 332364,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/music-loop1.png",
+        "assets/jerry-portrait.webp"
+      ]
+    },
+    {
+      "id": "bedroom-loop1",
+      "source": "assets/moonlight-castle/source/horror-v4/bedroom-loop1.png",
+      "asset": "assets/moonlight-castle/horror-v4/bedroom-loop1.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/bedroom-loop1.txt",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 257434,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/individual-v3/bedroom.png",
+        "assets/shiyuan-portrait-v2.webp"
+      ]
+    },
+    {
+      "id": "bedroom-loop2",
+      "source": "assets/moonlight-castle/source/horror-v4/bedroom-loop2.png",
+      "asset": "assets/moonlight-castle/horror-v4/bedroom-loop2.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/bedroom-loop2.txt",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 267374,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/bedroom-loop1.png",
+        "assets/shiyuan-portrait-v2.webp"
+      ]
+    },
+    {
+      "id": "bedroom-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/bedroom-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/bedroom-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/bedroom-loop3.txt",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 263650,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/bedroom-loop1.png",
+        "assets/shiyuan-portrait-v2.webp",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "bedroom-dawn",
+      "source": "assets/moonlight-castle/source/horror-v4/bedroom-dawn.png",
+      "asset": "assets/moonlight-castle/horror-v4/bedroom-dawn.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/bedroom-dawn.txt",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 389506,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/bedroom-loop1.png",
+        "assets/shiyuan-portrait-v2.webp"
+      ]
+    },
+    {
+      "id": "cellar-loop1",
+      "source": "assets/moonlight-castle/source/horror-v4/cellar-loop1.png",
+      "asset": "assets/moonlight-castle/horror-v4/cellar-loop1.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/cellar-loop1.txt",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 260228,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/individual-v3/cellar.png",
+        "assets/cardLala.webp"
+      ]
+    },
+    {
+      "id": "cellar-loop2",
+      "source": "assets/moonlight-castle/source/horror-v4/cellar-loop2.png",
+      "asset": "assets/moonlight-castle/horror-v4/cellar-loop2.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/cellar-loop2.txt",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 282276,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/cellar-loop1.png",
+        "assets/cardLala.webp"
+      ]
+    },
+    {
+      "id": "cellar-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/cellar-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/cellar-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/cellar-loop3.txt",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 270382,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/cellar-loop1.png",
+        "assets/cardLala.webp"
+      ]
+    },
+    {
+      "id": "cellar-dawn",
+      "source": "assets/moonlight-castle/source/horror-v4/cellar-dawn.png",
+      "asset": "assets/moonlight-castle/horror-v4/cellar-dawn.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/cellar-dawn.txt",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 354882,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/cellar-loop1.png",
+        "assets/cardLala.webp"
+      ]
+    },
+    {
+      "id": "tower-loop1",
+      "source": "assets/moonlight-castle/source/horror-v4/tower-loop1.png",
+      "asset": "assets/moonlight-castle/horror-v4/tower-loop1.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/tower-loop1.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 301704,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/individual-v3/tower.png"
+      ]
+    },
+    {
+      "id": "tower-loop2",
+      "source": "assets/moonlight-castle/source/horror-v4/tower-loop2.png",
+      "asset": "assets/moonlight-castle/horror-v4/tower-loop2.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/tower-loop2.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 299396,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop1.png"
+      ]
+    },
+    {
+      "id": "tower-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/tower-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/tower-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/tower-loop3.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 277564,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop1.png",
+        "assets/characters/baoshi-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "tower-dawn",
+      "source": "assets/moonlight-castle/source/horror-v4/tower-dawn.png",
+      "asset": "assets/moonlight-castle/horror-v4/tower-dawn.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/tower-dawn.txt",
+      "visibleCast": [
+        "adrian",
+        "felix"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 377578,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop1.png",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "hall-morning",
+      "source": "assets/moonlight-castle/source/horror-v4/hall-morning.png",
+      "asset": "assets/moonlight-castle/horror-v4/hall-morning.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/hall-morning.txt",
+      "visibleCast": [
+        "yeshiyang",
+        "tim",
+        "baoshi",
+        "feihong",
+        "bingbing",
+        "dijie",
+        "jerry",
+        "qiqi",
+        "shiyuan",
+        "lala"
+      ],
+      "paintedCast": [],
+      "groupException": "原文明确十位乐团同伴在大厅醒来，十名各一次，旧世伯爵与灵影不加入",
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 480456,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/hall-loop3.png",
+        "docs/imagegen/moonlight-castle/horror-v4/references/cast-a.png",
+        "docs/imagegen/moonlight-castle/horror-v4/references/cast-b.png"
+      ]
+    },
+    {
+      "id": "hall-loop2-examine-armor",
+      "source": "assets/moonlight-castle/source/horror-v4/hall-loop2-examine-armor.png",
+      "asset": "assets/moonlight-castle/horror-v4/hall-loop2-examine-armor.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/hall-loop2-examine-armor.txt",
+      "visibleCast": [
+        "yeshiyang",
+        "tim"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 340766,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/hall-loop2.png",
+        "assets/characters/yeshiyang-black-full-2026-10.webp",
+        "assets/characters/tim-full-2026-10.webp",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "hall-dawn-armor-raised",
+      "source": "assets/moonlight-castle/source/horror-v4/hall-dawn-armor-raised.png",
+      "asset": "assets/moonlight-castle/horror-v4/hall-dawn-armor-raised.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/hall-dawn-armor-raised.txt",
+      "visibleCast": [
+        "yeshiyang",
+        "tim",
+        "baoshi",
+        "feihong",
+        "bingbing",
+        "dijie",
+        "jerry",
+        "qiqi",
+        "shiyuan",
+        "lala"
+      ],
+      "paintedCast": [],
+      "groupException": "同一实际地点明确在场的群像",
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 457510,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/hall-morning.png",
+        "docs/imagegen/moonlight-castle/horror-v4/references/cast-a.png",
+        "docs/imagegen/moonlight-castle/horror-v4/references/cast-b.png"
+      ]
+    },
+    {
+      "id": "dining-loop3-portrait-reveal",
+      "source": "assets/moonlight-castle/source/horror-v4/dining-loop3-portrait-reveal.png",
+      "asset": "assets/moonlight-castle/horror-v4/dining-loop3-portrait-reveal.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/dining-loop3-portrait-reveal.txt",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 318344,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop3.png",
+        "assets/characters/bingbing-full-2026-10.webp",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "study-loop2-talk-dijie",
+      "source": "assets/moonlight-castle/source/horror-v4/study-loop2-talk-dijie.png",
+      "asset": "assets/moonlight-castle/horror-v4/study-loop2-talk-dijie.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/study-loop2-talk-dijie.txt",
+      "visibleCast": [
+        "dijie",
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 307364,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/study-loop2.png",
+        "assets/dijie-portrait-v2.webp",
+        "assets/qiqi-portrait.webp"
+      ]
+    },
+    {
+      "id": "study-loop3-talk-dijie",
+      "source": "assets/moonlight-castle/source/horror-v4/study-loop3-talk-dijie.png",
+      "asset": "assets/moonlight-castle/horror-v4/study-loop3-talk-dijie.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/study-loop3-talk-dijie.txt",
+      "visibleCast": [
+        "dijie",
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 348764,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/study-loop3.png",
+        "assets/dijie-portrait-v2.webp",
+        "assets/qiqi-portrait.webp"
+      ]
+    },
+    {
+      "id": "dining-loop3-talk-servants",
+      "source": "assets/moonlight-castle/source/horror-v4/dining-loop3-talk-servants.png",
+      "asset": "assets/moonlight-castle/horror-v4/dining-loop3-talk-servants.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/dining-loop3-talk-servants.txt",
+      "visibleCast": [
+        "bingbing",
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "groupException": "同一实际地点明确在场的群像",
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 377218,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop3-portrait-reveal.png",
+        "assets/characters/bingbing-full-2026-10.webp",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "tower-loop2-talk-adrian",
+      "source": "assets/moonlight-castle/source/horror-v4/tower-loop2-talk-adrian.png",
+      "asset": "assets/moonlight-castle/horror-v4/tower-loop2-talk-adrian.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/tower-loop2-talk-adrian.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 248054,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop2.png",
+        "assets/characters/baoshi-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "adrian-bound",
+      "source": "assets/moonlight-castle/source/horror-v4/adrian-bound.png",
+      "asset": "assets/moonlight-castle/horror-v4/adrian-bound.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/adrian-bound.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 242136,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop2-talk-adrian.png",
+        "assets/characters/baoshi-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "adrian-final-letter",
+      "source": "assets/moonlight-castle/source/horror-v4/adrian-final-letter.png",
+      "asset": "assets/moonlight-castle/horror-v4/adrian-final-letter.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/adrian-final-letter.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 269038,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop3.png",
+        "assets/characters/baoshi-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "adrian-blocks-organ",
+      "source": "assets/moonlight-castle/source/horror-v4/adrian-blocks-organ.png",
+      "asset": "assets/moonlight-castle/horror-v4/adrian-blocks-organ.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/adrian-blocks-organ.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 264652,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop3.png",
+        "assets/characters/baoshi-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "adrian-soul-protection",
+      "source": "assets/moonlight-castle/source/horror-v4/adrian-soul-protection.png",
+      "asset": "assets/moonlight-castle/horror-v4/adrian-soul-protection.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/adrian-soul-protection.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 173176,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop2-talk-adrian.png",
+        "assets/characters/baoshi-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "adrian-candle-repelled",
+      "source": "assets/moonlight-castle/source/horror-v4/adrian-candle-repelled.png",
+      "asset": "assets/moonlight-castle/horror-v4/adrian-candle-repelled.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/adrian-candle-repelled.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 232238,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop2-talk-adrian.png",
+        "assets/characters/baoshi-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "musicbox-loop1-refused",
+      "source": "assets/moonlight-castle/source/horror-v4/musicbox-loop1-refused.png",
+      "asset": "assets/moonlight-castle/horror-v4/musicbox-loop1-refused.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/musicbox-loop1-refused.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 274434,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop1.png"
+      ]
+    },
+    {
+      "id": "musicbox-soul-freed",
+      "source": "assets/moonlight-castle/source/horror-v4/musicbox-soul-freed.png",
+      "asset": "assets/moonlight-castle/horror-v4/musicbox-soul-freed.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/musicbox-soul-freed.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 351688,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop2.png"
+      ]
+    },
+    {
+      "id": "musicbox-empty",
+      "source": "assets/moonlight-castle/source/horror-v4/musicbox-empty.png",
+      "asset": "assets/moonlight-castle/horror-v4/musicbox-empty.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/musicbox-empty.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 348080,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop2.png"
+      ]
+    },
+    {
+      "id": "mirror-broken",
+      "source": "assets/moonlight-castle/source/horror-v4/mirror-broken.png",
+      "asset": "assets/moonlight-castle/horror-v4/mirror-broken.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/mirror-broken.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 393190,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop2.png"
+      ]
+    },
+    {
+      "id": "mirror-felix-reflection",
+      "source": "assets/moonlight-castle/source/horror-v4/mirror-felix-reflection.png",
+      "asset": "assets/moonlight-castle/horror-v4/mirror-felix-reflection.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/mirror-felix-reflection.txt",
+      "visibleCast": [],
+      "paintedCast": [
+        "felix"
+      ],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 362594,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop2.png",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "bedroom-loop2-mirror-reflection",
+      "source": "assets/moonlight-castle/source/horror-v4/bedroom-loop2-mirror-reflection.png",
+      "asset": "assets/moonlight-castle/horror-v4/bedroom-loop2-mirror-reflection.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/bedroom-loop2-mirror-reflection.txt",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 289240,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/bedroom-loop2.png",
+        "assets/shiyuan-portrait-v2.webp",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "violin-case-empty",
+      "source": "assets/moonlight-castle/source/horror-v4/violin-case-empty.png",
+      "asset": "assets/moonlight-castle/horror-v4/violin-case-empty.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/violin-case-empty.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 272072,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/music-loop2.png"
+      ]
+    },
+    {
+      "id": "hall-dawn-talk-servants",
+      "source": "assets/moonlight-castle/source/horror-v4/hall-dawn-talk-servants.png",
+      "asset": "assets/moonlight-castle/horror-v4/hall-dawn-talk-servants.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/hall-dawn-talk-servants.txt",
+      "visibleCast": [
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 388728,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/hall-morning.png",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "hall-dawn-talk-shiyuan",
+      "source": "assets/moonlight-castle/source/horror-v4/hall-dawn-talk-shiyuan.png",
+      "asset": "assets/moonlight-castle/horror-v4/hall-dawn-talk-shiyuan.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/hall-dawn-talk-shiyuan.txt",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 354692,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/hall-morning.png",
+        "assets/shiyuan-portrait-v2.webp"
+      ]
+    },
+    {
+      "id": "dining-dawn-talk-bingbing",
+      "source": "assets/moonlight-castle/source/horror-v4/dining-dawn-talk-bingbing.png",
+      "asset": "assets/moonlight-castle/horror-v4/dining-dawn-talk-bingbing.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/dining-dawn-talk-bingbing.txt",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 440516,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-dawn.png",
+        "assets/characters/bingbing-full-2026-10.webp",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "loop-death",
+      "source": "assets/moonlight-castle/source/horror-v4/loop-death.png",
+      "asset": "assets/moonlight-castle/horror-v4/loop-death.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/loop-death.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 224794,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop2-talk-adrian.png",
+        "assets/characters/baoshi-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "loop-truth",
+      "source": "assets/moonlight-castle/source/horror-v4/loop-truth.png",
+      "asset": "assets/moonlight-castle/horror-v4/loop-truth.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/loop-truth.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 294630,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop2.png"
+      ]
+    },
+    {
+      "id": "wrong-ending",
+      "source": "assets/moonlight-castle/source/horror-v4/wrong-ending.png",
+      "asset": "assets/moonlight-castle/horror-v4/wrong-ending.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/wrong-ending.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 232958,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop2-talk-adrian.png",
+        "assets/characters/baoshi-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "pursuit",
+      "source": "assets/moonlight-castle/source/horror-v4/pursuit.png",
+      "asset": "assets/moonlight-castle/horror-v4/pursuit.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/pursuit.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 180668,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop2-talk-adrian.png",
+        "assets/characters/baoshi-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "score-restored",
+      "source": "assets/moonlight-castle/source/horror-v4/score-restored.png",
+      "asset": "assets/moonlight-castle/horror-v4/score-restored.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/score-restored.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 286802,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop2.png"
+      ]
+    },
+    {
+      "id": "ending-grief",
+      "source": "assets/moonlight-castle/source/horror-v4/ending-grief.png",
+      "asset": "assets/moonlight-castle/horror-v4/ending-grief.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/ending-grief.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 359506,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop3.png",
+        "assets/characters/baoshi-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "ending-tenderness",
+      "source": "assets/moonlight-castle/source/horror-v4/ending-tenderness.png",
+      "asset": "assets/moonlight-castle/horror-v4/ending-tenderness.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/ending-tenderness.txt",
+      "visibleCast": [
+        "adrian",
+        "felix"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 449978,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop3.png",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "ending-farewell",
+      "source": "assets/moonlight-castle/source/horror-v4/ending-farewell.png",
+      "asset": "assets/moonlight-castle/horror-v4/ending-farewell.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/ending-farewell.txt",
+      "visibleCast": [
+        "adrian",
+        "felix"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 465232,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/tower-loop3.png",
+        "assets/characters/baoshi-full-2026-10.webp",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "exterior",
+      "source": "assets/moonlight-castle/source/horror-v4/exterior.png",
+      "asset": "assets/moonlight-castle/horror-v4/exterior.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/exterior.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 372010,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/individual-v3/exterior.png"
+      ]
+    },
+    {
+      "id": "musicbox-empty-loop1",
+      "source": "assets/moonlight-castle/source/horror-v4/musicbox-empty-loop1.png",
+      "asset": "assets/moonlight-castle/horror-v4/musicbox-empty-loop1.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/musicbox-empty-loop1.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 291804,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop1.png",
+        "assets/moonlight-castle/source/horror-v4/musicbox-empty.png"
+      ]
+    },
+    {
+      "id": "musicbox-empty-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/musicbox-empty-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/musicbox-empty-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/musicbox-empty-loop3.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 330904,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop3.png",
+        "assets/moonlight-castle/source/horror-v4/musicbox-empty.png"
+      ]
+    },
+    {
+      "id": "musicbox-empty-dawn",
+      "source": "assets/moonlight-castle/source/horror-v4/musicbox-empty-dawn.png",
+      "asset": "assets/moonlight-castle/horror-v4/musicbox-empty-dawn.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/musicbox-empty-dawn.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 365488,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-dawn.png",
+        "assets/moonlight-castle/source/horror-v4/musicbox-empty.png"
+      ]
+    },
+    {
+      "id": "violin-case-empty-loop1",
+      "source": "assets/moonlight-castle/source/horror-v4/violin-case-empty-loop1.png",
+      "asset": "assets/moonlight-castle/horror-v4/violin-case-empty-loop1.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/violin-case-empty-loop1.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 253682,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/music-loop1.png",
+        "assets/moonlight-castle/source/horror-v4/violin-case-empty.png"
+      ]
+    },
+    {
+      "id": "violin-case-empty-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/violin-case-empty-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/violin-case-empty-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/violin-case-empty-loop3.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 250668,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/music-loop3.png",
+        "assets/moonlight-castle/source/horror-v4/violin-case-empty.png"
+      ]
+    },
+    {
+      "id": "violin-case-empty-dawn",
+      "source": "assets/moonlight-castle/source/horror-v4/violin-case-empty-dawn.png",
+      "asset": "assets/moonlight-castle/horror-v4/violin-case-empty-dawn.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/violin-case-empty-dawn.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 343396,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/music-dawn.png",
+        "assets/moonlight-castle/source/horror-v4/violin-case-empty.png"
+      ]
+    },
+    {
+      "id": "mirror-broken-loop1",
+      "source": "assets/moonlight-castle/source/horror-v4/mirror-broken-loop1.png",
+      "asset": "assets/moonlight-castle/horror-v4/mirror-broken-loop1.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/mirror-broken-loop1.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 406108,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop1.png",
+        "assets/moonlight-castle/source/horror-v4/mirror-broken.png"
+      ]
+    },
+    {
+      "id": "mirror-broken-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/mirror-broken-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/mirror-broken-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/mirror-broken-loop3.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 389036,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop3.png",
+        "assets/moonlight-castle/source/horror-v4/mirror-broken.png"
+      ]
+    },
+    {
+      "id": "mirror-broken-dawn",
+      "source": "assets/moonlight-castle/source/horror-v4/mirror-broken-dawn.png",
+      "asset": "assets/moonlight-castle/horror-v4/mirror-broken-dawn.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/mirror-broken-dawn.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 460158,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-dawn.png",
+        "assets/moonlight-castle/source/horror-v4/mirror-broken.png"
+      ]
+    },
+    {
+      "id": "mirror-felix-reflection-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/mirror-felix-reflection-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/mirror-felix-reflection-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/mirror-felix-reflection-loop3.txt",
+      "visibleCast": [],
+      "paintedCast": [
+        "felix"
+      ],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 356026,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop3.png",
+        "assets/moonlight-castle/source/horror-v4/mirror-felix-reflection.png",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "mirror-felix-reflection-dawn",
+      "source": "assets/moonlight-castle/source/horror-v4/mirror-felix-reflection-dawn.png",
+      "asset": "assets/moonlight-castle/horror-v4/mirror-felix-reflection-dawn.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/mirror-felix-reflection-dawn.txt",
+      "visibleCast": [],
+      "paintedCast": [
+        "felix"
+      ],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 429458,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-dawn.png",
+        "assets/moonlight-castle/source/horror-v4/mirror-felix-reflection.png",
+        "assets/characters/feihong-full-2026-10.webp"
+      ]
+    },
+    {
+      "id": "musicbox-soul-freed-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/musicbox-soul-freed-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/musicbox-soul-freed-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/musicbox-soul-freed-loop3.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 271644,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-loop3.png",
+        "assets/moonlight-castle/source/horror-v4/musicbox-soul-freed.png"
+      ]
+    },
+    {
+      "id": "musicbox-soul-freed-dawn",
+      "source": "assets/moonlight-castle/source/horror-v4/musicbox-soul-freed-dawn.png",
+      "asset": "assets/moonlight-castle/horror-v4/musicbox-soul-freed-dawn.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/musicbox-soul-freed-dawn.txt",
+      "visibleCast": [],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 332594,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/dining-dawn.png",
+        "assets/moonlight-castle/source/horror-v4/musicbox-soul-freed.png"
+      ]
+    },
+    {
+      "id": "adrian-soul-protection-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/adrian-soul-protection-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/adrian-soul-protection-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/adrian-soul-protection-loop3.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 182784,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/adrian-soul-protection.png"
+      ]
+    },
+    {
+      "id": "adrian-candle-repelled-loop3",
+      "source": "assets/moonlight-castle/source/horror-v4/adrian-candle-repelled-loop3.png",
+      "asset": "assets/moonlight-castle/horror-v4/adrian-candle-repelled-loop3.webp",
+      "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/adrian-candle-repelled-loop3.txt",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "groupException": null,
+      "sourceWidth": 1448,
+      "sourceHeight": 1086,
+      "width": 1448,
+      "height": 1086,
+      "bytes": 190422,
+      "generation": "single-image",
+      "references": [
+        "assets/moonlight-castle/source/horror-v4/adrian-candle-repelled.png"
+      ]
+    }
+  ],
+  "aliases": {
+    "hall-dawn": "hall-morning",
+    "dining-loop3-portrait-veiled": "dining-loop3",
+    "adrian-bound-ring": "adrian-bound",
+    "adrian-bound-pocket-watch": "adrian-bound",
+    "adrian-bound-wine": "adrian-bound",
+    "adrian-bound-diary": "adrian-bound",
+    "adrian-bound-key": "adrian-bound",
+    "adrian-final-letter-to-organ": "adrian-final-letter"
+  },
+  "eventPhaseBindings": {
+    "object.musicbox.empty": {
+      "loop1": "musicbox-empty-loop1",
+      "loop2": "musicbox-empty",
+      "loop3": "musicbox-empty-loop3",
+      "dawn": "musicbox-empty-dawn"
+    },
+    "object.violin.empty": {
+      "loop1": "violin-case-empty-loop1",
+      "loop2": "violin-case-empty",
+      "loop3": "violin-case-empty-loop3",
+      "dawn": "violin-case-empty-dawn"
+    },
+    "object.mirror.broken": {
+      "loop1": "mirror-broken-loop1",
+      "loop2": "mirror-broken",
+      "loop3": "mirror-broken-loop3",
+      "dawn": "mirror-broken-dawn"
+    },
+    "object.mirror.reflection": {
+      "loop2": "mirror-felix-reflection",
+      "loop3": "mirror-felix-reflection-loop3",
+      "dawn": "mirror-felix-reflection-dawn"
+    },
+    "object.musicbox.freed": {
+      "loop2": "musicbox-soul-freed",
+      "loop3": "musicbox-soul-freed-loop3",
+      "dawn": "musicbox-soul-freed-dawn"
+    },
+    "adrian.soul-protection": {
+      "loop2": "adrian-soul-protection",
+      "loop3": "adrian-soul-protection-loop3"
+    },
+    "adrian.candle-repelled": {
+      "loop2": "adrian-candle-repelled",
+      "loop3": "adrian-candle-repelled-loop3"
+    }
+  },
+  "dialogueBindings": [
+    {
+      "sourceId": "talk.siyang.1.0.text",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 1,
+      "suggestedFrame": "hall-loop1-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入hall对应周目，或本角色当下会话开始",
+      "Current story beat": "叶思阳整了整领结，面色惨白：\"这座古堡……不是我租下的那座。至少不是同一座。这身制服是自动出现在我身上的。还有登记簿……上面多了一行被涂掉的名字。\"",
+      "Context immediately after": "\"飞鸿出去多久了？半小时？一小时？我记不清了。这里的时间……不太对劲。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.siyang.1.1.text",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 1,
+      "suggestedFrame": "hall-loop1-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "叶思阳整了整领结，面色惨白：\"这座古堡……不是我租下的那座。至少不是同一座。这身制服是自动出现在我身上的。还有登记簿……上面多了一行被涂掉的名字。\"",
+      "Current story beat": "\"飞鸿出去多久了？半小时？一小时？我记不清了。这里的时间……不太对劲。\"",
+      "Context immediately after": "\"你看那个盔甲。我总觉得它在动。不是整个动，是……手指。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.siyang.1.2.text",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 1,
+      "suggestedFrame": "hall-loop1-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"飞鸿出去多久了？半小时？一小时？我记不清了。这里的时间……不太对劲。\"",
+      "Current story beat": "\"你看那个盔甲。我总觉得它在动。不是整个动，是……手指。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.siyang.2.0.text",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 2,
+      "suggestedFrame": "hall-loop2-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入hall对应周目，或本角色当下会话开始",
+      "Current story beat": "叶思阳看着你，眼神变了：\"你……也死过一次了，对吗？我能看出来。你身上的气息和之前不一样了。\"",
+      "Context immediately after": "\"这座古堡在循环。每次循环，真相就会多露出一点。我第一次死的时候，看到了一幅画——两个男人抱在一起。其中一个被划掉了脸。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.siyang.2.1.text",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 2,
+      "suggestedFrame": "hall-loop2-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "叶思阳看着你，眼神变了：\"你……也死过一次了，对吗？我能看出来。你身上的气息和之前不一样了。\"",
+      "Current story beat": "\"这座古堡在循环。每次循环，真相就会多露出一点。我第一次死的时候，看到了一幅画——两个男人抱在一起。其中一个被划掉了脸。\"",
+      "Context immediately after": "\"把你知道的给我看看。任何关于这座古堡的东西。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.siyang.2.2.text",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 2,
+      "suggestedFrame": "hall-loop2-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"这座古堡在循环。每次循环，真相就会多露出一点。我第一次死的时候，看到了一幅画——两个男人抱在一起。其中一个被划掉了脸。\"",
+      "Current story beat": "\"把你知道的给我看看。任何关于这座古堡的东西。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.siyang.2.2.giftText",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 2,
+      "suggestedFrame": "hall-loop2-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"这座古堡在循环。每次循环，真相就会多露出一点。我第一次死的时候，看到了一幅画——两个男人抱在一起。其中一个被划掉了脸。\"",
+      "Current story beat": "\"焦信……这是艾德里安的笔迹。等等，不是写给别人的，是写给自己的。\"叶思阳的手在抖，\"他在责备自己。壁炉旁……那是菲利克斯最喜欢坐的地方。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": "burnt_letter_a"
+    },
+    {
+      "sourceId": "talk.siyang.3.0.text",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 3,
+      "suggestedFrame": "hall-loop3-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入hall对应周目，或本角色当下会话开始",
+      "Current story beat": "叶思阳站在壁炉旁，微笑：\"循环结束了。你看，壁炉的火重新燃起来了。是蓝色的。但我不再害怕了。\"",
+      "Context immediately after": "\"艾德里安和菲利克斯……他们最后是幸福的。至少在这个故事里。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.siyang.3.1.text",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 3,
+      "suggestedFrame": "hall-loop3-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "叶思阳站在壁炉旁，微笑：\"循环结束了。你看，壁炉的火重新燃起来了。是蓝色的。但我不再害怕了。\"",
+      "Current story beat": "\"艾德里安和菲利克斯……他们最后是幸福的。至少在这个故事里。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.siyang.4.0.text",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 4,
+      "suggestedFrame": "hall-dawn-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入hall对应周目，或本角色当下会话开始",
+      "Current story beat": "叶思阳整了整领结，把登记簿递给你看：\"奇怪……上面那行被涂黑的名字，现在能看清了。\"登记簿上，1823年12月那一栏清清楚楚地写着：<b>菲利克斯</b>。旁边多了一行新的字迹，像是刚刚写上去的：\"——欢迎回家。\"",
+      "Context immediately after": "\"对了，\"他忽然想起什么，\"昨晚上我好像不是管家……我是说，在梦里。我穿着两百年前的制服，站在壁炉边，替两位主人挡了一夜的门。\"他笑了笑，\"也许我们每个人都曾是这座古堡的一部分。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.siyang.4.1.text",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 4,
+      "suggestedFrame": "hall-dawn-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "叶思阳整了整领结，把登记簿递给你看：\"奇怪……上面那行被涂黑的名字，现在能看清了。\"登记簿上，1823年12月那一栏清清楚楚地写着：<b>菲利克斯</b>。旁边多了一行新的字迹，像是刚刚写上去的：\"——欢迎回家。\"",
+      "Current story beat": "\"对了，\"他忽然想起什么，\"昨晚上我好像不是管家……我是说，在梦里。我穿着两百年前的制服，站在壁炉边，替两位主人挡了一夜的门。\"他笑了笑，\"也许我们每个人都曾是这座古堡的一部分。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.bingbing.1.0.text",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 1,
+      "suggestedFrame": "dining-loop1-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入dining对应周目，或本角色当下会话开始",
+      "Current story beat": "冰冰穿着白色的长裙，眼神虚幻：\"你……不是他。但他也不会来了。\"",
+      "Context immediately after": "\"肖像画中有两个人。但其中一个的脸被刀划掉了。刀痕……是新的。不是两百年前的。是刚才。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.bingbing.1.1.text",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 1,
+      "suggestedFrame": "dining-loop1-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "冰冰穿着白色的长裙，眼神虚幻：\"你……不是他。但他也不会来了。\"",
+      "Current story beat": "\"肖像画中有两个人。但其中一个的脸被刀划掉了。刀痕……是新的。不是两百年前的。是刚才。\"",
+      "Context immediately after": "\"别盯着画看太久。它会盯回来。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 双人画像属于paintedCast，不是跨时空实体到场。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.bingbing.1.2.text",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 1,
+      "suggestedFrame": "dining-loop1-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"肖像画中有两个人。但其中一个的脸被刀划掉了。刀痕……是新的。不是两百年前的。是刚才。\"",
+      "Current story beat": "\"别盯着画看太久。它会盯回来。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.bingbing.2.0.text",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 2,
+      "suggestedFrame": "dining-loop2-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入dining对应周目，或本角色当下会话开始",
+      "Current story beat": "冰冰的眼中流下两行血泪：\"你回来了。我知道你会回来。每一次循环，画就会多流一点血。\"",
+      "Context immediately after": "\"我叫伊莎贝拉。我曾经是艾德里安的表妹。我爱他，但他爱的是那个拉小提琴的。菲利克斯。一个没落贵族的儿子。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 双人画像属于paintedCast，不是跨时空实体到场。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.bingbing.2.1.text",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 2,
+      "suggestedFrame": "dining-loop2-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "冰冰的眼中流下两行血泪：\"你回来了。我知道你会回来。每一次循环，画就会多流一点血。\"",
+      "Current story beat": "\"我叫伊莎贝拉。我曾经是艾德里安的表妹。我爱他，但他爱的是那个拉小提琴的。菲利克斯。一个没落贵族的儿子。\"",
+      "Context immediately after": "\"把你知道的给我。关于那幅画的。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.bingbing.2.2.text",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 2,
+      "suggestedFrame": "dining-loop2-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"我叫伊莎贝拉。我曾经是艾德里安的表妹。我爱他，但他爱的是那个拉小提琴的。菲利克斯。一个没落贵族的儿子。\"",
+      "Current story beat": "\"把你知道的给我。关于那幅画的。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.bingbing.2.2.giftText",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 2,
+      "suggestedFrame": "dining-loop2-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"我叫伊莎贝拉。我曾经是艾德里安的表妹。我爱他，但他爱的是那个拉小提琴的。菲利克斯。一个没落贵族的儿子。\"",
+      "Current story beat": "\"焦信B……这是菲利克斯的笔迹。等等，他在原谅艾德里安？在知道被赶出去之后？\"冰冰闭上眼，\"原来……他早就知道信是伪造的。他还是选择原谅。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": "burnt_letter_b"
+    },
+    {
+      "sourceId": "talk.bingbing.3.0.text",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 3,
+      "suggestedFrame": "dining-loop3-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入dining对应周目，或本角色当下会话开始",
+      "Current story beat": "冰冰站在肖像画前，画中的脸已经恢复了。\"他们终于可以一起被看见了。不是作为丑闻，是作为……爱。\"",
+      "Context immediately after": "\"伊莎贝拉最后嫁给了别人。但她每年的这一天，都会来这里献一束花。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 双人画像属于paintedCast，不是跨时空实体到场。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.bingbing.3.1.text",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 3,
+      "suggestedFrame": "dining-loop3-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "冰冰站在肖像画前，画中的脸已经恢复了。\"他们终于可以一起被看见了。不是作为丑闻，是作为……爱。\"",
+      "Current story beat": "\"伊莎贝拉最后嫁给了别人。但她每年的这一天，都会来这里献一束花。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.bingbing.4.0.text",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 4,
+      "suggestedFrame": "dining-dawn-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [
+        "adrian",
+        "felix"
+      ],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入dining对应周目，或本角色当下会话开始",
+      "Current story beat": "冰冰站在肖像画前，画中的两个年轻人微笑着看向彼此。她伸手摸了摸画框，指尖沾了一点金粉：\"我叫伊莎贝拉。在梦里，我叫了两百年。\"她转过头，眼睛亮晶晶的，\"现在我终于可以说——表哥，我不怪你了。从来都没有。\"",
+      "Context immediately after": "\"我在画里看着他们两百年，够本了。\"她提起裙摆向你行了个礼，\"谢谢你把我们所有人的名字，一个一个找了回来。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 双人画像属于paintedCast，不是跨时空实体到场。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.bingbing.4.1.text",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 4,
+      "suggestedFrame": "dining-dawn-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "冰冰站在肖像画前，画中的两个年轻人微笑着看向彼此。她伸手摸了摸画框，指尖沾了一点金粉：\"我叫伊莎贝拉。在梦里，我叫了两百年。\"她转过头，眼睛亮晶晶的，\"现在我终于可以说——表哥，我不怪你了。从来都没有。\"",
+      "Current story beat": "\"我在画里看着他们两百年，够本了。\"她提起裙摆向你行了个礼，\"谢谢你把我们所有人的名字，一个一个找了回来。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.dijie.1.0.text",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 1,
+      "suggestedFrame": "study-loop1-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入study对应周目，或本角色当下会话开始",
+      "Current story beat": "笛杰拿着竹笛，神情古怪：\"这座古堡的主人……好像很怕笛子。我一吹笛，整个房间都在震动。像是有什么东西在墙里挣扎。\"",
+      "Context immediately after": "\"我被聘请来，是因为伯爵想学一首东方的曲子。说是要给某个人惊喜。但我来了之后，那个人已经不在了。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.dijie.1.1.text",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 1,
+      "suggestedFrame": "study-loop1-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "笛杰拿着竹笛，神情古怪：\"这座古堡的主人……好像很怕笛子。我一吹笛，整个房间都在震动。像是有什么东西在墙里挣扎。\"",
+      "Current story beat": "\"我被聘请来，是因为伯爵想学一首东方的曲子。说是要给某个人惊喜。但我来了之后，那个人已经不在了。\"",
+      "Context immediately after": "\"五声音阶可以镇压邪灵。但我不确定顺序……\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.dijie.1.2.text",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 1,
+      "suggestedFrame": "study-loop1-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"我被聘请来，是因为伯爵想学一首东方的曲子。说是要给某个人惊喜。但我来了之后，那个人已经不在了。\"",
+      "Current story beat": "\"五声音阶可以镇压邪灵。但我不确定顺序……\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.dijie.2.0.text",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 2,
+      "suggestedFrame": "study-loop2-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入study对应周目，或本角色当下会话开始",
+      "Current story beat": "笛杰的竹笛裂开了。\"循环让一切都变脆弱了。包括真相。\"",
+      "Context immediately after": "\"伯爵为菲利克斯学的那首东方曲子……我知道是什么了。是一首叫《月光》的曲子。但不是贝多芬的。是伯爵自己写的。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 与房间缺席原文冲突，必须独立会话瞬间/显形事件；探索画面继续缺席。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.dijie.2.1.text",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 2,
+      "suggestedFrame": "study-loop2-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "笛杰的竹笛裂开了。\"循环让一切都变脆弱了。包括真相。\"",
+      "Current story beat": "\"伯爵为菲利克斯学的那首东方曲子……我知道是什么了。是一首叫《月光》的曲子。但不是贝多芬的。是伯爵自己写的。\"",
+      "Context immediately after": "\"菲利克斯一直想去东方。 silk road。他说那里的音乐像流水，像风。伯爵为了他，偷偷学了几句中文。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 与房间缺席原文冲突，必须独立会话瞬间/显形事件；探索画面继续缺席。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.dijie.2.2.text",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 2,
+      "suggestedFrame": "study-loop2-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"伯爵为菲利克斯学的那首东方曲子……我知道是什么了。是一首叫《月光》的曲子。但不是贝多芬的。是伯爵自己写的。\"",
+      "Current story beat": "\"菲利克斯一直想去东方。 silk road。他说那里的音乐像流水，像风。伯爵为了他，偷偷学了几句中文。\"",
+      "Context immediately after": "\"把你知道的给我。关于这座古堡的音乐。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 与房间缺席原文冲突，必须独立会话瞬间/显形事件；探索画面继续缺席。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.dijie.2.3.text",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 2,
+      "suggestedFrame": "study-loop2-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"菲利克斯一直想去东方。 silk road。他说那里的音乐像流水，像风。伯爵为了他，偷偷学了几句中文。\"",
+      "Current story beat": "\"把你知道的给我。关于这座古堡的音乐。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 与房间缺席原文冲突，必须独立会话瞬间/显形事件；探索画面继续缺席。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.dijie.2.3.giftText",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 2,
+      "suggestedFrame": "study-loop2-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"菲利克斯一直想去东方。 silk road。他说那里的音乐像流水，像风。伯爵为了他，偷偷学了几句中文。\"",
+      "Current story beat": "\"日记……伯爵说'没有他，音乐失去了意义'。\"笛杰哽咽了，\"他写了无数首曲子，但没有一首有名字。只有一个记号：A&F。Adrian and Felix。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 与房间缺席原文冲突，必须独立会话瞬间/显形事件；探索画面继续缺席。",
+      "item": "diary_page"
+    },
+    {
+      "sourceId": "talk.dijie.3.0.text",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 3,
+      "suggestedFrame": "study-loop3-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入study对应周目，或本角色当下会话开始",
+      "Current story beat": "笛杰吹响了竹笛。这次不是镇压，是送别。\"他们终于可以一起听日出了。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 与房间缺席原文冲突，必须独立会话瞬间/显形事件；探索画面继续缺席。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.dijie.4.0.text",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 4,
+      "suggestedFrame": "study-dawn-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入study对应周目，或本角色当下会话开始",
+      "Current story beat": "笛杰把竹笛横在膝上，试了试音：\"裂开的笛子自己长好了。你听——\"他吹了一段五声音阶，清越得像山泉，\"这曲子是我梦里的伯爵教我的。他说，等他们重逢那天，要我吹这个。\"",
+      "Context immediately after": "\"他最后还问了我一句话。\"笛杰收起笛子，\"'今晚的月色真美'——用你们东方的话，是不是还有别的意思？\"你还没来得及回答，他自己先笑了，\"我想我懂了。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 竹笛横在膝上再吹奏、已自愈；不能仍裂笛站立。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.dijie.4.1.text",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 4,
+      "suggestedFrame": "study-dawn-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "笛杰把竹笛横在膝上，试了试音：\"裂开的笛子自己长好了。你听——\"他吹了一段五声音阶，清越得像山泉，\"这曲子是我梦里的伯爵教我的。他说，等他们重逢那天，要我吹这个。\"",
+      "Current story beat": "\"他最后还问了我一句话。\"笛杰收起笛子，\"'今晚的月色真美'——用你们东方的话，是不是还有别的意思？\"你还没来得及回答，他自己先笑了，\"我想我懂了。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.qiqi.1.0.text",
+      "speaker": "qiqi",
+      "room": "study",
+      "loop": 1,
+      "suggestedFrame": "study-loop1-talk-qiqi",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入study对应周目，或本角色当下会话开始",
+      "Current story beat": "柒柒压低声音：\"麦克白是个好人，直到他听到了预言。'没有一个妇人所生的人可以伤害你。'他因此以为自己无敌。\"",
+      "Context immediately after": "\"但麦克白忘了——麦克德夫是剖腹产出生的。预言是文字游戏。艾德里安的悲剧也一样。他听到的不是真相，是他想听到的。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.qiqi.1.1.text",
+      "speaker": "qiqi",
+      "room": "study",
+      "loop": 1,
+      "suggestedFrame": "study-loop1-talk-qiqi",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "柒柒压低声音：\"麦克白是个好人，直到他听到了预言。'没有一个妇人所生的人可以伤害你。'他因此以为自己无敌。\"",
+      "Current story beat": "\"但麦克白忘了——麦克德夫是剖腹产出生的。预言是文字游戏。艾德里安的悲剧也一样。他听到的不是真相，是他想听到的。\"",
+      "Context immediately after": "\"三女巫说：'只有月光能唤醒沉睡的叛徒。'但谁是叛徒？被赶出去的人，还是关门的人？\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.qiqi.1.2.text",
+      "speaker": "qiqi",
+      "room": "study",
+      "loop": 1,
+      "suggestedFrame": "study-loop1-talk-qiqi",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"但麦克白忘了——麦克德夫是剖腹产出生的。预言是文字游戏。艾德里安的悲剧也一样。他听到的不是真相，是他想听到的。\"",
+      "Current story beat": "\"三女巫说：'只有月光能唤醒沉睡的叛徒。'但谁是叛徒？被赶出去的人，还是关门的人？\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.qiqi.2.0.text",
+      "speaker": "qiqi",
+      "room": "study",
+      "loop": 2,
+      "suggestedFrame": "study-loop2-talk-qiqi",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入study对应周目，或本角色当下会话开始",
+      "Current story beat": "柒柒的脸色惨白：\"循环每一次，预言就会更清晰。我现在能听到完整的话了。\"",
+      "Context immediately after": "\"'只有月光能唤醒沉睡的叛徒，只有真相能洗净染血的手，只有灵魂能打开锁住的门。'\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.qiqi.2.1.text",
+      "speaker": "qiqi",
+      "room": "study",
+      "loop": 2,
+      "suggestedFrame": "study-loop2-talk-qiqi",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "柒柒的脸色惨白：\"循环每一次，预言就会更清晰。我现在能听到完整的话了。\"",
+      "Current story beat": "\"'只有月光能唤醒沉睡的叛徒，只有真相能洗净染血的手，只有灵魂能打开锁住的门。'\"",
+      "Context immediately after": "\"伪造信的事……是伯爵夫人干的。她无法忍受自己的儿子爱上一个男人。她以为拆散他们就够了。她不知道，对艾德里安来说，失去菲利克斯就等于失去一切。包括理智。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.qiqi.2.2.text",
+      "speaker": "qiqi",
+      "room": "study",
+      "loop": 2,
+      "suggestedFrame": "study-loop2-talk-qiqi",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"'只有月光能唤醒沉睡的叛徒，只有真相能洗净染血的手，只有灵魂能打开锁住的门。'\"",
+      "Current story beat": "\"伪造信的事……是伯爵夫人干的。她无法忍受自己的儿子爱上一个男人。她以为拆散他们就够了。她不知道，对艾德里安来说，失去菲利克斯就等于失去一切。包括理智。\"",
+      "Context immediately after": "\"艾德里安和菲利克斯的关系……让我想起一本英国小说，《莫里斯》。两个男人在维多利亚时代的英国相爱，一个勇敢，一个懦弱。艾德里安不是麦克白，他是那个在爱面前逃跑的莫里斯。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.qiqi.2.3.text",
+      "speaker": "qiqi",
+      "room": "study",
+      "loop": 2,
+      "suggestedFrame": "study-loop2-talk-qiqi",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"伪造信的事……是伯爵夫人干的。她无法忍受自己的儿子爱上一个男人。她以为拆散他们就够了。她不知道，对艾德里安来说，失去菲利克斯就等于失去一切。包括理智。\"",
+      "Current story beat": "\"艾德里安和菲利克斯的关系……让我想起一本英国小说，《莫里斯》。两个男人在维多利亚时代的英国相爱，一个勇敢，一个懦弱。艾德里安不是麦克白，他是那个在爱面前逃跑的莫里斯。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.qiqi.3.0.text",
+      "speaker": "qiqi",
+      "room": "study",
+      "loop": 3,
+      "suggestedFrame": "study-loop3-talk-qiqi",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入study对应周目，或本角色当下会话开始",
+      "Current story beat": "柒柒微笑着：\"预言实现了。但不是以悲剧的方式。月光唤醒了沉睡的灵魂，真相洗净了染血的手，灵魂打开了锁住的门。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.qiqi.4.0.text",
+      "speaker": "qiqi",
+      "room": "study",
+      "loop": 4,
+      "suggestedFrame": "study-dawn-talk-qiqi",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入study对应周目，或本角色当下会话开始",
+      "Current story beat": "柒柒把塔罗牌收进袖子里，冲你眨眨眼：\"最后一张牌，我今早翻开了——<b>太阳</b>。正位。预言彻底翻篇了。\"",
+      "Context immediately after": "\"你知道吗，麦克白要是能重来一次，也许会选择不相信预言。\"她望向窗外，\"幸好，这座古堡里的故事，有一个比预言更固执的人——一个愿意原谅两百年的菲利克斯。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.qiqi.4.1.text",
+      "speaker": "qiqi",
+      "room": "study",
+      "loop": 4,
+      "suggestedFrame": "study-dawn-talk-qiqi",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "柒柒把塔罗牌收进袖子里，冲你眨眨眼：\"最后一张牌，我今早翻开了——<b>太阳</b>。正位。预言彻底翻篇了。\"",
+      "Current story beat": "\"你知道吗，麦克白要是能重来一次，也许会选择不相信预言。\"她望向窗外，\"幸好，这座古堡里的故事，有一个比预言更固执的人——一个愿意原谅两百年的菲利克斯。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.tim.1.0.text",
+      "speaker": "tim",
+      "room": "hall",
+      "loop": 1,
+      "suggestedFrame": "hall-loop1-talk-tim",
+      "visibleCast": [
+        "tim"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入hall对应周目，或本角色当下会话开始",
+      "Current story beat": "Tim穿着骑士铠甲，手里空无一物：\"我的剑不见了。不，不是剑——是琴弓。这里的人叫它马尾弓。盔甲后面有线索。\"",
+      "Context immediately after": "\"我守护这座古堡很久了。不是作为骑士，作为……见证者。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.tim.1.1.text",
+      "speaker": "tim",
+      "room": "hall",
+      "loop": 1,
+      "suggestedFrame": "hall-loop1-talk-tim",
+      "visibleCast": [
+        "tim"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "Tim穿着骑士铠甲，手里空无一物：\"我的剑不见了。不，不是剑——是琴弓。这里的人叫它马尾弓。盔甲后面有线索。\"",
+      "Current story beat": "\"我守护这座古堡很久了。不是作为骑士，作为……见证者。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.tim.2.0.text",
+      "speaker": "tim",
+      "room": "hall",
+      "loop": 2,
+      "suggestedFrame": "hall-loop2-talk-tim",
+      "visibleCast": [
+        "tim"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入hall对应周目，或本角色当下会话开始",
+      "Current story beat": "Tim的铠甲上出现了裂痕：\"循环在侵蚀我。但我还能站在这里，就说明还有事情没做完。\"",
+      "Context immediately after": "\"我见过他们在月光下跳舞。不是交际舞，是两个人紧紧抱在一起，像溺水的人抓住彼此。艾德里安说，如果世界容不下他们，他就要建一个世界。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.tim.2.1.text",
+      "speaker": "tim",
+      "room": "hall",
+      "loop": 2,
+      "suggestedFrame": "hall-loop2-talk-tim",
+      "visibleCast": [
+        "tim"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "Tim的铠甲上出现了裂痕：\"循环在侵蚀我。但我还能站在这里，就说明还有事情没做完。\"",
+      "Current story beat": "\"我见过他们在月光下跳舞。不是交际舞，是两个人紧紧抱在一起，像溺水的人抓住彼此。艾德里安说，如果世界容不下他们，他就要建一个世界。\"",
+      "Context immediately after": "\"把琴弓给我。那是打开盔甲的钥匙。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.tim.2.2.text",
+      "speaker": "tim",
+      "room": "hall",
+      "loop": 2,
+      "suggestedFrame": "hall-loop2-talk-tim",
+      "visibleCast": [
+        "tim"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"我见过他们在月光下跳舞。不是交际舞，是两个人紧紧抱在一起，像溺水的人抓住彼此。艾德里安说，如果世界容不下他们，他就要建一个世界。\"",
+      "Current story beat": "\"把琴弓给我。那是打开盔甲的钥匙。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.tim.2.2.giftText",
+      "speaker": "tim",
+      "room": "hall",
+      "loop": 2,
+      "suggestedFrame": "hall-loop2-talk-tim",
+      "visibleCast": [
+        "tim"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"我见过他们在月光下跳舞。不是交际舞，是两个人紧紧抱在一起，像溺水的人抓住彼此。艾德里安说，如果世界容不下他们，他就要建一个世界。\"",
+      "Current story beat": "Tim接过琴弓，做了一个挥剑的动作：\"好剑！……我是说好弓。用它打开盔甲吧。你会发现真相的。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": "bow"
+    },
+    {
+      "sourceId": "talk.tim.3.0.text",
+      "speaker": "tim",
+      "room": "hall",
+      "loop": 3,
+      "suggestedFrame": "hall-loop3-talk-tim",
+      "visibleCast": [
+        "tim"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入hall对应周目，或本角色当下会话开始",
+      "Current story beat": "Tim站在盔甲旁边，盔甲已经倒下了。\"我的任务完成了。他们终于在一起了。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.tim.4.0.text",
+      "speaker": "tim",
+      "room": "hall",
+      "loop": 4,
+      "suggestedFrame": "hall-dawn-talk-tim",
+      "visibleCast": [
+        "tim"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入hall对应周目，或本角色当下会话开始",
+      "Current story beat": "Tim把盔甲扶起来，拍了拍上面的灰：\"两百年了，它终于可以休息了。\"他把手里的琴弓递给你，\"这个你留着。不是作为武器——作为纪念。以音为剑的人，已经把剑放下了。\"",
+      "Context immediately after": "\"我守护这座古堡，不是因为职责。\"他望向塔楼的方向，\"是因为总有人要替他们记得，这里有过一场多好的爱情。现在……你们所有人都替我记得了。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 遗物盔甲由倒地转扶正；本人银甲与遗物甲是两个不同对象。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.tim.4.1.text",
+      "speaker": "tim",
+      "room": "hall",
+      "loop": 4,
+      "suggestedFrame": "hall-dawn-talk-tim",
+      "visibleCast": [
+        "tim"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "Tim把盔甲扶起来，拍了拍上面的灰：\"两百年了，它终于可以休息了。\"他把手里的琴弓递给你，\"这个你留着。不是作为武器——作为纪念。以音为剑的人，已经把剑放下了。\"",
+      "Current story beat": "\"我守护这座古堡，不是因为职责。\"他望向塔楼的方向，\"是因为总有人要替他们记得，这里有过一场多好的爱情。现在……你们所有人都替我记得了。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.jerry.1.0.text",
+      "speaker": "jerry",
+      "room": "music",
+      "loop": 1,
+      "suggestedFrame": "music-loop1-talk-jerry",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入music对应周目，或本角色当下会话开始",
+      "Current story beat": "Jerry调试着小号：\"这地方 acoustics 绝了。就是有点阴森。那架大键琴是1720年的，用的是中音律。有个音程特别刺耳，叫狼五度。你能找出来吗？\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.jerry.2.0.text",
+      "speaker": "jerry",
+      "room": "music",
+      "loop": 2,
+      "suggestedFrame": "music-loop2-talk-jerry",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入music对应周目，或本角色当下会话开始",
+      "Current story beat": "Jerry的耳朵在流血：\"循环太吵了。每次重新开始，所有声音都会叠加。我现在能听到两百年前的演奏。\"",
+      "Context immediately after": "\"大键琴在自动演奏。是《月光奏鸣曲》的第一乐章。但不是贝多芬的版本……是伯爵改编的。他把小提琴的部分改成了大键琴。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.jerry.2.1.text",
+      "speaker": "jerry",
+      "room": "music",
+      "loop": 2,
+      "suggestedFrame": "music-loop2-talk-jerry",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "Jerry的耳朵在流血：\"循环太吵了。每次重新开始，所有声音都会叠加。我现在能听到两百年前的演奏。\"",
+      "Current story beat": "\"大键琴在自动演奏。是《月光奏鸣曲》的第一乐章。但不是贝多芬的版本……是伯爵改编的。他把小提琴的部分改成了大键琴。\"",
+      "Context immediately after": "\"把音叉给我。那是校准大键琴的关键。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.jerry.2.2.text",
+      "speaker": "jerry",
+      "room": "music",
+      "loop": 2,
+      "suggestedFrame": "music-loop2-talk-jerry",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"大键琴在自动演奏。是《月光奏鸣曲》的第一乐章。但不是贝多芬的版本……是伯爵改编的。他把小提琴的部分改成了大键琴。\"",
+      "Current story beat": "\"把音叉给我。那是校准大键琴的关键。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.jerry.2.2.giftText",
+      "speaker": "jerry",
+      "room": "music",
+      "loop": 2,
+      "suggestedFrame": "music-loop2-talk-jerry",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"大键琴在自动演奏。是《月光奏鸣曲》的第一乐章。但不是贝多芬的版本……是伯爵改编的。他把小提琴的部分改成了大键琴。\"",
+      "Current story beat": "Jerry接过音叉：\"A=415Hz，巴洛克的黄金标准。有了它，狼五度就会现形。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": "tuning_fork"
+    },
+    {
+      "sourceId": "talk.jerry.3.0.text",
+      "speaker": "jerry",
+      "room": "music",
+      "loop": 3,
+      "suggestedFrame": "music-loop3-talk-jerry",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入music对应周目，或本角色当下会话开始",
+      "Current story beat": "Jerry吹响了小号，和大键琴的声音交织在一起。\"这是最后的合奏。为他们。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.jerry.4.0.text",
+      "speaker": "jerry",
+      "room": "music",
+      "loop": 4,
+      "suggestedFrame": "music-dawn-talk-jerry",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入music对应周目，或本角色当下会话开始",
+      "Current story beat": "Jerry举着音叉敲了敲，声音清亮得不像话：\"你猜怎么着？我耳朵里那些重叠的杂音全没了。现在我只听得见一个声音——大键琴和小提琴的合奏，从塔楼传下来，没停过。\"",
+      "Context immediately after": "\"对了，我在梦里把那架大键琴调好了。纯律，中音律，十二平均律，全试了一遍。\"他眨眨眼，\"你猜最后用的是哪种？——都不是。伯爵说，他和他爱人的音程，不需要律制来定义。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 当前手持音叉；不能继续固定小号举嘴。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.jerry.4.1.text",
+      "speaker": "jerry",
+      "room": "music",
+      "loop": 4,
+      "suggestedFrame": "music-dawn-talk-jerry",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "Jerry举着音叉敲了敲，声音清亮得不像话：\"你猜怎么着？我耳朵里那些重叠的杂音全没了。现在我只听得见一个声音——大键琴和小提琴的合奏，从塔楼传下来，没停过。\"",
+      "Current story beat": "\"对了，我在梦里把那架大键琴调好了。纯律，中音律，十二平均律，全试了一遍。\"他眨眨眼，\"你猜最后用的是哪种？——都不是。伯爵说，他和他爱人的音程，不需要律制来定义。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.shiyuan.1.0.text",
+      "speaker": "shiyuan",
+      "room": "bedroom",
+      "loop": 1,
+      "suggestedFrame": "bedroom-loop1-talk-shiyuan",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入bedroom对应周目，或本角色当下会话开始",
+      "Current story beat": "十元穿着女仆装，手在发抖：\"我在收拾房间的时候，在床垫下面发现了东西。我不敢看……\"",
+      "Context immediately after": "\"梳妆台的密码……我猜和音乐有关。女主人最喜欢的一首曲子，有14个音符的主题。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.shiyuan.1.1.text",
+      "speaker": "shiyuan",
+      "room": "bedroom",
+      "loop": 1,
+      "suggestedFrame": "bedroom-loop1-talk-shiyuan",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "十元穿着女仆装，手在发抖：\"我在收拾房间的时候，在床垫下面发现了东西。我不敢看……\"",
+      "Current story beat": "\"梳妆台的密码……我猜和音乐有关。女主人最喜欢的一首曲子，有14个音符的主题。\"",
+      "Context immediately after": "\"宝石和飞鸿……他们不会回来了。我知道。我听到他们的声音。从墙里。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.shiyuan.1.2.text",
+      "speaker": "shiyuan",
+      "room": "bedroom",
+      "loop": 1,
+      "suggestedFrame": "bedroom-loop1-talk-shiyuan",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"梳妆台的密码……我猜和音乐有关。女主人最喜欢的一首曲子，有14个音符的主题。\"",
+      "Current story beat": "\"宝石和飞鸿……他们不会回来了。我知道。我听到他们的声音。从墙里。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.shiyuan.2.0.text",
+      "speaker": "shiyuan",
+      "room": "bedroom",
+      "loop": 2,
+      "suggestedFrame": "bedroom-loop2-talk-shiyuan",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入bedroom对应周目，或本角色当下会话开始",
+      "Current story beat": "十元不再发抖了。她的眼睛是红的，但很平静：\"循环让我想起了很多事。我前世……也许真的在这里当过女仆。\"",
+      "Context immediately after": "\"我见过伯爵和菲利克斯先生。他们睡在一间房里。伯爵为他写了一首又一首曲子，每一首都没有名字，只有一个记号：A&F。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.shiyuan.2.1.text",
+      "speaker": "shiyuan",
+      "room": "bedroom",
+      "loop": 2,
+      "suggestedFrame": "bedroom-loop2-talk-shiyuan",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "十元不再发抖了。她的眼睛是红的，但很平静：\"循环让我想起了很多事。我前世……也许真的在这里当过女仆。\"",
+      "Current story beat": "\"我见过伯爵和菲利克斯先生。他们睡在一间房里。伯爵为他写了一首又一首曲子，每一首都没有名字，只有一个记号：A&F。\"",
+      "Context immediately after": "\"菲利克斯先生总说起东方。 silk road。伯爵为了他，聘请了东方的乐手，还学了几句中文。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.shiyuan.2.2.text",
+      "speaker": "shiyuan",
+      "room": "bedroom",
+      "loop": 2,
+      "suggestedFrame": "bedroom-loop2-talk-shiyuan",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"我见过伯爵和菲利克斯先生。他们睡在一间房里。伯爵为他写了一首又一首曲子，每一首都没有名字，只有一个记号：A&F。\"",
+      "Current story beat": "\"菲利克斯先生总说起东方。 silk road。伯爵为了他，聘请了东方的乐手，还学了几句中文。\"",
+      "Context immediately after": "\"把你知道的给我。关于他们的。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.shiyuan.2.3.text",
+      "speaker": "shiyuan",
+      "room": "bedroom",
+      "loop": 2,
+      "suggestedFrame": "bedroom-loop2-talk-shiyuan",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"菲利克斯先生总说起东方。 silk road。伯爵为了他，聘请了东方的乐手，还学了几句中文。\"",
+      "Current story beat": "\"把你知道的给我。关于他们的。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.shiyuan.2.3.giftText",
+      "speaker": "shiyuan",
+      "room": "bedroom",
+      "loop": 2,
+      "suggestedFrame": "bedroom-loop2-talk-shiyuan",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"菲利克斯先生总说起东方。 silk road。伯爵为了他，聘请了东方的乐手，还学了几句中文。\"",
+      "Current story beat": "十元读完信C，泪流满面：\"菲利克斯先生在床垫下藏了这封信……他在原谅伯爵之前，就已经知道了真相。他选择了原谅。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": "letter_c"
+    },
+    {
+      "sourceId": "talk.shiyuan.3.0.text",
+      "speaker": "shiyuan",
+      "room": "bedroom",
+      "loop": 3,
+      "suggestedFrame": "bedroom-loop3-talk-shiyuan",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入bedroom对应周目，或本角色当下会话开始",
+      "Current story beat": "十元站在卧室门口，微笑着：\"他们终于安息了。每年的这一天，我都会来这里，放一束白色的花。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.shiyuan.4.0.text",
+      "speaker": "shiyuan",
+      "room": "bedroom",
+      "loop": 4,
+      "suggestedFrame": "bedroom-dawn-talk-shiyuan",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入bedroom对应周目，或本角色当下会话开始",
+      "Current story beat": "十元系着围裙从厨房出来，手里端着一盘烤糊的面包：\"都醒了？正好——谁来说说，为什么厨房里的面粉少了半袋，餐桌上多了两套餐具？\"她顿了顿，声音软下来，\"……算了。先吃饭吧。\"",
+      "Context immediately after": "\"我在梦里当了女仆，天天给两位主人送早餐。\"她把面包塞给你，\"有一天的早餐，他们在面包上用果酱画了两个字母。A，和F。\"她笑了，\"你说巧不巧，今早的餐桌上，也有。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.shiyuan.4.1.text",
+      "speaker": "shiyuan",
+      "room": "bedroom",
+      "loop": 4,
+      "suggestedFrame": "bedroom-dawn-talk-shiyuan",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "十元系着围裙从厨房出来，手里端着一盘烤糊的面包：\"都醒了？正好——谁来说说，为什么厨房里的面粉少了半袋，餐桌上多了两套餐具？\"她顿了顿，声音软下来，\"……算了。先吃饭吧。\"",
+      "Current story beat": "\"我在梦里当了女仆，天天给两位主人送早餐。\"她把面包塞给你，\"有一天的早餐，他们在面包上用果酱画了两个字母。A，和F。\"她笑了，\"你说巧不巧，今早的餐桌上，也有。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.1.0.text",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 1,
+      "suggestedFrame": "cellar-loop1-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入cellar对应周目，或本角色当下会话开始",
+      "Current story beat": "垃垃拿着水晶球，球里是一片血雾：\"我算了一卦……这个古堡里有很强的执念。不是怨念，是爱，被误解的爱。但已经被污染了。\"",
+      "Context immediately after": "\"菲利克斯的灵魂被封印在餐厅的音乐盒里。只有光才能打开那个盒子。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.1.1.text",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 1,
+      "suggestedFrame": "cellar-loop1-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "垃垃拿着水晶球，球里是一片血雾：\"我算了一卦……这个古堡里有很强的执念。不是怨念，是爱，被误解的爱。但已经被污染了。\"",
+      "Current story beat": "\"菲利克斯的灵魂被封印在餐厅的音乐盒里。只有光才能打开那个盒子。\"",
+      "Context immediately after": "\"但打开盒子之后……你要做好准备。灵魂不会原谅一个没有真相的人。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.1.2.text",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 1,
+      "suggestedFrame": "cellar-loop1-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"菲利克斯的灵魂被封印在餐厅的音乐盒里。只有光才能打开那个盒子。\"",
+      "Current story beat": "\"但打开盒子之后……你要做好准备。灵魂不会原谅一个没有真相的人。\"",
+      "Context immediately after": "\"想上塔楼？先回答我一个问题。小提琴的秘密，你知道多少？\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.1.3.text",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 1,
+      "suggestedFrame": "cellar-loop1-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"但打开盒子之后……你要做好准备。灵魂不会原谅一个没有真相的人。\"",
+      "Current story beat": "\"想上塔楼？先回答我一个问题。小提琴的秘密，你知道多少？\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.1.3.rewardText",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 1,
+      "suggestedFrame": "cellar-loop1-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"但打开盒子之后……你要做好准备。灵魂不会原谅一个没有真相的人。\"",
+      "Current story beat": "垃垃露出神秘的微笑：\"没错，三个纯五度。G→D是一个，D→A是一个，A→E是一个。水晶球里的琴亮了……这把钥匙给你。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.2.0.text",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 2,
+      "suggestedFrame": "cellar-loop2-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入cellar对应周目，或本角色当下会话开始",
+      "Current story beat": "垃垃的水晶球裂得更大了：\"循环每一次，执念就会更强。但也有好消息——灵魂在渴望被释放。\"",
+      "Context immediately after": "\"艾德里安不是恶魔。他只是一个犯了错的人。一个因为爱而疯掉的人。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.2.1.text",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 2,
+      "suggestedFrame": "cellar-loop2-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "垃垃的水晶球裂得更大了：\"循环每一次，执念就会更强。但也有好消息——灵魂在渴望被释放。\"",
+      "Current story beat": "\"艾德里安不是恶魔。他只是一个犯了错的人。一个因为爱而疯掉的人。\"",
+      "Context immediately after": "\"塔楼的门又锁上了？循环就是这样。再答一题吧，这次难一点。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.2.2.text",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 2,
+      "suggestedFrame": "cellar-loop2-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"艾德里安不是恶魔。他只是一个犯了错的人。一个因为爱而疯掉的人。\"",
+      "Current story beat": "\"塔楼的门又锁上了？循环就是这样。再答一题吧，这次难一点。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.2.2.rewardText",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 2,
+      "suggestedFrame": "cellar-loop2-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"艾德里安不是恶魔。他只是一个犯了错的人。一个因为爱而疯掉的人。\"",
+      "Current story beat": "垃垃点头：\"七个半音。纯五度是除了八度之外最干净的音程——就像那两个人之间，本来该有的样子。钥匙拿去。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.3.0.text",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 3,
+      "suggestedFrame": "cellar-loop3-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入cellar对应周目，或本角色当下会话开始",
+      "Current story beat": "垃垃的水晶球变成了一片空白：\"执念快要走到尽头了。这是最后一次循环，也是最后一次答题。\"",
+      "Context immediately after": "\"塔楼的钥匙，最后一次给你。答完这题，去把他们的故事讲完。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.3.1.text",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 3,
+      "suggestedFrame": "cellar-loop3-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "垃垃的水晶球变成了一片空白：\"执念快要走到尽头了。这是最后一次循环，也是最后一次答题。\"",
+      "Current story beat": "\"塔楼的钥匙，最后一次给你。答完这题，去把他们的故事讲完。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.3.1.rewardText",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 3,
+      "suggestedFrame": "cellar-loop3-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "垃垃的水晶球变成了一片空白：\"执念快要走到尽头了。这是最后一次循环，也是最后一次答题。\"",
+      "Current story beat": "垃垃笑了：\"没错，八个。八度——循环的尽头，也是新的开始。去吧，替他们把曲子弹完。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.4.0.text",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 4,
+      "suggestedFrame": "cellar-dawn-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入cellar对应周目，或本角色当下会话开始",
+      "Current story beat": "垃垃的水晶球彻底透明了，像一颗普通的玻璃珠：\"我的水晶球空了。不是坏了——是里面装的执念，全都散了。\"她把它抛给你，\"拿着玩吧，就当是个纪念品。\"",
+      "Context immediately after": "\"下次团建别找这种地方了。\"她打了个哈欠，\"不过……也挺好的。有些故事，总得有人听完。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.lala.4.1.text",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 4,
+      "suggestedFrame": "cellar-dawn-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "垃垃的水晶球彻底透明了，像一颗普通的玻璃珠：\"我的水晶球空了。不是坏了——是里面装的执念，全都散了。\"她把它抛给你，\"拿着玩吧，就当是个纪念品。\"",
+      "Current story beat": "\"下次团建别找这种地方了。\"她打了个哈欠，\"不过……也挺好的。有些故事，总得有人听完。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.servants.1.0.text",
+      "speaker": "servants",
+      "room": "dining",
+      "loop": 1,
+      "suggestedFrame": "dining-loop1-talk-servants",
+      "visibleCast": [
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入dining对应周目，或本角色当下会话开始",
+      "Current story beat": "宝石缩在角落，声音发颤：\"我不该来的……这里好黑……\"飞鸿站在一旁，眼神空洞：\"我出去看了一眼，然后……我就不是我了。\"",
+      "Context immediately after": "\"那边肖像画里被划掉的脸……像是我自己的脸。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.servants.1.1.text",
+      "speaker": "servants",
+      "room": "dining",
+      "loop": 1,
+      "suggestedFrame": "dining-loop1-talk-servants",
+      "visibleCast": [
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "宝石缩在角落，声音发颤：\"我不该来的……这里好黑……\"飞鸿站在一旁，眼神空洞：\"我出去看了一眼，然后……我就不是我了。\"",
+      "Current story beat": "\"那边肖像画里被划掉的脸……像是我自己的脸。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.servants.2.0.text",
+      "speaker": "servants",
+      "room": "dining",
+      "loop": 2,
+      "suggestedFrame": "dining-loop2-talk-servants",
+      "visibleCast": [
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入dining对应周目，或本角色当下会话开始",
+      "Current story beat": "宝石和飞鸿抱在一起，不再发抖了。\"循环让我们想起了。我们不是第一次来这里。上一次，我们也没有离开。\"",
+      "Context immediately after": "\"但我们不怨恨。这座古堡需要我们。作为……见证者。每一次有人解开真相，我们的灵魂就会轻一点。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.servants.2.1.text",
+      "speaker": "servants",
+      "room": "dining",
+      "loop": 2,
+      "suggestedFrame": "dining-loop2-talk-servants",
+      "visibleCast": [
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "宝石和飞鸿抱在一起，不再发抖了。\"循环让我们想起了。我们不是第一次来这里。上一次，我们也没有离开。\"",
+      "Current story beat": "\"但我们不怨恨。这座古堡需要我们。作为……见证者。每一次有人解开真相，我们的灵魂就会轻一点。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.servants.3.0.text",
+      "speaker": "servants",
+      "room": "dining",
+      "loop": 3,
+      "suggestedFrame": "dining-loop3-talk-servants",
+      "visibleCast": [
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入dining对应周目，或本角色当下会话开始",
+      "Current story beat": "宝石和飞鸿微笑着，身体逐渐变得透明：\"谢谢你。我们终于可以去下一个地方了。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 透明告别事件；平时餐厅无两人、桌留字条，不能永久常驻。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.servants.4.0.text",
+      "speaker": "servants",
+      "room": "dining",
+      "loop": 4,
+      "suggestedFrame": "dining-dawn-talk-servants",
+      "visibleCast": [
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入dining对应周目，或本角色当下会话开始",
+      "Current story beat": "飞鸿揉着眼睛坐起来，头发乱得像鸟窝：\"……我做了一个好长好长的梦。梦见我在这座古堡里走了两百年，一直找不到出口。\"他忽然凑近你，压低声音，\"但奇怪的是——梦里有个人一直牵着我的手。\"",
+      "Context immediately after": "他转头看向身边还在打哈欠的宝石，耳根忽然红了。\"说出来你们别笑……我梦见宝石是我上辈子的恋人。我们在月光下走散了，我找了整整一辈子。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.servants.4.1.text",
+      "speaker": "servants",
+      "room": "dining",
+      "loop": 4,
+      "suggestedFrame": "dining-dawn-talk-servants",
+      "visibleCast": [
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "飞鸿揉着眼睛坐起来，头发乱得像鸟窝：\"……我做了一个好长好长的梦。梦见我在这座古堡里走了两百年，一直找不到出口。\"他忽然凑近你，压低声音，\"但奇怪的是——梦里有个人一直牵着我的手。\"",
+      "Current story beat": "他转头看向身边还在打哈欠的宝石，耳根忽然红了。\"说出来你们别笑……我梦见宝石是我上辈子的恋人。我们在月光下走散了，我找了整整一辈子。\"",
+      "Context immediately after": "宝石迷迷糊糊地睁开眼：\"……我也梦见你了。我梦见我等你回来，等了很久很久。\"他顿了顿，\"然后你真的回来了。带着一身雪。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.servants.4.2.text",
+      "speaker": "servants",
+      "room": "dining",
+      "loop": 4,
+      "suggestedFrame": "dining-dawn-talk-servants",
+      "visibleCast": [
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "他转头看向身边还在打哈欠的宝石，耳根忽然红了。\"说出来你们别笑……我梦见宝石是我上辈子的恋人。我们在月光下走散了，我找了整整一辈子。\"",
+      "Current story beat": "宝石迷迷糊糊地睁开眼：\"……我也梦见你了。我梦见我等你回来，等了很久很久。\"他顿了顿，\"然后你真的回来了。带着一身雪。\"",
+      "Context immediately after": "两个人对视了一眼，谁都没有说话。壁炉的火光跳了一下。<br><br>你注意到，他们的手还牵在一起——大概从\"梦\"里，就没有松开过。",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.servants.4.3.text",
+      "speaker": "servants",
+      "room": "dining",
+      "loop": 4,
+      "suggestedFrame": "dining-dawn-talk-servants",
+      "visibleCast": [
+        "baoshi",
+        "feihong"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "宝石迷迷糊糊地睁开眼：\"……我也梦见你了。我梦见我等你回来，等了很久很久。\"他顿了顿，\"然后你真的回来了。带着一身雪。\"",
+      "Current story beat": "两个人对视了一眼，谁都没有说话。壁炉的火光跳了一下。<br><br>你注意到，他们的手还牵在一起——大概从\"梦\"里，就没有松开过。",
+      "Context immediately after": "（十元从厨房探出头：\"醒了就过来帮忙！团建早餐还做不做了？\"）",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.servants.4.4.text",
+      "speaker": "servants",
+      "room": "dining",
+      "loop": 4,
+      "suggestedFrame": "hall-dawn-talk-shiyuan",
+      "visibleCast": [
+        "shiyuan"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "两个人对视了一眼，谁都没有说话。壁炉的火光跳了一下。<br><br>你注意到，他们的手还牵在一起——大概从\"梦\"里，就没有松开过。",
+      "Current story beat": "（十元从厨房探出头：\"醒了就过来帮忙！团建早餐还做不做了？\"）",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "括号动作和喊话属于十元。宝石飞鸿只是前文现场，当前早餐戏剧焦点不需要带入。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.1.0.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 1,
+      "suggestedFrame": "tower-loop1-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入tower对应周目，或本角色当下会话开始",
+      "Current story beat": "艾德里安的灵魂半透明，血红色的眼睛直视着你：\"又一个访客……你们总是这样，带着蜡烛和好奇心，走进不属于你们的夜晚。\"",
+      "Context immediately after": "\"你知道上一个走进这座塔楼的人是谁吗？是我的月光。那晚的雪下了一整夜，我在窗后站了一整夜。我亲手把他关在了门外——然后用两百年，把自己关进了门里。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.1.1.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 1,
+      "suggestedFrame": "tower-loop1-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "艾德里安的灵魂半透明，血红色的眼睛直视着你：\"又一个访客……你们总是这样，带着蜡烛和好奇心，走进不属于你们的夜晚。\"",
+      "Current story beat": "\"你知道上一个走进这座塔楼的人是谁吗？是我的月光。那晚的雪下了一整夜，我在窗后站了一整夜。我亲手把他关在了门外——然后用两百年，把自己关进了门里。\"",
+      "Context immediately after": "\"我一直很想念他。仿佛那些漫漫长夜，就是用来想念他的。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.1.2.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 1,
+      "suggestedFrame": "tower-loop1-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"你知道上一个走进这座塔楼的人是谁吗？是我的月光。那晚的雪下了一整夜，我在窗后站了一整夜。我亲手把他关在了门外——然后用两百年，把自己关进了门里。\"",
+      "Current story beat": "\"我一直很想念他。仿佛那些漫漫长夜，就是用来想念他的。\"",
+      "Context immediately after": "\"今晚，没有人能离开。月光不落，大门不开。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.1.3.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 1,
+      "suggestedFrame": "tower-loop1-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"我一直很想念他。仿佛那些漫漫长夜，就是用来想念他的。\"",
+      "Current story beat": "\"今晚，没有人能离开。月光不落，大门不开。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.2.0.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 2,
+      "suggestedFrame": "tower-loop2-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入tower对应周目，或本角色当下会话开始",
+      "Current story beat": "艾德里安看着你，血红色的眼睛里多了一丝困惑：\"你回来了。两百年里，回来过的人屈指可数。但你不一样——你身上有他的气息。松香、羊肠弦，还有那年冬天的雪。\"",
+      "Context immediately after": "\"他总想去东方。说那里的音乐像流水，像风，丝绸之路上的每一粒沙子都会唱歌。我偷偷学了一句中文，想在他生日那天说给他听——'今晚的月色真美'。可我还没来得及说，他就走进了雪里。后来我才知道，那句话说的不是月色。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 初到塔楼无他；主动交谈显形/金光禁锢状态。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.2.1.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 2,
+      "suggestedFrame": "tower-loop2-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "艾德里安看着你，血红色的眼睛里多了一丝困惑：\"你回来了。两百年里，回来过的人屈指可数。但你不一样——你身上有他的气息。松香、羊肠弦，还有那年冬天的雪。\"",
+      "Current story beat": "\"他总想去东方。说那里的音乐像流水，像风，丝绸之路上的每一粒沙子都会唱歌。我偷偷学了一句中文，想在他生日那天说给他听——'今晚的月色真美'。可我还没来得及说，他就走进了雪里。后来我才知道，那句话说的不是月色。\"",
+      "Context immediately after": "\"我母亲给我们算过命。她说我们会毁了彼此。我说我不在乎。她说：'你不在乎，他在乎。'所以我信了她伪造的那封信——不是因为我信了谎言，是因为我害怕。怕她是对的，怕我这样的人，配不上那样干净的月光。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 初到塔楼无他；主动交谈显形/金光禁锢状态。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.2.2.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 2,
+      "suggestedFrame": "tower-loop2-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"他总想去东方。说那里的音乐像流水，像风，丝绸之路上的每一粒沙子都会唱歌。我偷偷学了一句中文，想在他生日那天说给他听——'今晚的月色真美'。可我还没来得及说，他就走进了雪里。后来我才知道，那句话说的不是月色。\"",
+      "Current story beat": "\"我母亲给我们算过命。她说我们会毁了彼此。我说我不在乎。她说：'你不在乎，他在乎。'所以我信了她伪造的那封信——不是因为我信了谎言，是因为我害怕。怕她是对的，怕我这样的人，配不上那样干净的月光。\"",
+      "Context immediately after": "\"麦克白说'满手血腥'。我的手永远洗不干净。但比血更脏的，是懦弱。我爱他，却更爱那个不会被世界嘲笑的自己。我把他推出门外，以为把他推出去了，就什么都不用承认了。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 初到塔楼无他；主动交谈显形/金光禁锢状态。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.2.3.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 2,
+      "suggestedFrame": "tower-loop2-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"我母亲给我们算过命。她说我们会毁了彼此。我说我不在乎。她说：'你不在乎，他在乎。'所以我信了她伪造的那封信——不是因为我信了谎言，是因为我害怕。怕她是对的，怕我这样的人，配不上那样干净的月光。\"",
+      "Current story beat": "\"麦克白说'满手血腥'。我的手永远洗不干净。但比血更脏的，是懦弱。我爱他，却更爱那个不会被世界嘲笑的自己。我把他推出门外，以为把他推出去了，就什么都不用承认了。\"",
+      "Context immediately after": "\"两百年了，我每天晚上都在弹那首没写完的安魂曲。每一个音符都是一句'对不起'。可死去的人听不见音乐——听得见音乐的，只有活着的、愿意停下来听的人。比如你。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 初到塔楼无他；主动交谈显形/金光禁锢状态。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.2.4.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 2,
+      "suggestedFrame": "tower-loop2-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"麦克白说'满手血腥'。我的手永远洗不干净。但比血更脏的，是懦弱。我爱他，却更爱那个不会被世界嘲笑的自己。我把他推出门外，以为把他推出去了，就什么都不用承认了。\"",
+      "Current story beat": "\"两百年了，我每天晚上都在弹那首没写完的安魂曲。每一个音符都是一句'对不起'。可死去的人听不见音乐——听得见音乐的，只有活着的、愿意停下来听的人。比如你。\"",
+      "Context immediately after": "\"我的时间不多了。每一次循环，我都变得更像一头野兽……下一次醒来，我可能就认不出你了。\"他的身影边缘开始泛红，\"如果你带了什么——任何一件他的东西——现在就给我。我能用那点温度，替你压住这座古堡。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 初到塔楼无他；主动交谈显形/金光禁锢状态。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.2.5.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 2,
+      "suggestedFrame": "tower-loop2-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"两百年了，我每天晚上都在弹那首没写完的安魂曲。每一个音符都是一句'对不起'。可死去的人听不见音乐——听得见音乐的，只有活着的、愿意停下来听的人。比如你。\"",
+      "Current story beat": "\"我的时间不多了。每一次循环，我都变得更像一头野兽……下一次醒来，我可能就认不出你了。\"他的身影边缘开始泛红，\"如果你带了什么——任何一件他的东西——现在就给我。我能用那点温度，替你压住这座古堡。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 初到塔楼无他；主动交谈显形/金光禁锢状态。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.3.0.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 3,
+      "suggestedFrame": "tower-loop3-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入tower对应周目，或本角色当下会话开始",
+      "Current story beat": "艾德里安不再可怕了。他只是一个站在月光中的年轻人，手里拿着半张乐谱。\"你带来了他的灵魂。还有……他的原谅。\"他的声音在发抖，\"两百年了，我排练了无数次重逢，每一次都在第一句话就崩溃。现在他真的来了，我却只想问一句——这些年，你冷吗？\"",
+      "Context immediately after": "\"我把我们的一生写成了三个乐章。第一乐章是相遇，第二乐章是猜忌，第三乐章……我始终写不下去。因为我不肯承认那就是永别。今夜，请你替我把它弹完。让他听见——这一次，换我在门外等，等到他原谅为止。\"他顿了顿，\"风琴会奏出哪一章，不取决于我——取决于你一路上带回来了什么。我的忏悔，我们相遇的那一年，他的誓言……你带回得越多，这场告别就越像重逢。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.3.1.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 3,
+      "suggestedFrame": "tower-loop3-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "艾德里安不再可怕了。他只是一个站在月光中的年轻人，手里拿着半张乐谱。\"你带来了他的灵魂。还有……他的原谅。\"他的声音在发抖，\"两百年了，我排练了无数次重逢，每一次都在第一句话就崩溃。现在他真的来了，我却只想问一句——这些年，你冷吗？\"",
+      "Current story beat": "\"我把我们的一生写成了三个乐章。第一乐章是相遇，第二乐章是猜忌，第三乐章……我始终写不下去。因为我不肯承认那就是永别。今夜，请你替我把它弹完。让他听见——这一次，换我在门外等，等到他原谅为止。\"他顿了顿，\"风琴会奏出哪一章，不取决于我——取决于你一路上带回来了什么。我的忏悔，我们相遇的那一年，他的誓言……你带回得越多，这场告别就越像重逢。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.4.0.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "进入tower对应周目，或本角色当下会话开始",
+      "Current story beat": "艾德里安站在阳光下，穿着一身简单的白色衬衫。血红色的眼睛已经变成了温暖的琥珀色。\"你来了。日出很美，对吗？两百年了，我第一次知道，原来光是有温度的。\"",
+      "Context immediately after": "\"菲利克斯今早对我说：'原来日出是这种颜色。'我说：'是站在你身边，看什么颜色都好看。'他笑我两百岁了还油嘴滑舌。\"艾德里安笑了，那是一个年轻人该有的笑容，\"他想去厨房找点吃的——两百年没吃东西了，他说想尝尝现代的面包。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.4.1.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "艾德里安站在阳光下，穿着一身简单的白色衬衫。血红色的眼睛已经变成了温暖的琥珀色。\"你来了。日出很美，对吗？两百年了，我第一次知道，原来光是有温度的。\"",
+      "Current story beat": "\"菲利克斯今早对我说：'原来日出是这种颜色。'我说：'是站在你身边，看什么颜色都好看。'他笑我两百岁了还油嘴滑舌。\"艾德里安笑了，那是一个年轻人该有的笑容，\"他想去厨房找点吃的——两百年没吃东西了，他说想尝尝现代的面包。\"",
+      "Context immediately after": "\"我母亲错了。爱不会毁了彼此。只有不敢去爱，才会毁掉一切。\"艾德里安看向窗外，\"我花了两百年才明白这个道理。幸好他比我聪明——他在雪地里走的那一夜，就已经原谅我了。他只是等我亲口问一句。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 菲利克斯是转述/话题，不能仅因名字让他必定实体并排。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.4.2.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"菲利克斯今早对我说：'原来日出是这种颜色。'我说：'是站在你身边，看什么颜色都好看。'他笑我两百岁了还油嘴滑舌。\"艾德里安笑了，那是一个年轻人该有的笑容，\"他想去厨房找点吃的——两百年没吃东西了，他说想尝尝现代的面包。\"",
+      "Current story beat": "\"我母亲错了。爱不会毁了彼此。只有不敢去爱，才会毁掉一切。\"艾德里安看向窗外，\"我花了两百年才明白这个道理。幸好他比我聪明——他在雪地里走的那一夜，就已经原谅我了。他只是等我亲口问一句。\"",
+      "Context immediately after": "\"我一直以为，那些漫漫长夜是用来想念他的。现在我知道了——长夜是用来等的。而他，是用来一起等日出的。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 菲利克斯是转述/话题，不能仅因名字让他必定实体并排。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.4.3.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"我母亲错了。爱不会毁了彼此。只有不敢去爱，才会毁掉一切。\"艾德里安看向窗外，\"我花了两百年才明白这个道理。幸好他比我聪明——他在雪地里走的那一夜，就已经原谅我了。他只是等我亲口问一句。\"",
+      "Current story beat": "\"我一直以为，那些漫漫长夜是用来想念他的。现在我知道了——长夜是用来等的。而他，是用来一起等日出的。\"",
+      "Context immediately after": "\"这座古堡里还有很多我们的东西。如果你感兴趣，可以随意看看。它们不再属于幽灵了……它们只是一些被时间遗忘的纪念品。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 菲利克斯是转述/话题，不能仅因名字让他必定实体并排。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.4.4.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"我一直以为，那些漫漫长夜是用来想念他的。现在我知道了——长夜是用来等的。而他，是用来一起等日出的。\"",
+      "Current story beat": "\"这座古堡里还有很多我们的东西。如果你感兴趣，可以随意看看。它们不再属于幽灵了……它们只是一些被时间遗忘的纪念品。\"",
+      "Context immediately after": "\"对了，如果你找到什么有趣的东西，可以拿来给我看看。我很想……再和别人分享一次我们的故事。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.4.5.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"这座古堡里还有很多我们的东西。如果你感兴趣，可以随意看看。它们不再属于幽灵了……它们只是一些被时间遗忘的纪念品。\"",
+      "Current story beat": "\"对了，如果你找到什么有趣的东西，可以拿来给我看看。我很想……再和别人分享一次我们的故事。\"",
+      "Context immediately after": "\"那块手帕……他总带在身上。说梅花是冬天的勇气，竹子是春天的希望。那两瓣梅花是我绣的，针脚很丑，扎破了三次手指。但他一直说好看，说了整整一辈子——虽然他的一辈子，太短了。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.4.5.giftText",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"这座古堡里还有很多我们的东西。如果你感兴趣，可以随意看看。它们不再属于幽灵了……它们只是一些被时间遗忘的纪念品。\"",
+      "Current story beat": "艾德里安接过素描，手指轻轻抚过纸面：\"这是我画的。那个冬天，他坐在壁炉旁拉琴，火光落在他的侧脸上，我偷偷画的。我以为我还会画很多张，画到他老去，画到我们都白头……但我只来得及画完这一张。\"",
+      "Context immediately after": "\"那块手帕……他总带在身上。说梅花是冬天的勇气，竹子是春天的希望。那两瓣梅花是我绣的，针脚很丑，扎破了三次手指。但他一直说好看，说了整整一辈子——虽然他的一辈子，太短了。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 手持物件由本条accepts字段指定；不能用一个静态空手人像对应所有赠物。",
+      "item": "sketch"
+    },
+    {
+      "sourceId": "talk.adrian.4.6.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"对了，如果你找到什么有趣的东西，可以拿来给我看看。我很想……再和别人分享一次我们的故事。\"",
+      "Current story beat": "\"那块手帕……他总带在身上。说梅花是冬天的勇气，竹子是春天的希望。那两瓣梅花是我绣的，针脚很丑，扎破了三次手指。但他一直说好看，说了整整一辈子——虽然他的一辈子，太短了。\"",
+      "Context immediately after": "\"啊，这根断弦……\"艾德里安苦笑，\"那是我发疯那天剪断的。我以为没有音乐，就不会想起他。但我错了。没有音乐的那些年，我什么都想不起来——除了他。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.4.6.giftText",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"对了，如果你找到什么有趣的东西，可以拿来给我看看。我很想……再和别人分享一次我们的故事。\"",
+      "Current story beat": "艾德里安将手帕贴在心口，闭上眼睛：\"谢谢你还给我。这一次，我不会再弄丢了。再也不会了。\"",
+      "Context immediately after": "\"啊，这根断弦……\"艾德里安苦笑，\"那是我发疯那天剪断的。我以为没有音乐，就不会想起他。但我错了。没有音乐的那些年，我什么都想不起来——除了他。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 手持物件由本条accepts字段指定；不能用一个静态空手人像对应所有赠物。",
+      "item": "silk_handkerchief"
+    },
+    {
+      "sourceId": "talk.adrian.4.7.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"那块手帕……他总带在身上。说梅花是冬天的勇气，竹子是春天的希望。那两瓣梅花是我绣的，针脚很丑，扎破了三次手指。但他一直说好看，说了整整一辈子——虽然他的一辈子，太短了。\"",
+      "Current story beat": "\"啊，这根断弦……\"艾德里安苦笑，\"那是我发疯那天剪断的。我以为没有音乐，就不会想起他。但我错了。没有音乐的那些年，我什么都想不起来——除了他。\"",
+      "Context immediately after": "\"这页谱子……\"艾德里安的手停在半空，\"我以为我早就烧了它。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.4.7.giftText",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"那块手帕……他总带在身上。说梅花是冬天的勇气，竹子是春天的希望。那两瓣梅花是我绣的，针脚很丑，扎破了三次手指。但他一直说好看，说了整整一辈子——虽然他的一辈子，太短了。\"",
+      "Current story beat": "艾德里安把断弦绕在手指上，像一枚戒指：\"我想把它做成一件新的首饰。不是给我们的……是给这座古堡的。作为纪念——纪念所有不敢说出口、最后却成了永恒的话。\"",
+      "Context immediately after": "\"这页谱子……\"艾德里安的手停在半空，\"我以为我早就烧了它。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 手持物件由本条accepts字段指定；不能用一个静态空手人像对应所有赠物。",
+      "item": "broken_string"
+    },
+    {
+      "sourceId": "talk.adrian.4.8.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"啊，这根断弦……\"艾德里安苦笑，\"那是我发疯那天剪断的。我以为没有音乐，就不会想起他。但我错了。没有音乐的那些年，我什么都想不起来——除了他。\"",
+      "Current story beat": "\"这页谱子……\"艾德里安的手停在半空，\"我以为我早就烧了它。\"",
+      "Context immediately after": "\"袖扣……我都忘了这对袖扣。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.4.8.giftText",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"啊，这根断弦……\"艾德里安苦笑，\"那是我发疯那天剪断的。我以为没有音乐，就不会想起他。但我错了。没有音乐的那些年，我什么都想不起来——除了他。\"",
+      "Current story beat": "艾德里安把《相遇变奏曲》放上谱架，手指悬在第一个音符上方，久久没有落下。\"这是我们写的第一首合奏。他说大键琴太吵，我说小提琴太尖，吵了一下午。最后我们决定——各让一步，像过日子一样。\"他终于按下琴键，\"两百年了，这个音还是准的。\"",
+      "Context immediately after": "\"袖扣……我都忘了这对袖扣。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 手持物件由本条accepts字段指定；不能用一个静态空手人像对应所有赠物。",
+      "item": "duet_score"
+    },
+    {
+      "sourceId": "talk.adrian.4.9.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"这页谱子……\"艾德里安的手停在半空，\"我以为我早就烧了它。\"",
+      "Current story beat": "\"袖扣……我都忘了这对袖扣。\"",
+      "Context immediately after": "\"星图……你找到它了。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.4.9.giftText",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"这页谱子……\"艾德里安的手停在半空，\"我以为我早就烧了它。\"",
+      "Current story beat": "艾德里安摩挲着银袖扣：\"一千个清晨……结果我只来得及写到第三个清晨，就写不下去了。\"他把袖扣别回自己的袖口，\"现在，它们替我记着了。\"",
+      "Context immediately after": "\"星图……你找到它了。\"",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 手持物件由本条accepts字段指定；不能用一个静态空手人像对应所有赠物。",
+      "item": "cufflinks"
+    },
+    {
+      "sourceId": "talk.adrian.4.10.text",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"袖扣……我都忘了这对袖扣。\"",
+      "Current story beat": "\"星图……你找到它了。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。",
+      "item": null
+    },
+    {
+      "sourceId": "talk.adrian.4.10.giftText",
+      "speaker": "adrian",
+      "room": "tower",
+      "loop": 4,
+      "suggestedFrame": "tower-dawn-talk-adrian",
+      "visibleCast": [
+        "adrian"
+      ],
+      "paintedCast": [],
+      "mentionedPeopleRule": "Only explicitly enumerated visibleCast is physical; named people in quotations, retellings, prophecy, books and memories stay off screen.",
+      "Context immediately before": "\"袖扣……我都忘了这对袖扣。\"",
+      "Current story beat": "艾德里安把星图对着月光展开：\"那晚他说，东方传说里这对星星一年只能见一面。我说那我们替他们天天见。后来……后来我一个人看了两百年的星星。\"他折好星图收进怀里，\"现在不用了。\"",
+      "Context immediately after": "继续当前房间探索；不从相邻房间带入角色",
+      "notes": "当前说话/动作角色；被谈论的其他名字均不自动入镜。 手持物件由本条accepts字段指定；不能用一个静态空手人像对应所有赠物。",
+      "item": "star_chart"
+    },
+    {
+      "sourceId": "name.siyang.ask",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 1,
+      "suggestedFrame": "hall-loop1-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "Context immediately before": "寻名首次交谈",
+      "Current story beat": "\"你能听见吗？我的名字……被这座古堡吃掉了。不是我现在这个名字——是两百年前，我站在这座大厅里时的那个名字。\"戴领结的执事按住自己的喉咙，\"找到它，我才能想起我要告诉你什么。\"（找找古堡里记录着名字的东西，然后回来告诉我——两百年前，我是谁？）",
+      "Context immediately after": "继续当前角色对话或调查名字线索",
+      "notes": "寻回两百年前名字不意味着换脸；服装仍遵循古堡锁，不把台词提到的伯爵等加入现场"
+    },
+    {
+      "sourceId": "name.siyang.reveal",
+      "speaker": "siyang",
+      "room": "hall",
+      "loop": 1,
+      "suggestedFrame": "hall-loop1-talk-siyang",
+      "visibleCast": [
+        "yeshiyang"
+      ],
+      "paintedCast": [],
+      "Context immediately before": "玩家回答正确真名",
+      "Current story beat": "\"塞巴斯蒂安……\"执事怔住了，制服上的铜扣忽然泛起旧光，\"对，塞巴斯蒂安。我侍奉了艾德里安家族二十七年。我想起来了——关于这座古堡，关于那本登记簿上被涂掉的名字。\"",
+      "Context immediately after": "继续当前角色对话或调查名字线索",
+      "notes": "寻回两百年前名字不意味着换脸；服装仍遵循古堡锁，不把台词提到的伯爵等加入现场"
+    },
+    {
+      "sourceId": "name.bingbing.ask",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 1,
+      "suggestedFrame": "dining-loop1-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [],
+      "Context immediately before": "寻名首次交谈",
+      "Current story beat": "\"我穿这条白裙子多久了？\"白裙女子低头看着自己透明的指尖，\"他们叫我……叫我……我想不起来。画框后面好像刻着什么，可我不敢看。\"（替她找到她两百年前的名字。）",
+      "Context immediately after": "继续当前角色对话或调查名字线索",
+      "notes": "寻回两百年前名字不意味着换脸；服装仍遵循古堡锁，不把台词提到的伯爵等加入现场"
+    },
+    {
+      "sourceId": "name.bingbing.reveal",
+      "speaker": "bingbing",
+      "room": "dining",
+      "loop": 1,
+      "suggestedFrame": "dining-loop1-talk-bingbing",
+      "visibleCast": [
+        "bingbing"
+      ],
+      "paintedCast": [],
+      "Context immediately before": "玩家回答正确真名",
+      "Current story beat": "\"伊莎贝拉……\"她轻轻念出这个名字，白裙上的血迹褪去了一些，画像里的少女仿佛对她点了点头，\"谢谢你。现在，让我告诉你关于那幅画、关于菲利克斯的事——以表妹的身份。\"",
+      "Context immediately after": "继续当前角色对话或调查名字线索",
+      "notes": "寻回两百年前名字不意味着换脸；服装仍遵循古堡锁，不把台词提到的伯爵等加入现场"
+    },
+    {
+      "sourceId": "name.dijie.ask",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 1,
+      "suggestedFrame": "study-loop1-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "Context immediately before": "寻名首次交谈",
+      "Current story beat": "\"伯爵聘请我来教一支东方的曲子，还把我的姓氏刻在笛架上作为谢礼。\"竹笛乐师苦笑着指了指自己的胸口，\"从东方到这座古堡，我走了七个月。可现在，我连自己姓什么都叫不出口了。你替我去看看那支笛子？\"",
+      "Context immediately after": "继续当前角色对话或调查名字线索",
+      "notes": "寻回两百年前名字不意味着换脸；服装仍遵循古堡锁，不把台词提到的伯爵等加入现场"
+    },
+    {
+      "sourceId": "name.dijie.reveal",
+      "speaker": "dijie",
+      "room": "study",
+      "loop": 1,
+      "suggestedFrame": "study-loop1-talk-dijie",
+      "visibleCast": [
+        "dijie"
+      ],
+      "paintedCast": [],
+      "Context immediately before": "玩家回答正确真名",
+      "Current story beat": "\"林……对，我姓林。\"他抚过竹笛，笛身发出一声清鸣，\"七个月的海船，晕得我什么都忘了。现在想起来了——伯爵学那首《月光》，是要吹给一个人听。我把知道的都告诉你。\"",
+      "Context immediately after": "继续当前角色对话或调查名字线索",
+      "notes": "寻回两百年前名字不意味着换脸；服装仍遵循古堡锁，不把台词提到的伯爵等加入现场"
+    },
+    {
+      "sourceId": "name.qiqi.ask",
+      "speaker": "qiqi",
+      "room": "study",
+      "loop": 1,
+      "suggestedFrame": "study-loop1-talk-qiqi",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "Context immediately before": "寻名首次交谈",
+      "Current story beat": "\"我的真名是个谜语——不是你们现在叫我的这个。\"戏服占卜者把玩着塔罗牌，\"它被写在一张海报上，藏在一个「装着整个世界的东西」里。找到它，我的预言才作数。\"",
+      "Context immediately after": "继续当前角色对话或调查名字线索",
+      "notes": "寻回两百年前名字不意味着换脸；服装仍遵循古堡锁，不把台词提到的伯爵等加入现场"
+    },
+    {
+      "sourceId": "name.qiqi.reveal",
+      "speaker": "qiqi",
+      "room": "study",
+      "loop": 1,
+      "suggestedFrame": "study-loop1-talk-qiqi",
+      "visibleCast": [
+        "qiqi"
+      ],
+      "paintedCast": [],
+      "Context immediately before": "玩家回答正确真名",
+      "Current story beat": "\"薇薇安！\"她把牌一收，水晶球里亮起一点微光，\"海报上的名字，一个音都没错。那么，作为回报——让我告诉你预言真正的意思。\"",
+      "Context immediately after": "继续当前角色对话或调查名字线索",
+      "notes": "寻回两百年前名字不意味着换脸；服装仍遵循古堡锁，不把台词提到的伯爵等加入现场"
+    },
+    {
+      "sourceId": "name.jerry.ask",
+      "speaker": "jerry",
+      "room": "music",
+      "loop": 1,
+      "suggestedFrame": "music-loop1-talk-jerry",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "Context immediately before": "寻名首次交谈",
+      "Current story beat": "\"那架大键琴走调走得厉害，可最走调的是我——我连自己叫什么都校不准了。\"铜管乐手敲了敲自己的脑袋，\"我两百年前给这座古堡调过琴，名片应该还别在谱架上……大概。\"",
+      "Context immediately after": "继续当前角色对话或调查名字线索",
+      "notes": "寻回两百年前名字不意味着换脸；服装仍遵循古堡锁，不把台词提到的伯爵等加入现场"
+    },
+    {
+      "sourceId": "name.jerry.reveal",
+      "speaker": "jerry",
+      "room": "music",
+      "loop": 1,
+      "suggestedFrame": "music-loop1-talk-jerry",
+      "visibleCast": [
+        "jerry"
+      ],
+      "paintedCast": [],
+      "Context immediately before": "玩家回答正确真名",
+      "Current story beat": "\"塞西尔！对，塞西尔！\"他拍了拍小号，号嘴闪过一道光，\"音准回来了。听着，那架琴有个秘密——关于一个不肯和谐的音程。我讲给你听。\"",
+      "Context immediately after": "继续当前角色对话或调查名字线索",
+      "notes": "寻回两百年前名字不意味着换脸；服装仍遵循古堡锁，不把台词提到的伯爵等加入现场"
+    },
+    {
+      "sourceId": "name.lala.ask",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 1,
+      "suggestedFrame": "cellar-loop1-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "Context immediately before": "寻名首次交谈",
+      "Current story beat": "\"水晶球里什么都看得见，就是看不见我自己的名字——两百年前，满月之夜，人们举着酒杯喊的那个名字。\"紫袍女巫晃着水晶球，\"它被烙在一件很老、很老的容器上——老到会醉人的那种。\"",
+      "Context immediately after": "继续当前角色对话或调查名字线索",
+      "notes": "寻回两百年前名字不意味着换脸；服装仍遵循古堡锁，不把台词提到的伯爵等加入现场"
+    },
+    {
+      "sourceId": "name.lala.reveal",
+      "speaker": "lala",
+      "room": "cellar",
+      "loop": 1,
+      "suggestedFrame": "cellar-loop1-talk-lala",
+      "visibleCast": [
+        "lala"
+      ],
+      "paintedCast": [],
+      "Context immediately before": "玩家回答正确真名",
+      "Current story beat": "\"塞勒涅……月亮的名字。\"她朝你眨眨眼，水晶球里的血雾散开了一角，\"满月之夜，他们确实这样喊我。作为交换，我告诉你塔楼的钥匙在哪里——不过得先答对我的题。\"",
+      "Context immediately after": "继续当前角色对话或调查名字线索",
+      "notes": "寻回两百年前名字不意味着换脸；服装仍遵循古堡锁，不把台词提到的伯爵等加入现场"
+    }
+  ]
+}

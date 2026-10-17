@@ -1,0 +1,8 @@
+{
+  "id": "tower-loop2-talk-adrian",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-b686c4e4-286e-4a71-8974-fdbf11882240.png",
+  "source": "assets/moonlight-castle/source/horror-v4/tower-loop2-talk-adrian.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/tower-loop2-talk-adrian.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

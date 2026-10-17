@@ -1,0 +1,8 @@
+{
+  "id": "mirror-felix-reflection",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-22a3ae38-99f2-4f70-919f-80067ba6ba59.png",
+  "source": "assets/moonlight-castle/source/horror-v4/mirror-felix-reflection.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/mirror-felix-reflection.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

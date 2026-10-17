@@ -1,0 +1,8 @@
+{
+  "id": "loop-truth",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-6b1a96ed-098f-4a16-a0cb-ac2ff45aa82c.png",
+  "source": "assets/moonlight-castle/source/horror-v4/loop-truth.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/loop-truth.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

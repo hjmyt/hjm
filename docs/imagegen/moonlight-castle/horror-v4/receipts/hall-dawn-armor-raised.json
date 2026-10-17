@@ -1,0 +1,8 @@
+{
+  "id": "hall-dawn-armor-raised",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-cd70f994-bf7d-4c12-8aa5-d298d774d0a0.png",
+  "source": "assets/moonlight-castle/source/horror-v4/hall-dawn-armor-raised.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/hall-dawn-armor-raised.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

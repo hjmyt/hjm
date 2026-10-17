@@ -1,0 +1,24 @@
+DARK HORROR art direction, high-resolution painted anime visual-novel game illustration, 4:3 single complete picture. Roughly three quarters of the room is deep BLUE-BLACK shadow, grimy surfaces, cobwebs, huge unknown dark recesses, eerie cinematic chiaroscuro. Only sparse candles and narrow cold moon edges, readable faces and object silhouettes but NEVER broad golden palace lighting, glamour studio fill, bright hotel, uniform grey brightness, artificial UI glow or vignette-only darkening. No text, no UI, no buttons, no hotspots.
+
+Only the explicitly listed visibleCast are physically present. Portraits/reflections are paintedCast and must remain inside the painting/mirror unless explicitly spirits. Offscreen names in context are NOT extra people. No duplicated faces, extra limbs, floating broken instruments, hidden cropped heads or modern clothing. Keep large clear object silhouettes available for a game hit area.
+
+Context immediately before: 进入对应房间/阶段，先读本阶段房间描述
+
+Visible named cast in the current physical location (visibleCast, ONLY these people): bingbing.
+
+Painted/reflected identities only, NOT physical people: adrian, felix.
+
+Maximum two named physical characters.
+
+Identity and costume locks:
+Bingbing / Isabella: adult woman, long side-parted black hair, white flower hair ornament, dangling earrings, glamorous card face. WHITE nineteenth-century CRINOLINE HOOP-SKIRT gown inspired by Scarlett in Gone with the Wind: fitted period bodice, lace and full bell-shaped cage-supported skirt. NOT a modern halter dress.
+Adrian: nineteenth-century vampire count whose face is explicitly BAOSHI from the supplied card: soft adult male face, fluffy slightly long BLACK hair, NO GLASSES. Formal dark embroidered court coat, waistcoat and cravat. Night eyes red unless the beat overrides them. Never add a second modern Baoshi when only Adrian is permitted.
+Felix: historic nineteenth-century man whose face is explicitly FEIHONG from supplied card: short tidy BLACK hair, rectangular dark GLASSES, angular side profile. Nineteenth-century court dress and ruffled cravat, distinct from Adrian. Spirit only when specified. No blond actor.
+
+Use first reference as composition/costume continuity. Preserve camera, room layout, faces and props except the explicit story changes. Other card refs lock faces, not their modern card clothing.
+
+Use old reference only for room geography, NOT brightness, clothes or blank portrait. Wide long dinner table foreground x0-87% y58-88%, small black/gold CLOSED music box centered on runner x49% y67%, ornate tall mirror at far RIGHT x94% y23%. Wooden hall door far LEFT x8% y30%; trapdoor to cellar bottom-right x70% y90%. A LARGE HORIZONTAL DOUBLE MALE OIL PORTRAIT hangs left wall x33% y20% (not empty). Bingbing left-center x49%, Baoshi x66%, Feihong x82%; stand behind table with full heads and visible costumes. The painting contains Adrian (Baoshi face) and Felix (Feihong face) in nineteenth-century court dress; they are TWO men in ONE frame, not a woman.
+
+Current story beat: Third loop. Baoshi and Feihong are physically ABSENT. Only Bingbing in white hoop-skirt remains. A small folded NOTE lies where the two men stood. Two-men portrait has repaired/complete silhouettes in court dress, but their FACES are VEILED BY DEEP SHADOW, subtly discernible not a blank frame. This is the before-reveal game frame. Music box still closed. Preserve same camera and all furniture.
+
+Context immediately after: 仅当前房间继续探索；转场后按新房间阶段重新解析

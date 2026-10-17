@@ -1,0 +1,8 @@
+{
+  "id": "musicbox-loop1-refused",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-d49f2ddb-c577-4af9-acef-eef23800f5e3.png",
+  "source": "assets/moonlight-castle/source/horror-v4/musicbox-loop1-refused.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/musicbox-loop1-refused.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

@@ -1,0 +1,8 @@
+{
+  "id": "music-loop3",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-147c0847-0d9d-4fa0-a9e4-85011064221f.png",
+  "source": "assets/moonlight-castle/source/horror-v4/music-loop3.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/music-loop3.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}

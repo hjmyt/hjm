@@ -1,0 +1,8 @@
+{
+  "id": "dining-dawn-talk-bingbing",
+  "origin": "/Users/hxj/.codex/generated_images/01a13fc7-91fe-7db2-9231-14a350a832c8/exec-f30ce712-c47a-4b0b-bf0c-75557e68af1f.png",
+  "source": "assets/moonlight-castle/source/horror-v4/dining-dawn-talk-bingbing.png",
+  "prompt": "docs/imagegen/moonlight-castle/horror-v4/prompts/dining-dawn-talk-bingbing.txt",
+  "generation": "single-image",
+  "tool": "image_gen Image2"
+}
